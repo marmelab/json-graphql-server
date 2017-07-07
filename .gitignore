@@ -1,0 +1,7 @@
+lib
+node_modules
+.nvmrc
+.nyc_output
+.coverage-cache
+coverage
+yarn-error.log
