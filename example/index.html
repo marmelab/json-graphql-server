@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head></head>
+    <body>
+        <script src="../lib/index.js"></script>
+        <script type="text/javascript">
+            window.addEventListener('load', function() {
+                const data = {
+                    "posts": [
+                        {
+                            "id": 1,
+                            "title": "Lorem Ipsum",
+                            "views": 254,
+                            "user_id": 123,
+                        },
+                        {
+                            "id": 2,
+                            "title": "Sic Dolor amet",
+                            "views": 65,
+                            "user_id": 456,
+                        },
+                    ],
+                    "users": [
+                        {
+                            "id": 123,
+                            "name": "John Doe"
+                        },
+                        {
+                            "id": 456,
+                            "name": "Jane Doe"
+                        }
+                    ],
+                };
+
+                var server = JsonGraphqlServer.GraphQLClientServer(data);
+
+                var xhr = new XMLHttpRequest();
+                xhr.responseType = 'json';
+                xhr.open("POST", "http://localhost:3000/graphql");
+                xhr.setRequestHeader("Content-Type", "application/json");
+                xhr.setRequestHeader("Accept", "application/json");
+                xhr.onerror = function(error) {
+                    console.error(error);
+                }
+                xhr.onload = function() {
+                    console.log('data returned:', xhr.response);
+                }
+                xhr.send(JSON.stringify({query: "{ hello }"}));
+            });
+        </script>
+    </body>
+</html>
