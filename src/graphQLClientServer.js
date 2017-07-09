@@ -60,23 +60,21 @@ export default function(data, options) {
     server.respondWith(url, xhr => {
         const query = xhr.requestBody;
 
-        setTimeout(() => {
-            graphql(schema, query)
-                .then(result => {
-                    xhr.respond(
-                        200,
-                        { 'Content-Type': 'application/json' },
-                        JSON.stringify(result),
-                    );
-                })
-                .catch(error => {
-                    xhr.respond(
-                        500,
-                        { 'Content-Type': 'application/json' },
-                        JSON.stringify(error),
-                    );
-                });
-        }, 200);
+        graphql(schema, query)
+            .then(result => {
+                xhr.respond(
+                    200,
+                    { 'Content-Type': 'application/json' },
+                    JSON.stringify(result),
+                );
+            })
+            .catch(error => {
+                xhr.respond(
+                    500,
+                    { 'Content-Type': 'application/json' },
+                    JSON.stringify(error),
+                );
+            });
     });
 
     return server;
