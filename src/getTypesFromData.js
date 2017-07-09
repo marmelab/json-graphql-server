@@ -1,6 +1,6 @@
 import { GraphQLObjectType } from 'graphql';
 
-import getFieldsFromData from './getFieldsFromData';
+import getFieldsFromEntities from './getFieldsFromEntities';
 
 /**
  * Get a list of GraphQLObjectType from data
@@ -34,28 +34,28 @@ import getFieldsFromData from './getFieldsFromData';
  * };
  * const types = getTypesFromData(data);
  * // [
- *      new GraphQLObjectType({
- *          name: "posts",
- *          fields: [
- *              id: { type: graphql.GraphQLString },
- *              title: { type: graphql.GraphQLString },
- *              views: { type: graphql.GraphQLInt }
- *              user_id: { type: graphql.GraphQLString }
- *          ]
- *      }),
- *      new GraphQLObjectType({
- *          name: "users",
- *          fields: [
- *              id: { type: graphql.GraphQLString },
- *              name: { type: graphql.GraphQLString },
- *          ]
- *      }),
- * ]
+ * //     new GraphQLObjectType({
+ * //         name: "posts",
+ * //         fields: {
+ * //             id: { type: graphql.GraphQLString },
+ * //             title: { type: graphql.GraphQLString },
+ * //             views: { type: graphql.GraphQLInt }
+ * //             user_id: { type: graphql.GraphQLString }
+ * //         }
+ * //     }),
+ * //     new GraphQLObjectType({
+ * //         name: "users",
+ * //         fields: {
+ * //             id: { type: graphql.GraphQLString },
+ * //             name: { type: graphql.GraphQLString },
+ * //         }
+ * //     }),
+ * // ]
  */
 export default data =>
     Object.keys(data)
         .map(typeName => ({
             name: typeName,
-            fields: getFieldsFromData(data[typeName]),
+            fields: getFieldsFromEntities(data[typeName]),
         }))
         .map(typeObject => new GraphQLObjectType(typeObject));
