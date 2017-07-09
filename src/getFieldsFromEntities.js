@@ -1,17 +1,5 @@
 import getTypeFromValues from './getTypeFromValues';
-
-export const getValuesFromEntities = entities =>
-    entities.reduce((values, entity) => {
-        Object.keys(entity).forEach(fieldName => {
-            if (!values[fieldName]) {
-                values[fieldName] = [];
-            }
-            if (entity[fieldName] != null) {
-                values[fieldName].push(entity[fieldName]);
-            }
-        });
-        return values;
-    }, {});
+import getValuesFromEntities from './getValuesFromEntities';
 
 /**
  * Get a list of GraphQL fields from a list of entities
@@ -35,8 +23,8 @@ export const getValuesFromEntities = entities =>
  * // {
  * //    id: { type: graphql.GraphQLString },
  * //    title: { type: graphql.GraphQLString },
- * //    views: { type: graphql.GraphQLInt }
- * //    user_id: { type: graphql.GraphQLString }
+ * //    views: { type: graphql.GraphQLInt },
+ * //    user_id: { type: graphql.GraphQLString },
  * // };
  */
 export default entities => {
