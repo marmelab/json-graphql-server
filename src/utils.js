@@ -32,12 +32,27 @@ export const printSchemaForFields = fields => {
     const queryType = new GraphQLObjectType({
         name: 'Query',
         fields: {
-            foo: {
-                type: mainType,
-            },
+            foo: { type: mainType },
         },
     });
 
     const schema = new GraphQLSchema({ query: queryType });
+    return printSchema(schema);
+};
+
+export const printSchemaForTypes = types => {
+    const typesSchema = types.reduce((schema, type) => {
+        schema[type.name] = type;
+        return schema;
+    }, {});
+    const queryType = new GraphQLObjectType({
+        name: 'Query',
+        fields: types.reduce((fields, type) => {
+            fields[type.name] = { type };
+            return fields;
+        }, {}),
+    });
+
+    const schema = new GraphQLSchema({ ...typesSchema, query: queryType });
     return printSchema(schema);
 };
