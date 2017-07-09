@@ -1,12 +1,6 @@
-import { fakeServer } from 'sinon';
-import merge from 'lodash.merge';
+import { useFakeXMLHttpRequest } from 'sinon';
 import { graphql } from 'graphql';
 import getSchemaFromData from './getSchemaFromData';
-
-const defaultOptions = {
-    autoRespond: true,
-    url: 'http://localhost:3000/graphql',
-};
 
 /**
  * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql 
@@ -14,8 +8,7 @@ const defaultOptions = {
  * 
  * @export A sinon.js FakeServer (http://sinonjs.org/releases/v2.3.6/fake-xhr-and-server/#fake-server)
  * @param {any} data 
- * @param {any} options Options for sinon.js FakeServer (http://sinonjs.org/releases/v2.3.6/fake-xhr-and-server/#fake-server-options). 
- * Also accepts an url key specifying the endpoint to intercept (Default is 'http://localhost:3000/graphql').
+ * @param {any} url Specifies the endpoint to intercept (Default is 'http://localhost:3000/graphql').
  * 
  * @example
  * const data = {
@@ -46,36 +39,35 @@ const defaultOptions = {
  * };
  * 
  * GraphQLClientServer(data);
- * GraphQLClientServer(data, {
- *      url: 'http://localhost:8080/api/graphql',
- *      autoRespondAfter: 1000,
- * });
+ * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
-export default function(data, options) {
+export default function(data, url = 'http://localhost:3000/graphql') {
     const schema = getSchemaFromData(data);
-    const { url, ...finalOptions } = merge({}, defaultOptions, options);
 
-    const server = fakeServer.create(finalOptions);
+    const fakeXhr = useFakeXMLHttpRequest();
+    fakeXhr.useFilters = true;
+    fakeXhr.addFilter((method, xhrUrl) => {
+        return !xhrUrl.startsWith(url);
+    });
 
-    server.respondWith(url, xhr => {
+    fakeXhr.onCreate = xhr => {
         const query = xhr.requestBody;
 
-        graphql(schema, query)
-            .then(result => {
+        graphql(schema, query).then(
+            result => {
                 xhr.respond(
                     200,
                     { 'Content-Type': 'application/json' },
                     JSON.stringify(result),
                 );
-            })
-            .catch(error => {
+            },
+            error => {
                 xhr.respond(
                     500,
                     { 'Content-Type': 'application/json' },
                     JSON.stringify(error),
                 );
-            });
-    });
-
-    return server;
+            },
+        );
+    };
 }
