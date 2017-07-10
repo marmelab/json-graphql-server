@@ -45,13 +45,6 @@ const PostType = new GraphQLObjectType({
         user_id: { type: GraphQLString },
     },
 });
-const PostPageType = new GraphQLObjectType({
-    name: 'PostPage',
-    fields: {
-        items: { type: new GraphQLList(PostType) },
-        totalCount: { type: GraphQLInt },
-    },
-});
 const UserType = new GraphQLObjectType({
     name: 'User',
     fields: {
@@ -59,11 +52,11 @@ const UserType = new GraphQLObjectType({
         name: { type: GraphQLString },
     },
 });
-const UserPageType = new GraphQLObjectType({
-    name: 'UserPage',
+
+const ListMetadataType = new GraphQLObjectType({
+    name: 'ListMetadata',
     fields: {
-        items: { type: new GraphQLList(UserType) },
-        totalCount: { type: GraphQLInt },
+        count: { type: GraphQLInt },
     },
 });
 
@@ -77,7 +70,7 @@ const QueryType = new GraphQLObjectType({ // eslint-disable-line
             },
         },
         getPageOfPost: {
-            type: PostPageType,
+            type: new GraphQLList(PostType),
             args: {
                 page: { type: GraphQLInt },
                 perPage: { type: GraphQLInt },
@@ -93,7 +86,7 @@ const QueryType = new GraphQLObjectType({ // eslint-disable-line
             },
         },
         getPageOfUser: {
-            type: UserPageType,
+            type: new GraphQLList(UserType),
             args: {
                 page: { type: GraphQLInt },
                 perPage: { type: GraphQLInt },
@@ -105,19 +98,15 @@ const QueryType = new GraphQLObjectType({ // eslint-disable-line
     },
 });
 
-test('creates one type and one page type per data type', () => {
+test('creates one type per data type', () => {
     const typeMap = getSchemaFromData(data).getTypeMap();
     expect(typeMap['Post'].name).toEqual(PostType.name);
     expect(typeMap['Post'].fields).toEqual(PostType.fields);
-    expect(typeMap['PostPage'].name).toEqual(PostPageType.name);
-    expect(typeMap['PostPage'].fields).toEqual(PostPageType.fields);
     expect(typeMap['User'].name).toEqual(UserType.name);
     expect(typeMap['User'].fields).toEqual(UserType.fields);
-    expect(typeMap['UserPage'].name).toEqual(UserPageType.name);
-    expect(typeMap['UserPage'].fields).toEqual(UserPageType.fields);
 });
 
-test('creates two query fields per data type', () => {
+test('creates three query fields per data type', () => {
     const queries = getSchemaFromData(data).getQueryType().getFields();
     expect(queries['Post'].type.name).toEqual(PostType.name);
     expect(queries['Post'].args).toEqual([
@@ -128,7 +117,7 @@ test('creates two query fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         },
     ]);
-    expect(queries['allPosts'].type.name).toEqual(PostPageType.name);
+    expect(queries['allPosts'].type).toMatchObject(new GraphQLList(PostType));
     expect(queries['allPosts'].args).toEqual([
         {
             defaultValue: undefined,
@@ -161,6 +150,8 @@ test('creates two query fields per data type', () => {
             type: GraphQLString,
         },
     ]);
+    expect(queries['_allPostsMeta'].type).toMatchObject(ListMetadataType);
+
     expect(queries['User'].type.name).toEqual(UserType.name);
     expect(queries['User'].args).toEqual([
         {
@@ -170,7 +161,7 @@ test('creates two query fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         },
     ]);
-    expect(queries['allUsers'].type.name).toEqual(UserPageType.name);
+    expect(queries['allUsers'].type).toMatchObject(new GraphQLList(UserType));
     expect(queries['allUsers'].args).toEqual([
         {
             defaultValue: undefined,
@@ -203,6 +194,7 @@ test('creates two query fields per data type', () => {
             type: GraphQLString,
         },
     ]);
+    expect(queries['_allPostsMeta'].type).toMatchObject(ListMetadataType);
 });
 
 test('creates three mutation fields per data type', () => {

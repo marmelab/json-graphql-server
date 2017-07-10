@@ -49,26 +49,16 @@ import getTypesFromData from './getTypesFromData';
  * //     user_id: ID
  * // }
  * //
- * // type PostPage {
- * //     items: [Post]
- * //     totalCount: Int
- * // }
- * //
  * // type User {
  * //     id: ID
  * //     name: String
  * // }
  * //
- * // type UserPage {
- * //     items: [User]
- * //     totalCount: Int
- * // }
- * //
  * // type Query {
  * //     Post(id: ID!): Post
- * //     allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): PostPage
+ * //     allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): [Post]
  * //     User(id: ID!): User
- * //     allUsers(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): UserPage
+ * //     allUsers(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): [User]
  * // }
  * //
  * // type Mutation {
@@ -86,16 +76,13 @@ export default data => {
         types[type.name] = type;
         return types;
     }, {});
-    const pageTypesByName = types.reduce((types, type) => {
-        types[type.name] = new GraphQLObjectType({
-            name: `${type.name}Page`,
-            fields: {
-                items: { type: new GraphQLList(type) },
-                totalCount: { type: GraphQLInt },
-            },
-        });
-        return types;
-    }, {});
+
+    const listMetadataType = new GraphQLObjectType({
+        name: 'ListMetadata',
+        fields: {
+            count: { type: GraphQLInt },
+        },
+    });
 
     const queryType = new GraphQLObjectType({
         name: 'Query',
@@ -107,7 +94,17 @@ export default data => {
                 },
             };
             fields[`all${type.name}s`] = {
-                type: pageTypesByName[type.name],
+                type: new GraphQLList(typesByName[type.name]),
+                args: {
+                    page: { type: GraphQLInt },
+                    perPage: { type: GraphQLInt },
+                    sortField: { type: GraphQLString },
+                    sortOrder: { type: GraphQLString },
+                    filter: { type: GraphQLString },
+                },
+            };
+            fields[`_all${type.name}sMeta`] = {
+                type: listMetadataType,
                 args: {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
