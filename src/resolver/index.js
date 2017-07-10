@@ -1,6 +1,7 @@
 import { pluralize, underscore } from 'inflection';
 
 import all from './all';
+import meta from './meta';
 import single from './single';
 import create from './create';
 import update from './update';
@@ -12,6 +13,7 @@ const getResolversForEntity = (entityName, data) => {
 
     return {
         [`all${pluralize(entityName)}`]: all(entityData),
+        [`_all${pluralize(entityName)}Meta`]: meta(entityData),
         [entityName]: single(entityData),
         [`create${entityName}`]: create(entityData),
         [`update${entityName}`]: update(entityData),
