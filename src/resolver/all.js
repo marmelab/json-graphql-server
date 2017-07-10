@@ -1,7 +1,25 @@
-export default entityData => ({ page, perPage, filter = '{}' }) => {
+export default entityData => ({
+    sortField,
+    sortOrder = 'asc',
+    page,
+    perPage,
+    filter = '{}',
+}) => {
     const filters = JSON.parse(filter);
-    let items = entityData;
+    let items = [...entityData];
 
+    if (sortField) {
+        const direction = sortOrder.toLowerCase() == 'asc' ? 1 : -1;
+        items = items.sort((a, b) => {
+            if (a[sortField] > b[sortField]) {
+                return direction;
+            }
+            if (a[sortField] < b[sortField]) {
+                return -1 * direction;
+            }
+            return 0;
+        });
+    }
     if (filters.ids) {
         items = items.filter(d => filters.ids.includes(d.id.toString()));
     } else {
