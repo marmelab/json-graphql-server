@@ -1,9 +1,4 @@
-import {
-    GraphQLObjectType,
-    GraphQLString,
-    GraphQLInt,
-    GraphQLList,
-} from 'graphql';
+import { GraphQLObjectType, GraphQLString } from 'graphql';
 import getTypesFromData from './getTypesFromData';
 
 test('Integration test', () => {
@@ -34,7 +29,7 @@ test('Integration test', () => {
         ],
     };
     const PostType = new GraphQLObjectType({
-        name: 'Posts',
+        name: 'Post',
         fields: {
             id: { type: GraphQLString },
             title: { type: GraphQLString },
@@ -42,31 +37,12 @@ test('Integration test', () => {
             user_id: { type: GraphQLString },
         },
     });
-    const PostPageType = new GraphQLObjectType({
-        name: 'PostsPage',
-        fields: {
-            items: { type: new GraphQLList(PostType) },
-            totalCount: { type: GraphQLInt },
-        },
-    });
     const UsersType = new GraphQLObjectType({
-        name: 'Users',
+        name: 'User',
         fields: {
             id: { type: GraphQLString },
             name: { type: GraphQLString },
         },
     });
-    const UsersPageType = new GraphQLObjectType({
-        name: 'UsersPage',
-        fields: {
-            items: { type: new GraphQLList(UsersType) },
-            totalCount: { type: GraphQLInt },
-        },
-    });
-    expect(getTypesFromData(data)).toEqual([
-        PostType,
-        PostPageType,
-        UsersType,
-        UsersPageType,
-    ]);
+    expect(getTypesFromData(data)).toEqual([PostType, UsersType]);
 });

@@ -1,8 +1,12 @@
-import { GraphQLObjectType, GraphQLInt, GraphQLList } from 'graphql';
+import { GraphQLObjectType } from 'graphql';
 
 import getFieldsFromEntities from './getFieldsFromEntities';
 
 const ucfirst = string => string.charAt(0).toUpperCase() + string.slice(1);
+const removeSIfExists = string =>
+    string.substring(string.length - 1) === 's'
+        ? string.substring(0, string.length - 1)
+        : string;
 
 /**
  * Get a list of GraphQLObjectType from data
@@ -46,45 +50,18 @@ const ucfirst = string => string.charAt(0).toUpperCase() + string.slice(1);
  * //         }
  * //     }),
  * //     new GraphQLObjectType({
- * //         name: 'PostsPage',
- * //         fields: {
- * //             items: { type: new GraphQLList(PostType) },
- * //             totalCount: { type: GraphQLInt },
- * //         },
- * //     }),
- * //     new GraphQLObjectType({
  * //         name: "Users",
  * //         fields: {
  * //             id: { type: graphql.GraphQLString },
  * //             name: { type: graphql.GraphQLString },
  * //         }
  * //     }),
- * //     new GraphQLObjectType({
- * //         name: 'UsersPage',
- * //         fields: {
- * //             items: { type: new GraphQLList(UsersType) },
- * //             totalCount: { type: GraphQLInt },
- * //         },
- * //     });
  * // ]
  */
 export default data =>
     Object.keys(data)
         .map(typeName => ({
-            name: ucfirst(typeName),
+            name: ucfirst(removeSIfExists(typeName)),
             fields: getFieldsFromEntities(data[typeName]),
         }))
-        .map(typeObject => new GraphQLObjectType(typeObject))
-        .reduce((types, type) => {
-            types.push(type);
-            types.push(
-                new GraphQLObjectType({
-                    name: `${type.name}Page`,
-                    fields: {
-                        items: { type: new GraphQLList(type) },
-                        totalCount: { type: GraphQLInt },
-                    },
-                }),
-            );
-            return types;
-        }, []);
+        .map(typeObject => new GraphQLObjectType(typeObject));
