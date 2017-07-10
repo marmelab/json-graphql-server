@@ -13,7 +13,7 @@ clean: ## Clean up the lib folder for building
 	@rm -rf lib
 
 build: clean ## Compile ES6 files to JS
-	./node_modules/.bin/rollup -c
+	NODE_ENV=development ./node_modules/.bin/rollup -c
 
 watch: ## continuously compile ES6 files to JS
 	@NODE_ENV=production ./node_modules/.bin/babel \
