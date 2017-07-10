@@ -35,7 +35,7 @@ export default entities => {
             type: getTypeFromValues(
                 fieldName,
                 fieldValues[fieldName],
-                fieldValues[fieldName] === nbValues,
+                fieldValues[fieldName].length === nbValues,
             ),
         };
         return fields;
