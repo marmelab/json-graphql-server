@@ -3,6 +3,8 @@ import {
     GraphQLSchema,
     GraphQLList,
     GraphQLInt,
+    GraphQLString,
+    GraphQLNonNull,
 } from 'graphql';
 
 import getTypesFromData from './getTypesFromData';
@@ -97,9 +99,21 @@ export default data => {
     const queryType = new GraphQLObjectType({
         name: 'Query',
         fields: types.reduce((fields, type) => {
-            fields[`get${type.name}`] = { type: typesByName[type.name] };
+            fields[`get${type.name}`] = {
+                type: typesByName[type.name],
+                args: {
+                    id: { type: new GraphQLNonNull(GraphQLInt) },
+                },
+            };
             fields[`getPageOf${type.name}`] = {
                 type: pageTypesByName[type.name],
+                args: {
+                    page: { type: GraphQLInt },
+                    perPage: { type: GraphQLInt },
+                    sortField: { type: GraphQLString },
+                    sortOrder: { type: GraphQLString },
+                    filter: { type: GraphQLString },
+                },
             };
             return fields;
         }, {}),

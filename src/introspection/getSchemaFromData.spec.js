@@ -3,6 +3,7 @@ import {
     GraphQLString,
     GraphQLInt,
     GraphQLList,
+    GraphQLNonNull,
 } from 'graphql';
 import getSchemaFromData from './getSchemaFromData';
 
@@ -64,13 +65,41 @@ const UserPageType = new GraphQLObjectType({
     },
 });
 
-const QueryType = new GraphQLObjectType({
+const QueryType = new GraphQLObjectType({ // eslint-disable-line 
     name: 'Query',
     fields: {
-        getPageOfPost: { type: PostPageType },
-        getPost: { type: PostType },
-        getPageOfUser: { type: UserPageType },
-        getUser: { type: UserType },
+        getPost: {
+            type: PostType,
+            args: {
+                id: { type: new GraphQLNonNull(GraphQLInt) },
+            },
+        },
+        getPageOfPost: {
+            type: PostPageType,
+            args: {
+                page: { type: GraphQLInt },
+                perPage: { type: GraphQLInt },
+                sortField: { type: GraphQLString },
+                sortOrder: { type: GraphQLString },
+                filter: { type: GraphQLString },
+            },
+        },
+        getUser: {
+            type: UserType,
+            args: {
+                id: { type: new GraphQLNonNull(GraphQLInt) },
+            },
+        },
+        getPageOfUser: {
+            type: UserPageType,
+            args: {
+                page: { type: GraphQLInt },
+                perPage: { type: GraphQLInt },
+                sortField: { type: GraphQLString },
+                sortOrder: { type: GraphQLString },
+                filter: { type: GraphQLString },
+            },
+        },
     },
 });
 
@@ -87,6 +116,89 @@ test('creates one type and one page type per data type', () => {
 });
 
 test('creates two query fields per data type', () => {
-    const queryType = getSchemaFromData(data).getQueryType();
-    expect(queryType.fields).toEqual(QueryType.fields);
+    const queries = getSchemaFromData(data).getQueryType().getFields();
+    expect(queries['getPost'].type.name).toEqual(PostType.name);
+    expect(queries['getPost'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLInt),
+        },
+    ]);
+    expect(queries['getPageOfPost'].type.name).toEqual(PostPageType.name);
+    expect(queries['getPageOfPost'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'page',
+            type: GraphQLInt,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'perPage',
+            type: GraphQLInt,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'sortField',
+            type: GraphQLString,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'sortOrder',
+            type: GraphQLString,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'filter',
+            type: GraphQLString,
+        },
+    ]);
+    expect(queries['getUser'].type.name).toEqual(UserType.name);
+    expect(queries['getUser'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLInt),
+        },
+    ]);
+    expect(queries['getPageOfUser'].type.name).toEqual(UserPageType.name);
+    expect(queries['getPageOfUser'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'page',
+            type: GraphQLInt,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'perPage',
+            type: GraphQLInt,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'sortField',
+            type: GraphQLString,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'sortOrder',
+            type: GraphQLString,
+        },
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'filter',
+            type: GraphQLString,
+        },
+    ]);
 });
