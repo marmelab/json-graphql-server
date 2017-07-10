@@ -1,6 +1,6 @@
 import { useFakeXMLHttpRequest } from 'sinon';
 import { graphql } from 'graphql';
-import getSchemaFromData from './getSchemaFromData';
+import getSchemaFromData from './introspection/getSchemaFromData';
 
 /**
  * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql 
