@@ -2,7 +2,7 @@ export default entityData => ({
     sortField,
     sortOrder = 'asc',
     page,
-    perPage,
+    perPage = 25,
     filter = '{}',
 }) => {
     const filters = JSON.parse(filter);
