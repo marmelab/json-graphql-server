@@ -1,7 +1,7 @@
 import { pluralize, underscore } from 'inflection';
 
 export default (entityName, data) => {
-    const entityData = data[underscore(pluralize(entityName))];
+    let entityData = data[underscore(pluralize(entityName))];
 
     return {
         [`all${pluralize(entityName)}`]: ({ page, perPage, filter = '{}' }) => {
@@ -58,5 +58,32 @@ export default (entityName, data) => {
             return items;
         },
         [entityName]: ({ id }) => entityData.find(d => d.id == id),
+        [`create${entityName}`]: entity => {
+            const newEntity = {
+                id: entityData[entityData.length - 1].id + 1,
+                ...entity,
+            };
+
+            entityData.push(newEntity);
+            return newEntity;
+        },
+        [`update${entityName}`]: ({ id, ...updates }) => {
+            const parsedId = parseInt(id, 10); // FIXME fails for non-integer ids
+            const indexOfEntity = entityData.findIndex(e => e.id === parsedId);
+
+            entityData[indexOfEntity] = {
+                ...entityData[indexOfEntity],
+                ...updates,
+            };
+            return entityData[indexOfEntity];
+        },
+        [`remove${entityName}`]: ({ id }) => {
+            const parsedId = parseInt(id, 10); // FIXME fails for non-integer ids
+            const indexOfEntity = entityData.findIndex(e => e.id === parsedId);
+            const removedEntity = entityData[indexOfEntity];
+
+            entityData = entityData.filter(e => e.id !== id);
+            return removedEntity;
+        },
     };
 };
