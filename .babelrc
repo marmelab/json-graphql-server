@@ -1,22 +1,9 @@
 {
   "presets": [
-    "es2015",
+    ["es2015", { "modules": false }],
     "stage-0"
   ],
   "plugins": [
-    [
-      "transform-runtime",
-      {
-        "polyfill": false,
-        "regenerator": true
-      }
-    ]
-  ],
-  "env": {
-    "test": {
-      "plugins": [
-        ["istanbul", { "exclude": "**/*.spec.js" }]
-      ]
-    }
-  }
+    "external-helpers"
+  ]
 }

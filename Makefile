@@ -10,10 +10,7 @@ clean: ## Clean up the lib folder for building
 	@rm -rf lib
 
 build: clean ## Compile ES6 files to JS
-	@NODE_ENV=production ./node_modules/.bin/babel \
-		--out-dir=lib \
-		--ignore=*.test.js \
-		./src
+	./node_modules/.bin/rollup -c
 
 watch: ## continuously compile ES6 files to JS
 	@NODE_ENV=production ./node_modules/.bin/babel \
