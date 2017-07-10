@@ -182,6 +182,7 @@ GraphQLClientServer(data, 'http://localhost:8080/graphql');
 // now every call to http://localhost:8080/graphql will be intercepted
 // and served with your data in GraphQL
 </script>
+```
 
 ### CLI Options
 
