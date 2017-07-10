@@ -1,10 +1,12 @@
 import {
+    GraphQLBoolean,
+    GraphQLID,
+    GraphQLInt,
+    GraphQLList,
+    GraphQLNonNull,
     GraphQLObjectType,
     GraphQLSchema,
-    GraphQLList,
-    GraphQLInt,
     GraphQLString,
-    GraphQLNonNull,
 } from 'graphql';
 
 import getTypesFromData from './getTypesFromData';
@@ -65,7 +67,6 @@ import getTypesFromData from './getTypesFromData';
  * // type Query {
  * //     getPageOfPost(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): PostPage
  * //     getPost(id: ID!): Post
- * //
  * //     getPageOfUser(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): UserPage
  * //     getUser(id: ID!): User
  * // }
@@ -74,7 +75,6 @@ import getTypesFromData from './getTypesFromData';
  * //     createPost(data: String): Post
  * //     updatePost(data: String): Post
  * //     removePost(id: ID!): Boolean
-
  * //     createUser(data: String): User
  * //     updateUser(data: String): User
  * //     removeUser(id: ID!): Boolean
@@ -96,13 +96,14 @@ export default data => {
         });
         return types;
     }, {});
+
     const queryType = new GraphQLObjectType({
         name: 'Query',
         fields: types.reduce((fields, type) => {
             fields[`get${type.name}`] = {
                 type: typesByName[type.name],
                 args: {
-                    id: { type: new GraphQLNonNull(GraphQLInt) },
+                    id: { type: new GraphQLNonNull(GraphQLID) },
                 },
             };
             fields[`getPageOf${type.name}`] = {
@@ -118,5 +119,31 @@ export default data => {
             return fields;
         }, {}),
     });
-    return new GraphQLSchema({ query: queryType });
+
+    const mutationType = new GraphQLObjectType({
+        name: 'Mutation',
+        fields: types.reduce((fields, type) => {
+            fields[`create${type.name}`] = {
+                type: typesByName[type.name],
+                args: {
+                    data: { type: GraphQLString },
+                },
+            };
+            fields[`update${type.name}`] = {
+                type: typesByName[type.name],
+                args: {
+                    data: { type: GraphQLString },
+                },
+            };
+            fields[`remove${type.name}`] = {
+                type: GraphQLBoolean,
+                args: {
+                    id: { type: new GraphQLNonNull(GraphQLID) },
+                },
+            };
+            return fields;
+        }, {}),
+    });
+
+    return new GraphQLSchema({ query: queryType, mutation: mutationType });
 };

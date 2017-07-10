@@ -1,9 +1,11 @@
 import {
-    GraphQLObjectType,
-    GraphQLString,
+    GraphQLBoolean,
+    GraphQLID,
     GraphQLInt,
     GraphQLList,
     GraphQLNonNull,
+    GraphQLObjectType,
+    GraphQLString,
 } from 'graphql';
 import getSchemaFromData from './getSchemaFromData';
 
@@ -71,7 +73,7 @@ const QueryType = new GraphQLObjectType({ // eslint-disable-line
         getPost: {
             type: PostType,
             args: {
-                id: { type: new GraphQLNonNull(GraphQLInt) },
+                id: { type: new GraphQLNonNull(GraphQLID) },
             },
         },
         getPageOfPost: {
@@ -87,7 +89,7 @@ const QueryType = new GraphQLObjectType({ // eslint-disable-line
         getUser: {
             type: UserType,
             args: {
-                id: { type: new GraphQLNonNull(GraphQLInt) },
+                id: { type: new GraphQLNonNull(GraphQLID) },
             },
         },
         getPageOfUser: {
@@ -123,7 +125,7 @@ test('creates two query fields per data type', () => {
             defaultValue: undefined,
             description: null,
             name: 'id',
-            type: new GraphQLNonNull(GraphQLInt),
+            type: new GraphQLNonNull(GraphQLID),
         },
     ]);
     expect(queries['getPageOfPost'].type.name).toEqual(PostPageType.name);
@@ -165,7 +167,7 @@ test('creates two query fields per data type', () => {
             defaultValue: undefined,
             description: null,
             name: 'id',
-            type: new GraphQLNonNull(GraphQLInt),
+            type: new GraphQLNonNull(GraphQLID),
         },
     ]);
     expect(queries['getPageOfUser'].type.name).toEqual(UserPageType.name);
@@ -199,6 +201,64 @@ test('creates two query fields per data type', () => {
             description: null,
             name: 'filter',
             type: GraphQLString,
+        },
+    ]);
+});
+
+test('creates three mutation fields per data type', () => {
+    const mutations = getSchemaFromData(data).getMutationType().getFields();
+    expect(mutations['createPost'].type.name).toEqual(PostType.name);
+    expect(mutations['createPost'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'data',
+            type: GraphQLString,
+        },
+    ]);
+    expect(mutations['updatePost'].type.name).toEqual(PostType.name);
+    expect(mutations['updatePost'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'data',
+            type: GraphQLString,
+        },
+    ]);
+    expect(mutations['removePost'].type.name).toEqual(GraphQLBoolean.name);
+    expect(mutations['removePost'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
+        },
+    ]);
+    expect(mutations['createUser'].type.name).toEqual(UserType.name);
+    expect(mutations['createUser'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'data',
+            type: GraphQLString,
+        },
+    ]);
+    expect(mutations['updateUser'].type.name).toEqual(UserType.name);
+    expect(mutations['updateUser'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'data',
+            type: GraphQLString,
+        },
+    ]);
+    expect(mutations['removeUser'].type.name).toEqual(GraphQLBoolean.name);
+    expect(mutations['removeUser'].args).toEqual([
+        {
+            defaultValue: undefined,
+            description: null,
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
         },
     ]);
 });
