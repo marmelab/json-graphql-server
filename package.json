@@ -62,5 +62,8 @@
     "inflection": "^1.12.0",
     "lodash.merge": "~4.6.0",
     "sinon": "~2.3.6"
+  },
+  "bin": {
+    "json-graphql-server": "bin/index.js"
   }
 }
