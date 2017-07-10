@@ -3,6 +3,7 @@ import {
     GraphQLFloat,
     GraphQLID,
     GraphQLInt,
+    GraphQLList,
     GraphQLNonNull,
     GraphQLString,
 } from 'graphql';
@@ -15,6 +16,8 @@ const isBoolean = value => typeof value === 'boolean';
 const valuesAreBoolean = values => values.every(isBoolean);
 const isString = value => typeof value === 'string';
 const valuesAreString = values => values.every(isString);
+const isArray = value => Array.isArray(value);
+const valuesAreArray = values => values.every(isArray);
 
 const requiredTypeOrNormal = (type, isRequired) =>
     isRequired ? new GraphQLNonNull(type) : type;
@@ -25,6 +28,40 @@ export default (name, values = [], isRequired = false) => {
         return requiredTypeOrNormal(GraphQLID, isRequired);
     }
     if (values.length > 0) {
+        if (valuesAreArray(values)) {
+            const leafValues = values.reduce((agg, arr) => {
+                arr.forEach(value => agg.push(value));
+                return agg;
+            }, []);
+            if (valuesAreBoolean(leafValues)) {
+                return requiredTypeOrNormal(
+                    new GraphQLList(GraphQLBoolean),
+                    isRequired,
+                );
+            }
+            if (valuesAreString(leafValues)) {
+                return requiredTypeOrNormal(
+                    new GraphQLList(GraphQLString),
+                    isRequired,
+                );
+            }
+            if (valuesAreInteger(leafValues)) {
+                return requiredTypeOrNormal(
+                    new GraphQLList(GraphQLInt),
+                    isRequired,
+                );
+            }
+            if (valuesAreNumeric(leafValues)) {
+                return requiredTypeOrNormal(
+                    new GraphQLList(GraphQLFloat),
+                    isRequired,
+                );
+            }
+            return requiredTypeOrNormal(
+                new GraphQLList(GraphQLString),
+                isRequired,
+            ); // FIXME introspect further
+        }
         if (valuesAreBoolean(values)) {
             return requiredTypeOrNormal(GraphQLBoolean, isRequired);
         }
@@ -38,5 +75,5 @@ export default (name, values = [], isRequired = false) => {
             return requiredTypeOrNormal(GraphQLFloat, isRequired);
         }
     }
-    return requiredTypeOrNormal(GraphQLString, isRequired);
+    return requiredTypeOrNormal(GraphQLString, isRequired); // FIXME introspect further
 };
