@@ -8,6 +8,7 @@ import {
     GraphQLSchema,
     GraphQLString,
 } from 'graphql';
+import pluralize from 'pluralize';
 
 import getTypesFromData from './getTypesFromData';
 
@@ -93,7 +94,7 @@ export default data => {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },
             };
-            fields[`all${type.name}s`] = {
+            fields[`all${pluralize(type.name)}`] = {
                 type: new GraphQLList(typesByName[type.name]),
                 args: {
                     page: { type: GraphQLInt },
@@ -103,7 +104,7 @@ export default data => {
                     filter: { type: GraphQLString },
                 },
             };
-            fields[`_all${type.name}sMeta`] = {
+            fields[`_all${pluralize(type.name)}Meta`] = {
                 type: listMetadataType,
                 args: {
                     page: { type: GraphQLInt },

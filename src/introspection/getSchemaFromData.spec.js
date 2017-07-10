@@ -254,3 +254,11 @@ test('creates three mutation fields per data type', () => {
         },
     ]);
 });
+
+test('pluralizes and capitalizes correctly', () => {
+    const data = {
+        foot: [{ id: 1, size: 42 }, { id: 2, size: 39 }],
+    };
+    const queries = getSchemaFromData(data).getQueryType().getFields();
+    expect(queries).toHaveProperty('allFeet');
+});
