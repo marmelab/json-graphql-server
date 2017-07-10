@@ -20,10 +20,10 @@ watch: ## continuously compile ES6 files to JS
 		./src
 
 test: ## Launch unit tests
-	@./node_modules/.bin/jest"
+	@./node_modules/.bin/jest
 
 watch-test: ## Launch unit tests and watch for changes
-	@./node_modules/.bin/jest --watch"
+	@./node_modules/.bin/jest --watch
 
 format: ## Format the source code
 	@./node_modules/.bin/eslint --fix ./src
