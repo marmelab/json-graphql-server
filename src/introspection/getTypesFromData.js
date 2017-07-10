@@ -1,12 +1,7 @@
 import { GraphQLObjectType } from 'graphql';
+import { singularize, camelize } from 'inflection';
 
 import getFieldsFromEntities from './getFieldsFromEntities';
-
-const ucfirst = string => string.charAt(0).toUpperCase() + string.slice(1);
-const removeSIfExists = string =>
-    string.substring(string.length - 1) === 's'
-        ? string.substring(0, string.length - 1)
-        : string;
 
 /**
  * Get a list of GraphQLObjectType from data
@@ -61,7 +56,7 @@ const removeSIfExists = string =>
 export default data =>
     Object.keys(data)
         .map(typeName => ({
-            name: ucfirst(removeSIfExists(typeName)),
+            name: camelize(singularize(typeName)),
             fields: getFieldsFromEntities(data[typeName]),
         }))
         .map(typeObject => new GraphQLObjectType(typeObject));
