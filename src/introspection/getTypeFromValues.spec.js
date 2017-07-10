@@ -1,4 +1,5 @@
 import {
+    GraphQLBoolean,
     GraphQLFloat,
     GraphQLID,
     GraphQLInt,
@@ -10,6 +11,12 @@ import getTypeFromValues from './getTypeFromValues';
 test('returns GraphQLID for fields named id or xxx_id', () => {
     expect(getTypeFromValues('id')).toEqual(GraphQLID);
     expect(getTypeFromValues('foo_id')).toEqual(GraphQLID);
+});
+
+test('returns GraphQLBoolean for booleans', () => {
+    expect(getTypeFromValues('foo', [true, true, false])).toEqual(
+        GraphQLBoolean,
+    );
 });
 
 test('returns GraphQLInt for integers', () => {

@@ -1,4 +1,5 @@
 import {
+    GraphQLBoolean,
     GraphQLFloat,
     GraphQLID,
     GraphQLInt,
@@ -10,6 +11,8 @@ const isNumeric = value => !isNaN(parseFloat(value)) && isFinite(value);
 const valuesAreNumeric = values => values.every(isNumeric);
 const isInteger = value => Number.isInteger(value);
 const valuesAreInteger = values => values.every(isInteger);
+const isBoolean = value => typeof value === 'boolean';
+const valuesAreBoolean = values => values.every(isBoolean);
 
 const requiredTypeOrNormal = (type, isRequired) =>
     isRequired ? new GraphQLNonNull(type) : type;
@@ -20,6 +23,9 @@ export default (name, values = [], isRequired = false) => {
         return requiredTypeOrNormal(GraphQLID, isRequired);
     }
     if (values.length > 0) {
+        if (valuesAreBoolean(values)) {
+            return requiredTypeOrNormal(GraphQLBoolean, isRequired);
+        }
         if (valuesAreInteger(values)) {
             return requiredTypeOrNormal(GraphQLInt, isRequired);
         }
