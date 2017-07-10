@@ -123,7 +123,14 @@ type ListMetadata {
 
 Here is how you can use the queries and mutations generated for your data, using `Post` as an example:
 
-```graphql
+<table>
+    <tr>
+        <th>Query / Mutation</th>
+        <th>Result</th>
+    </tr>
+    <tr>
+        <td>
+            <pre>
 // get a list of entities for a type
 {
   allPosts {
@@ -131,7 +138,10 @@ Here is how you can use the queries and mutations generated for your data, using
     views
   }
 }
-// produces
+            </pre>
+        </td>
+        <td>
+            <pre>
 {
   "data": {
     "allPosts": [
@@ -140,7 +150,12 @@ Here is how you can use the queries and mutations generated for your data, using
     ]
   }
 }
-
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
 // get a single entity, by id
 {
   Post(id: 1) {
@@ -151,7 +166,10 @@ Here is how you can use the queries and mutations generated for your data, using
     tag_id
   }
 }
-// produces
+            </pre>
+        </td>
+        <td>
+            <pre>
 {
   "data": {
     "Post": {
@@ -163,7 +181,10 @@ Here is how you can use the queries and mutations generated for your data, using
     } 
   }
 }
-```
+            </pre>
+        </td>
+    </tr>
+</table>
 
 ## Options
 
