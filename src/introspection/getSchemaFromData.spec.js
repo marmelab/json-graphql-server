@@ -258,7 +258,14 @@ test('creates three mutation fields per data type', () => {
 test('pluralizes and capitalizes correctly', () => {
     const data = {
         foot: [{ id: 1, size: 42 }, { id: 2, size: 39 }],
+        categories: [{ id: 1, name: 'foo' }],
     };
     const queries = getSchemaFromData(data).getQueryType().getFields();
+    expect(queries).toHaveProperty('Foot');
+    expect(queries).toHaveProperty('Category');
     expect(queries).toHaveProperty('allFeet');
+    expect(queries).toHaveProperty('allCategories');
+    const types = getSchemaFromData(data).getTypeMap();
+    expect(types).toHaveProperty('Foot');
+    expect(types).toHaveProperty('Category');
 });
