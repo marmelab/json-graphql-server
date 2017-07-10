@@ -119,8 +119,8 @@ test('creates one type and one page type per data type', () => {
 
 test('creates two query fields per data type', () => {
     const queries = getSchemaFromData(data).getQueryType().getFields();
-    expect(queries['getPost'].type.name).toEqual(PostType.name);
-    expect(queries['getPost'].args).toEqual([
+    expect(queries['Post'].type.name).toEqual(PostType.name);
+    expect(queries['Post'].args).toEqual([
         {
             defaultValue: undefined,
             description: null,
@@ -128,8 +128,8 @@ test('creates two query fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         },
     ]);
-    expect(queries['getPageOfPost'].type.name).toEqual(PostPageType.name);
-    expect(queries['getPageOfPost'].args).toEqual([
+    expect(queries['allPosts'].type.name).toEqual(PostPageType.name);
+    expect(queries['allPosts'].args).toEqual([
         {
             defaultValue: undefined,
             description: null,
@@ -161,8 +161,8 @@ test('creates two query fields per data type', () => {
             type: GraphQLString,
         },
     ]);
-    expect(queries['getUser'].type.name).toEqual(UserType.name);
-    expect(queries['getUser'].args).toEqual([
+    expect(queries['User'].type.name).toEqual(UserType.name);
+    expect(queries['User'].args).toEqual([
         {
             defaultValue: undefined,
             description: null,
@@ -170,8 +170,8 @@ test('creates two query fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         },
     ]);
-    expect(queries['getPageOfUser'].type.name).toEqual(UserPageType.name);
-    expect(queries['getPageOfUser'].args).toEqual([
+    expect(queries['allUsers'].type.name).toEqual(UserPageType.name);
+    expect(queries['allUsers'].args).toEqual([
         {
             defaultValue: undefined,
             description: null,

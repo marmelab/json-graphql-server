@@ -65,10 +65,10 @@ import getTypesFromData from './getTypesFromData';
  * // }
  * //
  * // type Query {
- * //     getPageOfPost(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): PostPage
- * //     getPost(id: ID!): Post
- * //     getPageOfUser(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): UserPage
- * //     getUser(id: ID!): User
+ * //     Post(id: ID!): Post
+ * //     allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): PostPage
+ * //     User(id: ID!): User
+ * //     allUsers(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): UserPage
  * // }
  * //
  * // type Mutation {
@@ -100,13 +100,13 @@ export default data => {
     const queryType = new GraphQLObjectType({
         name: 'Query',
         fields: types.reduce((fields, type) => {
-            fields[`get${type.name}`] = {
+            fields[type.name] = {
                 type: typesByName[type.name],
                 args: {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },
             };
-            fields[`getPageOf${type.name}`] = {
+            fields[`all${type.name}s`] = {
                 type: pageTypesByName[type.name],
                 args: {
                     page: { type: GraphQLInt },
