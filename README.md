@@ -92,6 +92,79 @@ Your data file should be an object where the keys are the entity types. The valu
 }
 ```
 
+## Generated Types and Queries
+
+Based on your data, json-graphql-server will generate a schema with one type per entity, as well as 3 query types and 3 mutation types. For instance for the `Post` entity:
+
+```graphql
+type Post {
+    id: ID!
+    title: String!
+    views: Int
+    user_id: ID
+    tag_id: ID
+}
+type Query {
+  Post(id: ID!): Post
+  allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): [Customer]
+  _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): ListMetadata
+}
+type Mutation {
+  createPost(data: String): Post
+  updatePost(data: String): Post
+  removePost(id: ID!): Boolean
+}
+type ListMetadata {
+    count: Int!
+}
+```
+
+## GraphQL Usage
+
+Here is how you can use the queries and mutations generated for your data, using `Post` as an example:
+
+```graphql
+// get a list of entities for a type
+{
+  allPosts {
+    title
+    views
+  }
+}
+// produces
+{
+  "data": {
+    "allPosts": [
+      { "title": "Lorem Ipsum", views: 254 },
+      { "title": "Sic Dolor amet", views: 65 }
+    ]
+  }
+}
+
+// get a single entity, by id
+{
+  Post(id: 1) {
+    id
+    title
+    views
+    user_id
+    tag_id
+  }
+}
+// produces
+{
+  "data": {
+    "Post": {
+        "id": 1,
+        "title": "Lorem Ipsum",
+        "views": 254,
+        "user_id": 123,
+        "tag_id": "foo"
+    } 
+  }
+}
+```
+
 ## Options
 
 You can access the json-graphql-server from anywhere - CORS are configures to accept all inbound requests. Also, content is compressed using GZip.
