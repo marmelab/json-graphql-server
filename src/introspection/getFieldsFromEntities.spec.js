@@ -1,4 +1,4 @@
-import { GraphQLString } from 'graphql';
+import { GraphQLString, GraphQLID, GraphQLNonNull } from 'graphql';
 import getFieldsFromEntities from './getFieldsFromEntities';
 
 test('does infer field types', () => {
@@ -9,7 +9,7 @@ test('does infer field types', () => {
             { id: 3, bar: 'bar2' },
         ]),
     ).toEqual({
-        id: { type: GraphQLString },
+        id: { type: new GraphQLNonNull(GraphQLID) },
         foo: { type: GraphQLString },
         bar: { type: GraphQLString },
     });

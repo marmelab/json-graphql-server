@@ -1,4 +1,10 @@
-import { GraphQLObjectType, GraphQLString } from 'graphql';
+import {
+    GraphQLObjectType,
+    GraphQLString,
+    GraphQLID,
+    GraphQLInt,
+    GraphQLNonNull,
+} from 'graphql';
 import getTypesFromData from './getTypesFromData';
 
 test('Integration test', () => {
@@ -31,17 +37,17 @@ test('Integration test', () => {
     const PostType = new GraphQLObjectType({
         name: 'Post',
         fields: {
-            id: { type: GraphQLString },
-            title: { type: GraphQLString },
-            views: { type: GraphQLString },
-            user_id: { type: GraphQLString },
+            id: { type: new GraphQLNonNull(GraphQLID) },
+            title: { type: new GraphQLNonNull(GraphQLString) },
+            views: { type: new GraphQLNonNull(GraphQLInt) },
+            user_id: { type: new GraphQLNonNull(GraphQLID) },
         },
     });
     const UsersType = new GraphQLObjectType({
         name: 'User',
         fields: {
-            id: { type: GraphQLString },
-            name: { type: GraphQLString },
+            id: { type: new GraphQLNonNull(GraphQLID) },
+            name: { type: new GraphQLNonNull(GraphQLString) },
         },
     });
     expect(getTypesFromData(data)).toEqual([PostType, UsersType]);
