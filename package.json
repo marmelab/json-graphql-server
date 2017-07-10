@@ -38,7 +38,7 @@
     "eslint-plugin-import": "~2.7.0",
     "eslint-plugin-jest": "~20.0.3",
     "eslint-plugin-prettier": "~2.1.2",
-    "express": "^4.15.3",
+    "express": "~4.15.3",
     "husky": "~0.13.3",
     "jest": "~20.0.4",
     "lint-staged": "~3.4.1",
@@ -46,9 +46,11 @@
     "rollup": "~0.43.0",
     "rollup-plugin-babel": "~2.7.1",
     "rollup-plugin-commonjs": "~8.0.2",
+    "rollup-plugin-json": "~2.3.0",
     "rollup-plugin-node-builtins": "~2.1.2",
+    "rollup-plugin-node-globals": "~1.1.0",
     "rollup-plugin-node-resolve": "~3.0.0",
-    "rollup-plugin-replace": "~1.1.1"
+    "rollup-watch": "~4.0.0"
   },
   "dependencies": {
     "apollo-client": "~1.2.0",
@@ -59,9 +61,8 @@
     "graphql-server-express": "~1.0.0",
     "graphql-tag": "~2.0.0",
     "graphql-tools": "~1.1.0",
-    "inflection": "^1.12.0",
-    "lodash.merge": "~4.6.0",
-    "sinon": "~2.3.6"
+    "inflection": "~1.12.0",
+    "lodash.merge": "~4.6.0"
   },
   "bin": {
     "json-graphql-server": "bin/index.js"

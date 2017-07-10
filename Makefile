@@ -16,11 +16,7 @@ build: clean ## Compile ES6 files to JS
 	NODE_ENV=development ./node_modules/.bin/rollup -c
 
 watch: ## continuously compile ES6 files to JS
-	@NODE_ENV=production ./node_modules/.bin/babel \
-		--out-dir=lib \
-		--ignore='*.test.js' \
-		--watch \
-		./src
+	NODE_ENV=development ./node_modules/.bin/rollup -c --watch
 
 test: ## Launch unit tests
 	@./node_modules/.bin/jest
