@@ -13,6 +13,8 @@ const isInteger = value => Number.isInteger(value);
 const valuesAreInteger = values => values.every(isInteger);
 const isBoolean = value => typeof value === 'boolean';
 const valuesAreBoolean = values => values.every(isBoolean);
+const isString = value => typeof value === 'string';
+const valuesAreString = values => values.every(isString);
 
 const requiredTypeOrNormal = (type, isRequired) =>
     isRequired ? new GraphQLNonNull(type) : type;
@@ -25,6 +27,9 @@ export default (name, values = [], isRequired = false) => {
     if (values.length > 0) {
         if (valuesAreBoolean(values)) {
             return requiredTypeOrNormal(GraphQLBoolean, isRequired);
+        }
+        if (valuesAreString(values)) {
+            return requiredTypeOrNormal(GraphQLString, isRequired);
         }
         if (valuesAreInteger(values)) {
             return requiredTypeOrNormal(GraphQLInt, isRequired);

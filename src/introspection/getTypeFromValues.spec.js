@@ -19,6 +19,11 @@ test('returns GraphQLBoolean for booleans', () => {
     );
 });
 
+test('returns GraphQLString for strings', () => {
+    expect(getTypeFromValues('foo', ['123', '456'])).toEqual(GraphQLString);
+    expect(getTypeFromValues('foo', ['abc', '123'])).toEqual(GraphQLString);
+});
+
 test('returns GraphQLInt for integers', () => {
     expect(getTypeFromValues('foo', [-1, 445, 34, 0])).toEqual(GraphQLInt);
 });
