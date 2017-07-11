@@ -1,8 +1,8 @@
 import { ApolloClient } from 'apollo-client';
 import { mockNetworkInterfaceWithSchema } from 'apollo-test-utils';
-import getSchemaFromData from './getSchemaFromData';
+import getSchemaFromData from './introspection/getSchemaFromData';
 
-export default function(data) {
+export default data => {
     const schema = getSchemaFromData(data);
     const mockNetworkInterface = mockNetworkInterfaceWithSchema({ schema });
 
@@ -11,4 +11,4 @@ export default function(data) {
     });
 
     return client;
-}
+};

@@ -60,3 +60,6 @@ export default data =>
             fields: getFieldsFromEntities(data[typeName]),
         }))
         .map(typeObject => new GraphQLObjectType(typeObject));
+
+export const getTypeNamesFromData = data =>
+    Object.keys(data).map(typeName => camelize(singularize(typeName)));

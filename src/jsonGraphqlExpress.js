@@ -1,6 +1,7 @@
 import bodyParser from 'body-parser';
 import { graphqlExpress } from 'graphql-server-express';
-import getSchemaFromData from './getSchemaFromData';
+import getSchemaFromData from './introspection/getSchemaFromData';
+import resolver from './resolver';
 
 /**
  * An express middleware for a GraphQL endpoint serving data from the supplied json.
@@ -46,8 +47,12 @@ import getSchemaFromData from './getSchemaFromData';
  * 
  * app.listen(PORT);
  */
-export default function(data) {
-    const schema = getSchemaFromData(data);
-
-    return [bodyParser.json(), graphqlExpress({ schema })];
-}
+export default data => {
+    return [
+        bodyParser.json(),
+        graphqlExpress({
+            schema: getSchemaFromData(data),
+            rootValue: resolver(data),
+        }),
+    ];
+};

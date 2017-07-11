@@ -22,7 +22,6 @@ const valuesAreArray = values => values.every(isArray);
 const requiredTypeOrNormal = (type, isRequired) =>
     isRequired ? new GraphQLNonNull(type) : type;
 
-// FIXME obviously very weak
 export default (name, values = [], isRequired = false) => {
     if (name === 'id' || name.substr(name.length - 3) === '_id') {
         return requiredTypeOrNormal(GraphQLID, isRequired);

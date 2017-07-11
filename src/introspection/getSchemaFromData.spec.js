@@ -202,46 +202,94 @@ test('creates three mutation fields per data type', () => {
     expect(mutations['createPost'].type.name).toEqual(PostType.name);
     expect(mutations['createPost'].args).toEqual([
         {
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
             description: null,
-            name: 'data',
-            type: GraphQLString,
+        },
+        {
+            name: 'title',
+            type: new GraphQLNonNull(GraphQLString),
+            defaultValue: undefined,
+            description: null,
+        },
+        {
+            name: 'views',
+            type: new GraphQLNonNull(GraphQLInt),
+            defaultValue: undefined,
+            description: null,
+        },
+        {
+            name: 'user_id',
+            type: new GraphQLNonNull(GraphQLID),
+            defaultValue: undefined,
+            description: null,
         },
     ]);
     expect(mutations['updatePost'].type.name).toEqual(PostType.name);
     expect(mutations['updatePost'].args).toEqual([
         {
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
             description: null,
-            name: 'data',
+        },
+        {
+            name: 'title',
             type: GraphQLString,
+            defaultValue: undefined,
+            description: null,
+        },
+        {
+            name: 'views',
+            type: GraphQLInt,
+            defaultValue: undefined,
+            description: null,
+        },
+        {
+            name: 'user_id',
+            type: GraphQLID,
+            defaultValue: undefined,
+            description: null,
         },
     ]);
     expect(mutations['removePost'].type.name).toEqual(GraphQLBoolean.name);
     expect(mutations['removePost'].args).toEqual([
         {
-            defaultValue: undefined,
-            description: null,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
+            defaultValue: undefined,
+            description: null,
         },
     ]);
     expect(mutations['createUser'].type.name).toEqual(UserType.name);
     expect(mutations['createUser'].args).toEqual([
         {
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
             description: null,
-            name: 'data',
-            type: GraphQLString,
+        },
+        {
+            name: 'name',
+            type: new GraphQLNonNull(GraphQLString),
+            defaultValue: undefined,
+            description: null,
         },
     ]);
     expect(mutations['updateUser'].type.name).toEqual(UserType.name);
     expect(mutations['updateUser'].args).toEqual([
         {
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
             description: null,
-            name: 'data',
+        },
+        {
+            name: 'name',
             type: GraphQLString,
+            defaultValue: undefined,
+            description: null,
         },
     ]);
     expect(mutations['removeUser'].type.name).toEqual(GraphQLBoolean.name);

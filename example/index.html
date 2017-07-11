@@ -32,7 +32,7 @@
                     ],
                 };
 
-                var server = JsonGraphqlServer.GraphQLClientServer(data);
+                var server = JsonGraphqlServer.graphQLClientServer(data);
 
                 var xhr = new XMLHttpRequest();
                 xhr.responseType = 'json';
@@ -43,9 +43,10 @@
                     console.error(error);
                 }
                 xhr.onload = function() {
-                    console.log('data returned:', xhr.response);
+                    console.log('data returned:', JSON.parse(xhr.responseText));
                 }
-                xhr.send(JSON.stringify({query: "{ hello }"}));
+                const body = JSON.stringify({ query: 'query Post($id: ID!) { Post(id: $id) { id } }', variables: { id: 1 } });
+                xhr.send(body);
             });
         </script>
     </body>

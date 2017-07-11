@@ -1,6 +1,6 @@
-import { useFakeXMLHttpRequest } from 'sinon';
+import { MockHttpServer } from './mockHttpRequest';
 import { graphql } from 'graphql';
-import getSchemaFromData from './getSchemaFromData';
+import getSchemaFromData from './introspection/getSchemaFromData';
 
 /**
  * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql 
@@ -44,30 +44,31 @@ import getSchemaFromData from './getSchemaFromData';
 export default function(data, url = 'http://localhost:3000/graphql') {
     const schema = getSchemaFromData(data);
 
-    const fakeXhr = useFakeXMLHttpRequest();
-    fakeXhr.useFilters = true;
-    fakeXhr.addFilter((method, xhrUrl) => {
-        return !xhrUrl.startsWith(url);
-    });
+    const server = new MockHttpServer(req => {
+        if (!req.url.startsWith(url)) {
+            // FIXME: if req.url does not match url for endpoint, handle it with window.OriginalHttpRequest
+        }
 
-    fakeXhr.onCreate = xhr => {
-        const query = xhr.requestBody;
+        const query = JSON.parse(req.requestText);
 
-        graphql(schema, query).then(
+        graphql(
+            schema,
+            query.query,
+            undefined,
+            undefined,
+            query.variables,
+        ).then(
             result => {
-                xhr.respond(
-                    200,
-                    { 'Content-Type': 'application/json' },
-                    JSON.stringify(result),
-                );
+                const body = JSON.stringify(result);
+                req.setResponseHeader('Content-Type', 'application/json');
+                req.receive(200, body);
             },
             error => {
-                xhr.respond(
-                    500,
-                    { 'Content-Type': 'application/json' },
-                    JSON.stringify(error),
-                );
+                req.setResponseHeader('Content-Type', 'application/json');
+                req.receive(500, JSON.stringify(error));
             },
         );
-    };
+    });
+
+    server.start();
 }
