@@ -9,7 +9,7 @@ Get a full fake GraphQL API with zero coding in less than 30 seconds.
 
 Start playing with GraphQL right away with `json-graphql-server`, a testing and mocking tool for GraphQL. All it takes is a JSON of your data.
 
-Inspired by the excellent [json-rest-server](https://github.com/typicode/json-server).
+Inspired by the excellent [json-server](https://github.com/typicode/json-server).
 
 ## Example
 
