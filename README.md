@@ -1,6 +1,6 @@
 # json-graphql-server
 
-Get a full fake GraphQL API with zero coding in less than 30 seconds. Works on the browser and on the server.
+Get a full fake GraphQL API with zero coding in less than 30 seconds.
 
 ## Motivation
 
@@ -10,20 +10,6 @@ Get a full fake GraphQL API with zero coding in less than 30 seconds. Works on t
 Start playing with GraphQL right away with `json-graphql-server`, a testing and mocking tool for GraphQL. All it takes is a JSON of your data.
 
 ## Usage
-
-* In the browser
-
-```js
-<script src="https://cdnjs.cloudflare.com/ajax/libs/json-graphql-server/1.0.0/json-graphql-server.min.js"></script>
-<script>
-var data = {
-    // ... your data
-};
-GraphQLClientServer(data); // starts a GraphQL Server in your browser
-// now every call to http://localhost:3000/graphql will be intercepted
-// and served with your data in GraphQL
-</script>
-```
 
 * CLI
 
@@ -36,14 +22,14 @@ json-graphql-server path/to/data.js
 
 ```js
 import express from 'express';
-import { GraphQlServer } from 'json-graphql-server';
+import { jsonGraphqlExpress } from 'json-graphql-server';
 
 const PORT = 3000;
 const app = express();
 const data = {
     // ... your data
 };
-app.use('/graphql', GraphQLServer(data));
+app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 
@@ -186,58 +172,13 @@ Here is how you can use the queries and mutations generated for your data, using
     </tr>
 </table>
 
-## Options
-
-You can access the json-graphql-server from anywhere - CORS are configures to accept all inbound requests. Also, content is compressed using GZip.
-
-### Browser Options
-
-You can override the GraphQL endpoint and port using the second parameter:
-
-```js
-<script>
-var data = {
-    // ... your data
-};
-GraphQLClientServer(data, 'http://localhost:8080/graphql');
-// now every call to http://localhost:8080/graphql will be intercepted
-// and served with your data in GraphQL
-</script>
-```
-
-### CLI Options
-
-You can override the GraphQL server port using the `--port` (or `-p`) option:
-
-```sh
-json-graphql-server --port 8080 path/to/data.js
-```
-
-You can force a server restart every time the source JSON file changes using the `--watch` option:
-
-```sh
-json-graphql-server --watch path/to/data.js
-```
-
-You can start a https server instead of an http one using the `--https` (or `-s`) option:
-
-```sh
-json-graphql-server --https path/to/data.js
-```
-
-You can add a random delay to responses by specifying a maximum delay (in ms) using the `--delay` (or `-d`) option:
-
-```sh
-json-graphql-server --delay 1000 path/to/data.js
-```
-
 ## Adding Authentication, Custom Routes, etc.
 
 `json-graphql-server` doesn't deal with authentication or custom routes. But you can use your favorite middleware with Express:
 
 ```js
 import express from 'express';
-import { GraphQlServer } from 'json-graphql-server';
+import { jsonGraphqlExpress } from 'json-graphql-server';
 
 import OAuthSecurityMiddleWare from './path/to/OAuthSecurityMiddleWare';
 
@@ -247,7 +188,7 @@ const data = {
     // ... your data
 };
 app.use(OAuthSecurityMiddleWare());
-app.use('/graphql', GraphQLServer(data));
+app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 
