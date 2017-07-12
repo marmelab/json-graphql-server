@@ -1,7 +1,13 @@
 #!/usr/bin/env node
+
 var path = require('path');
-var JsonGraphqlServer = require('./../lib/');
 var express = require('express');
+var JsonGraphqlServer = require('../lib/');
+
+// fixme the build fails without those
+global.window = false;
+global.document = false;
+global.navigator = false;
 
 var dataFilePath = process.argv.length > 2 ? process.argv[2] : './data.json';
 var data = require(path.join(process.cwd(), dataFilePath));
