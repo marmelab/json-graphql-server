@@ -1,6 +1,6 @@
 {
   "name": "json-graphql-server",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "main": "lib/index",
   "repository": "git@github.com:marmelab/json-graphql-server.git",
   "authors": [
@@ -9,7 +9,8 @@
   ],
   "files": [
     "*.md",
-    "lib"
+    "lib",
+    "bin"
   ],
   "license": "MIT",
   "scripts": {
@@ -44,7 +45,6 @@
     "eslint-plugin-import": "~2.7.0",
     "eslint-plugin-jest": "~20.0.3",
     "eslint-plugin-prettier": "~2.1.2",
-    "express": "~4.15.3",
     "husky": "~0.13.3",
     "jest": "~20.0.4",
     "lint-staged": "~3.4.1",
@@ -64,6 +64,7 @@
     "apollo-test-utils": "~0.3.2",
     "babel-plugin-transform-runtime": "~6.23.0",
     "body-parser": "~1.17.2",
+    "express": "~4.15.3",
     "graphql": "~0.9.6",
     "graphql-server-express": "~1.0.0",
     "graphql-tag": "~2.0.0",
