@@ -1,29 +1,10 @@
 {
-  "env": {
-    "test": {
-      "presets": [
-        "es2015",
-        "stage-0"
-      ],
-      "plugins": [
-        "external-helpers",
-        "transform-runtime"
-      ]
-    },
-    "development": {
-      "presets": [
-        [
-          "es2015",
-          {
-            "modules": false
-          }
-        ],
-        "stage-0"
-      ],
-      "plugins": [
-        "external-helpers",
-        "transform-runtime"
-      ]
-    }
-  }
+  "presets": [
+    ["es2015", { "modules": false }],
+    "stage-0"
+  ],
+  "plugins": [
+    "external-helpers",
+    "transform-runtime"
+  ]
 }
