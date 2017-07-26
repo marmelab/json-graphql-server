@@ -61,5 +61,6 @@ export default data =>
         }))
         .map(typeObject => new GraphQLObjectType(typeObject));
 
+export const getTypeNameFromKey = key => camelize(singularize(key));
 export const getTypeNamesFromData = data =>
-    Object.keys(data).map(typeName => camelize(singularize(typeName)));
+    Object.keys(data).map(getTypeNameFromKey);
