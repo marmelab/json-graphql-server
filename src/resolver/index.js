@@ -1,11 +1,11 @@
 import { pluralize, underscore } from 'inflection';
 
-import all from './all';
-import meta from './meta';
-import single from './single';
-import create from './create';
-import update from './update';
-import remove from './remove';
+import all from './Query/all';
+import meta from './Query/meta';
+import single from './Query/single';
+import create from './Mutation/create';
+import update from './Mutation/update';
+import remove from './Mutation/remove';
 import { getTypeNamesFromData } from '../introspection/getTypesFromData';
 
 const getData = (entityName, data) => data[underscore(pluralize(entityName))];
