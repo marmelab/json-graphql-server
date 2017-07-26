@@ -1,31 +1,43 @@
 import { pluralize, underscore } from 'inflection';
 
-import all from './all';
-import meta from './meta';
-import single from './single';
-import create from './create';
-import update from './update';
-import remove from './remove';
+import all from './Query/all';
+import meta from './Query/meta';
+import single from './Query/single';
+import create from './Mutation/create';
+import update from './Mutation/update';
+import remove from './Mutation/remove';
 import { getTypeNamesFromData } from '../introspection/getTypesFromData';
 
-const getResolversForEntity = (entityName, data) => {
-    let entityData = data[underscore(pluralize(entityName))];
+const getData = (entityName, data) => data[underscore(pluralize(entityName))];
 
+const getQueryResolvers = (entityName, data) => ({
+    [`all${pluralize(entityName)}`]: all(data),
+    [`_all${pluralize(entityName)}Meta`]: meta(data),
+    [entityName]: single(data),
+});
+
+const getMutationResolvers = (entityName, data) => ({
+    [`create${entityName}`]: create(data),
+    [`update${entityName}`]: update(data),
+    [`remove${entityName}`]: remove(data),
+});
+
+export default data => {
+    const typeNames = getTypeNamesFromData(data);
     return {
-        [`all${pluralize(entityName)}`]: all(entityData),
-        [`_all${pluralize(entityName)}Meta`]: meta(entityData),
-        [entityName]: single(entityData),
-        [`create${entityName}`]: create(entityData),
-        [`update${entityName}`]: update(entityData),
-        [`remove${entityName}`]: remove(entityData),
+        Query: typeNames.reduce(
+            (resolvers, entityName) => ({
+                ...resolvers,
+                ...getQueryResolvers(entityName, getData(entityName, data)),
+            }),
+            {},
+        ),
+        Mutation: typeNames.reduce(
+            (resolvers, entityName) => ({
+                ...resolvers,
+                ...getMutationResolvers(entityName, getData(entityName, data)),
+            }),
+            {},
+        ),
     };
 };
-
-export default data =>
-    getTypeNamesFromData(data).reduce(
-        (resolvers, entityName) => ({
-            ...resolvers,
-            ...getResolversForEntity(entityName, data),
-        }),
-        {},
-    );
