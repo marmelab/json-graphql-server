@@ -7,10 +7,14 @@ import {
     GraphQLObjectType,
     GraphQLSchema,
     GraphQLString,
+    parse,
+    extendSchema,
 } from 'graphql';
 import { pluralize, camelize } from 'inflection';
 
 import getTypesFromData from './getTypesFromData';
+import { isRelationshipField } from '../relationships';
+import { getRelatedType } from '../nameConverter';
 
 /**
  * Get a GraphQL schema from data
@@ -153,5 +157,25 @@ export default data => {
         }, {}),
     });
 
-    return new GraphQLSchema({ query: queryType, mutation: mutationType });
+    let schema = new GraphQLSchema({
+        query: queryType,
+        mutation: mutationType,
+    });
+
+    // extend schema to add relationship fields
+    Object.values(typesByName).map(type => {
+        Object.keys(type.getFields())
+            .filter(isRelationshipField)
+            .map(fieldName => {
+                const relatedType = getRelatedType(fieldName);
+                schema = extendSchema(
+                    schema,
+                    parse(
+                        `extend type ${type} { ${relatedType}: ${relatedType}} `,
+                    ),
+                );
+            });
+    });
+
+    return schema;
 };

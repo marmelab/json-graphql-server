@@ -6,7 +6,8 @@ import single from './Query/single';
 import create from './Mutation/create';
 import update from './Mutation/update';
 import remove from './Mutation/remove';
-import { getTypeNameFromKey } from '../introspection/getTypesFromData';
+import entityResolver from './Entity';
+import { getTypeFromKey } from '../nameConverter';
 
 const getQueryResolvers = (entityName, data) => ({
     [`all${pluralize(entityName)}`]: all(data),
@@ -25,14 +26,21 @@ export default data => {
         Query: Object.keys(data).reduce(
             (resolvers, key) => ({
                 ...resolvers,
-                ...getQueryResolvers(getTypeNameFromKey(key), data[key]),
+                ...getQueryResolvers(getTypeFromKey(key), data[key]),
             }),
             {},
         ),
         Mutation: Object.keys(data).reduce(
             (resolvers, key) => ({
                 ...resolvers,
-                ...getMutationResolvers(getTypeNameFromKey(key), data[key]),
+                ...getMutationResolvers(getTypeFromKey(key), data[key]),
+            }),
+            {},
+        ),
+        ...Object.keys(data).reduce(
+            (resolvers, key) => ({
+                ...resolvers,
+                [getTypeFromKey(key)]: entityResolver(key, data),
             }),
             {},
         ),

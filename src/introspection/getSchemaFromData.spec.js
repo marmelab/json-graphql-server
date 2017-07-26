@@ -2,7 +2,6 @@ import {
     GraphQLBoolean,
     GraphQLID,
     GraphQLInt,
-    GraphQLList,
     GraphQLNonNull,
     GraphQLObjectType,
     GraphQLString,
@@ -36,15 +35,6 @@ const data = {
     ],
 };
 
-const PostType = new GraphQLObjectType({
-    name: 'Post',
-    fields: {
-        id: { type: new GraphQLNonNull(GraphQLID) },
-        title: { type: new GraphQLNonNull(GraphQLString) },
-        views: { type: new GraphQLNonNull(GraphQLInt) },
-        user_id: { type: new GraphQLNonNull(GraphQLID) },
-    },
-});
 const UserType = new GraphQLObjectType({
     name: 'User',
     fields: {
@@ -53,6 +43,18 @@ const UserType = new GraphQLObjectType({
     },
 });
 
+const PostType = new GraphQLObjectType({
+    name: 'Post',
+    fields: {
+        id: { type: new GraphQLNonNull(GraphQLID) },
+        title: { type: new GraphQLNonNull(GraphQLString) },
+        views: { type: new GraphQLNonNull(GraphQLInt) },
+        user_id: { type: new GraphQLNonNull(GraphQLID) },
+        User: { type: UserType },
+    },
+});
+
+/*
 const ListMetadataType = new GraphQLObjectType({
     name: 'ListMetadata',
     fields: {
@@ -60,7 +62,7 @@ const ListMetadataType = new GraphQLObjectType({
     },
 });
 
-const QueryType = new GraphQLObjectType({ // eslint-disable-line 
+const QueryType = new GraphQLObjectType({
     name: 'Query',
     fields: {
         getPost: {
@@ -97,13 +99,18 @@ const QueryType = new GraphQLObjectType({ // eslint-disable-line
         },
     },
 });
+*/
 
 test('creates one type per data type', () => {
     const typeMap = getSchemaFromData(data).getTypeMap();
     expect(typeMap['Post'].name).toEqual(PostType.name);
-    expect(typeMap['Post'].fields).toEqual(PostType.fields);
+    expect(Object.keys(typeMap['Post'].getFields())).toEqual(
+        Object.keys(PostType.getFields()),
+    );
     expect(typeMap['User'].name).toEqual(UserType.name);
-    expect(typeMap['User'].fields).toEqual(UserType.fields);
+    expect(Object.keys(typeMap['User'].getFields())).toEqual(
+        Object.keys(UserType.getFields()),
+    );
 });
 
 test('creates three query fields per data type', () => {
@@ -117,7 +124,7 @@ test('creates three query fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         },
     ]);
-    expect(queries['allPosts'].type).toMatchObject(new GraphQLList(PostType));
+    expect(queries['allPosts'].type.toString()).toEqual('[Post]');
     expect(queries['allPosts'].args).toEqual([
         {
             defaultValue: undefined,
@@ -150,7 +157,7 @@ test('creates three query fields per data type', () => {
             type: GraphQLString,
         },
     ]);
-    expect(queries['_allPostsMeta'].type).toMatchObject(ListMetadataType);
+    expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 
     expect(queries['User'].type.name).toEqual(UserType.name);
     expect(queries['User'].args).toEqual([
@@ -161,7 +168,7 @@ test('creates three query fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         },
     ]);
-    expect(queries['allUsers'].type).toMatchObject(new GraphQLList(UserType));
+    expect(queries['allUsers'].type.toString()).toEqual('[User]');
     expect(queries['allUsers'].args).toEqual([
         {
             defaultValue: undefined,
@@ -194,7 +201,7 @@ test('creates three query fields per data type', () => {
             type: GraphQLString,
         },
     ]);
-    expect(queries['_allPostsMeta'].type).toMatchObject(ListMetadataType);
+    expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 });
 
 test('creates three mutation fields per data type', () => {

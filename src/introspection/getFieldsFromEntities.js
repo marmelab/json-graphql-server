@@ -19,7 +19,7 @@ import getValuesFromEntities from './getValuesFromEntities';
  *         "user_id": 456,
  *     },
  * ];
- * const types = getFieldsFromData(entities);
+ * const types = getFieldsFromEntities(entities);
  * // {
  * //    id: { type: graphql.GraphQLString },
  * //    title: { type: graphql.GraphQLString },
