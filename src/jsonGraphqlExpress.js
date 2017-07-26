@@ -1,5 +1,6 @@
-import bodyParser from 'body-parser';
-import { graphqlExpress } from 'graphql-server-express';
+import graphqlHTTP from 'express-graphql';
+import { printSchema } from 'graphql';
+const { makeExecutableSchema } = require('graphql-tools');
 import getSchemaFromData from './introspection/getSchemaFromData';
 import resolver from './resolver';
 
@@ -47,12 +48,11 @@ import resolver from './resolver';
  * 
  * app.listen(PORT);
  */
-export default data => {
-    return [
-        bodyParser.json(),
-        graphqlExpress({
-            schema: getSchemaFromData(data),
-            rootValue: resolver(data),
+export default data =>
+    graphqlHTTP({
+        schema: makeExecutableSchema({
+            typeDefs: printSchema(getSchemaFromData(data)),
+            resolvers: resolver(data),
         }),
-    ];
-};
+        graphiql: true,
+    });

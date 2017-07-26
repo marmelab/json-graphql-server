@@ -1,4 +1,4 @@
-export default entityData => ({ page, perPage = 25, filter = '{}' }) => {
+export default entityData => (_, { page, perPage = 25, filter = '{}' }) => {
     const filters = JSON.parse(filter);
     let items = [...entityData];
 

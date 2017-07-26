@@ -1,10 +1,7 @@
-export default entityData => ({
-    sortField,
-    sortOrder = 'asc',
-    page,
-    perPage = 25,
-    filter = '{}',
-}) => {
+export default entityData => (
+    _,
+    { sortField, sortOrder = 'asc', page, perPage = 25, filter = '{}' },
+) => {
     const filters = JSON.parse(filter);
     let items = [...entityData];
 
