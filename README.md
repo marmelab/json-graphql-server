@@ -20,40 +20,16 @@ Your data file should be an object where the keys are the entity types. The valu
 ```json
 {
     "posts": [
-        {
-            "id": 1,
-            "title": "Lorem Ipsum",
-            "views": 254,
-            "user_id": 123,
-            "tag_id": "foo"
-        },
-        {
-            "id": 2,
-            "title": "Sic Dolor amet",
-            "views": 65,
-            "user_id": 456,
-            "tag_id": "bar"
-        },
+        { "id": 1, "title": "Lorem Ipsum", "views": 254, "user_id": 123 },
+        { "id": 2, "title": "Sic Dolor amet", "views": 65, "user_id": 456 },
     ],
     "users": [
-        {
-            "id": 123,
-            "name": "John Doe"
-        },
-        {
-            "id": 456,
-            "name": "Jane Doe"
-        }
+        { "id": 123, "name": "John Doe" },
+        { "id": 456, "name": "Jane Doe" }
     ],
-    "tags": [
-        {
-            "id": "foo",
-            "name": "Foo"
-        },
-        {
-            "id": "bar",
-            "name": "Bar"
-        }
+    "comments": [
+        { "id": 987, "post_id": 1, "body": "Consectetur adipiscing elit" },
+        { "id": 995, "post_id": 1, "body": "Nam molestie pellentesque dui" }
     ]
 }
 ```
@@ -67,16 +43,22 @@ json-graphql-server db.json
 Now you can query your data in graphql. For instance, to issue the following query:
 
 ```graphql
-query {
-    Customer(id: 1) {
+{
+    Post(id: 1) {
         id
-        first_name
-        last_name
+        title
+        views
+        User {
+            name
+        }
+        Comments {
+            body
+        }
     }
 }
 ```
 
-Go to http://localhost:3000/?query=query%20%7B%20Post(id%3A%201)%20%7Bid%20title%20views%20%7D%7D. You'll get the following result:
+Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%20views%20User%20%7B%20name%20%7D%20Comments%20%7B%20body%20%7D%20%7D%20%7D. You'll get the following result:
 
 ```json
 {
@@ -85,12 +67,19 @@ Go to http://localhost:3000/?query=query%20%7B%20Post(id%3A%201)%20%7Bid%20title
             "id": "1",
             "title": "Lorem Ipsum",
             "views": 254,
+            "User": {
+                "name": "John Doe"
+            },
+            "Comments": [
+                { "body": "Consectetur adipiscing elit" },
+                { "body": "Nam molestie pellentesque dui" },
+            ]
         }
     }
 }
 ```
 
-The json-graphql-server accepts queries in GET and POST. Under the hood, it uses [Apollo's `graphql-server` module](http://dev.apollodata.com/tools/graphql-server/requests.html). Please refer to their documentations for details about passing variables, etc.
+The json-graphql-server accepts queries in GET and POST. Under the hood, it uses [the `express-graphql` module](https://github.com/graphql/express-graphql). Please refer to their documentations for details about passing variables, etc.
 
 Note that the server is [GraphiQL](https://github.com/skevy/graphiql-app/releases) enabled, so you can query your server using a full-featured graphical user interface, providing autosuggest, history, etc.
 
@@ -112,7 +101,8 @@ type Post {
     title: String!
     views: Int
     user_id: ID
-    tag_id: ID
+    User: User
+    Comments: [Comment]
 }
 type Query {
   Post(id: ID!): Post
@@ -173,7 +163,6 @@ Here is how you can use the queries and mutations generated for your data, using
     title
     views
     user_id
-    tag_id
   }
 }
             </pre>
@@ -186,8 +175,7 @@ Here is how you can use the queries and mutations generated for your data, using
         "id": 1,
         "title": "Lorem Ipsum",
         "views": 254,
-        "user_id": 123,
-        "tag_id": "foo"
+        "user_id": 123
     } 
   }
 }
@@ -246,7 +234,7 @@ Deploy with Heroku or Next.js.
 
 ## Roadmap
 
-* Handle relationships
+* Filtering in the `all*` queries
 * Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
 * CLI options (port, https, watch, delay, custom schema)
 
@@ -265,6 +253,3 @@ make format
 ## License
 
 Admin-on-rest is licensed under the [MIT Licence](https://github.com/marmelab/json-graphql-server/blob/master/LICENSE.md), sponsored and supported by [marmelab](http://marmelab.com).
-
-
-
