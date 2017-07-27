@@ -1,6 +1,7 @@
 import graphqlHTTP from 'express-graphql';
 import { printSchema } from 'graphql';
-const { makeExecutableSchema } = require('graphql-tools');
+import { maskErrors } from 'graphql-errors';
+import { makeExecutableSchema } from 'graphql-tools';
 import getSchemaFromData from './introspection/getSchemaFromData';
 import resolver from './resolver';
 
@@ -48,11 +49,14 @@ import resolver from './resolver';
  * 
  * app.listen(PORT);
  */
-export default data =>
-    graphqlHTTP({
-        schema: makeExecutableSchema({
-            typeDefs: printSchema(getSchemaFromData(data)),
-            resolvers: resolver(data),
-        }),
+export default data => {
+    const schema = makeExecutableSchema({
+        typeDefs: printSchema(getSchemaFromData(data)),
+        resolvers: resolver(data),
+    });
+    maskErrors(schema);
+    return graphqlHTTP({
+        schema,
         graphiql: true,
     });
+};

@@ -15,19 +15,18 @@ import getValuesFromEntities from './getValuesFromEntities';
  *     {
  *         "id": 2,
  *         "title": "Sic Dolor amet",
- *         "views": 65,
  *         "user_id": 456,
  *     },
  * ];
  * const types = getFieldsFromEntities(entities);
  * // {
- * //    id: { type: graphql.GraphQLString },
- * //    title: { type: graphql.GraphQLString },
- * //    views: { type: graphql.GraphQLInt },
- * //    user_id: { type: graphql.GraphQLString },
+ * //    id: { type: new GraphQLNonNull(GraphQLString) },
+ * //    title: { type: new GraphQLNonNull(GraphQLString) },
+ * //    views: { type: GraphQLInt },
+ * //    user_id: { type: new GraphQLNonNull(GraphQLString) },
  * // };
  */
-export default entities => {
+export default (entities, checkRequired = true) => {
     const fieldValues = getValuesFromEntities(entities);
     const nbValues = entities.length;
     return Object.keys(fieldValues).reduce((fields, fieldName) => {
@@ -35,7 +34,9 @@ export default entities => {
             type: getTypeFromValues(
                 fieldName,
                 fieldValues[fieldName],
-                fieldValues[fieldName].length === nbValues,
+                checkRequired
+                    ? fieldValues[fieldName].length === nbValues
+                    : false,
             ),
         };
         return fields;
