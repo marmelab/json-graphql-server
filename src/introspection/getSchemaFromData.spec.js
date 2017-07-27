@@ -2,6 +2,7 @@ import {
     GraphQLBoolean,
     GraphQLID,
     GraphQLInt,
+    GraphQLList,
     GraphQLNonNull,
     GraphQLObjectType,
     GraphQLString,
@@ -37,21 +38,22 @@ const data = {
 
 const UserType = new GraphQLObjectType({
     name: 'User',
-    fields: {
+    fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLID) },
         name: { type: new GraphQLNonNull(GraphQLString) },
-    },
+        Posts: { type: new GraphQLList(PostType) },
+    }),
 });
 
 const PostType = new GraphQLObjectType({
     name: 'Post',
-    fields: {
+    fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLID) },
         title: { type: new GraphQLNonNull(GraphQLString) },
         views: { type: new GraphQLNonNull(GraphQLInt) },
         user_id: { type: new GraphQLNonNull(GraphQLID) },
         User: { type: UserType },
-    },
+    }),
 });
 
 /*
@@ -312,7 +314,7 @@ test('creates three mutation fields per data type', () => {
 
 test('pluralizes and capitalizes correctly', () => {
     const data = {
-        foot: [{ id: 1, size: 42 }, { id: 2, size: 39 }],
+        feet: [{ id: 1, size: 42 }, { id: 2, size: 39 }],
         categories: [{ id: 1, name: 'foo' }],
     };
     const queries = getSchemaFromData(data).getQueryType().getFields();

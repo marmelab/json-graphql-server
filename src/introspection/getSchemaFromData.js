@@ -171,19 +171,20 @@ export default data => {
      *     extend type Post { User: User }
      *     extend type User { Posts: [Post] }
      */
-    const schemaExtension = Object.values(typesByName)
-        .reduce((ext, type) => {
-            Object.keys(type.getFields())
-                .filter(isRelationshipField)
-                .map(fieldName => {
-                    const relType = getRelatedType(fieldName);
-                    const rel = pluralize(type.toString());
-                    ext.push(`extend type ${type} { ${relType}: ${relType} }`);
-                    ext.push(`extend type ${relType} { ${rel}: [${type}] }`);
-                });
-            return ext;
-        }, [])
-        .join('\n');
+    const schemaExtension = Object.values(typesByName).reduce((ext, type) => {
+        Object.keys(type.getFields())
+            .filter(isRelationshipField)
+            .map(fieldName => {
+                const relType = getRelatedType(fieldName);
+                const rel = pluralize(type.toString());
+                ext += `
+extend type ${type} { ${relType}: ${relType} }
+extend type ${relType} { ${rel}: [${type}] }`;
+            });
+        return ext;
+    }, '');
 
-    return extendSchema(schema, parse(schemaExtension));
+    return schemaExtension
+        ? extendSchema(schema, parse(schemaExtension))
+        : schema;
 };
