@@ -113,8 +113,6 @@ export default data => {
                 args: {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
-                    sortField: { type: GraphQLString },
-                    sortOrder: { type: GraphQLString },
                     filter: { type: GraphQLString },
                 },
             };

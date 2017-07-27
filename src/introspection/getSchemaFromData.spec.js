@@ -115,6 +115,16 @@ test('creates one type per data type', () => {
     );
 });
 
+test('creates one field per relationship', () => {
+    const typeMap = getSchemaFromData(data).getTypeMap();
+    expect(Object.keys(typeMap['Post'].getFields())).toContain('User');
+});
+
+test('creates one field per reverse relationship', () => {
+    const typeMap = getSchemaFromData(data).getTypeMap();
+    expect(Object.keys(typeMap['User'].getFields())).toContain('Posts');
+});
+
 test('creates three query fields per data type', () => {
     const queries = getSchemaFromData(data).getQueryType().getFields();
     expect(queries['Post'].type.name).toEqual(PostType.name);
