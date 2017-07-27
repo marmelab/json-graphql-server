@@ -36,15 +36,6 @@ const data = {
     ],
 };
 
-const UserType = new GraphQLObjectType({
-    name: 'User',
-    fields: () => ({
-        id: { type: new GraphQLNonNull(GraphQLID) },
-        name: { type: new GraphQLNonNull(GraphQLString) },
-        Posts: { type: new GraphQLList(PostType) },
-    }),
-});
-
 const PostType = new GraphQLObjectType({
     name: 'Post',
     fields: () => ({
@@ -53,6 +44,15 @@ const PostType = new GraphQLObjectType({
         views: { type: new GraphQLNonNull(GraphQLInt) },
         user_id: { type: new GraphQLNonNull(GraphQLID) },
         User: { type: UserType },
+    }),
+});
+
+const UserType = new GraphQLObjectType({
+    name: 'User',
+    fields: () => ({
+        id: { type: new GraphQLNonNull(GraphQLID) },
+        name: { type: new GraphQLNonNull(GraphQLString) },
+        Posts: { type: new GraphQLList(PostType) },
     }),
 });
 
