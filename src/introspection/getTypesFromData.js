@@ -2,6 +2,7 @@ import { GraphQLObjectType } from 'graphql';
 import { singularize, camelize } from 'inflection';
 
 import getFieldsFromEntities from './getFieldsFromEntities';
+import { getTypeFromKey } from '../nameConverter';
 
 /**
  * Get a list of GraphQLObjectType from data
@@ -62,4 +63,4 @@ export default data =>
         .map(typeObject => new GraphQLObjectType(typeObject));
 
 export const getTypeNamesFromData = data =>
-    Object.keys(data).map(typeName => camelize(singularize(typeName)));
+    Object.keys(data).map(getTypeFromKey);

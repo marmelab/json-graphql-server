@@ -1,4 +1,4 @@
-import { pluralize, underscore } from 'inflection';
+import { pluralize } from 'inflection';
 
 import all from './Query/all';
 import meta from './Query/meta';
@@ -6,9 +6,8 @@ import single from './Query/single';
 import create from './Mutation/create';
 import update from './Mutation/update';
 import remove from './Mutation/remove';
-import { getTypeNamesFromData } from '../introspection/getTypesFromData';
-
-const getData = (entityName, data) => data[underscore(pluralize(entityName))];
+import entityResolver from './Entity';
+import { getTypeFromKey } from '../nameConverter';
 
 const getQueryResolvers = (entityName, data) => ({
     [`all${pluralize(entityName)}`]: all(data),
@@ -23,19 +22,25 @@ const getMutationResolvers = (entityName, data) => ({
 });
 
 export default data => {
-    const typeNames = getTypeNamesFromData(data);
     return {
-        Query: typeNames.reduce(
-            (resolvers, entityName) => ({
+        Query: Object.keys(data).reduce(
+            (resolvers, key) => ({
                 ...resolvers,
-                ...getQueryResolvers(entityName, getData(entityName, data)),
+                ...getQueryResolvers(getTypeFromKey(key), data[key]),
             }),
             {},
         ),
-        Mutation: typeNames.reduce(
-            (resolvers, entityName) => ({
+        Mutation: Object.keys(data).reduce(
+            (resolvers, key) => ({
                 ...resolvers,
-                ...getMutationResolvers(entityName, getData(entityName, data)),
+                ...getMutationResolvers(getTypeFromKey(key), data[key]),
+            }),
+            {},
+        ),
+        ...Object.keys(data).reduce(
+            (resolvers, key) => ({
+                ...resolvers,
+                [getTypeFromKey(key)]: entityResolver(key, data),
             }),
             {},
         ),

@@ -7,10 +7,14 @@ import {
     GraphQLObjectType,
     GraphQLSchema,
     GraphQLString,
+    parse,
+    extendSchema,
 } from 'graphql';
 import { pluralize, camelize } from 'inflection';
 
 import getTypesFromData from './getTypesFromData';
+import { isRelationshipField } from '../relationships';
+import { getRelatedType } from '../nameConverter';
 
 /**
  * Get a GraphQL schema from data
@@ -109,8 +113,6 @@ export default data => {
                 args: {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
-                    sortField: { type: GraphQLString },
-                    sortOrder: { type: GraphQLString },
                     filter: { type: GraphQLString },
                 },
             };
@@ -153,5 +155,34 @@ export default data => {
         }, {}),
     });
 
-    return new GraphQLSchema({ query: queryType, mutation: mutationType });
+    const schema = new GraphQLSchema({
+        query: queryType,
+        mutation: mutationType,
+    });
+
+    /**
+     * extend schema to add relationship fields
+     * 
+     * @example
+     * If the `post` key contains a 'user_id' field, then
+     * add one-to-many and many-to-one type extensions:
+     *     extend type Post { User: User }
+     *     extend type User { Posts: [Post] }
+     */
+    const schemaExtension = Object.values(typesByName).reduce((ext, type) => {
+        Object.keys(type.getFields())
+            .filter(isRelationshipField)
+            .map(fieldName => {
+                const relType = getRelatedType(fieldName);
+                const rel = pluralize(type.toString());
+                ext += `
+extend type ${type} { ${relType}: ${relType} }
+extend type ${relType} { ${rel}: [${type}] }`;
+            });
+        return ext;
+    }, '');
+
+    return schemaExtension
+        ? extendSchema(schema, parse(schemaExtension))
+        : schema;
 };
