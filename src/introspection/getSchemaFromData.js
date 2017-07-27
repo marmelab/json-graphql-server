@@ -157,25 +157,33 @@ export default data => {
         }, {}),
     });
 
-    let schema = new GraphQLSchema({
+    const schema = new GraphQLSchema({
         query: queryType,
         mutation: mutationType,
     });
 
-    // extend schema to add relationship fields
-    Object.values(typesByName).map(type => {
-        Object.keys(type.getFields())
-            .filter(isRelationshipField)
-            .map(fieldName => {
-                const relatedType = getRelatedType(fieldName);
-                schema = extendSchema(
-                    schema,
-                    parse(
-                        `extend type ${type} { ${relatedType}: ${relatedType}} `,
-                    ),
-                );
-            });
-    });
+    /**
+     * extend schema to add relationship fields
+     * 
+     * @example
+     * If the `post` key contains a 'user_id' field, then
+     * add one-to-many and many-to-one type extensions:
+     *     extend type Post { User: User }
+     *     extend type User { Posts: [Post] }
+     */
+    const schemaExtension = Object.values(typesByName)
+        .reduce((ext, type) => {
+            Object.keys(type.getFields())
+                .filter(isRelationshipField)
+                .map(fieldName => {
+                    const relType = getRelatedType(fieldName);
+                    const rel = pluralize(type.toString());
+                    ext.push(`extend type ${type} { ${relType}: ${relType} }`);
+                    ext.push(`extend type ${relType} { ${rel}: [${type}] }`);
+                });
+            return ext;
+        }, [])
+        .join('\n');
 
-    return schema;
+    return extendSchema(schema, parse(schemaExtension));
 };
