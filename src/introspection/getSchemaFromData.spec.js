@@ -137,38 +137,16 @@ test('creates three query fields per data type', () => {
         },
     ]);
     expect(queries['allPosts'].type.toString()).toEqual('[Post]');
-    expect(queries['allPosts'].args).toEqual([
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'page',
-            type: GraphQLInt,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'perPage',
-            type: GraphQLInt,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'sortField',
-            type: GraphQLString,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'sortOrder',
-            type: GraphQLString,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'filter',
-            type: GraphQLString,
-        },
-    ]);
+    expect(queries['allPosts'].args[0].name).toEqual('page');
+    expect(queries['allPosts'].args[0].type).toEqual(GraphQLInt);
+    expect(queries['allPosts'].args[1].name).toEqual('perPage');
+    expect(queries['allPosts'].args[1].type).toEqual(GraphQLInt);
+    expect(queries['allPosts'].args[2].name).toEqual('sortField');
+    expect(queries['allPosts'].args[2].type).toEqual(GraphQLString);
+    expect(queries['allPosts'].args[3].name).toEqual('sortOrder');
+    expect(queries['allPosts'].args[3].type).toEqual(GraphQLString);
+    expect(queries['allPosts'].args[4].name).toEqual('filter');
+    expect(queries['allPosts'].args[4].type.toString()).toEqual('PostFilter');
     expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 
     expect(queries['User'].type.name).toEqual(UserType.name);
@@ -181,38 +159,16 @@ test('creates three query fields per data type', () => {
         },
     ]);
     expect(queries['allUsers'].type.toString()).toEqual('[User]');
-    expect(queries['allUsers'].args).toEqual([
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'page',
-            type: GraphQLInt,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'perPage',
-            type: GraphQLInt,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'sortField',
-            type: GraphQLString,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'sortOrder',
-            type: GraphQLString,
-        },
-        {
-            defaultValue: undefined,
-            description: null,
-            name: 'filter',
-            type: GraphQLString,
-        },
-    ]);
+    expect(queries['allUsers'].args[0].name).toEqual('page');
+    expect(queries['allUsers'].args[0].type).toEqual(GraphQLInt);
+    expect(queries['allUsers'].args[1].name).toEqual('perPage');
+    expect(queries['allUsers'].args[1].type).toEqual(GraphQLInt);
+    expect(queries['allUsers'].args[2].name).toEqual('sortField');
+    expect(queries['allUsers'].args[2].type).toEqual(GraphQLString);
+    expect(queries['allUsers'].args[3].name).toEqual('sortOrder');
+    expect(queries['allUsers'].args[3].type).toEqual(GraphQLString);
+    expect(queries['allUsers'].args[4].name).toEqual('filter');
+    expect(queries['allUsers'].args[4].type.toString()).toEqual('UserFilter');
     expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 });
 

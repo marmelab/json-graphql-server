@@ -75,3 +75,18 @@ test('creates one q field per entity field', () => {
     const CommentFilterFields = filterTypes.User.getFields();
     expect(CommentFilterFields.q.type.toString()).toEqual('String');
 });
+
+test('creates 4 fields for number field for range filters', () => {
+    const filterTypes = getFilterTypesFromData(data);
+    const PostFilterFields = filterTypes.Post.getFields();
+    expect(PostFilterFields.views_lt.type.toString()).toEqual('Int');
+    expect(PostFilterFields.views_lte.type.toString()).toEqual('Int');
+    expect(PostFilterFields.views_gt.type.toString()).toEqual('Int');
+    expect(PostFilterFields.views_gte.type.toString()).toEqual('Int');
+});
+
+test('does not create vomparison fiels for non-number fields', () => {
+    const filterTypes = getFilterTypesFromData(data);
+    const PostFilterFields = filterTypes.Post.getFields();
+    expect(PostFilterFields.title_lte).toBeUndefined();
+});

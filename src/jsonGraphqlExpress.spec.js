@@ -183,6 +183,37 @@ describe('all* route', () => {
                     },
                 }),
             ]));
+        it('filters by value range on each integer field using the related filters', () =>
+            Promise.all([
+                gqlAgent(
+                    '{ allPosts(filter: { views_lt: 76 }) { id } }',
+                ).expect({
+                    data: {
+                        allPosts: [{ id: 2 }],
+                    },
+                }),
+                gqlAgent(
+                    '{ allPosts(filter: { views_lte: 76 }) { id } }',
+                ).expect({
+                    data: {
+                        allPosts: [{ id: 2 }, { id: 3 }],
+                    },
+                }),
+                gqlAgent(
+                    '{ allPosts(filter: { views_gt: 76 }) { id } }',
+                ).expect({
+                    data: {
+                        allPosts: [{ id: 1 }],
+                    },
+                }),
+                gqlAgent(
+                    '{ allPosts(filter: { views_gte: 76 }) { id } }',
+                ).expect({
+                    data: {
+                        allPosts: [{ id: 1 }, { id: 3 }],
+                    },
+                }),
+            ]));
     });
 });
 

@@ -1,6 +1,31 @@
-import { GraphQLInputObjectType, GraphQLString } from 'graphql';
+import {
+    GraphQLInputObjectType,
+    GraphQLString,
+    GraphQLInt,
+    GraphQLFloat,
+} from 'graphql';
 import getFieldsFromEntities from './getFieldsFromEntities';
+import getValuesFromEntities from './getValuesFromEntities';
+import getTypeFromValues from './getTypeFromValues';
 import { getTypeFromKey } from '../nameConverter';
+
+const getNumberFiltersFromEntities = entities => {
+    const fieldValues = getValuesFromEntities(entities);
+    return Object.keys(fieldValues).reduce((fields, fieldName) => {
+        const fieldType = getTypeFromValues(
+            fieldName,
+            fieldValues[fieldName],
+            false,
+        );
+        if (fieldType == GraphQLInt || fieldType == GraphQLFloat) {
+            fields[`${fieldName}_lt`] = { type: fieldType };
+            fields[`${fieldName}_lte`] = { type: fieldType };
+            fields[`${fieldName}_gt`] = { type: fieldType };
+            fields[`${fieldName}_gte`] = { type: fieldType };
+        }
+        return fields;
+    }, {});
+};
 
 /**
  * Get a list of GraphQLObjectType for filtering data
@@ -41,6 +66,10 @@ import { getTypeFromKey } from '../nameConverter';
  * //             id: { type: GraphQLString },
  * //             title: { type: GraphQLString },
  * //             views: { type: GraphQLInt },
+ * //             views_lt: { type: GraphQLInt },
+ * //             views_lte: { type: GraphQLInt },
+ * //             views_gt: { type: GraphQLInt },
+ * //             views_gte: { type: GraphQLInt },
  * //             user_id: { type: GraphQLString },
  * //         }
  * //     }),
@@ -63,6 +92,7 @@ export default data =>
                 fields: {
                     q: { type: GraphQLString },
                     ...getFieldsFromEntities(data[key], false),
+                    ...getNumberFiltersFromEntities(data[key]),
                 },
             }),
         }),
