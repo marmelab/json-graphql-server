@@ -96,28 +96,45 @@ npm install -g json-graphql-server
 Based on your data, json-graphql-server will generate a schema with one type per entity, as well as 3 query types and 3 mutation types. For instance for the `Post` entity:
 
 ```graphql
-type Post {
-    id: ID!
-    title: String!
-    views: Int
-    user_id: ID
-    User: User
-    Comments: [Comment]
-}
 type Query {
   Post(id: ID!): Post
-  allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): [Customer]
-  _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): ListMetadata
+  allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): [Post]
+  _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): ListMetadata
 }
 type Mutation {
   createPost(data: String): Post
   updatePost(data: String): Post
   removePost(id: ID!): Boolean
 }
+type Post {
+    id: ID!
+    title: String!
+    views: Int!
+    user_id: ID!
+    User: User
+    Comments: [Comment]
+}
+type PostFilter {
+    q: String
+    id: ID
+    title: String
+    views: Int
+    views_lt: Int
+    views_lte: Int
+    views_gt: Int
+    views_gte: Int
+    user_id: ID    
+}
 type ListMetadata {
     count: Int!
 }
 ```
+
+By convention, json-graphql-server expects all entities to have an `id` field that is unique for their type - it's the entity primary key. The type of every field is inferred from the values, so for instance, `Post.title` is a `String!`, and `Post.views` is an `Int!`. When all entities have a value for a field, json-graphql-server makes the field type non nullable (that's why `Post.views` type is `Int!` and not `Int`).
+
+For every field named `*_id`, json-graphql-server creates a two-way relationship, to let you fetch related entities from both sides. For instance, the presence of the `user_id` field in the `posts` entity leads to the ability to fetch the related `User` for a `Post` - and the related `Posts` for a `User`.
+
+The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. Json-graphql-server also adds a full-text query field named `q`, and created range filter fields for numeric fields. The detail of all available filters can be seen in the generated `*Filter` type.
 
 ## GraphQL Usage
 
@@ -127,31 +144,6 @@ Here is how you can use the queries and mutations generated for your data, using
     <tr>
         <th>Query / Mutation</th>
         <th>Result</th>
-    </tr>
-    <tr>
-        <td>
-            <pre>
-// get a list of entities for a type
-{
-  allPosts {
-    title
-    views
-  }
-}
-            </pre>
-        </td>
-        <td>
-            <pre>
-{
-  "data": {
-    "allPosts": [
-      { "title": "Lorem Ipsum", views: 254 },
-      { "title": "Sic Dolor amet", views: 65 }
-    ]
-  }
-}
-            </pre>
-        </td>
     </tr>
     <tr>
         <td>
@@ -182,8 +174,213 @@ Here is how you can use the queries and mutations generated for your data, using
             </pre>
         </td>
     </tr>
+    <tr>
+        <td>
+            <pre>
+// include many-to-one relationships
+{
+  Post(id: 1) {
+    title
+    User {
+        name
+    }
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "Post": {
+        "title": "Lorem Ipsum",
+        "User": {
+            "name": "John Doe"
+        }
+    } 
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// include one-to-many relationships
+{
+  Post(id: 1) {
+    title
+    Comments {
+        body
+    }
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "Post": {
+        "title": "Lorem Ipsum",
+        "Comments": [
+            { "body": "Consectetur adipiscing elit" },
+            { "body": "Nam molestie pellentesque dui" },
+        ]
+    } 
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// get a list of entities for a type
+{
+  allPosts {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Lorem Ipsum", views: 254 },
+      { "title": "Sic Dolor amet", views: 65 }
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// paginate the results
+{
+  allPosts(page: 0, perPage: 1) {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Lorem Ipsum", views: 254 },
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// sort the results by field
+{
+  allPosts(sortField: "title", sortOrder: "desc") {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Sic Dolor amet", views: 65 }
+      { "title": "Lorem Ipsum", views: 254 },
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// filter the results using the full-text filter
+{
+  allPosts({ filter: { q: "lorem" }}) {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Lorem Ipsum", views: 254 },
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// filter the result using any of the entity fields
+{
+  allPosts(views: 254) {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Lorem Ipsum", views: 254 },
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <pre>
+// number fields get range filters
+// -lt, _lte, -gt, and _gte
+{
+  allPosts(views_gte: 200) {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Lorem Ipsum", views: 254 },
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
 </table>
-
 
 ## Usage with Node
 
@@ -234,7 +431,6 @@ Deploy with Heroku or Next.js.
 
 ## Roadmap
 
-* Filtering in the `all*` queries
 * Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
 * CLI options (port, https, watch, delay, custom schema)
 
