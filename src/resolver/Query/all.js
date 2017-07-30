@@ -51,7 +51,12 @@ export default entityData => (
         if (filter.q) {
             items = items.filter(d =>
                 Object.keys(d).some(
-                    key => d[key] && d[key].toString().includes(filter.q),
+                    key =>
+                        d[key] &&
+                        d[key]
+                            .toString()
+                            .toLowerCase()
+                            .includes(filter.q.toLowerCase()),
                 ),
             );
         }
