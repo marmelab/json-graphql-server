@@ -57,6 +57,7 @@
     "rollup-plugin-node-globals": "~1.1.0",
     "rollup-plugin-node-resolve": "~3.0.0",
     "rollup-watch": "~4.0.0",
+    "supertest": "^3.0.0",
     "webpack": "~3.2.0"
   },
   "dependencies": {
