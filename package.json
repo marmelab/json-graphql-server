@@ -57,6 +57,7 @@
     "rollup-plugin-node-globals": "~1.1.0",
     "rollup-plugin-node-resolve": "~3.0.0",
     "rollup-watch": "~4.0.0",
+    "supertest": "^3.0.0",
     "webpack": "~3.2.0"
   },
   "dependencies": {
@@ -66,6 +67,7 @@
     "express": "~4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "~0.10.3",
+    "graphql-errors": "^2.1.0",
     "graphql-tag": "~2.0.0",
     "graphql-tools": "~1.1.0",
     "inflection": "~1.12.0",

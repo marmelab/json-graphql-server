@@ -13,6 +13,7 @@ import {
 import { pluralize, camelize } from 'inflection';
 
 import getTypesFromData from './getTypesFromData';
+import getFilterTypesFromData from './getFilterTypesFromData';
 import { isRelationshipField } from '../relationships';
 import { getRelatedType } from '../nameConverter';
 
@@ -82,6 +83,8 @@ export default data => {
         return types;
     }, {});
 
+    const filterTypesByName = getFilterTypesFromData(data);
+
     const listMetadataType = new GraphQLObjectType({
         name: 'ListMetadata',
         fields: {
@@ -105,7 +108,7 @@ export default data => {
                     perPage: { type: GraphQLInt },
                     sortField: { type: GraphQLString },
                     sortOrder: { type: GraphQLString },
-                    filter: { type: GraphQLString },
+                    filter: { type: filterTypesByName[type.name] },
                 },
             };
             fields[`_all${camelize(pluralize(type.name))}Meta`] = {
