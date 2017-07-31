@@ -1,79 +1,69 @@
 {
-  "name": "json-graphql-server",
-  "version": "0.6.0",
-  "main": "lib/index",
-  "repository": "git@github.com:marmelab/json-graphql-server.git",
-  "authors": [
-    "François Zaninotto",
-    "Gildas Garcia"
-  ],
-  "files": [
-    "*.md",
-    "lib",
-    "bin"
-  ],
-  "license": "MIT",
-  "scripts": {
-    "build": "make build",
-    "clean": "make clean",
-    "format": "make format",
-    "precommit": "lint-staged",
-    "prepublish": "make build",
-    "test": "make test",
-    "watch": "make watch",
-    "watch-test": "make watch-test"
-  },
-  "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix",
-      "git add"
-    ]
-  },
-  "devDependencies": {
-    "@types/jest": "~19.2.4",
-    "babel-cli": "~6.24.1",
-    "babel-core": "~6.25.0",
-    "babel-eslint": "~7.2.3",
-    "babel-jest": "~20.0.3",
-    "babel-loader": "^7.1.1",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-external-helpers": "~6.22.0",
-    "babel-preset-es2015": "~6.24.1",
-    "babel-preset-stage-0": "~6.24.1",
-    "eslint": "~4.2.0",
-    "eslint-config-prettier": "~2.3.0",
-    "eslint-plugin-import": "~2.7.0",
-    "eslint-plugin-jest": "~20.0.3",
-    "eslint-plugin-prettier": "~2.1.2",
-    "husky": "~0.13.3",
-    "jest": "~20.0.4",
-    "lint-staged": "~3.4.1",
-    "prettier": "~1.5.2",
-    "rollup": "~0.43.0",
-    "rollup-plugin-babel": "~2.7.1",
-    "rollup-plugin-commonjs": "~8.0.2",
-    "rollup-plugin-json": "~2.3.0",
-    "rollup-plugin-node-builtins": "~2.1.2",
-    "rollup-plugin-node-globals": "~1.1.0",
-    "rollup-plugin-node-resolve": "~3.0.0",
-    "rollup-watch": "~4.0.0",
-    "supertest": "^3.0.0",
-    "webpack": "~3.2.0"
-  },
-  "dependencies": {
-    "apollo-client": "~1.2.0",
-    "apollo-test-utils": "~0.3.2",
-    "babel-plugin-transform-runtime": "~6.23.0",
-    "express": "~4.15.3",
-    "express-graphql": "^0.6.6",
-    "graphql": "~0.10.3",
-    "graphql-errors": "^2.1.0",
-    "graphql-tag": "~2.0.0",
-    "graphql-tools": "~1.1.0",
-    "inflection": "~1.12.0",
-    "lodash.merge": "~4.6.0"
-  },
-  "bin": {
-    "json-graphql-server": "bin/json-graphql-server.js"
-  }
+    "name": "json-graphql-server",
+    "version": "0.7.0",
+    "main": "lib/index",
+    "repository": "git@github.com:marmelab/json-graphql-server.git",
+    "authors": ["François Zaninotto", "Gildas Garcia"],
+    "files": ["*.md", "lib", "bin"],
+    "license": "MIT",
+    "scripts": {
+        "build": "make build",
+        "clean": "make clean",
+        "format": "make format",
+        "precommit": "lint-staged",
+        "prepublish": "make build",
+        "test": "make test",
+        "watch": "make watch",
+        "watch-test": "make watch-test"
+    },
+    "lint-staged": {
+        "src/**/*.js": ["eslint --fix", "git add"]
+    },
+    "devDependencies": {
+        "@types/jest": "~19.2.4",
+        "babel-cli": "~6.24.1",
+        "babel-core": "~6.25.0",
+        "babel-eslint": "~7.2.3",
+        "babel-jest": "~20.0.3",
+        "babel-loader": "^7.1.1",
+        "babel-plugin-add-module-exports": "^0.2.1",
+        "babel-plugin-external-helpers": "~6.22.0",
+        "babel-preset-es2015": "~6.24.1",
+        "babel-preset-stage-0": "~6.24.1",
+        "eslint": "~4.2.0",
+        "eslint-config-prettier": "~2.3.0",
+        "eslint-plugin-import": "~2.7.0",
+        "eslint-plugin-jest": "~20.0.3",
+        "eslint-plugin-prettier": "~2.1.2",
+        "husky": "~0.13.3",
+        "jest": "~20.0.4",
+        "lint-staged": "~3.4.1",
+        "prettier": "~1.5.2",
+        "rollup": "~0.43.0",
+        "rollup-plugin-babel": "~2.7.1",
+        "rollup-plugin-commonjs": "~8.0.2",
+        "rollup-plugin-json": "~2.3.0",
+        "rollup-plugin-node-builtins": "~2.1.2",
+        "rollup-plugin-node-globals": "~1.1.0",
+        "rollup-plugin-node-resolve": "~3.0.0",
+        "rollup-watch": "~4.0.0",
+        "supertest": "^3.0.0",
+        "webpack": "~3.2.0"
+    },
+    "dependencies": {
+        "apollo-client": "~1.2.0",
+        "apollo-test-utils": "~0.3.2",
+        "babel-plugin-transform-runtime": "~6.23.0",
+        "express": "~4.15.3",
+        "express-graphql": "^0.6.6",
+        "graphql": "~0.10.3",
+        "graphql-errors": "^2.1.0",
+        "graphql-tag": "~2.0.0",
+        "graphql-tools": "~1.1.0",
+        "inflection": "~1.12.0",
+        "lodash.merge": "~4.6.0"
+    },
+    "bin": {
+        "json-graphql-server": "bin/json-graphql-server.js"
+    }
 }
