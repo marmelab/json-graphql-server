@@ -8,6 +8,7 @@ import update from './Mutation/update';
 import remove from './Mutation/remove';
 import entityResolver from './Entity';
 import { getTypeFromKey } from '../nameConverter';
+import DateType from '../introspection/DateType';
 
 const getQueryResolvers = (entityName, data) => ({
     [`all${pluralize(entityName)}`]: all(data),
@@ -44,5 +45,6 @@ export default data => {
             }),
             {},
         ),
+        Date: DateType, // required because makeExecutableSchema strips resolvers from typeDefs
     };
 };

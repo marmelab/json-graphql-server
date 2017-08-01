@@ -17,19 +17,19 @@ Create a `db.json` file.
 
 Your data file should be an object where the keys are the entity types. The values should be lists of entities, i.e. arrays of value objects with at lead an `id` key. For instance:
 
-```json
+```js
 {
-    "posts": [
-        { "id": 1, "title": "Lorem Ipsum", "views": 254, "user_id": 123 },
-        { "id": 2, "title": "Sic Dolor amet", "views": 65, "user_id": 456 },
+    posts: [
+        { id: 1, title: "Lorem Ipsum", views: 254, user_id: 123 },
+        { id: 2, title: "Sic Dolor amet", views: 65, user_id: 456 },
     ],
-    "users": [
-        { "id": 123, "name": "John Doe" },
-        { "id": 456, "name": "Jane Doe" }
+    users: [
+        { id: 123, name: "John Doe" },
+        { id: 456, name: "Jane Doe" }
     ],
-    "comments": [
-        { "id": 987, "post_id": 1, "body": "Consectetur adipiscing elit" },
-        { "id": 995, "post_id": 1, "body": "Nam molestie pellentesque dui" }
+    comments: [
+        { id: 987, post_id: 1, body: "Consectetur adipiscing elit", date: new Date('2017-07-03') },
+        { id: 995, post_id: 1, body: "Nam molestie pellentesque dui", date: new Date('2017-08-17') }
     ]
 }
 ```
@@ -52,13 +52,14 @@ Now you can query your data in graphql. For instance, to issue the following que
             name
         }
         Comments {
+            date
             body
         }
     }
 }
 ```
 
-Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%20views%20User%20%7B%20name%20%7D%20Comments%20%7B%20body%20%7D%20%7D%20%7D. You'll get the following result:
+Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%20views%20User%20%7B%20name%20%7D%20Comments%20%7B%20date%20body%20%7D%20%7D%20%7D. You'll get the following result:
 
 ```json
 {
@@ -71,8 +72,8 @@ Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%
                 "name": "John Doe"
             },
             "Comments": [
-                { "body": "Consectetur adipiscing elit" },
-                { "body": "Nam molestie pellentesque dui" },
+                { "date": "2017-07-03T00:00:00.000Z", "body": "Consectetur adipiscing elit" },
+                { "date": "2017-08-17T00:00:00.000Z", "body": "Nam molestie pellentesque dui" },
             ]
         }
     }
@@ -128,13 +129,14 @@ type PostFilter {
 type ListMetadata {
     count: Int!
 }
+scalar Date
 ```
 
 By convention, json-graphql-server expects all entities to have an `id` field that is unique for their type - it's the entity primary key. The type of every field is inferred from the values, so for instance, `Post.title` is a `String!`, and `Post.views` is an `Int!`. When all entities have a value for a field, json-graphql-server makes the field type non nullable (that's why `Post.views` type is `Int!` and not `Int`).
 
 For every field named `*_id`, json-graphql-server creates a two-way relationship, to let you fetch related entities from both sides. For instance, the presence of the `user_id` field in the `posts` entity leads to the ability to fetch the related `User` for a `Post` - and the related `Posts` for a `User`.
 
-The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. Json-graphql-server also adds a full-text query field named `q`, and created range filter fields for numeric fields. The detail of all available filters can be seen in the generated `*Filter` type.
+The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. Json-graphql-server also adds a full-text query field named `q`, and created range filter fields for numeric and date fields. The detail of all available filters can be seen in the generated `*Filter` type.
 
 ## GraphQL Usage
 

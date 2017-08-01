@@ -17,7 +17,11 @@ const getNumberFiltersFromEntities = entities => {
             fieldValues[fieldName],
             false,
         );
-        if (fieldType == GraphQLInt || fieldType == GraphQLFloat) {
+        if (
+            fieldType == GraphQLInt ||
+            fieldType == GraphQLFloat ||
+            fieldType.name == 'Date'
+        ) {
             fields[`${fieldName}_lt`] = { type: fieldType };
             fields[`${fieldName}_lte`] = { type: fieldType };
             fields[`${fieldName}_gt`] = { type: fieldType };
