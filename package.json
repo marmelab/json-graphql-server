@@ -3,8 +3,15 @@
     "version": "0.7.0",
     "main": "lib/index",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
-    "authors": ["François Zaninotto", "Gildas Garcia"],
-    "files": ["*.md", "lib", "bin"],
+    "authors": [
+        "François Zaninotto",
+        "Gildas Garcia"
+    ],
+    "files": [
+        "*.md",
+        "lib",
+        "bin"
+    ],
     "license": "MIT",
     "scripts": {
         "build": "make build",
@@ -17,7 +24,10 @@
         "watch-test": "make watch-test"
     },
     "lint-staged": {
-        "src/**/*.js": ["eslint --fix", "git add"]
+        "src/**/*.js": [
+            "eslint --fix",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@types/jest": "~19.2.4",
@@ -55,9 +65,8 @@
         "apollo-test-utils": "~0.3.2",
         "babel-plugin-transform-runtime": "~6.23.0",
         "express": "~4.15.3",
-        "express-graphql": "^0.6.6",
-        "graphql": "~0.10.3",
-        "graphql-errors": "^2.1.0",
+        "express-graphql": "~0.6.7",
+        "graphql": "~0.10.5",
         "graphql-tag": "~2.0.0",
         "graphql-tools": "~1.1.0",
         "inflection": "~1.12.0",
