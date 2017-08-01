@@ -1,5 +1,15 @@
 import { GraphQLScalarType, GraphQLError } from 'graphql';
 import { Kind } from 'graphql/language';
+import getFilterTypesFromData from './getFilterTypesFromData';
+
+export const hasDateType = data =>
+    Object.values(getFilterTypesFromData(data)).reduce((hasDate, type) => {
+        if (hasDate) return true;
+        return Object.values(type.getFields()).reduce((hasDateField, field) => {
+            if (hasDateField) return true;
+            return field.type.name == 'Date';
+        }, false);
+    }, false);
 
 export default new GraphQLScalarType({
     name: 'Date',
