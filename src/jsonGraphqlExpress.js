@@ -1,6 +1,5 @@
 import graphqlHTTP from 'express-graphql';
 import { printSchema } from 'graphql';
-import { maskErrors } from 'graphql-errors';
 import { makeExecutableSchema } from 'graphql-tools';
 import getSchemaFromData from './introspection/getSchemaFromData';
 import resolver from './resolver';
@@ -50,13 +49,12 @@ import resolver from './resolver';
  * app.listen(PORT);
  */
 export default data => {
-    const schema = makeExecutableSchema({
-        typeDefs: printSchema(getSchemaFromData(data)),
-        resolvers: resolver(data),
-    });
-    maskErrors(schema);
     return graphqlHTTP({
-        schema,
+        schema: makeExecutableSchema({
+            typeDefs: printSchema(getSchemaFromData(data)),
+            resolvers: resolver(data),
+            logger: { log: e => console.log(e) }, // eslint-disable-line no-console
+        }),
         graphiql: true,
     });
 };
