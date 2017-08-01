@@ -7,6 +7,7 @@ import {
     GraphQLNonNull,
     GraphQLString,
 } from 'graphql';
+import DateType from './DateType';
 
 const isNumeric = value => !isNaN(parseFloat(value)) && isFinite(value);
 const valuesAreNumeric = values => values.every(isNumeric);
@@ -18,6 +19,8 @@ const isString = value => typeof value === 'string';
 const valuesAreString = values => values.every(isString);
 const isArray = value => Array.isArray(value);
 const valuesAreArray = values => values.every(isArray);
+const isDate = value => value instanceof Date;
+const valuesAreDate = values => values.every(isDate);
 
 const requiredTypeOrNormal = (type, isRequired) =>
     isRequired ? new GraphQLNonNull(type) : type;
@@ -63,6 +66,9 @@ export default (name, values = [], isRequired = false) => {
         }
         if (valuesAreBoolean(values)) {
             return requiredTypeOrNormal(GraphQLBoolean, isRequired);
+        }
+        if (valuesAreDate(values)) {
+            return requiredTypeOrNormal(DateType, isRequired);
         }
         if (valuesAreString(values)) {
             return requiredTypeOrNormal(GraphQLString, isRequired);

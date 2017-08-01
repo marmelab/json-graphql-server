@@ -45,7 +45,12 @@ export default entityData => (
                 return;
             }
 
-            items = items.filter(d => d[key] == filter[key]);
+            items = items.filter(
+                d =>
+                    filter[key] instanceof Date
+                        ? +d[key] == +filter[key]
+                        : d[key] == filter[key],
+            );
         });
 
         if (filter.q) {

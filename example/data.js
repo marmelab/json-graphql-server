@@ -1,4 +1,4 @@
-data = {
+module.exports = {
     customers: [
         {
             id: 0,
@@ -10,8 +10,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5293987d0aa598a3b52faff8b4eaa22d.png',
             birthday: null,
-            first_seen: '2016-06-10T15:49:14.236Z',
-            last_seen: '2017-02-05T01:16:23.486Z',
+            first_seen: new Date('2016-06-10T15:49:14.236Z'),
+            last_seen: new Date('2017-02-05T01:16:23.486Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -29,8 +29,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/32adc9ac6717ffda1f648e3a2abc2eda.png',
             birthday: null,
-            first_seen: '2014-07-21T16:15:34.479Z',
-            last_seen: '2017-02-28T20:42:54.495Z',
+            first_seen: new Date('2014-07-21T16:15:34.479Z'),
+            last_seen: new Date('2017-02-28T20:42:54.495Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -48,8 +48,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/28e4e34b02faf220d4f0a24ab4e107e5.png',
             birthday: null,
-            first_seen: '2016-12-05T18:25:35.806Z',
-            last_seen: '2017-02-11T02:32:17.623Z',
+            first_seen: new Date('2016-12-05T18:25:35.806Z'),
+            last_seen: new Date('2017-02-11T02:32:17.623Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -67,8 +67,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5d92a8e49748b872bd37fdb770331fa8.png',
             birthday: null,
-            first_seen: '2017-03-03T20:42:54.440Z',
-            last_seen: '2017-04-13T19:41:16.198Z',
+            first_seen: new Date('2017-03-03T20:42:54.440Z'),
+            last_seen: new Date('2017-04-13T19:41:16.198Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -86,8 +86,8 @@ data = {
             city: 'Ubenec',
             avatar: 'https://robohash.org/2cd122061069271a0b5ac823fa984a83.png',
             birthday: '1966-05-15T06:02:21.200Z',
-            first_seen: '2014-03-16T16:05:27.071Z',
-            last_seen: '2016-02-27T12:23:13.700Z',
+            first_seen: new Date('2014-03-16T16:05:27.071Z'),
+            last_seen: new Date('2016-02-27T12:23:13.700Z'),
             has_ordered: true,
             latest_purchase: '2016-01-28T14:59:45.200Z',
             has_newsletter: false,
@@ -105,8 +105,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/59ed1c5ca64069a1fc703993551491d2.png',
             birthday: null,
-            first_seen: '2017-04-05T19:38:25.633Z',
-            last_seen: '2017-04-24T03:17:29.973Z',
+            first_seen: new Date('2017-04-05T19:38:25.633Z'),
+            last_seen: new Date('2017-04-24T03:17:29.973Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -124,8 +124,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/caa6f9f2176bfa924f31ee9fb2d3e58e.png',
             birthday: null,
-            first_seen: '2016-07-16T14:47:05.098Z',
-            last_seen: '2016-11-28T21:07:50.073Z',
+            first_seen: new Date('2016-07-16T14:47:05.098Z'),
+            last_seen: new Date('2016-11-28T21:07:50.073Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -143,8 +143,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0f94bcacc746226d8808940095b0f1d0.png',
             birthday: null,
-            first_seen: '2013-06-22T04:27:26.725Z',
-            last_seen: '2016-07-03T01:40:29.444Z',
+            first_seen: new Date('2013-06-22T04:27:26.725Z'),
+            last_seen: new Date('2016-07-03T01:40:29.444Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -162,8 +162,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/84a1e1a4f150c6392c65b4efd6e421c1.png',
             birthday: null,
-            first_seen: '2014-10-13T01:58:39.724Z',
-            last_seen: '2015-08-11T20:23:36.801Z',
+            first_seen: new Date('2014-10-13T01:58:39.724Z'),
+            last_seen: new Date('2015-08-11T20:23:36.801Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -181,8 +181,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/241aaa3be3d31b74c748a43169042354.png',
             birthday: null,
-            first_seen: '2017-01-22T07:20:44.623Z',
-            last_seen: '2017-04-12T22:11:24.545Z',
+            first_seen: new Date('2017-01-22T07:20:44.623Z'),
+            last_seen: new Date('2017-04-12T22:11:24.545Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -200,8 +200,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/57432f8e08c2f75b70f16873384aaa30.png',
             birthday: null,
-            first_seen: '2013-07-26T16:24:26.071Z',
-            last_seen: '2016-03-23T22:37:11.233Z',
+            first_seen: new Date('2013-07-26T16:24:26.071Z'),
+            last_seen: new Date('2016-03-23T22:37:11.233Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -219,8 +219,8 @@ data = {
             city: 'Mezuhza',
             avatar: 'https://robohash.org/5b7e21883e6c988f2e98e0f6f26ba969.png',
             birthday: '1997-11-28T02:05:12.109Z',
-            first_seen: '2017-04-26T00:45:05.243Z',
-            last_seen: '2017-04-26T08:06:30.463Z',
+            first_seen: new Date('2017-04-26T00:45:05.243Z'),
+            last_seen: new Date('2017-04-26T08:06:30.463Z'),
             has_ordered: true,
             latest_purchase: '2017-04-26T07:40:20.975Z',
             has_newsletter: true,
@@ -238,8 +238,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c0f7661b4c0cf5a3131cd0b541b63d51.png',
             birthday: null,
-            first_seen: '2017-03-20T19:10:50.060Z',
-            last_seen: '2017-04-01T12:50:37.653Z',
+            first_seen: new Date('2017-03-20T19:10:50.060Z'),
+            last_seen: new Date('2017-04-01T12:50:37.653Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -257,8 +257,8 @@ data = {
             city: 'Togwife',
             avatar: 'https://robohash.org/e1aa52b1b552c6ff544ba48769bc7fd2.png',
             birthday: '1975-08-19T00:31:27.384Z',
-            first_seen: '2016-05-23T23:27:39.123Z',
-            last_seen: '2016-09-25T05:41:24.547Z',
+            first_seen: new Date('2016-05-23T23:27:39.123Z'),
+            last_seen: new Date('2016-09-25T05:41:24.547Z'),
             has_ordered: true,
             latest_purchase: '2016-08-22T22:51:01.374Z',
             has_newsletter: true,
@@ -276,8 +276,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/239d087727f1a1d2eb984d153d777b7f.png',
             birthday: null,
-            first_seen: '2013-08-16T16:34:42.742Z',
-            last_seen: '2017-04-13T19:57:30.278Z',
+            first_seen: new Date('2013-08-16T16:34:42.742Z'),
+            last_seen: new Date('2017-04-13T19:57:30.278Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -295,8 +295,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/444f7756f6f3b13be2d7b4c63c9ea334.png',
             birthday: null,
-            first_seen: '2017-03-25T18:42:52.962Z',
-            last_seen: '2017-04-18T16:53:40.360Z',
+            first_seen: new Date('2017-03-25T18:42:52.962Z'),
+            last_seen: new Date('2017-04-18T16:53:40.360Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -314,8 +314,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/93adb62e75dd6e712336de2583763518.png',
             birthday: null,
-            first_seen: '2013-12-02T12:06:47.432Z',
-            last_seen: '2015-02-11T08:30:18.663Z',
+            first_seen: new Date('2013-12-02T12:06:47.432Z'),
+            last_seen: new Date('2015-02-11T08:30:18.663Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -333,8 +333,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1587b2117d8df864650be9582b4fcb3e.png',
             birthday: null,
-            first_seen: '2015-04-05T13:59:48.792Z',
-            last_seen: '2016-11-05T04:15:23.207Z',
+            first_seen: new Date('2015-04-05T13:59:48.792Z'),
+            last_seen: new Date('2016-11-05T04:15:23.207Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -352,8 +352,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7fadc524de6f22e7b1044cdbbb2ba50f.png',
             birthday: null,
-            first_seen: '2014-09-24T03:28:44.154Z',
-            last_seen: '2017-01-15T00:09:25.820Z',
+            first_seen: new Date('2014-09-24T03:28:44.154Z'),
+            last_seen: new Date('2017-01-15T00:09:25.820Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -371,8 +371,8 @@ data = {
             city: 'Lerepuice',
             avatar: 'https://robohash.org/ed5c648ee4814cea23d7a962ccbb69bc.png',
             birthday: '1956-05-15T06:54:40.195Z',
-            first_seen: '2015-09-29T08:05:57.443Z',
-            last_seen: '2016-10-30T15:54:45.487Z',
+            first_seen: new Date('2015-09-29T08:05:57.443Z'),
+            last_seen: new Date('2016-10-30T15:54:45.487Z'),
             has_ordered: true,
             latest_purchase: '2016-10-13T16:35:02.349Z',
             has_newsletter: false,
@@ -390,8 +390,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5f86e05d183b5548458d523e01bce810.png',
             birthday: null,
-            first_seen: '2016-07-21T22:35:28.589Z',
-            last_seen: '2017-02-10T11:12:14.332Z',
+            first_seen: new Date('2016-07-21T22:35:28.589Z'),
+            last_seen: new Date('2017-02-10T11:12:14.332Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -409,8 +409,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dc5dab91648882735ce1d25fb05dd5ee.png',
             birthday: null,
-            first_seen: '2017-01-21T10:02:47.562Z',
-            last_seen: '2017-04-14T06:54:13.239Z',
+            first_seen: new Date('2017-01-21T10:02:47.562Z'),
+            last_seen: new Date('2017-04-14T06:54:13.239Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -428,8 +428,8 @@ data = {
             city: 'Fuzjirtem',
             avatar: 'https://robohash.org/ea4fe095b7307bcf2d8ea3e038313b4a.png',
             birthday: '1957-08-11T05:44:29.335Z',
-            first_seen: '2017-03-31T22:43:38.338Z',
-            last_seen: '2017-04-21T13:19:51.040Z',
+            first_seen: new Date('2017-03-31T22:43:38.338Z'),
+            last_seen: new Date('2017-04-21T13:19:51.040Z'),
             has_ordered: true,
             latest_purchase: '2017-04-20T19:36:29.232Z',
             has_newsletter: false,
@@ -447,8 +447,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c0faf2ce4af41b90b06dc252fbb31800.png',
             birthday: null,
-            first_seen: '2014-12-20T22:28:12.531Z',
-            last_seen: '2015-08-29T07:26:01.752Z',
+            first_seen: new Date('2014-12-20T22:28:12.531Z'),
+            last_seen: new Date('2015-08-29T07:26:01.752Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -466,8 +466,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1eb868fcbc6f7325d0dae77ac2971270.png',
             birthday: null,
-            first_seen: '2017-03-14T13:04:04.865Z',
-            last_seen: '2017-04-21T17:57:17.076Z',
+            first_seen: new Date('2017-03-14T13:04:04.865Z'),
+            last_seen: new Date('2017-04-21T17:57:17.076Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -485,8 +485,8 @@ data = {
             city: 'Wurkedod',
             avatar: 'https://robohash.org/f73965acb3daa554fe014a347b38bbe6.png',
             birthday: '1994-02-13T07:37:20.394Z',
-            first_seen: '2016-10-19T05:58:23.373Z',
-            last_seen: '2017-01-04T19:35:35.262Z',
+            first_seen: new Date('2016-10-19T05:58:23.373Z'),
+            last_seen: new Date('2017-01-04T19:35:35.262Z'),
             has_ordered: true,
             latest_purchase: '2016-10-29T12:32:15.485Z',
             has_newsletter: false,
@@ -504,8 +504,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/605a8964948d9405c91adfe5dfebfac0.png',
             birthday: null,
-            first_seen: '2015-11-05T17:23:07.716Z',
-            last_seen: '2016-12-03T04:17:40.712Z',
+            first_seen: new Date('2015-11-05T17:23:07.716Z'),
+            last_seen: new Date('2016-12-03T04:17:40.712Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -523,8 +523,8 @@ data = {
             city: 'Ovoromi',
             avatar: 'https://robohash.org/9747dbaf54165a8bc6a83cad5c3b25dd.png',
             birthday: '1972-01-10T11:32:55.448Z',
-            first_seen: '2015-07-25T09:27:29.450Z',
-            last_seen: '2016-08-20T09:49:30.660Z',
+            first_seen: new Date('2015-07-25T09:27:29.450Z'),
+            last_seen: new Date('2016-08-20T09:49:30.660Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -542,8 +542,8 @@ data = {
             city: 'Wirido',
             avatar: 'https://robohash.org/0d876d036927ba7e37fe47597f75e03a.png',
             birthday: '1997-08-31T09:48:04.992Z',
-            first_seen: '2013-03-27T09:35:57.836Z',
-            last_seen: '2016-10-25T12:17:58.082Z',
+            first_seen: new Date('2013-03-27T09:35:57.836Z'),
+            last_seen: new Date('2016-10-25T12:17:58.082Z'),
             has_ordered: true,
             latest_purchase: '2013-12-29T02:42:18.708Z',
             has_newsletter: false,
@@ -561,8 +561,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5babab613bdf16642e37424e68b24c89.png',
             birthday: null,
-            first_seen: '2016-02-26T00:16:20.895Z',
-            last_seen: '2016-12-29T05:25:38.336Z',
+            first_seen: new Date('2016-02-26T00:16:20.895Z'),
+            last_seen: new Date('2016-12-29T05:25:38.336Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -580,8 +580,8 @@ data = {
             city: 'Okuhewmif',
             avatar: 'https://robohash.org/49869776cb2d75bc4bad5fdb7f1b42be.png',
             birthday: '1967-11-30T11:15:41.960Z',
-            first_seen: '2017-01-02T19:24:20.883Z',
-            last_seen: '2017-03-24T09:01:02.063Z',
+            first_seen: new Date('2017-01-02T19:24:20.883Z'),
+            last_seen: new Date('2017-03-24T09:01:02.063Z'),
             has_ordered: true,
             latest_purchase: '2017-02-07T12:23:44.342Z',
             has_newsletter: false,
@@ -599,8 +599,8 @@ data = {
             city: 'Lucbuguj',
             avatar: 'https://robohash.org/54d46820e90285b5649d9c1082de0b8c.png',
             birthday: '1998-01-16T06:35:44.144Z',
-            first_seen: '2016-06-12T22:43:54.241Z',
-            last_seen: '2016-07-16T22:44:36.114Z',
+            first_seen: new Date('2016-06-12T22:43:54.241Z'),
+            last_seen: new Date('2016-07-16T22:44:36.114Z'),
             has_ordered: true,
             latest_purchase: '2016-06-25T03:29:14.973Z',
             has_newsletter: false,
@@ -618,8 +618,8 @@ data = {
             city: 'Kiaduba',
             avatar: 'https://robohash.org/4f50405d30d284024a2f0edecc0cfeae.png',
             birthday: '1953-08-23T07:35:32.457Z',
-            first_seen: '2015-09-13T17:20:32.257Z',
-            last_seen: '2016-03-28T15:29:12.180Z',
+            first_seen: new Date('2015-09-13T17:20:32.257Z'),
+            last_seen: new Date('2016-03-28T15:29:12.180Z'),
             has_ordered: true,
             latest_purchase: '2016-03-23T16:53:09.151Z',
             has_newsletter: true,
@@ -637,8 +637,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/37357680254e8a9ca9c45ab89eded1d0.png',
             birthday: null,
-            first_seen: '2013-06-22T01:40:48.607Z',
-            last_seen: '2016-03-02T16:37:10.416Z',
+            first_seen: new Date('2013-06-22T01:40:48.607Z'),
+            last_seen: new Date('2016-03-02T16:37:10.416Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -656,8 +656,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d2752c4cba18c7768fc9da98c8f47078.png',
             birthday: null,
-            first_seen: '2017-03-25T23:43:08.172Z',
-            last_seen: '2017-04-13T20:46:47.446Z',
+            first_seen: new Date('2017-03-25T23:43:08.172Z'),
+            last_seen: new Date('2017-04-13T20:46:47.446Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -675,8 +675,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e2a8c6dd336e01b19e1b5ff305fa82a1.png',
             birthday: null,
-            first_seen: '2015-12-27T10:13:22.534Z',
-            last_seen: '2016-11-07T18:32:39.995Z',
+            first_seen: new Date('2015-12-27T10:13:22.534Z'),
+            last_seen: new Date('2016-11-07T18:32:39.995Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -694,8 +694,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/71c9cc216b744d875eb30f3ca0958357.png',
             birthday: null,
-            first_seen: '2015-06-12T12:01:08.816Z',
-            last_seen: '2017-02-27T01:41:53.163Z',
+            first_seen: new Date('2015-06-12T12:01:08.816Z'),
+            last_seen: new Date('2017-02-27T01:41:53.163Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -713,8 +713,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4c7524434ebbe6a74ea083f5799a2a1b.png',
             birthday: null,
-            first_seen: '2014-12-27T10:49:02.178Z',
-            last_seen: '2016-11-05T19:42:44.091Z',
+            first_seen: new Date('2014-12-27T10:49:02.178Z'),
+            last_seen: new Date('2016-11-05T19:42:44.091Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -732,8 +732,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2b5cc645aae3d7b0c1254bab39c3a19c.png',
             birthday: null,
-            first_seen: '2015-03-18T11:16:37.984Z',
-            last_seen: '2016-12-14T23:21:10.015Z',
+            first_seen: new Date('2015-03-18T11:16:37.984Z'),
+            last_seen: new Date('2016-12-14T23:21:10.015Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -751,8 +751,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b3e2d8bf45f32debb22641bc45f95a27.png',
             birthday: null,
-            first_seen: '2013-05-27T04:38:53.758Z',
-            last_seen: '2014-11-29T14:06:40.881Z',
+            first_seen: new Date('2013-05-27T04:38:53.758Z'),
+            last_seen: new Date('2014-11-29T14:06:40.881Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -770,8 +770,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/13669204c78a6cf4b56f9e6c13616e35.png',
             birthday: null,
-            first_seen: '2014-07-06T23:04:17.711Z',
-            last_seen: '2016-04-23T20:02:42.663Z',
+            first_seen: new Date('2014-07-06T23:04:17.711Z'),
+            last_seen: new Date('2016-04-23T20:02:42.663Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -789,8 +789,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4da701bfd96d700e76e8def949d4684c.png',
             birthday: null,
-            first_seen: '2015-05-15T06:46:14.668Z',
-            last_seen: '2017-02-21T17:04:19.542Z',
+            first_seen: new Date('2015-05-15T06:46:14.668Z'),
+            last_seen: new Date('2017-02-21T17:04:19.542Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -808,8 +808,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/81f27b64224dcc182bc242979572dee6.png',
             birthday: null,
-            first_seen: '2012-08-21T13:54:53.099Z',
-            last_seen: '2016-04-27T11:16:39.258Z',
+            first_seen: new Date('2012-08-21T13:54:53.099Z'),
+            last_seen: new Date('2016-04-27T11:16:39.258Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -827,8 +827,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bcd214f0a5651cb4a6402e074399f7df.png',
             birthday: null,
-            first_seen: '2016-08-27T13:18:45.547Z',
-            last_seen: '2017-02-11T08:02:23.053Z',
+            first_seen: new Date('2016-08-27T13:18:45.547Z'),
+            last_seen: new Date('2017-02-11T08:02:23.053Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -846,8 +846,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/99e3003d713cf876ddb89d5102054dc8.png',
             birthday: null,
-            first_seen: '2017-01-05T04:54:58.435Z',
-            last_seen: '2017-04-15T07:04:21.802Z',
+            first_seen: new Date('2017-01-05T04:54:58.435Z'),
+            last_seen: new Date('2017-04-15T07:04:21.802Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -865,8 +865,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/124908f486424f0ac4cd94722497dd80.png',
             birthday: null,
-            first_seen: '2013-12-29T11:05:33.584Z',
-            last_seen: '2017-03-26T11:05:11.987Z',
+            first_seen: new Date('2013-12-29T11:05:33.584Z'),
+            last_seen: new Date('2017-03-26T11:05:11.987Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -884,8 +884,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ac0016f25ec9d5674d6c8129ade9dfc4.png',
             birthday: null,
-            first_seen: '2013-04-11T00:34:14.284Z',
-            last_seen: '2016-11-25T13:32:05.748Z',
+            first_seen: new Date('2013-04-11T00:34:14.284Z'),
+            last_seen: new Date('2016-11-25T13:32:05.748Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -903,8 +903,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fa230536efc4737e267ad68a9897ff64.png',
             birthday: null,
-            first_seen: '2014-03-13T13:44:22.308Z',
-            last_seen: '2016-04-21T03:09:44.044Z',
+            first_seen: new Date('2014-03-13T13:44:22.308Z'),
+            last_seen: new Date('2016-04-21T03:09:44.044Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -922,8 +922,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/74ba38effa7c2ba5632ddea8b905593f.png',
             birthday: null,
-            first_seen: '2015-09-21T12:58:38.359Z',
-            last_seen: '2017-01-17T08:25:45.648Z',
+            first_seen: new Date('2015-09-21T12:58:38.359Z'),
+            last_seen: new Date('2017-01-17T08:25:45.648Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -941,8 +941,8 @@ data = {
             city: 'Vobzadan',
             avatar: 'https://robohash.org/d85859c42d8d04d5f47eb2cafea02373.png',
             birthday: '1963-08-06T09:12:53.564Z',
-            first_seen: '2015-11-19T00:59:28.538Z',
-            last_seen: '2017-02-10T06:08:58.495Z',
+            first_seen: new Date('2015-11-19T00:59:28.538Z'),
+            last_seen: new Date('2017-02-10T06:08:58.495Z'),
             has_ordered: true,
             latest_purchase: '2016-07-01T18:36:08.240Z',
             has_newsletter: true,
@@ -960,8 +960,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0793e4a75deade397c207b04bf96a8d9.png',
             birthday: null,
-            first_seen: '2016-02-09T09:06:59.400Z',
-            last_seen: '2017-04-12T12:52:16.075Z',
+            first_seen: new Date('2016-02-09T09:06:59.400Z'),
+            last_seen: new Date('2017-04-12T12:52:16.075Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -979,8 +979,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ebd91776f735fc587ba69078a98eaf26.png',
             birthday: null,
-            first_seen: '2017-04-22T13:26:38.395Z',
-            last_seen: '2017-04-23T19:34:21.075Z',
+            first_seen: new Date('2017-04-22T13:26:38.395Z'),
+            last_seen: new Date('2017-04-23T19:34:21.075Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -998,8 +998,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7ab5d9f41f659540177c9352b3dc4735.png',
             birthday: null,
-            first_seen: '2014-10-14T09:38:39.067Z',
-            last_seen: '2015-07-12T08:48:51.339Z',
+            first_seen: new Date('2014-10-14T09:38:39.067Z'),
+            last_seen: new Date('2015-07-12T08:48:51.339Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1017,8 +1017,8 @@ data = {
             city: 'Heukaib',
             avatar: 'https://robohash.org/597a1ad0d5fc498be11bd119668ef844.png',
             birthday: '1996-07-09T09:23:53.986Z',
-            first_seen: '2012-06-12T00:03:10.002Z',
-            last_seen: '2017-04-25T19:52:03.178Z',
+            first_seen: new Date('2012-06-12T00:03:10.002Z'),
+            last_seen: new Date('2017-04-25T19:52:03.178Z'),
             has_ordered: true,
             latest_purchase: '2016-07-21T19:40:39.121Z',
             has_newsletter: true,
@@ -1036,8 +1036,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fdf61fdb645cc5336b06e60875d4df2c.png',
             birthday: null,
-            first_seen: '2016-07-26T04:58:55.562Z',
-            last_seen: '2017-03-01T16:40:17.854Z',
+            first_seen: new Date('2016-07-26T04:58:55.562Z'),
+            last_seen: new Date('2017-03-01T16:40:17.854Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1055,8 +1055,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ed798137a2ac0cf8489173b935ca8fc2.png',
             birthday: null,
-            first_seen: '2013-05-30T13:46:05.298Z',
-            last_seen: '2014-08-06T21:04:58.084Z',
+            first_seen: new Date('2013-05-30T13:46:05.298Z'),
+            last_seen: new Date('2014-08-06T21:04:58.084Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1074,8 +1074,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b560295476ffd2814c4e04cd37655a48.png',
             birthday: null,
-            first_seen: '2017-04-13T18:54:25.530Z',
-            last_seen: '2017-04-25T08:03:06.800Z',
+            first_seen: new Date('2017-04-13T18:54:25.530Z'),
+            last_seen: new Date('2017-04-25T08:03:06.800Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1093,8 +1093,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/345c792206ece392faeb5cda4bbe591f.png',
             birthday: null,
-            first_seen: '2015-12-30T23:35:00.471Z',
-            last_seen: '2017-02-04T09:42:43.872Z',
+            first_seen: new Date('2015-12-30T23:35:00.471Z'),
+            last_seen: new Date('2017-02-04T09:42:43.872Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1112,8 +1112,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/eeb3c24b696f28899dccbcb0dc72de02.png',
             birthday: null,
-            first_seen: '2016-06-19T01:53:06.555Z',
-            last_seen: '2017-01-14T21:08:47.339Z',
+            first_seen: new Date('2016-06-19T01:53:06.555Z'),
+            last_seen: new Date('2017-01-14T21:08:47.339Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1131,8 +1131,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c03a30c9ece9222ab7234ecd0817813d.png',
             birthday: null,
-            first_seen: '2016-04-24T01:08:50.941Z',
-            last_seen: '2017-02-17T05:45:49.631Z',
+            first_seen: new Date('2016-04-24T01:08:50.941Z'),
+            last_seen: new Date('2017-02-17T05:45:49.631Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1150,8 +1150,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/651d47d4c0d1ea3a7354a29f4a4150d2.png',
             birthday: null,
-            first_seen: '2016-04-24T21:56:01.312Z',
-            last_seen: '2016-12-28T18:00:58.318Z',
+            first_seen: new Date('2016-04-24T21:56:01.312Z'),
+            last_seen: new Date('2016-12-28T18:00:58.318Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1169,8 +1169,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/52857fc46dfaf45e4ac3199a4fd91eef.png',
             birthday: null,
-            first_seen: '2017-02-25T05:52:45.911Z',
-            last_seen: '2017-03-25T04:07:16.307Z',
+            first_seen: new Date('2017-02-25T05:52:45.911Z'),
+            last_seen: new Date('2017-03-25T04:07:16.307Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1188,8 +1188,8 @@ data = {
             city: 'Fobcafwe',
             avatar: 'https://robohash.org/074a26cd2d2f677f3dc7d1e482a2ebee.png',
             birthday: '1981-01-07T09:33:46.554Z',
-            first_seen: '2017-02-14T11:28:29.819Z',
-            last_seen: '2017-04-16T09:48:41.265Z',
+            first_seen: new Date('2017-02-14T11:28:29.819Z'),
+            last_seen: new Date('2017-04-16T09:48:41.265Z'),
             has_ordered: true,
             latest_purchase: '2017-03-21T18:14:56.525Z',
             has_newsletter: false,
@@ -1207,8 +1207,8 @@ data = {
             city: 'Pohwetdec',
             avatar: 'https://robohash.org/4c8b7a1e5e240666b52cce64eb9a6a53.png',
             birthday: '1978-11-25T01:08:37.497Z',
-            first_seen: '2016-04-25T08:19:21.562Z',
-            last_seen: '2016-12-21T11:16:34.732Z',
+            first_seen: new Date('2016-04-25T08:19:21.562Z'),
+            last_seen: new Date('2016-12-21T11:16:34.732Z'),
             has_ordered: true,
             latest_purchase: '2016-10-16T14:45:51.581Z',
             has_newsletter: false,
@@ -1226,8 +1226,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/80fa8799fdc4cac3fba5bff253574777.png',
             birthday: null,
-            first_seen: '2015-07-29T07:33:03.602Z',
-            last_seen: '2016-10-02T00:17:02.207Z',
+            first_seen: new Date('2015-07-29T07:33:03.602Z'),
+            last_seen: new Date('2016-10-02T00:17:02.207Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1245,8 +1245,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0862d66a67bcb955cd54f28f1d2f348f.png',
             birthday: null,
-            first_seen: '2016-02-24T00:13:15.033Z',
-            last_seen: '2016-09-25T06:02:10.824Z',
+            first_seen: new Date('2016-02-24T00:13:15.033Z'),
+            last_seen: new Date('2016-09-25T06:02:10.824Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1264,8 +1264,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/903a24567d404665bf03bf2a1dee61a0.png',
             birthday: null,
-            first_seen: '2014-06-04T11:37:22.983Z',
-            last_seen: '2016-06-19T13:09:21.169Z',
+            first_seen: new Date('2014-06-04T11:37:22.983Z'),
+            last_seen: new Date('2016-06-19T13:09:21.169Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1283,8 +1283,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4a95a89cb3c7f10fcc138b5ef7384e16.png',
             birthday: null,
-            first_seen: '2014-06-10T16:41:36.772Z',
-            last_seen: '2014-08-02T13:54:14.613Z',
+            first_seen: new Date('2014-06-10T16:41:36.772Z'),
+            last_seen: new Date('2014-08-02T13:54:14.613Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1302,8 +1302,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/796cefbc8471a1c0423feb2ce6e73683.png',
             birthday: null,
-            first_seen: '2014-04-08T00:57:23.700Z',
-            last_seen: '2016-09-13T03:39:57.148Z',
+            first_seen: new Date('2014-04-08T00:57:23.700Z'),
+            last_seen: new Date('2016-09-13T03:39:57.148Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1321,8 +1321,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bb608b0bee3caf6e3c0355999fb5d0f1.png',
             birthday: null,
-            first_seen: '2017-01-16T07:43:51.888Z',
-            last_seen: '2017-03-18T06:28:37.940Z',
+            first_seen: new Date('2017-01-16T07:43:51.888Z'),
+            last_seen: new Date('2017-03-18T06:28:37.940Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1340,8 +1340,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5ab9d3f790a65cd722559a6d99c977dc.png',
             birthday: null,
-            first_seen: '2015-02-22T03:06:03.009Z',
-            last_seen: '2016-04-14T00:14:33.045Z',
+            first_seen: new Date('2015-02-22T03:06:03.009Z'),
+            last_seen: new Date('2016-04-14T00:14:33.045Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1359,8 +1359,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2a6cba73c49ee0309104b920b5284645.png',
             birthday: null,
-            first_seen: '2015-07-04T06:56:16.270Z',
-            last_seen: '2017-03-08T13:40:03.200Z',
+            first_seen: new Date('2015-07-04T06:56:16.270Z'),
+            last_seen: new Date('2017-03-08T13:40:03.200Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1378,8 +1378,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6d9b40646b39ee604cd914302a953e24.png',
             birthday: null,
-            first_seen: '2015-04-23T13:12:56.842Z',
-            last_seen: '2016-12-11T16:27:00.995Z',
+            first_seen: new Date('2015-04-23T13:12:56.842Z'),
+            last_seen: new Date('2016-12-11T16:27:00.995Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1397,8 +1397,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5a2d60e303e65f59dbadf3705994be19.png',
             birthday: null,
-            first_seen: '2015-09-01T22:37:16.627Z',
-            last_seen: '2016-04-18T19:51:20.271Z',
+            first_seen: new Date('2015-09-01T22:37:16.627Z'),
+            last_seen: new Date('2016-04-18T19:51:20.271Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1416,8 +1416,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a64fa39b858c0a726715ce4540036ead.png',
             birthday: null,
-            first_seen: '2017-01-09T04:38:46.111Z',
-            last_seen: '2017-02-15T13:46:16.902Z',
+            first_seen: new Date('2017-01-09T04:38:46.111Z'),
+            last_seen: new Date('2017-02-15T13:46:16.902Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1435,8 +1435,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/744e06e15b1bdae9350558fd81eced1c.png',
             birthday: null,
-            first_seen: '2017-01-04T17:16:44.159Z',
-            last_seen: '2017-04-23T19:17:34.161Z',
+            first_seen: new Date('2017-01-04T17:16:44.159Z'),
+            last_seen: new Date('2017-04-23T19:17:34.161Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1454,8 +1454,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c90db36221416bf9bce08a8ca691cc99.png',
             birthday: null,
-            first_seen: '2013-06-11T06:39:25.926Z',
-            last_seen: '2016-08-14T07:14:52.706Z',
+            first_seen: new Date('2013-06-11T06:39:25.926Z'),
+            last_seen: new Date('2016-08-14T07:14:52.706Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1473,8 +1473,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/516e9b24fc38ddc7d27ef89860e66300.png',
             birthday: null,
-            first_seen: '2013-10-16T07:41:44.444Z',
-            last_seen: '2016-08-09T18:26:45.317Z',
+            first_seen: new Date('2013-10-16T07:41:44.444Z'),
+            last_seen: new Date('2016-08-09T18:26:45.317Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1492,8 +1492,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7ca76c8e504d7d64b911898e3bdcbfb8.png',
             birthday: null,
-            first_seen: '2013-06-26T05:40:05.805Z',
-            last_seen: '2016-07-20T06:23:36.878Z',
+            first_seen: new Date('2013-06-26T05:40:05.805Z'),
+            last_seen: new Date('2016-07-20T06:23:36.878Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1511,8 +1511,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c943193109909675219181093f1e17ad.png',
             birthday: null,
-            first_seen: '2015-06-26T01:10:19.370Z',
-            last_seen: '2016-08-15T00:36:41.232Z',
+            first_seen: new Date('2015-06-26T01:10:19.370Z'),
+            last_seen: new Date('2016-08-15T00:36:41.232Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1530,8 +1530,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a97d99cf3eff984567e5101cc43c844e.png',
             birthday: null,
-            first_seen: '2015-09-28T04:06:44.133Z',
-            last_seen: '2016-02-24T17:03:05.007Z',
+            first_seen: new Date('2015-09-28T04:06:44.133Z'),
+            last_seen: new Date('2016-02-24T17:03:05.007Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1549,8 +1549,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1fc0c91e73747e201978e7ff33b48541.png',
             birthday: null,
-            first_seen: '2016-10-22T22:20:30.999Z',
-            last_seen: '2017-01-19T12:57:00.224Z',
+            first_seen: new Date('2016-10-22T22:20:30.999Z'),
+            last_seen: new Date('2017-01-19T12:57:00.224Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1568,8 +1568,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/266f919948ab2f6428ac642a3abd3bd0.png',
             birthday: null,
-            first_seen: '2017-04-20T23:48:32.303Z',
-            last_seen: '2017-04-24T15:17:01.053Z',
+            first_seen: new Date('2017-04-20T23:48:32.303Z'),
+            last_seen: new Date('2017-04-24T15:17:01.053Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1587,8 +1587,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b6a3f24e93814abfbfbdb6e220b3f9ec.png',
             birthday: null,
-            first_seen: '2015-04-18T23:20:49.007Z',
-            last_seen: '2016-07-25T10:03:37.671Z',
+            first_seen: new Date('2015-04-18T23:20:49.007Z'),
+            last_seen: new Date('2016-07-25T10:03:37.671Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1606,8 +1606,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6abd0a0a64bf59b77709d9886d7f350d.png',
             birthday: null,
-            first_seen: '2017-04-06T14:30:11.054Z',
-            last_seen: '2017-04-23T22:05:14.094Z',
+            first_seen: new Date('2017-04-06T14:30:11.054Z'),
+            last_seen: new Date('2017-04-23T22:05:14.094Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1625,8 +1625,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/05b307c76869f86c57a17b249570434a.png',
             birthday: null,
-            first_seen: '2013-02-19T15:31:16.606Z',
-            last_seen: '2015-05-30T17:32:36.760Z',
+            first_seen: new Date('2013-02-19T15:31:16.606Z'),
+            last_seen: new Date('2015-05-30T17:32:36.760Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1644,8 +1644,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c27401c2ba57d94b95bfbe3ab949b18a.png',
             birthday: null,
-            first_seen: '2017-03-28T19:05:35.222Z',
-            last_seen: '2017-04-21T00:59:53.005Z',
+            first_seen: new Date('2017-03-28T19:05:35.222Z'),
+            last_seen: new Date('2017-04-21T00:59:53.005Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1663,8 +1663,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0c7ec649d37f9afff029cea5737a79d3.png',
             birthday: null,
-            first_seen: '2015-05-20T23:29:31.063Z',
-            last_seen: '2017-03-27T12:52:29.367Z',
+            first_seen: new Date('2015-05-20T23:29:31.063Z'),
+            last_seen: new Date('2017-03-27T12:52:29.367Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1682,8 +1682,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/35c25d95ba179e4384169762e2f9b6f7.png',
             birthday: null,
-            first_seen: '2015-07-25T06:17:54.423Z',
-            last_seen: '2017-01-05T07:42:34.341Z',
+            first_seen: new Date('2015-07-25T06:17:54.423Z'),
+            last_seen: new Date('2017-01-05T07:42:34.341Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1701,8 +1701,8 @@ data = {
             city: 'Zocovid',
             avatar: 'https://robohash.org/bc2ca0b8e33f934b0b69270f4dd34cd1.png',
             birthday: '1986-07-07T01:30:46.379Z',
-            first_seen: '2015-12-19T06:39:40.923Z',
-            last_seen: '2017-03-09T06:09:45.756Z',
+            first_seen: new Date('2015-12-19T06:39:40.923Z'),
+            last_seen: new Date('2017-03-09T06:09:45.756Z'),
             has_ordered: true,
             latest_purchase: '2017-02-12T12:18:40.719Z',
             has_newsletter: true,
@@ -1720,8 +1720,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c802a53df86936114e3fe10fd6e8c81f.png',
             birthday: null,
-            first_seen: '2016-08-23T06:08:14.127Z',
-            last_seen: '2017-02-27T22:37:55.466Z',
+            first_seen: new Date('2016-08-23T06:08:14.127Z'),
+            last_seen: new Date('2017-02-27T22:37:55.466Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1739,8 +1739,8 @@ data = {
             city: 'Duawozi',
             avatar: 'https://robohash.org/786ed7cb2b05e5535126868dd4f45b7e.png',
             birthday: '1963-05-21T06:27:42.299Z',
-            first_seen: '2015-04-18T08:26:07.094Z',
-            last_seen: '2015-09-19T21:21:06.583Z',
+            first_seen: new Date('2015-04-18T08:26:07.094Z'),
+            last_seen: new Date('2015-09-19T21:21:06.583Z'),
             has_ordered: true,
             latest_purchase: '2015-09-06T12:29:31.078Z',
             has_newsletter: false,
@@ -1758,8 +1758,8 @@ data = {
             city: 'Nohizja',
             avatar: 'https://robohash.org/da7178f8c9b7bb632afbe9694fd91eeb.png',
             birthday: '1987-08-24T02:54:39.395Z',
-            first_seen: '2015-07-29T15:12:04.208Z',
-            last_seen: '2017-02-26T03:22:38.163Z',
+            first_seen: new Date('2015-07-29T15:12:04.208Z'),
+            last_seen: new Date('2017-02-26T03:22:38.163Z'),
             has_ordered: true,
             latest_purchase: '2017-01-13T21:58:53.087Z',
             has_newsletter: false,
@@ -1777,8 +1777,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/24a99a5683bbe197e6cb02647d3c41e9.png',
             birthday: null,
-            first_seen: '2013-06-30T22:18:10.786Z',
-            last_seen: '2016-10-18T22:44:11.659Z',
+            first_seen: new Date('2013-06-30T22:18:10.786Z'),
+            last_seen: new Date('2016-10-18T22:44:11.659Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1796,8 +1796,8 @@ data = {
             city: 'Agimemav',
             avatar: 'https://robohash.org/4a40670b11fe5b7c6186d32405599442.png',
             birthday: '1966-07-30T01:01:54.768Z',
-            first_seen: '2016-12-22T12:32:16.869Z',
-            last_seen: '2017-04-19T13:40:42.879Z',
+            first_seen: new Date('2016-12-22T12:32:16.869Z'),
+            last_seen: new Date('2017-04-19T13:40:42.879Z'),
             has_ordered: true,
             latest_purchase: '2017-03-28T00:42:33.923Z',
             has_newsletter: false,
@@ -1815,8 +1815,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1f534740fb76520414a10f4d1cbf5bec.png',
             birthday: null,
-            first_seen: '2013-09-12T02:41:01.784Z',
-            last_seen: '2016-06-27T22:03:52.812Z',
+            first_seen: new Date('2013-09-12T02:41:01.784Z'),
+            last_seen: new Date('2016-06-27T22:03:52.812Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1834,8 +1834,8 @@ data = {
             city: 'Oseboev',
             avatar: 'https://robohash.org/dc51a7cdaffcd8d3788cbcae96d6e89b.png',
             birthday: '1971-04-28T02:21:22.756Z',
-            first_seen: '2016-02-09T11:28:36.231Z',
-            last_seen: '2016-05-06T12:57:29.249Z',
+            first_seen: new Date('2016-02-09T11:28:36.231Z'),
+            last_seen: new Date('2016-05-06T12:57:29.249Z'),
             has_ordered: true,
             latest_purchase: '2016-04-04T16:46:57.195Z',
             has_newsletter: false,
@@ -1853,8 +1853,8 @@ data = {
             city: 'Pilfawup',
             avatar: 'https://robohash.org/f8a758477882c6a062a66fe7d0a6a97c.png',
             birthday: '1959-03-29T05:49:22.820Z',
-            first_seen: '2015-06-15T01:54:25.817Z',
-            last_seen: '2017-01-11T02:42:46.563Z',
+            first_seen: new Date('2015-06-15T01:54:25.817Z'),
+            last_seen: new Date('2017-01-11T02:42:46.563Z'),
             has_ordered: true,
             latest_purchase: '2016-07-10T02:39:26.782Z',
             has_newsletter: false,
@@ -1872,8 +1872,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b027c0d27f51fdab84592b4e4b57ee67.png',
             birthday: null,
-            first_seen: '2016-05-16T23:58:14.554Z',
-            last_seen: '2016-10-25T09:21:12.286Z',
+            first_seen: new Date('2016-05-16T23:58:14.554Z'),
+            last_seen: new Date('2016-10-25T09:21:12.286Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1891,8 +1891,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d17854d250f4a55b66a1c999ffce7313.png',
             birthday: null,
-            first_seen: '2016-11-17T05:55:02.996Z',
-            last_seen: '2017-04-09T15:46:18.190Z',
+            first_seen: new Date('2016-11-17T05:55:02.996Z'),
+            last_seen: new Date('2017-04-09T15:46:18.190Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1910,8 +1910,8 @@ data = {
             city: 'Ihmuhop',
             avatar: 'https://robohash.org/a0a5b1dab0867fff30a403182707a347.png',
             birthday: '1968-01-17T10:47:59.720Z',
-            first_seen: '2016-06-01T23:05:50.441Z',
-            last_seen: '2017-04-20T16:34:12.116Z',
+            first_seen: new Date('2016-06-01T23:05:50.441Z'),
+            last_seen: new Date('2017-04-20T16:34:12.116Z'),
             has_ordered: true,
             latest_purchase: '2017-02-24T07:55:19.534Z',
             has_newsletter: true,
@@ -1929,8 +1929,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d5fd4d5c30352c40fe0f34e7b8b0e002.png',
             birthday: null,
-            first_seen: '2017-02-19T11:05:49.486Z',
-            last_seen: '2017-04-10T03:50:28.140Z',
+            first_seen: new Date('2017-02-19T11:05:49.486Z'),
+            last_seen: new Date('2017-04-10T03:50:28.140Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1948,8 +1948,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e08458f5165155cc23791cefefeee918.png',
             birthday: null,
-            first_seen: '2014-11-03T18:56:12.841Z',
-            last_seen: '2015-05-05T12:16:58.170Z',
+            first_seen: new Date('2014-11-03T18:56:12.841Z'),
+            last_seen: new Date('2015-05-05T12:16:58.170Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1967,8 +1967,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5e88b9eac1d27ea8248e5f4dd6cdb187.png',
             birthday: null,
-            first_seen: '2012-06-25T06:50:27.330Z',
-            last_seen: '2012-09-21T01:57:38.888Z',
+            first_seen: new Date('2012-06-25T06:50:27.330Z'),
+            last_seen: new Date('2012-09-21T01:57:38.888Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -1986,8 +1986,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/32b2f3e1ac7c44cc000f7f0cdae15bf3.png',
             birthday: null,
-            first_seen: '2015-01-04T07:02:26.000Z',
-            last_seen: '2016-05-27T22:18:25.198Z',
+            first_seen: new Date('2015-01-04T07:02:26.000Z'),
+            last_seen: new Date('2016-05-27T22:18:25.198Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2005,8 +2005,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/59846c15cf3746faba4b9969dd22e5ca.png',
             birthday: null,
-            first_seen: '2015-01-20T11:59:48.971Z',
-            last_seen: '2016-05-07T12:38:19.369Z',
+            first_seen: new Date('2015-01-20T11:59:48.971Z'),
+            last_seen: new Date('2016-05-07T12:38:19.369Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2024,8 +2024,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b919c7ea90f381de63aaa981da7cae2f.png',
             birthday: null,
-            first_seen: '2017-04-20T12:47:18.811Z',
-            last_seen: '2017-04-22T11:51:56.497Z',
+            first_seen: new Date('2017-04-20T12:47:18.811Z'),
+            last_seen: new Date('2017-04-22T11:51:56.497Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2043,8 +2043,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f274bb26003768df595142f6ab98c10a.png',
             birthday: null,
-            first_seen: '2015-02-07T22:46:05.269Z',
-            last_seen: '2017-03-21T03:09:02.915Z',
+            first_seen: new Date('2015-02-07T22:46:05.269Z'),
+            last_seen: new Date('2017-03-21T03:09:02.915Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2062,8 +2062,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3e26e83d1538bcace89c2764186a8b7a.png',
             birthday: null,
-            first_seen: '2016-10-05T19:36:25.274Z',
-            last_seen: '2017-04-18T03:58:20.682Z',
+            first_seen: new Date('2016-10-05T19:36:25.274Z'),
+            last_seen: new Date('2017-04-18T03:58:20.682Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2081,8 +2081,8 @@ data = {
             city: 'Wezulezaz',
             avatar: 'https://robohash.org/6c9f4125e7b30a522a29a35575bf4817.png',
             birthday: '1957-06-23T03:57:33.341Z',
-            first_seen: '2016-08-24T06:51:39.672Z',
-            last_seen: '2016-10-17T21:34:36.014Z',
+            first_seen: new Date('2016-08-24T06:51:39.672Z'),
+            last_seen: new Date('2016-10-17T21:34:36.014Z'),
             has_ordered: true,
             latest_purchase: '2016-10-15T21:41:38.499Z',
             has_newsletter: true,
@@ -2100,8 +2100,8 @@ data = {
             city: 'Pagervaw',
             avatar: 'https://robohash.org/b848fbc58d971c7c85151c3f5c904c80.png',
             birthday: '1989-09-30T09:17:45.743Z',
-            first_seen: '2015-07-16T09:14:49.097Z',
-            last_seen: '2015-11-13T14:38:40.142Z',
+            first_seen: new Date('2015-07-16T09:14:49.097Z'),
+            last_seen: new Date('2015-11-13T14:38:40.142Z'),
             has_ordered: true,
             latest_purchase: '2015-11-10T14:51:33.059Z',
             has_newsletter: true,
@@ -2119,8 +2119,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7e6c3f29ce07f4b913ed667bf2767046.png',
             birthday: null,
-            first_seen: '2015-06-28T09:27:03.834Z',
-            last_seen: '2016-11-21T20:23:35.802Z',
+            first_seen: new Date('2015-06-28T09:27:03.834Z'),
+            last_seen: new Date('2016-11-21T20:23:35.802Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2138,8 +2138,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/18edec5bb2242324947ffbc56f273c4f.png',
             birthday: null,
-            first_seen: '2015-03-28T22:12:13.597Z',
-            last_seen: '2016-11-10T05:54:27.324Z',
+            first_seen: new Date('2015-03-28T22:12:13.597Z'),
+            last_seen: new Date('2016-11-10T05:54:27.324Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2157,8 +2157,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7d6d29c67673b6db0f6af12043b33a9d.png',
             birthday: null,
-            first_seen: '2012-12-03T10:29:02.236Z',
-            last_seen: '2014-10-31T00:05:07.669Z',
+            first_seen: new Date('2012-12-03T10:29:02.236Z'),
+            last_seen: new Date('2014-10-31T00:05:07.669Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2176,8 +2176,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3326e2ee8bc3a19763589a7f65f5e131.png',
             birthday: null,
-            first_seen: '2013-03-18T03:36:47.984Z',
-            last_seen: '2015-08-15T10:19:45.580Z',
+            first_seen: new Date('2013-03-18T03:36:47.984Z'),
+            last_seen: new Date('2015-08-15T10:19:45.580Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2195,8 +2195,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2a825e858a5d0f11789ce8ea3597b7e7.png',
             birthday: null,
-            first_seen: '2015-07-03T00:45:55.617Z',
-            last_seen: '2016-12-05T14:31:37.460Z',
+            first_seen: new Date('2015-07-03T00:45:55.617Z'),
+            last_seen: new Date('2016-12-05T14:31:37.460Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2214,8 +2214,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dc5fb2d79fc8c5c785afe61e454c0c32.png',
             birthday: null,
-            first_seen: '2016-05-24T04:36:02.326Z',
-            last_seen: '2016-12-08T06:10:28.212Z',
+            first_seen: new Date('2016-05-24T04:36:02.326Z'),
+            last_seen: new Date('2016-12-08T06:10:28.212Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2233,8 +2233,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9027d91da95ab9b614a0f046459da50f.png',
             birthday: null,
-            first_seen: '2016-06-18T20:30:01.588Z',
-            last_seen: '2017-03-07T03:33:26.499Z',
+            first_seen: new Date('2016-06-18T20:30:01.588Z'),
+            last_seen: new Date('2017-03-07T03:33:26.499Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2252,8 +2252,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1353d56a2224dac0d3e505f8cf3fa27f.png',
             birthday: null,
-            first_seen: '2016-01-07T22:19:30.910Z',
-            last_seen: '2016-11-05T14:09:08.522Z',
+            first_seen: new Date('2016-01-07T22:19:30.910Z'),
+            last_seen: new Date('2016-11-05T14:09:08.522Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2271,8 +2271,8 @@ data = {
             city: 'Wepuzaw',
             avatar: 'https://robohash.org/68f5ccba698a520b9a06b43a09f7030b.png',
             birthday: '1974-12-15T11:56:48.373Z',
-            first_seen: '2016-10-17T13:44:54.601Z',
-            last_seen: '2017-04-20T06:08:42.095Z',
+            first_seen: new Date('2016-10-17T13:44:54.601Z'),
+            last_seen: new Date('2017-04-20T06:08:42.095Z'),
             has_ordered: true,
             latest_purchase: '2017-02-03T15:43:06.841Z',
             has_newsletter: false,
@@ -2290,8 +2290,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c187cf2ca306871bc3de5bea07a06f23.png',
             birthday: null,
-            first_seen: '2016-09-18T03:47:03.797Z',
-            last_seen: '2016-11-13T02:42:30.843Z',
+            first_seen: new Date('2016-09-18T03:47:03.797Z'),
+            last_seen: new Date('2016-11-13T02:42:30.843Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2309,8 +2309,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c6cc3c7195808e6a4e21ed8888350380.png',
             birthday: null,
-            first_seen: '2012-11-05T07:30:54.881Z',
-            last_seen: '2015-02-01T19:44:07.831Z',
+            first_seen: new Date('2012-11-05T07:30:54.881Z'),
+            last_seen: new Date('2015-02-01T19:44:07.831Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2328,8 +2328,8 @@ data = {
             city: 'Dogisiv',
             avatar: 'https://robohash.org/db66b4e031cfe3e8a3bea6960152dca2.png',
             birthday: '1973-09-09T11:43:52.119Z',
-            first_seen: '2014-03-07T11:45:48.651Z',
-            last_seen: '2017-04-24T07:44:02.057Z',
+            first_seen: new Date('2014-03-07T11:45:48.651Z'),
+            last_seen: new Date('2017-04-24T07:44:02.057Z'),
             has_ordered: true,
             latest_purchase: '2016-07-05T17:27:39.285Z',
             has_newsletter: false,
@@ -2347,8 +2347,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2f8e0354292ef43d7d33e12d3574cfb0.png',
             birthday: null,
-            first_seen: '2016-04-19T00:32:29.960Z',
-            last_seen: '2016-12-29T03:05:15.396Z',
+            first_seen: new Date('2016-04-19T00:32:29.960Z'),
+            last_seen: new Date('2016-12-29T03:05:15.396Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2366,8 +2366,8 @@ data = {
             city: 'Ipekekmer',
             avatar: 'https://robohash.org/cdd921dee34d8db2a7fa8e19283f2ab7.png',
             birthday: '1994-10-17T02:19:37.379Z',
-            first_seen: '2014-06-18T01:31:14.969Z',
-            last_seen: '2017-03-13T19:37:23.933Z',
+            first_seen: new Date('2014-06-18T01:31:14.969Z'),
+            last_seen: new Date('2017-03-13T19:37:23.933Z'),
             has_ordered: true,
             latest_purchase: '2017-02-15T14:21:03.132Z',
             has_newsletter: true,
@@ -2385,8 +2385,8 @@ data = {
             city: 'Cucedal',
             avatar: 'https://robohash.org/7a574e46063bfe2e134e917baf6041db.png',
             birthday: '1970-12-15T03:02:34.810Z',
-            first_seen: '2016-11-22T06:47:55.279Z',
-            last_seen: '2017-03-09T12:31:00.576Z',
+            first_seen: new Date('2016-11-22T06:47:55.279Z'),
+            last_seen: new Date('2017-03-09T12:31:00.576Z'),
             has_ordered: true,
             latest_purchase: '2017-02-20T10:26:26.284Z',
             has_newsletter: false,
@@ -2404,8 +2404,8 @@ data = {
             city: 'Mihlabiw',
             avatar: 'https://robohash.org/138744884d09b6b06ce7a135d8203114.png',
             birthday: '1964-09-22T07:16:34.270Z',
-            first_seen: '2016-07-13T22:36:51.136Z',
-            last_seen: '2016-11-30T14:29:09.462Z',
+            first_seen: new Date('2016-07-13T22:36:51.136Z'),
+            last_seen: new Date('2016-11-30T14:29:09.462Z'),
             has_ordered: true,
             latest_purchase: '2016-10-21T16:18:37.240Z',
             has_newsletter: false,
@@ -2423,8 +2423,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fd9e99546b466893ea8424fce1d7f972.png',
             birthday: null,
-            first_seen: '2014-10-15T02:23:03.961Z',
-            last_seen: '2015-11-28T03:12:58.657Z',
+            first_seen: new Date('2014-10-15T02:23:03.961Z'),
+            last_seen: new Date('2015-11-28T03:12:58.657Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2442,8 +2442,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f7dcaa57a4c8a9c1068c5edaecb73312.png',
             birthday: null,
-            first_seen: '2016-12-24T22:25:22.865Z',
-            last_seen: '2017-04-06T07:14:54.155Z',
+            first_seen: new Date('2016-12-24T22:25:22.865Z'),
+            last_seen: new Date('2017-04-06T07:14:54.155Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2461,8 +2461,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f66455e55ce041d4b3a817696da54c58.png',
             birthday: null,
-            first_seen: '2014-05-07T05:29:33.858Z',
-            last_seen: '2015-07-13T06:08:01.499Z',
+            first_seen: new Date('2014-05-07T05:29:33.858Z'),
+            last_seen: new Date('2015-07-13T06:08:01.499Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2480,8 +2480,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/75f84fcbc4336bfef8ff4734c77ea96e.png',
             birthday: null,
-            first_seen: '2015-07-08T21:31:54.610Z',
-            last_seen: '2017-02-11T22:25:07.409Z',
+            first_seen: new Date('2015-07-08T21:31:54.610Z'),
+            last_seen: new Date('2017-02-11T22:25:07.409Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2499,8 +2499,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2056181ce564668cce68941f4b5ad7a9.png',
             birthday: null,
-            first_seen: '2015-11-30T23:49:12.246Z',
-            last_seen: '2016-05-28T18:51:43.675Z',
+            first_seen: new Date('2015-11-30T23:49:12.246Z'),
+            last_seen: new Date('2016-05-28T18:51:43.675Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2518,8 +2518,8 @@ data = {
             city: 'Sectiva',
             avatar: 'https://robohash.org/f2b6e2a2b9518e43b5ec17553c147361.png',
             birthday: '1971-01-28T10:58:35.532Z',
-            first_seen: '2016-03-30T10:42:37.178Z',
-            last_seen: '2017-03-10T04:47:04.150Z',
+            first_seen: new Date('2016-03-30T10:42:37.178Z'),
+            last_seen: new Date('2017-03-10T04:47:04.150Z'),
             has_ordered: true,
             latest_purchase: '2017-01-28T07:25:12.681Z',
             has_newsletter: false,
@@ -2537,8 +2537,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/258787a08b7bc5be1b8f7611da5be16a.png',
             birthday: null,
-            first_seen: '2016-09-13T13:23:33.402Z',
-            last_seen: '2017-02-09T13:46:08.910Z',
+            first_seen: new Date('2016-09-13T13:23:33.402Z'),
+            last_seen: new Date('2017-02-09T13:46:08.910Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2556,8 +2556,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e7769bdba4d8ef270deeb3debac4ebba.png',
             birthday: null,
-            first_seen: '2014-11-22T21:51:13.155Z',
-            last_seen: '2017-01-13T22:01:27.546Z',
+            first_seen: new Date('2014-11-22T21:51:13.155Z'),
+            last_seen: new Date('2017-01-13T22:01:27.546Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2575,8 +2575,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8f58352103ca495e425fe212cfa2715a.png',
             birthday: null,
-            first_seen: '2014-12-22T14:35:42.241Z',
-            last_seen: '2016-07-25T16:24:14.973Z',
+            first_seen: new Date('2014-12-22T14:35:42.241Z'),
+            last_seen: new Date('2016-07-25T16:24:14.973Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2594,8 +2594,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9b84b3f1a39bbfa375c9bc8ca4350ce8.png',
             birthday: null,
-            first_seen: '2017-02-16T17:15:35.195Z',
-            last_seen: '2017-03-02T15:09:06.387Z',
+            first_seen: new Date('2017-02-16T17:15:35.195Z'),
+            last_seen: new Date('2017-03-02T15:09:06.387Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2613,8 +2613,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/51dc3aa595031007a061eadc8355f872.png',
             birthday: null,
-            first_seen: '2014-04-02T04:39:12.229Z',
-            last_seen: '2017-02-10T12:30:42.829Z',
+            first_seen: new Date('2014-04-02T04:39:12.229Z'),
+            last_seen: new Date('2017-02-10T12:30:42.829Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2632,8 +2632,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/06b55e988d8f41ca4c21163b214098d7.png',
             birthday: null,
-            first_seen: '2015-01-28T04:53:58.987Z',
-            last_seen: '2016-10-11T09:45:48.675Z',
+            first_seen: new Date('2015-01-28T04:53:58.987Z'),
+            last_seen: new Date('2016-10-11T09:45:48.675Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2651,8 +2651,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ee1202f1778656b8f85d7cd775d83c2b.png',
             birthday: null,
-            first_seen: '2016-07-20T19:34:33.518Z',
-            last_seen: '2017-03-28T16:06:15.852Z',
+            first_seen: new Date('2016-07-20T19:34:33.518Z'),
+            last_seen: new Date('2017-03-28T16:06:15.852Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2670,8 +2670,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d32bf7c45825cfad3fd6d7a617c59dc5.png',
             birthday: null,
-            first_seen: '2016-07-26T03:51:54.950Z',
-            last_seen: '2017-04-05T14:20:24.241Z',
+            first_seen: new Date('2016-07-26T03:51:54.950Z'),
+            last_seen: new Date('2017-04-05T14:20:24.241Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2689,8 +2689,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ec6b98c0482ab09d635da63e72bfcec9.png',
             birthday: null,
-            first_seen: '2016-09-26T21:53:55.948Z',
-            last_seen: '2017-02-08T00:56:24.214Z',
+            first_seen: new Date('2016-09-26T21:53:55.948Z'),
+            last_seen: new Date('2017-02-08T00:56:24.214Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2708,8 +2708,8 @@ data = {
             city: 'Erovezo',
             avatar: 'https://robohash.org/29c3aa997cfe8ec90a42503ce3985109.png',
             birthday: '1963-06-20T08:14:13.930Z',
-            first_seen: '2016-07-02T20:42:32.458Z',
-            last_seen: '2017-04-17T20:41:44.544Z',
+            first_seen: new Date('2016-07-02T20:42:32.458Z'),
+            last_seen: new Date('2017-04-17T20:41:44.544Z'),
             has_ordered: true,
             latest_purchase: '2017-04-16T13:38:40.014Z',
             has_newsletter: false,
@@ -2727,8 +2727,8 @@ data = {
             city: 'Wiplawu',
             avatar: 'https://robohash.org/d733e4c756e7a25cb93adb290f0f922d.png',
             birthday: '1978-06-04T09:31:09.210Z',
-            first_seen: '2015-04-11T17:31:11.384Z',
-            last_seen: '2017-02-22T11:14:58.141Z',
+            first_seen: new Date('2015-04-11T17:31:11.384Z'),
+            last_seen: new Date('2017-02-22T11:14:58.141Z'),
             has_ordered: true,
             latest_purchase: '2015-11-29T18:46:05.028Z',
             has_newsletter: false,
@@ -2746,8 +2746,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/830e75058196fd82ff319de13a5f3b76.png',
             birthday: null,
-            first_seen: '2017-03-01T15:14:39.449Z',
-            last_seen: '2017-04-02T18:51:29.513Z',
+            first_seen: new Date('2017-03-01T15:14:39.449Z'),
+            last_seen: new Date('2017-04-02T18:51:29.513Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2765,8 +2765,8 @@ data = {
             city: 'Tatgidap',
             avatar: 'https://robohash.org/a0401999043b85c9730692bb4248a4c4.png',
             birthday: '1982-04-07T00:55:46.424Z',
-            first_seen: '2015-12-12T10:39:26.623Z',
-            last_seen: '2016-07-12T20:47:32.050Z',
+            first_seen: new Date('2015-12-12T10:39:26.623Z'),
+            last_seen: new Date('2016-07-12T20:47:32.050Z'),
             has_ordered: true,
             latest_purchase: '2016-06-14T21:16:34.433Z',
             has_newsletter: false,
@@ -2784,8 +2784,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/031d90e92bd683f8bb37e4119d246ad1.png',
             birthday: null,
-            first_seen: '2016-07-16T01:51:31.412Z',
-            last_seen: '2016-11-05T09:26:28.298Z',
+            first_seen: new Date('2016-07-16T01:51:31.412Z'),
+            last_seen: new Date('2016-11-05T09:26:28.298Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2803,8 +2803,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3ad530dfbe570878b9f723dc01056409.png',
             birthday: null,
-            first_seen: '2014-06-14T05:39:38.050Z',
-            last_seen: '2016-02-29T05:19:23.887Z',
+            first_seen: new Date('2014-06-14T05:39:38.050Z'),
+            last_seen: new Date('2016-02-29T05:19:23.887Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2822,8 +2822,8 @@ data = {
             city: 'Kumojaw',
             avatar: 'https://robohash.org/64aedcbbf73891065cfd441813ba5523.png',
             birthday: '1984-03-23T07:21:28.807Z',
-            first_seen: '2015-12-10T13:00:07.071Z',
-            last_seen: '2017-04-13T12:51:52.911Z',
+            first_seen: new Date('2015-12-10T13:00:07.071Z'),
+            last_seen: new Date('2017-04-13T12:51:52.911Z'),
             has_ordered: true,
             latest_purchase: '2016-11-06T14:04:50.392Z',
             has_newsletter: false,
@@ -2841,8 +2841,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3586469b23941ec3a2117ec8bf0264e7.png',
             birthday: null,
-            first_seen: '2017-02-18T03:40:10.436Z',
-            last_seen: '2017-04-04T13:19:00.098Z',
+            first_seen: new Date('2017-02-18T03:40:10.436Z'),
+            last_seen: new Date('2017-04-04T13:19:00.098Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2860,8 +2860,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f38517e19e73c9acdea65da8d2e34459.png',
             birthday: null,
-            first_seen: '2016-02-02T16:06:38.967Z',
-            last_seen: '2017-01-24T20:41:06.483Z',
+            first_seen: new Date('2016-02-02T16:06:38.967Z'),
+            last_seen: new Date('2017-01-24T20:41:06.483Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2879,8 +2879,8 @@ data = {
             city: 'Ahusuco',
             avatar: 'https://robohash.org/10c7aaf0667f92df013e424034542243.png',
             birthday: '1983-01-02T05:31:22.728Z',
-            first_seen: '2015-05-22T21:15:58.010Z',
-            last_seen: '2015-10-16T16:58:04.989Z',
+            first_seen: new Date('2015-05-22T21:15:58.010Z'),
+            last_seen: new Date('2015-10-16T16:58:04.989Z'),
             has_ordered: true,
             latest_purchase: '2015-10-12T23:47:24.929Z',
             has_newsletter: true,
@@ -2898,8 +2898,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/63f7ace80805cf1b418ee18db5fb9feb.png',
             birthday: null,
-            first_seen: '2017-02-27T05:01:53.632Z',
-            last_seen: '2017-03-16T17:31:58.701Z',
+            first_seen: new Date('2017-02-27T05:01:53.632Z'),
+            last_seen: new Date('2017-03-16T17:31:58.701Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2917,8 +2917,8 @@ data = {
             city: 'Suziovi',
             avatar: 'https://robohash.org/ff0c7af0bade8b305f9670b9840dc1ab.png',
             birthday: '1993-02-07T07:46:42.987Z',
-            first_seen: '2014-07-13T02:55:38.065Z',
-            last_seen: '2016-09-07T15:20:59.115Z',
+            first_seen: new Date('2014-07-13T02:55:38.065Z'),
+            last_seen: new Date('2016-09-07T15:20:59.115Z'),
             has_ordered: true,
             latest_purchase: '2016-05-15T03:02:13.257Z',
             has_newsletter: false,
@@ -2936,8 +2936,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/029695480eed17471ae2a3d91dad1678.png',
             birthday: null,
-            first_seen: '2015-11-07T16:50:31.904Z',
-            last_seen: '2017-04-19T01:52:02.633Z',
+            first_seen: new Date('2015-11-07T16:50:31.904Z'),
+            last_seen: new Date('2017-04-19T01:52:02.633Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2955,8 +2955,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9fb83a1e72a95d24aedd5ef8601e01a8.png',
             birthday: null,
-            first_seen: '2015-04-11T16:45:00.410Z',
-            last_seen: '2015-12-12T12:31:58.376Z',
+            first_seen: new Date('2015-04-11T16:45:00.410Z'),
+            last_seen: new Date('2015-12-12T12:31:58.376Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -2974,8 +2974,8 @@ data = {
             city: 'Zajwuwnu',
             avatar: 'https://robohash.org/bf6857761f864200f3269ccb1b759b54.png',
             birthday: '1994-07-06T09:22:37.911Z',
-            first_seen: '2015-09-25T11:32:54.593Z',
-            last_seen: '2017-04-16T02:28:42.752Z',
+            first_seen: new Date('2015-09-25T11:32:54.593Z'),
+            last_seen: new Date('2017-04-16T02:28:42.752Z'),
             has_ordered: true,
             latest_purchase: '2017-02-14T16:24:17.171Z',
             has_newsletter: false,
@@ -2993,8 +2993,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/17d19d47088ba149b2ccf5ce97f92866.png',
             birthday: null,
-            first_seen: '2014-05-03T17:41:18.588Z',
-            last_seen: '2016-05-31T04:16:12.402Z',
+            first_seen: new Date('2014-05-03T17:41:18.588Z'),
+            last_seen: new Date('2016-05-31T04:16:12.402Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3012,8 +3012,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e49c2639a5e8adbe82170c9d3f26022c.png',
             birthday: null,
-            first_seen: '2017-02-04T22:48:23.811Z',
-            last_seen: '2017-03-06T18:26:44.739Z',
+            first_seen: new Date('2017-02-04T22:48:23.811Z'),
+            last_seen: new Date('2017-03-06T18:26:44.739Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3031,8 +3031,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ad74e090ae54a8a672627cefb9b98938.png',
             birthday: null,
-            first_seen: '2016-02-05T09:04:19.013Z',
-            last_seen: '2016-06-10T00:50:09.492Z',
+            first_seen: new Date('2016-02-05T09:04:19.013Z'),
+            last_seen: new Date('2016-06-10T00:50:09.492Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3050,8 +3050,8 @@ data = {
             city: 'Kobreamu',
             avatar: 'https://robohash.org/b841d446014874023d929120b77a77e4.png',
             birthday: '1994-02-13T00:37:02.993Z',
-            first_seen: '2013-04-20T05:59:09.923Z',
-            last_seen: '2015-05-15T18:15:00.926Z',
+            first_seen: new Date('2013-04-20T05:59:09.923Z'),
+            last_seen: new Date('2015-05-15T18:15:00.926Z'),
             has_ordered: true,
             latest_purchase: '2015-05-15T10:12:56.377Z',
             has_newsletter: false,
@@ -3069,8 +3069,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cdf5686be9d09aafdee60bda1cc1d7f6.png',
             birthday: null,
-            first_seen: '2013-03-19T19:25:16.940Z',
-            last_seen: '2016-11-28T20:46:15.890Z',
+            first_seen: new Date('2013-03-19T19:25:16.940Z'),
+            last_seen: new Date('2016-11-28T20:46:15.890Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3088,8 +3088,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9a6f49154d2c60742eafe1b174470dc8.png',
             birthday: null,
-            first_seen: '2014-10-19T23:05:25.903Z',
-            last_seen: '2016-03-05T22:45:04.551Z',
+            first_seen: new Date('2014-10-19T23:05:25.903Z'),
+            last_seen: new Date('2016-03-05T22:45:04.551Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3107,8 +3107,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4b11282a459111b11018c45977cd9022.png',
             birthday: null,
-            first_seen: '2016-05-23T16:53:50.893Z',
-            last_seen: '2017-02-11T09:31:01.325Z',
+            first_seen: new Date('2016-05-23T16:53:50.893Z'),
+            last_seen: new Date('2017-02-11T09:31:01.325Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3126,8 +3126,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fddcbc619eaf9753255c5f658c684004.png',
             birthday: null,
-            first_seen: '2016-02-19T20:07:56.924Z',
-            last_seen: '2016-12-12T13:52:08.013Z',
+            first_seen: new Date('2016-02-19T20:07:56.924Z'),
+            last_seen: new Date('2016-12-12T13:52:08.013Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3145,8 +3145,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ff91897fe553c35c97cb9a42b5f630ac.png',
             birthday: null,
-            first_seen: '2016-08-13T16:01:50.583Z',
-            last_seen: '2017-01-01T10:23:36.791Z',
+            first_seen: new Date('2016-08-13T16:01:50.583Z'),
+            last_seen: new Date('2017-01-01T10:23:36.791Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3164,8 +3164,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e731d109f0af5408c8f65da318589251.png',
             birthday: null,
-            first_seen: '2015-09-01T12:25:03.711Z',
-            last_seen: '2016-09-17T16:41:09.975Z',
+            first_seen: new Date('2015-09-01T12:25:03.711Z'),
+            last_seen: new Date('2016-09-17T16:41:09.975Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3183,8 +3183,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/45828e47f42dc43e3262e5d9b4b1a43e.png',
             birthday: null,
-            first_seen: '2016-05-22T12:31:19.381Z',
-            last_seen: '2016-09-13T03:41:12.213Z',
+            first_seen: new Date('2016-05-22T12:31:19.381Z'),
+            last_seen: new Date('2016-09-13T03:41:12.213Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3202,8 +3202,8 @@ data = {
             city: 'Lezokeli',
             avatar: 'https://robohash.org/f70427ef2b84633e9b098fb9edbd4c2a.png',
             birthday: '1973-09-03T01:06:03.850Z',
-            first_seen: '2016-05-21T17:00:42.769Z',
-            last_seen: '2017-04-22T09:29:56.569Z',
+            first_seen: new Date('2016-05-21T17:00:42.769Z'),
+            last_seen: new Date('2017-04-22T09:29:56.569Z'),
             has_ordered: true,
             latest_purchase: '2017-03-09T21:56:53.964Z',
             has_newsletter: false,
@@ -3221,8 +3221,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4d9da5673aeecf8e0ff1819c6d95501b.png',
             birthday: null,
-            first_seen: '2015-11-17T22:56:45.905Z',
-            last_seen: '2016-08-23T18:14:04.679Z',
+            first_seen: new Date('2015-11-17T22:56:45.905Z'),
+            last_seen: new Date('2016-08-23T18:14:04.679Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3240,8 +3240,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a41d4bf72af316704d678cdd64a28e0c.png',
             birthday: null,
-            first_seen: '2016-01-31T23:17:38.731Z',
-            last_seen: '2017-03-04T04:47:01.541Z',
+            first_seen: new Date('2016-01-31T23:17:38.731Z'),
+            last_seen: new Date('2017-03-04T04:47:01.541Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3259,8 +3259,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9afae0e66fe799a335bdf10bf7fc8a0e.png',
             birthday: null,
-            first_seen: '2016-04-08T12:56:41.143Z',
-            last_seen: '2017-04-24T10:56:15.124Z',
+            first_seen: new Date('2016-04-08T12:56:41.143Z'),
+            last_seen: new Date('2017-04-24T10:56:15.124Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3278,8 +3278,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3f021b8745d2fc7a97d7c2ba0a889c37.png',
             birthday: null,
-            first_seen: '2016-10-28T06:42:00.337Z',
-            last_seen: '2017-04-26T03:11:37.850Z',
+            first_seen: new Date('2016-10-28T06:42:00.337Z'),
+            last_seen: new Date('2017-04-26T03:11:37.850Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3297,8 +3297,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2e5c8fc817042e68b96e171de6976b2b.png',
             birthday: null,
-            first_seen: '2013-10-14T07:47:28.008Z',
-            last_seen: '2016-09-15T05:59:26.259Z',
+            first_seen: new Date('2013-10-14T07:47:28.008Z'),
+            last_seen: new Date('2016-09-15T05:59:26.259Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3316,8 +3316,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f77c859bfccf2d515d410580dd759f68.png',
             birthday: null,
-            first_seen: '2014-03-27T18:58:06.642Z',
-            last_seen: '2016-01-12T12:41:09.678Z',
+            first_seen: new Date('2014-03-27T18:58:06.642Z'),
+            last_seen: new Date('2016-01-12T12:41:09.678Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3335,8 +3335,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/677101a85eb47b049823ad48b6092d6c.png',
             birthday: null,
-            first_seen: '2016-05-17T20:49:05.803Z',
-            last_seen: '2016-11-05T12:13:05.523Z',
+            first_seen: new Date('2016-05-17T20:49:05.803Z'),
+            last_seen: new Date('2016-11-05T12:13:05.523Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3354,8 +3354,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c2126977ac6648ed1871b7ccd6eb1159.png',
             birthday: null,
-            first_seen: '2015-04-30T12:09:11.324Z',
-            last_seen: '2016-12-22T15:06:26.691Z',
+            first_seen: new Date('2015-04-30T12:09:11.324Z'),
+            last_seen: new Date('2016-12-22T15:06:26.691Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3373,8 +3373,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6045dabd672d9b5481c10ef7fdafdc57.png',
             birthday: null,
-            first_seen: '2016-12-06T23:14:25.037Z',
-            last_seen: '2017-02-15T11:59:47.793Z',
+            first_seen: new Date('2016-12-06T23:14:25.037Z'),
+            last_seen: new Date('2017-02-15T11:59:47.793Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3392,8 +3392,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/adc7ff5f0f454201db5d3ece56de6f6b.png',
             birthday: null,
-            first_seen: '2013-03-24T17:36:06.231Z',
-            last_seen: '2016-10-22T19:05:55.811Z',
+            first_seen: new Date('2013-03-24T17:36:06.231Z'),
+            last_seen: new Date('2016-10-22T19:05:55.811Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3411,8 +3411,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/aaeb6ca3a3f2e62003f26a96e2c5cacd.png',
             birthday: null,
-            first_seen: '2016-02-29T13:23:30.740Z',
-            last_seen: '2016-08-31T00:55:02.430Z',
+            first_seen: new Date('2016-02-29T13:23:30.740Z'),
+            last_seen: new Date('2016-08-31T00:55:02.430Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3430,8 +3430,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/eb366e424e50fe90c7a94e04d6068351.png',
             birthday: null,
-            first_seen: '2013-05-29T10:59:54.514Z',
-            last_seen: '2016-09-23T18:09:24.264Z',
+            first_seen: new Date('2013-05-29T10:59:54.514Z'),
+            last_seen: new Date('2016-09-23T18:09:24.264Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3449,8 +3449,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/aa972198dc8222af7f2c5efab36f01f0.png',
             birthday: null,
-            first_seen: '2016-12-17T08:51:38.221Z',
-            last_seen: '2017-01-30T04:27:41.884Z',
+            first_seen: new Date('2016-12-17T08:51:38.221Z'),
+            last_seen: new Date('2017-01-30T04:27:41.884Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3468,8 +3468,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5e7f096dd66d3c1f7d2436664d099087.png',
             birthday: null,
-            first_seen: '2016-09-06T18:53:22.104Z',
-            last_seen: '2017-04-10T14:02:30.736Z',
+            first_seen: new Date('2016-09-06T18:53:22.104Z'),
+            last_seen: new Date('2017-04-10T14:02:30.736Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3487,8 +3487,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0013cd2dd78f517e82c0d94a58b81f76.png',
             birthday: null,
-            first_seen: '2016-09-26T14:11:54.444Z',
-            last_seen: '2017-02-28T16:57:11.655Z',
+            first_seen: new Date('2016-09-26T14:11:54.444Z'),
+            last_seen: new Date('2017-02-28T16:57:11.655Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3506,8 +3506,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e927b6ade5fa26b1411dd359ec9d4da6.png',
             birthday: null,
-            first_seen: '2016-09-11T20:09:20.734Z',
-            last_seen: '2017-01-16T13:17:44.944Z',
+            first_seen: new Date('2016-09-11T20:09:20.734Z'),
+            last_seen: new Date('2017-01-16T13:17:44.944Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3525,8 +3525,8 @@ data = {
             city: 'Rebomouva',
             avatar: 'https://robohash.org/5bae666b7ea5ef536e361a03fc6da95f.png',
             birthday: '1973-02-01T10:17:23.288Z',
-            first_seen: '2017-04-12T17:29:58.750Z',
-            last_seen: '2017-04-23T17:02:14.267Z',
+            first_seen: new Date('2017-04-12T17:29:58.750Z'),
+            last_seen: new Date('2017-04-23T17:02:14.267Z'),
             has_ordered: true,
             latest_purchase: '2017-04-23T02:09:44.619Z',
             has_newsletter: false,
@@ -3544,8 +3544,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c054453c1ac404f55a37ca6e89c45e4d.png',
             birthday: null,
-            first_seen: '2015-09-25T01:16:40.476Z',
-            last_seen: '2016-06-11T12:59:23.209Z',
+            first_seen: new Date('2015-09-25T01:16:40.476Z'),
+            last_seen: new Date('2016-06-11T12:59:23.209Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3563,8 +3563,8 @@ data = {
             city: 'Vaiwti',
             avatar: 'https://robohash.org/2cfc0dd05f0239d6ef0b1a484b3aa302.png',
             birthday: '1959-10-14T23:55:16.535Z',
-            first_seen: '2016-09-26T05:08:33.275Z',
-            last_seen: '2016-11-05T11:20:20.578Z',
+            first_seen: new Date('2016-09-26T05:08:33.275Z'),
+            last_seen: new Date('2016-11-05T11:20:20.578Z'),
             has_ordered: true,
             latest_purchase: '2016-11-05T05:12:50.925Z',
             has_newsletter: false,
@@ -3582,8 +3582,8 @@ data = {
             city: 'Ilnenkep',
             avatar: 'https://robohash.org/06f3400175d3662a88bc487f80fca41d.png',
             birthday: '1974-04-17T02:01:50.884Z',
-            first_seen: '2014-06-22T08:55:16.254Z',
-            last_seen: '2017-02-16T17:11:00.856Z',
+            first_seen: new Date('2014-06-22T08:55:16.254Z'),
+            last_seen: new Date('2017-02-16T17:11:00.856Z'),
             has_ordered: true,
             latest_purchase: '2015-03-22T15:04:58.278Z',
             has_newsletter: false,
@@ -3601,8 +3601,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d89b0365a951165e3bda97e0c9bc55e1.png',
             birthday: null,
-            first_seen: '2016-03-12T10:17:01.177Z',
-            last_seen: '2017-03-15T20:14:32.863Z',
+            first_seen: new Date('2016-03-12T10:17:01.177Z'),
+            last_seen: new Date('2017-03-15T20:14:32.863Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3620,8 +3620,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8a442d38c74cc87565a9f48a4f27bb49.png',
             birthday: null,
-            first_seen: '2015-03-06T09:58:47.498Z',
-            last_seen: '2015-10-25T03:25:56.438Z',
+            first_seen: new Date('2015-03-06T09:58:47.498Z'),
+            last_seen: new Date('2015-10-25T03:25:56.438Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3639,8 +3639,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/26b2ae06b2558aa74491b314b6bd1dc6.png',
             birthday: null,
-            first_seen: '2016-12-14T06:33:05.148Z',
-            last_seen: '2017-02-27T03:23:06.534Z',
+            first_seen: new Date('2016-12-14T06:33:05.148Z'),
+            last_seen: new Date('2017-02-27T03:23:06.534Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3658,8 +3658,8 @@ data = {
             city: 'Edrobot',
             avatar: 'https://robohash.org/63df0349f800e8e177b467a4b4452479.png',
             birthday: '1956-12-24T03:34:32.446Z',
-            first_seen: '2015-04-01T12:00:07.117Z',
-            last_seen: '2016-06-13T18:40:10.789Z',
+            first_seen: new Date('2015-04-01T12:00:07.117Z'),
+            last_seen: new Date('2016-06-13T18:40:10.789Z'),
             has_ordered: true,
             latest_purchase: '2016-06-05T17:29:24.653Z',
             has_newsletter: false,
@@ -3677,8 +3677,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c85f399f069403cc2a4428142730098c.png',
             birthday: null,
-            first_seen: '2015-08-07T05:40:15.014Z',
-            last_seen: '2017-01-09T10:17:55.200Z',
+            first_seen: new Date('2015-08-07T05:40:15.014Z'),
+            last_seen: new Date('2017-01-09T10:17:55.200Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3696,8 +3696,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6667defc8803b872ec8ae5c689734f93.png',
             birthday: null,
-            first_seen: '2015-02-19T17:48:38.587Z',
-            last_seen: '2015-12-13T23:38:50.662Z',
+            first_seen: new Date('2015-02-19T17:48:38.587Z'),
+            last_seen: new Date('2015-12-13T23:38:50.662Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3715,8 +3715,8 @@ data = {
             city: 'Udahudsu',
             avatar: 'https://robohash.org/4ac73e3d550557c85237cf72a087e58b.png',
             birthday: '1952-01-18T11:50:12.050Z',
-            first_seen: '2015-07-28T01:22:35.013Z',
-            last_seen: '2016-08-24T16:27:37.852Z',
+            first_seen: new Date('2015-07-28T01:22:35.013Z'),
+            last_seen: new Date('2016-08-24T16:27:37.852Z'),
             has_ordered: true,
             latest_purchase: '2016-02-18T01:27:16.221Z',
             has_newsletter: false,
@@ -3734,8 +3734,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/97711869466c962395ab26f105f11430.png',
             birthday: null,
-            first_seen: '2016-09-27T17:49:32.519Z',
-            last_seen: '2016-12-30T02:01:51.961Z',
+            first_seen: new Date('2016-09-27T17:49:32.519Z'),
+            last_seen: new Date('2016-12-30T02:01:51.961Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3753,8 +3753,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/76024b2aad27e947299b55b69a8e8b37.png',
             birthday: null,
-            first_seen: '2015-07-18T03:59:10.005Z',
-            last_seen: '2017-04-18T15:15:04.091Z',
+            first_seen: new Date('2015-07-18T03:59:10.005Z'),
+            last_seen: new Date('2017-04-18T15:15:04.091Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3772,8 +3772,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7631702ea1a02e7771b8e85c776ad7e2.png',
             birthday: null,
-            first_seen: '2014-02-25T22:05:12.289Z',
-            last_seen: '2016-08-02T18:37:26.077Z',
+            first_seen: new Date('2014-02-25T22:05:12.289Z'),
+            last_seen: new Date('2016-08-02T18:37:26.077Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3791,8 +3791,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/77253ac65ce360b75d5b5564dcfc6ee6.png',
             birthday: null,
-            first_seen: '2017-02-24T13:27:42.770Z',
-            last_seen: '2017-03-07T15:33:28.234Z',
+            first_seen: new Date('2017-02-24T13:27:42.770Z'),
+            last_seen: new Date('2017-03-07T15:33:28.234Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3810,8 +3810,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/01f40d4e46b4aaa9938bf0ddee5c551f.png',
             birthday: null,
-            first_seen: '2014-10-28T17:51:48.094Z',
-            last_seen: '2016-01-12T07:01:59.628Z',
+            first_seen: new Date('2014-10-28T17:51:48.094Z'),
+            last_seen: new Date('2016-01-12T07:01:59.628Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3829,8 +3829,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/50d09264684753950bd76a320a67ed82.png',
             birthday: null,
-            first_seen: '2014-07-29T09:14:04.861Z',
-            last_seen: '2017-04-26T00:44:45.898Z',
+            first_seen: new Date('2014-07-29T09:14:04.861Z'),
+            last_seen: new Date('2017-04-26T00:44:45.898Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3848,8 +3848,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5c1206e463d707b9710fdc14bd341a0a.png',
             birthday: null,
-            first_seen: '2015-05-22T09:43:07.909Z',
-            last_seen: '2015-12-10T17:39:12.358Z',
+            first_seen: new Date('2015-05-22T09:43:07.909Z'),
+            last_seen: new Date('2015-12-10T17:39:12.358Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3867,8 +3867,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f6599c63e656f7ffc8fa05474ec254f3.png',
             birthday: null,
-            first_seen: '2017-01-11T00:50:42.935Z',
-            last_seen: '2017-03-11T12:25:26.660Z',
+            first_seen: new Date('2017-01-11T00:50:42.935Z'),
+            last_seen: new Date('2017-03-11T12:25:26.660Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3886,8 +3886,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c12643d8e67c047856e8f4bd83fba296.png',
             birthday: null,
-            first_seen: '2017-02-21T06:39:40.622Z',
-            last_seen: '2017-04-11T03:19:51.808Z',
+            first_seen: new Date('2017-02-21T06:39:40.622Z'),
+            last_seen: new Date('2017-04-11T03:19:51.808Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3905,8 +3905,8 @@ data = {
             city: 'Petece',
             avatar: 'https://robohash.org/f39e20521994c09822dd7ce0f9d4f2b1.png',
             birthday: '1991-01-21T10:11:24.198Z',
-            first_seen: '2013-11-12T23:09:06.197Z',
-            last_seen: '2014-08-01T12:03:38.965Z',
+            first_seen: new Date('2013-11-12T23:09:06.197Z'),
+            last_seen: new Date('2014-08-01T12:03:38.965Z'),
             has_ordered: true,
             latest_purchase: '2014-07-12T01:06:22.342Z',
             has_newsletter: false,
@@ -3924,8 +3924,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/49e70e12f8cf78868efc146fe8cb6fe6.png',
             birthday: null,
-            first_seen: '2014-12-27T19:12:36.544Z',
-            last_seen: '2016-04-24T00:35:46.347Z',
+            first_seen: new Date('2014-12-27T19:12:36.544Z'),
+            last_seen: new Date('2016-04-24T00:35:46.347Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3943,8 +3943,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5acdadc8ba422cc8919b8fc36c4f530f.png',
             birthday: null,
-            first_seen: '2016-05-09T18:19:21.923Z',
-            last_seen: '2017-02-16T04:38:28.230Z',
+            first_seen: new Date('2016-05-09T18:19:21.923Z'),
+            last_seen: new Date('2017-02-16T04:38:28.230Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3962,8 +3962,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8041914059a3a1b13a64128f076df84e.png',
             birthday: null,
-            first_seen: '2013-10-17T04:45:25.660Z',
-            last_seen: '2016-09-02T10:52:49.263Z',
+            first_seen: new Date('2013-10-17T04:45:25.660Z'),
+            last_seen: new Date('2016-09-02T10:52:49.263Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -3981,8 +3981,8 @@ data = {
             city: 'Vupawim',
             avatar: 'https://robohash.org/8fd3bc9266b517c320d2bf0fbd913d49.png',
             birthday: '1995-08-25T08:40:07.737Z',
-            first_seen: '2014-12-03T18:32:58.240Z',
-            last_seen: '2016-05-27T07:36:12.540Z',
+            first_seen: new Date('2014-12-03T18:32:58.240Z'),
+            last_seen: new Date('2016-05-27T07:36:12.540Z'),
             has_ordered: true,
             latest_purchase: '2016-04-28T04:41:33.392Z',
             has_newsletter: false,
@@ -4000,8 +4000,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b4b793c552a85ad07cbda02080be158d.png',
             birthday: null,
-            first_seen: '2016-09-11T02:20:40.543Z',
-            last_seen: '2017-01-01T02:12:15.854Z',
+            first_seen: new Date('2016-09-11T02:20:40.543Z'),
+            last_seen: new Date('2017-01-01T02:12:15.854Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4019,8 +4019,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/39320ca863c40f30b01bbf1c9a534912.png',
             birthday: null,
-            first_seen: '2013-03-15T01:20:04.953Z',
-            last_seen: '2015-08-24T14:01:54.447Z',
+            first_seen: new Date('2013-03-15T01:20:04.953Z'),
+            last_seen: new Date('2015-08-24T14:01:54.447Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4038,8 +4038,8 @@ data = {
             city: 'Rotloro',
             avatar: 'https://robohash.org/7da8f8f3a4a5601d6fd24cff714f1c23.png',
             birthday: '1979-04-12T05:21:12.643Z',
-            first_seen: '2015-07-31T03:46:36.623Z',
-            last_seen: '2017-03-27T03:56:11.518Z',
+            first_seen: new Date('2015-07-31T03:46:36.623Z'),
+            last_seen: new Date('2017-03-27T03:56:11.518Z'),
             has_ordered: true,
             latest_purchase: '2016-09-29T02:33:26.841Z',
             has_newsletter: false,
@@ -4057,8 +4057,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7abd6f233215dc1f98f0dc84700c413d.png',
             birthday: null,
-            first_seen: '2016-10-06T03:51:33.622Z',
-            last_seen: '2016-11-12T22:21:11.028Z',
+            first_seen: new Date('2016-10-06T03:51:33.622Z'),
+            last_seen: new Date('2016-11-12T22:21:11.028Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4076,8 +4076,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b72da17fff0fa49cd141e1f46066a02e.png',
             birthday: null,
-            first_seen: '2013-10-03T03:18:03.550Z',
-            last_seen: '2016-12-01T19:42:25.242Z',
+            first_seen: new Date('2013-10-03T03:18:03.550Z'),
+            last_seen: new Date('2016-12-01T19:42:25.242Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4095,8 +4095,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8be61b6c053834a4d1e1727a5246721b.png',
             birthday: null,
-            first_seen: '2016-10-15T06:08:52.846Z',
-            last_seen: '2017-01-15T02:12:14.495Z',
+            first_seen: new Date('2016-10-15T06:08:52.846Z'),
+            last_seen: new Date('2017-01-15T02:12:14.495Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4114,8 +4114,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/169ef6c9f9b17cb71e1dd09ab2bc9ebb.png',
             birthday: null,
-            first_seen: '2012-08-21T13:05:22.658Z',
-            last_seen: '2017-03-01T13:25:02.995Z',
+            first_seen: new Date('2012-08-21T13:05:22.658Z'),
+            last_seen: new Date('2017-03-01T13:25:02.995Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4133,8 +4133,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/94d5470d17cab011c51332e7b5b774a4.png',
             birthday: null,
-            first_seen: '2015-12-16T10:22:38.732Z',
-            last_seen: '2016-08-14T11:13:12.125Z',
+            first_seen: new Date('2015-12-16T10:22:38.732Z'),
+            last_seen: new Date('2016-08-14T11:13:12.125Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4152,8 +4152,8 @@ data = {
             city: 'Gumleso',
             avatar: 'https://robohash.org/c9e9f1b2a7eb39e6e1139d6a63372c0e.png',
             birthday: '1961-08-14T01:28:32.652Z',
-            first_seen: '2014-05-25T08:08:26.746Z',
-            last_seen: '2017-01-17T22:30:35.678Z',
+            first_seen: new Date('2014-05-25T08:08:26.746Z'),
+            last_seen: new Date('2017-01-17T22:30:35.678Z'),
             has_ordered: true,
             latest_purchase: '2016-08-02T17:24:17.900Z',
             has_newsletter: false,
@@ -4171,8 +4171,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0d06ba92d5ea584de6c83ec46c780eda.png',
             birthday: null,
-            first_seen: '2015-10-03T12:45:00.074Z',
-            last_seen: '2016-11-06T20:22:41.167Z',
+            first_seen: new Date('2015-10-03T12:45:00.074Z'),
+            last_seen: new Date('2016-11-06T20:22:41.167Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4190,8 +4190,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fc3146405e84e781c4ce6382fa40a71e.png',
             birthday: null,
-            first_seen: '2015-10-25T09:09:20.335Z',
-            last_seen: '2016-06-29T09:53:54.622Z',
+            first_seen: new Date('2015-10-25T09:09:20.335Z'),
+            last_seen: new Date('2016-06-29T09:53:54.622Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4209,8 +4209,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b504b27e068625610087dac69b92ed1b.png',
             birthday: null,
-            first_seen: '2016-10-15T13:19:41.592Z',
-            last_seen: '2017-02-27T11:50:26.303Z',
+            first_seen: new Date('2016-10-15T13:19:41.592Z'),
+            last_seen: new Date('2017-02-27T11:50:26.303Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4228,8 +4228,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/88fe97d02d266ac2bfb675f0f0428921.png',
             birthday: null,
-            first_seen: '2017-01-13T03:51:31.643Z',
-            last_seen: '2017-03-31T09:27:09.162Z',
+            first_seen: new Date('2017-01-13T03:51:31.643Z'),
+            last_seen: new Date('2017-03-31T09:27:09.162Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4247,8 +4247,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dc8688fbd58c9598e39e3ea9977ada6f.png',
             birthday: null,
-            first_seen: '2015-02-26T03:59:17.870Z',
-            last_seen: '2016-04-13T15:24:26.114Z',
+            first_seen: new Date('2015-02-26T03:59:17.870Z'),
+            last_seen: new Date('2016-04-13T15:24:26.114Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4266,8 +4266,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/aa2dcfcfb5f0df9728f3214195bc5bb3.png',
             birthday: null,
-            first_seen: '2013-07-07T09:54:43.754Z',
-            last_seen: '2016-09-25T15:12:56.589Z',
+            first_seen: new Date('2013-07-07T09:54:43.754Z'),
+            last_seen: new Date('2016-09-25T15:12:56.589Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4285,8 +4285,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b4cc0c53ea5451880f9ddcf45682c287.png',
             birthday: null,
-            first_seen: '2016-09-12T09:31:44.154Z',
-            last_seen: '2017-04-01T02:10:59.336Z',
+            first_seen: new Date('2016-09-12T09:31:44.154Z'),
+            last_seen: new Date('2017-04-01T02:10:59.336Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4304,8 +4304,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9f58c8024744775f825deb91095eaf14.png',
             birthday: null,
-            first_seen: '2014-11-21T06:03:31.453Z',
-            last_seen: '2017-04-16T17:06:04.051Z',
+            first_seen: new Date('2014-11-21T06:03:31.453Z'),
+            last_seen: new Date('2017-04-16T17:06:04.051Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4323,8 +4323,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/28bea05a2140a3edb2cd2a2f8e02b750.png',
             birthday: null,
-            first_seen: '2013-06-02T10:59:31.416Z',
-            last_seen: '2015-12-08T05:34:35.983Z',
+            first_seen: new Date('2013-06-02T10:59:31.416Z'),
+            last_seen: new Date('2015-12-08T05:34:35.983Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4342,8 +4342,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/046cf33843ecd526673a48f9f8419814.png',
             birthday: null,
-            first_seen: '2016-10-11T16:28:45.947Z',
-            last_seen: '2017-01-10T10:15:46.653Z',
+            first_seen: new Date('2016-10-11T16:28:45.947Z'),
+            last_seen: new Date('2017-01-10T10:15:46.653Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4361,8 +4361,8 @@ data = {
             city: 'Lawhese',
             avatar: 'https://robohash.org/d01998d7960b2d6d206d3101177956d2.png',
             birthday: '1968-07-27T01:16:24.698Z',
-            first_seen: '2015-05-13T00:10:52.150Z',
-            last_seen: '2017-02-06T21:56:29.255Z',
+            first_seen: new Date('2015-05-13T00:10:52.150Z'),
+            last_seen: new Date('2017-02-06T21:56:29.255Z'),
             has_ordered: true,
             latest_purchase: '2016-10-23T00:57:09.317Z',
             has_newsletter: true,
@@ -4380,8 +4380,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8835d7bed9b2b4e8f4596406a49d5a61.png',
             birthday: null,
-            first_seen: '2013-11-26T04:15:10.514Z',
-            last_seen: '2016-08-07T21:52:44.657Z',
+            first_seen: new Date('2013-11-26T04:15:10.514Z'),
+            last_seen: new Date('2016-08-07T21:52:44.657Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4399,8 +4399,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/85c12808a61adc76697c40daf82794d3.png',
             birthday: null,
-            first_seen: '2015-03-22T17:19:01.005Z',
-            last_seen: '2017-02-08T20:44:10.435Z',
+            first_seen: new Date('2015-03-22T17:19:01.005Z'),
+            last_seen: new Date('2017-02-08T20:44:10.435Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4418,8 +4418,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ee68c2636d4f9f2881799d1b399640c1.png',
             birthday: null,
-            first_seen: '2016-06-25T09:08:00.205Z',
-            last_seen: '2016-11-04T03:47:12.581Z',
+            first_seen: new Date('2016-06-25T09:08:00.205Z'),
+            last_seen: new Date('2016-11-04T03:47:12.581Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4437,8 +4437,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e6489ccea11c20a50290133586731de0.png',
             birthday: null,
-            first_seen: '2016-08-14T19:23:34.730Z',
-            last_seen: '2016-11-28T10:19:48.592Z',
+            first_seen: new Date('2016-08-14T19:23:34.730Z'),
+            last_seen: new Date('2016-11-28T10:19:48.592Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4456,8 +4456,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f808299692f82306e34380f60b2f7698.png',
             birthday: null,
-            first_seen: '2016-10-01T06:15:57.197Z',
-            last_seen: '2017-02-25T17:20:39.925Z',
+            first_seen: new Date('2016-10-01T06:15:57.197Z'),
+            last_seen: new Date('2017-02-25T17:20:39.925Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4475,8 +4475,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a18177329bfdd3dcee74640d9b3da496.png',
             birthday: null,
-            first_seen: '2016-07-02T19:52:34.787Z',
-            last_seen: '2016-11-28T22:59:37.620Z',
+            first_seen: new Date('2016-07-02T19:52:34.787Z'),
+            last_seen: new Date('2016-11-28T22:59:37.620Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4494,8 +4494,8 @@ data = {
             city: 'Gerivudi',
             avatar: 'https://robohash.org/b1b72629e4035a36cab6172c148f110b.png',
             birthday: '1965-11-11T07:39:02.948Z',
-            first_seen: '2015-12-15T03:40:08.776Z',
-            last_seen: '2016-09-12T03:42:11.324Z',
+            first_seen: new Date('2015-12-15T03:40:08.776Z'),
+            last_seen: new Date('2016-09-12T03:42:11.324Z'),
             has_ordered: true,
             latest_purchase: '2016-08-08T04:59:18.643Z',
             has_newsletter: false,
@@ -4513,8 +4513,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1e4de9652c80b38b272fab99a155743d.png',
             birthday: null,
-            first_seen: '2016-10-30T03:39:55.312Z',
-            last_seen: '2017-03-29T13:34:47.292Z',
+            first_seen: new Date('2016-10-30T03:39:55.312Z'),
+            last_seen: new Date('2017-03-29T13:34:47.292Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4532,8 +4532,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/97a6a8da42b396152708f00b21b966fc.png',
             birthday: null,
-            first_seen: '2014-05-05T15:58:47.889Z',
-            last_seen: '2016-05-13T03:47:20.346Z',
+            first_seen: new Date('2014-05-05T15:58:47.889Z'),
+            last_seen: new Date('2016-05-13T03:47:20.346Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4551,8 +4551,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/52ff384d23b9a6e011ece66e1420bc49.png',
             birthday: null,
-            first_seen: '2014-04-02T17:05:48.551Z',
-            last_seen: '2017-01-25T13:16:33.506Z',
+            first_seen: new Date('2014-04-02T17:05:48.551Z'),
+            last_seen: new Date('2017-01-25T13:16:33.506Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4570,8 +4570,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/97569774b7021ba477e48b780a53f9ae.png',
             birthday: null,
-            first_seen: '2015-04-07T03:13:22.932Z',
-            last_seen: '2016-07-20T16:31:04.130Z',
+            first_seen: new Date('2015-04-07T03:13:22.932Z'),
+            last_seen: new Date('2016-07-20T16:31:04.130Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4589,8 +4589,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/82bc32712292feea2d4946bb00a51a00.png',
             birthday: null,
-            first_seen: '2015-10-02T01:09:16.375Z',
-            last_seen: '2016-12-20T18:24:43.666Z',
+            first_seen: new Date('2015-10-02T01:09:16.375Z'),
+            last_seen: new Date('2016-12-20T18:24:43.666Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4608,8 +4608,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cb5fdf201b7a2e6e5b700a3004721aa3.png',
             birthday: null,
-            first_seen: '2016-05-29T23:51:41.669Z',
-            last_seen: '2016-08-15T19:45:07.340Z',
+            first_seen: new Date('2016-05-29T23:51:41.669Z'),
+            last_seen: new Date('2016-08-15T19:45:07.340Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4627,8 +4627,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2e8e74904e6b9b183cab3e9c4f2a7076.png',
             birthday: null,
-            first_seen: '2015-02-27T22:02:05.896Z',
-            last_seen: '2016-04-04T12:08:39.953Z',
+            first_seen: new Date('2015-02-27T22:02:05.896Z'),
+            last_seen: new Date('2016-04-04T12:08:39.953Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4646,8 +4646,8 @@ data = {
             city: 'Cucuiw',
             avatar: 'https://robohash.org/12e6f11b66458e516fa3657e8c22dd46.png',
             birthday: '1960-03-03T09:04:47.207Z',
-            first_seen: '2016-10-19T19:22:12.855Z',
-            last_seen: '2017-03-03T22:22:57.870Z',
+            first_seen: new Date('2016-10-19T19:22:12.855Z'),
+            last_seen: new Date('2017-03-03T22:22:57.870Z'),
             has_ordered: true,
             latest_purchase: '2017-01-18T01:10:29.468Z',
             has_newsletter: false,
@@ -4665,8 +4665,8 @@ data = {
             city: 'Waiwrij',
             avatar: 'https://robohash.org/a7bf66a464451665277054983b028486.png',
             birthday: '1990-09-28T09:34:59.196Z',
-            first_seen: '2013-05-23T01:08:23.455Z',
-            last_seen: '2014-06-13T20:51:50.604Z',
+            first_seen: new Date('2013-05-23T01:08:23.455Z'),
+            last_seen: new Date('2014-06-13T20:51:50.604Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: true,
@@ -4684,8 +4684,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b64fd0cf9cae8b00892d2fe0ad2c9b36.png',
             birthday: null,
-            first_seen: '2016-05-07T17:12:57.974Z',
-            last_seen: '2016-12-19T14:45:46.858Z',
+            first_seen: new Date('2016-05-07T17:12:57.974Z'),
+            last_seen: new Date('2016-12-19T14:45:46.858Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4703,8 +4703,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/41c9cf44938abf99aeaec03cb2b339da.png',
             birthday: null,
-            first_seen: '2017-03-23T17:26:08.922Z',
-            last_seen: '2017-04-18T16:36:17.652Z',
+            first_seen: new Date('2017-03-23T17:26:08.922Z'),
+            last_seen: new Date('2017-04-18T16:36:17.652Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4722,8 +4722,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7efbce61af1488e0d8cf374af5d62368.png',
             birthday: null,
-            first_seen: '2017-04-22T22:59:28.216Z',
-            last_seen: '2017-04-24T10:17:58.256Z',
+            first_seen: new Date('2017-04-22T22:59:28.216Z'),
+            last_seen: new Date('2017-04-24T10:17:58.256Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4741,8 +4741,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9cff5ead389da227a87417309bac30bd.png',
             birthday: null,
-            first_seen: '2013-03-07T03:02:50.422Z',
-            last_seen: '2017-03-12T19:38:34.451Z',
+            first_seen: new Date('2013-03-07T03:02:50.422Z'),
+            last_seen: new Date('2017-03-12T19:38:34.451Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4760,8 +4760,8 @@ data = {
             city: 'Vecazeta',
             avatar: 'https://robohash.org/74e78803f7da0ca6790734f6ec4e665f.png',
             birthday: '1998-05-15T01:39:41.406Z',
-            first_seen: '2016-09-24T05:09:26.280Z',
-            last_seen: '2016-10-10T01:49:35.538Z',
+            first_seen: new Date('2016-09-24T05:09:26.280Z'),
+            last_seen: new Date('2016-10-10T01:49:35.538Z'),
             has_ordered: true,
             latest_purchase: '2016-10-09T21:47:37.160Z',
             has_newsletter: false,
@@ -4779,8 +4779,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/852d1a1ddc2dabb7343e8eb28879d27d.png',
             birthday: null,
-            first_seen: '2015-10-06T23:09:49.870Z',
-            last_seen: '2016-06-30T13:28:25.625Z',
+            first_seen: new Date('2015-10-06T23:09:49.870Z'),
+            last_seen: new Date('2016-06-30T13:28:25.625Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4798,8 +4798,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f0f4954dddcefa6d7cba6e7a207dff1d.png',
             birthday: null,
-            first_seen: '2016-11-16T11:58:55.348Z',
-            last_seen: '2016-11-24T11:11:17.591Z',
+            first_seen: new Date('2016-11-16T11:58:55.348Z'),
+            last_seen: new Date('2016-11-24T11:11:17.591Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4817,8 +4817,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/00327e7f0a887500e2cd17660413f736.png',
             birthday: null,
-            first_seen: '2014-11-01T15:41:39.093Z',
-            last_seen: '2016-10-02T15:40:05.925Z',
+            first_seen: new Date('2014-11-01T15:41:39.093Z'),
+            last_seen: new Date('2016-10-02T15:40:05.925Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4836,8 +4836,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ee5a789ddee095c1f618b5bdd363e863.png',
             birthday: null,
-            first_seen: '2016-06-09T15:05:48.024Z',
-            last_seen: '2016-10-29T14:04:46.335Z',
+            first_seen: new Date('2016-06-09T15:05:48.024Z'),
+            last_seen: new Date('2016-10-29T14:04:46.335Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4855,8 +4855,8 @@ data = {
             city: 'Nokehi',
             avatar: 'https://robohash.org/36679ea1acf168ad38e3f23fc766f739.png',
             birthday: '1963-01-13T02:39:50.904Z',
-            first_seen: '2016-04-01T02:35:01.660Z',
-            last_seen: '2017-02-24T20:27:01.368Z',
+            first_seen: new Date('2016-04-01T02:35:01.660Z'),
+            last_seen: new Date('2017-02-24T20:27:01.368Z'),
             has_ordered: true,
             latest_purchase: '2016-12-08T14:22:15.506Z',
             has_newsletter: false,
@@ -4874,8 +4874,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3cfe790b99292e54cfd93ac69d01a542.png',
             birthday: null,
-            first_seen: '2016-12-26T10:01:06.867Z',
-            last_seen: '2017-02-14T09:04:52.648Z',
+            first_seen: new Date('2016-12-26T10:01:06.867Z'),
+            last_seen: new Date('2017-02-14T09:04:52.648Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4893,8 +4893,8 @@ data = {
             city: 'Keiril',
             avatar: 'https://robohash.org/bca5c70bf00cb2e52cc86df1658c5e96.png',
             birthday: '1956-09-21T05:29:51.726Z',
-            first_seen: '2013-11-14T10:51:40.050Z',
-            last_seen: '2015-01-27T00:29:25.069Z',
+            first_seen: new Date('2013-11-14T10:51:40.050Z'),
+            last_seen: new Date('2015-01-27T00:29:25.069Z'),
             has_ordered: true,
             latest_purchase: '2014-07-11T22:07:04.899Z',
             has_newsletter: false,
@@ -4912,8 +4912,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/223f42842ebc30d1e31dd169e8236519.png',
             birthday: null,
-            first_seen: '2015-10-12T21:19:19.216Z',
-            last_seen: '2017-04-03T08:44:21.389Z',
+            first_seen: new Date('2015-10-12T21:19:19.216Z'),
+            last_seen: new Date('2017-04-03T08:44:21.389Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4931,8 +4931,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/16b2b59d3142d37c36cd88341b56e170.png',
             birthday: null,
-            first_seen: '2013-12-11T08:01:43.701Z',
-            last_seen: '2016-02-11T15:41:43.540Z',
+            first_seen: new Date('2013-12-11T08:01:43.701Z'),
+            last_seen: new Date('2016-02-11T15:41:43.540Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4950,8 +4950,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7711604c284c586eb1059e782508ab36.png',
             birthday: null,
-            first_seen: '2013-06-28T14:39:07.804Z',
-            last_seen: '2014-05-04T00:16:38.463Z',
+            first_seen: new Date('2013-06-28T14:39:07.804Z'),
+            last_seen: new Date('2014-05-04T00:16:38.463Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -4969,8 +4969,8 @@ data = {
             city: 'Bacicosam',
             avatar: 'https://robohash.org/a1774a089a5e8e3b24f726f7d676276f.png',
             birthday: '1979-01-06T02:29:14.139Z',
-            first_seen: '2015-01-27T08:35:36.079Z',
-            last_seen: '2016-05-28T17:12:13.308Z',
+            first_seen: new Date('2015-01-27T08:35:36.079Z'),
+            last_seen: new Date('2016-05-28T17:12:13.308Z'),
             has_ordered: true,
             latest_purchase: '2015-03-30T16:49:09.988Z',
             has_newsletter: false,
@@ -4988,8 +4988,8 @@ data = {
             city: 'Ikiezte',
             avatar: 'https://robohash.org/b0f12e84ebdc8e36727391eb80ecbce0.png',
             birthday: '1957-08-24T01:12:04.329Z',
-            first_seen: '2014-12-12T01:40:58.080Z',
-            last_seen: '2017-03-03T16:21:10.035Z',
+            first_seen: new Date('2014-12-12T01:40:58.080Z'),
+            last_seen: new Date('2017-03-03T16:21:10.035Z'),
             has_ordered: true,
             latest_purchase: '2016-10-21T07:06:57.611Z',
             has_newsletter: false,
@@ -5007,8 +5007,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/26426c1a8f4f2bf5ecefd3a62d9437b5.png',
             birthday: null,
-            first_seen: '2015-02-05T03:32:15.271Z',
-            last_seen: '2015-11-03T08:25:28.531Z',
+            first_seen: new Date('2015-02-05T03:32:15.271Z'),
+            last_seen: new Date('2015-11-03T08:25:28.531Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5026,8 +5026,8 @@ data = {
             city: 'Risejaov',
             avatar: 'https://robohash.org/8a58c95daae2a3eff924c413bf886315.png',
             birthday: '1984-01-22T00:02:50.980Z',
-            first_seen: '2013-05-08T00:12:50.357Z',
-            last_seen: '2015-11-28T08:33:53.019Z',
+            first_seen: new Date('2013-05-08T00:12:50.357Z'),
+            last_seen: new Date('2015-11-28T08:33:53.019Z'),
             has_ordered: true,
             latest_purchase: '2015-10-27T18:25:47.799Z',
             has_newsletter: false,
@@ -5045,8 +5045,8 @@ data = {
             city: 'Pearim',
             avatar: 'https://robohash.org/3cda150144cdc3a6e4a2ba98af86644d.png',
             birthday: '1958-07-21T05:29:23.013Z',
-            first_seen: '2014-02-28T18:09:02.516Z',
-            last_seen: '2015-12-29T12:28:31.503Z',
+            first_seen: new Date('2014-02-28T18:09:02.516Z'),
+            last_seen: new Date('2015-12-29T12:28:31.503Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -5064,8 +5064,8 @@ data = {
             city: 'Mididtap',
             avatar: 'https://robohash.org/877235daba33be77a742346ed664395f.png',
             birthday: '1965-10-21T04:41:31.385Z',
-            first_seen: '2013-09-19T07:11:03.743Z',
-            last_seen: '2015-10-15T13:49:20.609Z',
+            first_seen: new Date('2013-09-19T07:11:03.743Z'),
+            last_seen: new Date('2015-10-15T13:49:20.609Z'),
             has_ordered: true,
             latest_purchase: '2015-06-18T07:39:17.445Z',
             has_newsletter: false,
@@ -5083,8 +5083,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2e07fa9724ce64defff97c7a3c0fdcd2.png',
             birthday: null,
-            first_seen: '2015-04-17T00:13:43.816Z',
-            last_seen: '2016-03-25T14:23:15.315Z',
+            first_seen: new Date('2015-04-17T00:13:43.816Z'),
+            last_seen: new Date('2016-03-25T14:23:15.315Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5102,8 +5102,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/071a39285d1ef2d12b35884a9052224e.png',
             birthday: null,
-            first_seen: '2016-06-05T03:13:48.881Z',
-            last_seen: '2017-03-20T11:22:07.246Z',
+            first_seen: new Date('2016-06-05T03:13:48.881Z'),
+            last_seen: new Date('2017-03-20T11:22:07.246Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5121,8 +5121,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/116acb979c1466332e7aee2f4aace736.png',
             birthday: null,
-            first_seen: '2016-09-22T08:13:31.747Z',
-            last_seen: '2017-04-16T11:29:23.474Z',
+            first_seen: new Date('2016-09-22T08:13:31.747Z'),
+            last_seen: new Date('2017-04-16T11:29:23.474Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5140,8 +5140,8 @@ data = {
             city: 'Pewiggew',
             avatar: 'https://robohash.org/b5b709b919c2bb822e424a6994737d06.png',
             birthday: '1984-06-06T00:53:37.433Z',
-            first_seen: '2015-10-07T10:34:47.580Z',
-            last_seen: '2017-03-17T02:46:07.610Z',
+            first_seen: new Date('2015-10-07T10:34:47.580Z'),
+            last_seen: new Date('2017-03-17T02:46:07.610Z'),
             has_ordered: true,
             latest_purchase: '2016-10-01T17:24:32.516Z',
             has_newsletter: true,
@@ -5159,8 +5159,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/52293f09c0b42d56cb40723ea570c54d.png',
             birthday: null,
-            first_seen: '2017-01-21T12:46:31.303Z',
-            last_seen: '2017-04-04T05:34:45.153Z',
+            first_seen: new Date('2017-01-21T12:46:31.303Z'),
+            last_seen: new Date('2017-04-04T05:34:45.153Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5178,8 +5178,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/67a71909d274ba0dddfe9c3871b0a24e.png',
             birthday: null,
-            first_seen: '2015-06-30T23:14:27.593Z',
-            last_seen: '2016-07-27T11:29:36.278Z',
+            first_seen: new Date('2015-06-30T23:14:27.593Z'),
+            last_seen: new Date('2016-07-27T11:29:36.278Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5197,8 +5197,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9e256401646dc116f578d7dc9f5560da.png',
             birthday: null,
-            first_seen: '2015-05-28T11:16:18.858Z',
-            last_seen: '2017-04-05T05:29:37.631Z',
+            first_seen: new Date('2015-05-28T11:16:18.858Z'),
+            last_seen: new Date('2017-04-05T05:29:37.631Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5216,8 +5216,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bc899057d1471be95c59fa42630beda0.png',
             birthday: null,
-            first_seen: '2012-12-24T10:49:09.649Z',
-            last_seen: '2016-12-28T03:57:49.689Z',
+            first_seen: new Date('2012-12-24T10:49:09.649Z'),
+            last_seen: new Date('2016-12-28T03:57:49.689Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5235,8 +5235,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/27a40092dad857a8eb24982cb009edc0.png',
             birthday: null,
-            first_seen: '2014-11-19T16:19:27.966Z',
-            last_seen: '2017-02-10T09:50:15.056Z',
+            first_seen: new Date('2014-11-19T16:19:27.966Z'),
+            last_seen: new Date('2017-02-10T09:50:15.056Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5254,8 +5254,8 @@ data = {
             city: 'Wunufte',
             avatar: 'https://robohash.org/22a593bf8ca8267ae619c3e90f0bdc37.png',
             birthday: '1975-12-08T04:29:05.206Z',
-            first_seen: '2014-02-02T10:47:57.832Z',
-            last_seen: '2017-01-09T20:08:29.323Z',
+            first_seen: new Date('2014-02-02T10:47:57.832Z'),
+            last_seen: new Date('2017-01-09T20:08:29.323Z'),
             has_ordered: true,
             latest_purchase: '2016-11-04T17:24:17.370Z',
             has_newsletter: false,
@@ -5273,8 +5273,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7903badeabd1dbcf78b87c0b19d63fed.png',
             birthday: null,
-            first_seen: '2016-10-29T20:57:55.956Z',
-            last_seen: '2016-12-08T06:28:29.034Z',
+            first_seen: new Date('2016-10-29T20:57:55.956Z'),
+            last_seen: new Date('2016-12-08T06:28:29.034Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5292,8 +5292,8 @@ data = {
             city: 'Kikaede',
             avatar: 'https://robohash.org/c96e61e410cf2cd8c5e32eeaa90900bd.png',
             birthday: '1995-01-15T06:57:45.509Z',
-            first_seen: '2013-06-29T10:12:21.922Z',
-            last_seen: '2015-08-10T00:35:18.377Z',
+            first_seen: new Date('2013-06-29T10:12:21.922Z'),
+            last_seen: new Date('2015-08-10T00:35:18.377Z'),
             has_ordered: true,
             latest_purchase: '2014-06-15T23:34:54.526Z',
             has_newsletter: false,
@@ -5311,8 +5311,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/088c72fbf5afdef99518cdb4b4a31718.png',
             birthday: null,
-            first_seen: '2015-01-19T16:43:30.976Z',
-            last_seen: '2016-06-07T23:13:19.234Z',
+            first_seen: new Date('2015-01-19T16:43:30.976Z'),
+            last_seen: new Date('2016-06-07T23:13:19.234Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5330,8 +5330,8 @@ data = {
             city: 'Legtotfo',
             avatar: 'https://robohash.org/e931be88a8ccd292854856ba1834bdfc.png',
             birthday: '1963-11-10T11:00:18.581Z',
-            first_seen: '2012-12-28T01:14:07.569Z',
-            last_seen: '2017-02-09T17:35:48.605Z',
+            first_seen: new Date('2012-12-28T01:14:07.569Z'),
+            last_seen: new Date('2017-02-09T17:35:48.605Z'),
             has_ordered: true,
             latest_purchase: '2016-08-14T11:29:16.290Z',
             has_newsletter: true,
@@ -5349,8 +5349,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/22b60acde1d0c3d7d4de153f98317dab.png',
             birthday: null,
-            first_seen: '2016-09-04T22:19:47.871Z',
-            last_seen: '2017-01-18T04:04:29.708Z',
+            first_seen: new Date('2016-09-04T22:19:47.871Z'),
+            last_seen: new Date('2017-01-18T04:04:29.708Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5368,8 +5368,8 @@ data = {
             city: 'Larjirenu',
             avatar: 'https://robohash.org/972d20afe3326d73f4f15a2319569c4a.png',
             birthday: '1991-03-14T04:23:52.421Z',
-            first_seen: '2016-03-16T03:47:52.728Z',
-            last_seen: '2017-03-25T01:51:13.630Z',
+            first_seen: new Date('2016-03-16T03:47:52.728Z'),
+            last_seen: new Date('2017-03-25T01:51:13.630Z'),
             has_ordered: true,
             latest_purchase: '2017-03-14T10:18:39.984Z',
             has_newsletter: true,
@@ -5387,8 +5387,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f4124551b37fb7365cbc18d2a964cbb6.png',
             birthday: null,
-            first_seen: '2016-04-08T12:53:45.358Z',
-            last_seen: '2016-05-12T11:18:41.371Z',
+            first_seen: new Date('2016-04-08T12:53:45.358Z'),
+            last_seen: new Date('2016-05-12T11:18:41.371Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5406,8 +5406,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a588886409fd5781f99c82a6bdc1512e.png',
             birthday: null,
-            first_seen: '2016-02-06T04:07:39.067Z',
-            last_seen: '2016-07-26T07:49:59.618Z',
+            first_seen: new Date('2016-02-06T04:07:39.067Z'),
+            last_seen: new Date('2016-07-26T07:49:59.618Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5425,8 +5425,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5229ab60298e254a5dd8661a404e2d17.png',
             birthday: null,
-            first_seen: '2015-10-14T16:08:24.484Z',
-            last_seen: '2016-12-30T19:59:01.736Z',
+            first_seen: new Date('2015-10-14T16:08:24.484Z'),
+            last_seen: new Date('2016-12-30T19:59:01.736Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5444,8 +5444,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/516463e2c99b470cd7d7f5c1e70f13bd.png',
             birthday: null,
-            first_seen: '2015-06-04T10:48:21.670Z',
-            last_seen: '2017-02-09T18:30:03.730Z',
+            first_seen: new Date('2015-06-04T10:48:21.670Z'),
+            last_seen: new Date('2017-02-09T18:30:03.730Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5463,8 +5463,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/43393b5758487832f847997cd7039d7c.png',
             birthday: null,
-            first_seen: '2016-07-30T19:25:25.343Z',
-            last_seen: '2017-04-15T10:19:44.562Z',
+            first_seen: new Date('2016-07-30T19:25:25.343Z'),
+            last_seen: new Date('2017-04-15T10:19:44.562Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5482,8 +5482,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e12d0b5bdaf2d1c2e5cfe1d217a787d0.png',
             birthday: null,
-            first_seen: '2015-09-14T00:43:34.723Z',
-            last_seen: '2017-03-20T04:27:57.785Z',
+            first_seen: new Date('2015-09-14T00:43:34.723Z'),
+            last_seen: new Date('2017-03-20T04:27:57.785Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5501,8 +5501,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/742f39c17925d1b043131d64ae2dc3df.png',
             birthday: null,
-            first_seen: '2016-06-02T21:32:18.242Z',
-            last_seen: '2016-12-05T20:06:31.228Z',
+            first_seen: new Date('2016-06-02T21:32:18.242Z'),
+            last_seen: new Date('2016-12-05T20:06:31.228Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5520,8 +5520,8 @@ data = {
             city: 'Becervo',
             avatar: 'https://robohash.org/32d001f75440ef5d9ad96e5531208ea0.png',
             birthday: '1978-01-06T05:08:23.640Z',
-            first_seen: '2012-11-06T23:50:51.507Z',
-            last_seen: '2015-06-25T09:18:52.681Z',
+            first_seen: new Date('2012-11-06T23:50:51.507Z'),
+            last_seen: new Date('2015-06-25T09:18:52.681Z'),
             has_ordered: true,
             latest_purchase: '2014-07-11T03:16:01.645Z',
             has_newsletter: true,
@@ -5539,8 +5539,8 @@ data = {
             city: 'Etiwezcor',
             avatar: 'https://robohash.org/aefff11f54918bbcd3bdd607593c24c6.png',
             birthday: '1996-12-27T00:19:28.290Z',
-            first_seen: '2014-08-06T08:08:14.177Z',
-            last_seen: '2016-10-27T19:59:55.508Z',
+            first_seen: new Date('2014-08-06T08:08:14.177Z'),
+            last_seen: new Date('2016-10-27T19:59:55.508Z'),
             has_ordered: true,
             latest_purchase: '2016-08-05T17:59:21.750Z',
             has_newsletter: false,
@@ -5558,8 +5558,8 @@ data = {
             city: 'Acakinege',
             avatar: 'https://robohash.org/7b105ee78fdfe032280491ed96af0038.png',
             birthday: '1953-10-24T03:56:41.277Z',
-            first_seen: '2015-07-22T21:06:48.226Z',
-            last_seen: '2016-12-09T21:37:59.713Z',
+            first_seen: new Date('2015-07-22T21:06:48.226Z'),
+            last_seen: new Date('2016-12-09T21:37:59.713Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -5577,8 +5577,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/83217f3f8eb0f8ed9cf014fe1a82073c.png',
             birthday: null,
-            first_seen: '2016-07-21T10:20:06.225Z',
-            last_seen: '2017-03-19T20:35:02.682Z',
+            first_seen: new Date('2016-07-21T10:20:06.225Z'),
+            last_seen: new Date('2017-03-19T20:35:02.682Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5596,8 +5596,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4a1285170c5910077c339e71b331b9eb.png',
             birthday: null,
-            first_seen: '2016-08-23T18:26:11.602Z',
-            last_seen: '2017-03-17T18:16:16.795Z',
+            first_seen: new Date('2016-08-23T18:26:11.602Z'),
+            last_seen: new Date('2017-03-17T18:16:16.795Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5615,8 +5615,8 @@ data = {
             city: 'Nohwizcar',
             avatar: 'https://robohash.org/f01c98af96f21e30f92a639fca2b3367.png',
             birthday: '1978-02-19T08:31:37.544Z',
-            first_seen: '2015-03-16T08:40:02.860Z',
-            last_seen: '2017-01-05T17:09:23.584Z',
+            first_seen: new Date('2015-03-16T08:40:02.860Z'),
+            last_seen: new Date('2017-01-05T17:09:23.584Z'),
             has_ordered: true,
             latest_purchase: '2016-10-13T05:19:18.544Z',
             has_newsletter: true,
@@ -5634,8 +5634,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/aaa715bc9b0152be8a559ac36eeef0d3.png',
             birthday: null,
-            first_seen: '2016-06-02T13:54:46.193Z',
-            last_seen: '2016-09-18T04:20:46.247Z',
+            first_seen: new Date('2016-06-02T13:54:46.193Z'),
+            last_seen: new Date('2016-09-18T04:20:46.247Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5653,8 +5653,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6b7f5f26c1765747555dba97099573ff.png',
             birthday: null,
-            first_seen: '2016-01-09T10:59:06.826Z',
-            last_seen: '2016-09-18T14:44:26.554Z',
+            first_seen: new Date('2016-01-09T10:59:06.826Z'),
+            last_seen: new Date('2016-09-18T14:44:26.554Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5672,8 +5672,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2e1744173fe9cc99536b3edb7635ceaf.png',
             birthday: null,
-            first_seen: '2016-05-06T00:22:23.657Z',
-            last_seen: '2017-02-26T14:46:16.253Z',
+            first_seen: new Date('2016-05-06T00:22:23.657Z'),
+            last_seen: new Date('2017-02-26T14:46:16.253Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5691,8 +5691,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/70a247f66c465bd5f2eb23ddfcc5c496.png',
             birthday: null,
-            first_seen: '2015-11-08T22:33:12.421Z',
-            last_seen: '2017-02-03T23:49:52.877Z',
+            first_seen: new Date('2015-11-08T22:33:12.421Z'),
+            last_seen: new Date('2017-02-03T23:49:52.877Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5710,8 +5710,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/96af3cd4f1b51cd8c141c1550a86e470.png',
             birthday: null,
-            first_seen: '2016-11-16T23:04:04.896Z',
-            last_seen: '2017-02-12T22:15:54.517Z',
+            first_seen: new Date('2016-11-16T23:04:04.896Z'),
+            last_seen: new Date('2017-02-12T22:15:54.517Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5729,8 +5729,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4831362619356765f01eae8d65c302a3.png',
             birthday: null,
-            first_seen: '2017-02-23T03:44:51.839Z',
-            last_seen: '2017-04-11T23:28:23.710Z',
+            first_seen: new Date('2017-02-23T03:44:51.839Z'),
+            last_seen: new Date('2017-04-11T23:28:23.710Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5748,8 +5748,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/08e917c6dad7f9ef2ea87298801a6aa2.png',
             birthday: null,
-            first_seen: '2017-01-25T15:59:45.830Z',
-            last_seen: '2017-04-10T23:51:51.769Z',
+            first_seen: new Date('2017-01-25T15:59:45.830Z'),
+            last_seen: new Date('2017-04-10T23:51:51.769Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5767,8 +5767,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/30c20184274f4aa7b358146a611e1736.png',
             birthday: null,
-            first_seen: '2014-09-05T15:55:18.049Z',
-            last_seen: '2017-02-12T22:08:35.656Z',
+            first_seen: new Date('2014-09-05T15:55:18.049Z'),
+            last_seen: new Date('2017-02-12T22:08:35.656Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5786,8 +5786,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f9c88e8b434da7888fea8edadd6ceb7b.png',
             birthday: null,
-            first_seen: '2016-08-29T02:57:21.721Z',
-            last_seen: '2017-03-14T01:44:24.784Z',
+            first_seen: new Date('2016-08-29T02:57:21.721Z'),
+            last_seen: new Date('2017-03-14T01:44:24.784Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5805,8 +5805,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/21c1cacab7b6bfb001d3a5020137ec56.png',
             birthday: null,
-            first_seen: '2015-01-01T05:53:58.258Z',
-            last_seen: '2017-03-21T09:54:57.882Z',
+            first_seen: new Date('2015-01-01T05:53:58.258Z'),
+            last_seen: new Date('2017-03-21T09:54:57.882Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5824,8 +5824,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e3642af4be5c48a3488f5d48ced48eed.png',
             birthday: null,
-            first_seen: '2014-07-08T18:18:21.051Z',
-            last_seen: '2017-03-26T10:41:47.198Z',
+            first_seen: new Date('2014-07-08T18:18:21.051Z'),
+            last_seen: new Date('2017-03-26T10:41:47.198Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5843,8 +5843,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/21b395ab0dfaa645a7bd12500b339b5b.png',
             birthday: null,
-            first_seen: '2013-03-02T18:55:00.430Z',
-            last_seen: '2015-12-30T23:54:35.508Z',
+            first_seen: new Date('2013-03-02T18:55:00.430Z'),
+            last_seen: new Date('2015-12-30T23:54:35.508Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5862,8 +5862,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b14ca6ff76975c21945b45b1439f3ba1.png',
             birthday: null,
-            first_seen: '2017-01-15T01:48:15.010Z',
-            last_seen: '2017-04-24T01:16:24.376Z',
+            first_seen: new Date('2017-01-15T01:48:15.010Z'),
+            last_seen: new Date('2017-04-24T01:16:24.376Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5881,8 +5881,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/22b2c7c8d1ff8b5a4f5619b3895922ef.png',
             birthday: null,
-            first_seen: '2016-08-25T10:21:38.560Z',
-            last_seen: '2017-01-07T18:05:30.003Z',
+            first_seen: new Date('2016-08-25T10:21:38.560Z'),
+            last_seen: new Date('2017-01-07T18:05:30.003Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5900,8 +5900,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/89b5c97bbc4cba053c7654ab7ea49c0a.png',
             birthday: null,
-            first_seen: '2015-05-23T02:06:07.486Z',
-            last_seen: '2016-06-06T22:22:07.715Z',
+            first_seen: new Date('2015-05-23T02:06:07.486Z'),
+            last_seen: new Date('2016-06-06T22:22:07.715Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5919,8 +5919,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/94fab93561a57d932edba8b24f29a0a5.png',
             birthday: null,
-            first_seen: '2013-09-27T09:14:02.628Z',
-            last_seen: '2016-06-12T04:11:44.259Z',
+            first_seen: new Date('2013-09-27T09:14:02.628Z'),
+            last_seen: new Date('2016-06-12T04:11:44.259Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5938,8 +5938,8 @@ data = {
             city: 'Budmiber',
             avatar: 'https://robohash.org/27b5fe3d4827f49c66d9974d53964a21.png',
             birthday: '1970-07-29T11:28:53.032Z',
-            first_seen: '2014-01-06T14:57:45.432Z',
-            last_seen: '2015-08-09T14:48:36.414Z',
+            first_seen: new Date('2014-01-06T14:57:45.432Z'),
+            last_seen: new Date('2015-08-09T14:48:36.414Z'),
             has_ordered: true,
             latest_purchase: '2015-06-19T02:11:37.489Z',
             has_newsletter: false,
@@ -5957,8 +5957,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5ad56d77ed54fb0669632a5555ae7d2a.png',
             birthday: null,
-            first_seen: '2017-04-11T16:00:09.027Z',
-            last_seen: '2017-04-24T20:35:13.349Z',
+            first_seen: new Date('2017-04-11T16:00:09.027Z'),
+            last_seen: new Date('2017-04-24T20:35:13.349Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5976,8 +5976,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/84be9f8b47129da4fbe764b445799ac9.png',
             birthday: null,
-            first_seen: '2017-03-17T22:24:59.094Z',
-            last_seen: '2017-04-08T14:23:39.599Z',
+            first_seen: new Date('2017-03-17T22:24:59.094Z'),
+            last_seen: new Date('2017-04-08T14:23:39.599Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -5995,8 +5995,8 @@ data = {
             city: 'Vazminu',
             avatar: 'https://robohash.org/cd27e59de80339c2dbe5a351b8e89eb4.png',
             birthday: '1982-03-31T23:40:46.586Z',
-            first_seen: '2012-10-03T00:00:14.379Z',
-            last_seen: '2013-09-15T05:25:07.921Z',
+            first_seen: new Date('2012-10-03T00:00:14.379Z'),
+            last_seen: new Date('2013-09-15T05:25:07.921Z'),
             has_ordered: true,
             latest_purchase: '2013-09-01T06:26:25.080Z',
             has_newsletter: true,
@@ -6014,8 +6014,8 @@ data = {
             city: 'Zebomkif',
             avatar: 'https://robohash.org/16eb737071206c08be14bfb40b64157b.png',
             birthday: '1966-12-12T02:07:56.396Z',
-            first_seen: '2013-08-20T20:42:45.566Z',
-            last_seen: '2016-01-01T16:29:25.519Z',
+            first_seen: new Date('2013-08-20T20:42:45.566Z'),
+            last_seen: new Date('2016-01-01T16:29:25.519Z'),
             has_ordered: true,
             latest_purchase: '2015-04-12T07:19:46.646Z',
             has_newsletter: false,
@@ -6033,8 +6033,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/761d66a5cf48dca50e44415765a79f7b.png',
             birthday: null,
-            first_seen: '2016-04-19T09:05:50.889Z',
-            last_seen: '2016-08-23T23:46:59.136Z',
+            first_seen: new Date('2016-04-19T09:05:50.889Z'),
+            last_seen: new Date('2016-08-23T23:46:59.136Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6052,8 +6052,8 @@ data = {
             city: 'Setusgo',
             avatar: 'https://robohash.org/058c0c5569e91166a48fcee21bc34bd7.png',
             birthday: '1984-11-06T08:36:17.691Z',
-            first_seen: '2014-12-28T22:32:04.818Z',
-            last_seen: '2017-03-02T05:24:18.878Z',
+            first_seen: new Date('2014-12-28T22:32:04.818Z'),
+            last_seen: new Date('2017-03-02T05:24:18.878Z'),
             has_ordered: true,
             latest_purchase: '2016-05-26T09:56:58.682Z',
             has_newsletter: false,
@@ -6071,8 +6071,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/28926a1b0f403e2932340458ace6dd7d.png',
             birthday: null,
-            first_seen: '2012-09-26T12:22:53.817Z',
-            last_seen: '2017-03-20T11:18:19.290Z',
+            first_seen: new Date('2012-09-26T12:22:53.817Z'),
+            last_seen: new Date('2017-03-20T11:18:19.290Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6090,8 +6090,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2f7af8f78106c08bc035595c086f9e40.png',
             birthday: null,
-            first_seen: '2014-08-12T12:44:27.367Z',
-            last_seen: '2017-04-23T04:16:40.147Z',
+            first_seen: new Date('2014-08-12T12:44:27.367Z'),
+            last_seen: new Date('2017-04-23T04:16:40.147Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6109,8 +6109,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d16c957e9eb8d2c37b61b1d0e548c363.png',
             birthday: null,
-            first_seen: '2015-07-15T23:33:08.137Z',
-            last_seen: '2015-12-02T22:22:16.146Z',
+            first_seen: new Date('2015-07-15T23:33:08.137Z'),
+            last_seen: new Date('2015-12-02T22:22:16.146Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6128,8 +6128,8 @@ data = {
             city: 'Cetbegari',
             avatar: 'https://robohash.org/29ab663ba187603f6cfb42da37155add.png',
             birthday: '1957-08-22T04:09:20.598Z',
-            first_seen: '2013-09-10T23:30:09.618Z',
-            last_seen: '2015-02-09T11:57:36.372Z',
+            first_seen: new Date('2013-09-10T23:30:09.618Z'),
+            last_seen: new Date('2015-02-09T11:57:36.372Z'),
             has_ordered: true,
             latest_purchase: '2014-06-30T07:33:41.132Z',
             has_newsletter: false,
@@ -6147,8 +6147,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/996bff7b52219eda0b64e2b4c5e2f057.png',
             birthday: null,
-            first_seen: '2016-07-20T04:15:38.060Z',
-            last_seen: '2017-01-19T02:08:46.740Z',
+            first_seen: new Date('2016-07-20T04:15:38.060Z'),
+            last_seen: new Date('2017-01-19T02:08:46.740Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6166,8 +6166,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c3c23e6ff01f1fbb57beed22ae6623b7.png',
             birthday: null,
-            first_seen: '2014-07-26T22:47:20.901Z',
-            last_seen: '2015-07-03T11:42:24.742Z',
+            first_seen: new Date('2014-07-26T22:47:20.901Z'),
+            last_seen: new Date('2015-07-03T11:42:24.742Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6185,8 +6185,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6866ad4b84a42989af6afa654230c8de.png',
             birthday: null,
-            first_seen: '2014-06-05T13:19:13.504Z',
-            last_seen: '2014-11-29T22:51:32.521Z',
+            first_seen: new Date('2014-06-05T13:19:13.504Z'),
+            last_seen: new Date('2014-11-29T22:51:32.521Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6204,8 +6204,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bc7956193861ab4c896a0d3231231583.png',
             birthday: null,
-            first_seen: '2014-02-07T19:02:23.285Z',
-            last_seen: '2016-11-14T12:47:54.688Z',
+            first_seen: new Date('2014-02-07T19:02:23.285Z'),
+            last_seen: new Date('2016-11-14T12:47:54.688Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6223,8 +6223,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d09493e9af55412a6b403967d058fdf0.png',
             birthday: null,
-            first_seen: '2016-06-01T18:10:32.597Z',
-            last_seen: '2017-01-15T05:44:00.300Z',
+            first_seen: new Date('2016-06-01T18:10:32.597Z'),
+            last_seen: new Date('2017-01-15T05:44:00.300Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6242,8 +6242,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/424707f5db9ddbc6151f093bb5c29eee.png',
             birthday: null,
-            first_seen: '2015-11-25T05:32:31.005Z',
-            last_seen: '2017-03-03T17:02:49.173Z',
+            first_seen: new Date('2015-11-25T05:32:31.005Z'),
+            last_seen: new Date('2017-03-03T17:02:49.173Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6261,8 +6261,8 @@ data = {
             city: 'Darogcef',
             avatar: 'https://robohash.org/fad1d57aef8ed38759da12af1a1a0d78.png',
             birthday: '1953-07-06T02:31:54.746Z',
-            first_seen: '2013-10-25T05:59:54.739Z',
-            last_seen: '2015-12-04T06:26:23.956Z',
+            first_seen: new Date('2013-10-25T05:59:54.739Z'),
+            last_seen: new Date('2015-12-04T06:26:23.956Z'),
             has_ordered: true,
             latest_purchase: '2015-10-22T04:00:00.681Z',
             has_newsletter: true,
@@ -6280,8 +6280,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/011c8963eb7ea89ebe6c9e1812ad65f4.png',
             birthday: null,
-            first_seen: '2015-12-05T00:25:57.018Z',
-            last_seen: '2017-04-26T02:25:23.676Z',
+            first_seen: new Date('2015-12-05T00:25:57.018Z'),
+            last_seen: new Date('2017-04-26T02:25:23.676Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6299,8 +6299,8 @@ data = {
             city: 'Bipmadbif',
             avatar: 'https://robohash.org/5a77643971d636a1b7e4ad7c6d76f576.png',
             birthday: '1994-05-08T01:15:45.939Z',
-            first_seen: '2014-11-07T10:58:20.200Z',
-            last_seen: '2016-02-02T14:03:33.283Z',
+            first_seen: new Date('2014-11-07T10:58:20.200Z'),
+            last_seen: new Date('2016-02-02T14:03:33.283Z'),
             has_ordered: true,
             latest_purchase: '2016-01-20T13:37:44.948Z',
             has_newsletter: false,
@@ -6318,8 +6318,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/098216e487280e2f5cce90b0e864809a.png',
             birthday: null,
-            first_seen: '2015-03-23T03:57:39.638Z',
-            last_seen: '2015-09-20T00:41:26.826Z',
+            first_seen: new Date('2015-03-23T03:57:39.638Z'),
+            last_seen: new Date('2015-09-20T00:41:26.826Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6337,8 +6337,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dc815225664b189b7cdf3c00381c409b.png',
             birthday: null,
-            first_seen: '2017-01-15T07:18:16.218Z',
-            last_seen: '2017-04-20T05:48:34.411Z',
+            first_seen: new Date('2017-01-15T07:18:16.218Z'),
+            last_seen: new Date('2017-04-20T05:48:34.411Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6356,8 +6356,8 @@ data = {
             city: 'Bepowaiwo',
             avatar: 'https://robohash.org/bf6426c43000c6b42906cd65aed00d90.png',
             birthday: '1993-01-05T10:27:10.838Z',
-            first_seen: '2014-05-14T03:54:15.442Z',
-            last_seen: '2016-12-11T03:32:30.114Z',
+            first_seen: new Date('2014-05-14T03:54:15.442Z'),
+            last_seen: new Date('2016-12-11T03:32:30.114Z'),
             has_ordered: true,
             latest_purchase: '2016-05-10T17:21:54.617Z',
             has_newsletter: false,
@@ -6375,8 +6375,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9c121f4083b80e83ce88211746815cff.png',
             birthday: null,
-            first_seen: '2016-10-25T13:53:21.375Z',
-            last_seen: '2016-11-18T07:59:29.920Z',
+            first_seen: new Date('2016-10-25T13:53:21.375Z'),
+            last_seen: new Date('2016-11-18T07:59:29.920Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6394,8 +6394,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/be633176590f5805019b68e5b63b291a.png',
             birthday: null,
-            first_seen: '2014-06-29T01:16:40.583Z',
-            last_seen: '2016-06-03T17:39:48.382Z',
+            first_seen: new Date('2014-06-29T01:16:40.583Z'),
+            last_seen: new Date('2016-06-03T17:39:48.382Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6413,8 +6413,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6fc8f76297ef9300595bf56637a98229.png',
             birthday: null,
-            first_seen: '2017-03-31T22:46:56.669Z',
-            last_seen: '2017-04-07T05:17:26.423Z',
+            first_seen: new Date('2017-03-31T22:46:56.669Z'),
+            last_seen: new Date('2017-04-07T05:17:26.423Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6432,8 +6432,8 @@ data = {
             city: 'Vokcegit',
             avatar: 'https://robohash.org/0db4f559a4258f0a47a822b51a5c8951.png',
             birthday: '1957-01-07T10:04:43.926Z',
-            first_seen: '2016-02-27T12:58:28.051Z',
-            last_seen: '2017-04-22T09:16:46.565Z',
+            first_seen: new Date('2016-02-27T12:58:28.051Z'),
+            last_seen: new Date('2017-04-22T09:16:46.565Z'),
             has_ordered: true,
             latest_purchase: '2017-03-29T21:01:49.341Z',
             has_newsletter: true,
@@ -6451,8 +6451,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/90a7468f68a29a4cdf6f3f2ead75ce15.png',
             birthday: null,
-            first_seen: '2017-03-11T20:53:45.140Z',
-            last_seen: '2017-03-20T23:11:52.628Z',
+            first_seen: new Date('2017-03-11T20:53:45.140Z'),
+            last_seen: new Date('2017-03-20T23:11:52.628Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6470,8 +6470,8 @@ data = {
             city: 'Otucecmap',
             avatar: 'https://robohash.org/9496ee45504cd5dfb6d441e12b8eeaf7.png',
             birthday: '1997-01-11T01:05:22.106Z',
-            first_seen: '2016-02-04T15:32:31.631Z',
-            last_seen: '2016-06-29T00:54:25.217Z',
+            first_seen: new Date('2016-02-04T15:32:31.631Z'),
+            last_seen: new Date('2016-06-29T00:54:25.217Z'),
             has_ordered: true,
             latest_purchase: '2016-05-13T15:33:29.242Z',
             has_newsletter: false,
@@ -6489,8 +6489,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/81738b35419084bf82422a4f4039d7ef.png',
             birthday: null,
-            first_seen: '2013-01-14T21:35:50.198Z',
-            last_seen: '2016-08-08T05:47:01.643Z',
+            first_seen: new Date('2013-01-14T21:35:50.198Z'),
+            last_seen: new Date('2016-08-08T05:47:01.643Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6508,8 +6508,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/801d5ffb1c02d6d909824a9a98a1ad8c.png',
             birthday: null,
-            first_seen: '2016-02-05T14:47:45.389Z',
-            last_seen: '2017-02-13T15:04:59.339Z',
+            first_seen: new Date('2016-02-05T14:47:45.389Z'),
+            last_seen: new Date('2017-02-13T15:04:59.339Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6527,8 +6527,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ecb15eebf1c9fdf7793100ac86f6b23f.png',
             birthday: null,
-            first_seen: '2014-05-08T09:22:21.702Z',
-            last_seen: '2015-07-03T09:35:02.593Z',
+            first_seen: new Date('2014-05-08T09:22:21.702Z'),
+            last_seen: new Date('2015-07-03T09:35:02.593Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6546,8 +6546,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7072bfd47087719c4c18ea7792977535.png',
             birthday: null,
-            first_seen: '2016-05-07T14:10:34.293Z',
-            last_seen: '2017-01-18T12:45:51.093Z',
+            first_seen: new Date('2016-05-07T14:10:34.293Z'),
+            last_seen: new Date('2017-01-18T12:45:51.093Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6565,8 +6565,8 @@ data = {
             city: 'Nukcipa',
             avatar: 'https://robohash.org/b2bac95221a8e75a68608aa75d1914ce.png',
             birthday: '1956-12-17T05:38:51.756Z',
-            first_seen: '2015-06-04T22:02:19.832Z',
-            last_seen: '2016-02-18T04:49:15.616Z',
+            first_seen: new Date('2015-06-04T22:02:19.832Z'),
+            last_seen: new Date('2016-02-18T04:49:15.616Z'),
             has_ordered: true,
             latest_purchase: '2016-01-18T02:37:44.344Z',
             has_newsletter: true,
@@ -6584,8 +6584,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/113e92ae548d7274c438a496db4ee2c7.png',
             birthday: null,
-            first_seen: '2014-07-23T22:32:10.332Z',
-            last_seen: '2016-02-24T18:28:10.022Z',
+            first_seen: new Date('2014-07-23T22:32:10.332Z'),
+            last_seen: new Date('2016-02-24T18:28:10.022Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6603,8 +6603,8 @@ data = {
             city: 'Sucfotsi',
             avatar: 'https://robohash.org/cb539303e7ffea15f221e9602a892e6c.png',
             birthday: '1966-07-17T04:26:22.977Z',
-            first_seen: '2016-10-19T16:36:42.975Z',
-            last_seen: '2017-04-18T15:20:17.060Z',
+            first_seen: new Date('2016-10-19T16:36:42.975Z'),
+            last_seen: new Date('2017-04-18T15:20:17.060Z'),
             has_ordered: true,
             latest_purchase: '2017-04-15T18:39:38.167Z',
             has_newsletter: false,
@@ -6622,8 +6622,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/53dae5d4ee70772e0a77fdca4710d3bb.png',
             birthday: null,
-            first_seen: '2014-05-16T05:57:58.319Z',
-            last_seen: '2015-05-08T19:50:25.585Z',
+            first_seen: new Date('2014-05-16T05:57:58.319Z'),
+            last_seen: new Date('2015-05-08T19:50:25.585Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6641,8 +6641,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e0a975b10dc4efd2c8535a3552da452b.png',
             birthday: null,
-            first_seen: '2016-08-27T01:19:14.068Z',
-            last_seen: '2017-04-06T01:12:25.662Z',
+            first_seen: new Date('2016-08-27T01:19:14.068Z'),
+            last_seen: new Date('2017-04-06T01:12:25.662Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6660,8 +6660,8 @@ data = {
             city: 'Ocanuze',
             avatar: 'https://robohash.org/a941b9767b54b4063825ebacb31154f8.png',
             birthday: '1987-06-02T03:14:15.027Z',
-            first_seen: '2014-02-13T08:55:22.780Z',
-            last_seen: '2017-04-12T04:00:42.145Z',
+            first_seen: new Date('2014-02-13T08:55:22.780Z'),
+            last_seen: new Date('2017-04-12T04:00:42.145Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -6679,8 +6679,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3ebd475bf7151b287e283f06177535a4.png',
             birthday: null,
-            first_seen: '2016-03-31T07:15:31.242Z',
-            last_seen: '2017-02-27T08:16:12.871Z',
+            first_seen: new Date('2016-03-31T07:15:31.242Z'),
+            last_seen: new Date('2017-02-27T08:16:12.871Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6698,8 +6698,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/35fbc63871a7ea42b468c24a09318602.png',
             birthday: null,
-            first_seen: '2014-10-13T23:51:02.226Z',
-            last_seen: '2016-05-19T11:18:39.802Z',
+            first_seen: new Date('2014-10-13T23:51:02.226Z'),
+            last_seen: new Date('2016-05-19T11:18:39.802Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6717,8 +6717,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/447d2aa6c9c9661cc743637e7d445c87.png',
             birthday: null,
-            first_seen: '2016-12-29T03:02:17.834Z',
-            last_seen: '2017-04-23T02:43:11.018Z',
+            first_seen: new Date('2016-12-29T03:02:17.834Z'),
+            last_seen: new Date('2017-04-23T02:43:11.018Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6736,8 +6736,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a51a2feedf77bc98f02abfb1cedc5996.png',
             birthday: null,
-            first_seen: '2015-03-20T11:59:47.914Z',
-            last_seen: '2016-12-02T22:37:16.980Z',
+            first_seen: new Date('2015-03-20T11:59:47.914Z'),
+            last_seen: new Date('2016-12-02T22:37:16.980Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6755,8 +6755,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6814e70f3d1ccd763d77af4dce8bda21.png',
             birthday: null,
-            first_seen: '2016-02-08T09:38:54.988Z',
-            last_seen: '2017-03-15T22:19:23.300Z',
+            first_seen: new Date('2016-02-08T09:38:54.988Z'),
+            last_seen: new Date('2017-03-15T22:19:23.300Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6774,8 +6774,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8e016ddfdd563eee61bde65e6863a17c.png',
             birthday: null,
-            first_seen: '2014-06-18T19:50:59.188Z',
-            last_seen: '2015-04-15T22:57:47.326Z',
+            first_seen: new Date('2014-06-18T19:50:59.188Z'),
+            last_seen: new Date('2015-04-15T22:57:47.326Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6793,8 +6793,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9919bc3efafbbd3f3e4f0e862f1d33f2.png',
             birthday: null,
-            first_seen: '2015-04-06T13:01:15.305Z',
-            last_seen: '2015-11-20T10:47:49.703Z',
+            first_seen: new Date('2015-04-06T13:01:15.305Z'),
+            last_seen: new Date('2015-11-20T10:47:49.703Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6812,8 +6812,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0adea3462e545273721c33b16c21aa00.png',
             birthday: null,
-            first_seen: '2014-10-14T14:14:30.364Z',
-            last_seen: '2016-12-18T10:56:56.447Z',
+            first_seen: new Date('2014-10-14T14:14:30.364Z'),
+            last_seen: new Date('2016-12-18T10:56:56.447Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6831,8 +6831,8 @@ data = {
             city: 'Uviivuapa',
             avatar: 'https://robohash.org/a2f42722b1887c55f7bc83b91012e091.png',
             birthday: '1985-07-16T04:46:36.018Z',
-            first_seen: '2016-05-23T22:50:20.542Z',
-            last_seen: '2017-02-15T07:21:44.458Z',
+            first_seen: new Date('2016-05-23T22:50:20.542Z'),
+            last_seen: new Date('2017-02-15T07:21:44.458Z'),
             has_ordered: true,
             latest_purchase: '2017-01-27T21:10:14.479Z',
             has_newsletter: false,
@@ -6850,8 +6850,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3016a6d748d6c04fe64248eafe4d013f.png',
             birthday: null,
-            first_seen: '2015-07-14T14:00:32.072Z',
-            last_seen: '2017-04-10T01:11:23.202Z',
+            first_seen: new Date('2015-07-14T14:00:32.072Z'),
+            last_seen: new Date('2017-04-10T01:11:23.202Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6869,8 +6869,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cbb7bb1128b17cb70181f8f4b39b3abc.png',
             birthday: null,
-            first_seen: '2017-01-03T19:12:52.825Z',
-            last_seen: '2017-04-07T02:32:58.440Z',
+            first_seen: new Date('2017-01-03T19:12:52.825Z'),
+            last_seen: new Date('2017-04-07T02:32:58.440Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6888,8 +6888,8 @@ data = {
             city: 'Kemkegmic',
             avatar: 'https://robohash.org/65814d23260097a713e8da03134878a2.png',
             birthday: '1968-09-25T06:17:08.546Z',
-            first_seen: '2016-05-14T20:53:18.466Z',
-            last_seen: '2016-09-29T07:38:26.744Z',
+            first_seen: new Date('2016-05-14T20:53:18.466Z'),
+            last_seen: new Date('2016-09-29T07:38:26.744Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: true,
@@ -6907,8 +6907,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e8c09f2b6379975c33e5f36007b75a7b.png',
             birthday: null,
-            first_seen: '2016-05-23T01:33:05.717Z',
-            last_seen: '2017-01-02T04:37:00.315Z',
+            first_seen: new Date('2016-05-23T01:33:05.717Z'),
+            last_seen: new Date('2017-01-02T04:37:00.315Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6926,8 +6926,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0d93ac3221756ae4e4533727bf985ee6.png',
             birthday: null,
-            first_seen: '2016-04-27T08:36:41.639Z',
-            last_seen: '2017-02-21T12:50:45.879Z',
+            first_seen: new Date('2016-04-27T08:36:41.639Z'),
+            last_seen: new Date('2017-02-21T12:50:45.879Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6945,8 +6945,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cd43b58f5f610446d7aec35628a8344d.png',
             birthday: null,
-            first_seen: '2017-02-09T03:19:13.838Z',
-            last_seen: '2017-03-25T08:13:14.253Z',
+            first_seen: new Date('2017-02-09T03:19:13.838Z'),
+            last_seen: new Date('2017-03-25T08:13:14.253Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6964,8 +6964,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/94082e4620881423ec835be83a9acfde.png',
             birthday: null,
-            first_seen: '2016-07-10T19:33:35.734Z',
-            last_seen: '2017-03-26T05:50:23.192Z',
+            first_seen: new Date('2016-07-10T19:33:35.734Z'),
+            last_seen: new Date('2017-03-26T05:50:23.192Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -6983,8 +6983,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/38a00eb3658a26bebd776b0f4d5977f6.png',
             birthday: null,
-            first_seen: '2016-03-01T03:50:49.949Z',
-            last_seen: '2016-07-15T08:54:25.773Z',
+            first_seen: new Date('2016-03-01T03:50:49.949Z'),
+            last_seen: new Date('2016-07-15T08:54:25.773Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7002,8 +7002,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8dce57ee199f9e255652bb6b13ae03bb.png',
             birthday: null,
-            first_seen: '2015-09-01T21:19:35.099Z',
-            last_seen: '2017-02-25T00:28:22.729Z',
+            first_seen: new Date('2015-09-01T21:19:35.099Z'),
+            last_seen: new Date('2017-02-25T00:28:22.729Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7021,8 +7021,8 @@ data = {
             city: 'Merevi',
             avatar: 'https://robohash.org/b8b6d21d1ea8640bb083a6a1f84a580e.png',
             birthday: '1968-02-25T01:59:50.883Z',
-            first_seen: '2017-03-09T13:44:04.709Z',
-            last_seen: '2017-04-17T21:14:12.762Z',
+            first_seen: new Date('2017-03-09T13:44:04.709Z'),
+            last_seen: new Date('2017-04-17T21:14:12.762Z'),
             has_ordered: true,
             latest_purchase: '2017-04-06T10:33:44.381Z',
             has_newsletter: false,
@@ -7040,8 +7040,8 @@ data = {
             city: 'Jovoogo',
             avatar: 'https://robohash.org/0026c3120ad2cdbd6f8e0d1df9494186.png',
             birthday: '1966-04-10T07:00:12.547Z',
-            first_seen: '2013-08-17T08:37:34.190Z',
-            last_seen: '2017-04-11T00:20:17.136Z',
+            first_seen: new Date('2013-08-17T08:37:34.190Z'),
+            last_seen: new Date('2017-04-11T00:20:17.136Z'),
             has_ordered: true,
             latest_purchase: '2017-03-28T10:42:32.030Z',
             has_newsletter: false,
@@ -7059,8 +7059,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/119cb43a878a807217863b9b362a08b2.png',
             birthday: null,
-            first_seen: '2016-01-26T22:31:37.628Z',
-            last_seen: '2016-12-06T19:29:49.116Z',
+            first_seen: new Date('2016-01-26T22:31:37.628Z'),
+            last_seen: new Date('2016-12-06T19:29:49.116Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7078,8 +7078,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5cb13cd78f8811f73676c69c66889c4f.png',
             birthday: null,
-            first_seen: '2015-10-10T19:28:06.819Z',
-            last_seen: '2016-10-08T08:55:59.449Z',
+            first_seen: new Date('2015-10-10T19:28:06.819Z'),
+            last_seen: new Date('2016-10-08T08:55:59.449Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7097,8 +7097,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dec38271cff3924134986f4cdc9fd4c6.png',
             birthday: null,
-            first_seen: '2016-04-24T08:19:09.786Z',
-            last_seen: '2017-03-10T21:21:59.144Z',
+            first_seen: new Date('2016-04-24T08:19:09.786Z'),
+            last_seen: new Date('2017-03-10T21:21:59.144Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7116,8 +7116,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/82bb5edabd532002cc4e4bf64fa176f2.png',
             birthday: null,
-            first_seen: '2012-12-18T18:57:09.230Z',
-            last_seen: '2016-02-23T10:33:16.988Z',
+            first_seen: new Date('2012-12-18T18:57:09.230Z'),
+            last_seen: new Date('2016-02-23T10:33:16.988Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7135,8 +7135,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/70098b3d24edb627b752aa750952f34c.png',
             birthday: null,
-            first_seen: '2015-12-17T12:46:22.039Z',
-            last_seen: '2017-03-27T18:55:22.740Z',
+            first_seen: new Date('2015-12-17T12:46:22.039Z'),
+            last_seen: new Date('2017-03-27T18:55:22.740Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7154,8 +7154,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f4deb815c3882561797db42bbba8b0c9.png',
             birthday: null,
-            first_seen: '2015-11-27T17:16:25.854Z',
-            last_seen: '2016-08-14T12:07:12.265Z',
+            first_seen: new Date('2015-11-27T17:16:25.854Z'),
+            last_seen: new Date('2016-08-14T12:07:12.265Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7173,8 +7173,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2e1845a37c009be4c954c661b020af04.png',
             birthday: null,
-            first_seen: '2016-03-25T08:38:33.087Z',
-            last_seen: '2016-09-15T02:47:57.490Z',
+            first_seen: new Date('2016-03-25T08:38:33.087Z'),
+            last_seen: new Date('2016-09-15T02:47:57.490Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7192,8 +7192,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f6d99903cbc9ce919226b126fc44f1a7.png',
             birthday: null,
-            first_seen: '2015-06-22T05:55:18.653Z',
-            last_seen: '2016-04-30T06:41:16.589Z',
+            first_seen: new Date('2015-06-22T05:55:18.653Z'),
+            last_seen: new Date('2016-04-30T06:41:16.589Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7211,8 +7211,8 @@ data = {
             city: 'Pikazo',
             avatar: 'https://robohash.org/45bb7570f3700b8625979f7b52046ad5.png',
             birthday: '1969-08-30T10:54:16.589Z',
-            first_seen: '2014-10-07T21:02:36.263Z',
-            last_seen: '2016-10-08T01:22:14.480Z',
+            first_seen: new Date('2014-10-07T21:02:36.263Z'),
+            last_seen: new Date('2016-10-08T01:22:14.480Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -7230,8 +7230,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4cea0792eea991f45f6398680b785cbf.png',
             birthday: null,
-            first_seen: '2016-12-08T00:11:31.528Z',
-            last_seen: '2017-04-03T17:22:38.149Z',
+            first_seen: new Date('2016-12-08T00:11:31.528Z'),
+            last_seen: new Date('2017-04-03T17:22:38.149Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7249,8 +7249,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4b6e9db2ca67f7df75d554a1eac9c58b.png',
             birthday: null,
-            first_seen: '2017-03-12T00:15:55.714Z',
-            last_seen: '2017-04-20T22:49:42.300Z',
+            first_seen: new Date('2017-03-12T00:15:55.714Z'),
+            last_seen: new Date('2017-04-20T22:49:42.300Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7268,8 +7268,8 @@ data = {
             city: 'Mijucro',
             avatar: 'https://robohash.org/9df566cb9aaedf19eaa92fd13715abe1.png',
             birthday: '1984-01-23T03:13:54.919Z',
-            first_seen: '2015-09-20T23:39:11.068Z',
-            last_seen: '2017-02-16T09:07:37.379Z',
+            first_seen: new Date('2015-09-20T23:39:11.068Z'),
+            last_seen: new Date('2017-02-16T09:07:37.379Z'),
             has_ordered: true,
             latest_purchase: '2016-12-14T15:10:46.540Z',
             has_newsletter: false,
@@ -7287,8 +7287,8 @@ data = {
             city: 'Humujha',
             avatar: 'https://robohash.org/750c65cf554501877f0f361f18a69f8d.png',
             birthday: '1964-06-08T02:34:57.583Z',
-            first_seen: '2016-07-19T09:31:00.160Z',
-            last_seen: '2017-01-07T23:08:18.522Z',
+            first_seen: new Date('2016-07-19T09:31:00.160Z'),
+            last_seen: new Date('2017-01-07T23:08:18.522Z'),
             has_ordered: true,
             latest_purchase: '2016-12-19T00:51:46.432Z',
             has_newsletter: false,
@@ -7306,8 +7306,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/05aff8e3f05082dd332a345ea97ae9d0.png',
             birthday: null,
-            first_seen: '2016-04-27T23:29:47.587Z',
-            last_seen: '2017-01-23T07:46:26.615Z',
+            first_seen: new Date('2016-04-27T23:29:47.587Z'),
+            last_seen: new Date('2017-01-23T07:46:26.615Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7325,8 +7325,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0703972fea285bef124cbca2a3dbee83.png',
             birthday: null,
-            first_seen: '2015-06-30T04:09:18.473Z',
-            last_seen: '2016-05-11T22:58:50.732Z',
+            first_seen: new Date('2015-06-30T04:09:18.473Z'),
+            last_seen: new Date('2016-05-11T22:58:50.732Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7344,8 +7344,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/37444558c3a39b2edc3edc67b77f0e0a.png',
             birthday: null,
-            first_seen: '2016-06-30T07:51:43.907Z',
-            last_seen: '2017-04-11T14:35:02.748Z',
+            first_seen: new Date('2016-06-30T07:51:43.907Z'),
+            last_seen: new Date('2017-04-11T14:35:02.748Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7363,8 +7363,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6bec3428b4197c322787465d12c66cca.png',
             birthday: null,
-            first_seen: '2014-12-09T13:24:21.429Z',
-            last_seen: '2016-07-21T20:52:37.868Z',
+            first_seen: new Date('2014-12-09T13:24:21.429Z'),
+            last_seen: new Date('2016-07-21T20:52:37.868Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7382,8 +7382,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/19cf269cfdf4d1227696d6f94b732c13.png',
             birthday: null,
-            first_seen: '2015-02-07T12:21:57.028Z',
-            last_seen: '2016-11-06T22:05:56.579Z',
+            first_seen: new Date('2015-02-07T12:21:57.028Z'),
+            last_seen: new Date('2016-11-06T22:05:56.579Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7401,8 +7401,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/65bb207528ad089fd3329638e1c09222.png',
             birthday: null,
-            first_seen: '2016-02-18T11:57:16.881Z',
-            last_seen: '2017-04-06T04:05:32.816Z',
+            first_seen: new Date('2016-02-18T11:57:16.881Z'),
+            last_seen: new Date('2017-04-06T04:05:32.816Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7420,8 +7420,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/837016e828cf0f2283a4e90ca8b99c76.png',
             birthday: null,
-            first_seen: '2014-11-07T16:50:45.842Z',
-            last_seen: '2016-10-21T13:49:02.913Z',
+            first_seen: new Date('2014-11-07T16:50:45.842Z'),
+            last_seen: new Date('2016-10-21T13:49:02.913Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7439,8 +7439,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7dfd3550a1f6afb06145a649f1af3eab.png',
             birthday: null,
-            first_seen: '2016-02-19T19:46:06.268Z',
-            last_seen: '2017-01-09T15:36:09.543Z',
+            first_seen: new Date('2016-02-19T19:46:06.268Z'),
+            last_seen: new Date('2017-01-09T15:36:09.543Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7458,8 +7458,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/82d16b85b94ce18449fdf8efc974034a.png',
             birthday: null,
-            first_seen: '2015-12-07T18:32:47.733Z',
-            last_seen: '2016-04-29T23:17:41.757Z',
+            first_seen: new Date('2015-12-07T18:32:47.733Z'),
+            last_seen: new Date('2016-04-29T23:17:41.757Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7477,8 +7477,8 @@ data = {
             city: 'Lawhudul',
             avatar: 'https://robohash.org/836e21f5a9039258789185d056fb8d2f.png',
             birthday: '1994-02-02T04:16:18.556Z',
-            first_seen: '2015-10-29T06:25:53.562Z',
-            last_seen: '2016-10-25T17:25:22.922Z',
+            first_seen: new Date('2015-10-29T06:25:53.562Z'),
+            last_seen: new Date('2016-10-25T17:25:22.922Z'),
             has_ordered: true,
             latest_purchase: '2016-08-29T19:13:11.053Z',
             has_newsletter: false,
@@ -7496,8 +7496,8 @@ data = {
             city: 'Uhemozfu',
             avatar: 'https://robohash.org/6f61eb17ee21214d3e8ec2f9dd967d73.png',
             birthday: '1984-08-23T08:32:47.144Z',
-            first_seen: '2015-06-30T06:22:53.246Z',
-            last_seen: '2016-08-31T08:02:58.967Z',
+            first_seen: new Date('2015-06-30T06:22:53.246Z'),
+            last_seen: new Date('2016-08-31T08:02:58.967Z'),
             has_ordered: true,
             latest_purchase: '2016-07-12T10:47:25.159Z',
             has_newsletter: true,
@@ -7515,8 +7515,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5c35553af352f3ea13feacad6105a061.png',
             birthday: null,
-            first_seen: '2016-01-02T01:27:26.532Z',
-            last_seen: '2017-01-22T12:20:25.851Z',
+            first_seen: new Date('2016-01-02T01:27:26.532Z'),
+            last_seen: new Date('2017-01-22T12:20:25.851Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7534,8 +7534,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cdd9a0673657e0cb20a40e3eb93176cc.png',
             birthday: null,
-            first_seen: '2016-11-14T18:11:04.686Z',
-            last_seen: '2017-03-05T19:26:18.788Z',
+            first_seen: new Date('2016-11-14T18:11:04.686Z'),
+            last_seen: new Date('2017-03-05T19:26:18.788Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7553,8 +7553,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bc96db0879e55d9a42bc4aadc25a134e.png',
             birthday: null,
-            first_seen: '2016-06-19T21:26:09.681Z',
-            last_seen: '2017-02-26T19:32:28.450Z',
+            first_seen: new Date('2016-06-19T21:26:09.681Z'),
+            last_seen: new Date('2017-02-26T19:32:28.450Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7572,8 +7572,8 @@ data = {
             city: 'Bekfalse',
             avatar: 'https://robohash.org/d8617275843671cc260a341fd590ee21.png',
             birthday: '1978-12-02T10:12:32.833Z',
-            first_seen: '2015-08-23T05:45:17.607Z',
-            last_seen: '2017-04-08T05:35:17.965Z',
+            first_seen: new Date('2015-08-23T05:45:17.607Z'),
+            last_seen: new Date('2017-04-08T05:35:17.965Z'),
             has_ordered: true,
             latest_purchase: '2016-10-21T13:43:34.709Z',
             has_newsletter: false,
@@ -7591,8 +7591,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ca9b2a9f410b53cea49c259241336502.png',
             birthday: null,
-            first_seen: '2016-12-12T13:31:44.473Z',
-            last_seen: '2017-04-19T07:40:13.854Z',
+            first_seen: new Date('2016-12-12T13:31:44.473Z'),
+            last_seen: new Date('2017-04-19T07:40:13.854Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7610,8 +7610,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5be131354da6600fa412dbadccd0866a.png',
             birthday: null,
-            first_seen: '2014-03-22T05:01:26.430Z',
-            last_seen: '2016-10-10T01:27:10.221Z',
+            first_seen: new Date('2014-03-22T05:01:26.430Z'),
+            last_seen: new Date('2016-10-10T01:27:10.221Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7629,8 +7629,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fe2faac04db6f474ce79cc6236f54ca8.png',
             birthday: null,
-            first_seen: '2015-09-01T02:54:01.872Z',
-            last_seen: '2016-02-26T16:32:13.787Z',
+            first_seen: new Date('2015-09-01T02:54:01.872Z'),
+            last_seen: new Date('2016-02-26T16:32:13.787Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7648,8 +7648,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/beab161cfd452059ea82aca68ae6215c.png',
             birthday: null,
-            first_seen: '2014-10-19T17:23:16.886Z',
-            last_seen: '2016-12-14T00:10:50.454Z',
+            first_seen: new Date('2014-10-19T17:23:16.886Z'),
+            last_seen: new Date('2016-12-14T00:10:50.454Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7667,8 +7667,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4d8423e44aa916e8deb0688efd03fd6c.png',
             birthday: null,
-            first_seen: '2014-07-18T07:45:47.279Z',
-            last_seen: '2016-11-25T07:27:54.149Z',
+            first_seen: new Date('2014-07-18T07:45:47.279Z'),
+            last_seen: new Date('2016-11-25T07:27:54.149Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7686,8 +7686,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a4fbfac5f5f4a189968a08adb103365b.png',
             birthday: null,
-            first_seen: '2015-02-23T00:07:50.465Z',
-            last_seen: '2015-10-21T14:11:51.091Z',
+            first_seen: new Date('2015-02-23T00:07:50.465Z'),
+            last_seen: new Date('2015-10-21T14:11:51.091Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7705,8 +7705,8 @@ data = {
             city: 'Sahalra',
             avatar: 'https://robohash.org/2ed1f7b3aca612dc630a14c7595c088b.png',
             birthday: '1995-03-25T01:58:41.876Z',
-            first_seen: '2014-12-02T18:33:42.991Z',
-            last_seen: '2016-04-15T14:53:35.661Z',
+            first_seen: new Date('2014-12-02T18:33:42.991Z'),
+            last_seen: new Date('2016-04-15T14:53:35.661Z'),
             has_ordered: true,
             latest_purchase: '2016-02-14T15:13:46.851Z',
             has_newsletter: false,
@@ -7724,8 +7724,8 @@ data = {
             city: 'Busevu',
             avatar: 'https://robohash.org/e22a6b25c5263da7238817b88a0c0368.png',
             birthday: '1978-10-22T09:04:58.426Z',
-            first_seen: '2015-06-12T03:53:07.393Z',
-            last_seen: '2017-03-01T15:26:17.004Z',
+            first_seen: new Date('2015-06-12T03:53:07.393Z'),
+            last_seen: new Date('2017-03-01T15:26:17.004Z'),
             has_ordered: true,
             latest_purchase: '2016-07-19T19:07:48.872Z',
             has_newsletter: false,
@@ -7743,8 +7743,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f55b1c4f1a71d10d9d24ab2894169e66.png',
             birthday: null,
-            first_seen: '2014-10-04T13:49:21.266Z',
-            last_seen: '2015-10-18T15:06:20.597Z',
+            first_seen: new Date('2014-10-04T13:49:21.266Z'),
+            last_seen: new Date('2015-10-18T15:06:20.597Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7762,8 +7762,8 @@ data = {
             city: 'Faemmig',
             avatar: 'https://robohash.org/3d73f086a972ffb6a182ba81495b7fd3.png',
             birthday: '1995-02-18T01:44:08.785Z',
-            first_seen: '2017-04-22T03:24:41.319Z',
-            last_seen: '2017-04-25T03:32:08.933Z',
+            first_seen: new Date('2017-04-22T03:24:41.319Z'),
+            last_seen: new Date('2017-04-25T03:32:08.933Z'),
             has_ordered: true,
             latest_purchase: '2017-04-24T08:55:42.473Z',
             has_newsletter: false,
@@ -7781,8 +7781,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7853cb0616457ed9da80ded0063c0469.png',
             birthday: null,
-            first_seen: '2016-12-09T15:52:23.603Z',
-            last_seen: '2017-04-21T04:26:24.879Z',
+            first_seen: new Date('2016-12-09T15:52:23.603Z'),
+            last_seen: new Date('2017-04-21T04:26:24.879Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7800,8 +7800,8 @@ data = {
             city: 'Ragmecuf',
             avatar: 'https://robohash.org/e8c004469cb44ebd73b2f576efa7cbdd.png',
             birthday: '1988-09-08T04:50:26.610Z',
-            first_seen: '2014-11-02T19:42:37.702Z',
-            last_seen: '2015-12-13T10:03:59.182Z',
+            first_seen: new Date('2014-11-02T19:42:37.702Z'),
+            last_seen: new Date('2015-12-13T10:03:59.182Z'),
             has_ordered: true,
             latest_purchase: '2015-11-18T21:11:20.040Z',
             has_newsletter: true,
@@ -7819,8 +7819,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/537e0241976dedfa1f087df87ce8791b.png',
             birthday: null,
-            first_seen: '2016-09-27T16:40:10.218Z',
-            last_seen: '2017-03-12T07:42:26.099Z',
+            first_seen: new Date('2016-09-27T16:40:10.218Z'),
+            last_seen: new Date('2017-03-12T07:42:26.099Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7838,8 +7838,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ad81ecc385f58b3e0d0c2d6a84499863.png',
             birthday: null,
-            first_seen: '2015-07-09T16:58:59.230Z',
-            last_seen: '2016-10-13T03:04:03.679Z',
+            first_seen: new Date('2015-07-09T16:58:59.230Z'),
+            last_seen: new Date('2016-10-13T03:04:03.679Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7857,8 +7857,8 @@ data = {
             city: 'Seckuhve',
             avatar: 'https://robohash.org/41ad5a993f03307d2e5cddd29d8cf68d.png',
             birthday: '1972-05-04T11:49:27.386Z',
-            first_seen: '2017-03-25T17:35:14.112Z',
-            last_seen: '2017-04-21T10:33:31.601Z',
+            first_seen: new Date('2017-03-25T17:35:14.112Z'),
+            last_seen: new Date('2017-04-21T10:33:31.601Z'),
             has_ordered: true,
             latest_purchase: '2017-04-19T18:35:35.171Z',
             has_newsletter: false,
@@ -7876,8 +7876,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5fcd7041771b0a8c3eb3baa499dd2fca.png',
             birthday: null,
-            first_seen: '2016-03-20T01:03:44.238Z',
-            last_seen: '2016-10-11T00:50:29.167Z',
+            first_seen: new Date('2016-03-20T01:03:44.238Z'),
+            last_seen: new Date('2016-10-11T00:50:29.167Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7895,8 +7895,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7d3ae76af74872cde536555d0e8c507c.png',
             birthday: null,
-            first_seen: '2016-03-06T05:46:56.657Z',
-            last_seen: '2016-08-25T18:37:04.971Z',
+            first_seen: new Date('2016-03-06T05:46:56.657Z'),
+            last_seen: new Date('2016-08-25T18:37:04.971Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7914,8 +7914,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d44fd0bb6fb36e4c08cc0cbf1086293f.png',
             birthday: null,
-            first_seen: '2014-03-19T01:04:38.111Z',
-            last_seen: '2015-11-14T00:36:27.742Z',
+            first_seen: new Date('2014-03-19T01:04:38.111Z'),
+            last_seen: new Date('2015-11-14T00:36:27.742Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7933,8 +7933,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f425b43b71b6a4ba4a4bdf4953b32ff8.png',
             birthday: null,
-            first_seen: '2016-11-19T02:01:55.038Z',
-            last_seen: '2017-03-22T08:36:55.766Z',
+            first_seen: new Date('2016-11-19T02:01:55.038Z'),
+            last_seen: new Date('2017-03-22T08:36:55.766Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7952,8 +7952,8 @@ data = {
             city: 'Mazfizep',
             avatar: 'https://robohash.org/16c990ae2973d39ac97e9031ae524697.png',
             birthday: '1982-05-23T07:25:06.349Z',
-            first_seen: '2016-10-09T05:42:43.580Z',
-            last_seen: '2017-01-08T06:10:17.164Z',
+            first_seen: new Date('2016-10-09T05:42:43.580Z'),
+            last_seen: new Date('2017-01-08T06:10:17.164Z'),
             has_ordered: true,
             latest_purchase: '2016-12-08T04:34:16.663Z',
             has_newsletter: true,
@@ -7971,8 +7971,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1a82f1761c3d337fccf99ee8524526ea.png',
             birthday: null,
-            first_seen: '2017-02-11T23:59:19.552Z',
-            last_seen: '2017-04-16T06:54:40.531Z',
+            first_seen: new Date('2017-02-11T23:59:19.552Z'),
+            last_seen: new Date('2017-04-16T06:54:40.531Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -7990,8 +7990,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/221410ebd408ae7523671dc414742267.png',
             birthday: null,
-            first_seen: '2014-02-16T18:24:09.104Z',
-            last_seen: '2017-03-22T04:51:02.128Z',
+            first_seen: new Date('2014-02-16T18:24:09.104Z'),
+            last_seen: new Date('2017-03-22T04:51:02.128Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8009,8 +8009,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9ead4d1b3a883eb5699ceeab529c92d5.png',
             birthday: null,
-            first_seen: '2014-03-19T16:56:04.213Z',
-            last_seen: '2017-03-24T16:41:27.067Z',
+            first_seen: new Date('2014-03-19T16:56:04.213Z'),
+            last_seen: new Date('2017-03-24T16:41:27.067Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8028,8 +8028,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/52abd179784673d4303b2c354cbea642.png',
             birthday: null,
-            first_seen: '2015-12-23T04:30:31.104Z',
-            last_seen: '2016-12-06T04:06:12.008Z',
+            first_seen: new Date('2015-12-23T04:30:31.104Z'),
+            last_seen: new Date('2016-12-06T04:06:12.008Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8047,8 +8047,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a75107319293cf90680f0c9649a175fd.png',
             birthday: null,
-            first_seen: '2013-09-04T08:38:04.230Z',
-            last_seen: '2015-05-09T16:48:41.721Z',
+            first_seen: new Date('2013-09-04T08:38:04.230Z'),
+            last_seen: new Date('2015-05-09T16:48:41.721Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8066,8 +8066,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/02529d72132b9022da8e7699ad01d697.png',
             birthday: null,
-            first_seen: '2014-07-25T18:29:12.396Z',
-            last_seen: '2016-11-24T06:43:53.318Z',
+            first_seen: new Date('2014-07-25T18:29:12.396Z'),
+            last_seen: new Date('2016-11-24T06:43:53.318Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8085,8 +8085,8 @@ data = {
             city: 'Gigicup',
             avatar: 'https://robohash.org/d0ba275eb3d11932691965e20baf01e4.png',
             birthday: '1972-12-06T00:11:12.224Z',
-            first_seen: '2017-04-20T09:28:05.030Z',
-            last_seen: '2017-04-22T20:06:40.791Z',
+            first_seen: new Date('2017-04-20T09:28:05.030Z'),
+            last_seen: new Date('2017-04-22T20:06:40.791Z'),
             has_ordered: true,
             latest_purchase: '2017-04-22T05:49:58.612Z',
             has_newsletter: false,
@@ -8104,8 +8104,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6072d8a3912c4a6eeaebdaa870b86a45.png',
             birthday: null,
-            first_seen: '2014-12-16T18:13:08.352Z',
-            last_seen: '2016-04-28T03:46:39.724Z',
+            first_seen: new Date('2014-12-16T18:13:08.352Z'),
+            last_seen: new Date('2016-04-28T03:46:39.724Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8123,8 +8123,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e631c4a6afe70ea5a0a38ee5ef1cc0ac.png',
             birthday: null,
-            first_seen: '2016-03-01T19:27:30.553Z',
-            last_seen: '2017-02-02T09:04:14.006Z',
+            first_seen: new Date('2016-03-01T19:27:30.553Z'),
+            last_seen: new Date('2017-02-02T09:04:14.006Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8142,8 +8142,8 @@ data = {
             city: 'Zomwajere',
             avatar: 'https://robohash.org/71bbdd1f6d023de670f75578f7514cb0.png',
             birthday: '1992-10-17T01:39:28.563Z',
-            first_seen: '2014-12-01T09:54:57.475Z',
-            last_seen: '2015-11-11T00:42:19.779Z',
+            first_seen: new Date('2014-12-01T09:54:57.475Z'),
+            last_seen: new Date('2015-11-11T00:42:19.779Z'),
             has_ordered: true,
             latest_purchase: '2015-11-10T02:24:54.748Z',
             has_newsletter: true,
@@ -8161,8 +8161,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/daeb26f1546769a4466c083fc7fbf3c0.png',
             birthday: null,
-            first_seen: '2013-10-30T18:25:26.159Z',
-            last_seen: '2016-01-22T13:20:33.023Z',
+            first_seen: new Date('2013-10-30T18:25:26.159Z'),
+            last_seen: new Date('2016-01-22T13:20:33.023Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8180,8 +8180,8 @@ data = {
             city: 'Optoje',
             avatar: 'https://robohash.org/ad264f552c9536d5cd63fcd5fc164ebc.png',
             birthday: '1999-03-30T05:09:37.957Z',
-            first_seen: '2016-10-10T05:21:36.001Z',
-            last_seen: '2016-12-10T20:56:13.986Z',
+            first_seen: new Date('2016-10-10T05:21:36.001Z'),
+            last_seen: new Date('2016-12-10T20:56:13.986Z'),
             has_ordered: true,
             latest_purchase: '2016-11-08T10:27:58.239Z',
             has_newsletter: false,
@@ -8199,8 +8199,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a5524be7ff37994c59599b4a2f0a0d4e.png',
             birthday: null,
-            first_seen: '2016-07-31T03:34:27.834Z',
-            last_seen: '2016-12-02T20:35:44.236Z',
+            first_seen: new Date('2016-07-31T03:34:27.834Z'),
+            last_seen: new Date('2016-12-02T20:35:44.236Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8218,8 +8218,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bd8424e7eaae185ac84b0cb6c47e88c3.png',
             birthday: null,
-            first_seen: '2015-08-26T16:20:42.104Z',
-            last_seen: '2016-11-09T07:20:27.382Z',
+            first_seen: new Date('2015-08-26T16:20:42.104Z'),
+            last_seen: new Date('2016-11-09T07:20:27.382Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8237,8 +8237,8 @@ data = {
             city: 'Usepultoc',
             avatar: 'https://robohash.org/7bd0e7e7610be42c704a2f46cc0b3615.png',
             birthday: '1995-05-16T05:29:10.981Z',
-            first_seen: '2014-10-17T06:59:27.135Z',
-            last_seen: '2015-12-15T16:34:13.866Z',
+            first_seen: new Date('2014-10-17T06:59:27.135Z'),
+            last_seen: new Date('2015-12-15T16:34:13.866Z'),
             has_ordered: true,
             latest_purchase: '2015-10-26T19:28:17.395Z',
             has_newsletter: false,
@@ -8256,8 +8256,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b75c49afa5c663579586bc8855161eb6.png',
             birthday: null,
-            first_seen: '2014-09-03T23:21:13.978Z',
-            last_seen: '2017-04-09T12:45:06.804Z',
+            first_seen: new Date('2014-09-03T23:21:13.978Z'),
+            last_seen: new Date('2017-04-09T12:45:06.804Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8275,8 +8275,8 @@ data = {
             city: 'Pucnadco',
             avatar: 'https://robohash.org/06c7e85c188659a6911f626c13db5b30.png',
             birthday: '1994-02-16T08:36:10.068Z',
-            first_seen: '2014-05-10T17:01:14.600Z',
-            last_seen: '2016-08-24T01:02:30.436Z',
+            first_seen: new Date('2014-05-10T17:01:14.600Z'),
+            last_seen: new Date('2016-08-24T01:02:30.436Z'),
             has_ordered: true,
             latest_purchase: '2016-06-18T02:35:13.523Z',
             has_newsletter: true,
@@ -8294,8 +8294,8 @@ data = {
             city: 'Ziwzikven',
             avatar: 'https://robohash.org/0b5cea6a780387dbcd379a4cf41b4b55.png',
             birthday: '1969-07-02T00:58:35.289Z',
-            first_seen: '2013-11-06T09:34:18.738Z',
-            last_seen: '2015-08-21T10:45:57.580Z',
+            first_seen: new Date('2013-11-06T09:34:18.738Z'),
+            last_seen: new Date('2015-08-21T10:45:57.580Z'),
             has_ordered: true,
             latest_purchase: '2015-07-22T08:22:04.883Z',
             has_newsletter: false,
@@ -8313,8 +8313,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/abcba581112fafeb0b233d08ccba7feb.png',
             birthday: null,
-            first_seen: '2015-09-17T21:18:25.861Z',
-            last_seen: '2016-09-21T17:03:20.150Z',
+            first_seen: new Date('2015-09-17T21:18:25.861Z'),
+            last_seen: new Date('2016-09-21T17:03:20.150Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8332,8 +8332,8 @@ data = {
             city: 'Takjigil',
             avatar: 'https://robohash.org/849dcec84c8882fc1ca0e0fc51107c47.png',
             birthday: '1969-04-23T07:32:16.847Z',
-            first_seen: '2014-08-05T20:28:25.346Z',
-            last_seen: '2016-01-02T04:10:50.803Z',
+            first_seen: new Date('2014-08-05T20:28:25.346Z'),
+            last_seen: new Date('2016-01-02T04:10:50.803Z'),
             has_ordered: true,
             latest_purchase: '2015-12-01T12:28:37.780Z',
             has_newsletter: false,
@@ -8351,8 +8351,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cd7e5711725a6f9d4964346791fa5727.png',
             birthday: null,
-            first_seen: '2013-12-06T23:37:19.408Z',
-            last_seen: '2015-01-07T03:44:29.423Z',
+            first_seen: new Date('2013-12-06T23:37:19.408Z'),
+            last_seen: new Date('2015-01-07T03:44:29.423Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8370,8 +8370,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/752e16bc3e06a2a03f738bce93817733.png',
             birthday: null,
-            first_seen: '2015-05-15T15:55:01.680Z',
-            last_seen: '2017-03-26T10:02:17.543Z',
+            first_seen: new Date('2015-05-15T15:55:01.680Z'),
+            last_seen: new Date('2017-03-26T10:02:17.543Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8389,8 +8389,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1fd12fb0f706f1703f3e2a62a8615ab0.png',
             birthday: null,
-            first_seen: '2012-12-07T20:04:28.559Z',
-            last_seen: '2016-03-29T00:30:42.920Z',
+            first_seen: new Date('2012-12-07T20:04:28.559Z'),
+            last_seen: new Date('2016-03-29T00:30:42.920Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8408,8 +8408,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/04a9194ad60e28869fde47688b2a25fb.png',
             birthday: null,
-            first_seen: '2017-01-13T11:37:22.923Z',
-            last_seen: '2017-04-12T01:22:42.995Z',
+            first_seen: new Date('2017-01-13T11:37:22.923Z'),
+            last_seen: new Date('2017-04-12T01:22:42.995Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8427,8 +8427,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ca2de96b264b35f74a9801be835b6972.png',
             birthday: null,
-            first_seen: '2016-07-31T20:07:44.557Z',
-            last_seen: '2017-03-28T14:50:51.373Z',
+            first_seen: new Date('2016-07-31T20:07:44.557Z'),
+            last_seen: new Date('2017-03-28T14:50:51.373Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8446,8 +8446,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/63797b74af2fc1d07066e489dc7e86c6.png',
             birthday: null,
-            first_seen: '2016-06-28T09:27:09.255Z',
-            last_seen: '2016-09-29T04:55:10.884Z',
+            first_seen: new Date('2016-06-28T09:27:09.255Z'),
+            last_seen: new Date('2016-09-29T04:55:10.884Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8465,8 +8465,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7b237c8aafc9a0a290454527967e85e2.png',
             birthday: null,
-            first_seen: '2014-06-01T21:27:59.506Z',
-            last_seen: '2015-12-04T13:58:26.722Z',
+            first_seen: new Date('2014-06-01T21:27:59.506Z'),
+            last_seen: new Date('2015-12-04T13:58:26.722Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8484,8 +8484,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/627b30160bd83a606857d03c0d5bfef2.png',
             birthday: null,
-            first_seen: '2014-12-19T07:47:22.341Z',
-            last_seen: '2016-11-21T17:20:13.199Z',
+            first_seen: new Date('2014-12-19T07:47:22.341Z'),
+            last_seen: new Date('2016-11-21T17:20:13.199Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8503,8 +8503,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b45491ab94992026d6dac6ddc6ad3f3e.png',
             birthday: null,
-            first_seen: '2016-11-11T21:07:58.383Z',
-            last_seen: '2016-11-29T05:02:34.693Z',
+            first_seen: new Date('2016-11-11T21:07:58.383Z'),
+            last_seen: new Date('2016-11-29T05:02:34.693Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8522,8 +8522,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/67a903d6b6f4a7a65c42b3b7e093eee6.png',
             birthday: null,
-            first_seen: '2015-06-03T10:00:21.219Z',
-            last_seen: '2015-11-26T04:45:45.669Z',
+            first_seen: new Date('2015-06-03T10:00:21.219Z'),
+            last_seen: new Date('2015-11-26T04:45:45.669Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8541,8 +8541,8 @@ data = {
             city: 'Sarmipzop',
             avatar: 'https://robohash.org/ce22eca33cbde4048e299ef8e567c0d5.png',
             birthday: '1974-06-24T00:17:29.479Z',
-            first_seen: '2016-03-15T21:16:32.575Z',
-            last_seen: '2016-10-01T09:08:45.973Z',
+            first_seen: new Date('2016-03-15T21:16:32.575Z'),
+            last_seen: new Date('2016-10-01T09:08:45.973Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -8560,8 +8560,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/abfd4bd2f01f65302d1e48506da50741.png',
             birthday: null,
-            first_seen: '2017-02-09T04:54:23.530Z',
-            last_seen: '2017-04-24T19:54:26.995Z',
+            first_seen: new Date('2017-02-09T04:54:23.530Z'),
+            last_seen: new Date('2017-04-24T19:54:26.995Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8579,8 +8579,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0d32a411de128f6854c42263c7818765.png',
             birthday: null,
-            first_seen: '2012-11-28T06:43:18.851Z',
-            last_seen: '2015-09-28T01:55:34.030Z',
+            first_seen: new Date('2012-11-28T06:43:18.851Z'),
+            last_seen: new Date('2015-09-28T01:55:34.030Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8598,8 +8598,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6553e80e32e8348756718619e735b794.png',
             birthday: null,
-            first_seen: '2015-09-25T15:35:49.083Z',
-            last_seen: '2016-01-01T04:59:36.152Z',
+            first_seen: new Date('2015-09-25T15:35:49.083Z'),
+            last_seen: new Date('2016-01-01T04:59:36.152Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8617,8 +8617,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0fc9e04336d93c8d05d258d344aa638c.png',
             birthday: null,
-            first_seen: '2015-10-05T08:10:50.908Z',
-            last_seen: '2016-03-30T13:18:10.507Z',
+            first_seen: new Date('2015-10-05T08:10:50.908Z'),
+            last_seen: new Date('2016-03-30T13:18:10.507Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8636,8 +8636,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2def7a09e294cef2082120e73f891a94.png',
             birthday: null,
-            first_seen: '2017-02-24T20:44:44.601Z',
-            last_seen: '2017-04-08T17:09:49.991Z',
+            first_seen: new Date('2017-02-24T20:44:44.601Z'),
+            last_seen: new Date('2017-04-08T17:09:49.991Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8655,8 +8655,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f16c1fd7b7ef23c8ce38623ad3e630fd.png',
             birthday: null,
-            first_seen: '2014-04-19T22:58:46.308Z',
-            last_seen: '2015-11-15T05:11:59.023Z',
+            first_seen: new Date('2014-04-19T22:58:46.308Z'),
+            last_seen: new Date('2015-11-15T05:11:59.023Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8674,8 +8674,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e748706685bf37bcacae450715cc1fc7.png',
             birthday: null,
-            first_seen: '2015-08-19T23:07:37.270Z',
-            last_seen: '2016-12-15T22:24:30.754Z',
+            first_seen: new Date('2015-08-19T23:07:37.270Z'),
+            last_seen: new Date('2016-12-15T22:24:30.754Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8693,8 +8693,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2c2a4970882b49a80d582eadfe3fddbe.png',
             birthday: null,
-            first_seen: '2016-08-22T16:27:32.623Z',
-            last_seen: '2017-02-24T16:16:58.088Z',
+            first_seen: new Date('2016-08-22T16:27:32.623Z'),
+            last_seen: new Date('2017-02-24T16:16:58.088Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8712,8 +8712,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b9946a05d36ab4b803af13c73be97f75.png',
             birthday: null,
-            first_seen: '2014-11-22T14:54:40.334Z',
-            last_seen: '2016-12-02T10:12:34.229Z',
+            first_seen: new Date('2014-11-22T14:54:40.334Z'),
+            last_seen: new Date('2016-12-02T10:12:34.229Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8731,8 +8731,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0820b599f23748d77d2961c1d7449cf7.png',
             birthday: null,
-            first_seen: '2015-09-22T00:42:00.003Z',
-            last_seen: '2017-04-03T05:39:47.901Z',
+            first_seen: new Date('2015-09-22T00:42:00.003Z'),
+            last_seen: new Date('2017-04-03T05:39:47.901Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8750,8 +8750,8 @@ data = {
             city: 'Rekjezes',
             avatar: 'https://robohash.org/1ff5fc66f2cd5841f112be7c58c66da7.png',
             birthday: '1977-09-16T01:35:16.213Z',
-            first_seen: '2016-07-29T07:35:20.978Z',
-            last_seen: '2016-12-29T03:20:36.272Z',
+            first_seen: new Date('2016-07-29T07:35:20.978Z'),
+            last_seen: new Date('2016-12-29T03:20:36.272Z'),
             has_ordered: true,
             latest_purchase: '2016-09-29T07:05:24.538Z',
             has_newsletter: false,
@@ -8769,8 +8769,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/74849e7f547c341e5d7e715542b014ce.png',
             birthday: null,
-            first_seen: '2015-06-08T14:36:17.657Z',
-            last_seen: '2016-10-14T23:58:22.200Z',
+            first_seen: new Date('2015-06-08T14:36:17.657Z'),
+            last_seen: new Date('2016-10-14T23:58:22.200Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8788,8 +8788,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/32d6b88f9022016e3caff654f1b80f54.png',
             birthday: null,
-            first_seen: '2014-06-23T05:22:17.934Z',
-            last_seen: '2016-06-12T06:19:11.557Z',
+            first_seen: new Date('2014-06-23T05:22:17.934Z'),
+            last_seen: new Date('2016-06-12T06:19:11.557Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8807,8 +8807,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6a90fb5e9dbd1f24e26e7689d5388cab.png',
             birthday: null,
-            first_seen: '2016-06-15T09:29:48.677Z',
-            last_seen: '2017-03-12T06:47:14.997Z',
+            first_seen: new Date('2016-06-15T09:29:48.677Z'),
+            last_seen: new Date('2017-03-12T06:47:14.997Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8826,8 +8826,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/65cb208a0fcf199467d8330dc0accd74.png',
             birthday: null,
-            first_seen: '2015-10-06T01:34:21.981Z',
-            last_seen: '2016-12-15T06:50:25.124Z',
+            first_seen: new Date('2015-10-06T01:34:21.981Z'),
+            last_seen: new Date('2016-12-15T06:50:25.124Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8845,8 +8845,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/54176fcbfbc40faa9f550e350caedd9f.png',
             birthday: null,
-            first_seen: '2013-01-11T06:10:00.557Z',
-            last_seen: '2015-02-02T14:15:21.796Z',
+            first_seen: new Date('2013-01-11T06:10:00.557Z'),
+            last_seen: new Date('2015-02-02T14:15:21.796Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8864,8 +8864,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a496298615704fcd640f41dfd37b39f3.png',
             birthday: null,
-            first_seen: '2015-12-30T04:40:01.594Z',
-            last_seen: '2016-07-24T06:57:10.834Z',
+            first_seen: new Date('2015-12-30T04:40:01.594Z'),
+            last_seen: new Date('2016-07-24T06:57:10.834Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8883,8 +8883,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1d6fb45cba8c5899b06af4250cb2df32.png',
             birthday: null,
-            first_seen: '2015-11-27T23:57:00.771Z',
-            last_seen: '2016-03-23T03:08:44.675Z',
+            first_seen: new Date('2015-11-27T23:57:00.771Z'),
+            last_seen: new Date('2016-03-23T03:08:44.675Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8902,8 +8902,8 @@ data = {
             city: 'Ufigulic',
             avatar: 'https://robohash.org/96816a75dcd6b00b62021f65d72c8cb5.png',
             birthday: '1960-03-13T06:57:25.333Z',
-            first_seen: '2015-04-09T03:06:23.547Z',
-            last_seen: '2017-01-19T18:23:55.263Z',
+            first_seen: new Date('2015-04-09T03:06:23.547Z'),
+            last_seen: new Date('2017-01-19T18:23:55.263Z'),
             has_ordered: true,
             latest_purchase: '2016-12-10T06:36:46.504Z',
             has_newsletter: true,
@@ -8921,8 +8921,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6baaaaf285bdf58c8c425147d605018c.png',
             birthday: null,
-            first_seen: '2014-04-11T13:57:12.057Z',
-            last_seen: '2015-08-29T03:19:15.885Z',
+            first_seen: new Date('2014-04-11T13:57:12.057Z'),
+            last_seen: new Date('2015-08-29T03:19:15.885Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8940,8 +8940,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0a6d398b1d32cdfcfe6d5289b25474ff.png',
             birthday: null,
-            first_seen: '2017-03-25T16:28:26.228Z',
-            last_seen: '2017-04-07T03:22:58.935Z',
+            first_seen: new Date('2017-03-25T16:28:26.228Z'),
+            last_seen: new Date('2017-04-07T03:22:58.935Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8959,8 +8959,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/069a512c85f6392d42efb7bf6bb52825.png',
             birthday: null,
-            first_seen: '2017-04-04T05:08:23.934Z',
-            last_seen: '2017-04-10T14:29:22.895Z',
+            first_seen: new Date('2017-04-04T05:08:23.934Z'),
+            last_seen: new Date('2017-04-10T14:29:22.895Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8978,8 +8978,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/04f937cff02fc7c73b74e8d3dd3c3f99.png',
             birthday: null,
-            first_seen: '2014-08-05T23:05:23.449Z',
-            last_seen: '2016-09-05T21:08:08.718Z',
+            first_seen: new Date('2014-08-05T23:05:23.449Z'),
+            last_seen: new Date('2016-09-05T21:08:08.718Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -8997,8 +8997,8 @@ data = {
             city: 'Etfocoz',
             avatar: 'https://robohash.org/347f6bf73ea5cc835543119ae7eaed48.png',
             birthday: '1990-02-16T09:47:40.670Z',
-            first_seen: '2013-03-25T05:00:54.781Z',
-            last_seen: '2016-12-28T05:30:23.335Z',
+            first_seen: new Date('2013-03-25T05:00:54.781Z'),
+            last_seen: new Date('2016-12-28T05:30:23.335Z'),
             has_ordered: true,
             latest_purchase: '2016-09-08T11:17:23.884Z',
             has_newsletter: false,
@@ -9016,8 +9016,8 @@ data = {
             city: 'Zasumzi',
             avatar: 'https://robohash.org/8b1d6fd94b47ceb4062a911ab1151a7d.png',
             birthday: '1994-01-29T00:15:37.939Z',
-            first_seen: '2014-08-06T06:46:21.896Z',
-            last_seen: '2016-03-16T10:39:21.215Z',
+            first_seen: new Date('2014-08-06T06:46:21.896Z'),
+            last_seen: new Date('2016-03-16T10:39:21.215Z'),
             has_ordered: true,
             latest_purchase: '2015-08-31T17:28:47.268Z',
             has_newsletter: true,
@@ -9035,8 +9035,8 @@ data = {
             city: 'Ocokatbew',
             avatar: 'https://robohash.org/ebf69e20362d4c1a28d8e855862fe97c.png',
             birthday: '1987-10-21T00:34:47.818Z',
-            first_seen: '2014-05-12T15:43:55.165Z',
-            last_seen: '2017-02-20T23:22:13.463Z',
+            first_seen: new Date('2014-05-12T15:43:55.165Z'),
+            last_seen: new Date('2017-02-20T23:22:13.463Z'),
             has_ordered: true,
             latest_purchase: '2016-09-23T22:18:15.540Z',
             has_newsletter: false,
@@ -9054,8 +9054,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/52fbf06c3724b200bafd3e7cfb885ec4.png',
             birthday: null,
-            first_seen: '2016-03-29T08:36:23.401Z',
-            last_seen: '2017-02-28T17:33:28.961Z',
+            first_seen: new Date('2016-03-29T08:36:23.401Z'),
+            last_seen: new Date('2017-02-28T17:33:28.961Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9073,8 +9073,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/07ab16f93f761ebd2f2a574ba099f457.png',
             birthday: null,
-            first_seen: '2016-11-09T04:46:20.014Z',
-            last_seen: '2017-04-20T11:18:43.280Z',
+            first_seen: new Date('2016-11-09T04:46:20.014Z'),
+            last_seen: new Date('2017-04-20T11:18:43.280Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9092,8 +9092,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3e6a029c43d8b1d23b90737831354f95.png',
             birthday: null,
-            first_seen: '2014-09-04T12:36:55.193Z',
-            last_seen: '2017-01-27T05:29:52.458Z',
+            first_seen: new Date('2014-09-04T12:36:55.193Z'),
+            last_seen: new Date('2017-01-27T05:29:52.458Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9111,8 +9111,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/09806a6c12b1007d8b00c44d4cd8e507.png',
             birthday: null,
-            first_seen: '2016-07-28T01:16:29.604Z',
-            last_seen: '2017-01-03T12:26:49.963Z',
+            first_seen: new Date('2016-07-28T01:16:29.604Z'),
+            last_seen: new Date('2017-01-03T12:26:49.963Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9130,8 +9130,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3684159ff389fbd274920849f7b8543b.png',
             birthday: null,
-            first_seen: '2015-01-15T15:58:48.380Z',
-            last_seen: '2016-10-29T15:46:28.313Z',
+            first_seen: new Date('2015-01-15T15:58:48.380Z'),
+            last_seen: new Date('2016-10-29T15:46:28.313Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9149,8 +9149,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3eb3c19902aac0ed9792379a842ec39e.png',
             birthday: null,
-            first_seen: '2015-04-26T03:50:24.184Z',
-            last_seen: '2017-01-28T17:29:41.450Z',
+            first_seen: new Date('2015-04-26T03:50:24.184Z'),
+            last_seen: new Date('2017-01-28T17:29:41.450Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9168,8 +9168,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e063442c9fbb209f64741d875e20b2ca.png',
             birthday: null,
-            first_seen: '2014-06-04T09:43:18.081Z',
-            last_seen: '2016-04-02T16:39:26.447Z',
+            first_seen: new Date('2014-06-04T09:43:18.081Z'),
+            last_seen: new Date('2016-04-02T16:39:26.447Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9187,8 +9187,8 @@ data = {
             city: 'Wecevtin',
             avatar: 'https://robohash.org/6f76a91e9da9ce6be810badd54d9eb01.png',
             birthday: '1969-05-31T00:34:39.687Z',
-            first_seen: '2016-07-21T02:15:12.227Z',
-            last_seen: '2017-01-11T09:12:16.941Z',
+            first_seen: new Date('2016-07-21T02:15:12.227Z'),
+            last_seen: new Date('2017-01-11T09:12:16.941Z'),
             has_ordered: true,
             latest_purchase: '2016-12-07T07:16:37.554Z',
             has_newsletter: false,
@@ -9206,8 +9206,8 @@ data = {
             city: 'Ziujamu',
             avatar: 'https://robohash.org/782fa69bf75a7d5d8ea638f0a81a32e4.png',
             birthday: '1963-05-13T09:52:14.324Z',
-            first_seen: '2014-12-02T16:43:09.872Z',
-            last_seen: '2016-08-03T08:29:53.708Z',
+            first_seen: new Date('2014-12-02T16:43:09.872Z'),
+            last_seen: new Date('2016-08-03T08:29:53.708Z'),
             has_ordered: true,
             latest_purchase: '2016-07-02T08:40:28.237Z',
             has_newsletter: true,
@@ -9225,8 +9225,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fc3baed81ce1313a6a7e7cf29c801a56.png',
             birthday: null,
-            first_seen: '2015-07-25T19:26:37.820Z',
-            last_seen: '2016-11-02T16:44:29.474Z',
+            first_seen: new Date('2015-07-25T19:26:37.820Z'),
+            last_seen: new Date('2016-11-02T16:44:29.474Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9244,8 +9244,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5b8edec350c748952f9c6984a7b67a83.png',
             birthday: null,
-            first_seen: '2015-11-12T22:05:39.782Z',
-            last_seen: '2017-03-25T09:16:44.154Z',
+            first_seen: new Date('2015-11-12T22:05:39.782Z'),
+            last_seen: new Date('2017-03-25T09:16:44.154Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9263,8 +9263,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/35a1e9441522ee7b64e3be3254d93912.png',
             birthday: null,
-            first_seen: '2012-10-19T21:52:39.827Z',
-            last_seen: '2014-03-07T14:30:35.534Z',
+            first_seen: new Date('2012-10-19T21:52:39.827Z'),
+            last_seen: new Date('2014-03-07T14:30:35.534Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9282,8 +9282,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9cac5e5ed1f921503f3db4d45985a7af.png',
             birthday: null,
-            first_seen: '2014-05-24T00:39:16.060Z',
-            last_seen: '2015-10-01T17:57:54.660Z',
+            first_seen: new Date('2014-05-24T00:39:16.060Z'),
+            last_seen: new Date('2015-10-01T17:57:54.660Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9301,8 +9301,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/23f22605cd485e136d38e82eba0c8d90.png',
             birthday: null,
-            first_seen: '2014-01-05T17:40:16.089Z',
-            last_seen: '2017-04-06T07:28:26.870Z',
+            first_seen: new Date('2014-01-05T17:40:16.089Z'),
+            last_seen: new Date('2017-04-06T07:28:26.870Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9320,8 +9320,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/620012975477e6c837f10a01eac23bea.png',
             birthday: null,
-            first_seen: '2015-07-28T11:14:53.773Z',
-            last_seen: '2016-10-27T07:50:01.474Z',
+            first_seen: new Date('2015-07-28T11:14:53.773Z'),
+            last_seen: new Date('2016-10-27T07:50:01.474Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9339,8 +9339,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ed921ced8ddafb956427faa9bcb6848d.png',
             birthday: null,
-            first_seen: '2015-08-29T19:43:32.185Z',
-            last_seen: '2017-03-27T06:54:19.318Z',
+            first_seen: new Date('2015-08-29T19:43:32.185Z'),
+            last_seen: new Date('2017-03-27T06:54:19.318Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9358,8 +9358,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e40c1abfeca1bee893f3ccff388d0914.png',
             birthday: null,
-            first_seen: '2015-04-02T03:20:24.806Z',
-            last_seen: '2016-06-05T23:45:38.094Z',
+            first_seen: new Date('2015-04-02T03:20:24.806Z'),
+            last_seen: new Date('2016-06-05T23:45:38.094Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9377,8 +9377,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/baf6bee33e5c0c4f7600077eea3570ee.png',
             birthday: null,
-            first_seen: '2014-11-22T00:42:44.961Z',
-            last_seen: '2016-07-26T22:06:48.022Z',
+            first_seen: new Date('2014-11-22T00:42:44.961Z'),
+            last_seen: new Date('2016-07-26T22:06:48.022Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9396,8 +9396,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1ae178d6b3bd69dda88951603b8cc8e0.png',
             birthday: null,
-            first_seen: '2014-03-16T20:53:30.936Z',
-            last_seen: '2015-08-21T17:16:15.770Z',
+            first_seen: new Date('2014-03-16T20:53:30.936Z'),
+            last_seen: new Date('2015-08-21T17:16:15.770Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9415,8 +9415,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ef9f98b6c9c16848962938d99ad9446c.png',
             birthday: null,
-            first_seen: '2016-04-22T10:32:15.384Z',
-            last_seen: '2017-01-10T07:45:47.151Z',
+            first_seen: new Date('2016-04-22T10:32:15.384Z'),
+            last_seen: new Date('2017-01-10T07:45:47.151Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9434,8 +9434,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/af84633fed6bc40904cbf855925e6408.png',
             birthday: null,
-            first_seen: '2014-09-10T16:07:42.856Z',
-            last_seen: '2015-06-19T01:25:49.442Z',
+            first_seen: new Date('2014-09-10T16:07:42.856Z'),
+            last_seen: new Date('2015-06-19T01:25:49.442Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9453,8 +9453,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3fe0c4caaea459ddb0fef104c1caaef9.png',
             birthday: null,
-            first_seen: '2015-06-20T22:10:29.298Z',
-            last_seen: '2016-06-02T15:44:59.908Z',
+            first_seen: new Date('2015-06-20T22:10:29.298Z'),
+            last_seen: new Date('2016-06-02T15:44:59.908Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9472,8 +9472,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/788e0eaab4409978b6c38b67822d4029.png',
             birthday: null,
-            first_seen: '2017-04-17T22:18:22.420Z',
-            last_seen: '2017-04-22T04:37:46.197Z',
+            first_seen: new Date('2017-04-17T22:18:22.420Z'),
+            last_seen: new Date('2017-04-22T04:37:46.197Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9491,8 +9491,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/94584f7e5f45b814d35d8627de2f5515.png',
             birthday: null,
-            first_seen: '2014-06-05T01:56:35.004Z',
-            last_seen: '2016-03-20T19:16:49.458Z',
+            first_seen: new Date('2014-06-05T01:56:35.004Z'),
+            last_seen: new Date('2016-03-20T19:16:49.458Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9510,8 +9510,8 @@ data = {
             city: 'Pipitac',
             avatar: 'https://robohash.org/c993b56991415d23856baa223a3aed75.png',
             birthday: '1993-09-11T01:03:23.714Z',
-            first_seen: '2017-01-29T23:42:41.085Z',
-            last_seen: '2017-04-06T10:22:16.739Z',
+            first_seen: new Date('2017-01-29T23:42:41.085Z'),
+            last_seen: new Date('2017-04-06T10:22:16.739Z'),
             has_ordered: true,
             latest_purchase: '2017-03-25T02:24:03.293Z',
             has_newsletter: true,
@@ -9529,8 +9529,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cc861b9e5b716713f178dfc145c6ca89.png',
             birthday: null,
-            first_seen: '2016-09-09T12:53:45.448Z',
-            last_seen: '2016-11-18T19:23:23.882Z',
+            first_seen: new Date('2016-09-09T12:53:45.448Z'),
+            last_seen: new Date('2016-11-18T19:23:23.882Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9548,8 +9548,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b317256c3a500ac793be7d19c8cbc4e2.png',
             birthday: null,
-            first_seen: '2016-06-29T16:01:56.286Z',
-            last_seen: '2017-04-11T08:24:20.917Z',
+            first_seen: new Date('2016-06-29T16:01:56.286Z'),
+            last_seen: new Date('2017-04-11T08:24:20.917Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9567,8 +9567,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/aad1e20c4c999b9a30fb949995fc0d55.png',
             birthday: null,
-            first_seen: '2012-12-18T21:32:59.728Z',
-            last_seen: '2016-12-06T10:10:47.229Z',
+            first_seen: new Date('2012-12-18T21:32:59.728Z'),
+            last_seen: new Date('2016-12-06T10:10:47.229Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9586,8 +9586,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/917c72c9df7e4e471b01ca731dd3af09.png',
             birthday: null,
-            first_seen: '2013-01-10T14:55:19.433Z',
-            last_seen: '2015-11-07T02:17:45.894Z',
+            first_seen: new Date('2013-01-10T14:55:19.433Z'),
+            last_seen: new Date('2015-11-07T02:17:45.894Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9605,8 +9605,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2fef500a5faed645fba02b80214b77fb.png',
             birthday: null,
-            first_seen: '2015-04-17T18:13:36.160Z',
-            last_seen: '2015-10-04T20:04:10.335Z',
+            first_seen: new Date('2015-04-17T18:13:36.160Z'),
+            last_seen: new Date('2015-10-04T20:04:10.335Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9624,8 +9624,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7b8501d215e26d355c6d6d11f90bbf98.png',
             birthday: null,
-            first_seen: '2017-03-25T03:48:16.612Z',
-            last_seen: '2017-04-06T18:18:09.818Z',
+            first_seen: new Date('2017-03-25T03:48:16.612Z'),
+            last_seen: new Date('2017-04-06T18:18:09.818Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9643,8 +9643,8 @@ data = {
             city: 'Lijisur',
             avatar: 'https://robohash.org/faf5df7cbfb7cdc67adc8df27e25c189.png',
             birthday: '1971-07-03T04:14:00.615Z',
-            first_seen: '2014-09-13T11:18:15.214Z',
-            last_seen: '2016-12-28T11:28:04.285Z',
+            first_seen: new Date('2014-09-13T11:18:15.214Z'),
+            last_seen: new Date('2016-12-28T11:28:04.285Z'),
             has_ordered: true,
             latest_purchase: '2016-10-20T17:03:44.737Z',
             has_newsletter: true,
@@ -9662,8 +9662,8 @@ data = {
             city: 'Veznemwi',
             avatar: 'https://robohash.org/6054192e5db348b13e03de8eb4c9faae.png',
             birthday: '1959-11-14T03:36:25.523Z',
-            first_seen: '2016-05-16T01:11:01.490Z',
-            last_seen: '2016-12-17T07:02:58.400Z',
+            first_seen: new Date('2016-05-16T01:11:01.490Z'),
+            last_seen: new Date('2016-12-17T07:02:58.400Z'),
             has_ordered: true,
             latest_purchase: '2016-12-14T22:52:55.602Z',
             has_newsletter: false,
@@ -9681,8 +9681,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f690ca888fad4b5ab85dd3c9624584bd.png',
             birthday: null,
-            first_seen: '2014-01-21T16:56:25.364Z',
-            last_seen: '2017-01-03T22:13:47.804Z',
+            first_seen: new Date('2014-01-21T16:56:25.364Z'),
+            last_seen: new Date('2017-01-03T22:13:47.804Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9700,8 +9700,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a5c12a9267e757e7c8cfd00dd9dc6146.png',
             birthday: null,
-            first_seen: '2013-02-10T05:04:28.396Z',
-            last_seen: '2015-11-19T04:30:55.505Z',
+            first_seen: new Date('2013-02-10T05:04:28.396Z'),
+            last_seen: new Date('2015-11-19T04:30:55.505Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9719,8 +9719,8 @@ data = {
             city: 'Ajefejec',
             avatar: 'https://robohash.org/899063fba7d43c2cd72ccbf6bc6b7cf6.png',
             birthday: '1999-10-18T10:54:08.178Z',
-            first_seen: '2013-06-14T16:19:05.699Z',
-            last_seen: '2015-02-16T17:25:23.214Z',
+            first_seen: new Date('2013-06-14T16:19:05.699Z'),
+            last_seen: new Date('2015-02-16T17:25:23.214Z'),
             has_ordered: true,
             latest_purchase: '2014-10-03T09:44:26.007Z',
             has_newsletter: true,
@@ -9738,8 +9738,8 @@ data = {
             city: 'Wuncanu',
             avatar: 'https://robohash.org/a5afd6f955fba68773a299493d3e7c0c.png',
             birthday: '1960-08-11T04:05:03.661Z',
-            first_seen: '2016-06-03T11:06:28.470Z',
-            last_seen: '2016-12-24T17:15:22.070Z',
+            first_seen: new Date('2016-06-03T11:06:28.470Z'),
+            last_seen: new Date('2016-12-24T17:15:22.070Z'),
             has_ordered: true,
             latest_purchase: '2016-12-21T09:39:38.808Z',
             has_newsletter: false,
@@ -9757,8 +9757,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e4b388c36f614999d93d349108dcc433.png',
             birthday: null,
-            first_seen: '2013-08-06T22:15:22.422Z',
-            last_seen: '2016-02-23T01:11:00.662Z',
+            first_seen: new Date('2013-08-06T22:15:22.422Z'),
+            last_seen: new Date('2016-02-23T01:11:00.662Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9776,8 +9776,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/815ad4a24c49594b127ef8bccaf0b2f2.png',
             birthday: null,
-            first_seen: '2013-04-08T12:31:04.196Z',
-            last_seen: '2017-04-17T20:07:38.394Z',
+            first_seen: new Date('2013-04-08T12:31:04.196Z'),
+            last_seen: new Date('2017-04-17T20:07:38.394Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9795,8 +9795,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/13a94159d91b0543a1b8caf2c7f755d9.png',
             birthday: null,
-            first_seen: '2016-02-13T23:33:33.365Z',
-            last_seen: '2017-02-17T00:28:54.689Z',
+            first_seen: new Date('2016-02-13T23:33:33.365Z'),
+            last_seen: new Date('2017-02-17T00:28:54.689Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9814,8 +9814,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/172a05925e0fc81de49441ca7a7bfeac.png',
             birthday: null,
-            first_seen: '2013-07-25T22:32:19.518Z',
-            last_seen: '2016-05-24T08:23:35.631Z',
+            first_seen: new Date('2013-07-25T22:32:19.518Z'),
+            last_seen: new Date('2016-05-24T08:23:35.631Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9833,8 +9833,8 @@ data = {
             city: 'Fuczapupo',
             avatar: 'https://robohash.org/51437a6b1493922efc01cac00703f0a7.png',
             birthday: '1987-09-16T07:14:58.940Z',
-            first_seen: '2014-08-22T12:15:39.990Z',
-            last_seen: '2016-06-08T22:37:40.206Z',
+            first_seen: new Date('2014-08-22T12:15:39.990Z'),
+            last_seen: new Date('2016-06-08T22:37:40.206Z'),
             has_ordered: true,
             latest_purchase: '2016-04-07T23:44:31.164Z',
             has_newsletter: true,
@@ -9852,8 +9852,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/435d10f2da019529f86218542afeb59b.png',
             birthday: null,
-            first_seen: '2014-11-21T23:46:28.912Z',
-            last_seen: '2016-02-17T17:53:41.235Z',
+            first_seen: new Date('2014-11-21T23:46:28.912Z'),
+            last_seen: new Date('2016-02-17T17:53:41.235Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9871,8 +9871,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a21f4a20512b550fa14fc9c56c8e8f54.png',
             birthday: null,
-            first_seen: '2016-11-12T20:28:52.398Z',
-            last_seen: '2017-03-17T16:03:31.069Z',
+            first_seen: new Date('2016-11-12T20:28:52.398Z'),
+            last_seen: new Date('2017-03-17T16:03:31.069Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9890,8 +9890,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6d90f11725c5804bc9740001f8124aee.png',
             birthday: null,
-            first_seen: '2014-06-22T06:21:43.875Z',
-            last_seen: '2015-07-30T20:11:30.225Z',
+            first_seen: new Date('2014-06-22T06:21:43.875Z'),
+            last_seen: new Date('2015-07-30T20:11:30.225Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9909,8 +9909,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6e3df79e199d84e9a9a16b5aae679780.png',
             birthday: null,
-            first_seen: '2017-02-19T12:17:15.633Z',
-            last_seen: '2017-04-05T11:38:12.335Z',
+            first_seen: new Date('2017-02-19T12:17:15.633Z'),
+            last_seen: new Date('2017-04-05T11:38:12.335Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9928,8 +9928,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6bf0494f9cdcb302b21752fa3945782d.png',
             birthday: null,
-            first_seen: '2017-04-17T10:12:42.327Z',
-            last_seen: '2017-04-23T18:31:00.489Z',
+            first_seen: new Date('2017-04-17T10:12:42.327Z'),
+            last_seen: new Date('2017-04-23T18:31:00.489Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9947,8 +9947,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1139bcb756a6b9a7afa10d25a4d8ee06.png',
             birthday: null,
-            first_seen: '2014-01-28T03:49:19.168Z',
-            last_seen: '2015-07-24T08:02:28.225Z',
+            first_seen: new Date('2014-01-28T03:49:19.168Z'),
+            last_seen: new Date('2015-07-24T08:02:28.225Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9966,8 +9966,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e21d60cc7a77cf5dc4c3070a035d3506.png',
             birthday: null,
-            first_seen: '2012-09-12T01:22:25.663Z',
-            last_seen: '2015-10-10T23:19:17.526Z',
+            first_seen: new Date('2012-09-12T01:22:25.663Z'),
+            last_seen: new Date('2015-10-10T23:19:17.526Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -9985,8 +9985,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/161060b90f00c6e530ca311b3bbb72f6.png',
             birthday: null,
-            first_seen: '2015-07-10T00:15:17.853Z',
-            last_seen: '2016-11-29T04:13:42.486Z',
+            first_seen: new Date('2015-07-10T00:15:17.853Z'),
+            last_seen: new Date('2016-11-29T04:13:42.486Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10004,8 +10004,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bcd99ab12bfda13571aab3d0ed1c21d3.png',
             birthday: null,
-            first_seen: '2015-04-16T12:36:28.405Z',
-            last_seen: '2015-08-05T15:19:49.808Z',
+            first_seen: new Date('2015-04-16T12:36:28.405Z'),
+            last_seen: new Date('2015-08-05T15:19:49.808Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10023,8 +10023,8 @@ data = {
             city: 'Wuhgozsa',
             avatar: 'https://robohash.org/07bf11b2913926caa564dac7d8744380.png',
             birthday: '1984-09-21T08:20:09.190Z',
-            first_seen: '2017-03-12T06:16:48.784Z',
-            last_seen: '2017-04-18T18:08:59.062Z',
+            first_seen: new Date('2017-03-12T06:16:48.784Z'),
+            last_seen: new Date('2017-04-18T18:08:59.062Z'),
             has_ordered: true,
             latest_purchase: '2017-04-15T15:04:03.310Z',
             has_newsletter: true,
@@ -10042,8 +10042,8 @@ data = {
             city: 'Govuwe',
             avatar: 'https://robohash.org/920fb3c3fc9603089bdcfc4879e5271a.png',
             birthday: '1981-05-20T08:03:40.149Z',
-            first_seen: '2016-06-08T06:41:52.896Z',
-            last_seen: '2016-06-25T19:23:11.479Z',
+            first_seen: new Date('2016-06-08T06:41:52.896Z'),
+            last_seen: new Date('2016-06-25T19:23:11.479Z'),
             has_ordered: true,
             latest_purchase: '2016-06-15T20:55:15.040Z',
             has_newsletter: false,
@@ -10061,8 +10061,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fd963163ac77299cad65ee47b0e07298.png',
             birthday: null,
-            first_seen: '2016-05-12T12:29:40.138Z',
-            last_seen: '2016-12-23T01:26:03.842Z',
+            first_seen: new Date('2016-05-12T12:29:40.138Z'),
+            last_seen: new Date('2016-12-23T01:26:03.842Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10080,8 +10080,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a3439c9854c23cbd036793fcb3a69210.png',
             birthday: null,
-            first_seen: '2015-02-06T17:36:07.422Z',
-            last_seen: '2016-03-15T10:29:24.596Z',
+            first_seen: new Date('2015-02-06T17:36:07.422Z'),
+            last_seen: new Date('2016-03-15T10:29:24.596Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10099,8 +10099,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b3db7eb1a643b18502d6e8d26820fbb8.png',
             birthday: null,
-            first_seen: '2013-10-04T08:45:47.483Z',
-            last_seen: '2017-01-13T16:08:50.722Z',
+            first_seen: new Date('2013-10-04T08:45:47.483Z'),
+            last_seen: new Date('2017-01-13T16:08:50.722Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10118,8 +10118,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0f8f7ff1d45bd739f4b448ad10bb6110.png',
             birthday: null,
-            first_seen: '2012-07-28T13:16:30.233Z',
-            last_seen: '2016-06-02T04:56:07.159Z',
+            first_seen: new Date('2012-07-28T13:16:30.233Z'),
+            last_seen: new Date('2016-06-02T04:56:07.159Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10137,8 +10137,8 @@ data = {
             city: 'Ituwsi',
             avatar: 'https://robohash.org/823c47c20db84f3e478762bb18a839dc.png',
             birthday: '1955-09-14T04:35:53.334Z',
-            first_seen: '2015-12-10T01:35:53.888Z',
-            last_seen: '2016-11-20T06:01:37.731Z',
+            first_seen: new Date('2015-12-10T01:35:53.888Z'),
+            last_seen: new Date('2016-11-20T06:01:37.731Z'),
             has_ordered: true,
             latest_purchase: '2016-07-05T05:47:57.153Z',
             has_newsletter: false,
@@ -10156,8 +10156,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2c09b46fb91380edd20a0e38e6f8de00.png',
             birthday: null,
-            first_seen: '2015-11-25T21:53:27.863Z',
-            last_seen: '2016-06-13T05:57:41.035Z',
+            first_seen: new Date('2015-11-25T21:53:27.863Z'),
+            last_seen: new Date('2016-06-13T05:57:41.035Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10175,8 +10175,8 @@ data = {
             city: 'Efinim',
             avatar: 'https://robohash.org/6719447d034b9bd6c2c724c8252b34aa.png',
             birthday: '1958-08-29T04:15:57.974Z',
-            first_seen: '2017-02-25T06:42:28.677Z',
-            last_seen: '2017-03-31T20:34:25.980Z',
+            first_seen: new Date('2017-02-25T06:42:28.677Z'),
+            last_seen: new Date('2017-03-31T20:34:25.980Z'),
             has_ordered: true,
             latest_purchase: '2017-03-21T18:42:34.029Z',
             has_newsletter: false,
@@ -10194,8 +10194,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0ff6b416899678e872e04f8cbdbc8717.png',
             birthday: null,
-            first_seen: '2015-11-16T15:30:37.987Z',
-            last_seen: '2016-06-21T06:38:42.530Z',
+            first_seen: new Date('2015-11-16T15:30:37.987Z'),
+            last_seen: new Date('2016-06-21T06:38:42.530Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10213,8 +10213,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8c542fd5e04faff4f34d32705ddfcc06.png',
             birthday: null,
-            first_seen: '2015-06-29T17:50:19.109Z',
-            last_seen: '2016-09-16T18:09:24.884Z',
+            first_seen: new Date('2015-06-29T17:50:19.109Z'),
+            last_seen: new Date('2016-09-16T18:09:24.884Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10232,8 +10232,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f617f2c260de140f8a061786e66a2113.png',
             birthday: null,
-            first_seen: '2016-09-01T17:31:18.090Z',
-            last_seen: '2016-09-27T22:30:38.481Z',
+            first_seen: new Date('2016-09-01T17:31:18.090Z'),
+            last_seen: new Date('2016-09-27T22:30:38.481Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10251,8 +10251,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4319b21c71dd1a3640cc0266cb13c7cc.png',
             birthday: null,
-            first_seen: '2013-08-17T11:17:41.344Z',
-            last_seen: '2016-10-30T05:49:56.388Z',
+            first_seen: new Date('2013-08-17T11:17:41.344Z'),
+            last_seen: new Date('2016-10-30T05:49:56.388Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10270,8 +10270,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4f77645629394e289246ce1aed25ad58.png',
             birthday: null,
-            first_seen: '2015-06-24T22:54:47.414Z',
-            last_seen: '2016-04-22T20:51:37.163Z',
+            first_seen: new Date('2015-06-24T22:54:47.414Z'),
+            last_seen: new Date('2016-04-22T20:51:37.163Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10289,8 +10289,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7fd61814ca8fe9ee861a929245f73519.png',
             birthday: null,
-            first_seen: '2015-03-16T06:11:58.787Z',
-            last_seen: '2016-06-19T05:03:22.019Z',
+            first_seen: new Date('2015-03-16T06:11:58.787Z'),
+            last_seen: new Date('2016-06-19T05:03:22.019Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10308,8 +10308,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/39e476e1c70257c645b26efd3eeeaefb.png',
             birthday: null,
-            first_seen: '2016-06-05T11:07:06.880Z',
-            last_seen: '2016-09-20T15:39:24.083Z',
+            first_seen: new Date('2016-06-05T11:07:06.880Z'),
+            last_seen: new Date('2016-09-20T15:39:24.083Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10327,8 +10327,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/856cff3ee5932da014b8d7866e469d10.png',
             birthday: null,
-            first_seen: '2016-12-03T21:27:13.863Z',
-            last_seen: '2017-04-03T12:01:27.895Z',
+            first_seen: new Date('2016-12-03T21:27:13.863Z'),
+            last_seen: new Date('2017-04-03T12:01:27.895Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10346,8 +10346,8 @@ data = {
             city: 'Goftautu',
             avatar: 'https://robohash.org/5d32f6bdb704344fc8426225c15f7d11.png',
             birthday: '1979-07-31T23:01:11.522Z',
-            first_seen: '2016-03-24T04:53:49.669Z',
-            last_seen: '2017-02-26T21:43:53.756Z',
+            first_seen: new Date('2016-03-24T04:53:49.669Z'),
+            last_seen: new Date('2017-02-26T21:43:53.756Z'),
             has_ordered: true,
             latest_purchase: '2017-01-14T01:03:11.782Z',
             has_newsletter: true,
@@ -10365,8 +10365,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/af6ef1e84031e9d1c9cc4fc22a8a4448.png',
             birthday: null,
-            first_seen: '2015-08-15T06:38:35.992Z',
-            last_seen: '2015-10-23T05:50:35.804Z',
+            first_seen: new Date('2015-08-15T06:38:35.992Z'),
+            last_seen: new Date('2015-10-23T05:50:35.804Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10384,8 +10384,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/606c302e54b51ad4c421c1647ff6e6f7.png',
             birthday: null,
-            first_seen: '2015-06-07T17:54:29.533Z',
-            last_seen: '2016-04-06T08:23:04.121Z',
+            first_seen: new Date('2015-06-07T17:54:29.533Z'),
+            last_seen: new Date('2016-04-06T08:23:04.121Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10403,8 +10403,8 @@ data = {
             city: 'Kumewa',
             avatar: 'https://robohash.org/3476ce2409a1f6f2c5080211ea99858d.png',
             birthday: '1963-07-04T00:32:26.899Z',
-            first_seen: '2014-11-17T00:00:27.820Z',
-            last_seen: '2016-06-15T11:02:25.329Z',
+            first_seen: new Date('2014-11-17T00:00:27.820Z'),
+            last_seen: new Date('2016-06-15T11:02:25.329Z'),
             has_ordered: true,
             latest_purchase: '2016-04-19T05:59:32.133Z',
             has_newsletter: false,
@@ -10422,8 +10422,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/05c395034217557dfc5b1498b85c88c0.png',
             birthday: null,
-            first_seen: '2015-08-07T11:36:04.786Z',
-            last_seen: '2017-01-16T07:06:12.589Z',
+            first_seen: new Date('2015-08-07T11:36:04.786Z'),
+            last_seen: new Date('2017-01-16T07:06:12.589Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10441,8 +10441,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2a8cf8896a4cf9825f1c6a7ee6e5df2d.png',
             birthday: null,
-            first_seen: '2016-04-06T17:15:39.126Z',
-            last_seen: '2017-02-11T00:01:37.316Z',
+            first_seen: new Date('2016-04-06T17:15:39.126Z'),
+            last_seen: new Date('2017-02-11T00:01:37.316Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10460,8 +10460,8 @@ data = {
             city: 'Jeoloji',
             avatar: 'https://robohash.org/b34f11ed9d6eaef512973a572261733f.png',
             birthday: '1962-04-28T02:38:49.814Z',
-            first_seen: '2016-02-07T02:31:50.453Z',
-            last_seen: '2016-06-30T23:55:05.192Z',
+            first_seen: new Date('2016-02-07T02:31:50.453Z'),
+            last_seen: new Date('2016-06-30T23:55:05.192Z'),
             has_ordered: true,
             latest_purchase: '2016-06-06T11:58:59.529Z',
             has_newsletter: false,
@@ -10479,8 +10479,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3563dedbffc56a0ad1b93669177c4496.png',
             birthday: null,
-            first_seen: '2016-09-21T23:54:02.260Z',
-            last_seen: '2017-03-09T04:05:41.118Z',
+            first_seen: new Date('2016-09-21T23:54:02.260Z'),
+            last_seen: new Date('2017-03-09T04:05:41.118Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10498,8 +10498,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/187d626825d1a8cc1d77accbd9c78ab6.png',
             birthday: null,
-            first_seen: '2015-08-13T16:23:32.941Z',
-            last_seen: '2016-12-09T01:54:47.591Z',
+            first_seen: new Date('2015-08-13T16:23:32.941Z'),
+            last_seen: new Date('2016-12-09T01:54:47.591Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10517,8 +10517,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0547e9e690a7165271b334a421252e18.png',
             birthday: null,
-            first_seen: '2017-04-17T05:50:12.804Z',
-            last_seen: '2017-04-25T14:10:34.480Z',
+            first_seen: new Date('2017-04-17T05:50:12.804Z'),
+            last_seen: new Date('2017-04-25T14:10:34.480Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10536,8 +10536,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/955a9d4555c636abc4874ab5b1fd7cac.png',
             birthday: null,
-            first_seen: '2017-03-07T23:19:15.714Z',
-            last_seen: '2017-03-12T12:42:32.539Z',
+            first_seen: new Date('2017-03-07T23:19:15.714Z'),
+            last_seen: new Date('2017-03-12T12:42:32.539Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10555,8 +10555,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fe182d536ea75ca8324bf58aa01f246d.png',
             birthday: null,
-            first_seen: '2017-03-09T04:24:17.278Z',
-            last_seen: '2017-04-24T08:02:48.947Z',
+            first_seen: new Date('2017-03-09T04:24:17.278Z'),
+            last_seen: new Date('2017-04-24T08:02:48.947Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10574,8 +10574,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4453bb2d4787227520d9963e778083e6.png',
             birthday: null,
-            first_seen: '2017-01-08T07:12:21.847Z',
-            last_seen: '2017-02-23T07:33:45.986Z',
+            first_seen: new Date('2017-01-08T07:12:21.847Z'),
+            last_seen: new Date('2017-02-23T07:33:45.986Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10593,8 +10593,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e902d78575d52db52a8b8f40f2b28846.png',
             birthday: null,
-            first_seen: '2015-11-15T19:38:48.073Z',
-            last_seen: '2017-04-10T18:20:39.246Z',
+            first_seen: new Date('2015-11-15T19:38:48.073Z'),
+            last_seen: new Date('2017-04-10T18:20:39.246Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10612,8 +10612,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4fcfa0cc2c342142a440e82b9a8994f6.png',
             birthday: null,
-            first_seen: '2014-04-23T17:24:56.068Z',
-            last_seen: '2016-07-04T23:19:35.495Z',
+            first_seen: new Date('2014-04-23T17:24:56.068Z'),
+            last_seen: new Date('2016-07-04T23:19:35.495Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10631,8 +10631,8 @@ data = {
             city: 'Juviko',
             avatar: 'https://robohash.org/4c88e4481ad911cc75b47c6b23f0660b.png',
             birthday: '1973-05-04T10:08:47.981Z',
-            first_seen: '2012-09-24T07:20:23.729Z',
-            last_seen: '2015-06-04T02:12:05.564Z',
+            first_seen: new Date('2012-09-24T07:20:23.729Z'),
+            last_seen: new Date('2015-06-04T02:12:05.564Z'),
             has_ordered: true,
             latest_purchase: '2015-04-24T08:31:44.332Z',
             has_newsletter: false,
@@ -10650,8 +10650,8 @@ data = {
             city: 'Deikubi',
             avatar: 'https://robohash.org/acc36b829e90f357f7bac6a5e2410bc9.png',
             birthday: '1971-12-18T06:42:27.964Z',
-            first_seen: '2014-01-12T12:15:53.608Z',
-            last_seen: '2016-03-11T19:36:39.201Z',
+            first_seen: new Date('2014-01-12T12:15:53.608Z'),
+            last_seen: new Date('2016-03-11T19:36:39.201Z'),
             has_ordered: true,
             latest_purchase: '2016-02-27T11:34:06.861Z',
             has_newsletter: true,
@@ -10669,8 +10669,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b503743354a83871414760c8cf78266b.png',
             birthday: null,
-            first_seen: '2016-08-22T04:29:14.364Z',
-            last_seen: '2016-09-08T16:47:59.973Z',
+            first_seen: new Date('2016-08-22T04:29:14.364Z'),
+            last_seen: new Date('2016-09-08T16:47:59.973Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10688,8 +10688,8 @@ data = {
             city: 'Minonoz',
             avatar: 'https://robohash.org/92eb823af2a90fae3a0dd4b4c3d69145.png',
             birthday: '1959-03-08T07:48:03.789Z',
-            first_seen: '2014-09-17T13:38:07.371Z',
-            last_seen: '2016-12-09T15:47:37.966Z',
+            first_seen: new Date('2014-09-17T13:38:07.371Z'),
+            last_seen: new Date('2016-12-09T15:47:37.966Z'),
             has_ordered: true,
             latest_purchase: '2016-09-11T08:53:39.986Z',
             has_newsletter: false,
@@ -10707,8 +10707,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c1e223e3f31173cc17a959320dedbc16.png',
             birthday: null,
-            first_seen: '2014-08-11T15:28:59.432Z',
-            last_seen: '2016-02-25T03:06:59.620Z',
+            first_seen: new Date('2014-08-11T15:28:59.432Z'),
+            last_seen: new Date('2016-02-25T03:06:59.620Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10726,8 +10726,8 @@ data = {
             city: 'Giekmoj',
             avatar: 'https://robohash.org/a513f1987d2aa14313f87ab505c9ff3b.png',
             birthday: '1978-12-12T01:13:42.260Z',
-            first_seen: '2015-11-09T07:52:04.359Z',
-            last_seen: '2015-12-05T03:01:52.935Z',
+            first_seen: new Date('2015-11-09T07:52:04.359Z'),
+            last_seen: new Date('2015-12-05T03:01:52.935Z'),
             has_ordered: true,
             latest_purchase: '2015-12-03T19:33:23.207Z',
             has_newsletter: false,
@@ -10745,8 +10745,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9a929d70e07bceb83d47c2e9a63bef19.png',
             birthday: null,
-            first_seen: '2014-12-05T07:03:58.064Z',
-            last_seen: '2017-01-22T08:12:39.608Z',
+            first_seen: new Date('2014-12-05T07:03:58.064Z'),
+            last_seen: new Date('2017-01-22T08:12:39.608Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10764,8 +10764,8 @@ data = {
             city: 'Zulkefha',
             avatar: 'https://robohash.org/2ed47e1e1d30059bfad55ac11566b0ca.png',
             birthday: '1961-05-24T08:45:34.095Z',
-            first_seen: '2013-09-27T19:32:01.558Z',
-            last_seen: '2016-04-02T03:34:23.769Z',
+            first_seen: new Date('2013-09-27T19:32:01.558Z'),
+            last_seen: new Date('2016-04-02T03:34:23.769Z'),
             has_ordered: true,
             latest_purchase: '2016-02-12T02:36:38.307Z',
             has_newsletter: true,
@@ -10783,8 +10783,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cdf8ed049e93c98c883719588b079a2d.png',
             birthday: null,
-            first_seen: '2016-02-15T16:29:14.720Z',
-            last_seen: '2017-03-13T07:31:41.880Z',
+            first_seen: new Date('2016-02-15T16:29:14.720Z'),
+            last_seen: new Date('2017-03-13T07:31:41.880Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10802,8 +10802,8 @@ data = {
             city: 'Bowpoddi',
             avatar: 'https://robohash.org/1e78433c1dda4725fe5d7712f2f220f6.png',
             birthday: '1998-01-25T10:20:27.749Z',
-            first_seen: '2017-03-17T15:29:16.094Z',
-            last_seen: '2017-04-17T09:39:03.954Z',
+            first_seen: new Date('2017-03-17T15:29:16.094Z'),
+            last_seen: new Date('2017-04-17T09:39:03.954Z'),
             has_ordered: true,
             latest_purchase: '2017-04-10T20:57:32.141Z',
             has_newsletter: true,
@@ -10821,8 +10821,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/89f34fe3e44ce2d6244da7f21d81e761.png',
             birthday: null,
-            first_seen: '2017-02-02T17:02:57.454Z',
-            last_seen: '2017-04-14T22:38:09.907Z',
+            first_seen: new Date('2017-02-02T17:02:57.454Z'),
+            last_seen: new Date('2017-04-14T22:38:09.907Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10840,8 +10840,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9a645348abc794964cbdf0e9c92df6cc.png',
             birthday: null,
-            first_seen: '2016-09-02T15:30:56.142Z',
-            last_seen: '2017-02-23T15:14:00.699Z',
+            first_seen: new Date('2016-09-02T15:30:56.142Z'),
+            last_seen: new Date('2017-02-23T15:14:00.699Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10859,8 +10859,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9e395560dcf7177f1c09f110b81eeb6a.png',
             birthday: null,
-            first_seen: '2016-01-07T03:40:27.594Z',
-            last_seen: '2016-01-25T20:17:34.422Z',
+            first_seen: new Date('2016-01-07T03:40:27.594Z'),
+            last_seen: new Date('2016-01-25T20:17:34.422Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10878,8 +10878,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b92817f3fc613ec06e003b663ea01edf.png',
             birthday: null,
-            first_seen: '2015-11-15T05:15:30.726Z',
-            last_seen: '2016-07-25T14:46:33.573Z',
+            first_seen: new Date('2015-11-15T05:15:30.726Z'),
+            last_seen: new Date('2016-07-25T14:46:33.573Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10897,8 +10897,8 @@ data = {
             city: 'Dunite',
             avatar: 'https://robohash.org/7512eea251f61b5091bfcb0314972ded.png',
             birthday: '1965-10-26T06:04:26.469Z',
-            first_seen: '2017-01-04T19:41:02.130Z',
-            last_seen: '2017-04-05T12:45:35.491Z',
+            first_seen: new Date('2017-01-04T19:41:02.130Z'),
+            last_seen: new Date('2017-04-05T12:45:35.491Z'),
             has_ordered: true,
             latest_purchase: '2017-03-28T08:30:18.144Z',
             has_newsletter: false,
@@ -10916,8 +10916,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/90f2854e6a26fe4d3dedf0446bb6cfb8.png',
             birthday: null,
-            first_seen: '2016-09-03T09:46:42.050Z',
-            last_seen: '2017-04-13T06:55:59.611Z',
+            first_seen: new Date('2016-09-03T09:46:42.050Z'),
+            last_seen: new Date('2017-04-13T06:55:59.611Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10935,8 +10935,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/aeba5dbff5335c6aa071089fa3f94b65.png',
             birthday: null,
-            first_seen: '2014-06-08T18:57:01.310Z',
-            last_seen: '2015-04-30T11:44:31.216Z',
+            first_seen: new Date('2014-06-08T18:57:01.310Z'),
+            last_seen: new Date('2015-04-30T11:44:31.216Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10954,8 +10954,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e3bf42861966c9337cc155873eefc4ac.png',
             birthday: null,
-            first_seen: '2016-03-10T15:48:11.935Z',
-            last_seen: '2016-12-07T21:26:36.403Z',
+            first_seen: new Date('2016-03-10T15:48:11.935Z'),
+            last_seen: new Date('2016-12-07T21:26:36.403Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10973,8 +10973,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5c9e01977120c1a586db21eddd570036.png',
             birthday: null,
-            first_seen: '2014-10-21T00:39:21.637Z',
-            last_seen: '2015-03-31T08:48:14.161Z',
+            first_seen: new Date('2014-10-21T00:39:21.637Z'),
+            last_seen: new Date('2015-03-31T08:48:14.161Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -10992,8 +10992,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4d7a6538a056340b0cd7161afc8c38c2.png',
             birthday: null,
-            first_seen: '2016-02-12T07:31:14.616Z',
-            last_seen: '2017-04-04T08:52:45.853Z',
+            first_seen: new Date('2016-02-12T07:31:14.616Z'),
+            last_seen: new Date('2017-04-04T08:52:45.853Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11011,8 +11011,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2ac47835e92392bf5c96f99d1acb120e.png',
             birthday: null,
-            first_seen: '2015-07-16T06:42:48.603Z',
-            last_seen: '2016-03-11T09:37:29.116Z',
+            first_seen: new Date('2015-07-16T06:42:48.603Z'),
+            last_seen: new Date('2016-03-11T09:37:29.116Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11030,8 +11030,8 @@ data = {
             city: 'Maligud',
             avatar: 'https://robohash.org/354cd04fe05acbbb8469144020d70f67.png',
             birthday: '1993-05-14T05:02:09.047Z',
-            first_seen: '2014-12-28T00:16:32.659Z',
-            last_seen: '2017-02-03T11:02:17.006Z',
+            first_seen: new Date('2014-12-28T00:16:32.659Z'),
+            last_seen: new Date('2017-02-03T11:02:17.006Z'),
             has_ordered: true,
             latest_purchase: '2016-10-30T10:58:13.793Z',
             has_newsletter: false,
@@ -11049,8 +11049,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e6534c645b7ba0989335b19369a4ed72.png',
             birthday: null,
-            first_seen: '2013-04-28T03:18:39.360Z',
-            last_seen: '2017-04-25T17:31:55.727Z',
+            first_seen: new Date('2013-04-28T03:18:39.360Z'),
+            last_seen: new Date('2017-04-25T17:31:55.727Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11068,8 +11068,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d71b8167adccd0c3cb07e6b4b5425f6b.png',
             birthday: null,
-            first_seen: '2016-09-18T13:48:31.258Z',
-            last_seen: '2017-02-12T00:09:09.836Z',
+            first_seen: new Date('2016-09-18T13:48:31.258Z'),
+            last_seen: new Date('2017-02-12T00:09:09.836Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11087,8 +11087,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c229585d326cf654cb492547ea81515a.png',
             birthday: null,
-            first_seen: '2016-02-13T08:13:00.362Z',
-            last_seen: '2017-03-19T10:34:31.398Z',
+            first_seen: new Date('2016-02-13T08:13:00.362Z'),
+            last_seen: new Date('2017-03-19T10:34:31.398Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11106,8 +11106,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8dbb741c19a181267b49fa639ad33a79.png',
             birthday: null,
-            first_seen: '2016-07-29T06:39:32.591Z',
-            last_seen: '2017-01-11T03:11:20.949Z',
+            first_seen: new Date('2016-07-29T06:39:32.591Z'),
+            last_seen: new Date('2017-01-11T03:11:20.949Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11125,8 +11125,8 @@ data = {
             city: 'Zujevavu',
             avatar: 'https://robohash.org/5ea473e6ae74258ee6981a3b64534488.png',
             birthday: '1981-01-23T01:22:17.629Z',
-            first_seen: '2015-11-22T17:18:28.443Z',
-            last_seen: '2017-03-27T02:06:30.762Z',
+            first_seen: new Date('2015-11-22T17:18:28.443Z'),
+            last_seen: new Date('2017-03-27T02:06:30.762Z'),
             has_ordered: true,
             latest_purchase: '2017-03-11T15:43:31.514Z',
             has_newsletter: false,
@@ -11144,8 +11144,8 @@ data = {
             city: 'Ulufevoj',
             avatar: 'https://robohash.org/f859f2043848ed1708353ae76c32f8ac.png',
             birthday: '1968-05-31T10:32:28.716Z',
-            first_seen: '2016-10-18T07:01:04.945Z',
-            last_seen: '2017-04-18T16:14:28.660Z',
+            first_seen: new Date('2016-10-18T07:01:04.945Z'),
+            last_seen: new Date('2017-04-18T16:14:28.660Z'),
             has_ordered: true,
             latest_purchase: '2017-03-04T20:59:08.628Z',
             has_newsletter: false,
@@ -11163,8 +11163,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2fdba31a3e9e44b4d8f36d6369a73c00.png',
             birthday: null,
-            first_seen: '2016-12-02T14:12:05.711Z',
-            last_seen: '2017-04-01T00:18:13.931Z',
+            first_seen: new Date('2016-12-02T14:12:05.711Z'),
+            last_seen: new Date('2017-04-01T00:18:13.931Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11182,8 +11182,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/185fa393ece648c77f11ff21ecf6dbdf.png',
             birthday: null,
-            first_seen: '2014-03-10T20:10:53.327Z',
-            last_seen: '2016-05-20T14:29:55.699Z',
+            first_seen: new Date('2014-03-10T20:10:53.327Z'),
+            last_seen: new Date('2016-05-20T14:29:55.699Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11201,8 +11201,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/21faabc7e9d093435a380547bf286661.png',
             birthday: null,
-            first_seen: '2013-06-04T08:42:36.540Z',
-            last_seen: '2015-03-27T22:22:07.180Z',
+            first_seen: new Date('2013-06-04T08:42:36.540Z'),
+            last_seen: new Date('2015-03-27T22:22:07.180Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11220,8 +11220,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4962f8ce31be7883ef22e25f5c4d6474.png',
             birthday: null,
-            first_seen: '2016-12-18T12:48:31.615Z',
-            last_seen: '2017-03-09T00:25:13.571Z',
+            first_seen: new Date('2016-12-18T12:48:31.615Z'),
+            last_seen: new Date('2017-03-09T00:25:13.571Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11239,8 +11239,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e4c33315fe9b7604f308c3f6890c98ec.png',
             birthday: null,
-            first_seen: '2016-06-14T22:17:18.318Z',
-            last_seen: '2017-04-25T17:20:22.172Z',
+            first_seen: new Date('2016-06-14T22:17:18.318Z'),
+            last_seen: new Date('2017-04-25T17:20:22.172Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11258,8 +11258,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8550a93dc7a703e60e1ec950841309e4.png',
             birthday: null,
-            first_seen: '2014-11-10T12:29:17.555Z',
-            last_seen: '2016-05-12T04:31:20.359Z',
+            first_seen: new Date('2014-11-10T12:29:17.555Z'),
+            last_seen: new Date('2016-05-12T04:31:20.359Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11277,8 +11277,8 @@ data = {
             city: 'Obbatip',
             avatar: 'https://robohash.org/5b44f414edaa07d5fdbf7fd4c866ab67.png',
             birthday: '1963-05-13T03:28:49.201Z',
-            first_seen: '2017-04-05T00:50:10.492Z',
-            last_seen: '2017-04-19T10:31:27.222Z',
+            first_seen: new Date('2017-04-05T00:50:10.492Z'),
+            last_seen: new Date('2017-04-19T10:31:27.222Z'),
             has_ordered: true,
             latest_purchase: '2017-04-09T12:10:14.489Z',
             has_newsletter: false,
@@ -11296,8 +11296,8 @@ data = {
             city: 'Arjieb',
             avatar: 'https://robohash.org/93c5c76c81eedb1d2cbcea4409c9d024.png',
             birthday: '1964-06-23T06:15:04.653Z',
-            first_seen: '2013-05-29T08:25:43.574Z',
-            last_seen: '2016-08-19T16:30:07.069Z',
+            first_seen: new Date('2013-05-29T08:25:43.574Z'),
+            last_seen: new Date('2016-08-19T16:30:07.069Z'),
             has_ordered: true,
             latest_purchase: '2016-07-04T19:22:46.088Z',
             has_newsletter: false,
@@ -11315,8 +11315,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/840aa14c9746e791e40d52b2af9f1a02.png',
             birthday: null,
-            first_seen: '2015-08-31T20:40:35.566Z',
-            last_seen: '2016-12-13T01:17:43.848Z',
+            first_seen: new Date('2015-08-31T20:40:35.566Z'),
+            last_seen: new Date('2016-12-13T01:17:43.848Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11334,8 +11334,8 @@ data = {
             city: 'Zuwisbi',
             avatar: 'https://robohash.org/be802538da523f687127d1e1a00290f5.png',
             birthday: '1976-12-13T11:58:22.096Z',
-            first_seen: '2013-01-06T12:20:43.288Z',
-            last_seen: '2015-06-04T00:30:43.185Z',
+            first_seen: new Date('2013-01-06T12:20:43.288Z'),
+            last_seen: new Date('2015-06-04T00:30:43.185Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -11353,8 +11353,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9b66853f677259e9f49a87e9f55dbf02.png',
             birthday: null,
-            first_seen: '2014-03-14T21:10:02.782Z',
-            last_seen: '2015-09-13T10:52:59.069Z',
+            first_seen: new Date('2014-03-14T21:10:02.782Z'),
+            last_seen: new Date('2015-09-13T10:52:59.069Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11372,8 +11372,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3ebab597002fed729f2566efd9924d65.png',
             birthday: null,
-            first_seen: '2015-10-01T16:49:18.326Z',
-            last_seen: '2017-02-06T03:20:33.510Z',
+            first_seen: new Date('2015-10-01T16:49:18.326Z'),
+            last_seen: new Date('2017-02-06T03:20:33.510Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11391,8 +11391,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/eba4bea41d33f2cfae66c6b7d3111bdd.png',
             birthday: null,
-            first_seen: '2015-06-24T19:52:02.449Z',
-            last_seen: '2017-04-12T10:06:04.403Z',
+            first_seen: new Date('2015-06-24T19:52:02.449Z'),
+            last_seen: new Date('2017-04-12T10:06:04.403Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11410,8 +11410,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/407e8235eb3827ac3cc7d0b06f0ceb13.png',
             birthday: null,
-            first_seen: '2015-10-30T22:03:59.458Z',
-            last_seen: '2016-04-13T17:51:20.008Z',
+            first_seen: new Date('2015-10-30T22:03:59.458Z'),
+            last_seen: new Date('2016-04-13T17:51:20.008Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11429,8 +11429,8 @@ data = {
             city: 'Hevatedi',
             avatar: 'https://robohash.org/169fd754abde76bc765281e1b5253374.png',
             birthday: '1994-03-20T10:46:23.687Z',
-            first_seen: '2013-04-04T21:35:32.901Z',
-            last_seen: '2015-09-22T14:20:12.605Z',
+            first_seen: new Date('2013-04-04T21:35:32.901Z'),
+            last_seen: new Date('2015-09-22T14:20:12.605Z'),
             has_ordered: true,
             latest_purchase: '2015-08-12T03:31:13.444Z',
             has_newsletter: false,
@@ -11448,8 +11448,8 @@ data = {
             city: 'Utzifil',
             avatar: 'https://robohash.org/5fe27ed1512d1f0d5705acd523f2c3cc.png',
             birthday: '1954-07-16T04:19:47.229Z',
-            first_seen: '2014-11-05T07:56:55.867Z',
-            last_seen: '2016-07-09T21:24:49.468Z',
+            first_seen: new Date('2014-11-05T07:56:55.867Z'),
+            last_seen: new Date('2016-07-09T21:24:49.468Z'),
             has_ordered: true,
             latest_purchase: '2016-05-02T10:49:31.751Z',
             has_newsletter: true,
@@ -11467,8 +11467,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e7df1058c35850ca2b70458992d13ea0.png',
             birthday: null,
-            first_seen: '2015-11-23T04:13:26.147Z',
-            last_seen: '2016-07-07T01:57:05.255Z',
+            first_seen: new Date('2015-11-23T04:13:26.147Z'),
+            last_seen: new Date('2016-07-07T01:57:05.255Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11486,8 +11486,8 @@ data = {
             city: 'Lavuta',
             avatar: 'https://robohash.org/0d1c3d1d453e516c22daf0fb158ca6f5.png',
             birthday: '1994-08-06T10:29:14.399Z',
-            first_seen: '2015-11-13T15:29:22.787Z',
-            last_seen: '2016-11-24T09:17:48.818Z',
+            first_seen: new Date('2015-11-13T15:29:22.787Z'),
+            last_seen: new Date('2016-11-24T09:17:48.818Z'),
             has_ordered: true,
             latest_purchase: '2016-10-27T15:36:16.169Z',
             has_newsletter: true,
@@ -11505,8 +11505,8 @@ data = {
             city: 'Aztegtud',
             avatar: 'https://robohash.org/916695a62406980fe0d639a4d3d3938a.png',
             birthday: '1996-11-20T11:27:20.064Z',
-            first_seen: '2016-11-04T20:40:49.063Z',
-            last_seen: '2017-04-19T17:31:05.009Z',
+            first_seen: new Date('2016-11-04T20:40:49.063Z'),
+            last_seen: new Date('2017-04-19T17:31:05.009Z'),
             has_ordered: true,
             latest_purchase: '2017-02-02T15:31:28.859Z',
             has_newsletter: true,
@@ -11524,8 +11524,8 @@ data = {
             city: 'Mavfuwtut',
             avatar: 'https://robohash.org/c914c493c757e1f81d3cd871ebf38004.png',
             birthday: '1957-09-29T02:14:46.754Z',
-            first_seen: '2014-08-14T21:34:50.428Z',
-            last_seen: '2017-02-27T05:41:22.687Z',
+            first_seen: new Date('2014-08-14T21:34:50.428Z'),
+            last_seen: new Date('2017-02-27T05:41:22.687Z'),
             has_ordered: true,
             latest_purchase: '2017-02-18T12:43:13.915Z',
             has_newsletter: true,
@@ -11543,8 +11543,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/103009143059eb8c36b0d835cb784329.png',
             birthday: null,
-            first_seen: '2016-03-09T03:16:57.207Z',
-            last_seen: '2017-04-03T09:45:47.837Z',
+            first_seen: new Date('2016-03-09T03:16:57.207Z'),
+            last_seen: new Date('2017-04-03T09:45:47.837Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11562,8 +11562,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/76763ca108916cca15736e40e8874479.png',
             birthday: null,
-            first_seen: '2016-12-03T14:24:17.548Z',
-            last_seen: '2017-03-05T01:48:13.364Z',
+            first_seen: new Date('2016-12-03T14:24:17.548Z'),
+            last_seen: new Date('2017-03-05T01:48:13.364Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11581,8 +11581,8 @@ data = {
             city: 'Wipkena',
             avatar: 'https://robohash.org/d630c488e6bd7123ac1418344d23eae1.png',
             birthday: '1988-08-17T08:03:50.222Z',
-            first_seen: '2014-07-29T20:07:49.950Z',
-            last_seen: '2017-02-22T23:37:31.267Z',
+            first_seen: new Date('2014-07-29T20:07:49.950Z'),
+            last_seen: new Date('2017-02-22T23:37:31.267Z'),
             has_ordered: true,
             latest_purchase: '2017-02-08T12:51:06.504Z',
             has_newsletter: false,
@@ -11600,8 +11600,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/80fd400a0ec3f8f1445c128ca08bb2d4.png',
             birthday: null,
-            first_seen: '2015-12-28T07:25:49.716Z',
-            last_seen: '2016-04-21T21:20:53.703Z',
+            first_seen: new Date('2015-12-28T07:25:49.716Z'),
+            last_seen: new Date('2016-04-21T21:20:53.703Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11619,8 +11619,8 @@ data = {
             city: 'Oliujrok',
             avatar: 'https://robohash.org/cdf53b63c79c4be8b71c5c104279de53.png',
             birthday: '1977-02-22T05:04:54.095Z',
-            first_seen: '2017-03-02T13:36:00.567Z',
-            last_seen: '2017-04-22T12:46:53.935Z',
+            first_seen: new Date('2017-03-02T13:36:00.567Z'),
+            last_seen: new Date('2017-04-22T12:46:53.935Z'),
             has_ordered: true,
             latest_purchase: '2017-03-30T17:43:41.902Z',
             has_newsletter: false,
@@ -11638,8 +11638,8 @@ data = {
             city: 'Vecbisje',
             avatar: 'https://robohash.org/3166891042edb06e87045d86a6b71441.png',
             birthday: '1998-10-22T06:41:50.225Z',
-            first_seen: '2016-09-19T09:30:41.984Z',
-            last_seen: '2016-11-21T22:28:35.157Z',
+            first_seen: new Date('2016-09-19T09:30:41.984Z'),
+            last_seen: new Date('2016-11-21T22:28:35.157Z'),
             has_ordered: true,
             latest_purchase: '2016-11-19T13:14:13.531Z',
             has_newsletter: false,
@@ -11657,8 +11657,8 @@ data = {
             city: 'Taoruvi',
             avatar: 'https://robohash.org/26f10e15ca5afd229697c23fd77f9738.png',
             birthday: '1965-10-21T01:11:48.522Z',
-            first_seen: '2015-06-30T14:27:27.145Z',
-            last_seen: '2017-03-03T01:17:15.422Z',
+            first_seen: new Date('2015-06-30T14:27:27.145Z'),
+            last_seen: new Date('2017-03-03T01:17:15.422Z'),
             has_ordered: true,
             latest_purchase: '2016-11-08T04:35:01.248Z',
             has_newsletter: true,
@@ -11676,8 +11676,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e695989b4ebdd7314e13733683fe5977.png',
             birthday: null,
-            first_seen: '2014-11-20T05:26:31.471Z',
-            last_seen: '2017-03-23T06:16:17.744Z',
+            first_seen: new Date('2014-11-20T05:26:31.471Z'),
+            last_seen: new Date('2017-03-23T06:16:17.744Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11695,8 +11695,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1746c7a9bc8e708cd2cee30afbf739e5.png',
             birthday: null,
-            first_seen: '2014-05-31T12:43:24.141Z',
-            last_seen: '2015-09-15T20:02:30.020Z',
+            first_seen: new Date('2014-05-31T12:43:24.141Z'),
+            last_seen: new Date('2015-09-15T20:02:30.020Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11714,8 +11714,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6ed0ca55c58335b4244f87e3312fe94e.png',
             birthday: null,
-            first_seen: '2014-06-04T05:45:21.223Z',
-            last_seen: '2016-10-29T07:59:39.576Z',
+            first_seen: new Date('2014-06-04T05:45:21.223Z'),
+            last_seen: new Date('2016-10-29T07:59:39.576Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11733,8 +11733,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/09e199f9bfe955308627c4c3a4b4e183.png',
             birthday: null,
-            first_seen: '2016-12-17T08:03:12.231Z',
-            last_seen: '2017-02-21T21:37:25.664Z',
+            first_seen: new Date('2016-12-17T08:03:12.231Z'),
+            last_seen: new Date('2017-02-21T21:37:25.664Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11752,8 +11752,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e6c8c0b497d4c222fd318a78a9683cca.png',
             birthday: null,
-            first_seen: '2016-08-02T23:54:04.503Z',
-            last_seen: '2017-03-27T06:32:35.377Z',
+            first_seen: new Date('2016-08-02T23:54:04.503Z'),
+            last_seen: new Date('2017-03-27T06:32:35.377Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11771,8 +11771,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b0efb553837096bcd75311aa9f6d82c3.png',
             birthday: null,
-            first_seen: '2016-10-22T01:22:02.099Z',
-            last_seen: '2017-03-13T13:08:42.384Z',
+            first_seen: new Date('2016-10-22T01:22:02.099Z'),
+            last_seen: new Date('2017-03-13T13:08:42.384Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11790,8 +11790,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d31d8672cc980be71fdeeb7c6f9ada48.png',
             birthday: null,
-            first_seen: '2016-02-17T15:21:32.912Z',
-            last_seen: '2016-07-13T00:44:28.827Z',
+            first_seen: new Date('2016-02-17T15:21:32.912Z'),
+            last_seen: new Date('2016-07-13T00:44:28.827Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11809,8 +11809,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b4dea0460ac15c7c71c3c177cdfddfc4.png',
             birthday: null,
-            first_seen: '2016-04-27T12:18:02.410Z',
-            last_seen: '2017-02-09T09:03:44.159Z',
+            first_seen: new Date('2016-04-27T12:18:02.410Z'),
+            last_seen: new Date('2017-02-09T09:03:44.159Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11828,8 +11828,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d3e12d9a345b73d7001f006f0a3bb7f0.png',
             birthday: null,
-            first_seen: '2017-02-18T13:19:07.079Z',
-            last_seen: '2017-02-23T22:25:10.928Z',
+            first_seen: new Date('2017-02-18T13:19:07.079Z'),
+            last_seen: new Date('2017-02-23T22:25:10.928Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11847,8 +11847,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9bb0bc4498adc0de97d1309eb009e067.png',
             birthday: null,
-            first_seen: '2016-03-20T02:33:11.894Z',
-            last_seen: '2017-04-02T01:04:49.585Z',
+            first_seen: new Date('2016-03-20T02:33:11.894Z'),
+            last_seen: new Date('2017-04-02T01:04:49.585Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11866,8 +11866,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/844356d3137727523d155cfe0937c3ba.png',
             birthday: null,
-            first_seen: '2017-03-18T04:49:51.513Z',
-            last_seen: '2017-04-08T21:15:27.888Z',
+            first_seen: new Date('2017-03-18T04:49:51.513Z'),
+            last_seen: new Date('2017-04-08T21:15:27.888Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11885,8 +11885,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3d483456a48919937ec5f851055e288f.png',
             birthday: null,
-            first_seen: '2016-10-13T22:54:05.152Z',
-            last_seen: '2017-02-28T10:12:25.451Z',
+            first_seen: new Date('2016-10-13T22:54:05.152Z'),
+            last_seen: new Date('2017-02-28T10:12:25.451Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11904,8 +11904,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3b5d942c2b152d541799543734250f7d.png',
             birthday: null,
-            first_seen: '2014-11-25T16:19:08.693Z',
-            last_seen: '2016-12-18T17:17:10.838Z',
+            first_seen: new Date('2014-11-25T16:19:08.693Z'),
+            last_seen: new Date('2016-12-18T17:17:10.838Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11923,8 +11923,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e5e88d4b052e8ac0aa2f7cbebb132910.png',
             birthday: null,
-            first_seen: '2013-12-28T05:09:37.613Z',
-            last_seen: '2017-02-19T16:29:03.677Z',
+            first_seen: new Date('2013-12-28T05:09:37.613Z'),
+            last_seen: new Date('2017-02-19T16:29:03.677Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11942,8 +11942,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8cfd2a03dd4a2d99902fbc245ebe89b2.png',
             birthday: null,
-            first_seen: '2014-05-29T16:48:59.327Z',
-            last_seen: '2015-10-03T05:29:57.600Z',
+            first_seen: new Date('2014-05-29T16:48:59.327Z'),
+            last_seen: new Date('2015-10-03T05:29:57.600Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -11961,8 +11961,8 @@ data = {
             city: 'Zucegbew',
             avatar: 'https://robohash.org/22869595c76ce210ed75b8eb61c5474e.png',
             birthday: '1966-04-12T10:04:58.648Z',
-            first_seen: '2016-09-17T12:06:20.221Z',
-            last_seen: '2017-02-11T15:27:21.299Z',
+            first_seen: new Date('2016-09-17T12:06:20.221Z'),
+            last_seen: new Date('2017-02-11T15:27:21.299Z'),
             has_ordered: true,
             latest_purchase: '2016-09-26T15:03:23.309Z',
             has_newsletter: false,
@@ -11980,8 +11980,8 @@ data = {
             city: 'Insofmaz',
             avatar: 'https://robohash.org/c3a15dc76c068acd3d09add0a194e016.png',
             birthday: '1953-08-14T10:08:27.504Z',
-            first_seen: '2015-10-26T12:13:16.226Z',
-            last_seen: '2017-04-13T11:36:08.163Z',
+            first_seen: new Date('2015-10-26T12:13:16.226Z'),
+            last_seen: new Date('2017-04-13T11:36:08.163Z'),
             has_ordered: true,
             latest_purchase: '2016-11-09T05:55:11.569Z',
             has_newsletter: false,
@@ -11999,8 +11999,8 @@ data = {
             city: 'Kihdiur',
             avatar: 'https://robohash.org/0607ee4c4ba4127d0520429aef682d3b.png',
             birthday: '1975-06-09T07:14:50.731Z',
-            first_seen: '2017-01-05T23:19:36.768Z',
-            last_seen: '2017-03-01T08:01:20.011Z',
+            first_seen: new Date('2017-01-05T23:19:36.768Z'),
+            last_seen: new Date('2017-03-01T08:01:20.011Z'),
             has_ordered: true,
             latest_purchase: '2017-03-01T03:07:09.597Z',
             has_newsletter: false,
@@ -12018,8 +12018,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fbd51dd50d37c536ec9aa380bee124fa.png',
             birthday: null,
-            first_seen: '2014-05-02T21:17:21.841Z',
-            last_seen: '2015-01-24T14:32:17.715Z',
+            first_seen: new Date('2014-05-02T21:17:21.841Z'),
+            last_seen: new Date('2015-01-24T14:32:17.715Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12037,8 +12037,8 @@ data = {
             city: 'Lufucfi',
             avatar: 'https://robohash.org/9a6e8df321979e7663a5cf53374ac79e.png',
             birthday: '1999-07-30T23:51:09.696Z',
-            first_seen: '2015-10-06T11:05:51.210Z',
-            last_seen: '2016-03-12T20:23:56.645Z',
+            first_seen: new Date('2015-10-06T11:05:51.210Z'),
+            last_seen: new Date('2016-03-12T20:23:56.645Z'),
             has_ordered: true,
             latest_purchase: '2016-02-16T07:50:00.542Z',
             has_newsletter: false,
@@ -12056,8 +12056,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/08898cc08fd6f75bdc6ac0fecc24317c.png',
             birthday: null,
-            first_seen: '2015-11-05T10:38:03.456Z',
-            last_seen: '2016-08-02T06:34:54.440Z',
+            first_seen: new Date('2015-11-05T10:38:03.456Z'),
+            last_seen: new Date('2016-08-02T06:34:54.440Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12075,8 +12075,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b4dc33593ea47056b56b6b483e10df0f.png',
             birthday: null,
-            first_seen: '2013-12-11T03:54:19.083Z',
-            last_seen: '2015-09-27T23:00:17.684Z',
+            first_seen: new Date('2013-12-11T03:54:19.083Z'),
+            last_seen: new Date('2015-09-27T23:00:17.684Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12094,8 +12094,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a3b81742c74b9838e72e63c1ad6c8984.png',
             birthday: null,
-            first_seen: '2017-01-11T22:57:03.982Z',
-            last_seen: '2017-04-20T00:07:51.695Z',
+            first_seen: new Date('2017-01-11T22:57:03.982Z'),
+            last_seen: new Date('2017-04-20T00:07:51.695Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12113,8 +12113,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0f8b4b9ae8a3363224001bea7eadf879.png',
             birthday: null,
-            first_seen: '2017-01-12T03:00:10.275Z',
-            last_seen: '2017-03-30T05:03:59.270Z',
+            first_seen: new Date('2017-01-12T03:00:10.275Z'),
+            last_seen: new Date('2017-03-30T05:03:59.270Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12132,8 +12132,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c57a2933b97a013f43dbe6425a8623a7.png',
             birthday: null,
-            first_seen: '2016-03-28T03:51:19.638Z',
-            last_seen: '2017-02-05T17:09:48.248Z',
+            first_seen: new Date('2016-03-28T03:51:19.638Z'),
+            last_seen: new Date('2017-02-05T17:09:48.248Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12151,8 +12151,8 @@ data = {
             city: 'Narzokro',
             avatar: 'https://robohash.org/60e9428134d0bb1d4f8aa37da2d5b283.png',
             birthday: '1972-05-03T11:18:07.810Z',
-            first_seen: '2015-09-21T05:19:18.019Z',
-            last_seen: '2016-12-08T01:59:15.969Z',
+            first_seen: new Date('2015-09-21T05:19:18.019Z'),
+            last_seen: new Date('2016-12-08T01:59:15.969Z'),
             has_ordered: true,
             latest_purchase: '2016-08-04T16:29:26.517Z',
             has_newsletter: false,
@@ -12170,8 +12170,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f52d343575a7744e0d3f69daa1928656.png',
             birthday: null,
-            first_seen: '2016-05-16T23:56:51.952Z',
-            last_seen: '2016-11-11T12:55:41.951Z',
+            first_seen: new Date('2016-05-16T23:56:51.952Z'),
+            last_seen: new Date('2016-11-11T12:55:41.951Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12189,8 +12189,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ecb96a2ee0676027ff23d22ffe791b74.png',
             birthday: null,
-            first_seen: '2016-02-28T00:53:59.022Z',
-            last_seen: '2016-12-05T15:54:19.781Z',
+            first_seen: new Date('2016-02-28T00:53:59.022Z'),
+            last_seen: new Date('2016-12-05T15:54:19.781Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12208,8 +12208,8 @@ data = {
             city: 'Usabjuf',
             avatar: 'https://robohash.org/bcb4b435ccaaa3a9dd4fce25c298cb88.png',
             birthday: '1967-09-01T03:45:33.789Z',
-            first_seen: '2017-02-04T11:28:34.921Z',
-            last_seen: '2017-04-06T00:15:09.073Z',
+            first_seen: new Date('2017-02-04T11:28:34.921Z'),
+            last_seen: new Date('2017-04-06T00:15:09.073Z'),
             has_ordered: true,
             latest_purchase: '2017-04-03T02:11:48.031Z',
             has_newsletter: true,
@@ -12227,8 +12227,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1d025dda47e58d98b75302a34c927aab.png',
             birthday: null,
-            first_seen: '2014-09-06T16:53:29.188Z',
-            last_seen: '2017-04-13T14:02:21.840Z',
+            first_seen: new Date('2014-09-06T16:53:29.188Z'),
+            last_seen: new Date('2017-04-13T14:02:21.840Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12246,8 +12246,8 @@ data = {
             city: 'Isiimjo',
             avatar: 'https://robohash.org/231f117e36807dab8b4aef0e7066d3c5.png',
             birthday: '1973-09-06T00:23:55.663Z',
-            first_seen: '2016-03-25T17:04:34.982Z',
-            last_seen: '2016-10-14T03:57:26.055Z',
+            first_seen: new Date('2016-03-25T17:04:34.982Z'),
+            last_seen: new Date('2016-10-14T03:57:26.055Z'),
             has_ordered: true,
             latest_purchase: '2016-08-10T11:37:47.233Z',
             has_newsletter: true,
@@ -12265,8 +12265,8 @@ data = {
             city: 'Mideti',
             avatar: 'https://robohash.org/a2d8fd62e69c0b4d4a43dd1be80fc84e.png',
             birthday: '1973-02-21T01:41:35.058Z',
-            first_seen: '2015-02-26T23:26:44.419Z',
-            last_seen: '2017-02-12T12:44:00.336Z',
+            first_seen: new Date('2015-02-26T23:26:44.419Z'),
+            last_seen: new Date('2017-02-12T12:44:00.336Z'),
             has_ordered: true,
             latest_purchase: '2016-09-28T08:03:29.754Z',
             has_newsletter: false,
@@ -12284,8 +12284,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/27be6dcb7be230d31d2c08abe726c626.png',
             birthday: null,
-            first_seen: '2015-10-23T06:37:02.748Z',
-            last_seen: '2016-11-24T15:38:57.788Z',
+            first_seen: new Date('2015-10-23T06:37:02.748Z'),
+            last_seen: new Date('2016-11-24T15:38:57.788Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12303,8 +12303,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f8e210045b61071e8eb18983ebf66fb7.png',
             birthday: null,
-            first_seen: '2014-04-01T04:52:11.026Z',
-            last_seen: '2017-01-27T18:47:31.573Z',
+            first_seen: new Date('2014-04-01T04:52:11.026Z'),
+            last_seen: new Date('2017-01-27T18:47:31.573Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12322,8 +12322,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0df8faaa00d49fb7bd9006096108eeaf.png',
             birthday: null,
-            first_seen: '2016-03-26T12:56:47.657Z',
-            last_seen: '2016-11-30T14:01:10.075Z',
+            first_seen: new Date('2016-03-26T12:56:47.657Z'),
+            last_seen: new Date('2016-11-30T14:01:10.075Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12341,8 +12341,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f2868e2815c11083fa1bd940ab7e0500.png',
             birthday: null,
-            first_seen: '2015-12-04T04:08:24.777Z',
-            last_seen: '2017-04-23T11:42:45.237Z',
+            first_seen: new Date('2015-12-04T04:08:24.777Z'),
+            last_seen: new Date('2017-04-23T11:42:45.237Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12360,8 +12360,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b4272ae40e2d8ab50b230c33a19ca9bb.png',
             birthday: null,
-            first_seen: '2014-09-05T16:52:09.718Z',
-            last_seen: '2016-09-08T18:30:29.542Z',
+            first_seen: new Date('2014-09-05T16:52:09.718Z'),
+            last_seen: new Date('2016-09-08T18:30:29.542Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12379,8 +12379,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d0f2f5a2f3cc1602d98ff2bb7e5222ca.png',
             birthday: null,
-            first_seen: '2016-05-11T20:20:42.822Z',
-            last_seen: '2017-02-28T23:20:10.542Z',
+            first_seen: new Date('2016-05-11T20:20:42.822Z'),
+            last_seen: new Date('2017-02-28T23:20:10.542Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12398,8 +12398,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cfac6f81c785878cad0505806a42eef8.png',
             birthday: null,
-            first_seen: '2014-10-01T14:54:17.970Z',
-            last_seen: '2017-01-01T21:29:03.350Z',
+            first_seen: new Date('2014-10-01T14:54:17.970Z'),
+            last_seen: new Date('2017-01-01T21:29:03.350Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12417,8 +12417,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/342ec3fa5db1623f329eaf41dedd3196.png',
             birthday: null,
-            first_seen: '2015-10-12T09:12:42.828Z',
-            last_seen: '2017-03-28T17:32:09.169Z',
+            first_seen: new Date('2015-10-12T09:12:42.828Z'),
+            last_seen: new Date('2017-03-28T17:32:09.169Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12436,8 +12436,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bd77a39005b9e3d4cbc007a5a007910b.png',
             birthday: null,
-            first_seen: '2014-11-16T07:57:33.624Z',
-            last_seen: '2016-02-11T17:28:10.211Z',
+            first_seen: new Date('2014-11-16T07:57:33.624Z'),
+            last_seen: new Date('2016-02-11T17:28:10.211Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12455,8 +12455,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/607086e45e34f8785c135cd7e704bdf5.png',
             birthday: null,
-            first_seen: '2017-02-24T10:11:03.948Z',
-            last_seen: '2017-04-10T14:58:44.115Z',
+            first_seen: new Date('2017-02-24T10:11:03.948Z'),
+            last_seen: new Date('2017-04-10T14:58:44.115Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12474,8 +12474,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/311395e21ea71905206da34614d14901.png',
             birthday: null,
-            first_seen: '2015-04-13T09:31:22.469Z',
-            last_seen: '2017-03-20T09:16:18.746Z',
+            first_seen: new Date('2015-04-13T09:31:22.469Z'),
+            last_seen: new Date('2017-03-20T09:16:18.746Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12493,8 +12493,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/898d8e9a19fe6c4266910c01cafc5661.png',
             birthday: null,
-            first_seen: '2013-04-25T19:37:58.302Z',
-            last_seen: '2015-05-07T13:10:24.699Z',
+            first_seen: new Date('2013-04-25T19:37:58.302Z'),
+            last_seen: new Date('2015-05-07T13:10:24.699Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12512,8 +12512,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0ab4f9af0e51af5c846cda8e521905f2.png',
             birthday: null,
-            first_seen: '2014-04-04T07:13:35.103Z',
-            last_seen: '2016-12-09T15:47:17.936Z',
+            first_seen: new Date('2014-04-04T07:13:35.103Z'),
+            last_seen: new Date('2016-12-09T15:47:17.936Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12531,8 +12531,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bc0279f6af081048ecd88067e063994d.png',
             birthday: null,
-            first_seen: '2016-03-02T10:39:11.556Z',
-            last_seen: '2016-08-18T15:31:42.803Z',
+            first_seen: new Date('2016-03-02T10:39:11.556Z'),
+            last_seen: new Date('2016-08-18T15:31:42.803Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12550,8 +12550,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/74fc3d0541cb611ac6696e2db19f62a0.png',
             birthday: null,
-            first_seen: '2016-06-28T12:28:40.962Z',
-            last_seen: '2017-04-17T13:21:00.781Z',
+            first_seen: new Date('2016-06-28T12:28:40.962Z'),
+            last_seen: new Date('2017-04-17T13:21:00.781Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12569,8 +12569,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3e52527c428be1cec412052dcbbf0355.png',
             birthday: null,
-            first_seen: '2013-02-12T14:15:44.251Z',
-            last_seen: '2016-12-15T14:25:44.856Z',
+            first_seen: new Date('2013-02-12T14:15:44.251Z'),
+            last_seen: new Date('2016-12-15T14:25:44.856Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12588,8 +12588,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b8a0a4d485d5a771e08e31d31e0ffb65.png',
             birthday: null,
-            first_seen: '2016-06-04T18:24:07.606Z',
-            last_seen: '2016-12-10T21:33:15.421Z',
+            first_seen: new Date('2016-06-04T18:24:07.606Z'),
+            last_seen: new Date('2016-12-10T21:33:15.421Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12607,8 +12607,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4ce53119f69ecd79421459db93f67d26.png',
             birthday: null,
-            first_seen: '2015-09-09T01:27:33.182Z',
-            last_seen: '2017-03-12T01:58:10.107Z',
+            first_seen: new Date('2015-09-09T01:27:33.182Z'),
+            last_seen: new Date('2017-03-12T01:58:10.107Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12626,8 +12626,8 @@ data = {
             city: 'Kecevwib',
             avatar: 'https://robohash.org/bd804f9b31cc438bcc2f8a1f2cd57ebb.png',
             birthday: '1974-10-12T09:41:45.654Z',
-            first_seen: '2016-12-08T19:46:49.460Z',
-            last_seen: '2017-03-17T06:27:35.996Z',
+            first_seen: new Date('2016-12-08T19:46:49.460Z'),
+            last_seen: new Date('2017-03-17T06:27:35.996Z'),
             has_ordered: true,
             latest_purchase: '2017-03-16T05:30:51.932Z',
             has_newsletter: false,
@@ -12645,8 +12645,8 @@ data = {
             city: 'Akdohmir',
             avatar: 'https://robohash.org/9d023e6cf53cca630c66df5f32d50b1e.png',
             birthday: '1996-08-29T09:12:23.208Z',
-            first_seen: '2015-12-03T15:06:57.631Z',
-            last_seen: '2017-03-31T02:49:33.462Z',
+            first_seen: new Date('2015-12-03T15:06:57.631Z'),
+            last_seen: new Date('2017-03-31T02:49:33.462Z'),
             has_ordered: true,
             latest_purchase: '2017-03-17T18:29:50.040Z',
             has_newsletter: false,
@@ -12664,8 +12664,8 @@ data = {
             city: 'Wisofih',
             avatar: 'https://robohash.org/7a5782924c49e6490ba73bd3e9eab033.png',
             birthday: '1982-01-02T11:51:02.579Z',
-            first_seen: '2016-01-03T16:33:47.365Z',
-            last_seen: '2016-12-25T00:20:50.258Z',
+            first_seen: new Date('2016-01-03T16:33:47.365Z'),
+            last_seen: new Date('2016-12-25T00:20:50.258Z'),
             has_ordered: true,
             latest_purchase: '2016-09-04T08:07:17.662Z',
             has_newsletter: false,
@@ -12683,8 +12683,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fa3f9ce0c4939a3d8d8f53372064aa50.png',
             birthday: null,
-            first_seen: '2016-03-09T14:05:36.261Z',
-            last_seen: '2016-12-22T06:47:19.148Z',
+            first_seen: new Date('2016-03-09T14:05:36.261Z'),
+            last_seen: new Date('2016-12-22T06:47:19.148Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12702,8 +12702,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d6797d193b8104544f06cb82184a6dcd.png',
             birthday: null,
-            first_seen: '2014-01-04T12:01:06.704Z',
-            last_seen: '2015-08-18T10:27:17.339Z',
+            first_seen: new Date('2014-01-04T12:01:06.704Z'),
+            last_seen: new Date('2015-08-18T10:27:17.339Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12721,8 +12721,8 @@ data = {
             city: 'Eciduzvu',
             avatar: 'https://robohash.org/729a5922bcb13b6af93f4e4ecb6e9c8b.png',
             birthday: '1997-09-18T07:59:58.746Z',
-            first_seen: '2015-11-07T00:35:27.333Z',
-            last_seen: '2017-04-08T21:57:45.770Z',
+            first_seen: new Date('2015-11-07T00:35:27.333Z'),
+            last_seen: new Date('2017-04-08T21:57:45.770Z'),
             has_ordered: true,
             latest_purchase: '2017-01-28T09:22:43.650Z',
             has_newsletter: false,
@@ -12740,8 +12740,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a07644fa8a4a1a059f100788611d443a.png',
             birthday: null,
-            first_seen: '2016-07-05T00:48:08.028Z',
-            last_seen: '2017-04-07T05:17:27.445Z',
+            first_seen: new Date('2016-07-05T00:48:08.028Z'),
+            last_seen: new Date('2017-04-07T05:17:27.445Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12759,8 +12759,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9d304cdabb9ac252e395f534c430193b.png',
             birthday: null,
-            first_seen: '2016-10-08T00:58:04.504Z',
-            last_seen: '2017-03-15T08:24:09.903Z',
+            first_seen: new Date('2016-10-08T00:58:04.504Z'),
+            last_seen: new Date('2017-03-15T08:24:09.903Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12778,8 +12778,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f581e8f57d0d6463503ef28147f7bdcb.png',
             birthday: null,
-            first_seen: '2014-07-06T18:18:10.266Z',
-            last_seen: '2016-02-25T21:45:46.250Z',
+            first_seen: new Date('2014-07-06T18:18:10.266Z'),
+            last_seen: new Date('2016-02-25T21:45:46.250Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12797,8 +12797,8 @@ data = {
             city: 'Muplizik',
             avatar: 'https://robohash.org/e25f52620ad33acad318a5e6210f64a4.png',
             birthday: '1975-03-31T04:52:09.075Z',
-            first_seen: '2016-08-27T04:11:00.140Z',
-            last_seen: '2017-02-09T07:42:30.444Z',
+            first_seen: new Date('2016-08-27T04:11:00.140Z'),
+            last_seen: new Date('2017-02-09T07:42:30.444Z'),
             has_ordered: true,
             latest_purchase: '2017-02-02T10:49:03.430Z',
             has_newsletter: false,
@@ -12816,8 +12816,8 @@ data = {
             city: 'Zacunzi',
             avatar: 'https://robohash.org/93cb3ed05085fd00a661f472f3a27728.png',
             birthday: '1973-04-07T07:24:07.817Z',
-            first_seen: '2015-03-28T13:11:21.255Z',
-            last_seen: '2016-08-13T15:02:39.841Z',
+            first_seen: new Date('2015-03-28T13:11:21.255Z'),
+            last_seen: new Date('2016-08-13T15:02:39.841Z'),
             has_ordered: true,
             latest_purchase: '2016-07-02T19:31:45.465Z',
             has_newsletter: false,
@@ -12835,8 +12835,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/381f0baf2ddceb896ae5ce89f7011acb.png',
             birthday: null,
-            first_seen: '2013-02-03T03:42:20.121Z',
-            last_seen: '2015-02-05T20:35:16.849Z',
+            first_seen: new Date('2013-02-03T03:42:20.121Z'),
+            last_seen: new Date('2015-02-05T20:35:16.849Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12854,8 +12854,8 @@ data = {
             city: 'Hozivir',
             avatar: 'https://robohash.org/93edabe42f33d724c5e0bdd7fd8066a5.png',
             birthday: '1994-09-21T08:21:41.949Z',
-            first_seen: '2015-09-06T15:27:49.206Z',
-            last_seen: '2016-12-31T13:54:35.313Z',
+            first_seen: new Date('2015-09-06T15:27:49.206Z'),
+            last_seen: new Date('2016-12-31T13:54:35.313Z'),
             has_ordered: true,
             latest_purchase: null,
             has_newsletter: false,
@@ -12873,8 +12873,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d71fdf0f17f36b053960057837270ca8.png',
             birthday: null,
-            first_seen: '2016-02-25T13:25:53.459Z',
-            last_seen: '2016-09-17T06:29:52.283Z',
+            first_seen: new Date('2016-02-25T13:25:53.459Z'),
+            last_seen: new Date('2016-09-17T06:29:52.283Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12892,8 +12892,8 @@ data = {
             city: 'Afidudu',
             avatar: 'https://robohash.org/41b7ea6aa629fd3fe100fe765e33204a.png',
             birthday: '1995-11-05T05:40:33.632Z',
-            first_seen: '2016-10-01T16:19:49.548Z',
-            last_seen: '2017-02-09T19:50:30.373Z',
+            first_seen: new Date('2016-10-01T16:19:49.548Z'),
+            last_seen: new Date('2017-02-09T19:50:30.373Z'),
             has_ordered: true,
             latest_purchase: '2017-02-05T16:42:20.995Z',
             has_newsletter: true,
@@ -12911,8 +12911,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/168c6a62525d41bf201fd4a32904e229.png',
             birthday: null,
-            first_seen: '2015-11-06T23:20:59.915Z',
-            last_seen: '2016-07-02T04:57:45.544Z',
+            first_seen: new Date('2015-11-06T23:20:59.915Z'),
+            last_seen: new Date('2016-07-02T04:57:45.544Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12930,8 +12930,8 @@ data = {
             city: 'Hanfoare',
             avatar: 'https://robohash.org/96a425624731ac2d7c86d5ccc4aa0c57.png',
             birthday: '1993-03-25T01:43:14.787Z',
-            first_seen: '2014-11-26T17:21:21.793Z',
-            last_seen: '2016-08-23T17:12:27.312Z',
+            first_seen: new Date('2014-11-26T17:21:21.793Z'),
+            last_seen: new Date('2016-08-23T17:12:27.312Z'),
             has_ordered: true,
             latest_purchase: '2016-03-14T21:51:47.163Z',
             has_newsletter: false,
@@ -12949,8 +12949,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/43bd6a94b3c24213a52b54b2ebd69f81.png',
             birthday: null,
-            first_seen: '2013-03-12T22:11:57.058Z',
-            last_seen: '2015-05-13T21:36:19.755Z',
+            first_seen: new Date('2013-03-12T22:11:57.058Z'),
+            last_seen: new Date('2015-05-13T21:36:19.755Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12968,8 +12968,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0fa068699ee38c1d6a25792c45846b9b.png',
             birthday: null,
-            first_seen: '2014-08-29T05:20:40.156Z',
-            last_seen: '2016-04-01T01:12:44.354Z',
+            first_seen: new Date('2014-08-29T05:20:40.156Z'),
+            last_seen: new Date('2016-04-01T01:12:44.354Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -12987,8 +12987,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b35bb2137b0fb44b896454f16d599929.png',
             birthday: null,
-            first_seen: '2014-02-05T17:28:49.671Z',
-            last_seen: '2016-05-31T21:57:33.397Z',
+            first_seen: new Date('2014-02-05T17:28:49.671Z'),
+            last_seen: new Date('2016-05-31T21:57:33.397Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13006,8 +13006,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f05eb5cdc68ce66e566739cc217555da.png',
             birthday: null,
-            first_seen: '2014-09-25T18:25:02.367Z',
-            last_seen: '2016-12-28T03:27:02.551Z',
+            first_seen: new Date('2014-09-25T18:25:02.367Z'),
+            last_seen: new Date('2016-12-28T03:27:02.551Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13025,8 +13025,8 @@ data = {
             city: 'Ewhatzac',
             avatar: 'https://robohash.org/55de5872db2d58e9d97acc22f9bc34c0.png',
             birthday: '1965-02-25T02:18:42.506Z',
-            first_seen: '2015-07-12T08:03:45.164Z',
-            last_seen: '2017-03-09T18:33:51.626Z',
+            first_seen: new Date('2015-07-12T08:03:45.164Z'),
+            last_seen: new Date('2017-03-09T18:33:51.626Z'),
             has_ordered: true,
             latest_purchase: '2016-10-17T14:07:59.144Z',
             has_newsletter: false,
@@ -13044,8 +13044,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/98f40e22f8215e426d44cb764035e46f.png',
             birthday: null,
-            first_seen: '2017-01-31T10:25:04.189Z',
-            last_seen: '2017-04-24T07:03:13.040Z',
+            first_seen: new Date('2017-01-31T10:25:04.189Z'),
+            last_seen: new Date('2017-04-24T07:03:13.040Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13063,8 +13063,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/29fae2822530609a4b941839c162cf94.png',
             birthday: null,
-            first_seen: '2017-03-08T22:58:28.968Z',
-            last_seen: '2017-03-22T01:46:11.671Z',
+            first_seen: new Date('2017-03-08T22:58:28.968Z'),
+            last_seen: new Date('2017-03-22T01:46:11.671Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13082,8 +13082,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d08cb1c61ee39ce054b260e1baba4452.png',
             birthday: null,
-            first_seen: '2015-05-29T02:02:55.354Z',
-            last_seen: '2017-04-17T15:10:32.284Z',
+            first_seen: new Date('2015-05-29T02:02:55.354Z'),
+            last_seen: new Date('2017-04-17T15:10:32.284Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13101,8 +13101,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6da7aeb73e434085ce33eedab492e0cf.png',
             birthday: null,
-            first_seen: '2015-02-24T03:09:05.833Z',
-            last_seen: '2015-09-20T04:31:41.280Z',
+            first_seen: new Date('2015-02-24T03:09:05.833Z'),
+            last_seen: new Date('2015-09-20T04:31:41.280Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13120,8 +13120,8 @@ data = {
             city: 'Tewzerezi',
             avatar: 'https://robohash.org/db68c42790ad4cc3f9e8bca3bfcaaa80.png',
             birthday: '1996-04-26T06:08:38.848Z',
-            first_seen: '2014-07-21T09:54:12.559Z',
-            last_seen: '2015-08-12T12:13:04.160Z',
+            first_seen: new Date('2014-07-21T09:54:12.559Z'),
+            last_seen: new Date('2015-08-12T12:13:04.160Z'),
             has_ordered: true,
             latest_purchase: '2015-08-06T01:47:50.342Z',
             has_newsletter: false,
@@ -13139,8 +13139,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b6dcfcb8e60b33e2264d28b912ce326d.png',
             birthday: null,
-            first_seen: '2015-11-12T20:27:02.813Z',
-            last_seen: '2016-05-06T17:59:59.521Z',
+            first_seen: new Date('2015-11-12T20:27:02.813Z'),
+            last_seen: new Date('2016-05-06T17:59:59.521Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13158,8 +13158,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dcaaf59690e44de4f5f65a1c92c656c1.png',
             birthday: null,
-            first_seen: '2017-04-01T02:39:46.519Z',
-            last_seen: '2017-04-15T19:32:24.669Z',
+            first_seen: new Date('2017-04-01T02:39:46.519Z'),
+            last_seen: new Date('2017-04-15T19:32:24.669Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13177,8 +13177,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/591458f17cd360c9c159abe225c0913a.png',
             birthday: null,
-            first_seen: '2013-05-03T00:18:19.392Z',
-            last_seen: '2015-02-03T16:03:44.969Z',
+            first_seen: new Date('2013-05-03T00:18:19.392Z'),
+            last_seen: new Date('2015-02-03T16:03:44.969Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13196,8 +13196,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/af20cc3899f5b01799ba749c467cdf02.png',
             birthday: null,
-            first_seen: '2013-08-25T05:20:51.633Z',
-            last_seen: '2017-04-24T10:26:07.276Z',
+            first_seen: new Date('2013-08-25T05:20:51.633Z'),
+            last_seen: new Date('2017-04-24T10:26:07.276Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13215,8 +13215,8 @@ data = {
             city: 'Zopabezac',
             avatar: 'https://robohash.org/a216bc42381826db8ee6ab49aabe1062.png',
             birthday: '1980-12-15T00:12:17.394Z',
-            first_seen: '2016-11-08T05:40:54.044Z',
-            last_seen: '2017-02-03T17:49:01.535Z',
+            first_seen: new Date('2016-11-08T05:40:54.044Z'),
+            last_seen: new Date('2017-02-03T17:49:01.535Z'),
             has_ordered: true,
             latest_purchase: '2017-01-20T13:13:33.696Z',
             has_newsletter: false,
@@ -13234,8 +13234,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ee1863d34b95d1e76c2dca0b66fc9e8d.png',
             birthday: null,
-            first_seen: '2014-11-06T12:37:35.478Z',
-            last_seen: '2016-08-21T09:32:37.081Z',
+            first_seen: new Date('2014-11-06T12:37:35.478Z'),
+            last_seen: new Date('2016-08-21T09:32:37.081Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13253,8 +13253,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/812ceeb4815d79093e88123ba763b10b.png',
             birthday: null,
-            first_seen: '2016-06-03T00:35:03.797Z',
-            last_seen: '2016-12-06T12:02:39.677Z',
+            first_seen: new Date('2016-06-03T00:35:03.797Z'),
+            last_seen: new Date('2016-12-06T12:02:39.677Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13272,8 +13272,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/714c06432cd97d5ceef4fb8af37d915a.png',
             birthday: null,
-            first_seen: '2016-06-09T11:11:25.754Z',
-            last_seen: '2016-12-27T11:20:54.123Z',
+            first_seen: new Date('2016-06-09T11:11:25.754Z'),
+            last_seen: new Date('2016-12-27T11:20:54.123Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13291,8 +13291,8 @@ data = {
             city: 'Kikpimek',
             avatar: 'https://robohash.org/fa4105320ffdc42669d17fe06c5c7d1c.png',
             birthday: '1988-09-04T04:16:38.296Z',
-            first_seen: '2017-02-25T22:05:10.440Z',
-            last_seen: '2017-03-27T09:50:18.502Z',
+            first_seen: new Date('2017-02-25T22:05:10.440Z'),
+            last_seen: new Date('2017-03-27T09:50:18.502Z'),
             has_ordered: true,
             latest_purchase: '2017-03-26T00:23:32.241Z',
             has_newsletter: true,
@@ -13310,8 +13310,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/06790691fd7e19c5ef2828a1da709ed4.png',
             birthday: null,
-            first_seen: '2014-12-01T15:07:57.569Z',
-            last_seen: '2017-01-31T11:25:22.263Z',
+            first_seen: new Date('2014-12-01T15:07:57.569Z'),
+            last_seen: new Date('2017-01-31T11:25:22.263Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13329,8 +13329,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/54a4734328b4a1040439e15fd2ff3da5.png',
             birthday: null,
-            first_seen: '2016-11-14T12:44:20.254Z',
-            last_seen: '2017-04-24T14:13:16.652Z',
+            first_seen: new Date('2016-11-14T12:44:20.254Z'),
+            last_seen: new Date('2017-04-24T14:13:16.652Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13348,8 +13348,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/da3452ac97d58636f8a75f05bd7c5e27.png',
             birthday: null,
-            first_seen: '2016-04-24T21:59:37.831Z',
-            last_seen: '2016-11-07T03:34:12.247Z',
+            first_seen: new Date('2016-04-24T21:59:37.831Z'),
+            last_seen: new Date('2016-11-07T03:34:12.247Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13367,8 +13367,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ed02ed447503582fca1fc491b24ca07a.png',
             birthday: null,
-            first_seen: '2013-08-13T16:10:58.362Z',
-            last_seen: '2017-02-24T02:14:27.848Z',
+            first_seen: new Date('2013-08-13T16:10:58.362Z'),
+            last_seen: new Date('2017-02-24T02:14:27.848Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13386,8 +13386,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/09fa50c20e7beb36b6439df166b73e38.png',
             birthday: null,
-            first_seen: '2016-01-15T09:44:37.903Z',
-            last_seen: '2016-12-04T02:59:31.608Z',
+            first_seen: new Date('2016-01-15T09:44:37.903Z'),
+            last_seen: new Date('2016-12-04T02:59:31.608Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13405,8 +13405,8 @@ data = {
             city: 'Ufimevnef',
             avatar: 'https://robohash.org/4c72cde59d2361f892caad44e10fa562.png',
             birthday: '1982-12-02T09:47:46.438Z',
-            first_seen: '2017-02-18T01:50:33.644Z',
-            last_seen: '2017-03-17T21:44:38.805Z',
+            first_seen: new Date('2017-02-18T01:50:33.644Z'),
+            last_seen: new Date('2017-03-17T21:44:38.805Z'),
             has_ordered: true,
             latest_purchase: '2017-03-14T01:10:52.875Z',
             has_newsletter: true,
@@ -13424,8 +13424,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/acfc1b0665d19abcd441379d0b427215.png',
             birthday: null,
-            first_seen: '2015-08-09T14:59:18.902Z',
-            last_seen: '2016-07-02T22:49:11.830Z',
+            first_seen: new Date('2015-08-09T14:59:18.902Z'),
+            last_seen: new Date('2016-07-02T22:49:11.830Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13443,8 +13443,8 @@ data = {
             city: 'Neberu',
             avatar: 'https://robohash.org/fa7edd5c02c6e0a6e77d04cc09b1d125.png',
             birthday: '1963-10-01T04:45:15.087Z',
-            first_seen: '2015-10-13T09:27:30.295Z',
-            last_seen: '2015-12-05T02:19:37.501Z',
+            first_seen: new Date('2015-10-13T09:27:30.295Z'),
+            last_seen: new Date('2015-12-05T02:19:37.501Z'),
             has_ordered: true,
             latest_purchase: '2015-12-02T17:03:08.998Z',
             has_newsletter: false,
@@ -13462,8 +13462,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/af9c234c46b286c644628253ad10fcb9.png',
             birthday: null,
-            first_seen: '2016-11-20T10:57:41.423Z',
-            last_seen: '2017-02-26T01:12:03.551Z',
+            first_seen: new Date('2016-11-20T10:57:41.423Z'),
+            last_seen: new Date('2017-02-26T01:12:03.551Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13481,8 +13481,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/446332c647b82413daf73d538b1ce2a6.png',
             birthday: null,
-            first_seen: '2014-05-14T06:12:54.549Z',
-            last_seen: '2016-03-15T08:44:21.813Z',
+            first_seen: new Date('2014-05-14T06:12:54.549Z'),
+            last_seen: new Date('2016-03-15T08:44:21.813Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13500,8 +13500,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1dd133980af47ec380bf012fa2470b1e.png',
             birthday: null,
-            first_seen: '2016-02-07T04:33:28.273Z',
-            last_seen: '2017-01-09T13:26:34.781Z',
+            first_seen: new Date('2016-02-07T04:33:28.273Z'),
+            last_seen: new Date('2017-01-09T13:26:34.781Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13519,8 +13519,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/da036af7059638502a16ecdcae3a8e9c.png',
             birthday: null,
-            first_seen: '2015-07-23T08:03:51.010Z',
-            last_seen: '2016-02-17T21:58:48.187Z',
+            first_seen: new Date('2015-07-23T08:03:51.010Z'),
+            last_seen: new Date('2016-02-17T21:58:48.187Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13538,8 +13538,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/39902055ad24fb4bc3509e39906a1dd1.png',
             birthday: null,
-            first_seen: '2016-02-08T10:03:58.847Z',
-            last_seen: '2016-09-14T14:11:36.662Z',
+            first_seen: new Date('2016-02-08T10:03:58.847Z'),
+            last_seen: new Date('2016-09-14T14:11:36.662Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13557,8 +13557,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0ad0634693cf9249dee5292c280f0e46.png',
             birthday: null,
-            first_seen: '2015-06-18T14:51:22.120Z',
-            last_seen: '2017-01-19T20:28:03.911Z',
+            first_seen: new Date('2015-06-18T14:51:22.120Z'),
+            last_seen: new Date('2017-01-19T20:28:03.911Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13576,8 +13576,8 @@ data = {
             city: 'Islaji',
             avatar: 'https://robohash.org/0d570f092cc6891aa44eb3aa6d3edf12.png',
             birthday: '1994-09-29T08:36:45.619Z',
-            first_seen: '2015-08-30T13:56:07.430Z',
-            last_seen: '2017-02-28T15:51:55.338Z',
+            first_seen: new Date('2015-08-30T13:56:07.430Z'),
+            last_seen: new Date('2017-02-28T15:51:55.338Z'),
             has_ordered: true,
             latest_purchase: '2017-01-28T16:39:31.368Z',
             has_newsletter: false,
@@ -13595,8 +13595,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4df78f601bc5916dfde510f69f53a70f.png',
             birthday: null,
-            first_seen: '2015-11-29T18:23:07.172Z',
-            last_seen: '2017-02-05T00:38:41.754Z',
+            first_seen: new Date('2015-11-29T18:23:07.172Z'),
+            last_seen: new Date('2017-02-05T00:38:41.754Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13614,8 +13614,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e8c59d63611467d6ea55f74b664ccd12.png',
             birthday: null,
-            first_seen: '2014-10-07T13:33:45.863Z',
-            last_seen: '2017-01-24T00:31:57.972Z',
+            first_seen: new Date('2014-10-07T13:33:45.863Z'),
+            last_seen: new Date('2017-01-24T00:31:57.972Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13633,8 +13633,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bfb655de35262a04b1b49688c8344344.png',
             birthday: null,
-            first_seen: '2016-06-19T05:04:26.454Z',
-            last_seen: '2017-04-12T05:12:20.399Z',
+            first_seen: new Date('2016-06-19T05:04:26.454Z'),
+            last_seen: new Date('2017-04-12T05:12:20.399Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13652,8 +13652,8 @@ data = {
             city: 'Riukuhiv',
             avatar: 'https://robohash.org/d2892e2f5cba0ded8f53e2350735d2c3.png',
             birthday: '1970-02-19T10:59:11.598Z',
-            first_seen: '2016-06-14T08:04:42.316Z',
-            last_seen: '2016-08-19T05:23:00.886Z',
+            first_seen: new Date('2016-06-14T08:04:42.316Z'),
+            last_seen: new Date('2016-08-19T05:23:00.886Z'),
             has_ordered: true,
             latest_purchase: '2016-08-15T21:20:09.931Z',
             has_newsletter: false,
@@ -13671,8 +13671,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b642b55836b9d9020fb3834554bb1739.png',
             birthday: null,
-            first_seen: '2015-03-13T20:02:31.697Z',
-            last_seen: '2016-10-06T08:43:26.944Z',
+            first_seen: new Date('2015-03-13T20:02:31.697Z'),
+            last_seen: new Date('2016-10-06T08:43:26.944Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13690,8 +13690,8 @@ data = {
             city: 'Dopafgov',
             avatar: 'https://robohash.org/a827dfaf73fca9dd40c9ad151f37e33f.png',
             birthday: '1954-07-23T06:47:28.707Z',
-            first_seen: '2015-12-01T08:49:07.621Z',
-            last_seen: '2017-03-10T08:27:02.233Z',
+            first_seen: new Date('2015-12-01T08:49:07.621Z'),
+            last_seen: new Date('2017-03-10T08:27:02.233Z'),
             has_ordered: true,
             latest_purchase: '2016-11-10T11:23:32.382Z',
             has_newsletter: true,
@@ -13709,8 +13709,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/eb1302a86f101362dd357db0e9b03a3a.png',
             birthday: null,
-            first_seen: '2016-02-16T15:30:06.518Z',
-            last_seen: '2016-08-28T11:10:46.295Z',
+            first_seen: new Date('2016-02-16T15:30:06.518Z'),
+            last_seen: new Date('2016-08-28T11:10:46.295Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13728,8 +13728,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/795d2f4031ab15ccf191c819bfa153b0.png',
             birthday: null,
-            first_seen: '2013-07-01T22:09:56.587Z',
-            last_seen: '2017-02-16T17:16:13.814Z',
+            first_seen: new Date('2013-07-01T22:09:56.587Z'),
+            last_seen: new Date('2017-02-16T17:16:13.814Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13747,8 +13747,8 @@ data = {
             city: 'Jujofok',
             avatar: 'https://robohash.org/77236f8ac14f476d79760a58a3f72590.png',
             birthday: '1975-03-07T03:53:54.208Z',
-            first_seen: '2014-09-21T21:47:30.357Z',
-            last_seen: '2016-03-06T00:54:59.892Z',
+            first_seen: new Date('2014-09-21T21:47:30.357Z'),
+            last_seen: new Date('2016-03-06T00:54:59.892Z'),
             has_ordered: true,
             latest_purchase: '2015-11-17T03:57:45.187Z',
             has_newsletter: true,
@@ -13766,8 +13766,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/da2009175dbafa237d08fb1d461e3d19.png',
             birthday: null,
-            first_seen: '2015-03-23T15:59:40.886Z',
-            last_seen: '2016-04-03T00:22:39.623Z',
+            first_seen: new Date('2015-03-23T15:59:40.886Z'),
+            last_seen: new Date('2016-04-03T00:22:39.623Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13785,8 +13785,8 @@ data = {
             city: 'Owkebuka',
             avatar: 'https://robohash.org/c87fbc746b7309c6d3223c1c4f67252a.png',
             birthday: '1979-11-24T10:03:18.445Z',
-            first_seen: '2015-04-01T22:20:21.048Z',
-            last_seen: '2016-09-14T11:52:31.700Z',
+            first_seen: new Date('2015-04-01T22:20:21.048Z'),
+            last_seen: new Date('2016-09-14T11:52:31.700Z'),
             has_ordered: true,
             latest_purchase: '2016-05-08T14:04:27.132Z',
             has_newsletter: false,
@@ -13804,8 +13804,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d72d6c640579a5ddfe62d6aa5e73bea8.png',
             birthday: null,
-            first_seen: '2014-03-06T05:00:34.097Z',
-            last_seen: '2014-07-04T00:40:34.446Z',
+            first_seen: new Date('2014-03-06T05:00:34.097Z'),
+            last_seen: new Date('2014-07-04T00:40:34.446Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13823,8 +13823,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ecb2888ef9e44b8ef08d06b10cbe4e1a.png',
             birthday: null,
-            first_seen: '2017-01-23T09:37:00.218Z',
-            last_seen: '2017-04-25T00:57:30.303Z',
+            first_seen: new Date('2017-01-23T09:37:00.218Z'),
+            last_seen: new Date('2017-04-25T00:57:30.303Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13842,8 +13842,8 @@ data = {
             city: 'Gagkavse',
             avatar: 'https://robohash.org/29a4a399d61158efe07a9a3a6e728be3.png',
             birthday: '1953-07-21T23:40:47.619Z',
-            first_seen: '2015-09-04T19:47:13.287Z',
-            last_seen: '2017-02-25T21:44:40.726Z',
+            first_seen: new Date('2015-09-04T19:47:13.287Z'),
+            last_seen: new Date('2017-02-25T21:44:40.726Z'),
             has_ordered: true,
             latest_purchase: '2016-12-28T22:25:20.233Z',
             has_newsletter: false,
@@ -13861,8 +13861,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a125140a8ae4f3e38c5466bea52dc30c.png',
             birthday: null,
-            first_seen: '2015-02-12T05:27:40.402Z',
-            last_seen: '2016-09-12T12:46:52.429Z',
+            first_seen: new Date('2015-02-12T05:27:40.402Z'),
+            last_seen: new Date('2016-09-12T12:46:52.429Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13880,8 +13880,8 @@ data = {
             city: 'Epirujif',
             avatar: 'https://robohash.org/9969ab7b54ae2719855a41f918000c04.png',
             birthday: '1970-01-11T06:18:37.634Z',
-            first_seen: '2016-01-18T00:54:35.408Z',
-            last_seen: '2016-10-31T17:26:40.846Z',
+            first_seen: new Date('2016-01-18T00:54:35.408Z'),
+            last_seen: new Date('2016-10-31T17:26:40.846Z'),
             has_ordered: true,
             latest_purchase: '2016-10-15T04:45:16.244Z',
             has_newsletter: false,
@@ -13899,8 +13899,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/39dbde613381e88039923d6f170842b1.png',
             birthday: null,
-            first_seen: '2017-03-13T15:26:32.759Z',
-            last_seen: '2017-04-08T18:57:51.767Z',
+            first_seen: new Date('2017-03-13T15:26:32.759Z'),
+            last_seen: new Date('2017-04-08T18:57:51.767Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13918,8 +13918,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d9ae3a773c95afe63de065446439e872.png',
             birthday: null,
-            first_seen: '2013-03-21T03:29:03.956Z',
-            last_seen: '2016-04-17T02:41:25.874Z',
+            first_seen: new Date('2013-03-21T03:29:03.956Z'),
+            last_seen: new Date('2016-04-17T02:41:25.874Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13937,8 +13937,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b87a8231f9bdcd54419d5be120dcbe37.png',
             birthday: null,
-            first_seen: '2013-05-23T15:56:49.755Z',
-            last_seen: '2015-05-01T22:12:12.175Z',
+            first_seen: new Date('2013-05-23T15:56:49.755Z'),
+            last_seen: new Date('2015-05-01T22:12:12.175Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13956,8 +13956,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ba9c81f53cecc6ec466691e8e39a4488.png',
             birthday: null,
-            first_seen: '2016-02-16T21:06:40.582Z',
-            last_seen: '2017-03-26T12:21:55.734Z',
+            first_seen: new Date('2016-02-16T21:06:40.582Z'),
+            last_seen: new Date('2017-03-26T12:21:55.734Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13975,8 +13975,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/be5e97fdcaaa1a2f7d97dae85a3010bf.png',
             birthday: null,
-            first_seen: '2016-04-13T01:07:28.363Z',
-            last_seen: '2016-08-27T02:56:40.610Z',
+            first_seen: new Date('2016-04-13T01:07:28.363Z'),
+            last_seen: new Date('2016-08-27T02:56:40.610Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -13994,8 +13994,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/779b3c9e5da8cd8437e13a46b35ec819.png',
             birthday: null,
-            first_seen: '2016-12-17T05:27:36.961Z',
-            last_seen: '2017-03-20T02:34:50.851Z',
+            first_seen: new Date('2016-12-17T05:27:36.961Z'),
+            last_seen: new Date('2017-03-20T02:34:50.851Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14013,8 +14013,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1b68582cc27e178235b6ed1d6350cfce.png',
             birthday: null,
-            first_seen: '2014-03-03T13:31:31.057Z',
-            last_seen: '2017-01-20T09:19:30.241Z',
+            first_seen: new Date('2014-03-03T13:31:31.057Z'),
+            last_seen: new Date('2017-01-20T09:19:30.241Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14032,8 +14032,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c43aa165429da394c503f3d3876a4ae5.png',
             birthday: null,
-            first_seen: '2015-06-13T17:27:06.687Z',
-            last_seen: '2016-04-18T00:54:06.482Z',
+            first_seen: new Date('2015-06-13T17:27:06.687Z'),
+            last_seen: new Date('2016-04-18T00:54:06.482Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14051,8 +14051,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/31150db0f01f09486adb59c64922a1d5.png',
             birthday: null,
-            first_seen: '2016-09-04T06:32:44.439Z',
-            last_seen: '2017-03-12T16:04:38.977Z',
+            first_seen: new Date('2016-09-04T06:32:44.439Z'),
+            last_seen: new Date('2017-03-12T16:04:38.977Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14070,8 +14070,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4a4932795aac4fc1e1aa5597dc06961f.png',
             birthday: null,
-            first_seen: '2013-10-20T03:21:27.865Z',
-            last_seen: '2016-07-18T20:01:34.172Z',
+            first_seen: new Date('2013-10-20T03:21:27.865Z'),
+            last_seen: new Date('2016-07-18T20:01:34.172Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14089,8 +14089,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5155aeaaf09a2bd123aa64f835f014e4.png',
             birthday: null,
-            first_seen: '2016-01-05T15:42:58.243Z',
-            last_seen: '2017-04-05T09:04:59.105Z',
+            first_seen: new Date('2016-01-05T15:42:58.243Z'),
+            last_seen: new Date('2017-04-05T09:04:59.105Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14108,8 +14108,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7c4df008d0a7b384015047f54ae67a7e.png',
             birthday: null,
-            first_seen: '2014-02-22T19:11:36.175Z',
-            last_seen: '2016-04-04T03:32:06.497Z',
+            first_seen: new Date('2014-02-22T19:11:36.175Z'),
+            last_seen: new Date('2016-04-04T03:32:06.497Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14127,8 +14127,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/02b458fd85538b20e03d2c4e09e4a0af.png',
             birthday: null,
-            first_seen: '2014-04-13T19:11:16.558Z',
-            last_seen: '2015-12-12T11:13:05.684Z',
+            first_seen: new Date('2014-04-13T19:11:16.558Z'),
+            last_seen: new Date('2015-12-12T11:13:05.684Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14146,8 +14146,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e86c40ac105071ad7acab835c7d306d3.png',
             birthday: null,
-            first_seen: '2016-02-15T22:16:02.782Z',
-            last_seen: '2016-10-03T15:52:14.722Z',
+            first_seen: new Date('2016-02-15T22:16:02.782Z'),
+            last_seen: new Date('2016-10-03T15:52:14.722Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14165,8 +14165,8 @@ data = {
             city: 'Zetwufuw',
             avatar: 'https://robohash.org/55765e97ecc3e11e2e4ee93e53bf98a8.png',
             birthday: '1955-02-14T08:20:01.017Z',
-            first_seen: '2015-01-29T03:27:09.332Z',
-            last_seen: '2016-10-24T05:36:04.903Z',
+            first_seen: new Date('2015-01-29T03:27:09.332Z'),
+            last_seen: new Date('2016-10-24T05:36:04.903Z'),
             has_ordered: true,
             latest_purchase: '2016-08-21T02:01:43.779Z',
             has_newsletter: true,
@@ -14184,8 +14184,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ae58cf5eb2513a44620b0a7450f74484.png',
             birthday: null,
-            first_seen: '2014-03-07T06:51:55.879Z',
-            last_seen: '2016-06-23T01:24:39.565Z',
+            first_seen: new Date('2014-03-07T06:51:55.879Z'),
+            last_seen: new Date('2016-06-23T01:24:39.565Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14203,8 +14203,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1bd324e47a9900d004ebda586488b864.png',
             birthday: null,
-            first_seen: '2016-04-01T06:51:30.563Z',
-            last_seen: '2016-11-01T05:35:30.970Z',
+            first_seen: new Date('2016-04-01T06:51:30.563Z'),
+            last_seen: new Date('2016-11-01T05:35:30.970Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14222,8 +14222,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/762213d034f705ba4acc60b593ba4ced.png',
             birthday: null,
-            first_seen: '2015-04-17T10:10:14.348Z',
-            last_seen: '2017-04-03T07:51:48.358Z',
+            first_seen: new Date('2015-04-17T10:10:14.348Z'),
+            last_seen: new Date('2017-04-03T07:51:48.358Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14241,8 +14241,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/254dd77d9ef45a15f5abe7b5359c8b77.png',
             birthday: null,
-            first_seen: '2014-03-20T09:24:51.150Z',
-            last_seen: '2016-06-12T23:58:08.031Z',
+            first_seen: new Date('2014-03-20T09:24:51.150Z'),
+            last_seen: new Date('2016-06-12T23:58:08.031Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14260,8 +14260,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/22bcd14fa13d8bc6d9315878d864b4a3.png',
             birthday: null,
-            first_seen: '2013-06-18T09:07:44.696Z',
-            last_seen: '2014-04-12T07:54:33.744Z',
+            first_seen: new Date('2013-06-18T09:07:44.696Z'),
+            last_seen: new Date('2014-04-12T07:54:33.744Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14279,8 +14279,8 @@ data = {
             city: 'Daoweim',
             avatar: 'https://robohash.org/85bec2848a3e4716f00e80d0c44d231d.png',
             birthday: '1965-04-16T07:27:02.839Z',
-            first_seen: '2016-10-15T19:41:27.113Z',
-            last_seen: '2017-03-04T17:34:07.434Z',
+            first_seen: new Date('2016-10-15T19:41:27.113Z'),
+            last_seen: new Date('2017-03-04T17:34:07.434Z'),
             has_ordered: true,
             latest_purchase: '2017-01-05T07:19:22.422Z',
             has_newsletter: false,
@@ -14298,8 +14298,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/71316c30c80658631b502743e6ae7d0b.png',
             birthday: null,
-            first_seen: '2015-07-31T03:55:09.472Z',
-            last_seen: '2016-03-15T22:49:27.196Z',
+            first_seen: new Date('2015-07-31T03:55:09.472Z'),
+            last_seen: new Date('2016-03-15T22:49:27.196Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14317,8 +14317,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a452ab186b2b8d25d95f34fa18093dab.png',
             birthday: null,
-            first_seen: '2016-01-17T03:08:06.030Z',
-            last_seen: '2016-10-15T10:00:12.862Z',
+            first_seen: new Date('2016-01-17T03:08:06.030Z'),
+            last_seen: new Date('2016-10-15T10:00:12.862Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14336,8 +14336,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/04dc95f44f114067da922550ef16b09a.png',
             birthday: null,
-            first_seen: '2015-03-11T02:51:21.095Z',
-            last_seen: '2017-03-01T00:54:16.164Z',
+            first_seen: new Date('2015-03-11T02:51:21.095Z'),
+            last_seen: new Date('2017-03-01T00:54:16.164Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14355,8 +14355,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3ccbcc26a220a71cc145d01c8cce2d33.png',
             birthday: null,
-            first_seen: '2017-03-07T12:21:20.846Z',
-            last_seen: '2017-04-24T03:17:00.210Z',
+            first_seen: new Date('2017-03-07T12:21:20.846Z'),
+            last_seen: new Date('2017-04-24T03:17:00.210Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14374,8 +14374,8 @@ data = {
             city: 'Epazemda',
             avatar: 'https://robohash.org/531c666b360b39e64de657fe51be888b.png',
             birthday: '1972-11-04T01:03:45.577Z',
-            first_seen: '2015-02-08T04:19:40.318Z',
-            last_seen: '2016-09-09T00:25:17.595Z',
+            first_seen: new Date('2015-02-08T04:19:40.318Z'),
+            last_seen: new Date('2016-09-09T00:25:17.595Z'),
             has_ordered: true,
             latest_purchase: '2016-09-07T16:16:57.034Z',
             has_newsletter: false,
@@ -14393,8 +14393,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9bfbb0528bd2fe2801530d0abf1ad3a2.png',
             birthday: null,
-            first_seen: '2014-05-05T01:53:34.829Z',
-            last_seen: '2015-11-28T13:36:38.652Z',
+            first_seen: new Date('2014-05-05T01:53:34.829Z'),
+            last_seen: new Date('2015-11-28T13:36:38.652Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14412,8 +14412,8 @@ data = {
             city: 'Rirevpag',
             avatar: 'https://robohash.org/919022a329d55655cda90ddfcf910572.png',
             birthday: '1990-02-07T11:01:49.416Z',
-            first_seen: '2014-08-19T09:57:25.684Z',
-            last_seen: '2016-09-26T09:28:57.232Z',
+            first_seen: new Date('2014-08-19T09:57:25.684Z'),
+            last_seen: new Date('2016-09-26T09:28:57.232Z'),
             has_ordered: true,
             latest_purchase: '2016-08-15T13:54:54.478Z',
             has_newsletter: false,
@@ -14431,8 +14431,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d4b9416894e8c9fa4207e64789835da8.png',
             birthday: null,
-            first_seen: '2015-10-15T19:12:19.906Z',
-            last_seen: '2016-01-22T05:47:17.544Z',
+            first_seen: new Date('2015-10-15T19:12:19.906Z'),
+            last_seen: new Date('2016-01-22T05:47:17.544Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14450,8 +14450,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f537a32ee67890c6c1b5d626dd8fedb0.png',
             birthday: null,
-            first_seen: '2015-03-17T08:25:38.411Z',
-            last_seen: '2016-09-29T00:04:05.170Z',
+            first_seen: new Date('2015-03-17T08:25:38.411Z'),
+            last_seen: new Date('2016-09-29T00:04:05.170Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14469,8 +14469,8 @@ data = {
             city: 'Uvoziga',
             avatar: 'https://robohash.org/d37821fd0c6774757598d8acb309d1ba.png',
             birthday: '1975-07-17T09:39:04.094Z',
-            first_seen: '2016-08-17T16:25:07.467Z',
-            last_seen: '2017-02-03T22:24:27.504Z',
+            first_seen: new Date('2016-08-17T16:25:07.467Z'),
+            last_seen: new Date('2017-02-03T22:24:27.504Z'),
             has_ordered: true,
             latest_purchase: '2017-02-01T02:48:25.977Z',
             has_newsletter: false,
@@ -14488,8 +14488,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c396c60b88f79a92dcb43ec408897803.png',
             birthday: null,
-            first_seen: '2017-04-25T08:43:40.201Z',
-            last_seen: '2017-04-25T17:53:31.630Z',
+            first_seen: new Date('2017-04-25T08:43:40.201Z'),
+            last_seen: new Date('2017-04-25T17:53:31.630Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14507,8 +14507,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0d16423e0672bfac0fe6a4ca4cf8881b.png',
             birthday: null,
-            first_seen: '2014-05-31T11:23:57.481Z',
-            last_seen: '2016-12-02T07:56:46.157Z',
+            first_seen: new Date('2014-05-31T11:23:57.481Z'),
+            last_seen: new Date('2016-12-02T07:56:46.157Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14526,8 +14526,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0a6ea5523b835323068ed56c6799f559.png',
             birthday: null,
-            first_seen: '2014-05-19T09:28:08.119Z',
-            last_seen: '2015-11-26T09:53:16.996Z',
+            first_seen: new Date('2014-05-19T09:28:08.119Z'),
+            last_seen: new Date('2015-11-26T09:53:16.996Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14545,8 +14545,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f2d1aa6594b4289113c088a34f5ac0c7.png',
             birthday: null,
-            first_seen: '2014-05-14T16:07:00.077Z',
-            last_seen: '2016-12-26T00:15:05.953Z',
+            first_seen: new Date('2014-05-14T16:07:00.077Z'),
+            last_seen: new Date('2016-12-26T00:15:05.953Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14564,8 +14564,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/41186a4733caaa3a83e0046d39e36e28.png',
             birthday: null,
-            first_seen: '2017-02-17T21:41:32.857Z',
-            last_seen: '2017-03-31T12:02:25.192Z',
+            first_seen: new Date('2017-02-17T21:41:32.857Z'),
+            last_seen: new Date('2017-03-31T12:02:25.192Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14583,8 +14583,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1d548bdbe29728fb8e1e25d477acc48c.png',
             birthday: null,
-            first_seen: '2016-03-30T15:10:12.278Z',
-            last_seen: '2016-11-04T15:50:11.074Z',
+            first_seen: new Date('2016-03-30T15:10:12.278Z'),
+            last_seen: new Date('2016-11-04T15:50:11.074Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14602,8 +14602,8 @@ data = {
             city: 'Owicelo',
             avatar: 'https://robohash.org/98a3291ec5bba671521282bf95084226.png',
             birthday: '1961-12-24T03:57:12.181Z',
-            first_seen: '2014-05-03T07:23:59.711Z',
-            last_seen: '2016-11-29T22:11:56.311Z',
+            first_seen: new Date('2014-05-03T07:23:59.711Z'),
+            last_seen: new Date('2016-11-29T22:11:56.311Z'),
             has_ordered: true,
             latest_purchase: '2016-08-20T15:02:05.926Z',
             has_newsletter: false,
@@ -14621,8 +14621,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f169f830c61c5ebdcd2b218971745266.png',
             birthday: null,
-            first_seen: '2014-01-04T16:26:43.883Z',
-            last_seen: '2015-04-09T05:30:33.918Z',
+            first_seen: new Date('2014-01-04T16:26:43.883Z'),
+            last_seen: new Date('2015-04-09T05:30:33.918Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14640,8 +14640,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fa3afd3cd7c8d6500547f93b201c4b1b.png',
             birthday: null,
-            first_seen: '2015-08-18T14:32:35.001Z',
-            last_seen: '2016-04-30T08:52:19.537Z',
+            first_seen: new Date('2015-08-18T14:32:35.001Z'),
+            last_seen: new Date('2016-04-30T08:52:19.537Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14659,8 +14659,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a9cc3192a4bfd3b0e115e7fb4df7def3.png',
             birthday: null,
-            first_seen: '2017-02-03T22:41:00.355Z',
-            last_seen: '2017-03-14T17:43:16.499Z',
+            first_seen: new Date('2017-02-03T22:41:00.355Z'),
+            last_seen: new Date('2017-03-14T17:43:16.499Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14678,8 +14678,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e3bc8e3ae4f51f634809883848cd7fe2.png',
             birthday: null,
-            first_seen: '2015-11-20T02:27:24.116Z',
-            last_seen: '2017-03-19T20:23:25.420Z',
+            first_seen: new Date('2015-11-20T02:27:24.116Z'),
+            last_seen: new Date('2017-03-19T20:23:25.420Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14697,8 +14697,8 @@ data = {
             city: 'Doltezup',
             avatar: 'https://robohash.org/062e9afcc79993feb16f0ff44f138728.png',
             birthday: '1956-09-17T04:24:28.067Z',
-            first_seen: '2016-02-01T08:56:41.849Z',
-            last_seen: '2017-01-19T22:11:29.697Z',
+            first_seen: new Date('2016-02-01T08:56:41.849Z'),
+            last_seen: new Date('2017-01-19T22:11:29.697Z'),
             has_ordered: true,
             latest_purchase: '2017-01-15T00:05:36.689Z',
             has_newsletter: false,
@@ -14716,8 +14716,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b73cb229ce95604482a7671b0e40a4a8.png',
             birthday: null,
-            first_seen: '2015-05-25T09:55:14.812Z',
-            last_seen: '2016-09-16T08:07:52.109Z',
+            first_seen: new Date('2015-05-25T09:55:14.812Z'),
+            last_seen: new Date('2016-09-16T08:07:52.109Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14735,8 +14735,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/64dd4cd70d7e416aba9e76b34d654ee6.png',
             birthday: null,
-            first_seen: '2016-05-24T00:05:35.480Z',
-            last_seen: '2016-12-25T16:01:50.871Z',
+            first_seen: new Date('2016-05-24T00:05:35.480Z'),
+            last_seen: new Date('2016-12-25T16:01:50.871Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14754,8 +14754,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7726c68d3ac20ff5f70400180bd47277.png',
             birthday: null,
-            first_seen: '2016-05-09T14:38:00.302Z',
-            last_seen: '2017-03-09T11:59:54.071Z',
+            first_seen: new Date('2016-05-09T14:38:00.302Z'),
+            last_seen: new Date('2017-03-09T11:59:54.071Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14773,8 +14773,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4165f27cde319d29a9a921ae090a6c7a.png',
             birthday: null,
-            first_seen: '2016-01-30T20:59:12.472Z',
-            last_seen: '2017-04-18T09:22:42.833Z',
+            first_seen: new Date('2016-01-30T20:59:12.472Z'),
+            last_seen: new Date('2017-04-18T09:22:42.833Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14792,8 +14792,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8a34a59d075c81e5bcbc4c9c1e7d9ee1.png',
             birthday: null,
-            first_seen: '2016-05-04T23:39:11.786Z',
-            last_seen: '2017-02-01T12:50:58.645Z',
+            first_seen: new Date('2016-05-04T23:39:11.786Z'),
+            last_seen: new Date('2017-02-01T12:50:58.645Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14811,8 +14811,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f9cd24acf82a0c3a534a6d20c14c8c8c.png',
             birthday: null,
-            first_seen: '2016-06-03T00:49:25.935Z',
-            last_seen: '2016-12-09T05:48:51.067Z',
+            first_seen: new Date('2016-06-03T00:49:25.935Z'),
+            last_seen: new Date('2016-12-09T05:48:51.067Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14830,8 +14830,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/43602b8d70b889307cfdf6bec7585491.png',
             birthday: null,
-            first_seen: '2014-02-19T10:35:16.058Z',
-            last_seen: '2015-03-05T01:05:24.956Z',
+            first_seen: new Date('2014-02-19T10:35:16.058Z'),
+            last_seen: new Date('2015-03-05T01:05:24.956Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14849,8 +14849,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f950d776f9d85523cd2d7ad44d9f481d.png',
             birthday: null,
-            first_seen: '2016-05-25T10:31:14.743Z',
-            last_seen: '2016-12-17T21:20:26.574Z',
+            first_seen: new Date('2016-05-25T10:31:14.743Z'),
+            last_seen: new Date('2016-12-17T21:20:26.574Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14868,8 +14868,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/158516cfa8caceced6c89f04ded554e1.png',
             birthday: null,
-            first_seen: '2015-07-13T16:26:35.742Z',
-            last_seen: '2016-09-19T12:15:19.057Z',
+            first_seen: new Date('2015-07-13T16:26:35.742Z'),
+            last_seen: new Date('2016-09-19T12:15:19.057Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14887,8 +14887,8 @@ data = {
             city: 'Rabehja',
             avatar: 'https://robohash.org/8a7e6380e5205f767e02029b862a08c8.png',
             birthday: '1975-02-05T04:13:15.637Z',
-            first_seen: '2013-07-06T17:22:40.300Z',
-            last_seen: '2015-09-14T01:22:28.490Z',
+            first_seen: new Date('2013-07-06T17:22:40.300Z'),
+            last_seen: new Date('2015-09-14T01:22:28.490Z'),
             has_ordered: true,
             latest_purchase: '2015-09-11T04:01:57.457Z',
             has_newsletter: true,
@@ -14906,8 +14906,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3a60d42614881a078b06e81def2b8ffd.png',
             birthday: null,
-            first_seen: '2017-04-25T04:39:23.297Z',
-            last_seen: '2017-04-26T04:11:22.558Z',
+            first_seen: new Date('2017-04-25T04:39:23.297Z'),
+            last_seen: new Date('2017-04-26T04:11:22.558Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14925,8 +14925,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a11e8c295b5b435ad6ab0a10e4f8072a.png',
             birthday: null,
-            first_seen: '2014-11-17T13:49:39.614Z',
-            last_seen: '2016-02-05T20:45:38.868Z',
+            first_seen: new Date('2014-11-17T13:49:39.614Z'),
+            last_seen: new Date('2016-02-05T20:45:38.868Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14944,8 +14944,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6960fe9a1c9e4ddb42dba35267cab41f.png',
             birthday: null,
-            first_seen: '2014-11-19T07:55:22.193Z',
-            last_seen: '2015-04-21T10:38:52.382Z',
+            first_seen: new Date('2014-11-19T07:55:22.193Z'),
+            last_seen: new Date('2015-04-21T10:38:52.382Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14963,8 +14963,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d6c8dceaaba2004014da23366b964e4d.png',
             birthday: null,
-            first_seen: '2016-08-16T16:41:43.352Z',
-            last_seen: '2017-04-24T15:21:43.606Z',
+            first_seen: new Date('2016-08-16T16:41:43.352Z'),
+            last_seen: new Date('2017-04-24T15:21:43.606Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -14982,8 +14982,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/248d4b94dcafa9149d4a437764906e6b.png',
             birthday: null,
-            first_seen: '2015-09-15T03:36:29.575Z',
-            last_seen: '2016-04-21T21:13:51.944Z',
+            first_seen: new Date('2015-09-15T03:36:29.575Z'),
+            last_seen: new Date('2016-04-21T21:13:51.944Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15001,8 +15001,8 @@ data = {
             city: 'Wutigda',
             avatar: 'https://robohash.org/1b2e9cb7c20f99b80b72b0e74b359663.png',
             birthday: '1999-06-24T01:38:36.993Z',
-            first_seen: '2016-06-17T15:41:08.393Z',
-            last_seen: '2017-03-21T17:46:56.723Z',
+            first_seen: new Date('2016-06-17T15:41:08.393Z'),
+            last_seen: new Date('2017-03-21T17:46:56.723Z'),
             has_ordered: true,
             latest_purchase: '2017-02-21T09:10:36.725Z',
             has_newsletter: false,
@@ -15020,8 +15020,8 @@ data = {
             city: 'Pakcopde',
             avatar: 'https://robohash.org/5521a5f7c157a9b42998f8bb522fdbbb.png',
             birthday: '1978-02-11T11:03:50.536Z',
-            first_seen: '2013-05-20T11:06:57.402Z',
-            last_seen: '2015-07-19T05:54:51.229Z',
+            first_seen: new Date('2013-05-20T11:06:57.402Z'),
+            last_seen: new Date('2015-07-19T05:54:51.229Z'),
             has_ordered: true,
             latest_purchase: '2014-02-27T13:48:15.141Z',
             has_newsletter: false,
@@ -15039,8 +15039,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/11633f6d1cf20fdef47e8f22aa3f0d4e.png',
             birthday: null,
-            first_seen: '2014-11-06T02:48:44.846Z',
-            last_seen: '2017-01-20T05:48:26.868Z',
+            first_seen: new Date('2014-11-06T02:48:44.846Z'),
+            last_seen: new Date('2017-01-20T05:48:26.868Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15058,8 +15058,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a7ec138fbb2f46010e5ced4124b1f80e.png',
             birthday: null,
-            first_seen: '2016-11-08T20:20:37.927Z',
-            last_seen: '2017-04-02T04:48:27.293Z',
+            first_seen: new Date('2016-11-08T20:20:37.927Z'),
+            last_seen: new Date('2017-04-02T04:48:27.293Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15077,8 +15077,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e0e43f6c3148662e7f8281e5b0bd89be.png',
             birthday: null,
-            first_seen: '2017-01-18T16:45:11.936Z',
-            last_seen: '2017-04-02T18:50:43.473Z',
+            first_seen: new Date('2017-01-18T16:45:11.936Z'),
+            last_seen: new Date('2017-04-02T18:50:43.473Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15096,8 +15096,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/568d32be41668b3e87f16a88f1c3ac6b.png',
             birthday: null,
-            first_seen: '2014-08-13T06:35:16.944Z',
-            last_seen: '2016-09-17T18:19:11.642Z',
+            first_seen: new Date('2014-08-13T06:35:16.944Z'),
+            last_seen: new Date('2016-09-17T18:19:11.642Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15115,8 +15115,8 @@ data = {
             city: 'Delbaze',
             avatar: 'https://robohash.org/2d4a9cda841480fdd67fed48daf85052.png',
             birthday: '1953-08-17T08:20:27.831Z',
-            first_seen: '2016-09-10T22:08:44.654Z',
-            last_seen: '2016-12-15T07:59:16.864Z',
+            first_seen: new Date('2016-09-10T22:08:44.654Z'),
+            last_seen: new Date('2016-12-15T07:59:16.864Z'),
             has_ordered: true,
             latest_purchase: '2016-12-05T07:57:33.037Z',
             has_newsletter: false,
@@ -15134,8 +15134,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f6b90fae6d354d5bb76e0b8b7e3b293e.png',
             birthday: null,
-            first_seen: '2016-01-09T21:52:27.005Z',
-            last_seen: '2016-12-08T06:32:42.408Z',
+            first_seen: new Date('2016-01-09T21:52:27.005Z'),
+            last_seen: new Date('2016-12-08T06:32:42.408Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15153,8 +15153,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e54730f99d6721a3c5bc4d6370d43f13.png',
             birthday: null,
-            first_seen: '2016-08-25T04:56:10.880Z',
-            last_seen: '2016-12-23T01:20:07.737Z',
+            first_seen: new Date('2016-08-25T04:56:10.880Z'),
+            last_seen: new Date('2016-12-23T01:20:07.737Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15172,8 +15172,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5dc03a8f9406d4c05351301d1aa55052.png',
             birthday: null,
-            first_seen: '2013-10-22T17:48:32.485Z',
-            last_seen: '2016-07-20T04:15:51.954Z',
+            first_seen: new Date('2013-10-22T17:48:32.485Z'),
+            last_seen: new Date('2016-07-20T04:15:51.954Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15191,8 +15191,8 @@ data = {
             city: 'Ohaukza',
             avatar: 'https://robohash.org/797bc407bd909b6a3842500c6c97a44b.png',
             birthday: '1991-06-08T06:31:51.760Z',
-            first_seen: '2016-01-05T22:25:31.055Z',
-            last_seen: '2017-04-21T15:11:32.177Z',
+            first_seen: new Date('2016-01-05T22:25:31.055Z'),
+            last_seen: new Date('2017-04-21T15:11:32.177Z'),
             has_ordered: true,
             latest_purchase: '2016-11-09T16:16:39.210Z',
             has_newsletter: true,
@@ -15210,8 +15210,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/71f6e0efac3c85372b9294e133070705.png',
             birthday: null,
-            first_seen: '2015-06-21T02:26:21.495Z',
-            last_seen: '2016-11-06T21:55:11.531Z',
+            first_seen: new Date('2015-06-21T02:26:21.495Z'),
+            last_seen: new Date('2016-11-06T21:55:11.531Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15229,8 +15229,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6b13b1e67bbc73cbcc75985a19a34722.png',
             birthday: null,
-            first_seen: '2016-03-29T18:49:03.142Z',
-            last_seen: '2016-10-15T13:22:26.878Z',
+            first_seen: new Date('2016-03-29T18:49:03.142Z'),
+            last_seen: new Date('2016-10-15T13:22:26.878Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15248,8 +15248,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3c6aedc105ca04eb767b7e7987ddf3a6.png',
             birthday: null,
-            first_seen: '2016-10-17T18:04:37.682Z',
-            last_seen: '2016-12-17T08:15:34.820Z',
+            first_seen: new Date('2016-10-17T18:04:37.682Z'),
+            last_seen: new Date('2016-12-17T08:15:34.820Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15267,8 +15267,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1e25810d11c7df583a6c20fe34981a13.png',
             birthday: null,
-            first_seen: '2014-11-10T02:41:49.371Z',
-            last_seen: '2016-11-29T18:23:03.982Z',
+            first_seen: new Date('2014-11-10T02:41:49.371Z'),
+            last_seen: new Date('2016-11-29T18:23:03.982Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15286,8 +15286,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/24c9b8a597e18f18c3e6a7c0d593a042.png',
             birthday: null,
-            first_seen: '2016-08-13T10:55:51.127Z',
-            last_seen: '2017-04-01T02:34:34.213Z',
+            first_seen: new Date('2016-08-13T10:55:51.127Z'),
+            last_seen: new Date('2017-04-01T02:34:34.213Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15305,8 +15305,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d3ddd265834fc47d5f98f0b9f1adecd1.png',
             birthday: null,
-            first_seen: '2016-10-05T04:19:21.627Z',
-            last_seen: '2017-01-12T18:30:33.204Z',
+            first_seen: new Date('2016-10-05T04:19:21.627Z'),
+            last_seen: new Date('2017-01-12T18:30:33.204Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15324,8 +15324,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7e21ed1e38285df29b8aa631a5143c3e.png',
             birthday: null,
-            first_seen: '2016-04-23T22:57:13.982Z',
-            last_seen: '2016-11-12T12:30:52.499Z',
+            first_seen: new Date('2016-04-23T22:57:13.982Z'),
+            last_seen: new Date('2016-11-12T12:30:52.499Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15343,8 +15343,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0f8711a64d95e2f49ef798e6c3bd55ad.png',
             birthday: null,
-            first_seen: '2016-02-10T13:01:55.588Z',
-            last_seen: '2016-07-31T13:02:33.342Z',
+            first_seen: new Date('2016-02-10T13:01:55.588Z'),
+            last_seen: new Date('2016-07-31T13:02:33.342Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15362,8 +15362,8 @@ data = {
             city: 'Wijfeze',
             avatar: 'https://robohash.org/9d59ee127e1ccd44f2a36465160d9b4f.png',
             birthday: '1980-06-06T03:52:38.944Z',
-            first_seen: '2015-10-16T02:09:09.271Z',
-            last_seen: '2016-06-04T16:29:36.736Z',
+            first_seen: new Date('2015-10-16T02:09:09.271Z'),
+            last_seen: new Date('2016-06-04T16:29:36.736Z'),
             has_ordered: true,
             latest_purchase: '2016-04-26T12:57:48.439Z',
             has_newsletter: false,
@@ -15381,8 +15381,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fff8ae0ee73d8e19eda38dd6528f1d19.png',
             birthday: null,
-            first_seen: '2017-03-19T23:31:51.512Z',
-            last_seen: '2017-04-23T01:08:31.942Z',
+            first_seen: new Date('2017-03-19T23:31:51.512Z'),
+            last_seen: new Date('2017-04-23T01:08:31.942Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15400,8 +15400,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/73db77ff026a9b9077fbf409ed4cd642.png',
             birthday: null,
-            first_seen: '2016-11-24T10:16:23.028Z',
-            last_seen: '2017-01-29T00:05:13.633Z',
+            first_seen: new Date('2016-11-24T10:16:23.028Z'),
+            last_seen: new Date('2017-01-29T00:05:13.633Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15419,8 +15419,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/8ceeea25189fc13dcf402fc12d13b716.png',
             birthday: null,
-            first_seen: '2016-10-21T03:49:55.401Z',
-            last_seen: '2017-02-11T11:06:41.378Z',
+            first_seen: new Date('2016-10-21T03:49:55.401Z'),
+            last_seen: new Date('2017-02-11T11:06:41.378Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15438,8 +15438,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5d5e632a60a94f6b203931c5d52a1803.png',
             birthday: null,
-            first_seen: '2014-07-10T10:20:55.153Z',
-            last_seen: '2015-08-26T00:39:08.952Z',
+            first_seen: new Date('2014-07-10T10:20:55.153Z'),
+            last_seen: new Date('2015-08-26T00:39:08.952Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15457,8 +15457,8 @@ data = {
             city: 'Idatajer',
             avatar: 'https://robohash.org/5587658e5a83b8da050a948798beff45.png',
             birthday: '1952-12-05T02:23:19.896Z',
-            first_seen: '2015-12-12T00:02:51.065Z',
-            last_seen: '2016-09-17T02:24:36.733Z',
+            first_seen: new Date('2015-12-12T00:02:51.065Z'),
+            last_seen: new Date('2016-09-17T02:24:36.733Z'),
             has_ordered: true,
             latest_purchase: '2016-08-19T18:35:21.097Z',
             has_newsletter: false,
@@ -15476,8 +15476,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fc47dfe3795f0b5982943dc92d9658d7.png',
             birthday: null,
-            first_seen: '2017-03-27T08:09:07.033Z',
-            last_seen: '2017-04-19T21:13:47.696Z',
+            first_seen: new Date('2017-03-27T08:09:07.033Z'),
+            last_seen: new Date('2017-04-19T21:13:47.696Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15495,8 +15495,8 @@ data = {
             city: 'Fuczeidu',
             avatar: 'https://robohash.org/64b9b953abc2a9edec8caba3270692c0.png',
             birthday: '1993-09-02T05:42:00.969Z',
-            first_seen: '2015-07-07T08:54:15.571Z',
-            last_seen: '2016-12-22T22:07:14.537Z',
+            first_seen: new Date('2015-07-07T08:54:15.571Z'),
+            last_seen: new Date('2016-12-22T22:07:14.537Z'),
             has_ordered: true,
             latest_purchase: '2016-07-12T03:08:15.396Z',
             has_newsletter: false,
@@ -15514,8 +15514,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/23964bce8cdf579de298e038c300a9aa.png',
             birthday: null,
-            first_seen: '2016-12-19T23:05:04.934Z',
-            last_seen: '2017-03-15T20:26:50.212Z',
+            first_seen: new Date('2016-12-19T23:05:04.934Z'),
+            last_seen: new Date('2017-03-15T20:26:50.212Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15533,8 +15533,8 @@ data = {
             city: 'Gikjoga',
             avatar: 'https://robohash.org/4d4d26a7308b5ab2db67962ef7157afa.png',
             birthday: '1987-04-14T06:41:45.554Z',
-            first_seen: '2016-04-06T02:36:00.408Z',
-            last_seen: '2017-04-07T19:54:28.307Z',
+            first_seen: new Date('2016-04-06T02:36:00.408Z'),
+            last_seen: new Date('2017-04-07T19:54:28.307Z'),
             has_ordered: true,
             latest_purchase: '2017-04-01T06:08:32.066Z',
             has_newsletter: true,
@@ -15552,8 +15552,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/dfd375db16311a7947bfd95066483272.png',
             birthday: null,
-            first_seen: '2014-05-17T23:32:21.919Z',
-            last_seen: '2016-09-10T04:23:42.133Z',
+            first_seen: new Date('2014-05-17T23:32:21.919Z'),
+            last_seen: new Date('2016-09-10T04:23:42.133Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15571,8 +15571,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/442c183db85d6537ab506f09d3d5b281.png',
             birthday: null,
-            first_seen: '2017-04-07T17:11:19.010Z',
-            last_seen: '2017-04-17T05:04:14.950Z',
+            first_seen: new Date('2017-04-07T17:11:19.010Z'),
+            last_seen: new Date('2017-04-17T05:04:14.950Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15590,8 +15590,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1e4d5f81dad4e1ac23070dd5924a9bb9.png',
             birthday: null,
-            first_seen: '2014-08-10T11:39:32.533Z',
-            last_seen: '2016-01-24T08:28:32.151Z',
+            first_seen: new Date('2014-08-10T11:39:32.533Z'),
+            last_seen: new Date('2016-01-24T08:28:32.151Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15609,8 +15609,8 @@ data = {
             city: 'Jolpigo',
             avatar: 'https://robohash.org/b449149c8adf1f63f34fd480242736a7.png',
             birthday: '1983-08-30T07:13:05.589Z',
-            first_seen: '2017-04-18T22:32:49.877Z',
-            last_seen: '2017-04-25T23:46:45.488Z',
+            first_seen: new Date('2017-04-18T22:32:49.877Z'),
+            last_seen: new Date('2017-04-25T23:46:45.488Z'),
             has_ordered: true,
             latest_purchase: '2017-04-21T20:59:30.249Z',
             has_newsletter: false,
@@ -15628,8 +15628,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a02863ed4a9fa7f5d122d5a61781d1a5.png',
             birthday: null,
-            first_seen: '2016-01-21T07:36:24.480Z',
-            last_seen: '2016-11-11T22:55:14.240Z',
+            first_seen: new Date('2016-01-21T07:36:24.480Z'),
+            last_seen: new Date('2016-11-11T22:55:14.240Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15647,8 +15647,8 @@ data = {
             city: 'Cacducu',
             avatar: 'https://robohash.org/edf97c8413139ab1edb819da53d1dffd.png',
             birthday: '1970-11-02T06:55:14.195Z',
-            first_seen: '2015-04-15T07:50:50.517Z',
-            last_seen: '2017-01-30T15:57:56.898Z',
+            first_seen: new Date('2015-04-15T07:50:50.517Z'),
+            last_seen: new Date('2017-01-30T15:57:56.898Z'),
             has_ordered: true,
             latest_purchase: '2016-11-09T10:26:15.776Z',
             has_newsletter: true,
@@ -15666,8 +15666,8 @@ data = {
             city: 'Kisonaz',
             avatar: 'https://robohash.org/2c43a2cbf4cc9ec979021a983bbf3b7e.png',
             birthday: '1982-04-28T09:48:25.225Z',
-            first_seen: '2014-06-23T01:44:40.961Z',
-            last_seen: '2017-01-05T05:09:11.091Z',
+            first_seen: new Date('2014-06-23T01:44:40.961Z'),
+            last_seen: new Date('2017-01-05T05:09:11.091Z'),
             has_ordered: true,
             latest_purchase: '2016-09-22T14:30:27.327Z',
             has_newsletter: true,
@@ -15685,8 +15685,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3085136dffd3d4e99f9231d71b69b01f.png',
             birthday: null,
-            first_seen: '2017-03-19T03:35:52.612Z',
-            last_seen: '2017-04-23T21:45:33.373Z',
+            first_seen: new Date('2017-03-19T03:35:52.612Z'),
+            last_seen: new Date('2017-04-23T21:45:33.373Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15704,8 +15704,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/bee12627105e845700d908cf7badc8bf.png',
             birthday: null,
-            first_seen: '2016-01-18T17:52:49.192Z',
-            last_seen: '2016-06-02T00:13:00.972Z',
+            first_seen: new Date('2016-01-18T17:52:49.192Z'),
+            last_seen: new Date('2016-06-02T00:13:00.972Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15723,8 +15723,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/a05346cde5361dd350326679c6ea54f3.png',
             birthday: null,
-            first_seen: '2016-05-08T13:50:45.306Z',
-            last_seen: '2017-04-01T04:03:48.517Z',
+            first_seen: new Date('2016-05-08T13:50:45.306Z'),
+            last_seen: new Date('2017-04-01T04:03:48.517Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15742,8 +15742,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/35a758646ff703ef43887afd75730030.png',
             birthday: null,
-            first_seen: '2012-10-27T04:12:44.082Z',
-            last_seen: '2016-10-15T03:59:15.093Z',
+            first_seen: new Date('2012-10-27T04:12:44.082Z'),
+            last_seen: new Date('2016-10-15T03:59:15.093Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15761,8 +15761,8 @@ data = {
             city: 'Kebuvic',
             avatar: 'https://robohash.org/b0d5287dd193e9ee8b1249aca00416b0.png',
             birthday: '1956-10-26T03:05:27.140Z',
-            first_seen: '2017-03-20T10:18:06.273Z',
-            last_seen: '2017-04-03T23:47:15.130Z',
+            first_seen: new Date('2017-03-20T10:18:06.273Z'),
+            last_seen: new Date('2017-04-03T23:47:15.130Z'),
             has_ordered: true,
             latest_purchase: '2017-03-31T15:50:10.238Z',
             has_newsletter: false,
@@ -15780,8 +15780,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/3e5b1386ad734c155e356593ae49eb16.png',
             birthday: null,
-            first_seen: '2016-01-31T22:31:29.549Z',
-            last_seen: '2016-10-30T10:11:54.700Z',
+            first_seen: new Date('2016-01-31T22:31:29.549Z'),
+            last_seen: new Date('2016-10-30T10:11:54.700Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15799,8 +15799,8 @@ data = {
             city: 'Tuszojhe',
             avatar: 'https://robohash.org/a0679b3b9ee47299f353169d820a9998.png',
             birthday: '1963-01-29T01:06:13.318Z',
-            first_seen: '2016-06-23T15:51:44.199Z',
-            last_seen: '2016-10-24T03:42:59.736Z',
+            first_seen: new Date('2016-06-23T15:51:44.199Z'),
+            last_seen: new Date('2016-10-24T03:42:59.736Z'),
             has_ordered: true,
             latest_purchase: '2016-10-14T03:32:20.061Z',
             has_newsletter: true,
@@ -15818,8 +15818,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b9d2a03a65a1638bca296475a4d5a558.png',
             birthday: null,
-            first_seen: '2014-07-24T03:58:05.085Z',
-            last_seen: '2015-05-15T12:05:44.199Z',
+            first_seen: new Date('2014-07-24T03:58:05.085Z'),
+            last_seen: new Date('2015-05-15T12:05:44.199Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15837,8 +15837,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4aa9769d942c7df90e607504954d6106.png',
             birthday: null,
-            first_seen: '2016-09-08T12:51:19.692Z',
-            last_seen: '2017-02-07T04:18:38.939Z',
+            first_seen: new Date('2016-09-08T12:51:19.692Z'),
+            last_seen: new Date('2017-02-07T04:18:38.939Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15856,8 +15856,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/feecb6dbcc57d3d082c8787f21a8078f.png',
             birthday: null,
-            first_seen: '2016-04-15T13:47:12.435Z',
-            last_seen: '2017-01-23T21:27:39.655Z',
+            first_seen: new Date('2016-04-15T13:47:12.435Z'),
+            last_seen: new Date('2017-01-23T21:27:39.655Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15875,8 +15875,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/31476d9b85c28577055c0db2f8f691e2.png',
             birthday: null,
-            first_seen: '2016-05-08T04:23:31.888Z',
-            last_seen: '2016-12-08T18:02:17.147Z',
+            first_seen: new Date('2016-05-08T04:23:31.888Z'),
+            last_seen: new Date('2016-12-08T18:02:17.147Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15894,8 +15894,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/183b5e8717eab412bf73070c02eaa322.png',
             birthday: null,
-            first_seen: '2013-01-24T00:55:28.689Z',
-            last_seen: '2015-03-04T10:02:28.840Z',
+            first_seen: new Date('2013-01-24T00:55:28.689Z'),
+            last_seen: new Date('2015-03-04T10:02:28.840Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15913,8 +15913,8 @@ data = {
             city: 'Bafjajfa',
             avatar: 'https://robohash.org/752f9ec30f6c8b483744e8c543a41b4b.png',
             birthday: '1985-05-06T08:53:56.633Z',
-            first_seen: '2015-10-24T05:47:06.469Z',
-            last_seen: '2016-06-01T15:54:38.950Z',
+            first_seen: new Date('2015-10-24T05:47:06.469Z'),
+            last_seen: new Date('2016-06-01T15:54:38.950Z'),
             has_ordered: true,
             latest_purchase: '2016-04-11T05:36:42.019Z',
             has_newsletter: false,
@@ -15932,8 +15932,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5d4cac781d87de5a281492a6d370f3f4.png',
             birthday: null,
-            first_seen: '2014-06-23T02:52:01.401Z',
-            last_seen: '2017-03-12T16:29:38.206Z',
+            first_seen: new Date('2014-06-23T02:52:01.401Z'),
+            last_seen: new Date('2017-03-12T16:29:38.206Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15951,8 +15951,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/42c7a6b80a56d56dfac9a97abf676de3.png',
             birthday: null,
-            first_seen: '2017-01-09T04:12:24.860Z',
-            last_seen: '2017-04-13T17:10:49.806Z',
+            first_seen: new Date('2017-01-09T04:12:24.860Z'),
+            last_seen: new Date('2017-04-13T17:10:49.806Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15970,8 +15970,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/256a12ea68aaf9b0ed50c7b4bee94f46.png',
             birthday: null,
-            first_seen: '2016-08-12T18:35:38.139Z',
-            last_seen: '2016-11-27T21:46:45.833Z',
+            first_seen: new Date('2016-08-12T18:35:38.139Z'),
+            last_seen: new Date('2016-11-27T21:46:45.833Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -15989,8 +15989,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/531b74d130b994a403fae2b0176f5db2.png',
             birthday: null,
-            first_seen: '2016-07-31T00:14:52.978Z',
-            last_seen: '2017-02-13T19:56:50.465Z',
+            first_seen: new Date('2016-07-31T00:14:52.978Z'),
+            last_seen: new Date('2017-02-13T19:56:50.465Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16008,8 +16008,8 @@ data = {
             city: 'Noppoco',
             avatar: 'https://robohash.org/a48e2e9652bd28a68bb38e6bd224fbdd.png',
             birthday: '1963-03-25T11:59:52.019Z',
-            first_seen: '2016-06-10T21:07:27.177Z',
-            last_seen: '2016-11-28T07:30:02.236Z',
+            first_seen: new Date('2016-06-10T21:07:27.177Z'),
+            last_seen: new Date('2016-11-28T07:30:02.236Z'),
             has_ordered: true,
             latest_purchase: '2016-11-20T13:07:36.165Z',
             has_newsletter: true,
@@ -16027,8 +16027,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b9e4d39dfb8af226048f1fa4cb536bd2.png',
             birthday: null,
-            first_seen: '2014-05-13T04:05:39.947Z',
-            last_seen: '2015-12-14T00:12:55.826Z',
+            first_seen: new Date('2014-05-13T04:05:39.947Z'),
+            last_seen: new Date('2015-12-14T00:12:55.826Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16046,8 +16046,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/0d4075a8fd295f19845dce02aafa24b2.png',
             birthday: null,
-            first_seen: '2015-10-24T16:36:08.098Z',
-            last_seen: '2016-05-19T12:17:01.995Z',
+            first_seen: new Date('2015-10-24T16:36:08.098Z'),
+            last_seen: new Date('2016-05-19T12:17:01.995Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16065,8 +16065,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ea1d22a112102c867ca617c2d9f78c76.png',
             birthday: null,
-            first_seen: '2016-02-22T03:45:33.802Z',
-            last_seen: '2017-04-09T19:23:42.888Z',
+            first_seen: new Date('2016-02-22T03:45:33.802Z'),
+            last_seen: new Date('2017-04-09T19:23:42.888Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16084,8 +16084,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cd15458ea8fa39cfefa524991dc3b2f9.png',
             birthday: null,
-            first_seen: '2016-05-17T22:47:19.263Z',
-            last_seen: '2017-02-04T07:50:00.644Z',
+            first_seen: new Date('2016-05-17T22:47:19.263Z'),
+            last_seen: new Date('2017-02-04T07:50:00.644Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16103,8 +16103,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f3ce94aa36a8b5114895f0fefae8e6cb.png',
             birthday: null,
-            first_seen: '2015-04-15T01:04:09.143Z',
-            last_seen: '2015-09-30T07:02:24.652Z',
+            first_seen: new Date('2015-04-15T01:04:09.143Z'),
+            last_seen: new Date('2015-09-30T07:02:24.652Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16122,8 +16122,8 @@ data = {
             city: 'Edjestam',
             avatar: 'https://robohash.org/b9d9770e97d693c808c67d81a6682ce1.png',
             birthday: '1976-05-22T05:42:16.150Z',
-            first_seen: '2015-08-03T03:19:41.887Z',
-            last_seen: '2016-10-03T23:50:26.741Z',
+            first_seen: new Date('2015-08-03T03:19:41.887Z'),
+            last_seen: new Date('2016-10-03T23:50:26.741Z'),
             has_ordered: true,
             latest_purchase: '2016-02-06T17:25:10.451Z',
             has_newsletter: false,
@@ -16141,8 +16141,8 @@ data = {
             city: 'Ifhifboh',
             avatar: 'https://robohash.org/ebf5fad1b5ba5970ee71620df403de47.png',
             birthday: '1998-02-13T05:02:36.079Z',
-            first_seen: '2016-01-02T22:08:01.063Z',
-            last_seen: '2017-04-17T07:14:13.356Z',
+            first_seen: new Date('2016-01-02T22:08:01.063Z'),
+            last_seen: new Date('2017-04-17T07:14:13.356Z'),
             has_ordered: true,
             latest_purchase: '2017-04-05T01:11:29.247Z',
             has_newsletter: false,
@@ -16160,8 +16160,8 @@ data = {
             city: 'Cimezmo',
             avatar: 'https://robohash.org/f7ab9f51c7990cce9269e28492e8bee1.png',
             birthday: '1962-11-20T04:54:37.543Z',
-            first_seen: '2015-11-19T07:58:34.807Z',
-            last_seen: '2016-09-03T09:34:26.038Z',
+            first_seen: new Date('2015-11-19T07:58:34.807Z'),
+            last_seen: new Date('2016-09-03T09:34:26.038Z'),
             has_ordered: true,
             latest_purchase: '2016-08-10T22:40:16.386Z',
             has_newsletter: false,
@@ -16179,8 +16179,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d5c6ed7e89b89ac2baf7da2c1eab7096.png',
             birthday: null,
-            first_seen: '2016-01-18T10:29:35.966Z',
-            last_seen: '2017-01-24T18:13:30.601Z',
+            first_seen: new Date('2016-01-18T10:29:35.966Z'),
+            last_seen: new Date('2017-01-24T18:13:30.601Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16198,8 +16198,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/57aa5c85137cf0f986712c7ee3589e56.png',
             birthday: null,
-            first_seen: '2017-01-27T18:30:31.403Z',
-            last_seen: '2017-04-21T07:26:55.929Z',
+            first_seen: new Date('2017-01-27T18:30:31.403Z'),
+            last_seen: new Date('2017-04-21T07:26:55.929Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16217,8 +16217,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/eff17f17f0657b7166082a97f0874b44.png',
             birthday: null,
-            first_seen: '2015-12-17T15:58:16.595Z',
-            last_seen: '2017-03-26T01:22:54.584Z',
+            first_seen: new Date('2015-12-17T15:58:16.595Z'),
+            last_seen: new Date('2017-03-26T01:22:54.584Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16236,8 +16236,8 @@ data = {
             city: 'Ibrefeh',
             avatar: 'https://robohash.org/667495741c038924376aec5103b490aa.png',
             birthday: '1984-05-31T09:10:59.218Z',
-            first_seen: '2016-01-08T10:27:35.292Z',
-            last_seen: '2016-03-27T18:26:55.069Z',
+            first_seen: new Date('2016-01-08T10:27:35.292Z'),
+            last_seen: new Date('2016-03-27T18:26:55.069Z'),
             has_ordered: true,
             latest_purchase: '2016-03-09T17:23:32.658Z',
             has_newsletter: false,
@@ -16255,8 +16255,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1d109b45be32fc9ad21fcf6ae58b24a5.png',
             birthday: null,
-            first_seen: '2016-04-09T05:15:56.877Z',
-            last_seen: '2017-02-19T16:50:04.634Z',
+            first_seen: new Date('2016-04-09T05:15:56.877Z'),
+            last_seen: new Date('2017-02-19T16:50:04.634Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16274,8 +16274,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6cf17a3cc53d0b95aa5773f3143d94d4.png',
             birthday: null,
-            first_seen: '2016-04-22T13:59:55.736Z',
-            last_seen: '2017-02-08T00:21:30.145Z',
+            first_seen: new Date('2016-04-22T13:59:55.736Z'),
+            last_seen: new Date('2017-02-08T00:21:30.145Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16293,8 +16293,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cda288ca998eaa1f9d0186352fa7a1fb.png',
             birthday: null,
-            first_seen: '2013-05-23T11:12:34.745Z',
-            last_seen: '2016-02-23T14:10:36.531Z',
+            first_seen: new Date('2013-05-23T11:12:34.745Z'),
+            last_seen: new Date('2016-02-23T14:10:36.531Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16312,8 +16312,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fc15902ba7711e3c5647dc2cf18a2502.png',
             birthday: null,
-            first_seen: '2015-07-01T00:05:32.358Z',
-            last_seen: '2016-04-01T14:24:52.336Z',
+            first_seen: new Date('2015-07-01T00:05:32.358Z'),
+            last_seen: new Date('2016-04-01T14:24:52.336Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16331,8 +16331,8 @@ data = {
             city: 'Uddeta',
             avatar: 'https://robohash.org/f3b01dec299b5ad0acd007648b1636a2.png',
             birthday: '1973-02-28T05:10:39.182Z',
-            first_seen: '2016-06-20T07:49:50.166Z',
-            last_seen: '2017-01-12T08:58:29.031Z',
+            first_seen: new Date('2016-06-20T07:49:50.166Z'),
+            last_seen: new Date('2017-01-12T08:58:29.031Z'),
             has_ordered: true,
             latest_purchase: '2016-12-17T22:29:52.540Z',
             has_newsletter: true,
@@ -16350,8 +16350,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/6a319ca92dbd0e47604ab5aa0e7be860.png',
             birthday: null,
-            first_seen: '2015-12-21T03:07:16.704Z',
-            last_seen: '2016-12-28T01:09:19.544Z',
+            first_seen: new Date('2015-12-21T03:07:16.704Z'),
+            last_seen: new Date('2016-12-28T01:09:19.544Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16369,8 +16369,8 @@ data = {
             city: 'Gilcehi',
             avatar: 'https://robohash.org/3ddb663ae2c6d5435002eee1ffef0c48.png',
             birthday: '1984-08-07T07:10:56.110Z',
-            first_seen: '2014-07-09T18:26:05.831Z',
-            last_seen: '2016-12-04T12:29:34.486Z',
+            first_seen: new Date('2014-07-09T18:26:05.831Z'),
+            last_seen: new Date('2016-12-04T12:29:34.486Z'),
             has_ordered: true,
             latest_purchase: '2016-05-27T07:23:38.079Z',
             has_newsletter: false,
@@ -16388,8 +16388,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/c6a5349024ad580e45e3421b2c3ac848.png',
             birthday: null,
-            first_seen: '2016-09-24T05:12:42.560Z',
-            last_seen: '2017-02-27T10:10:58.471Z',
+            first_seen: new Date('2016-09-24T05:12:42.560Z'),
+            last_seen: new Date('2017-02-27T10:10:58.471Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16407,8 +16407,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/38edbf32bd247ef5697e75742aa78964.png',
             birthday: null,
-            first_seen: '2016-07-14T04:22:19.590Z',
-            last_seen: '2016-12-01T05:35:40.990Z',
+            first_seen: new Date('2016-07-14T04:22:19.590Z'),
+            last_seen: new Date('2016-12-01T05:35:40.990Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16426,8 +16426,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/7ac3dcb259564620ed3cb29055f5f007.png',
             birthday: null,
-            first_seen: '2015-12-26T07:09:11.569Z',
-            last_seen: '2016-10-24T02:18:18.100Z',
+            first_seen: new Date('2015-12-26T07:09:11.569Z'),
+            last_seen: new Date('2016-10-24T02:18:18.100Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16445,8 +16445,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/9048aa6f0123f0e8c8014a9a9f469ba3.png',
             birthday: null,
-            first_seen: '2017-01-11T01:37:07.881Z',
-            last_seen: '2017-02-06T17:11:08.524Z',
+            first_seen: new Date('2017-01-11T01:37:07.881Z'),
+            last_seen: new Date('2017-02-06T17:11:08.524Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16464,8 +16464,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/054f8c89f7791fff7da2187dc57ab945.png',
             birthday: null,
-            first_seen: '2016-02-18T04:01:59.616Z',
-            last_seen: '2016-11-04T19:59:36.222Z',
+            first_seen: new Date('2016-02-18T04:01:59.616Z'),
+            last_seen: new Date('2016-11-04T19:59:36.222Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16483,8 +16483,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/ae56a3c4af972e76da7023bb4484d737.png',
             birthday: null,
-            first_seen: '2015-08-04T22:25:01.774Z',
-            last_seen: '2016-05-11T04:39:20.603Z',
+            first_seen: new Date('2015-08-04T22:25:01.774Z'),
+            last_seen: new Date('2016-05-11T04:39:20.603Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16502,8 +16502,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/1f646591ea6ebb2f4b0d06d81dc1f811.png',
             birthday: null,
-            first_seen: '2014-01-02T20:39:04.881Z',
-            last_seen: '2015-08-25T16:41:32.334Z',
+            first_seen: new Date('2014-01-02T20:39:04.881Z'),
+            last_seen: new Date('2015-08-25T16:41:32.334Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16521,8 +16521,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/b178f471bd5fcf70c5e74056333f560a.png',
             birthday: null,
-            first_seen: '2015-06-22T01:53:15.148Z',
-            last_seen: '2016-10-14T01:32:04.782Z',
+            first_seen: new Date('2015-06-22T01:53:15.148Z'),
+            last_seen: new Date('2016-10-14T01:32:04.782Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16540,8 +16540,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/327a921a4bdb732950e862a82a530f28.png',
             birthday: null,
-            first_seen: '2017-02-04T11:48:30.027Z',
-            last_seen: '2017-03-24T05:24:33.023Z',
+            first_seen: new Date('2017-02-04T11:48:30.027Z'),
+            last_seen: new Date('2017-03-24T05:24:33.023Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16559,8 +16559,8 @@ data = {
             city: 'Sokfamot',
             avatar: 'https://robohash.org/0b4663c581dab2108952a540f68fe024.png',
             birthday: '1965-03-18T06:26:16.479Z',
-            first_seen: '2015-06-22T05:40:45.055Z',
-            last_seen: '2016-09-13T19:05:37.978Z',
+            first_seen: new Date('2015-06-22T05:40:45.055Z'),
+            last_seen: new Date('2016-09-13T19:05:37.978Z'),
             has_ordered: true,
             latest_purchase: '2016-08-06T17:44:15.859Z',
             has_newsletter: false,
@@ -16578,8 +16578,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/2fab0905387da46f88ead589b321c532.png',
             birthday: null,
-            first_seen: '2013-01-30T20:40:55.786Z',
-            last_seen: '2014-12-04T03:22:20.253Z',
+            first_seen: new Date('2013-01-30T20:40:55.786Z'),
+            last_seen: new Date('2014-12-04T03:22:20.253Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16597,8 +16597,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/4e84a208e7f516bc358ba83c60fdd6bb.png',
             birthday: null,
-            first_seen: '2016-12-30T20:37:37.884Z',
-            last_seen: '2017-03-26T13:11:34.924Z',
+            first_seen: new Date('2016-12-30T20:37:37.884Z'),
+            last_seen: new Date('2017-03-26T13:11:34.924Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16616,8 +16616,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/e9728dca606d7c8148300b794bb01052.png',
             birthday: null,
-            first_seen: '2014-12-19T22:25:45.983Z',
-            last_seen: '2017-04-19T00:33:05.484Z',
+            first_seen: new Date('2014-12-19T22:25:45.983Z'),
+            last_seen: new Date('2017-04-19T00:33:05.484Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16635,8 +16635,8 @@ data = {
             city: 'Rojantij',
             avatar: 'https://robohash.org/c1441a10dcccd8a7f3bb5180c14c1681.png',
             birthday: '1964-10-02T08:38:44.558Z',
-            first_seen: '2016-02-11T02:25:47.171Z',
-            last_seen: '2016-06-21T11:14:39.030Z',
+            first_seen: new Date('2016-02-11T02:25:47.171Z'),
+            last_seen: new Date('2016-06-21T11:14:39.030Z'),
             has_ordered: true,
             latest_purchase: '2016-05-27T17:42:58.179Z',
             has_newsletter: false,
@@ -16654,8 +16654,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/29f1377a307fc55bec9b808762eb6273.png',
             birthday: null,
-            first_seen: '2015-07-04T04:58:01.700Z',
-            last_seen: '2017-01-27T01:51:32.882Z',
+            first_seen: new Date('2015-07-04T04:58:01.700Z'),
+            last_seen: new Date('2017-01-27T01:51:32.882Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16673,8 +16673,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cbb5847d8010d22c8af6b9f2bbaff24e.png',
             birthday: null,
-            first_seen: '2016-07-30T01:28:31.909Z',
-            last_seen: '2017-03-17T05:18:06.061Z',
+            first_seen: new Date('2016-07-30T01:28:31.909Z'),
+            last_seen: new Date('2017-03-17T05:18:06.061Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16692,8 +16692,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f184217f8e03b01bf23a3c335dd66fb9.png',
             birthday: null,
-            first_seen: '2015-11-12T00:42:01.758Z',
-            last_seen: '2016-07-06T20:13:41.927Z',
+            first_seen: new Date('2015-11-12T00:42:01.758Z'),
+            last_seen: new Date('2016-07-06T20:13:41.927Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16711,8 +16711,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/385ae140190c8e221626be7c7c6b0bd1.png',
             birthday: null,
-            first_seen: '2014-12-02T08:25:14.999Z',
-            last_seen: '2016-02-26T12:18:57.734Z',
+            first_seen: new Date('2014-12-02T08:25:14.999Z'),
+            last_seen: new Date('2016-02-26T12:18:57.734Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16730,8 +16730,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/755486fea288e6b8e884e28ecbd80761.png',
             birthday: null,
-            first_seen: '2014-07-19T16:37:34.508Z',
-            last_seen: '2017-03-13T02:38:16.600Z',
+            first_seen: new Date('2014-07-19T16:37:34.508Z'),
+            last_seen: new Date('2017-03-13T02:38:16.600Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16749,8 +16749,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/beb123b2ddfcf0fd9cb5e227036bc630.png',
             birthday: null,
-            first_seen: '2015-07-02T09:52:12.677Z',
-            last_seen: '2017-01-13T06:06:39.671Z',
+            first_seen: new Date('2015-07-02T09:52:12.677Z'),
+            last_seen: new Date('2017-01-13T06:06:39.671Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16768,8 +16768,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/58d3b6ebad56de4635bf3b1ee4053fa8.png',
             birthday: null,
-            first_seen: '2016-01-22T06:40:28.771Z',
-            last_seen: '2017-01-25T13:26:01.983Z',
+            first_seen: new Date('2016-01-22T06:40:28.771Z'),
+            last_seen: new Date('2017-01-25T13:26:01.983Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16787,8 +16787,8 @@ data = {
             city: 'Ejrubvu',
             avatar: 'https://robohash.org/1b100d92b6be26d2720283258e6aaa83.png',
             birthday: '1964-07-15T23:09:21.424Z',
-            first_seen: '2016-11-18T06:01:35.501Z',
-            last_seen: '2016-12-04T04:55:54.227Z',
+            first_seen: new Date('2016-11-18T06:01:35.501Z'),
+            last_seen: new Date('2016-12-04T04:55:54.227Z'),
             has_ordered: true,
             latest_purchase: '2016-12-01T18:43:41.635Z',
             has_newsletter: false,
@@ -16806,8 +16806,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/eae8f7899c263f382329cf6e4a7ab85f.png',
             birthday: null,
-            first_seen: '2016-07-07T10:50:27.881Z',
-            last_seen: '2016-12-21T15:58:40.588Z',
+            first_seen: new Date('2016-07-07T10:50:27.881Z'),
+            last_seen: new Date('2016-12-21T15:58:40.588Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16825,8 +16825,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/d012a90da545c3c388efdaf257dc08bb.png',
             birthday: null,
-            first_seen: '2017-03-28T04:39:28.665Z',
-            last_seen: '2017-04-24T21:18:30.843Z',
+            first_seen: new Date('2017-03-28T04:39:28.665Z'),
+            last_seen: new Date('2017-04-24T21:18:30.843Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16844,8 +16844,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/542b70e48d74e1ed30ac0cf9fa3bc2b3.png',
             birthday: null,
-            first_seen: '2017-03-26T02:53:28.148Z',
-            last_seen: '2017-04-05T14:17:37.726Z',
+            first_seen: new Date('2017-03-26T02:53:28.148Z'),
+            last_seen: new Date('2017-04-05T14:17:37.726Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16863,8 +16863,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/032ac18f62d5e38ac2c50a493f92fd4a.png',
             birthday: null,
-            first_seen: '2012-11-30T00:04:26.744Z',
-            last_seen: '2013-12-07T09:05:57.610Z',
+            first_seen: new Date('2012-11-30T00:04:26.744Z'),
+            last_seen: new Date('2013-12-07T09:05:57.610Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16882,8 +16882,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/da984e18e26bc837086589b9a6c869bc.png',
             birthday: null,
-            first_seen: '2017-04-20T15:04:20.944Z',
-            last_seen: '2017-04-24T13:30:34.413Z',
+            first_seen: new Date('2017-04-20T15:04:20.944Z'),
+            last_seen: new Date('2017-04-24T13:30:34.413Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16901,8 +16901,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/5502acf17b59fcb411f037a41d844e86.png',
             birthday: null,
-            first_seen: '2016-11-11T08:31:11.505Z',
-            last_seen: '2017-03-20T11:41:55.858Z',
+            first_seen: new Date('2016-11-11T08:31:11.505Z'),
+            last_seen: new Date('2017-03-20T11:41:55.858Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16920,8 +16920,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/18f5a5beb1d394b7949c8ac5f96f0ca4.png',
             birthday: null,
-            first_seen: '2015-07-03T06:41:29.804Z',
-            last_seen: '2016-04-28T18:55:13.852Z',
+            first_seen: new Date('2015-07-03T06:41:29.804Z'),
+            last_seen: new Date('2016-04-28T18:55:13.852Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16939,8 +16939,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/af8205a720cf0fed41fb0d8d81a27934.png',
             birthday: null,
-            first_seen: '2016-04-26T09:57:04.856Z',
-            last_seen: '2016-09-20T03:32:40.797Z',
+            first_seen: new Date('2016-04-26T09:57:04.856Z'),
+            last_seen: new Date('2016-09-20T03:32:40.797Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16958,8 +16958,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/f441b17e7fab0fbe7017965e214b3146.png',
             birthday: null,
-            first_seen: '2013-06-26T05:05:44.682Z',
-            last_seen: '2016-10-06T01:02:50.938Z',
+            first_seen: new Date('2013-06-26T05:05:44.682Z'),
+            last_seen: new Date('2016-10-06T01:02:50.938Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16977,8 +16977,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/db9ead4045dba3e48891253fa26dcbcb.png',
             birthday: null,
-            first_seen: '2014-08-25T07:31:17.709Z',
-            last_seen: '2015-12-31T15:45:37.347Z',
+            first_seen: new Date('2014-08-25T07:31:17.709Z'),
+            last_seen: new Date('2015-12-31T15:45:37.347Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -16996,8 +16996,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/53255660df6bca837b530389f2513efd.png',
             birthday: null,
-            first_seen: '2016-11-17T14:15:57.464Z',
-            last_seen: '2017-03-13T05:19:14.600Z',
+            first_seen: new Date('2016-11-17T14:15:57.464Z'),
+            last_seen: new Date('2017-03-13T05:19:14.600Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -17015,8 +17015,8 @@ data = {
             city: 'Mesezjeh',
             avatar: 'https://robohash.org/16be911743923613b22820dff0ab9f0c.png',
             birthday: '1998-03-20T02:53:52.366Z',
-            first_seen: '2016-10-15T04:36:08.225Z',
-            last_seen: '2017-04-09T02:41:26.688Z',
+            first_seen: new Date('2016-10-15T04:36:08.225Z'),
+            last_seen: new Date('2017-04-09T02:41:26.688Z'),
             has_ordered: true,
             latest_purchase: '2017-03-24T14:29:56.939Z',
             has_newsletter: false,
@@ -17034,8 +17034,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/94da2073b5315efe5f5d42ded77fde90.png',
             birthday: null,
-            first_seen: '2015-05-28T17:26:17.759Z',
-            last_seen: '2016-11-06T04:24:09.061Z',
+            first_seen: new Date('2015-05-28T17:26:17.759Z'),
+            last_seen: new Date('2016-11-06T04:24:09.061Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -17053,8 +17053,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/70c824733d613f36afdba4bae19fed00.png',
             birthday: null,
-            first_seen: '2014-05-07T00:54:44.798Z',
-            last_seen: '2015-12-14T08:28:31.669Z',
+            first_seen: new Date('2014-05-07T00:54:44.798Z'),
+            last_seen: new Date('2015-12-14T08:28:31.669Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -17072,8 +17072,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/cc723de9ee79e577db94658b5edb8e92.png',
             birthday: null,
-            first_seen: '2015-01-13T04:17:54.236Z',
-            last_seen: '2016-01-18T09:01:36.741Z',
+            first_seen: new Date('2015-01-13T04:17:54.236Z'),
+            last_seen: new Date('2016-01-18T09:01:36.741Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -17091,8 +17091,8 @@ data = {
             city: null,
             avatar: 'https://robohash.org/fc9c5839469364e1adef3409cbad3c06.png',
             birthday: null,
-            first_seen: '2012-06-02T21:57:41.443Z',
-            last_seen: '2017-01-31T22:50:09.041Z',
+            first_seen: new Date('2012-06-02T21:57:41.443Z'),
+            last_seen: new Date('2017-01-31T22:50:09.041Z'),
             has_ordered: false,
             latest_purchase: null,
             has_newsletter: true,
@@ -18721,7 +18721,7 @@ data = {
         {
             id: 0,
             reference: 'tix0ie',
-            date: '2016-06-20T18:05:11.459Z',
+            date: new Date('2016-06-20T18:05:11.459Z'),
             customer_id: 871,
             basket: [
                 {
@@ -18744,7 +18744,7 @@ data = {
         {
             id: 1,
             reference: 'i7fd2p',
-            date: '2015-03-27T22:20:37.135Z',
+            date: new Date('2015-03-27T22:20:37.135Z'),
             customer_id: 261,
             basket: [
                 {
@@ -18763,7 +18763,7 @@ data = {
         {
             id: 2,
             reference: 'xc30t9',
-            date: '2017-03-04T20:59:08.628Z',
+            date: new Date('2017-03-04T20:59:08.628Z'),
             customer_id: 586,
             basket: [
                 {
@@ -18782,7 +18782,7 @@ data = {
         {
             id: 3,
             reference: 'a9cj0p',
-            date: '2016-12-31T15:43:48.694Z',
+            date: new Date('2016-12-31T15:43:48.694Z'),
             customer_id: 359,
             basket: [
                 {
@@ -18801,7 +18801,7 @@ data = {
         {
             id: 4,
             reference: '0x93aj',
-            date: '2016-11-20T13:07:36.165Z',
+            date: new Date('2016-11-20T13:07:36.165Z'),
             customer_id: 842,
             basket: [
                 {
@@ -18824,7 +18824,7 @@ data = {
         {
             id: 5,
             reference: 'us9i5l',
-            date: '2017-04-03T04:29:23.095Z',
+            date: new Date('2017-04-03T04:29:23.095Z'),
             customer_id: 568,
             basket: [
                 {
@@ -18847,7 +18847,7 @@ data = {
         {
             id: 6,
             reference: 'xafegn',
-            date: '2016-12-07T06:52:26.288Z',
+            date: new Date('2016-12-07T06:52:26.288Z'),
             customer_id: 125,
             basket: [
                 {
@@ -18874,7 +18874,7 @@ data = {
         {
             id: 7,
             reference: '035q9x',
-            date: '2017-03-09T21:56:53.964Z',
+            date: new Date('2017-03-09T21:56:53.964Z'),
             customer_id: 168,
             basket: [
                 {
@@ -18897,7 +18897,7 @@ data = {
         {
             id: 8,
             reference: '0ebfym',
-            date: '2016-08-08T04:59:18.643Z',
+            date: new Date('2016-08-08T04:59:18.643Z'),
             customer_id: 236,
             basket: [
                 {
@@ -18924,7 +18924,7 @@ data = {
         {
             id: 9,
             reference: 'gcg9co',
-            date: '2016-07-20T15:35:17.802Z',
+            date: new Date('2016-07-20T15:35:17.802Z'),
             customer_id: 718,
             basket: [
                 {
@@ -18943,7 +18943,7 @@ data = {
         {
             id: 10,
             reference: '0piieg',
-            date: '2017-02-23T10:17:07.256Z',
+            date: new Date('2017-02-23T10:17:07.256Z'),
             customer_id: 817,
             basket: [
                 {
@@ -18962,7 +18962,7 @@ data = {
         {
             id: 11,
             reference: '98znf9',
-            date: '2016-03-10T04:38:20.388Z',
+            date: new Date('2016-03-10T04:38:20.388Z'),
             customer_id: 295,
             basket: [
                 {
@@ -18981,7 +18981,7 @@ data = {
         {
             id: 12,
             reference: '9bjwpd',
-            date: '2015-09-04T18:26:13.620Z',
+            date: new Date('2015-09-04T18:26:13.620Z'),
             customer_id: 566,
             basket: [
                 {
@@ -19012,7 +19012,7 @@ data = {
         {
             id: 13,
             reference: '5c3xx8',
-            date: '2016-04-04T16:46:57.195Z',
+            date: new Date('2016-04-04T16:46:57.195Z'),
             customer_id: 96,
             basket: [
                 {
@@ -19031,7 +19031,7 @@ data = {
         {
             id: 14,
             reference: 'rbvnz8',
-            date: '2015-08-31T17:28:47.268Z',
+            date: new Date('2015-08-31T17:28:47.268Z'),
             customer_id: 474,
             basket: [
                 {
@@ -19050,7 +19050,7 @@ data = {
         {
             id: 15,
             reference: 'fyx01f',
-            date: '2015-05-30T13:58:16.404Z',
+            date: new Date('2015-05-30T13:58:16.404Z'),
             customer_id: 410,
             basket: [
                 {
@@ -19069,7 +19069,7 @@ data = {
         {
             id: 16,
             reference: 'ctsao8',
-            date: '2016-04-03T20:34:47.638Z',
+            date: new Date('2016-04-03T20:34:47.638Z'),
             customer_id: 334,
             basket: [
                 {
@@ -19088,7 +19088,7 @@ data = {
         {
             id: 17,
             reference: 'ct5usw',
-            date: '2016-08-24T00:04:02.219Z',
+            date: new Date('2016-08-24T00:04:02.219Z'),
             customer_id: 382,
             basket: [
                 {
@@ -19111,7 +19111,7 @@ data = {
         {
             id: 18,
             reference: 'fp5x07',
-            date: '2017-04-21T20:59:30.249Z',
+            date: new Date('2017-04-21T20:59:30.249Z'),
             customer_id: 821,
             basket: [
                 {
@@ -19130,7 +19130,7 @@ data = {
         {
             id: 19,
             reference: '0qj6r8',
-            date: '2016-11-22T11:43:51.270Z',
+            date: new Date('2016-11-22T11:43:51.270Z'),
             customer_id: 383,
             basket: [
                 {
@@ -19157,7 +19157,7 @@ data = {
         {
             id: 20,
             reference: 'wqc6td',
-            date: '2015-08-17T16:20:18.017Z',
+            date: new Date('2015-08-17T16:20:18.017Z'),
             customer_id: 580,
             basket: [
                 {
@@ -19180,7 +19180,7 @@ data = {
         {
             id: 21,
             reference: 'm35gix',
-            date: '2016-08-13T04:53:19.408Z',
+            date: new Date('2016-08-13T04:53:19.408Z'),
             customer_id: 799,
             basket: [
                 {
@@ -19231,7 +19231,7 @@ data = {
         {
             id: 22,
             reference: 'ezv20e',
-            date: '2015-05-17T03:47:07.929Z',
+            date: new Date('2015-05-17T03:47:07.929Z'),
             customer_id: 266,
             basket: [
                 {
@@ -19250,7 +19250,7 @@ data = {
         {
             id: 23,
             reference: '4kt84b',
-            date: '2016-06-05T17:29:24.653Z',
+            date: new Date('2016-06-05T17:29:24.653Z'),
             customer_id: 192,
             basket: [
                 {
@@ -19269,7 +19269,7 @@ data = {
         {
             id: 24,
             reference: 'ri6k4k',
-            date: '2015-08-02T03:25:23.794Z',
+            date: new Date('2015-08-02T03:25:23.794Z'),
             customer_id: 110,
             basket: [
                 {
@@ -19296,7 +19296,7 @@ data = {
         {
             id: 25,
             reference: 'aoym58',
-            date: '2015-10-18T20:12:07.644Z',
+            date: new Date('2015-10-18T20:12:07.644Z'),
             customer_id: 633,
             basket: [
                 {
@@ -19319,7 +19319,7 @@ data = {
         {
             id: 26,
             reference: 'mlgnvg',
-            date: '2016-10-16T20:28:18.507Z',
+            date: new Date('2016-10-16T20:28:18.507Z'),
             customer_id: 508,
             basket: [
                 {
@@ -19338,7 +19338,7 @@ data = {
         {
             id: 27,
             reference: 'get4af',
-            date: '2017-04-01T06:08:32.066Z',
+            date: new Date('2017-04-01T06:08:32.066Z'),
             customer_id: 817,
             basket: [
                 {
@@ -19357,7 +19357,7 @@ data = {
         {
             id: 28,
             reference: 'v88za6',
-            date: '2016-01-26T13:47:56.797Z',
+            date: new Date('2016-01-26T13:47:56.797Z'),
             customer_id: 824,
             basket: [
                 {
@@ -19380,7 +19380,7 @@ data = {
         {
             id: 29,
             reference: 'jevhv2',
-            date: '2016-08-26T23:32:50.302Z',
+            date: new Date('2016-08-26T23:32:50.302Z'),
             customer_id: 229,
             basket: [
                 {
@@ -19399,7 +19399,7 @@ data = {
         {
             id: 30,
             reference: 'q5jfyw',
-            date: '2016-12-13T13:15:06.080Z',
+            date: new Date('2016-12-13T13:15:06.080Z'),
             customer_id: 100,
             basket: [
                 {
@@ -19418,7 +19418,7 @@ data = {
         {
             id: 31,
             reference: '8sus9n',
-            date: '2017-04-24T08:55:42.473Z',
+            date: new Date('2017-04-24T08:55:42.473Z'),
             customer_id: 408,
             basket: [
                 {
@@ -19437,7 +19437,7 @@ data = {
         {
             id: 32,
             reference: '4i7ema',
-            date: '2016-03-02T05:41:58.114Z',
+            date: new Date('2016-03-02T05:41:58.114Z'),
             customer_id: 850,
             basket: [
                 {
@@ -19460,7 +19460,7 @@ data = {
         {
             id: 33,
             reference: 'hwhixl',
-            date: '2016-12-15T00:42:25.876Z',
+            date: new Date('2016-12-15T00:42:25.876Z'),
             customer_id: 359,
             basket: [
                 {
@@ -19479,7 +19479,7 @@ data = {
         {
             id: 34,
             reference: 'w9985i',
-            date: '2016-09-30T15:18:33.135Z',
+            date: new Date('2016-09-30T15:18:33.135Z'),
             customer_id: 250,
             basket: [
                 {
@@ -19498,7 +19498,7 @@ data = {
         {
             id: 35,
             reference: 'hoqijd',
-            date: '2015-07-27T19:52:14.022Z',
+            date: new Date('2015-07-27T19:52:14.022Z'),
             customer_id: 410,
             basket: [
                 {
@@ -19521,7 +19521,7 @@ data = {
         {
             id: 36,
             reference: 'bq91sy',
-            date: '2015-06-02T15:57:13.574Z',
+            date: new Date('2015-06-02T15:57:13.574Z'),
             customer_id: 151,
             basket: [
                 {
@@ -19544,7 +19544,7 @@ data = {
         {
             id: 37,
             reference: 'a4hjaf',
-            date: '2016-11-08T10:27:58.239Z',
+            date: new Date('2016-11-08T10:27:58.239Z'),
             customer_id: 430,
             basket: [
                 {
@@ -19567,7 +19567,7 @@ data = {
         {
             id: 38,
             reference: '9ga2ov',
-            date: '2015-10-02T00:53:06.593Z',
+            date: new Date('2015-10-02T00:53:06.593Z'),
             customer_id: 331,
             basket: [
                 {
@@ -19586,7 +19586,7 @@ data = {
         {
             id: 39,
             reference: 'eacysi',
-            date: '2016-04-30T02:06:48.848Z',
+            date: new Date('2016-04-30T02:06:48.848Z'),
             customer_id: 145,
             basket: [
                 {
@@ -19605,7 +19605,7 @@ data = {
         {
             id: 40,
             reference: 'c2lgq2',
-            date: '2017-03-09T07:46:47.799Z',
+            date: new Date('2017-03-09T07:46:47.799Z'),
             customer_id: 705,
             basket: [
                 {
@@ -19628,7 +19628,7 @@ data = {
         {
             id: 41,
             reference: 'm27c0q',
-            date: '2016-08-15T03:03:57.828Z',
+            date: new Date('2016-08-15T03:03:57.828Z'),
             customer_id: 19,
             basket: [
                 {
@@ -19647,7 +19647,7 @@ data = {
         {
             id: 42,
             reference: 'ho1coj',
-            date: '2016-03-14T21:51:47.163Z',
+            date: new Date('2016-03-14T21:51:47.163Z'),
             customer_id: 680,
             basket: [
                 {
@@ -19670,7 +19670,7 @@ data = {
         {
             id: 43,
             reference: '3sieww',
-            date: '2016-01-11T14:23:58.461Z',
+            date: new Date('2016-01-11T14:23:58.461Z'),
             customer_id: 209,
             basket: [
                 {
@@ -19689,7 +19689,7 @@ data = {
         {
             id: 44,
             reference: 'lzhq6s',
-            date: '2016-03-29T01:31:44.938Z',
+            date: new Date('2016-03-29T01:31:44.938Z'),
             customer_id: 725,
             basket: [
                 {
@@ -19708,7 +19708,7 @@ data = {
         {
             id: 45,
             reference: 'taxhl5',
-            date: '2015-06-26T18:56:50.328Z',
+            date: new Date('2015-06-26T18:56:50.328Z'),
             customer_id: 334,
             basket: [
                 {
@@ -19751,7 +19751,7 @@ data = {
         {
             id: 46,
             reference: 'unhjr7',
-            date: '2016-08-06T17:44:15.859Z',
+            date: new Date('2016-08-06T17:44:15.859Z'),
             customer_id: 871,
             basket: [
                 {
@@ -19770,7 +19770,7 @@ data = {
         {
             id: 47,
             reference: 'e83g3t',
-            date: '2016-12-14T22:52:55.602Z',
+            date: new Date('2016-12-14T22:52:55.602Z'),
             customer_id: 508,
             basket: [
                 {
@@ -19793,7 +19793,7 @@ data = {
         {
             id: 48,
             reference: '0b4m6o',
-            date: '2016-03-19T01:42:35.679Z',
+            date: new Date('2016-03-19T01:42:35.679Z'),
             customer_id: 837,
             basket: [
                 {
@@ -19812,7 +19812,7 @@ data = {
         {
             id: 49,
             reference: 'p0adfn',
-            date: '2015-04-17T04:59:09.419Z',
+            date: new Date('2015-04-17T04:59:09.419Z'),
             customer_id: 435,
             basket: [
                 {
@@ -19831,7 +19831,7 @@ data = {
         {
             id: 50,
             reference: '5mmq8w',
-            date: '2017-03-25T02:24:03.293Z',
+            date: new Date('2017-03-25T02:24:03.293Z'),
             customer_id: 500,
             basket: [
                 {
@@ -19854,7 +19854,7 @@ data = {
         {
             id: 51,
             reference: 'y09ix6',
-            date: '2016-03-27T20:48:23.272Z',
+            date: new Date('2016-03-27T20:48:23.272Z'),
             customer_id: 875,
             basket: [
                 {
@@ -19873,7 +19873,7 @@ data = {
         {
             id: 52,
             reference: 'kcw70p',
-            date: '2016-01-31T01:22:44.936Z',
+            date: new Date('2016-01-31T01:22:44.936Z'),
             customer_id: 517,
             basket: [
                 {
@@ -19892,7 +19892,7 @@ data = {
         {
             id: 53,
             reference: 'c614d2',
-            date: '2015-02-09T16:27:25.892Z',
+            date: new Date('2015-02-09T16:27:25.892Z'),
             customer_id: 601,
             basket: [
                 {
@@ -19911,7 +19911,7 @@ data = {
         {
             id: 54,
             reference: '2mrdhr',
-            date: '2015-08-12T03:31:13.444Z',
+            date: new Date('2015-08-12T03:31:13.444Z'),
             customer_id: 601,
             basket: [
                 {
@@ -19962,7 +19962,7 @@ data = {
         {
             id: 55,
             reference: '1pne83',
-            date: '2015-03-22T15:04:58.278Z',
+            date: new Date('2015-03-22T15:04:58.278Z'),
             customer_id: 188,
             basket: [
                 {
@@ -19981,7 +19981,7 @@ data = {
         {
             id: 56,
             reference: 'oww8p2',
-            date: '2015-11-08T04:17:06.150Z',
+            date: new Date('2015-11-08T04:17:06.150Z'),
             customer_id: 370,
             basket: [
                 {
@@ -20000,7 +20000,7 @@ data = {
         {
             id: 57,
             reference: '74vjvh',
-            date: '2016-05-25T18:46:36.791Z',
+            date: new Date('2016-05-25T18:46:36.791Z'),
             customer_id: 674,
             basket: [
                 {
@@ -20047,7 +20047,7 @@ data = {
         {
             id: 58,
             reference: 'f6178b',
-            date: '2015-09-21T17:55:35.469Z',
+            date: new Date('2015-09-21T17:55:35.469Z'),
             customer_id: 334,
             basket: [
                 {
@@ -20066,7 +20066,7 @@ data = {
         {
             id: 59,
             reference: 'mp480y',
-            date: '2016-11-20T04:33:20.495Z',
+            date: new Date('2016-11-20T04:33:20.495Z'),
             customer_id: 282,
             basket: [
                 {
@@ -20085,7 +20085,7 @@ data = {
         {
             id: 60,
             reference: 'y8nop4',
-            date: '2016-06-18T02:35:13.523Z',
+            date: new Date('2016-06-18T02:35:13.523Z'),
             customer_id: 435,
             basket: [
                 {
@@ -20108,7 +20108,7 @@ data = {
         {
             id: 61,
             reference: 'znymp3',
-            date: '2016-07-12T10:47:25.159Z',
+            date: new Date('2016-07-12T10:47:25.159Z'),
             customer_id: 394,
             basket: [
                 {
@@ -20147,7 +20147,7 @@ data = {
         {
             id: 62,
             reference: 'bjz06k',
-            date: '2015-12-30T14:00:41.554Z',
+            date: new Date('2015-12-30T14:00:41.554Z'),
             customer_id: 871,
             basket: [
                 {
@@ -20198,7 +20198,7 @@ data = {
         {
             id: 63,
             reference: 'wm1fg1',
-            date: '2017-04-09T12:10:14.489Z',
+            date: new Date('2017-04-09T12:10:14.489Z'),
             customer_id: 593,
             basket: [
                 {
@@ -20221,7 +20221,7 @@ data = {
         {
             id: 64,
             reference: 'jybn0w',
-            date: '2015-10-09T09:12:02.846Z',
+            date: new Date('2015-10-09T09:12:02.846Z'),
             customer_id: 110,
             basket: [
                 {
@@ -20240,7 +20240,7 @@ data = {
         {
             id: 65,
             reference: '1w1mhc',
-            date: '2017-03-28T10:42:21.495Z',
+            date: new Date('2017-03-28T10:42:21.495Z'),
             customer_id: 611,
             basket: [
                 {
@@ -20259,7 +20259,7 @@ data = {
         {
             id: 66,
             reference: 'pi10vz',
-            date: '2016-07-19T19:07:48.872Z',
+            date: new Date('2016-07-19T19:07:48.872Z'),
             customer_id: 406,
             basket: [
                 {
@@ -20282,7 +20282,7 @@ data = {
         {
             id: 67,
             reference: 'zewx7o',
-            date: '2016-06-05T23:28:20.571Z',
+            date: new Date('2016-06-05T23:28:20.571Z'),
             customer_id: 550,
             basket: [
                 {
@@ -20301,7 +20301,7 @@ data = {
         {
             id: 68,
             reference: '7p8erf',
-            date: '2016-07-18T07:49:24.954Z',
+            date: new Date('2016-07-18T07:49:24.954Z'),
             customer_id: 100,
             basket: [
                 {
@@ -20328,7 +20328,7 @@ data = {
         {
             id: 69,
             reference: '98prj8',
-            date: '2016-10-17T14:07:59.144Z',
+            date: new Date('2016-10-17T14:07:59.144Z'),
             customer_id: 685,
             basket: [
                 {
@@ -20347,7 +20347,7 @@ data = {
         {
             id: 70,
             reference: 'f8512w',
-            date: '2016-12-09T18:01:18.292Z',
+            date: new Date('2016-12-09T18:01:18.292Z'),
             customer_id: 244,
             basket: [
                 {
@@ -20366,7 +20366,7 @@ data = {
         {
             id: 71,
             reference: 'oikhie',
-            date: '2017-03-16T05:30:51.932Z',
+            date: new Date('2017-03-16T05:30:51.932Z'),
             customer_id: 664,
             basket: [
                 {
@@ -20389,7 +20389,7 @@ data = {
         {
             id: 72,
             reference: 'pqc4lo',
-            date: '2014-10-24T05:15:17.433Z',
+            date: new Date('2014-10-24T05:15:17.433Z'),
             customer_id: 436,
             basket: [
                 {
@@ -20408,7 +20408,7 @@ data = {
         {
             id: 73,
             reference: 'kw90rw',
-            date: '2016-07-05T05:47:57.153Z',
+            date: new Date('2016-07-05T05:47:57.153Z'),
             customer_id: 533,
             basket: [
                 {
@@ -20435,7 +20435,7 @@ data = {
         {
             id: 74,
             reference: 'odaa4n',
-            date: '2016-09-14T15:39:47.528Z',
+            date: new Date('2016-09-14T15:39:47.528Z'),
             customer_id: 156,
             basket: [
                 {
@@ -20486,7 +20486,7 @@ data = {
         {
             id: 75,
             reference: 'kt1rqu',
-            date: '2015-12-03T19:33:23.207Z',
+            date: new Date('2015-12-03T19:33:23.207Z'),
             customer_id: 564,
             basket: [
                 {
@@ -20505,7 +20505,7 @@ data = {
         {
             id: 76,
             reference: 'g3d0i8',
-            date: '2016-04-29T04:58:27.650Z',
+            date: new Date('2016-04-29T04:58:27.650Z'),
             customer_id: 340,
             basket: [
                 {
@@ -20524,7 +20524,7 @@ data = {
         {
             id: 77,
             reference: 'tr7l3y',
-            date: '2017-02-18T12:43:13.915Z',
+            date: new Date('2017-02-18T12:43:13.915Z'),
             customer_id: 606,
             basket: [
                 {
@@ -20547,7 +20547,7 @@ data = {
         {
             id: 78,
             reference: '68skhn',
-            date: '2015-06-09T18:10:05.387Z',
+            date: new Date('2015-06-09T18:10:05.387Z'),
             customer_id: 690,
             basket: [
                 {
@@ -20566,7 +20566,7 @@ data = {
         {
             id: 79,
             reference: '7tauab',
-            date: '2014-12-02T19:35:18.568Z',
+            date: new Date('2014-12-02T19:35:18.568Z'),
             customer_id: 53,
             basket: [
                 {
@@ -20585,7 +20585,7 @@ data = {
         {
             id: 80,
             reference: 'jkcjo7',
-            date: '2016-10-06T16:33:08.192Z',
+            date: new Date('2016-10-06T16:33:08.192Z'),
             customer_id: 630,
             basket: [
                 {
@@ -20608,7 +20608,7 @@ data = {
         {
             id: 81,
             reference: '5ztvf7',
-            date: '2016-10-18T13:14:08.455Z',
+            date: new Date('2016-10-18T13:14:08.455Z'),
             customer_id: 720,
             basket: [
                 {
@@ -20627,7 +20627,7 @@ data = {
         {
             id: 82,
             reference: 'zo2jqa',
-            date: '2014-07-11T22:07:04.899Z',
+            date: new Date('2014-07-11T22:07:04.899Z'),
             customer_id: 257,
             basket: [
                 {
@@ -20650,7 +20650,7 @@ data = {
         {
             id: 83,
             reference: '3rupnm',
-            date: '2015-06-18T07:39:17.445Z',
+            date: new Date('2015-06-18T07:39:17.445Z'),
             customer_id: 266,
             basket: [
                 {
@@ -20669,7 +20669,7 @@ data = {
         {
             id: 84,
             reference: 'sbs9r1',
-            date: '2017-01-18T15:36:56.538Z',
+            date: new Date('2017-01-18T15:36:56.538Z'),
             customer_id: 673,
             basket: [
                 {
@@ -20720,7 +20720,7 @@ data = {
         {
             id: 85,
             reference: 'ujn0l8',
-            date: '2016-11-23T00:15:58.725Z',
+            date: new Date('2016-11-23T00:15:58.725Z'),
             customer_id: 142,
             basket: [
                 {
@@ -20739,7 +20739,7 @@ data = {
         {
             id: 86,
             reference: '751m7y',
-            date: '2016-07-12T16:19:24.401Z',
+            date: new Date('2016-07-12T16:19:24.401Z'),
             customer_id: 148,
             basket: [
                 {
@@ -20758,7 +20758,7 @@ data = {
         {
             id: 87,
             reference: 'vk9dt8',
-            date: '2015-08-28T08:40:31.526Z',
+            date: new Date('2015-08-28T08:40:31.526Z'),
             customer_id: 262,
             basket: [
                 {
@@ -20777,7 +20777,7 @@ data = {
         {
             id: 88,
             reference: 'iwyggz',
-            date: '2016-10-27T14:03:38.607Z',
+            date: new Date('2016-10-27T14:03:38.607Z'),
             customer_id: 92,
             basket: [
                 {
@@ -20804,7 +20804,7 @@ data = {
         {
             id: 89,
             reference: 'f54z4g',
-            date: '2017-04-06T10:33:44.381Z',
+            date: new Date('2017-04-06T10:33:44.381Z'),
             customer_id: 369,
             basket: [
                 {
@@ -20827,7 +20827,7 @@ data = {
         {
             id: 90,
             reference: 'bdjipf',
-            date: '2016-03-24T19:16:05.888Z',
+            date: new Date('2016-03-24T19:16:05.888Z'),
             customer_id: 875,
             basket: [
                 {
@@ -20878,7 +20878,7 @@ data = {
         {
             id: 91,
             reference: 'hw6u1h',
-            date: '2016-01-20T07:31:24.962Z',
+            date: new Date('2016-01-20T07:31:24.962Z'),
             customer_id: 124,
             basket: [
                 {
@@ -20901,7 +20901,7 @@ data = {
         {
             id: 92,
             reference: 'cll1gi',
-            date: '2016-11-23T15:22:14.171Z',
+            date: new Date('2016-11-23T15:22:14.171Z'),
             customer_id: 359,
             basket: [
                 {
@@ -20932,7 +20932,7 @@ data = {
         {
             id: 93,
             reference: 'rg2ri8',
-            date: '2017-01-13T21:58:53.087Z',
+            date: new Date('2017-01-13T21:58:53.087Z'),
             customer_id: 92,
             basket: [
                 {
@@ -20951,7 +20951,7 @@ data = {
         {
             id: 94,
             reference: 'lw8yoa',
-            date: '2015-05-04T07:12:28.958Z',
+            date: new Date('2015-05-04T07:12:28.958Z'),
             customer_id: 428,
             basket: [
                 {
@@ -20974,7 +20974,7 @@ data = {
         {
             id: 95,
             reference: 'b2zjv8',
-            date: '2017-03-26T08:26:58.758Z',
+            date: new Date('2017-03-26T08:26:58.758Z'),
             customer_id: 347,
             basket: [
                 {
@@ -20993,7 +20993,7 @@ data = {
         {
             id: 96,
             reference: '0x6h6i',
-            date: '2016-04-26T12:57:48.439Z',
+            date: new Date('2016-04-26T12:57:48.439Z'),
             customer_id: 808,
             basket: [
                 {
@@ -21012,7 +21012,7 @@ data = {
         {
             id: 97,
             reference: 'i7bhdp',
-            date: '2015-04-07T18:09:20.329Z',
+            date: new Date('2015-04-07T18:09:20.329Z'),
             customer_id: 473,
             basket: [
                 {
@@ -21031,7 +21031,7 @@ data = {
         {
             id: 98,
             reference: '0q20qk',
-            date: '2017-02-05T04:38:52.431Z',
+            date: new Date('2017-02-05T04:38:52.431Z'),
             customer_id: 678,
             basket: [
                 {
@@ -21054,7 +21054,7 @@ data = {
         {
             id: 99,
             reference: 'azka2m',
-            date: '2015-09-11T04:01:57.457Z',
+            date: new Date('2015-09-11T04:01:57.457Z'),
             customer_id: 783,
             basket: [
                 {
@@ -21081,7 +21081,7 @@ data = {
         {
             id: 100,
             reference: '7yna7z',
-            date: '2016-07-10T02:39:26.782Z',
+            date: new Date('2016-07-10T02:39:26.782Z'),
             customer_id: 97,
             basket: [
                 {
@@ -21104,7 +21104,7 @@ data = {
         {
             id: 101,
             reference: '58fvl5',
-            date: '2015-10-25T09:37:10.190Z',
+            date: new Date('2015-10-25T09:37:10.190Z'),
             customer_id: 433,
             basket: [
                 {
@@ -21123,7 +21123,7 @@ data = {
         {
             id: 102,
             reference: 'ujrqhh',
-            date: '2015-10-07T02:01:43.911Z',
+            date: new Date('2015-10-07T02:01:43.911Z'),
             customer_id: 871,
             basket: [
                 {
@@ -21150,7 +21150,7 @@ data = {
         {
             id: 103,
             reference: '6ijmye',
-            date: '2016-10-21T07:06:57.611Z',
+            date: new Date('2016-10-21T07:06:57.611Z'),
             customer_id: 262,
             basket: [
                 {
@@ -21169,7 +21169,7 @@ data = {
         {
             id: 104,
             reference: 'l1njow',
-            date: '2016-07-05T17:27:39.285Z',
+            date: new Date('2016-07-05T17:27:39.285Z'),
             customer_id: 122,
             basket: [
                 {
@@ -21192,7 +21192,7 @@ data = {
         {
             id: 105,
             reference: 'c9sm01',
-            date: '2016-07-17T09:51:23.486Z',
+            date: new Date('2016-07-17T09:51:23.486Z'),
             customer_id: 768,
             basket: [
                 {
@@ -21211,7 +21211,7 @@ data = {
         {
             id: 106,
             reference: 'aykrw8',
-            date: '2015-12-03T00:31:10.031Z',
+            date: new Date('2015-12-03T00:31:10.031Z'),
             customer_id: 564,
             basket: [
                 {
@@ -21234,7 +21234,7 @@ data = {
         {
             id: 107,
             reference: 'il6z7x',
-            date: '2016-05-25T08:47:53.756Z',
+            date: new Date('2016-05-25T08:47:53.756Z'),
             customer_id: 280,
             basket: [
                 {
@@ -21257,7 +21257,7 @@ data = {
         {
             id: 108,
             reference: 'q6g4z5',
-            date: '2015-11-09T06:39:17.484Z',
+            date: new Date('2015-11-09T06:39:17.484Z'),
             customer_id: 639,
             basket: [
                 {
@@ -21276,7 +21276,7 @@ data = {
         {
             id: 109,
             reference: 'fvegy4',
-            date: '2016-10-15T04:45:16.244Z',
+            date: new Date('2016-10-15T04:45:16.244Z'),
             customer_id: 730,
             basket: [
                 {
@@ -21295,7 +21295,7 @@ data = {
         {
             id: 110,
             reference: '4f0xr6',
-            date: '2016-04-19T05:59:32.133Z',
+            date: new Date('2016-04-19T05:59:32.133Z'),
             customer_id: 547,
             basket: [
                 {
@@ -21326,7 +21326,7 @@ data = {
         {
             id: 111,
             reference: 'ww245a',
-            date: '2016-08-08T10:53:44.308Z',
+            date: new Date('2016-08-08T10:53:44.308Z'),
             customer_id: 718,
             basket: [
                 {
@@ -21349,7 +21349,7 @@ data = {
         {
             id: 112,
             reference: '5dw7rd',
-            date: '2016-12-21T15:42:26.921Z',
+            date: new Date('2016-12-21T15:42:26.921Z'),
             customer_id: 142,
             basket: [
                 {
@@ -21372,7 +21372,7 @@ data = {
         {
             id: 113,
             reference: '7efsw8',
-            date: '2017-04-05T01:11:29.247Z',
+            date: new Date('2017-04-05T01:11:29.247Z'),
             customer_id: 849,
             basket: [
                 {
@@ -21395,7 +21395,7 @@ data = {
         {
             id: 114,
             reference: 'fw35la',
-            date: '2016-09-04T08:07:17.662Z',
+            date: new Date('2016-09-04T08:07:17.662Z'),
             customer_id: 666,
             basket: [
                 {
@@ -21414,7 +21414,7 @@ data = {
         {
             id: 115,
             reference: 'uupp35',
-            date: '2015-09-06T12:29:31.078Z',
+            date: new Date('2015-09-06T12:29:31.078Z'),
             customer_id: 91,
             basket: [
                 {
@@ -21469,7 +21469,7 @@ data = {
         {
             id: 116,
             reference: 'thu1r6',
-            date: '2015-08-13T02:33:40.724Z',
+            date: new Date('2015-08-13T02:33:40.724Z'),
             customer_id: 405,
             basket: [
                 {
@@ -21488,7 +21488,7 @@ data = {
         {
             id: 117,
             reference: '2chowt',
-            date: '2015-06-07T09:10:49.290Z',
+            date: new Date('2015-06-07T09:10:49.290Z'),
             customer_id: 428,
             basket: [
                 {
@@ -21507,7 +21507,7 @@ data = {
         {
             id: 118,
             reference: '0zuc0t',
-            date: '2015-12-29T04:20:51.499Z',
+            date: new Date('2015-12-29T04:20:51.499Z'),
             customer_id: 468,
             basket: [
                 {
@@ -21530,7 +21530,7 @@ data = {
         {
             id: 119,
             reference: '8l0dm5',
-            date: '2017-02-01T02:48:25.977Z',
+            date: new Date('2017-02-01T02:48:25.977Z'),
             customer_id: 761,
             basket: [
                 {
@@ -21561,7 +21561,7 @@ data = {
         {
             id: 120,
             reference: '36ths1',
-            date: '2013-01-04T02:51:45.997Z',
+            date: new Date('2013-01-04T02:51:45.997Z'),
             customer_id: 315,
             basket: [
                 {
@@ -21580,7 +21580,7 @@ data = {
         {
             id: 121,
             reference: 'mojc2d',
-            date: '2016-06-25T03:29:14.973Z',
+            date: new Date('2016-06-25T03:29:14.973Z'),
             customer_id: 31,
             basket: [
                 {
@@ -21603,7 +21603,7 @@ data = {
         {
             id: 122,
             reference: 'i5bmqs',
-            date: '2016-04-28T04:41:33.392Z',
+            date: new Date('2016-04-28T04:41:33.392Z'),
             customer_id: 209,
             basket: [
                 {
@@ -21626,7 +21626,7 @@ data = {
         {
             id: 123,
             reference: 'fvqyf5',
-            date: '2016-02-12T02:36:38.307Z',
+            date: new Date('2016-02-12T02:36:38.307Z'),
             customer_id: 566,
             basket: [
                 {
@@ -21649,7 +21649,7 @@ data = {
         {
             id: 124,
             reference: '6x6uxf',
-            date: '2016-09-26T15:03:23.309Z',
+            date: new Date('2016-09-26T15:03:23.309Z'),
             customer_id: 629,
             basket: [
                 {
@@ -21668,7 +21668,7 @@ data = {
         {
             id: 125,
             reference: 'szggs7',
-            date: '2016-08-20T15:02:05.926Z',
+            date: new Date('2016-08-20T15:02:05.926Z'),
             customer_id: 768,
             basket: [
                 {
@@ -21687,7 +21687,7 @@ data = {
         {
             id: 126,
             reference: '7jq8z0',
-            date: '2017-01-28T00:40:43.535Z',
+            date: new Date('2017-01-28T00:40:43.535Z'),
             customer_id: 605,
             basket: [
                 {
@@ -21710,7 +21710,7 @@ data = {
         {
             id: 127,
             reference: 'jzd2hz',
-            date: '2016-10-21T16:18:37.240Z',
+            date: new Date('2016-10-21T16:18:37.240Z'),
             customer_id: 126,
             basket: [
                 {
@@ -21737,7 +21737,7 @@ data = {
         {
             id: 128,
             reference: 'etn30w',
-            date: '2015-09-11T20:33:26.255Z',
+            date: new Date('2015-09-11T20:33:26.255Z'),
             customer_id: 124,
             basket: [
                 {
@@ -21780,7 +21780,7 @@ data = {
         {
             id: 129,
             reference: '06n5j6',
-            date: '2016-11-19T05:49:11.212Z',
+            date: new Date('2016-11-19T05:49:11.212Z'),
             customer_id: 100,
             basket: [
                 {
@@ -21799,7 +21799,7 @@ data = {
         {
             id: 130,
             reference: '3iulpw',
-            date: '2017-03-02T20:59:38.737Z',
+            date: new Date('2017-03-02T20:59:38.737Z'),
             customer_id: 338,
             basket: [
                 {
@@ -21818,7 +21818,7 @@ data = {
         {
             id: 131,
             reference: 'dovmvz',
-            date: '2017-03-08T18:30:17.508Z',
+            date: new Date('2017-03-08T18:30:17.508Z'),
             customer_id: 573,
             basket: [
                 {
@@ -21853,7 +21853,7 @@ data = {
         {
             id: 132,
             reference: '2vkjzy',
-            date: '2016-09-22T20:00:04.299Z',
+            date: new Date('2016-09-22T20:00:04.299Z'),
             customer_id: 109,
             basket: [
                 {
@@ -21872,7 +21872,7 @@ data = {
         {
             id: 133,
             reference: 'i8lje6',
-            date: '2016-09-29T07:05:24.538Z',
+            date: new Date('2016-09-29T07:05:24.538Z'),
             customer_id: 460,
             basket: [
                 {
@@ -21899,7 +21899,7 @@ data = {
         {
             id: 134,
             reference: 'ezkbfa',
-            date: '2014-12-29T07:50:00.990Z',
+            date: new Date('2014-12-29T07:50:00.990Z'),
             customer_id: 559,
             basket: [
                 {
@@ -21934,7 +21934,7 @@ data = {
         {
             id: 135,
             reference: '8w43xr',
-            date: '2016-05-24T10:35:46.883Z',
+            date: new Date('2016-05-24T10:35:46.883Z'),
             customer_id: 669,
             basket: [
                 {
@@ -21953,7 +21953,7 @@ data = {
         {
             id: 136,
             reference: '3cplck',
-            date: '2016-12-21T09:39:38.808Z',
+            date: new Date('2016-12-21T09:39:38.808Z'),
             customer_id: 512,
             basket: [
                 {
@@ -21972,7 +21972,7 @@ data = {
         {
             id: 137,
             reference: 'w903y8',
-            date: '2016-09-16T19:43:54.712Z',
+            date: new Date('2016-09-16T19:43:54.712Z'),
             customer_id: 831,
             basket: [
                 {
@@ -21991,7 +21991,7 @@ data = {
         {
             id: 138,
             reference: '87cjg1',
-            date: '2016-08-05T20:20:53.153Z',
+            date: new Date('2016-08-05T20:20:53.153Z'),
             customer_id: 132,
             basket: [
                 {
@@ -22010,7 +22010,7 @@ data = {
         {
             id: 139,
             reference: 'g5i5vn',
-            date: '2017-01-05T07:19:22.422Z',
+            date: new Date('2017-01-05T07:19:22.422Z'),
             customer_id: 751,
             basket: [
                 {
@@ -22033,7 +22033,7 @@ data = {
         {
             id: 140,
             reference: 'bwz2tz',
-            date: '2016-02-14T17:35:49.520Z',
+            date: new Date('2016-02-14T17:35:49.520Z'),
             customer_id: 854,
             basket: [
                 {
@@ -22052,7 +22052,7 @@ data = {
         {
             id: 141,
             reference: '3t9lo8',
-            date: '2017-02-20T10:26:26.284Z',
+            date: new Date('2017-02-20T10:26:26.284Z'),
             customer_id: 125,
             basket: [
                 {
@@ -22075,7 +22075,7 @@ data = {
         {
             id: 142,
             reference: 'z4mbjw',
-            date: '2016-06-15T20:55:15.040Z',
+            date: new Date('2016-06-15T20:55:15.040Z'),
             customer_id: 528,
             basket: [
                 {
@@ -22094,7 +22094,7 @@ data = {
         {
             id: 143,
             reference: '5pha02',
-            date: '2016-07-26T01:02:54.752Z',
+            date: new Date('2016-07-26T01:02:54.752Z'),
             customer_id: 768,
             basket: [
                 {
@@ -22113,7 +22113,7 @@ data = {
         {
             id: 144,
             reference: 'di4ud0',
-            date: '2014-05-30T12:08:46.008Z',
+            date: new Date('2014-05-30T12:08:46.008Z'),
             customer_id: 594,
             basket: [
                 {
@@ -22136,7 +22136,7 @@ data = {
         {
             id: 145,
             reference: 'e7i65a',
-            date: '2016-01-27T11:28:55.922Z',
+            date: new Date('2016-01-27T11:28:55.922Z'),
             customer_id: 262,
             basket: [
                 {
@@ -22155,7 +22155,7 @@ data = {
         {
             id: 146,
             reference: 'o9cvtb',
-            date: '2017-03-26T00:23:32.241Z',
+            date: new Date('2017-03-26T00:23:32.241Z'),
             customer_id: 699,
             basket: [
                 {
@@ -22178,7 +22178,7 @@ data = {
         {
             id: 147,
             reference: 'rpj6tu',
-            date: '2016-09-05T11:53:36.414Z',
+            date: new Date('2016-09-05T11:53:36.414Z'),
             customer_id: 842,
             basket: [
                 {
@@ -22197,7 +22197,7 @@ data = {
         {
             id: 148,
             reference: 'pxfo5g',
-            date: '2016-07-26T12:25:28.967Z',
+            date: new Date('2016-07-26T12:25:28.967Z'),
             customer_id: 508,
             basket: [
                 {
@@ -22244,7 +22244,7 @@ data = {
         {
             id: 149,
             reference: 'fh88eo',
-            date: '2015-10-26T06:42:11.541Z',
+            date: new Date('2015-10-26T06:42:11.541Z'),
             customer_id: 110,
             basket: [
                 {
@@ -22267,7 +22267,7 @@ data = {
         {
             id: 150,
             reference: 'cwnk0m',
-            date: '2014-10-03T09:44:26.007Z',
+            date: new Date('2014-10-03T09:44:26.007Z'),
             customer_id: 511,
             basket: [
                 {
@@ -22290,7 +22290,7 @@ data = {
         {
             id: 151,
             reference: 'l87b12',
-            date: '2017-01-13T13:06:33.751Z',
+            date: new Date('2017-01-13T13:06:33.751Z'),
             customer_id: 665,
             basket: [
                 {
@@ -22313,7 +22313,7 @@ data = {
         {
             id: 152,
             reference: '5lpg9f',
-            date: '2017-04-26T04:36:17.357Z',
+            date: new Date('2017-04-26T04:36:17.357Z'),
             customer_id: 11,
             basket: [
                 {
@@ -22352,7 +22352,7 @@ data = {
         {
             id: 153,
             reference: 'f1qamf',
-            date: '2016-08-13T07:49:03.065Z',
+            date: new Date('2016-08-13T07:49:03.065Z'),
             customer_id: 718,
             basket: [
                 {
@@ -22375,7 +22375,7 @@ data = {
         {
             id: 154,
             reference: '1hb5gj',
-            date: '2015-04-12T07:19:46.646Z',
+            date: new Date('2015-04-12T07:19:46.646Z'),
             customer_id: 316,
             basket: [
                 {
@@ -22398,7 +22398,7 @@ data = {
         {
             id: 155,
             reference: 'dl0ahl',
-            date: '2015-03-24T07:17:16.598Z',
+            date: new Date('2015-03-24T07:17:16.598Z'),
             customer_id: 410,
             basket: [
                 {
@@ -22417,7 +22417,7 @@ data = {
         {
             id: 156,
             reference: 'pgcfye',
-            date: '2016-10-13T21:39:03.104Z',
+            date: new Date('2016-10-13T21:39:03.104Z'),
             customer_id: 187,
             basket: [
                 {
@@ -22440,7 +22440,7 @@ data = {
         {
             id: 157,
             reference: 'jhogx0',
-            date: '2015-11-30T02:19:44.309Z',
+            date: new Date('2015-11-30T02:19:44.309Z'),
             customer_id: 32,
             basket: [
                 {
@@ -22463,7 +22463,7 @@ data = {
         {
             id: 158,
             reference: 'zm4v2z',
-            date: '2015-01-01T05:51:32.188Z',
+            date: new Date('2015-01-01T05:51:32.188Z'),
             customer_id: 312,
             basket: [
                 {
@@ -22486,7 +22486,7 @@ data = {
         {
             id: 159,
             reference: 'y1y79c',
-            date: '2014-10-07T23:13:11.775Z',
+            date: new Date('2014-10-07T23:13:11.775Z'),
             customer_id: 475,
             basket: [
                 {
@@ -22509,7 +22509,7 @@ data = {
         {
             id: 160,
             reference: 'h46ail',
-            date: '2015-12-12T01:15:54.586Z',
+            date: new Date('2015-12-12T01:15:54.586Z'),
             customer_id: 633,
             basket: [
                 {
@@ -22528,7 +22528,7 @@ data = {
         {
             id: 161,
             reference: 'm9w6fk',
-            date: '2017-02-21T09:10:36.725Z',
+            date: new Date('2017-02-21T09:10:36.725Z'),
             customer_id: 789,
             basket: [
                 {
@@ -22547,7 +22547,7 @@ data = {
         {
             id: 162,
             reference: 'rm60rl',
-            date: '2016-08-15T11:11:23.368Z',
+            date: new Date('2016-08-15T11:11:23.368Z'),
             customer_id: 685,
             basket: [
                 {
@@ -22566,7 +22566,7 @@ data = {
         {
             id: 163,
             reference: 'tlyk3b',
-            date: '2017-01-28T11:25:13.769Z',
+            date: new Date('2017-01-28T11:25:13.769Z'),
             customer_id: 678,
             basket: [
                 {
@@ -22593,7 +22593,7 @@ data = {
         {
             id: 164,
             reference: 'w73x6a',
-            date: '2016-09-27T06:47:46.846Z',
+            date: new Date('2016-09-27T06:47:46.846Z'),
             customer_id: 604,
             basket: [
                 {
@@ -22612,7 +22612,7 @@ data = {
         {
             id: 165,
             reference: '04jrn8',
-            date: '2015-09-17T01:04:54.980Z',
+            date: new Date('2015-09-17T01:04:54.980Z'),
             customer_id: 609,
             basket: [
                 {
@@ -22635,7 +22635,7 @@ data = {
         {
             id: 166,
             reference: 'd6aqd7',
-            date: '2016-07-24T04:08:30.625Z',
+            date: new Date('2016-07-24T04:08:30.625Z'),
             customer_id: 508,
             basket: [
                 {
@@ -22658,7 +22658,7 @@ data = {
         {
             id: 167,
             reference: 'dgpytt',
-            date: '2017-04-22T20:02:37.179Z',
+            date: new Date('2017-04-22T20:02:37.179Z'),
             customer_id: 408,
             basket: [
                 {
@@ -22677,7 +22677,7 @@ data = {
         {
             id: 168,
             reference: 'qkpkzz',
-            date: '2017-01-04T21:59:47.146Z',
+            date: new Date('2017-01-04T21:59:47.146Z'),
             customer_id: 544,
             basket: [
                 {
@@ -22696,7 +22696,7 @@ data = {
         {
             id: 169,
             reference: 'x6dqc8',
-            date: '2017-01-09T00:05:40.847Z',
+            date: new Date('2017-01-09T00:05:40.847Z'),
             customer_id: 695,
             basket: [
                 {
@@ -22715,7 +22715,7 @@ data = {
         {
             id: 170,
             reference: '0mwq5m',
-            date: '2017-04-21T20:24:03.171Z',
+            date: new Date('2017-04-21T20:24:03.171Z'),
             customer_id: 821,
             basket: [
                 {
@@ -22734,7 +22734,7 @@ data = {
         {
             id: 171,
             reference: 'hylgl3',
-            date: '2015-08-13T04:43:25.270Z',
+            date: new Date('2015-08-13T04:43:25.270Z'),
             customer_id: 547,
             basket: [
                 {
@@ -22753,7 +22753,7 @@ data = {
         {
             id: 172,
             reference: 'skq3hg',
-            date: '2016-11-08T04:35:01.248Z',
+            date: new Date('2016-11-08T04:35:01.248Z'),
             customer_id: 613,
             basket: [
                 {
@@ -22772,7 +22772,7 @@ data = {
         {
             id: 173,
             reference: '41k6fu',
-            date: '2015-10-03T00:38:47.369Z',
+            date: new Date('2015-10-03T00:38:47.369Z'),
             customer_id: 433,
             basket: [
                 {
@@ -22799,7 +22799,7 @@ data = {
         {
             id: 174,
             reference: 'q6huai',
-            date: '2016-08-02T17:24:17.900Z',
+            date: new Date('2016-08-02T17:24:17.900Z'),
             customer_id: 218,
             basket: [
                 {
@@ -22822,7 +22822,7 @@ data = {
         {
             id: 175,
             reference: 'dtp7la',
-            date: '2016-09-29T02:33:26.841Z',
+            date: new Date('2016-09-29T02:33:26.841Z'),
             customer_id: 212,
             basket: [
                 {
@@ -22849,7 +22849,7 @@ data = {
         {
             id: 176,
             reference: 'ypapll',
-            date: '2015-12-06T01:30:16.316Z',
+            date: new Date('2015-12-06T01:30:16.316Z'),
             customer_id: 295,
             basket: [
                 {
@@ -22868,7 +22868,7 @@ data = {
         {
             id: 177,
             reference: '5j4ohd',
-            date: '2016-11-05T05:12:50.925Z',
+            date: new Date('2016-11-05T05:12:50.925Z'),
             customer_id: 187,
             basket: [
                 {
@@ -22895,7 +22895,7 @@ data = {
         {
             id: 178,
             reference: 'ebnxr8',
-            date: '2015-05-15T10:12:56.377Z',
+            date: new Date('2015-05-15T10:12:56.377Z'),
             customer_id: 160,
             basket: [
                 {
@@ -22914,7 +22914,7 @@ data = {
         {
             id: 179,
             reference: 'r2y4gt',
-            date: '2016-12-27T23:32:48.971Z',
+            date: new Date('2016-12-27T23:32:48.971Z'),
             customer_id: 673,
             basket: [
                 {
@@ -22937,7 +22937,7 @@ data = {
         {
             id: 180,
             reference: 'xmj6z4',
-            date: '2017-02-24T02:24:43.380Z',
+            date: new Date('2017-02-24T02:24:43.380Z'),
             customer_id: 94,
             basket: [
                 {
@@ -22956,7 +22956,7 @@ data = {
         {
             id: 181,
             reference: 'pwzqxe',
-            date: '2016-11-04T07:50:02.305Z',
+            date: new Date('2016-11-04T07:50:02.305Z'),
             customer_id: 92,
             basket: [
                 {
@@ -22979,7 +22979,7 @@ data = {
         {
             id: 182,
             reference: 'hmdjgs',
-            date: '2015-12-08T00:08:19.626Z',
+            date: new Date('2015-12-08T00:08:19.626Z'),
             customer_id: 19,
             basket: [
                 {
@@ -23018,7 +23018,7 @@ data = {
         {
             id: 183,
             reference: 'rwah0v',
-            date: '2016-09-28T08:03:29.754Z',
+            date: new Date('2016-09-28T08:03:29.754Z'),
             customer_id: 645,
             basket: [
                 {
@@ -23041,7 +23041,7 @@ data = {
         {
             id: 184,
             reference: '70z8xp',
-            date: '2017-03-05T19:56:08.836Z',
+            date: new Date('2017-03-05T19:56:08.836Z'),
             customer_id: 535,
             basket: [
                 {
@@ -23064,7 +23064,7 @@ data = {
         {
             id: 185,
             reference: 'o4zyui',
-            date: '2016-06-23T02:30:46.600Z',
+            date: new Date('2016-06-23T02:30:46.600Z'),
             customer_id: 859,
             basket: [
                 {
@@ -23083,7 +23083,7 @@ data = {
         {
             id: 186,
             reference: 'q9g6sn',
-            date: '2016-09-23T19:00:28.755Z',
+            date: new Date('2016-09-23T19:00:28.755Z'),
             customer_id: 382,
             basket: [
                 {
@@ -23102,7 +23102,7 @@ data = {
         {
             id: 187,
             reference: 'wz0rhy',
-            date: '2017-03-04T04:00:21.902Z',
+            date: new Date('2017-03-04T04:00:21.902Z'),
             customer_id: 699,
             basket: [
                 {
@@ -23121,7 +23121,7 @@ data = {
         {
             id: 188,
             reference: 'l702eu',
-            date: '2017-01-27T22:21:27.031Z',
+            date: new Date('2017-01-27T22:21:27.031Z'),
             customer_id: 605,
             basket: [
                 {
@@ -23144,7 +23144,7 @@ data = {
         {
             id: 189,
             reference: 'd3a6ap',
-            date: '2015-05-02T16:54:20.581Z',
+            date: new Date('2015-05-02T16:54:20.581Z'),
             customer_id: 160,
             basket: [
                 {
@@ -23179,7 +23179,7 @@ data = {
         {
             id: 190,
             reference: 'gks213',
-            date: '2017-03-11T15:43:31.514Z',
+            date: new Date('2017-03-11T15:43:31.514Z'),
             customer_id: 585,
             basket: [
                 {
@@ -23206,7 +23206,7 @@ data = {
         {
             id: 191,
             reference: 'dplzt7',
-            date: '2016-02-27T11:34:06.861Z',
+            date: new Date('2016-02-27T11:34:06.861Z'),
             customer_id: 560,
             basket: [
                 {
@@ -23225,7 +23225,7 @@ data = {
         {
             id: 192,
             reference: 'zhjdmy',
-            date: '2016-02-06T17:25:10.451Z',
+            date: new Date('2016-02-06T17:25:10.451Z'),
             customer_id: 848,
             basket: [
                 {
@@ -23244,7 +23244,7 @@ data = {
         {
             id: 193,
             reference: 'oke4du',
-            date: '2016-10-27T15:36:16.169Z',
+            date: new Date('2016-10-27T15:36:16.169Z'),
             customer_id: 604,
             basket: [
                 {
@@ -23267,7 +23267,7 @@ data = {
         {
             id: 194,
             reference: 'zclrgl',
-            date: '2015-11-26T10:25:01.270Z',
+            date: new Date('2015-11-26T10:25:01.270Z'),
             customer_id: 564,
             basket: [
                 {
@@ -23286,7 +23286,7 @@ data = {
         {
             id: 195,
             reference: 'ydq8tw',
-            date: '2016-11-01T05:48:40.379Z',
+            date: new Date('2016-11-01T05:48:40.379Z'),
             customer_id: 842,
             basket: [
                 {
@@ -23305,7 +23305,7 @@ data = {
         {
             id: 196,
             reference: 'kc5mr9',
-            date: '2016-08-24T16:51:51.030Z',
+            date: new Date('2016-08-24T16:51:51.030Z'),
             customer_id: 255,
             basket: [
                 {
@@ -23328,7 +23328,7 @@ data = {
         {
             id: 197,
             reference: '46j07m',
-            date: '2016-07-03T13:37:54.664Z',
+            date: new Date('2016-07-03T13:37:54.664Z'),
             customer_id: 606,
             basket: [
                 {
@@ -23351,7 +23351,7 @@ data = {
         {
             id: 198,
             reference: 'syx983',
-            date: '2016-08-04T16:29:26.517Z',
+            date: new Date('2016-08-04T16:29:26.517Z'),
             customer_id: 639,
             basket: [
                 {
@@ -23370,7 +23370,7 @@ data = {
         {
             id: 199,
             reference: 'tqxp9q',
-            date: '2016-11-12T00:55:41.625Z',
+            date: new Date('2016-11-12T00:55:41.625Z'),
             customer_id: 795,
             basket: [
                 {
@@ -23389,7 +23389,7 @@ data = {
         {
             id: 200,
             reference: 'w9ad06',
-            date: '2016-05-02T10:49:31.751Z',
+            date: new Date('2016-05-02T10:49:31.751Z'),
             customer_id: 602,
             basket: [
                 {
@@ -23408,7 +23408,7 @@ data = {
         {
             id: 201,
             reference: 's5grhb',
-            date: '2016-05-24T22:31:38.865Z',
+            date: new Date('2016-05-24T22:31:38.865Z'),
             customer_id: 19,
             basket: [
                 {
@@ -23427,7 +23427,7 @@ data = {
         {
             id: 202,
             reference: 'fysvml',
-            date: '2014-03-31T08:28:44.663Z',
+            date: new Date('2014-03-31T08:28:44.663Z'),
             customer_id: 205,
             basket: [
                 {
@@ -23450,7 +23450,7 @@ data = {
         {
             id: 203,
             reference: 'xgv8j8',
-            date: '2016-01-28T14:59:45.200Z',
+            date: new Date('2016-01-28T14:59:45.200Z'),
             customer_id: 4,
             basket: [
                 {
@@ -23473,7 +23473,7 @@ data = {
         {
             id: 204,
             reference: 'ecbe2b',
-            date: '2017-01-10T23:47:58.904Z',
+            date: new Date('2017-01-10T23:47:58.904Z'),
             customer_id: 132,
             basket: [
                 {
@@ -23492,7 +23492,7 @@ data = {
         {
             id: 205,
             reference: 't31acy',
-            date: '2015-01-24T23:28:37.107Z',
+            date: new Date('2015-01-24T23:28:37.107Z'),
             customer_id: 602,
             basket: [
                 {
@@ -23511,7 +23511,7 @@ data = {
         {
             id: 206,
             reference: 's1fx6k',
-            date: '2016-09-20T14:39:25.676Z',
+            date: new Date('2016-09-20T14:39:25.676Z'),
             customer_id: 512,
             basket: [
                 {
@@ -23530,7 +23530,7 @@ data = {
         {
             id: 207,
             reference: 'm0r7jg',
-            date: '2017-04-06T18:20:53.895Z',
+            date: new Date('2017-04-06T18:20:53.895Z'),
             customer_id: 527,
             basket: [
                 {
@@ -23553,7 +23553,7 @@ data = {
         {
             id: 208,
             reference: 'ssi41n',
-            date: '2016-10-30T10:58:13.793Z',
+            date: new Date('2016-10-30T10:58:13.793Z'),
             customer_id: 580,
             basket: [
                 {
@@ -23576,7 +23576,7 @@ data = {
         {
             id: 209,
             reference: 'gprxxj',
-            date: '2016-05-04T13:46:05.932Z',
+            date: new Date('2016-05-04T13:46:05.932Z'),
             customer_id: 861,
             basket: [
                 {
@@ -23615,7 +23615,7 @@ data = {
         {
             id: 210,
             reference: '85wpg3',
-            date: '2017-02-28T08:13:59.477Z',
+            date: new Date('2017-02-28T08:13:59.477Z'),
             customer_id: 631,
             basket: [
                 {
@@ -23638,7 +23638,7 @@ data = {
         {
             id: 211,
             reference: 'm8t249',
-            date: '2013-12-29T02:42:18.708Z',
+            date: new Date('2013-12-29T02:42:18.708Z'),
             customer_id: 28,
             basket: [
                 {
@@ -23689,7 +23689,7 @@ data = {
         {
             id: 212,
             reference: 'qoruti',
-            date: '2017-04-18T04:18:30.251Z',
+            date: new Date('2017-04-18T04:18:30.251Z'),
             customer_id: 22,
             basket: [
                 {
@@ -23732,7 +23732,7 @@ data = {
         {
             id: 213,
             reference: '29kskh',
-            date: '2015-09-21T02:32:18.160Z',
+            date: new Date('2015-09-21T02:32:18.160Z'),
             customer_id: 428,
             basket: [
                 {
@@ -23755,7 +23755,7 @@ data = {
         {
             id: 214,
             reference: 'naplg4',
-            date: '2017-03-31T15:50:10.238Z',
+            date: new Date('2017-03-31T15:50:10.238Z'),
             customer_id: 829,
             basket: [
                 {
@@ -23778,7 +23778,7 @@ data = {
         {
             id: 215,
             reference: '4f9e3y',
-            date: '2016-06-22T01:00:53.806Z',
+            date: new Date('2016-06-22T01:00:53.806Z'),
             customer_id: 49,
             basket: [
                 {
@@ -23797,7 +23797,7 @@ data = {
         {
             id: 216,
             reference: 'v9vjpi',
-            date: '2016-11-19T13:14:13.531Z',
+            date: new Date('2016-11-19T13:14:13.531Z'),
             customer_id: 612,
             basket: [
                 {
@@ -23820,7 +23820,7 @@ data = {
         {
             id: 217,
             reference: '9gxlrj',
-            date: '2016-05-08T02:22:57.310Z',
+            date: new Date('2016-05-08T02:22:57.310Z'),
             customer_id: 562,
             basket: [
                 {
@@ -23863,7 +23863,7 @@ data = {
         {
             id: 218,
             reference: 'c05wq8',
-            date: '2016-09-30T10:01:45.291Z',
+            date: new Date('2016-09-30T10:01:45.291Z'),
             customer_id: 817,
             basket: [
                 {
@@ -23882,7 +23882,7 @@ data = {
         {
             id: 219,
             reference: 'p08w1z',
-            date: '2014-05-02T08:42:17.252Z',
+            date: new Date('2014-05-02T08:42:17.252Z'),
             customer_id: 205,
             basket: [
                 {
@@ -23901,7 +23901,7 @@ data = {
         {
             id: 220,
             reference: 'tovlrt',
-            date: '2014-07-11T03:16:01.645Z',
+            date: new Date('2014-07-11T03:16:01.645Z'),
             customer_id: 290,
             basket: [
                 {
@@ -23920,7 +23920,7 @@ data = {
         {
             id: 221,
             reference: 'ot9a7j',
-            date: '2017-03-15T02:52:10.185Z',
+            date: new Date('2017-03-15T02:52:10.185Z'),
             customer_id: 664,
             basket: [
                 {
@@ -23939,7 +23939,7 @@ data = {
         {
             id: 222,
             reference: 'yhbt0x',
-            date: '2014-11-18T08:26:18.387Z',
+            date: new Date('2014-11-18T08:26:18.387Z'),
             customer_id: 433,
             basket: [
                 {
@@ -23962,7 +23962,7 @@ data = {
         {
             id: 223,
             reference: 'k13xrw',
-            date: '2016-03-03T08:56:16.729Z',
+            date: new Date('2016-03-03T08:56:16.729Z'),
             customer_id: 236,
             basket: [
                 {
@@ -24017,7 +24017,7 @@ data = {
         {
             id: 224,
             reference: 'mxhnpr',
-            date: '2015-09-05T17:57:22.925Z',
+            date: new Date('2015-09-05T17:57:22.925Z'),
             customer_id: 394,
             basket: [
                 {
@@ -24036,7 +24036,7 @@ data = {
         {
             id: 225,
             reference: 'gzdvnt',
-            date: '2015-08-06T01:47:50.342Z',
+            date: new Date('2015-08-06T01:47:50.342Z'),
             customer_id: 690,
             basket: [
                 {
@@ -24055,7 +24055,7 @@ data = {
         {
             id: 226,
             reference: 'n2krxx',
-            date: '2016-12-07T01:23:52.863Z',
+            date: new Date('2016-12-07T01:23:52.863Z'),
             customer_id: 156,
             basket: [
                 {
@@ -24078,7 +24078,7 @@ data = {
         {
             id: 227,
             reference: '22iw7j',
-            date: '2016-05-26T06:54:30.467Z',
+            date: new Date('2016-05-26T06:54:30.467Z'),
             customer_id: 550,
             basket: [
                 {
@@ -24097,7 +24097,7 @@ data = {
         {
             id: 228,
             reference: '7k9vvv',
-            date: '2015-12-07T09:18:44.416Z',
+            date: new Date('2015-12-07T09:18:44.416Z'),
             customer_id: 861,
             basket: [
                 {
@@ -24152,7 +24152,7 @@ data = {
         {
             id: 229,
             reference: 'yzfzbs',
-            date: '2016-10-23T19:21:02.537Z',
+            date: new Date('2016-10-23T19:21:02.537Z'),
             customer_id: 795,
             basket: [
                 {
@@ -24171,7 +24171,7 @@ data = {
         {
             id: 230,
             reference: '10iofq',
-            date: '2016-07-04T19:22:46.088Z',
+            date: new Date('2016-07-04T19:22:46.088Z'),
             customer_id: 594,
             basket: [
                 {
@@ -24198,7 +24198,7 @@ data = {
         {
             id: 231,
             reference: 'sjmcq1',
-            date: '2017-04-11T11:27:22.611Z',
+            date: new Date('2017-04-11T11:27:22.611Z'),
             customer_id: 413,
             basket: [
                 {
@@ -24221,7 +24221,7 @@ data = {
         {
             id: 232,
             reference: '0nr795',
-            date: '2016-09-23T22:18:15.540Z',
+            date: new Date('2016-09-23T22:18:15.540Z'),
             customer_id: 475,
             basket: [
                 {
@@ -24248,7 +24248,7 @@ data = {
         {
             id: 233,
             reference: '3rk62h',
-            date: '2016-12-07T07:16:37.554Z',
+            date: new Date('2016-12-07T07:16:37.554Z'),
             customer_id: 483,
             basket: [
                 {
@@ -24271,7 +24271,7 @@ data = {
         {
             id: 234,
             reference: 'qpk4ap',
-            date: '2017-03-13T21:27:53.395Z',
+            date: new Date('2017-03-13T21:27:53.395Z'),
             customer_id: 142,
             basket: [
                 {
@@ -24314,7 +24314,7 @@ data = {
         {
             id: 235,
             reference: 'b6xjri',
-            date: '2016-07-22T09:32:26.779Z',
+            date: new Date('2016-07-22T09:32:26.779Z'),
             customer_id: 13,
             basket: [
                 {
@@ -24349,7 +24349,7 @@ data = {
         {
             id: 236,
             reference: 'zs2ob1',
-            date: '2015-07-26T01:41:58.239Z',
+            date: new Date('2015-07-26T01:41:58.239Z'),
             customer_id: 122,
             basket: [
                 {
@@ -24372,7 +24372,7 @@ data = {
         {
             id: 237,
             reference: 'q03ud4',
-            date: '2017-04-10T20:57:32.141Z',
+            date: new Date('2017-04-10T20:57:32.141Z'),
             customer_id: 568,
             basket: [
                 {
@@ -24395,7 +24395,7 @@ data = {
         {
             id: 238,
             reference: 'rd9141',
-            date: '2016-03-30T22:03:12.517Z',
+            date: new Date('2016-03-30T22:03:12.517Z'),
             customer_id: 850,
             basket: [
                 {
@@ -24418,7 +24418,7 @@ data = {
         {
             id: 239,
             reference: 'ddn6g7',
-            date: '2015-12-18T01:39:37.808Z',
+            date: new Date('2015-12-18T01:39:37.808Z'),
             customer_id: 192,
             basket: [
                 {
@@ -24437,7 +24437,7 @@ data = {
         {
             id: 240,
             reference: 'r3z48f',
-            date: '2014-04-16T07:42:16.752Z',
+            date: new Date('2014-04-16T07:42:16.752Z'),
             customer_id: 322,
             basket: [
                 {
@@ -24460,7 +24460,7 @@ data = {
         {
             id: 241,
             reference: '0by0ga',
-            date: '2016-05-06T23:40:12.975Z',
+            date: new Date('2016-05-06T23:40:12.975Z'),
             customer_id: 850,
             basket: [
                 {
@@ -24483,7 +24483,7 @@ data = {
         {
             id: 242,
             reference: 'lzqt9h',
-            date: '2017-03-17T18:29:50.040Z',
+            date: new Date('2017-03-17T18:29:50.040Z'),
             customer_id: 665,
             basket: [
                 {
@@ -24502,7 +24502,7 @@ data = {
         {
             id: 243,
             reference: 'jvy21m',
-            date: '2016-07-25T05:10:15.878Z',
+            date: new Date('2016-07-25T05:10:15.878Z'),
             customer_id: 92,
             basket: [
                 {
@@ -24521,7 +24521,7 @@ data = {
         {
             id: 244,
             reference: 'g8stvk',
-            date: '2015-12-02T17:03:08.998Z',
+            date: new Date('2015-12-02T17:03:08.998Z'),
             customer_id: 707,
             basket: [
                 {
@@ -24540,7 +24540,7 @@ data = {
         {
             id: 245,
             reference: 'a5b299',
-            date: '2016-08-10T22:40:16.386Z',
+            date: new Date('2016-08-10T22:40:16.386Z'),
             customer_id: 850,
             basket: [
                 {
@@ -24567,7 +24567,7 @@ data = {
         {
             id: 246,
             reference: '4v2wrv',
-            date: '2016-08-18T17:44:37.563Z',
+            date: new Date('2016-08-18T17:44:37.563Z'),
             customer_id: 100,
             basket: [
                 {
@@ -24594,7 +24594,7 @@ data = {
         {
             id: 247,
             reference: '9ikvxo',
-            date: '2016-03-31T00:11:08.296Z',
+            date: new Date('2016-03-31T00:11:08.296Z'),
             customer_id: 533,
             basket: [
                 {
@@ -24617,7 +24617,7 @@ data = {
         {
             id: 248,
             reference: '59iko3',
-            date: '2017-03-30T17:43:41.902Z',
+            date: new Date('2017-03-30T17:43:41.902Z'),
             customer_id: 611,
             basket: [
                 {
@@ -24640,7 +24640,7 @@ data = {
         {
             id: 249,
             reference: 'ov3mif',
-            date: '2016-11-14T17:23:30.706Z',
+            date: new Date('2016-11-14T17:23:30.706Z'),
             customer_id: 612,
             basket: [
                 {
@@ -24659,7 +24659,7 @@ data = {
         {
             id: 250,
             reference: '7jwrdd',
-            date: '2016-09-08T11:17:23.884Z',
+            date: new Date('2016-09-08T11:17:23.884Z'),
             customer_id: 473,
             basket: [
                 {
@@ -24678,7 +24678,7 @@ data = {
         {
             id: 251,
             reference: 'rwjifi',
-            date: '2015-08-28T18:49:22.807Z',
+            date: new Date('2015-08-28T18:49:22.807Z'),
             customer_id: 823,
             basket: [
                 {
@@ -24705,7 +24705,7 @@ data = {
         {
             id: 252,
             reference: 'wmgxwp',
-            date: '2015-05-19T04:04:58.040Z',
+            date: new Date('2015-05-19T04:04:58.040Z'),
             customer_id: 4,
             basket: [
                 {
@@ -24740,7 +24740,7 @@ data = {
         {
             id: 253,
             reference: 'nsso8p',
-            date: '2016-03-29T05:25:10.175Z',
+            date: new Date('2016-03-29T05:25:10.175Z'),
             customer_id: 533,
             basket: [
                 {
@@ -24763,7 +24763,7 @@ data = {
         {
             id: 254,
             reference: 'zuydc5',
-            date: '2016-10-30T18:54:46.011Z',
+            date: new Date('2016-10-30T18:54:46.011Z'),
             customer_id: 512,
             basket: [
                 {
@@ -24786,7 +24786,7 @@ data = {
         {
             id: 255,
             reference: 'gq74vu',
-            date: '2016-06-26T14:35:18.778Z',
+            date: new Date('2016-06-26T14:35:18.778Z'),
             customer_id: 773,
             basket: [
                 {
@@ -24805,7 +24805,7 @@ data = {
         {
             id: 256,
             reference: 'llx3hq',
-            date: '2016-10-20T17:03:44.737Z',
+            date: new Date('2016-10-20T17:03:44.737Z'),
             customer_id: 507,
             basket: [
                 {
@@ -24824,7 +24824,7 @@ data = {
         {
             id: 257,
             reference: '8a276q',
-            date: '2016-10-09T21:47:37.160Z',
+            date: new Date('2016-10-09T21:47:37.160Z'),
             customer_id: 250,
             basket: [
                 {
@@ -24847,7 +24847,7 @@ data = {
         {
             id: 258,
             reference: 'bn7h4s',
-            date: '2016-07-21T19:40:39.121Z',
+            date: new Date('2016-07-21T19:40:39.121Z'),
             customer_id: 53,
             basket: [
                 {
@@ -24866,7 +24866,7 @@ data = {
         {
             id: 259,
             reference: '7yb73x',
-            date: '2014-06-14T01:42:00.862Z',
+            date: new Date('2014-06-14T01:42:00.862Z'),
             customer_id: 601,
             basket: [
                 {
@@ -24893,7 +24893,7 @@ data = {
         {
             id: 260,
             reference: '6b92gx',
-            date: '2014-06-30T07:33:41.132Z',
+            date: new Date('2014-06-30T07:33:41.132Z'),
             customer_id: 322,
             basket: [
                 {
@@ -24912,7 +24912,7 @@ data = {
         {
             id: 261,
             reference: 'ni3tw6',
-            date: '2016-07-31T12:44:16.237Z',
+            date: new Date('2016-07-31T12:44:16.237Z'),
             customer_id: 669,
             basket: [
                 {
@@ -24935,7 +24935,7 @@ data = {
         {
             id: 262,
             reference: 'a0exxi',
-            date: '2014-01-16T17:12:20.170Z',
+            date: new Date('2014-01-16T17:12:20.170Z'),
             customer_id: 559,
             basket: [
                 {
@@ -24962,7 +24962,7 @@ data = {
         {
             id: 263,
             reference: 'l6kfka',
-            date: '2017-04-23T08:18:00.699Z',
+            date: new Date('2017-04-23T08:18:00.699Z'),
             customer_id: 408,
             basket: [
                 {
@@ -24985,7 +24985,7 @@ data = {
         {
             id: 264,
             reference: 's55cqq',
-            date: '2017-01-18T21:13:20.837Z',
+            date: new Date('2017-01-18T21:13:20.837Z'),
             customer_id: 100,
             basket: [
                 {
@@ -25012,7 +25012,7 @@ data = {
         {
             id: 265,
             reference: '5hqtjj',
-            date: '2016-08-01T12:34:42.820Z',
+            date: new Date('2016-08-01T12:34:42.820Z'),
             customer_id: 393,
             basket: [
                 {
@@ -25031,7 +25031,7 @@ data = {
         {
             id: 266,
             reference: 'be4lw4',
-            date: '2016-09-14T13:20:13.505Z',
+            date: new Date('2016-09-14T13:20:13.505Z'),
             customer_id: 126,
             basket: [
                 {
@@ -25050,7 +25050,7 @@ data = {
         {
             id: 267,
             reference: 'lrfh0w',
-            date: '2016-11-10T11:23:32.382Z',
+            date: new Date('2016-11-10T11:23:32.382Z'),
             customer_id: 720,
             basket: [
                 {
@@ -25077,7 +25077,7 @@ data = {
         {
             id: 268,
             reference: 'wa6klg',
-            date: '2015-11-13T12:03:25.607Z',
+            date: new Date('2015-11-13T12:03:25.607Z'),
             customer_id: 32,
             basket: [
                 {
@@ -25096,7 +25096,7 @@ data = {
         {
             id: 269,
             reference: 'waq5jz',
-            date: '2016-05-14T12:28:17.864Z',
+            date: new Date('2016-05-14T12:28:17.864Z'),
             customer_id: 875,
             basket: [
                 {
@@ -25119,7 +25119,7 @@ data = {
         {
             id: 270,
             reference: '51crwn',
-            date: '2016-04-05T00:10:23.670Z',
+            date: new Date('2016-04-05T00:10:23.670Z'),
             customer_id: 813,
             basket: [
                 {
@@ -25138,7 +25138,7 @@ data = {
         {
             id: 271,
             reference: 'bzj68d',
-            date: '2016-01-23T00:01:29.559Z',
+            date: new Date('2016-01-23T00:01:29.559Z'),
             customer_id: 334,
             basket: [
                 {
@@ -25157,7 +25157,7 @@ data = {
         {
             id: 272,
             reference: '8fr64c',
-            date: '2016-12-08T14:22:15.506Z',
+            date: new Date('2016-12-08T14:22:15.506Z'),
             customer_id: 255,
             basket: [
                 {
@@ -25196,7 +25196,7 @@ data = {
         {
             id: 273,
             reference: 'nxnlhi',
-            date: '2014-04-27T19:36:24.626Z',
+            date: new Date('2014-04-27T19:36:24.626Z'),
             customer_id: 436,
             basket: [
                 {
@@ -25227,7 +25227,7 @@ data = {
         {
             id: 274,
             reference: 'pncaav',
-            date: '2013-09-01T06:26:25.080Z',
+            date: new Date('2013-09-01T06:26:25.080Z'),
             customer_id: 315,
             basket: [
                 {
@@ -25270,7 +25270,7 @@ data = {
         {
             id: 275,
             reference: 'd0iaay',
-            date: '2016-06-02T15:05:09.866Z',
+            date: new Date('2016-06-02T15:05:09.866Z'),
             customer_id: 468,
             basket: [
                 {
@@ -25293,7 +25293,7 @@ data = {
         {
             id: 276,
             reference: '745bfn',
-            date: '2015-12-08T00:49:19.130Z',
+            date: new Date('2015-12-08T00:49:19.130Z'),
             customer_id: 566,
             basket: [
                 {
@@ -25316,7 +25316,7 @@ data = {
         {
             id: 277,
             reference: '62md6e',
-            date: '2016-10-13T05:19:18.544Z',
+            date: new Date('2016-10-13T05:19:18.544Z'),
             customer_id: 295,
             basket: [
                 {
@@ -25335,7 +25335,7 @@ data = {
         {
             id: 278,
             reference: '66skme',
-            date: '2017-01-12T18:27:16.433Z',
+            date: new Date('2017-01-12T18:27:16.433Z'),
             customer_id: 125,
             basket: [
                 {
@@ -25390,7 +25390,7 @@ data = {
         {
             id: 279,
             reference: '9d2u9e',
-            date: '2015-08-10T03:18:03.909Z',
+            date: new Date('2015-08-10T03:18:03.909Z'),
             customer_id: 758,
             basket: [
                 {
@@ -25409,7 +25409,7 @@ data = {
         {
             id: 280,
             reference: 'pi4n3z',
-            date: '2016-07-23T23:46:35.590Z',
+            date: new Date('2016-07-23T23:46:35.590Z'),
             customer_id: 92,
             basket: [
                 {
@@ -25432,7 +25432,7 @@ data = {
         {
             id: 281,
             reference: 'bmiwui',
-            date: '2015-03-30T16:49:09.988Z',
+            date: new Date('2015-03-30T16:49:09.988Z'),
             customer_id: 261,
             basket: [
                 {
@@ -25451,7 +25451,7 @@ data = {
         {
             id: 282,
             reference: 'xy6rur',
-            date: '2017-03-24T14:29:56.939Z',
+            date: new Date('2017-03-24T14:29:56.939Z'),
             customer_id: 895,
             basket: [
                 {
@@ -25478,7 +25478,7 @@ data = {
         {
             id: 283,
             reference: 'xc9s1l',
-            date: '2017-03-29T18:28:13.678Z',
+            date: new Date('2017-03-29T18:28:13.678Z'),
             customer_id: 829,
             basket: [
                 {
@@ -25513,7 +25513,7 @@ data = {
         {
             id: 284,
             reference: 'krtg2o',
-            date: '2016-11-10T04:04:30.881Z',
+            date: new Date('2016-11-10T04:04:30.881Z'),
             customer_id: 89,
             basket: [
                 {
@@ -25536,7 +25536,7 @@ data = {
         {
             id: 285,
             reference: '1fb6p7',
-            date: '2017-01-29T16:04:27.567Z',
+            date: new Date('2017-01-29T16:04:27.567Z'),
             customer_id: 789,
             basket: [
                 {
@@ -25555,7 +25555,7 @@ data = {
         {
             id: 286,
             reference: '8k15ad',
-            date: '2016-11-09T10:26:15.776Z',
+            date: new Date('2016-11-09T10:26:15.776Z'),
             customer_id: 823,
             basket: [
                 {
@@ -25578,7 +25578,7 @@ data = {
         {
             id: 287,
             reference: '3jb5r9',
-            date: '2016-04-20T00:52:46.732Z',
+            date: new Date('2016-04-20T00:52:46.732Z'),
             customer_id: 318,
             basket: [
                 {
@@ -25597,7 +25597,7 @@ data = {
         {
             id: 288,
             reference: 'dph0fm',
-            date: '2017-02-05T16:42:20.995Z',
+            date: new Date('2017-02-05T16:42:20.995Z'),
             customer_id: 678,
             basket: [
                 {
@@ -25616,7 +25616,7 @@ data = {
         {
             id: 289,
             reference: 'fvvtox',
-            date: '2017-03-21T18:42:34.029Z',
+            date: new Date('2017-03-21T18:42:34.029Z'),
             customer_id: 535,
             basket: [
                 {
@@ -25643,7 +25643,7 @@ data = {
         {
             id: 290,
             reference: 'gqnlkn',
-            date: '2016-10-16T14:45:51.581Z',
+            date: new Date('2016-10-16T14:45:51.581Z'),
             customer_id: 63,
             basket: [
                 {
@@ -25666,7 +25666,7 @@ data = {
         {
             id: 291,
             reference: '33lw0x',
-            date: '2016-05-26T04:05:28.961Z',
+            date: new Date('2016-05-26T04:05:28.961Z'),
             customer_id: 871,
             basket: [
                 {
@@ -25685,7 +25685,7 @@ data = {
         {
             id: 292,
             reference: 'vptrd6',
-            date: '2016-06-06T11:58:59.529Z',
+            date: new Date('2016-06-06T11:58:59.529Z'),
             customer_id: 550,
             basket: [
                 {
@@ -25704,7 +25704,7 @@ data = {
         {
             id: 293,
             reference: 'ffpe1z',
-            date: '2014-07-30T16:31:36.688Z',
+            date: new Date('2014-07-30T16:31:36.688Z'),
             customer_id: 4,
             basket: [
                 {
@@ -25727,7 +25727,7 @@ data = {
         {
             id: 294,
             reference: 't95fud',
-            date: '2017-04-05T06:29:34.329Z',
+            date: new Date('2017-04-05T06:29:34.329Z'),
             customer_id: 22,
             basket: [
                 {
@@ -25746,7 +25746,7 @@ data = {
         {
             id: 295,
             reference: 'ylag5z',
-            date: '2015-05-14T15:15:57.721Z',
+            date: new Date('2015-05-14T15:15:57.721Z'),
             customer_id: 4,
             basket: [
                 {
@@ -25765,7 +25765,7 @@ data = {
         {
             id: 296,
             reference: 'g8iodu',
-            date: '2016-10-21T13:43:34.709Z',
+            date: new Date('2016-10-21T13:43:34.709Z'),
             customer_id: 398,
             basket: [
                 {
@@ -25784,7 +25784,7 @@ data = {
         {
             id: 297,
             reference: 'gqxc39',
-            date: '2016-11-07T12:44:45.700Z',
+            date: new Date('2016-11-07T12:44:45.700Z'),
             customer_id: 418,
             basket: [
                 {
@@ -25803,7 +25803,7 @@ data = {
         {
             id: 298,
             reference: 'ihopip',
-            date: '2016-04-07T23:44:31.164Z',
+            date: new Date('2016-04-07T23:44:31.164Z'),
             customer_id: 517,
             basket: [
                 {
@@ -25826,7 +25826,7 @@ data = {
         {
             id: 299,
             reference: 'sorb4x',
-            date: '2016-12-14T15:10:46.540Z',
+            date: new Date('2016-12-14T15:10:46.540Z'),
             customer_id: 382,
             basket: [
                 {
@@ -25873,7 +25873,7 @@ data = {
         {
             id: 300,
             reference: '4ufxoa',
-            date: '2016-07-18T10:28:26.537Z',
+            date: new Date('2016-07-18T10:28:26.537Z'),
             customer_id: 714,
             basket: [
                 {
@@ -25896,7 +25896,7 @@ data = {
         {
             id: 301,
             reference: 'k9pyf1',
-            date: '2015-09-10T21:40:11.801Z',
+            date: new Date('2015-09-10T21:40:11.801Z'),
             customer_id: 4,
             basket: [
                 {
@@ -25923,7 +25923,7 @@ data = {
         {
             id: 302,
             reference: 'is6xlo',
-            date: '2016-11-10T18:16:08.997Z',
+            date: new Date('2016-11-10T18:16:08.997Z'),
             customer_id: 859,
             basket: [
                 {
@@ -25942,7 +25942,7 @@ data = {
         {
             id: 303,
             reference: 'jx8022',
-            date: '2016-07-01T18:36:08.240Z',
+            date: new Date('2016-07-01T18:36:08.240Z'),
             customer_id: 49,
             basket: [
                 {
@@ -25969,7 +25969,7 @@ data = {
         {
             id: 304,
             reference: 'fwhltm',
-            date: '2015-01-20T01:16:04.677Z',
+            date: new Date('2015-01-20T01:16:04.677Z'),
             customer_id: 594,
             basket: [
                 {
@@ -25988,7 +25988,7 @@ data = {
         {
             id: 305,
             reference: 'yd1yrz',
-            date: '2016-08-04T12:05:29.470Z',
+            date: new Date('2016-08-04T12:05:29.470Z'),
             customer_id: 639,
             basket: [
                 {
@@ -26015,7 +26015,7 @@ data = {
         {
             id: 306,
             reference: 'uq7cyx',
-            date: '2016-08-13T13:46:07.267Z',
+            date: new Date('2016-08-13T13:46:07.267Z'),
             customer_id: 585,
             basket: [
                 {
@@ -26034,7 +26034,7 @@ data = {
         {
             id: 307,
             reference: 'lxapf5',
-            date: '2016-12-06T18:08:47.716Z',
+            date: new Date('2016-12-06T18:08:47.716Z'),
             customer_id: 817,
             basket: [
                 {
@@ -26053,7 +26053,7 @@ data = {
         {
             id: 308,
             reference: 'bnh5u9',
-            date: '2014-08-03T20:51:41.650Z',
+            date: new Date('2014-08-03T20:51:41.650Z'),
             customer_id: 264,
             basket: [
                 {
@@ -26072,7 +26072,7 @@ data = {
         {
             id: 309,
             reference: 'ze3zwc',
-            date: '2015-06-23T13:43:41.018Z',
+            date: new Date('2015-06-23T13:43:41.018Z'),
             customer_id: 151,
             basket: [
                 {
@@ -26091,7 +26091,7 @@ data = {
         {
             id: 310,
             reference: 'j1l08m',
-            date: '2017-01-15T00:05:36.689Z',
+            date: new Date('2017-01-15T00:05:36.689Z'),
             customer_id: 773,
             basket: [
                 {
@@ -26110,7 +26110,7 @@ data = {
         {
             id: 311,
             reference: 'ce3mzf',
-            date: '2017-01-22T05:10:58.102Z',
+            date: new Date('2017-01-22T05:10:58.102Z'),
             customer_id: 30,
             basket: [
                 {
@@ -26129,7 +26129,7 @@ data = {
         {
             id: 312,
             reference: 'mb04bu',
-            date: '2016-06-10T15:58:16.972Z',
+            date: new Date('2016-06-10T15:58:16.972Z'),
             customer_id: 850,
             basket: [
                 {
@@ -26148,7 +26148,7 @@ data = {
         {
             id: 313,
             reference: '1rqx1d',
-            date: '2015-02-24T12:11:49.825Z',
+            date: new Date('2015-02-24T12:11:49.825Z'),
             customer_id: 475,
             basket: [
                 {
@@ -26179,7 +26179,7 @@ data = {
         {
             id: 314,
             reference: '87ebpc',
-            date: '2016-12-28T22:25:20.233Z',
+            date: new Date('2016-12-28T22:25:20.233Z'),
             customer_id: 728,
             basket: [
                 {
@@ -26198,7 +26198,7 @@ data = {
         {
             id: 315,
             reference: 'x7lad5',
-            date: '2017-03-19T05:17:35.572Z',
+            date: new Date('2017-03-19T05:17:35.572Z'),
             customer_id: 347,
             basket: [
                 {
@@ -26217,7 +26217,7 @@ data = {
         {
             id: 316,
             reference: 'ge4and',
-            date: '2016-11-09T16:16:39.210Z',
+            date: new Date('2016-11-09T16:16:39.210Z'),
             customer_id: 799,
             basket: [
                 {
@@ -26236,7 +26236,7 @@ data = {
         {
             id: 317,
             reference: 'b8lb1t',
-            date: '2016-09-29T00:27:43.527Z',
+            date: new Date('2016-09-29T00:27:43.527Z'),
             customer_id: 630,
             basket: [
                 {
@@ -26259,7 +26259,7 @@ data = {
         {
             id: 318,
             reference: 'x2ameg',
-            date: '2015-10-27T18:25:47.799Z',
+            date: new Date('2015-10-27T18:25:47.799Z'),
             customer_id: 264,
             basket: [
                 {
@@ -26282,7 +26282,7 @@ data = {
         {
             id: 319,
             reference: 'qg588e',
-            date: '2015-07-16T00:24:10.163Z',
+            date: new Date('2015-07-16T00:24:10.163Z'),
             customer_id: 428,
             basket: [
                 {
@@ -26301,7 +26301,7 @@ data = {
         {
             id: 320,
             reference: '5p3unf',
-            date: '2016-05-26T09:19:06.522Z',
+            date: new Date('2016-05-26T09:19:06.522Z'),
             customer_id: 813,
             basket: [
                 {
@@ -26320,7 +26320,7 @@ data = {
         {
             id: 321,
             reference: 'rvhowi',
-            date: '2017-03-28T10:42:32.030Z',
+            date: new Date('2017-03-28T10:42:32.030Z'),
             customer_id: 370,
             basket: [
                 {
@@ -26339,7 +26339,7 @@ data = {
         {
             id: 322,
             reference: 'ejxzx0',
-            date: '2017-04-04T02:19:30.323Z',
+            date: new Date('2017-04-04T02:19:30.323Z'),
             customer_id: 22,
             basket: [
                 {
@@ -26362,7 +26362,7 @@ data = {
         {
             id: 323,
             reference: 'pdtny5',
-            date: '2017-02-22T14:12:45.590Z',
+            date: new Date('2017-02-22T14:12:45.590Z'),
             customer_id: 94,
             basket: [
                 {
@@ -26385,7 +26385,7 @@ data = {
         {
             id: 324,
             reference: '6ue84p',
-            date: '2017-01-20T13:13:33.696Z',
+            date: new Date('2017-01-20T13:13:33.696Z'),
             customer_id: 695,
             basket: [
                 {
@@ -26404,7 +26404,7 @@ data = {
         {
             id: 325,
             reference: 'q5rist',
-            date: '2017-02-27T00:29:09.692Z',
+            date: new Date('2017-02-27T00:29:09.692Z'),
             customer_id: 573,
             basket: [
                 {
@@ -26423,7 +26423,7 @@ data = {
         {
             id: 326,
             reference: 'azy35g',
-            date: '2016-06-27T12:22:59.603Z',
+            date: new Date('2016-06-27T12:22:59.603Z'),
             customer_id: 262,
             basket: [
                 {
@@ -26446,7 +26446,7 @@ data = {
         {
             id: 327,
             reference: 'x9knus',
-            date: '2015-06-08T04:54:08.351Z',
+            date: new Date('2015-06-08T04:54:08.351Z'),
             customer_id: 602,
             basket: [
                 {
@@ -26465,7 +26465,7 @@ data = {
         {
             id: 328,
             reference: 'ohbayx',
-            date: '2016-09-17T19:24:42.567Z',
+            date: new Date('2016-09-17T19:24:42.567Z'),
             customer_id: 370,
             basket: [
                 {
@@ -26484,7 +26484,7 @@ data = {
         {
             id: 329,
             reference: 'lpgozx',
-            date: '2016-11-02T06:44:56.003Z',
+            date: new Date('2016-11-02T06:44:56.003Z'),
             customer_id: 842,
             basket: [
                 {
@@ -26503,7 +26503,7 @@ data = {
         {
             id: 330,
             reference: 'a78kb4',
-            date: '2017-01-02T23:51:20.977Z',
+            date: new Date('2017-01-02T23:51:20.977Z'),
             customer_id: 669,
             basket: [
                 {
@@ -26522,7 +26522,7 @@ data = {
         {
             id: 331,
             reference: '1nnlhj',
-            date: '2017-01-31T12:36:43.614Z',
+            date: new Date('2017-01-31T12:36:43.614Z'),
             customer_id: 605,
             basket: [
                 {
@@ -26541,7 +26541,7 @@ data = {
         {
             id: 332,
             reference: '60zxrf',
-            date: '2015-05-29T07:57:10.937Z',
+            date: new Date('2015-05-29T07:57:10.937Z'),
             customer_id: 645,
             basket: [
                 {
@@ -26564,7 +26564,7 @@ data = {
         {
             id: 333,
             reference: 'od5fif',
-            date: '2016-08-01T23:08:22.984Z',
+            date: new Date('2016-08-01T23:08:22.984Z'),
             customer_id: 236,
             basket: [
                 {
@@ -26599,7 +26599,7 @@ data = {
         {
             id: 334,
             reference: 'nhwrrw',
-            date: '2017-02-09T09:15:48.911Z',
+            date: new Date('2017-02-09T09:15:48.911Z'),
             customer_id: 142,
             basket: [
                 {
@@ -26618,7 +26618,7 @@ data = {
         {
             id: 335,
             reference: '33ijx4',
-            date: '2017-04-21T05:05:07.601Z',
+            date: new Date('2017-04-21T05:05:07.601Z'),
             customer_id: 425,
             basket: [
                 {
@@ -26641,7 +26641,7 @@ data = {
         {
             id: 336,
             reference: 'psizzd',
-            date: '2016-05-29T00:49:08.153Z',
+            date: new Date('2016-05-29T00:49:08.153Z'),
             customer_id: 145,
             basket: [
                 {
@@ -26684,7 +26684,7 @@ data = {
         {
             id: 337,
             reference: '202sp0',
-            date: '2017-01-11T23:46:54.022Z',
+            date: new Date('2017-01-11T23:46:54.022Z'),
             customer_id: 244,
             basket: [
                 {
@@ -26707,7 +26707,7 @@ data = {
         {
             id: 338,
             reference: '4vzo1a',
-            date: '2017-03-28T08:30:18.144Z',
+            date: new Date('2017-03-28T08:30:18.144Z'),
             customer_id: 573,
             basket: [
                 {
@@ -26726,7 +26726,7 @@ data = {
         {
             id: 339,
             reference: 'lyxcz2',
-            date: '2017-04-16T13:38:40.014Z',
+            date: new Date('2017-04-16T13:38:40.014Z'),
             customer_id: 142,
             basket: [
                 {
@@ -26745,7 +26745,7 @@ data = {
         {
             id: 340,
             reference: '01i6q3',
-            date: '2016-06-03T05:52:18.817Z',
+            date: new Date('2016-06-03T05:52:18.817Z'),
             customer_id: 720,
             basket: [
                 {
@@ -26764,7 +26764,7 @@ data = {
         {
             id: 341,
             reference: 'p92ib9',
-            date: '2015-10-12T23:47:24.929Z',
+            date: new Date('2015-10-12T23:47:24.929Z'),
             customer_id: 151,
             basket: [
                 {
@@ -26783,7 +26783,7 @@ data = {
         {
             id: 342,
             reference: 'bvrn5z',
-            date: '2016-08-21T02:01:43.779Z',
+            date: new Date('2016-08-21T02:01:43.779Z'),
             customer_id: 745,
             basket: [
                 {
@@ -26822,7 +26822,7 @@ data = {
         {
             id: 343,
             reference: 'dsfkt1',
-            date: '2016-08-18T20:03:36.608Z',
+            date: new Date('2016-08-18T20:03:36.608Z'),
             customer_id: 831,
             basket: [
                 {
@@ -26845,7 +26845,7 @@ data = {
         {
             id: 344,
             reference: 'o7y9zv',
-            date: '2017-02-02T10:49:03.430Z',
+            date: new Date('2017-02-02T10:49:03.430Z'),
             customer_id: 673,
             basket: [
                 {
@@ -26868,7 +26868,7 @@ data = {
         {
             id: 345,
             reference: 'gqmi0x',
-            date: '2012-12-15T16:15:58.874Z',
+            date: new Date('2012-12-15T16:15:58.874Z'),
             customer_id: 559,
             basket: [
                 {
@@ -26895,7 +26895,7 @@ data = {
         {
             id: 346,
             reference: 't9eewv',
-            date: '2016-07-12T03:08:15.396Z',
+            date: new Date('2016-07-12T03:08:15.396Z'),
             customer_id: 815,
             basket: [
                 {
@@ -26922,7 +26922,7 @@ data = {
         {
             id: 347,
             reference: 'rydcyc',
-            date: '2015-07-11T17:49:24.524Z',
+            date: new Date('2015-07-11T17:49:24.524Z'),
             customer_id: 438,
             basket: [
                 {
@@ -26945,7 +26945,7 @@ data = {
         {
             id: 348,
             reference: '8t4j2b',
-            date: '2017-04-19T18:35:35.171Z',
+            date: new Date('2017-04-19T18:35:35.171Z'),
             customer_id: 413,
             basket: [
                 {
@@ -26968,7 +26968,7 @@ data = {
         {
             id: 349,
             reference: 'ccikzf',
-            date: '2016-06-24T19:25:25.499Z',
+            date: new Date('2016-06-24T19:25:25.499Z'),
             customer_id: 484,
             basket: [
                 {
@@ -26987,7 +26987,7 @@ data = {
         {
             id: 350,
             reference: 'tmwx0k',
-            date: '2016-05-09T19:56:44.010Z',
+            date: new Date('2016-05-09T19:56:44.010Z'),
             customer_id: 728,
             basket: [
                 {
@@ -27006,7 +27006,7 @@ data = {
         {
             id: 351,
             reference: 'pis7b6',
-            date: '2015-07-31T23:46:05.861Z',
+            date: new Date('2015-07-31T23:46:05.861Z'),
             customer_id: 783,
             basket: [
                 {
@@ -27025,7 +27025,7 @@ data = {
         {
             id: 352,
             reference: 'oxgw9k',
-            date: '2014-08-30T20:47:47.233Z',
+            date: new Date('2014-08-30T20:47:47.233Z'),
             customer_id: 124,
             basket: [
                 {
@@ -27044,7 +27044,7 @@ data = {
         {
             id: 353,
             reference: 'xktssy',
-            date: '2016-04-21T20:52:08.875Z',
+            date: new Date('2016-04-21T20:52:08.875Z'),
             customer_id: 861,
             basket: [
                 {
@@ -27067,7 +27067,7 @@ data = {
         {
             id: 354,
             reference: '5jhr14',
-            date: '2017-01-03T10:13:02.699Z',
+            date: new Date('2017-01-03T10:13:02.699Z'),
             customer_id: 695,
             basket: [
                 {
@@ -27102,7 +27102,7 @@ data = {
         {
             id: 355,
             reference: 'kv26i6',
-            date: '2016-01-20T13:37:44.948Z',
+            date: new Date('2016-01-20T13:37:44.948Z'),
             customer_id: 331,
             basket: [
                 {
@@ -27125,7 +27125,7 @@ data = {
         {
             id: 356,
             reference: 'wvnyhw',
-            date: '2017-02-17T02:58:14.270Z',
+            date: new Date('2017-02-17T02:58:14.270Z'),
             customer_id: 631,
             basket: [
                 {
@@ -27144,7 +27144,7 @@ data = {
         {
             id: 357,
             reference: 'o2dy8k',
-            date: '2016-10-12T18:42:01.194Z',
+            date: new Date('2016-10-12T18:42:01.194Z'),
             customer_id: 276,
             basket: [
                 {
@@ -27163,7 +27163,7 @@ data = {
         {
             id: 358,
             reference: 'rzmi74',
-            date: '2014-02-20T20:40:04.255Z',
+            date: new Date('2014-02-20T20:40:04.255Z'),
             customer_id: 559,
             basket: [
                 {
@@ -27186,7 +27186,7 @@ data = {
         {
             id: 359,
             reference: 'tyfhzj',
-            date: '2016-02-13T14:45:14.307Z',
+            date: new Date('2016-02-13T14:45:14.307Z'),
             customer_id: 854,
             basket: [
                 {
@@ -27205,7 +27205,7 @@ data = {
         {
             id: 360,
             reference: 'xklp39',
-            date: '2016-02-28T03:22:23.761Z',
+            date: new Date('2016-02-28T03:22:23.761Z'),
             customer_id: 837,
             basket: [
                 {
@@ -27224,7 +27224,7 @@ data = {
         {
             id: 361,
             reference: '6vt394',
-            date: '2016-03-04T01:51:29.613Z',
+            date: new Date('2016-03-04T01:51:29.613Z'),
             customer_id: 823,
             basket: [
                 {
@@ -27243,7 +27243,7 @@ data = {
         {
             id: 362,
             reference: 'tkj0ew',
-            date: '2016-08-01T15:12:24.073Z',
+            date: new Date('2016-08-01T15:12:24.073Z'),
             customer_id: 562,
             basket: [
                 {
@@ -27266,7 +27266,7 @@ data = {
         {
             id: 363,
             reference: 'u787s2',
-            date: '2017-04-21T17:04:18.233Z',
+            date: new Date('2017-04-21T17:04:18.233Z'),
             customer_id: 821,
             basket: [
                 {
@@ -27285,7 +27285,7 @@ data = {
         {
             id: 364,
             reference: '55ou2t',
-            date: '2016-02-18T01:27:16.221Z',
+            date: new Date('2016-02-18T01:27:16.221Z'),
             customer_id: 195,
             basket: [
                 {
@@ -27308,7 +27308,7 @@ data = {
         {
             id: 365,
             reference: 'mjt43z',
-            date: '2016-12-19T00:51:46.432Z',
+            date: new Date('2016-12-19T00:51:46.432Z'),
             customer_id: 383,
             basket: [
                 {
@@ -27335,7 +27335,7 @@ data = {
         {
             id: 366,
             reference: 'gqgr72',
-            date: '2016-05-13T15:33:29.242Z',
+            date: new Date('2016-05-13T15:33:29.242Z'),
             customer_id: 340,
             basket: [
                 {
@@ -27358,7 +27358,7 @@ data = {
         {
             id: 367,
             reference: 'fea1nd',
-            date: '2016-05-02T01:16:32.107Z',
+            date: new Date('2016-05-02T01:16:32.107Z'),
             customer_id: 507,
             basket: [
                 {
@@ -27377,7 +27377,7 @@ data = {
         {
             id: 368,
             reference: '20pr2d',
-            date: '2016-08-22T22:51:01.374Z',
+            date: new Date('2016-08-22T22:51:01.374Z'),
             customer_id: 13,
             basket: [
                 {
@@ -27396,7 +27396,7 @@ data = {
         {
             id: 369,
             reference: '5uavhw',
-            date: '2015-07-22T08:22:04.883Z',
+            date: new Date('2015-07-22T08:22:04.883Z'),
             customer_id: 436,
             basket: [
                 {
@@ -27415,7 +27415,7 @@ data = {
         {
             id: 370,
             reference: '6llb9m',
-            date: '2014-01-09T05:17:00.833Z',
+            date: new Date('2014-01-09T05:17:00.833Z'),
             customer_id: 790,
             basket: [
                 {
@@ -27446,7 +27446,7 @@ data = {
         {
             id: 371,
             reference: '6siqg5',
-            date: '2014-09-24T00:14:22.876Z',
+            date: new Date('2014-09-24T00:14:22.876Z'),
             customer_id: 312,
             basket: [
                 {
@@ -27465,7 +27465,7 @@ data = {
         {
             id: 372,
             reference: 'q9tuyl',
-            date: '2017-02-20T01:07:53.227Z',
+            date: new Date('2017-02-20T01:07:53.227Z'),
             customer_id: 705,
             basket: [
                 {
@@ -27484,7 +27484,7 @@ data = {
         {
             id: 373,
             reference: 'ucdhtq',
-            date: '2016-08-29T19:13:11.053Z',
+            date: new Date('2016-08-29T19:13:11.053Z'),
             customer_id: 393,
             basket: [
                 {
@@ -27503,7 +27503,7 @@ data = {
         {
             id: 374,
             reference: '17990i',
-            date: '2016-11-04T20:26:22.687Z',
+            date: new Date('2016-11-04T20:26:22.687Z'),
             customer_id: 148,
             basket: [
                 {
@@ -27522,7 +27522,7 @@ data = {
         {
             id: 375,
             reference: '8g6ais',
-            date: '2016-05-26T09:56:58.682Z',
+            date: new Date('2016-05-26T09:56:58.682Z'),
             customer_id: 318,
             basket: [
                 {
@@ -27541,7 +27541,7 @@ data = {
         {
             id: 376,
             reference: '20ssq4',
-            date: '2015-06-28T06:53:53.326Z',
+            date: new Date('2015-06-28T06:53:53.326Z'),
             customer_id: 428,
             basket: [
                 {
@@ -27560,7 +27560,7 @@ data = {
         {
             id: 377,
             reference: 'd1y3lu',
-            date: '2017-03-29T21:01:49.341Z',
+            date: new Date('2017-03-29T21:01:49.341Z'),
             customer_id: 338,
             basket: [
                 {
@@ -27579,7 +27579,7 @@ data = {
         {
             id: 378,
             reference: '20qcxd',
-            date: '2015-11-29T18:46:05.028Z',
+            date: new Date('2015-11-29T18:46:05.028Z'),
             customer_id: 143,
             basket: [
                 {
@@ -27598,7 +27598,7 @@ data = {
         {
             id: 379,
             reference: 'qcni6z',
-            date: '2017-03-01T03:07:09.597Z',
+            date: new Date('2017-03-01T03:07:09.597Z'),
             customer_id: 631,
             basket: [
                 {
@@ -27629,7 +27629,7 @@ data = {
         {
             id: 380,
             reference: 'wb9mbn',
-            date: '2015-10-07T06:29:47.984Z',
+            date: new Date('2015-10-07T06:29:47.984Z'),
             customer_id: 334,
             basket: [
                 {
@@ -27648,7 +27648,7 @@ data = {
         {
             id: 381,
             reference: '12nz87',
-            date: '2016-07-27T07:00:04.629Z',
+            date: new Date('2016-07-27T07:00:04.629Z'),
             customer_id: 718,
             basket: [
                 {
@@ -27671,7 +27671,7 @@ data = {
         {
             id: 382,
             reference: 'ourur1',
-            date: '2016-10-05T04:07:17.664Z',
+            date: new Date('2016-10-05T04:07:17.664Z'),
             customer_id: 250,
             basket: [
                 {
@@ -27702,7 +27702,7 @@ data = {
         {
             id: 383,
             reference: 'or4zjc',
-            date: '2016-05-27T07:23:38.079Z',
+            date: new Date('2016-05-27T07:23:38.079Z'),
             customer_id: 861,
             basket: [
                 {
@@ -27725,7 +27725,7 @@ data = {
         {
             id: 384,
             reference: 'rwtfb7',
-            date: '2014-03-19T01:13:56.899Z',
+            date: new Date('2014-03-19T01:13:56.899Z'),
             customer_id: 783,
             basket: [
                 {
@@ -27744,7 +27744,7 @@ data = {
         {
             id: 385,
             reference: 'a1dyej',
-            date: '2016-10-20T16:06:48.266Z',
+            date: new Date('2016-10-20T16:06:48.266Z'),
             customer_id: 148,
             basket: [
                 {
@@ -27763,7 +27763,7 @@ data = {
         {
             id: 386,
             reference: 'fg4lgf',
-            date: '2017-02-10T08:08:06.981Z',
+            date: new Date('2017-02-10T08:08:06.981Z'),
             customer_id: 500,
             basket: [
                 {
@@ -27802,7 +27802,7 @@ data = {
         {
             id: 387,
             reference: '5wxwub',
-            date: '2016-07-02T08:40:28.237Z',
+            date: new Date('2016-07-02T08:40:28.237Z'),
             customer_id: 484,
             basket: [
                 {
@@ -27821,7 +27821,7 @@ data = {
         {
             id: 388,
             reference: 'cw3ali',
-            date: '2017-01-27T09:22:30.691Z',
+            date: new Date('2017-01-27T09:22:30.691Z'),
             customer_id: 359,
             basket: [
                 {
@@ -27840,7 +27840,7 @@ data = {
         {
             id: 389,
             reference: 'nls3ow',
-            date: '2014-04-23T03:45:10.885Z',
+            date: new Date('2014-04-23T03:45:10.885Z'),
             customer_id: 329,
             basket: [
                 {
@@ -27871,7 +27871,7 @@ data = {
         {
             id: 390,
             reference: 't7yehs',
-            date: '2016-09-15T16:42:20.323Z',
+            date: new Date('2016-09-15T16:42:20.323Z'),
             customer_id: 585,
             basket: [
                 {
@@ -27890,7 +27890,7 @@ data = {
         {
             id: 391,
             reference: 'cbcz7n',
-            date: '2015-08-19T13:17:17.585Z',
+            date: new Date('2015-08-19T13:17:17.585Z'),
             customer_id: 517,
             basket: [
                 {
@@ -27913,7 +27913,7 @@ data = {
         {
             id: 392,
             reference: 'fjfybp',
-            date: '2016-01-09T07:24:15.007Z',
+            date: new Date('2016-01-09T07:24:15.007Z'),
             customer_id: 398,
             basket: [
                 {
@@ -27932,7 +27932,7 @@ data = {
         {
             id: 393,
             reference: 'uefcgn',
-            date: '2014-07-12T01:06:22.342Z',
+            date: new Date('2014-07-12T01:06:22.342Z'),
             customer_id: 205,
             basket: [
                 {
@@ -27951,7 +27951,7 @@ data = {
         {
             id: 394,
             reference: 'j2w0fd',
-            date: '2016-12-24T10:20:23.018Z',
+            date: new Date('2016-12-24T10:20:23.018Z'),
             customer_id: 695,
             basket: [
                 {
@@ -27982,7 +27982,7 @@ data = {
         {
             id: 395,
             reference: '6gpf3h',
-            date: '2017-01-06T06:59:24.681Z',
+            date: new Date('2017-01-06T06:59:24.681Z'),
             customer_id: 895,
             basket: [
                 {
@@ -28001,7 +28001,7 @@ data = {
         {
             id: 396,
             reference: 'v9wb1i',
-            date: '2016-08-22T15:16:50.778Z',
+            date: new Date('2016-08-22T15:16:50.778Z'),
             customer_id: 483,
             basket: [
                 {
@@ -28020,7 +28020,7 @@ data = {
         {
             id: 397,
             reference: 'qd6ut2',
-            date: '2015-12-28T10:07:30.910Z',
+            date: new Date('2015-12-28T10:07:30.910Z'),
             customer_id: 850,
             basket: [
                 {
@@ -28039,7 +28039,7 @@ data = {
         {
             id: 398,
             reference: 'j7mzlf',
-            date: '2016-11-05T12:39:06.799Z',
+            date: new Date('2016-11-05T12:39:06.799Z'),
             customer_id: 418,
             basket: [
                 {
@@ -28058,7 +28058,7 @@ data = {
         {
             id: 399,
             reference: '6ovxlh',
-            date: '2016-08-14T11:29:16.290Z',
+            date: new Date('2016-08-14T11:29:16.290Z'),
             customer_id: 280,
             basket: [
                 {
@@ -28081,7 +28081,7 @@ data = {
         {
             id: 400,
             reference: '4fyl5r',
-            date: '2015-02-02T13:42:55.154Z',
+            date: new Date('2015-02-02T13:42:55.154Z'),
             customer_id: 783,
             basket: [
                 {
@@ -28108,7 +28108,7 @@ data = {
         {
             id: 401,
             reference: '1mhqcx',
-            date: '2016-07-28T20:03:01.723Z',
+            date: new Date('2016-07-28T20:03:01.723Z'),
             customer_id: 382,
             basket: [
                 {
@@ -28131,7 +28131,7 @@ data = {
         {
             id: 402,
             reference: '81h44c',
-            date: '2016-05-12T05:00:36.000Z',
+            date: new Date('2016-05-12T05:00:36.000Z'),
             customer_id: 49,
             basket: [
                 {
@@ -28154,7 +28154,7 @@ data = {
         {
             id: 403,
             reference: '9rhzu5',
-            date: '2016-02-02T10:48:11.021Z',
+            date: new Date('2016-02-02T10:48:11.021Z'),
             customer_id: 745,
             basket: [
                 {
@@ -28173,7 +28173,7 @@ data = {
         {
             id: 404,
             reference: '66lvnp',
-            date: '2016-03-26T22:19:34.147Z',
+            date: new Date('2016-03-26T22:19:34.147Z'),
             customer_id: 473,
             basket: [
                 {
@@ -28192,7 +28192,7 @@ data = {
         {
             id: 405,
             reference: 'm6wtc6',
-            date: '2015-10-08T16:45:50.363Z',
+            date: new Date('2015-10-08T16:45:50.363Z'),
             customer_id: 151,
             basket: [
                 {
@@ -28211,7 +28211,7 @@ data = {
         {
             id: 406,
             reference: 'jc3elw',
-            date: '2015-10-31T05:59:40.003Z',
+            date: new Date('2015-10-31T05:59:40.003Z'),
             customer_id: 609,
             basket: [
                 {
@@ -28234,7 +28234,7 @@ data = {
         {
             id: 407,
             reference: 'yuladx',
-            date: '2017-02-14T16:24:17.171Z',
+            date: new Date('2017-02-14T16:24:17.171Z'),
             customer_id: 156,
             basket: [
                 {
@@ -28257,7 +28257,7 @@ data = {
         {
             id: 408,
             reference: 'y2tlyn',
-            date: '2016-03-23T16:53:09.151Z',
+            date: new Date('2016-03-23T16:53:09.151Z'),
             customer_id: 32,
             basket: [
                 {
@@ -28276,7 +28276,7 @@ data = {
         {
             id: 409,
             reference: '3iil5t',
-            date: '2015-10-22T08:24:17.083Z',
+            date: new Date('2015-10-22T08:24:17.083Z'),
             customer_id: 195,
             basket: [
                 {
@@ -28295,7 +28295,7 @@ data = {
         {
             id: 410,
             reference: 'v1z1wn',
-            date: '2016-01-13T15:29:15.575Z',
+            date: new Date('2016-01-13T15:29:15.575Z'),
             customer_id: 602,
             basket: [
                 {
@@ -28314,7 +28314,7 @@ data = {
         {
             id: 411,
             reference: 'na65hn',
-            date: '2016-02-22T23:38:19.287Z',
+            date: new Date('2016-02-22T23:38:19.287Z'),
             customer_id: 291,
             basket: [
                 {
@@ -28333,7 +28333,7 @@ data = {
         {
             id: 412,
             reference: 'oc6gi8',
-            date: '2016-03-09T17:23:32.658Z',
+            date: new Date('2016-03-09T17:23:32.658Z'),
             customer_id: 854,
             basket: [
                 {
@@ -28352,7 +28352,7 @@ data = {
         {
             id: 413,
             reference: 'jwvelx',
-            date: '2016-09-07T16:16:57.034Z',
+            date: new Date('2016-09-07T16:16:57.034Z'),
             customer_id: 756,
             basket: [
                 {
@@ -28371,7 +28371,7 @@ data = {
         {
             id: 414,
             reference: 'lwl5m4',
-            date: '2016-12-17T22:29:52.540Z',
+            date: new Date('2016-12-17T22:29:52.540Z'),
             customer_id: 859,
             basket: [
                 {
@@ -28390,7 +28390,7 @@ data = {
         {
             id: 415,
             reference: '3skkyp',
-            date: '2016-11-02T03:04:50.159Z',
+            date: new Date('2016-11-02T03:04:50.159Z'),
             customer_id: 612,
             basket: [
                 {
@@ -28409,7 +28409,7 @@ data = {
         {
             id: 416,
             reference: 'uk7oj2',
-            date: '2016-05-27T17:42:58.179Z',
+            date: new Date('2016-05-27T17:42:58.179Z'),
             customer_id: 875,
             basket: [
                 {
@@ -28464,7 +28464,7 @@ data = {
         {
             id: 417,
             reference: 'bdwdw4',
-            date: '2017-01-28T16:39:31.368Z',
+            date: new Date('2017-01-28T16:39:31.368Z'),
             customer_id: 714,
             basket: [
                 {
@@ -28487,7 +28487,7 @@ data = {
         {
             id: 418,
             reference: 'vod1m3',
-            date: '2017-02-08T12:51:06.504Z',
+            date: new Date('2017-02-08T12:51:06.504Z'),
             customer_id: 609,
             basket: [
                 {
@@ -28526,7 +28526,7 @@ data = {
         {
             id: 419,
             reference: 'f46xta',
-            date: '2016-11-12T14:17:02.109Z',
+            date: new Date('2016-11-12T14:17:02.109Z'),
             customer_id: 359,
             basket: [
                 {
@@ -28545,7 +28545,7 @@ data = {
         {
             id: 420,
             reference: 'g757yh',
-            date: '2017-04-26T02:16:00.048Z',
+            date: new Date('2017-04-26T02:16:00.048Z'),
             customer_id: 11,
             basket: [
                 {
@@ -28572,7 +28572,7 @@ data = {
         {
             id: 421,
             reference: 'qafam5',
-            date: '2017-02-19T16:41:01.479Z',
+            date: new Date('2017-02-19T16:41:01.479Z'),
             customer_id: 500,
             basket: [
                 {
@@ -28595,7 +28595,7 @@ data = {
         {
             id: 422,
             reference: 'wl2piq',
-            date: '2016-02-16T07:50:00.542Z',
+            date: new Date('2016-02-16T07:50:00.542Z'),
             customer_id: 633,
             basket: [
                 {
@@ -28614,7 +28614,7 @@ data = {
         {
             id: 423,
             reference: 'x4z2rm',
-            date: '2015-09-01T11:41:00.216Z',
+            date: new Date('2015-09-01T11:41:00.216Z'),
             customer_id: 566,
             basket: [
                 {
@@ -28637,7 +28637,7 @@ data = {
         {
             id: 424,
             reference: 't3gblx',
-            date: '2016-05-10T17:21:54.617Z',
+            date: new Date('2016-05-10T17:21:54.617Z'),
             customer_id: 334,
             basket: [
                 {
@@ -28664,7 +28664,7 @@ data = {
         {
             id: 425,
             reference: '1klhm9',
-            date: '2016-07-01T17:00:52.263Z',
+            date: new Date('2016-07-01T17:00:52.263Z'),
             customer_id: 685,
             basket: [
                 {
@@ -28683,7 +28683,7 @@ data = {
         {
             id: 426,
             reference: 'xfzzab',
-            date: '2015-04-05T01:31:31.241Z',
+            date: new Date('2015-04-05T01:31:31.241Z'),
             customer_id: 861,
             basket: [
                 {
@@ -28702,7 +28702,7 @@ data = {
         {
             id: 427,
             reference: 'tlbgsf',
-            date: '2017-03-12T07:20:52.498Z',
+            date: new Date('2017-03-12T07:20:52.498Z'),
             customer_id: 699,
             basket: [
                 {
@@ -28721,7 +28721,7 @@ data = {
         {
             id: 428,
             reference: '3mhwae',
-            date: '2014-09-07T11:47:05.224Z',
+            date: new Date('2014-09-07T11:47:05.224Z'),
             customer_id: 601,
             basket: [
                 {
@@ -28740,7 +28740,7 @@ data = {
         {
             id: 429,
             reference: 'deqyem',
-            date: '2016-07-13T02:50:30.621Z',
+            date: new Date('2016-07-13T02:50:30.621Z'),
             customer_id: 850,
             basket: [
                 {
@@ -28763,7 +28763,7 @@ data = {
         {
             id: 430,
             reference: 'q6zvba',
-            date: '2014-06-01T03:47:24.773Z',
+            date: new Date('2014-06-01T03:47:24.773Z'),
             customer_id: 160,
             basket: [
                 {
@@ -28782,7 +28782,7 @@ data = {
         {
             id: 431,
             reference: '6fxkno',
-            date: '2016-08-09T21:10:28.198Z',
+            date: new Date('2016-08-09T21:10:28.198Z'),
             customer_id: 718,
             basket: [
                 {
@@ -28801,7 +28801,7 @@ data = {
         {
             id: 432,
             reference: 'lun6me',
-            date: '2017-04-15T18:39:38.167Z',
+            date: new Date('2017-04-15T18:39:38.167Z'),
             customer_id: 347,
             basket: [
                 {
@@ -28832,7 +28832,7 @@ data = {
         {
             id: 433,
             reference: 'byri6l',
-            date: '2016-05-20T17:05:31.822Z',
+            date: new Date('2016-05-20T17:05:31.822Z'),
             customer_id: 606,
             basket: [
                 {
@@ -28859,7 +28859,7 @@ data = {
         {
             id: 434,
             reference: 'u3ue9l',
-            date: '2016-07-24T07:38:27.546Z',
+            date: new Date('2016-07-24T07:38:27.546Z'),
             customer_id: 813,
             basket: [
                 {
@@ -28906,7 +28906,7 @@ data = {
         {
             id: 435,
             reference: '3a70dz',
-            date: '2015-11-14T17:17:27.776Z',
+            date: new Date('2015-11-14T17:17:27.776Z'),
             customer_id: 382,
             basket: [
                 {
@@ -28925,7 +28925,7 @@ data = {
         {
             id: 436,
             reference: '3vj2ak',
-            date: '2015-12-01T12:28:37.780Z',
+            date: new Date('2015-12-01T12:28:37.780Z'),
             customer_id: 438,
             basket: [
                 {
@@ -28976,7 +28976,7 @@ data = {
         {
             id: 437,
             reference: 'z4l80t',
-            date: '2016-08-15T13:54:54.478Z',
+            date: new Date('2016-08-15T13:54:54.478Z'),
             customer_id: 758,
             basket: [
                 {
@@ -28995,7 +28995,7 @@ data = {
         {
             id: 438,
             reference: 'eql0ax',
-            date: '2016-02-11T18:46:18.115Z',
+            date: new Date('2016-02-11T18:46:18.115Z'),
             customer_id: 633,
             basket: [
                 {
@@ -29050,7 +29050,7 @@ data = {
         {
             id: 439,
             reference: 'q1h2ox',
-            date: '2014-10-29T23:05:07.965Z',
+            date: new Date('2014-10-29T23:05:07.965Z'),
             customer_id: 594,
             basket: [
                 {
@@ -29069,7 +29069,7 @@ data = {
         {
             id: 440,
             reference: 'ghmcu9',
-            date: '2016-10-13T16:35:02.349Z',
+            date: new Date('2016-10-13T16:35:02.349Z'),
             customer_id: 19,
             basket: [
                 {
@@ -29088,7 +29088,7 @@ data = {
         {
             id: 441,
             reference: 'h4ddju',
-            date: '2016-12-09T19:48:32.512Z',
+            date: new Date('2016-12-09T19:48:32.512Z'),
             customer_id: 512,
             basket: [
                 {
@@ -29115,7 +29115,7 @@ data = {
         {
             id: 442,
             reference: '3fk38i',
-            date: '2016-12-08T04:34:16.663Z',
+            date: new Date('2016-12-08T04:34:16.663Z'),
             customer_id: 418,
             basket: [
                 {
@@ -29134,7 +29134,7 @@ data = {
         {
             id: 443,
             reference: '81lhel',
-            date: '2016-01-03T01:30:37.871Z',
+            date: new Date('2016-01-03T01:30:37.871Z'),
             customer_id: 153,
             basket: [
                 {
@@ -29157,7 +29157,7 @@ data = {
         {
             id: 444,
             reference: 'uij538',
-            date: '2017-02-23T15:11:58.268Z',
+            date: new Date('2017-02-23T15:11:58.268Z'),
             customer_id: 282,
             basket: [
                 {
@@ -29180,7 +29180,7 @@ data = {
         {
             id: 445,
             reference: '26m9ym',
-            date: '2015-09-17T22:12:39.299Z',
+            date: new Date('2015-09-17T22:12:39.299Z'),
             customer_id: 264,
             basket: [
                 {
@@ -29203,7 +29203,7 @@ data = {
         {
             id: 446,
             reference: 'xuael9',
-            date: '2016-12-01T18:43:41.635Z',
+            date: new Date('2016-12-01T18:43:41.635Z'),
             customer_id: 883,
             basket: [
                 {
@@ -29222,7 +29222,7 @@ data = {
         {
             id: 447,
             reference: '4x1sg2',
-            date: '2016-02-28T00:11:44.914Z',
+            date: new Date('2016-02-28T00:11:44.914Z'),
             customer_id: 96,
             basket: [
                 {
@@ -29245,7 +29245,7 @@ data = {
         {
             id: 448,
             reference: '00nxiw',
-            date: '2016-04-22T11:27:55.271Z',
+            date: new Date('2016-04-22T11:27:55.271Z'),
             customer_id: 145,
             basket: [
                 {
@@ -29272,7 +29272,7 @@ data = {
         {
             id: 449,
             reference: 'egkmm5',
-            date: '2017-01-27T21:10:14.479Z',
+            date: new Date('2017-01-27T21:10:14.479Z'),
             customer_id: 359,
             basket: [
                 {
@@ -29295,7 +29295,7 @@ data = {
         {
             id: 450,
             reference: 'dms67j',
-            date: '2017-02-15T14:21:03.132Z',
+            date: new Date('2017-02-15T14:21:03.132Z'),
             customer_id: 124,
             basket: [
                 {
@@ -29314,7 +29314,7 @@ data = {
         {
             id: 451,
             reference: '0u1gtt',
-            date: '2017-04-13T05:06:49.859Z',
+            date: new Date('2017-04-13T05:06:49.859Z'),
             customer_id: 413,
             basket: [
                 {
@@ -29333,7 +29333,7 @@ data = {
         {
             id: 452,
             reference: 'hm3x7q',
-            date: '2016-10-15T21:41:38.499Z',
+            date: new Date('2016-10-15T21:41:38.499Z'),
             customer_id: 109,
             basket: [
                 {
@@ -29352,7 +29352,7 @@ data = {
         {
             id: 453,
             reference: 'sf5hmz',
-            date: '2016-10-29T12:32:15.485Z',
+            date: new Date('2016-10-29T12:32:15.485Z'),
             customer_id: 25,
             basket: [
                 {
@@ -29375,7 +29375,7 @@ data = {
         {
             id: 454,
             reference: 'f6ep5o',
-            date: '2015-11-27T17:58:47.568Z',
+            date: new Date('2015-11-27T17:58:47.568Z'),
             customer_id: 32,
             basket: [
                 {
@@ -29394,7 +29394,7 @@ data = {
         {
             id: 455,
             reference: 'n1xld8',
-            date: '2017-01-14T01:03:11.782Z',
+            date: new Date('2017-01-14T01:03:11.782Z'),
             customer_id: 544,
             basket: [
                 {
@@ -29413,7 +29413,7 @@ data = {
         {
             id: 456,
             reference: '1dt4f7',
-            date: '2015-10-06T13:50:20.200Z',
+            date: new Date('2015-10-06T13:50:20.200Z'),
             customer_id: 110,
             basket: [
                 {
@@ -29432,7 +29432,7 @@ data = {
         {
             id: 457,
             reference: 'zuwv07',
-            date: '2016-08-11T16:13:59.894Z',
+            date: new Date('2016-08-11T16:13:59.894Z'),
             customer_id: 773,
             basket: [
                 {
@@ -29451,7 +29451,7 @@ data = {
         {
             id: 458,
             reference: '8lrmcw',
-            date: '2017-02-17T20:32:53.887Z',
+            date: new Date('2017-02-17T20:32:53.887Z'),
             customer_id: 631,
             basket: [
                 {
@@ -29474,7 +29474,7 @@ data = {
         {
             id: 459,
             reference: '12fej6',
-            date: '2016-08-14T20:00:50.304Z',
+            date: new Date('2016-08-14T20:00:50.304Z'),
             customer_id: 508,
             basket: [
                 {
@@ -29493,7 +29493,7 @@ data = {
         {
             id: 460,
             reference: 'td61no',
-            date: '2016-10-01T12:38:26.088Z',
+            date: new Date('2016-10-01T12:38:26.088Z'),
             customer_id: 383,
             basket: [
                 {
@@ -29512,7 +29512,7 @@ data = {
         {
             id: 461,
             reference: 'pbczll',
-            date: '2016-08-22T20:41:56.657Z',
+            date: new Date('2016-08-22T20:41:56.657Z'),
             customer_id: 255,
             basket: [
                 {
@@ -29531,7 +29531,7 @@ data = {
         {
             id: 462,
             reference: 'tu6ego',
-            date: '2017-01-28T07:25:12.681Z',
+            date: new Date('2017-01-28T07:25:12.681Z'),
             customer_id: 132,
             basket: [
                 {
@@ -29550,7 +29550,7 @@ data = {
         {
             id: 463,
             reference: 'xpdx62',
-            date: '2016-06-04T09:41:52.595Z',
+            date: new Date('2016-06-04T09:41:52.595Z'),
             customer_id: 745,
             basket: [
                 {
@@ -29569,7 +29569,7 @@ data = {
         {
             id: 464,
             reference: '6sqdrv',
-            date: '2015-04-13T20:55:32.436Z',
+            date: new Date('2015-04-13T20:55:32.436Z'),
             customer_id: 562,
             basket: [
                 {
@@ -29600,7 +29600,7 @@ data = {
         {
             id: 465,
             reference: 'vfrlrj',
-            date: '2016-03-19T09:39:15.745Z',
+            date: new Date('2016-03-19T09:39:15.745Z'),
             customer_id: 547,
             basket: [
                 {
@@ -29623,7 +29623,7 @@ data = {
         {
             id: 466,
             reference: 'erycfv',
-            date: '2016-12-05T07:57:33.037Z',
+            date: new Date('2016-12-05T07:57:33.037Z'),
             customer_id: 795,
             basket: [
                 {
@@ -29666,7 +29666,7 @@ data = {
         {
             id: 467,
             reference: '5003mt',
-            date: '2016-10-01T17:24:32.516Z',
+            date: new Date('2016-10-01T17:24:32.516Z'),
             customer_id: 270,
             basket: [
                 {
@@ -29701,7 +29701,7 @@ data = {
         {
             id: 468,
             reference: 'iobevm',
-            date: '2016-11-06T14:04:50.392Z',
+            date: new Date('2016-11-06T14:04:50.392Z'),
             customer_id: 148,
             basket: [
                 {
@@ -29720,7 +29720,7 @@ data = {
         {
             id: 469,
             reference: 'usz6r7',
-            date: '2016-09-04T17:24:59.486Z',
+            date: new Date('2016-09-04T17:24:59.486Z'),
             customer_id: 229,
             basket: [
                 {
@@ -29739,7 +29739,7 @@ data = {
         {
             id: 470,
             reference: 'x9far9',
-            date: '2016-11-01T16:39:53.608Z',
+            date: new Date('2016-11-01T16:39:53.608Z'),
             customer_id: 382,
             basket: [
                 {
@@ -29758,7 +29758,7 @@ data = {
         {
             id: 471,
             reference: 'ch12ck',
-            date: '2017-04-26T06:55:20.783Z',
+            date: new Date('2017-04-26T06:55:20.783Z'),
             customer_id: 11,
             basket: [
                 {
@@ -29781,7 +29781,7 @@ data = {
         {
             id: 472,
             reference: 's87v50',
-            date: '2017-04-03T02:11:48.031Z',
+            date: new Date('2017-04-03T02:11:48.031Z'),
             customer_id: 642,
             basket: [
                 {
@@ -29800,7 +29800,7 @@ data = {
         {
             id: 473,
             reference: 'krjoup',
-            date: '2015-04-24T08:31:44.332Z',
+            date: new Date('2015-04-24T08:31:44.332Z'),
             customer_id: 559,
             basket: [
                 {
@@ -29819,7 +29819,7 @@ data = {
         {
             id: 474,
             reference: 'og0b2c',
-            date: '2015-10-09T16:55:30.336Z',
+            date: new Date('2015-10-09T16:55:30.336Z'),
             customer_id: 276,
             basket: [
                 {
@@ -29838,7 +29838,7 @@ data = {
         {
             id: 475,
             reference: 'vy6bxb',
-            date: '2015-11-22T02:06:11.861Z',
+            date: new Date('2015-11-22T02:06:11.861Z'),
             customer_id: 564,
             basket: [
                 {
@@ -29857,7 +29857,7 @@ data = {
         {
             id: 476,
             reference: 'xstfio',
-            date: '2016-09-25T20:21:47.137Z',
+            date: new Date('2016-09-25T20:21:47.137Z'),
             customer_id: 109,
             basket: [
                 {
@@ -29880,7 +29880,7 @@ data = {
         {
             id: 477,
             reference: 'n7apmj',
-            date: '2015-09-24T06:04:44.125Z',
+            date: new Date('2015-09-24T06:04:44.125Z'),
             customer_id: 410,
             basket: [
                 {
@@ -29907,7 +29907,7 @@ data = {
         {
             id: 478,
             reference: 'c3cppm',
-            date: '2016-10-23T00:57:09.317Z',
+            date: new Date('2016-10-23T00:57:09.317Z'),
             customer_id: 229,
             basket: [
                 {
@@ -29926,7 +29926,7 @@ data = {
         {
             id: 479,
             reference: 'e7c2bb',
-            date: '2017-03-06T12:28:00.717Z',
+            date: new Date('2017-03-06T12:28:00.717Z'),
             customer_id: 94,
             basket: [
                 {
@@ -29965,7 +29965,7 @@ data = {
         {
             id: 480,
             reference: 'rgf3b7',
-            date: '2016-02-19T09:01:34.927Z',
+            date: new Date('2016-02-19T09:01:34.927Z'),
             customer_id: 730,
             basket: [
                 {
@@ -29996,7 +29996,7 @@ data = {
         {
             id: 481,
             reference: 'n97gut',
-            date: '2017-04-23T02:09:44.619Z',
+            date: new Date('2017-04-23T02:09:44.619Z'),
             customer_id: 185,
             basket: [
                 {
@@ -30015,7 +30015,7 @@ data = {
         {
             id: 482,
             reference: 'odc3hw',
-            date: '2016-06-07T09:11:32.128Z',
+            date: new Date('2016-06-07T09:11:32.128Z'),
             customer_id: 799,
             basket: [
                 {
@@ -30038,7 +30038,7 @@ data = {
         {
             id: 483,
             reference: '9lk073',
-            date: '2015-05-25T11:49:48.370Z',
+            date: new Date('2015-05-25T11:49:48.370Z'),
             customer_id: 370,
             basket: [
                 {
@@ -30061,7 +30061,7 @@ data = {
         {
             id: 484,
             reference: 'norcjt',
-            date: '2016-08-10T11:37:47.233Z',
+            date: new Date('2016-08-10T11:37:47.233Z'),
             customer_id: 644,
             basket: [
                 {
@@ -30080,7 +30080,7 @@ data = {
         {
             id: 485,
             reference: '67mop6',
-            date: '2017-03-15T21:18:28.378Z',
+            date: new Date('2017-03-15T21:18:28.378Z'),
             customer_id: 664,
             basket: [
                 {
@@ -30135,7 +30135,7 @@ data = {
         {
             id: 486,
             reference: 'dh7ztl',
-            date: '2015-11-10T14:51:33.059Z',
+            date: new Date('2015-11-10T14:51:33.059Z'),
             customer_id: 110,
             basket: [
                 {
@@ -30154,7 +30154,7 @@ data = {
         {
             id: 487,
             reference: 'ud2of1',
-            date: '2015-12-19T21:50:17.693Z',
+            date: new Date('2015-12-19T21:50:17.693Z'),
             customer_id: 609,
             basket: [
                 {
@@ -30173,7 +30173,7 @@ data = {
         {
             id: 488,
             reference: 'isljwp',
-            date: '2015-05-18T14:21:59.913Z',
+            date: new Date('2015-05-18T14:21:59.913Z'),
             customer_id: 690,
             basket: [
                 {
@@ -30196,7 +30196,7 @@ data = {
         {
             id: 489,
             reference: 's7w03n',
-            date: '2016-05-11T05:37:15.811Z',
+            date: new Date('2016-05-11T05:37:15.811Z'),
             customer_id: 728,
             basket: [
                 {
@@ -30223,7 +30223,7 @@ data = {
         {
             id: 490,
             reference: 'f4pqlr',
-            date: '2016-06-27T19:05:55.164Z',
+            date: new Date('2016-06-27T19:05:55.164Z'),
             customer_id: 468,
             basket: [
                 {
@@ -30246,7 +30246,7 @@ data = {
         {
             id: 491,
             reference: '3s668n',
-            date: '2015-11-17T03:57:45.187Z',
+            date: new Date('2015-11-17T03:57:45.187Z'),
             customer_id: 723,
             basket: [
                 {
@@ -30265,7 +30265,7 @@ data = {
         {
             id: 492,
             reference: 'x7jd3t',
-            date: '2014-12-02T07:33:22.560Z',
+            date: new Date('2014-12-02T07:33:22.560Z'),
             customer_id: 122,
             basket: [
                 {
@@ -30284,7 +30284,7 @@ data = {
         {
             id: 493,
             reference: 'f01kcc',
-            date: '2016-07-19T18:39:08.696Z',
+            date: new Date('2016-07-19T18:39:08.696Z'),
             customer_id: 728,
             basket: [
                 {
@@ -30303,7 +30303,7 @@ data = {
         {
             id: 494,
             reference: 'avqs3r',
-            date: '2016-09-17T13:39:07.616Z',
+            date: new Date('2016-09-17T13:39:07.616Z'),
             customer_id: 126,
             basket: [
                 {
@@ -30338,7 +30338,7 @@ data = {
         {
             id: 495,
             reference: 'nztg7v',
-            date: '2016-08-15T21:20:09.931Z',
+            date: new Date('2016-08-15T21:20:09.931Z'),
             customer_id: 718,
             basket: [
                 {
@@ -30357,7 +30357,7 @@ data = {
         {
             id: 496,
             reference: 'kwobuy',
-            date: '2015-03-04T07:43:28.987Z',
+            date: new Date('2015-03-04T07:43:28.987Z'),
             customer_id: 160,
             basket: [
                 {
@@ -30380,7 +30380,7 @@ data = {
         {
             id: 497,
             reference: 'lbbtas',
-            date: '2014-06-15T23:34:54.526Z',
+            date: new Date('2014-06-15T23:34:54.526Z'),
             customer_id: 278,
             basket: [
                 {
@@ -30403,7 +30403,7 @@ data = {
         {
             id: 498,
             reference: 'g9vc7e',
-            date: '2014-05-29T21:38:24.139Z',
+            date: new Date('2014-05-29T21:38:24.139Z'),
             customer_id: 290,
             basket: [
                 {
@@ -30426,7 +30426,7 @@ data = {
         {
             id: 499,
             reference: 'ygxlos',
-            date: '2017-01-03T16:48:54.319Z',
+            date: new Date('2017-01-03T16:48:54.319Z'),
             customer_id: 347,
             basket: [
                 {
@@ -30465,7 +30465,7 @@ data = {
         {
             id: 500,
             reference: 'tszn03',
-            date: '2015-04-04T13:18:08.586Z',
+            date: new Date('2015-04-04T13:18:08.586Z'),
             customer_id: 410,
             basket: [
                 {
@@ -30484,7 +30484,7 @@ data = {
         {
             id: 501,
             reference: 'qfhiew',
-            date: '2014-11-26T22:06:54.200Z',
+            date: new Date('2014-11-26T22:06:54.200Z'),
             customer_id: 507,
             basket: [
                 {
@@ -30503,7 +30503,7 @@ data = {
         {
             id: 502,
             reference: 'zpdam2',
-            date: '2016-05-15T03:02:13.257Z',
+            date: new Date('2016-05-15T03:02:13.257Z'),
             customer_id: 153,
             basket: [
                 {
@@ -30522,7 +30522,7 @@ data = {
         {
             id: 503,
             reference: '4g0j83',
-            date: '2017-02-28T11:52:27.354Z',
+            date: new Date('2017-02-28T11:52:27.354Z'),
             customer_id: 642,
             basket: [
                 {
@@ -30545,7 +30545,7 @@ data = {
         {
             id: 504,
             reference: 'rsbgrr',
-            date: '2017-02-02T04:17:53.818Z',
+            date: new Date('2017-02-02T04:17:53.818Z'),
             customer_id: 125,
             basket: [
                 {
@@ -30564,7 +30564,7 @@ data = {
         {
             id: 505,
             reference: 'kes3up',
-            date: '2015-11-10T02:24:54.748Z',
+            date: new Date('2015-11-10T02:24:54.748Z'),
             customer_id: 428,
             basket: [
                 {
@@ -30591,7 +30591,7 @@ data = {
         {
             id: 506,
             reference: 'rk5mr7',
-            date: '2017-02-12T12:18:40.719Z',
+            date: new Date('2017-02-12T12:18:40.719Z'),
             customer_id: 89,
             basket: [
                 {
@@ -30610,7 +30610,7 @@ data = {
         {
             id: 507,
             reference: 's4nuyn',
-            date: '2015-11-16T01:56:04.275Z',
+            date: new Date('2015-11-16T01:56:04.275Z'),
             customer_id: 262,
             basket: [
                 {
@@ -30629,7 +30629,7 @@ data = {
         {
             id: 508,
             reference: 'd138ph',
-            date: '2016-08-19T18:35:21.097Z',
+            date: new Date('2016-08-19T18:35:21.097Z'),
             customer_id: 813,
             basket: [
                 {
@@ -30652,7 +30652,7 @@ data = {
         {
             id: 509,
             reference: 'gq3v8y',
-            date: '2017-02-24T07:55:19.534Z',
+            date: new Date('2017-02-24T07:55:19.534Z'),
             customer_id: 100,
             basket: [
                 {
@@ -30683,7 +30683,7 @@ data = {
         {
             id: 510,
             reference: 'hkpd1d',
-            date: '2016-01-18T02:37:44.344Z',
+            date: new Date('2016-01-18T02:37:44.344Z'),
             customer_id: 345,
             basket: [
                 {
@@ -30702,7 +30702,7 @@ data = {
         {
             id: 511,
             reference: 'yluujx',
-            date: '2017-03-28T17:17:57.576Z',
+            date: new Date('2017-03-28T17:17:57.576Z'),
             customer_id: 642,
             basket: [
                 {
@@ -30729,7 +30729,7 @@ data = {
         {
             id: 512,
             reference: 'hilfle',
-            date: '2016-12-24T04:15:42.750Z',
+            date: new Date('2016-12-24T04:15:42.750Z'),
             customer_id: 695,
             basket: [
                 {
@@ -30748,7 +30748,7 @@ data = {
         {
             id: 513,
             reference: 'u04cvx',
-            date: '2015-10-10T06:37:27.794Z',
+            date: new Date('2015-10-10T06:37:27.794Z'),
             customer_id: 110,
             basket: [
                 {
@@ -30787,7 +30787,7 @@ data = {
         {
             id: 514,
             reference: 'c2sopx',
-            date: '2017-01-28T09:22:43.650Z',
+            date: new Date('2017-01-28T09:22:43.650Z'),
             customer_id: 669,
             basket: [
                 {
@@ -30814,7 +30814,7 @@ data = {
         {
             id: 515,
             reference: 'q6vg13',
-            date: '2015-02-07T09:41:00.912Z',
+            date: new Date('2015-02-07T09:41:00.912Z'),
             customer_id: 262,
             basket: [
                 {
@@ -30833,7 +30833,7 @@ data = {
         {
             id: 516,
             reference: 'nnqm38',
-            date: '2016-08-01T04:24:47.787Z',
+            date: new Date('2016-08-01T04:24:47.787Z'),
             customer_id: 842,
             basket: [
                 {
@@ -30852,7 +30852,7 @@ data = {
         {
             id: 517,
             reference: 'ybsy11',
-            date: '2017-02-01T20:19:14.780Z',
+            date: new Date('2017-02-01T20:19:14.780Z'),
             customer_id: 631,
             basket: [
                 {
@@ -30871,7 +30871,7 @@ data = {
         {
             id: 518,
             reference: 'bwl0k8',
-            date: '2016-07-09T01:27:32.265Z',
+            date: new Date('2016-07-09T01:27:32.265Z'),
             customer_id: 730,
             basket: [
                 {
@@ -30890,7 +30890,7 @@ data = {
         {
             id: 519,
             reference: '649s76',
-            date: '2017-02-06T20:22:19.153Z',
+            date: new Date('2017-02-06T20:22:19.153Z'),
             customer_id: 338,
             basket: [
                 {
@@ -30909,7 +30909,7 @@ data = {
         {
             id: 520,
             reference: 'ujj3jw',
-            date: '2016-10-16T07:53:37.213Z',
+            date: new Date('2016-10-16T07:53:37.213Z'),
             customer_id: 187,
             basket: [
                 {
@@ -30932,7 +30932,7 @@ data = {
         {
             id: 521,
             reference: 'qyotvh',
-            date: '2015-12-28T11:40:06.688Z',
+            date: new Date('2015-12-28T11:40:06.688Z'),
             customer_id: 674,
             basket: [
                 {
@@ -30979,7 +30979,7 @@ data = {
         {
             id: 522,
             reference: 'wqoiw3',
-            date: '2017-01-18T01:10:29.468Z',
+            date: new Date('2017-01-18T01:10:29.468Z'),
             customer_id: 244,
             basket: [
                 {
@@ -31002,7 +31002,7 @@ data = {
         {
             id: 523,
             reference: '6e664v',
-            date: '2016-12-02T17:51:10.062Z',
+            date: new Date('2016-12-02T17:51:10.062Z'),
             customer_id: 773,
             basket: [
                 {
@@ -31033,7 +31033,7 @@ data = {
         {
             id: 524,
             reference: 'rz1oek',
-            date: '2017-04-18T05:55:32.598Z',
+            date: new Date('2017-04-18T05:55:32.598Z'),
             customer_id: 185,
             basket: [
                 {
@@ -31052,7 +31052,7 @@ data = {
         {
             id: 525,
             reference: 'j4flh3',
-            date: '2015-10-18T17:38:09.289Z',
+            date: new Date('2015-10-18T17:38:09.289Z'),
             customer_id: 192,
             basket: [
                 {
@@ -31071,7 +31071,7 @@ data = {
         {
             id: 526,
             reference: 'owjz6p',
-            date: '2015-06-19T02:11:37.489Z',
+            date: new Date('2015-06-19T02:11:37.489Z'),
             customer_id: 312,
             basket: [
                 {
@@ -31094,7 +31094,7 @@ data = {
         {
             id: 527,
             reference: '8gnk3f',
-            date: '2015-01-03T03:45:37.535Z',
+            date: new Date('2015-01-03T03:45:37.535Z'),
             customer_id: 160,
             basket: [
                 {
@@ -31117,7 +31117,7 @@ data = {
         {
             id: 528,
             reference: 'itpej2',
-            date: '2017-02-02T15:31:28.859Z',
+            date: new Date('2017-02-02T15:31:28.859Z'),
             customer_id: 605,
             basket: [
                 {
@@ -31136,7 +31136,7 @@ data = {
         {
             id: 529,
             reference: 'd6qgcp',
-            date: '2017-03-14T01:10:52.875Z',
+            date: new Date('2017-03-14T01:10:52.875Z'),
             customer_id: 705,
             basket: [
                 {
@@ -31155,7 +31155,7 @@ data = {
         {
             id: 530,
             reference: 'hi1rkt',
-            date: '2015-11-27T15:25:51.547Z',
+            date: new Date('2015-11-27T15:25:51.547Z'),
             customer_id: 564,
             basket: [
                 {
@@ -31174,7 +31174,7 @@ data = {
         {
             id: 531,
             reference: 'uupgql',
-            date: '2016-01-13T12:25:10.889Z',
+            date: new Date('2016-01-13T12:25:10.889Z'),
             customer_id: 291,
             basket: [
                 {
@@ -31209,7 +31209,7 @@ data = {
         {
             id: 532,
             reference: 'd06vwv',
-            date: '2014-12-23T06:17:35.808Z',
+            date: new Date('2014-12-23T06:17:35.808Z'),
             customer_id: 606,
             basket: [
                 {
@@ -31228,7 +31228,7 @@ data = {
         {
             id: 533,
             reference: 'r6mvzh',
-            date: '2016-01-16T13:06:44.398Z',
+            date: new Date('2016-01-16T13:06:44.398Z'),
             customer_id: 345,
             basket: [
                 {
@@ -31247,7 +31247,7 @@ data = {
         {
             id: 534,
             reference: 'lyw3uy',
-            date: '2015-03-16T13:28:11.387Z',
+            date: new Date('2015-03-16T13:28:11.387Z'),
             customer_id: 428,
             basket: [
                 {
@@ -31266,7 +31266,7 @@ data = {
         {
             id: 535,
             reference: '4ioohq',
-            date: '2016-06-30T20:29:19.773Z',
+            date: new Date('2016-06-30T20:29:19.773Z'),
             customer_id: 871,
             basket: [
                 {
@@ -31285,7 +31285,7 @@ data = {
         {
             id: 536,
             reference: 'd6bnfd',
-            date: '2016-05-08T14:04:27.132Z',
+            date: new Date('2016-05-08T14:04:27.132Z'),
             customer_id: 725,
             basket: [
                 {
@@ -31308,7 +31308,7 @@ data = {
         {
             id: 537,
             reference: 'bopoe4',
-            date: '2016-11-04T17:24:17.370Z',
+            date: new Date('2016-11-04T17:24:17.370Z'),
             customer_id: 276,
             basket: [
                 {
@@ -31327,7 +31327,7 @@ data = {
         {
             id: 538,
             reference: '6tmxnn',
-            date: '2014-03-26T10:54:19.270Z',
+            date: new Date('2014-03-26T10:54:19.270Z'),
             customer_id: 290,
             basket: [
                 {
@@ -31350,7 +31350,7 @@ data = {
         {
             id: 539,
             reference: '34fr00',
-            date: '2016-12-03T19:50:19.645Z',
+            date: new Date('2016-12-03T19:50:19.645Z'),
             customer_id: 244,
             basket: [
                 {
@@ -31369,7 +31369,7 @@ data = {
         {
             id: 540,
             reference: '0u1m3o',
-            date: '2016-03-05T17:40:57.742Z',
+            date: new Date('2016-03-05T17:40:57.742Z'),
             customer_id: 854,
             basket: [
                 {
@@ -31412,7 +31412,7 @@ data = {
         {
             id: 541,
             reference: 'v6nsia',
-            date: '2017-03-14T10:18:39.984Z',
+            date: new Date('2017-03-14T10:18:39.984Z'),
             customer_id: 282,
             basket: [
                 {
@@ -31439,7 +31439,7 @@ data = {
         {
             id: 542,
             reference: '87jznl',
-            date: '2016-10-07T21:03:59.944Z',
+            date: new Date('2016-10-07T21:03:59.944Z'),
             customer_id: 109,
             basket: [
                 {
@@ -31458,7 +31458,7 @@ data = {
         {
             id: 543,
             reference: 'tcabmw',
-            date: '2016-05-23T06:34:34.972Z',
+            date: new Date('2016-05-23T06:34:34.972Z'),
             customer_id: 394,
             basket: [
                 {
@@ -31481,7 +31481,7 @@ data = {
         {
             id: 544,
             reference: 'csxirt',
-            date: '2016-05-13T14:27:15.261Z',
+            date: new Date('2016-05-13T14:27:15.261Z'),
             customer_id: 393,
             basket: [
                 {
@@ -31500,7 +31500,7 @@ data = {
         {
             id: 545,
             reference: '0rrlw4',
-            date: '2016-02-14T15:13:46.851Z',
+            date: new Date('2016-02-14T15:13:46.851Z'),
             customer_id: 405,
             basket: [
                 {
@@ -31523,7 +31523,7 @@ data = {
         {
             id: 546,
             reference: 'w7myxc',
-            date: '2017-04-15T15:04:03.310Z',
+            date: new Date('2017-04-15T15:04:03.310Z'),
             customer_id: 527,
             basket: [
                 {
@@ -31546,7 +31546,7 @@ data = {
         {
             id: 547,
             reference: 'hx6etv',
-            date: '2017-02-10T12:21:50.427Z',
+            date: new Date('2017-02-10T12:21:50.427Z'),
             customer_id: 665,
             basket: [
                 {
@@ -31565,7 +31565,7 @@ data = {
         {
             id: 548,
             reference: 'va4rqk',
-            date: '2016-11-23T00:58:13.009Z',
+            date: new Date('2016-11-23T00:58:13.009Z'),
             customer_id: 883,
             basket: [
                 {
@@ -31588,7 +31588,7 @@ data = {
         {
             id: 549,
             reference: '8hh4rq',
-            date: '2014-06-05T15:45:03.436Z',
+            date: new Date('2014-06-05T15:45:03.436Z'),
             customer_id: 205,
             basket: [
                 {
@@ -31635,7 +31635,7 @@ data = {
         {
             id: 550,
             reference: 'n2cbwf',
-            date: '2014-02-27T13:48:15.141Z',
+            date: new Date('2014-02-27T13:48:15.141Z'),
             customer_id: 790,
             basket: [
                 {
@@ -31658,7 +31658,7 @@ data = {
         {
             id: 551,
             reference: '5f6y0d',
-            date: '2016-02-22T07:16:37.703Z',
+            date: new Date('2016-02-22T07:16:37.703Z'),
             customer_id: 32,
             basket: [
                 {
@@ -31677,7 +31677,7 @@ data = {
         {
             id: 552,
             reference: 'idr4by',
-            date: '2017-04-06T04:41:31.209Z',
+            date: new Date('2017-04-06T04:41:31.209Z'),
             customer_id: 568,
             basket: [
                 {
@@ -31696,7 +31696,7 @@ data = {
         {
             id: 553,
             reference: 'plhl42',
-            date: '2015-10-26T19:28:17.395Z',
+            date: new Date('2015-10-26T19:28:17.395Z'),
             customer_id: 433,
             basket: [
                 {
@@ -31719,7 +31719,7 @@ data = {
         {
             id: 554,
             reference: '2kqjk1',
-            date: '2016-11-01T15:01:41.115Z',
+            date: new Date('2016-11-01T15:01:41.115Z'),
             customer_id: 630,
             basket: [
                 {
@@ -31742,7 +31742,7 @@ data = {
         {
             id: 555,
             reference: 'hpj5vl',
-            date: '2014-12-09T16:38:41.760Z',
+            date: new Date('2014-12-09T16:38:41.760Z'),
             customer_id: 861,
             basket: [
                 {
@@ -31761,7 +31761,7 @@ data = {
         {
             id: 556,
             reference: 'n9zvpg',
-            date: '2017-02-26T18:40:58.960Z',
+            date: new Date('2017-02-26T18:40:58.960Z'),
             customer_id: 664,
             basket: [
                 {
@@ -31780,7 +31780,7 @@ data = {
         {
             id: 557,
             reference: 'nh4u8k',
-            date: '2016-04-08T00:01:28.371Z',
+            date: new Date('2016-04-08T00:01:28.371Z'),
             customer_id: 813,
             basket: [
                 {
@@ -31807,7 +31807,7 @@ data = {
         {
             id: 558,
             reference: '7jkwp5',
-            date: '2016-10-14T03:32:20.061Z',
+            date: new Date('2016-10-14T03:32:20.061Z'),
             customer_id: 831,
             basket: [
                 {
@@ -31838,7 +31838,7 @@ data = {
         {
             id: 559,
             reference: '66k20g',
-            date: '2016-04-11T05:36:42.019Z',
+            date: new Date('2016-04-11T05:36:42.019Z'),
             customer_id: 837,
             basket: [
                 {
@@ -31861,7 +31861,7 @@ data = {
         {
             id: 560,
             reference: 'wqvv84',
-            date: '2017-03-21T00:24:14.602Z',
+            date: new Date('2017-03-21T00:24:14.602Z'),
             customer_id: 369,
             basket: [
                 {
@@ -31884,7 +31884,7 @@ data = {
         {
             id: 561,
             reference: 'n0b3d6',
-            date: '2017-04-04T19:52:01.170Z',
+            date: new Date('2017-04-04T19:52:01.170Z'),
             customer_id: 568,
             basket: [
                 {
@@ -31907,7 +31907,7 @@ data = {
         {
             id: 562,
             reference: '9ex4hb',
-            date: '2015-09-02T02:29:22.695Z',
+            date: new Date('2015-09-02T02:29:22.695Z'),
             customer_id: 745,
             basket: [
                 {
@@ -31926,7 +31926,7 @@ data = {
         {
             id: 563,
             reference: 'zvulf7',
-            date: '2015-12-28T06:20:29.984Z',
+            date: new Date('2015-12-28T06:20:29.984Z'),
             customer_id: 276,
             basket: [
                 {
@@ -31957,7 +31957,7 @@ data = {
         {
             id: 564,
             reference: '2mzcld',
-            date: '2016-09-11T08:53:39.986Z',
+            date: new Date('2016-09-11T08:53:39.986Z'),
             customer_id: 562,
             basket: [
                 {
@@ -31976,7 +31976,7 @@ data = {
         {
             id: 565,
             reference: 'yjtkao',
-            date: '2017-02-03T15:43:06.841Z',
+            date: new Date('2017-02-03T15:43:06.841Z'),
             customer_id: 119,
             basket: [
                 {
@@ -31999,7 +31999,7 @@ data = {
         {
             id: 566,
             reference: 'qy2pz8',
-            date: '2017-04-26T07:40:20.975Z',
+            date: new Date('2017-04-26T07:40:20.975Z'),
             customer_id: 11,
             basket: [
                 {
@@ -32018,7 +32018,7 @@ data = {
         {
             id: 567,
             reference: 'qsxuqd',
-            date: '2016-06-14T21:16:34.433Z',
+            date: new Date('2016-06-14T21:16:34.433Z'),
             customer_id: 145,
             basket: [
                 {
@@ -32041,7 +32041,7 @@ data = {
         {
             id: 568,
             reference: 'y5r4qx',
-            date: '2016-12-07T21:24:48.631Z',
+            date: new Date('2016-12-07T21:24:48.631Z'),
             customer_id: 512,
             basket: [
                 {
@@ -32072,7 +32072,7 @@ data = {
         {
             id: 569,
             reference: 'nqe19e',
-            date: '2017-04-21T11:39:19.662Z',
+            date: new Date('2017-04-21T11:39:19.662Z'),
             customer_id: 425,
             basket: [
                 {
@@ -32091,7 +32091,7 @@ data = {
         {
             id: 570,
             reference: '02a9m8',
-            date: '2016-11-09T05:55:11.569Z',
+            date: new Date('2016-11-09T05:55:11.569Z'),
             customer_id: 630,
             basket: [
                 {
@@ -32114,7 +32114,7 @@ data = {
         {
             id: 571,
             reference: 'b4qbze',
-            date: '2016-03-23T00:51:15.342Z',
+            date: new Date('2016-03-23T00:51:15.342Z'),
             customer_id: 875,
             basket: [
                 {
@@ -32137,7 +32137,7 @@ data = {
         {
             id: 572,
             reference: '59z3vq',
-            date: '2015-11-18T21:11:20.040Z',
+            date: new Date('2015-11-18T21:11:20.040Z'),
             customer_id: 410,
             basket: [
                 {
@@ -32180,7 +32180,7 @@ data = {
         {
             id: 573,
             reference: 'ata33r',
-            date: '2017-04-22T05:49:58.612Z',
+            date: new Date('2017-04-22T05:49:58.612Z'),
             customer_id: 425,
             basket: [
                 {
@@ -32207,7 +32207,7 @@ data = {
         {
             id: 574,
             reference: 'olwvx6',
-            date: '2016-07-02T19:31:45.465Z',
+            date: new Date('2016-07-02T19:31:45.465Z'),
             customer_id: 674,
             basket: [
                 {
@@ -32242,7 +32242,7 @@ data = {
         {
             id: 575,
             reference: '61qkz3',
-            date: '2015-09-18T22:17:19.005Z',
+            date: new Date('2015-09-18T22:17:19.005Z'),
             customer_id: 428,
             basket: [
                 {
@@ -32261,7 +32261,7 @@ data = {
         {
             id: 576,
             reference: 'tqk52h',
-            date: '2015-06-28T20:24:52.353Z',
+            date: new Date('2015-06-28T20:24:52.353Z'),
             customer_id: 329,
             basket: [
                 {
@@ -32280,7 +32280,7 @@ data = {
         {
             id: 577,
             reference: 'c6zied',
-            date: '2015-11-27T23:56:33.544Z',
+            date: new Date('2015-11-27T23:56:33.544Z'),
             customer_id: 405,
             basket: [
                 {
@@ -32303,7 +32303,7 @@ data = {
         {
             id: 578,
             reference: 'tlwj57',
-            date: '2017-03-23T04:32:56.185Z',
+            date: new Date('2017-03-23T04:32:56.185Z'),
             customer_id: 699,
             basket: [
                 {
@@ -32326,7 +32326,7 @@ data = {
         {
             id: 579,
             reference: 'bn1o57',
-            date: '2017-02-07T12:23:44.342Z',
+            date: new Date('2017-02-07T12:23:44.342Z'),
             customer_id: 30,
             basket: [
                 {
@@ -32349,7 +32349,7 @@ data = {
         {
             id: 580,
             reference: 'vb24yo',
-            date: '2016-11-23T19:45:41.933Z',
+            date: new Date('2016-11-23T19:45:41.933Z'),
             customer_id: 714,
             basket: [
                 {
@@ -32368,7 +32368,7 @@ data = {
         {
             id: 581,
             reference: 'er2czh',
-            date: '2014-10-05T10:11:18.491Z',
+            date: new Date('2014-10-05T10:11:18.491Z'),
             customer_id: 474,
             basket: [
                 {
@@ -32387,7 +32387,7 @@ data = {
         {
             id: 582,
             reference: '3o7q41',
-            date: '2015-11-18T08:08:12.869Z',
+            date: new Date('2015-11-18T08:08:12.869Z'),
             customer_id: 560,
             basket: [
                 {
@@ -32410,7 +32410,7 @@ data = {
         {
             id: 583,
             reference: 'aqha0u',
-            date: '2016-02-09T16:23:58.457Z',
+            date: new Date('2016-02-09T16:23:58.457Z'),
             customer_id: 566,
             basket: [
                 {
@@ -32437,7 +32437,7 @@ data = {
         {
             id: 584,
             reference: 'whzq30',
-            date: '2017-03-28T00:42:33.923Z',
+            date: new Date('2017-03-28T00:42:33.923Z'),
             customer_id: 94,
             basket: [
                 {
@@ -32492,7 +32492,7 @@ data = {
         {
             id: 585,
             reference: 'h1wydr',
-            date: '2015-01-26T08:05:36.983Z',
+            date: new Date('2015-01-26T08:05:36.983Z'),
             customer_id: 690,
             basket: [
                 {
@@ -32511,7 +32511,7 @@ data = {
         {
             id: 586,
             reference: 'h8h45p',
-            date: '2016-09-22T14:30:27.327Z',
+            date: new Date('2016-09-22T14:30:27.327Z'),
             customer_id: 824,
             basket: [
                 {
@@ -32530,7 +32530,7 @@ data = {
         {
             id: 587,
             reference: 'e2nef0',
-            date: '2016-12-10T06:36:46.504Z',
+            date: new Date('2016-12-10T06:36:46.504Z'),
             customer_id: 468,
             basket: [
                 {
@@ -32549,7 +32549,7 @@ data = {
         {
             id: 588,
             reference: 'f97wki',
-            date: '2015-09-21T20:13:27.683Z',
+            date: new Date('2015-09-21T20:13:27.683Z'),
             customer_id: 517,
             basket: [
                 {
@@ -32572,7 +32572,7 @@ data = {
         {
             id: 589,
             reference: 'uu5sdv',
-            date: '2016-03-07T08:22:05.362Z',
+            date: new Date('2016-03-07T08:22:05.362Z'),
             customer_id: 808,
             basket: [
                 {
@@ -32591,7 +32591,7 @@ data = {
         {
             id: 590,
             reference: 'ne7zqe',
-            date: '2015-03-25T16:01:50.775Z',
+            date: new Date('2015-03-25T16:01:50.775Z'),
             customer_id: 517,
             basket: [
                 {
@@ -32614,7 +32614,7 @@ data = {
         {
             id: 591,
             reference: 'udl75h',
-            date: '2016-10-07T12:26:07.686Z',
+            date: new Date('2016-10-07T12:26:07.686Z'),
             customer_id: 673,
             basket: [
                 {
@@ -32637,7 +32637,7 @@ data = {
         {
             id: 592,
             reference: 'fvmba0',
-            date: '2016-08-05T17:59:21.750Z',
+            date: new Date('2016-08-05T17:59:21.750Z'),
             customer_id: 291,
             basket: [
                 {
@@ -32660,7 +32660,7 @@ data = {
         {
             id: 593,
             reference: '6p0tk4',
-            date: '2017-03-21T18:14:56.525Z',
+            date: new Date('2017-03-21T18:14:56.525Z'),
             customer_id: 62,
             basket: [
                 {
@@ -32683,7 +32683,7 @@ data = {
         {
             id: 594,
             reference: 'n2glqw',
-            date: '2016-04-22T17:38:16.069Z',
+            date: new Date('2016-04-22T17:38:16.069Z'),
             customer_id: 645,
             basket: [
                 {
@@ -32706,7 +32706,7 @@ data = {
         {
             id: 595,
             reference: 'dr2v3g',
-            date: '2015-10-22T04:00:00.681Z',
+            date: new Date('2015-10-22T04:00:00.681Z'),
             customer_id: 329,
             basket: [
                 {
@@ -32725,7 +32725,7 @@ data = {
         {
             id: 596,
             reference: 'rvvfla',
-            date: '2017-04-20T19:36:29.232Z',
+            date: new Date('2017-04-20T19:36:29.232Z'),
             customer_id: 22,
             basket: [
                 {
@@ -32748,7 +32748,7 @@ data = {
         {
             id: 597,
             reference: 'aspfxu',
-            date: '2017-01-23T06:22:32.848Z',
+            date: new Date('2017-01-23T06:22:32.848Z'),
             customer_id: 678,
             basket: [
                 {
@@ -32767,7 +32767,7 @@ data = {
         {
             id: 598,
             reference: 'l8ysbq',
-            date: '2016-04-02T21:19:25.119Z',
+            date: new Date('2016-04-02T21:19:25.119Z'),
             customer_id: 720,
             basket: [
                 {
@@ -32786,7 +32786,7 @@ data = {
         {
             id: 599,
             reference: '8gtn6z',
-            date: '2016-12-02T12:05:14.667Z',
+            date: new Date('2016-12-02T12:05:14.667Z'),
             customer_id: 795,
             basket: [
                 {
@@ -32810,7 +32810,7 @@ data = {
     reviews: [
         {
             id: 0,
-            date: '2017-02-28T03:51:36.567Z',
+            date: new Date('2017-02-28T03:51:36.567Z'),
             status: 'rejected',
             command_id: 1,
             product_id: 12,
@@ -32820,7 +32820,7 @@ data = {
         },
         {
             id: 1,
-            date: '2017-03-21T04:54:26.148Z',
+            date: new Date('2017-03-21T04:54:26.148Z'),
             status: 'accepted',
             command_id: 4,
             product_id: 16,
@@ -32830,7 +32830,7 @@ data = {
         },
         {
             id: 2,
-            date: '2017-03-20T15:46:43.340Z',
+            date: new Date('2017-03-20T15:46:43.340Z'),
             status: 'accepted',
             command_id: 6,
             product_id: 41,
@@ -32840,7 +32840,7 @@ data = {
         },
         {
             id: 3,
-            date: '2017-02-15T18:22:36.613Z',
+            date: new Date('2017-02-15T18:22:36.613Z'),
             status: 'accepted',
             command_id: 6,
             product_id: 117,
@@ -32850,7 +32850,7 @@ data = {
         },
         {
             id: 4,
-            date: '2017-03-25T18:05:20.178Z',
+            date: new Date('2017-03-25T18:05:20.178Z'),
             status: 'accepted',
             command_id: 10,
             product_id: 76,
@@ -32860,7 +32860,7 @@ data = {
         },
         {
             id: 5,
-            date: '2017-02-05T15:41:59.536Z',
+            date: new Date('2017-02-05T15:41:59.536Z'),
             status: 'accepted',
             command_id: 14,
             product_id: 91,
@@ -32870,7 +32870,7 @@ data = {
         },
         {
             id: 6,
-            date: '2017-04-25T03:33:55.957Z',
+            date: new Date('2017-04-25T03:33:55.957Z'),
             status: 'pending',
             command_id: 18,
             product_id: 14,
@@ -32880,7 +32880,7 @@ data = {
         },
         {
             id: 7,
-            date: '2017-03-13T22:05:42.603Z',
+            date: new Date('2017-03-13T22:05:42.603Z'),
             status: 'accepted',
             command_id: 19,
             product_id: 16,
@@ -32890,7 +32890,7 @@ data = {
         },
         {
             id: 8,
-            date: '2017-01-31T02:45:21.117Z',
+            date: new Date('2017-01-31T02:45:21.117Z'),
             status: 'accepted',
             command_id: 19,
             product_id: 57,
@@ -32900,7 +32900,7 @@ data = {
         },
         {
             id: 9,
-            date: '2017-03-11T19:47:02.285Z',
+            date: new Date('2017-03-11T19:47:02.285Z'),
             status: 'accepted',
             command_id: 21,
             product_id: 91,
@@ -32910,7 +32910,7 @@ data = {
         },
         {
             id: 10,
-            date: '2017-04-09T21:26:34.082Z',
+            date: new Date('2017-04-09T21:26:34.082Z'),
             status: 'pending',
             command_id: 21,
             product_id: 107,
@@ -32920,7 +32920,7 @@ data = {
         },
         {
             id: 11,
-            date: '2016-09-13T04:41:01.309Z',
+            date: new Date('2016-09-13T04:41:01.309Z'),
             status: 'accepted',
             command_id: 21,
             product_id: 110,
@@ -32930,7 +32930,7 @@ data = {
         },
         {
             id: 12,
-            date: '2016-12-01T06:43:54.747Z',
+            date: new Date('2016-12-01T06:43:54.747Z'),
             status: 'rejected',
             command_id: 21,
             product_id: 56,
@@ -32940,7 +32940,7 @@ data = {
         },
         {
             id: 13,
-            date: '2017-03-03T10:30:36.705Z',
+            date: new Date('2017-03-03T10:30:36.705Z'),
             status: 'accepted',
             command_id: 21,
             product_id: 43,
@@ -32950,7 +32950,7 @@ data = {
         },
         {
             id: 14,
-            date: '2017-03-03T15:10:53.858Z',
+            date: new Date('2017-03-03T15:10:53.858Z'),
             status: 'accepted',
             command_id: 23,
             product_id: 4,
@@ -32960,7 +32960,7 @@ data = {
         },
         {
             id: 15,
-            date: '2017-02-12T16:34:41.623Z',
+            date: new Date('2017-02-12T16:34:41.623Z'),
             status: 'rejected',
             command_id: 24,
             product_id: 107,
@@ -32970,7 +32970,7 @@ data = {
         },
         {
             id: 16,
-            date: '2017-03-06T08:30:51.145Z',
+            date: new Date('2017-03-06T08:30:51.145Z'),
             status: 'accepted',
             command_id: 25,
             product_id: 56,
@@ -32980,7 +32980,7 @@ data = {
         },
         {
             id: 17,
-            date: '2017-03-15T01:15:27.814Z',
+            date: new Date('2017-03-15T01:15:27.814Z'),
             status: 'accepted',
             command_id: 26,
             product_id: 69,
@@ -32990,7 +32990,7 @@ data = {
         },
         {
             id: 18,
-            date: '2017-04-25T08:14:21.396Z',
+            date: new Date('2017-04-25T08:14:21.396Z'),
             status: 'pending',
             command_id: 31,
             product_id: 17,
@@ -33000,7 +33000,7 @@ data = {
         },
         {
             id: 19,
-            date: '2016-11-19T22:31:10.036Z',
+            date: new Date('2016-11-19T22:31:10.036Z'),
             status: 'rejected',
             command_id: 35,
             product_id: 79,
@@ -33010,7 +33010,7 @@ data = {
         },
         {
             id: 20,
-            date: '2017-02-20T18:02:19.459Z',
+            date: new Date('2017-02-20T18:02:19.459Z'),
             status: 'rejected',
             command_id: 35,
             product_id: 61,
@@ -33020,7 +33020,7 @@ data = {
         },
         {
             id: 21,
-            date: '2016-09-08T17:52:27.429Z',
+            date: new Date('2016-09-08T17:52:27.429Z'),
             status: 'accepted',
             command_id: 39,
             product_id: 37,
@@ -33030,7 +33030,7 @@ data = {
         },
         {
             id: 22,
-            date: '2017-04-22T03:12:52.969Z',
+            date: new Date('2017-04-22T03:12:52.969Z'),
             status: 'accepted',
             command_id: 40,
             product_id: 124,
@@ -33040,7 +33040,7 @@ data = {
         },
         {
             id: 23,
-            date: '2017-01-15T20:50:38.520Z',
+            date: new Date('2017-01-15T20:50:38.520Z'),
             status: 'accepted',
             command_id: 41,
             product_id: 39,
@@ -33050,7 +33050,7 @@ data = {
         },
         {
             id: 24,
-            date: '2017-01-07T05:09:52.892Z',
+            date: new Date('2017-01-07T05:09:52.892Z'),
             status: 'accepted',
             command_id: 42,
             product_id: 127,
@@ -33060,7 +33060,7 @@ data = {
         },
         {
             id: 25,
-            date: '2017-02-12T19:02:16.140Z',
+            date: new Date('2017-02-12T19:02:16.140Z'),
             status: 'accepted',
             command_id: 44,
             product_id: 81,
@@ -33070,7 +33070,7 @@ data = {
         },
         {
             id: 26,
-            date: '2016-11-08T22:23:50.597Z',
+            date: new Date('2016-11-08T22:23:50.597Z'),
             status: 'rejected',
             command_id: 46,
             product_id: 96,
@@ -33080,7 +33080,7 @@ data = {
         },
         {
             id: 27,
-            date: '2017-04-08T09:44:18.648Z',
+            date: new Date('2017-04-08T09:44:18.648Z'),
             status: 'pending',
             command_id: 47,
             product_id: 73,
@@ -33090,7 +33090,7 @@ data = {
         },
         {
             id: 28,
-            date: '2017-02-09T14:34:00.445Z',
+            date: new Date('2017-02-09T14:34:00.445Z'),
             status: 'accepted',
             command_id: 48,
             product_id: 57,
@@ -33100,7 +33100,7 @@ data = {
         },
         {
             id: 29,
-            date: '2016-12-27T20:17:59.394Z',
+            date: new Date('2016-12-27T20:17:59.394Z'),
             status: 'accepted',
             command_id: 54,
             product_id: 19,
@@ -33110,7 +33110,7 @@ data = {
         },
         {
             id: 30,
-            date: '2017-02-09T04:05:33.762Z',
+            date: new Date('2017-02-09T04:05:33.762Z'),
             status: 'accepted',
             command_id: 54,
             product_id: 3,
@@ -33120,7 +33120,7 @@ data = {
         },
         {
             id: 31,
-            date: '2016-03-16T00:44:09.935Z',
+            date: new Date('2016-03-16T00:44:09.935Z'),
             status: 'rejected',
             command_id: 54,
             product_id: 72,
@@ -33130,7 +33130,7 @@ data = {
         },
         {
             id: 32,
-            date: '2017-02-19T19:40:55.960Z',
+            date: new Date('2017-02-19T19:40:55.960Z'),
             status: 'accepted',
             command_id: 54,
             product_id: 50,
@@ -33140,7 +33140,7 @@ data = {
         },
         {
             id: 33,
-            date: '2016-12-02T05:35:06.745Z',
+            date: new Date('2016-12-02T05:35:06.745Z'),
             status: 'accepted',
             command_id: 54,
             product_id: 122,
@@ -33150,7 +33150,7 @@ data = {
         },
         {
             id: 34,
-            date: '2017-04-08T14:27:06.166Z',
+            date: new Date('2017-04-08T14:27:06.166Z'),
             status: 'pending',
             command_id: 60,
             product_id: 29,
@@ -33160,7 +33160,7 @@ data = {
         },
         {
             id: 35,
-            date: '2016-04-30T03:06:09.780Z',
+            date: new Date('2016-04-30T03:06:09.780Z'),
             status: 'rejected',
             command_id: 62,
             product_id: 38,
@@ -33170,7 +33170,7 @@ data = {
         },
         {
             id: 36,
-            date: '2016-09-09T05:30:09.850Z',
+            date: new Date('2016-09-09T05:30:09.850Z'),
             status: 'accepted',
             command_id: 62,
             product_id: 56,
@@ -33180,7 +33180,7 @@ data = {
         },
         {
             id: 37,
-            date: '2016-11-09T11:42:33.760Z',
+            date: new Date('2016-11-09T11:42:33.760Z'),
             status: 'rejected',
             command_id: 62,
             product_id: 119,
@@ -33190,7 +33190,7 @@ data = {
         },
         {
             id: 38,
-            date: '2017-04-25T16:43:13.408Z',
+            date: new Date('2017-04-25T16:43:13.408Z'),
             status: 'pending',
             command_id: 63,
             product_id: 14,
@@ -33200,7 +33200,7 @@ data = {
         },
         {
             id: 39,
-            date: '2017-04-16T11:14:04.448Z',
+            date: new Date('2017-04-16T11:14:04.448Z'),
             status: 'accepted',
             command_id: 63,
             product_id: 125,
@@ -33210,7 +33210,7 @@ data = {
         },
         {
             id: 40,
-            date: '2017-03-14T20:36:28.321Z',
+            date: new Date('2017-03-14T20:36:28.321Z'),
             status: 'accepted',
             command_id: 66,
             product_id: 128,
@@ -33220,7 +33220,7 @@ data = {
         },
         {
             id: 41,
-            date: '2017-04-03T12:26:49.794Z',
+            date: new Date('2017-04-03T12:26:49.794Z'),
             status: 'accepted',
             command_id: 67,
             product_id: 18,
@@ -33230,7 +33230,7 @@ data = {
         },
         {
             id: 42,
-            date: '2017-01-26T03:12:43.182Z',
+            date: new Date('2017-01-26T03:12:43.182Z'),
             status: 'accepted',
             command_id: 69,
             product_id: 7,
@@ -33240,7 +33240,7 @@ data = {
         },
         {
             id: 43,
-            date: '2017-03-09T20:59:06.404Z',
+            date: new Date('2017-03-09T20:59:06.404Z'),
             status: 'accepted',
             command_id: 70,
             product_id: 29,
@@ -33250,7 +33250,7 @@ data = {
         },
         {
             id: 44,
-            date: '2016-12-31T14:49:12.689Z',
+            date: new Date('2016-12-31T14:49:12.689Z'),
             status: 'accepted',
             command_id: 73,
             product_id: 8,
@@ -33260,7 +33260,7 @@ data = {
         },
         {
             id: 45,
-            date: '2017-01-14T06:16:52.583Z',
+            date: new Date('2017-01-14T06:16:52.583Z'),
             status: 'accepted',
             command_id: 75,
             product_id: 57,
@@ -33270,7 +33270,7 @@ data = {
         },
         {
             id: 46,
-            date: '2017-04-10T04:51:00.154Z',
+            date: new Date('2017-04-10T04:51:00.154Z'),
             status: 'pending',
             command_id: 85,
             product_id: 84,
@@ -33280,7 +33280,7 @@ data = {
         },
         {
             id: 47,
-            date: '2016-12-28T18:01:24.112Z',
+            date: new Date('2016-12-28T18:01:24.112Z'),
             status: 'accepted',
             command_id: 88,
             product_id: 96,
@@ -33290,7 +33290,7 @@ data = {
         },
         {
             id: 48,
-            date: '2017-04-22T18:01:10.940Z',
+            date: new Date('2017-04-22T18:01:10.940Z'),
             status: 'pending',
             command_id: 89,
             product_id: 87,
@@ -33300,7 +33300,7 @@ data = {
         },
         {
             id: 49,
-            date: '2017-02-13T20:20:13.917Z',
+            date: new Date('2017-02-13T20:20:13.917Z'),
             status: 'accepted',
             command_id: 92,
             product_id: 104,
@@ -33310,7 +33310,7 @@ data = {
         },
         {
             id: 50,
-            date: '2017-04-16T07:51:48.504Z',
+            date: new Date('2017-04-16T07:51:48.504Z'),
             status: 'accepted',
             command_id: 92,
             product_id: 1,
@@ -33320,7 +33320,7 @@ data = {
         },
         {
             id: 51,
-            date: '2016-06-14T06:48:18.120Z',
+            date: new Date('2016-06-14T06:48:18.120Z'),
             status: 'accepted',
             command_id: 94,
             product_id: 108,
@@ -33330,7 +33330,7 @@ data = {
         },
         {
             id: 52,
-            date: '2017-04-24T15:31:12.705Z',
+            date: new Date('2017-04-24T15:31:12.705Z'),
             status: 'pending',
             command_id: 95,
             product_id: 53,
@@ -33340,7 +33340,7 @@ data = {
         },
         {
             id: 53,
-            date: '2017-04-12T20:48:29.517Z',
+            date: new Date('2017-04-12T20:48:29.517Z'),
             status: 'accepted',
             command_id: 99,
             product_id: 42,
@@ -33350,7 +33350,7 @@ data = {
         },
         {
             id: 54,
-            date: '2016-09-08T01:54:19.877Z',
+            date: new Date('2016-09-08T01:54:19.877Z'),
             status: 'rejected',
             command_id: 99,
             product_id: 110,
@@ -33360,7 +33360,7 @@ data = {
         },
         {
             id: 55,
-            date: '2017-01-24T06:07:05.728Z',
+            date: new Date('2017-01-24T06:07:05.728Z'),
             status: 'rejected',
             command_id: 100,
             product_id: 70,
@@ -33370,7 +33370,7 @@ data = {
         },
         {
             id: 56,
-            date: '2017-01-08T20:37:15.122Z',
+            date: new Date('2017-01-08T20:37:15.122Z'),
             status: 'accepted',
             command_id: 100,
             product_id: 105,
@@ -33380,7 +33380,7 @@ data = {
         },
         {
             id: 57,
-            date: '2015-12-26T23:45:56.721Z',
+            date: new Date('2015-12-26T23:45:56.721Z'),
             status: 'accepted',
             command_id: 102,
             product_id: 19,
@@ -33390,7 +33390,7 @@ data = {
         },
         {
             id: 58,
-            date: '2016-07-28T16:06:06.911Z',
+            date: new Date('2016-07-28T16:06:06.911Z'),
             status: 'accepted',
             command_id: 102,
             product_id: 80,
@@ -33400,7 +33400,7 @@ data = {
         },
         {
             id: 59,
-            date: '2016-12-16T17:09:02.051Z',
+            date: new Date('2016-12-16T17:09:02.051Z'),
             status: 'accepted',
             command_id: 102,
             product_id: 88,
@@ -33410,7 +33410,7 @@ data = {
         },
         {
             id: 60,
-            date: '2017-03-28T13:26:41.598Z',
+            date: new Date('2017-03-28T13:26:41.598Z'),
             status: 'rejected',
             command_id: 106,
             product_id: 57,
@@ -33420,7 +33420,7 @@ data = {
         },
         {
             id: 61,
-            date: '2017-03-07T19:29:35.215Z',
+            date: new Date('2017-03-07T19:29:35.215Z'),
             status: 'accepted',
             command_id: 110,
             product_id: 117,
@@ -33430,7 +33430,7 @@ data = {
         },
         {
             id: 62,
-            date: '2016-09-17T21:45:04.856Z',
+            date: new Date('2016-09-17T21:45:04.856Z'),
             status: 'accepted',
             command_id: 110,
             product_id: 79,
@@ -33440,7 +33440,7 @@ data = {
         },
         {
             id: 63,
-            date: '2017-04-23T00:39:44.603Z',
+            date: new Date('2017-04-23T00:39:44.603Z'),
             status: 'pending',
             command_id: 110,
             product_id: 84,
@@ -33450,7 +33450,7 @@ data = {
         },
         {
             id: 64,
-            date: '2017-03-04T14:04:39.995Z',
+            date: new Date('2017-03-04T14:04:39.995Z'),
             status: 'accepted',
             command_id: 115,
             product_id: 54,
@@ -33460,7 +33460,7 @@ data = {
         },
         {
             id: 65,
-            date: '2016-04-13T23:49:58.160Z',
+            date: new Date('2016-04-13T23:49:58.160Z'),
             status: 'accepted',
             command_id: 115,
             product_id: 16,
@@ -33470,7 +33470,7 @@ data = {
         },
         {
             id: 66,
-            date: '2017-04-19T03:52:32.658Z',
+            date: new Date('2017-04-19T03:52:32.658Z'),
             status: 'pending',
             command_id: 115,
             product_id: 17,
@@ -33480,7 +33480,7 @@ data = {
         },
         {
             id: 67,
-            date: '2016-04-13T00:22:36.902Z',
+            date: new Date('2016-04-13T00:22:36.902Z'),
             status: 'accepted',
             command_id: 115,
             product_id: 107,
@@ -33490,7 +33490,7 @@ data = {
         },
         {
             id: 68,
-            date: '2016-12-02T02:09:08.222Z',
+            date: new Date('2016-12-02T02:09:08.222Z'),
             status: 'rejected',
             command_id: 117,
             product_id: 44,
@@ -33500,7 +33500,7 @@ data = {
         },
         {
             id: 69,
-            date: '2017-03-16T06:36:50.845Z',
+            date: new Date('2017-03-16T06:36:50.845Z'),
             status: 'accepted',
             command_id: 119,
             product_id: 95,
@@ -33510,7 +33510,7 @@ data = {
         },
         {
             id: 70,
-            date: '2017-04-10T03:01:16.748Z',
+            date: new Date('2017-04-10T03:01:16.748Z'),
             status: 'pending',
             command_id: 119,
             product_id: 82,
@@ -33520,7 +33520,7 @@ data = {
         },
         {
             id: 71,
-            date: '2017-03-18T05:09:17.147Z',
+            date: new Date('2017-03-18T05:09:17.147Z'),
             status: 'accepted',
             command_id: 119,
             product_id: 106,
@@ -33530,7 +33530,7 @@ data = {
         },
         {
             id: 72,
-            date: '2017-04-24T13:31:38.810Z',
+            date: new Date('2017-04-24T13:31:38.810Z'),
             status: 'accepted',
             command_id: 119,
             product_id: 122,
@@ -33540,7 +33540,7 @@ data = {
         },
         {
             id: 73,
-            date: '2017-02-09T14:09:59.803Z',
+            date: new Date('2017-02-09T14:09:59.803Z'),
             status: 'accepted',
             command_id: 120,
             product_id: 116,
@@ -33550,7 +33550,7 @@ data = {
         },
         {
             id: 74,
-            date: '2016-09-15T09:36:52.223Z',
+            date: new Date('2016-09-15T09:36:52.223Z'),
             status: 'accepted',
             command_id: 122,
             product_id: 103,
@@ -33560,7 +33560,7 @@ data = {
         },
         {
             id: 75,
-            date: '2017-04-14T14:50:21.013Z',
+            date: new Date('2017-04-14T14:50:21.013Z'),
             status: 'pending',
             command_id: 131,
             product_id: 115,
@@ -33570,7 +33570,7 @@ data = {
         },
         {
             id: 76,
-            date: '2017-04-12T16:33:24.348Z',
+            date: new Date('2017-04-12T16:33:24.348Z'),
             status: 'rejected',
             command_id: 131,
             product_id: 19,
@@ -33580,7 +33580,7 @@ data = {
         },
         {
             id: 77,
-            date: '2017-04-20T09:32:32.145Z',
+            date: new Date('2017-04-20T09:32:32.145Z'),
             status: 'pending',
             command_id: 131,
             product_id: 41,
@@ -33590,7 +33590,7 @@ data = {
         },
         {
             id: 78,
-            date: '2017-04-18T17:58:39.097Z',
+            date: new Date('2017-04-18T17:58:39.097Z'),
             status: 'pending',
             command_id: 131,
             product_id: 120,
@@ -33600,7 +33600,7 @@ data = {
         },
         {
             id: 79,
-            date: '2016-12-19T07:47:49.163Z',
+            date: new Date('2016-12-19T07:47:49.163Z'),
             status: 'accepted',
             command_id: 133,
             product_id: 57,
@@ -33610,7 +33610,7 @@ data = {
         },
         {
             id: 80,
-            date: '2017-03-25T08:34:39.399Z',
+            date: new Date('2017-03-25T08:34:39.399Z'),
             status: 'accepted',
             command_id: 133,
             product_id: 66,
@@ -33620,7 +33620,7 @@ data = {
         },
         {
             id: 81,
-            date: '2017-01-21T18:37:02.183Z',
+            date: new Date('2017-01-21T18:37:02.183Z'),
             status: 'rejected',
             command_id: 134,
             product_id: 68,
@@ -33630,7 +33630,7 @@ data = {
         },
         {
             id: 82,
-            date: '2016-09-12T20:43:36.452Z',
+            date: new Date('2016-09-12T20:43:36.452Z'),
             status: 'accepted',
             command_id: 134,
             product_id: 123,
@@ -33640,7 +33640,7 @@ data = {
         },
         {
             id: 83,
-            date: '2017-03-09T17:42:57.285Z',
+            date: new Date('2017-03-09T17:42:57.285Z'),
             status: 'accepted',
             command_id: 134,
             product_id: 84,
@@ -33650,7 +33650,7 @@ data = {
         },
         {
             id: 84,
-            date: '2017-02-16T13:36:17.141Z',
+            date: new Date('2017-02-16T13:36:17.141Z'),
             status: 'accepted',
             command_id: 134,
             product_id: 125,
@@ -33660,7 +33660,7 @@ data = {
         },
         {
             id: 85,
-            date: '2016-11-15T16:54:53.006Z',
+            date: new Date('2016-11-15T16:54:53.006Z'),
             status: 'accepted',
             command_id: 135,
             product_id: 123,
@@ -33670,7 +33670,7 @@ data = {
         },
         {
             id: 86,
-            date: '2017-04-12T20:20:15.576Z',
+            date: new Date('2017-04-12T20:20:15.576Z'),
             status: 'accepted',
             command_id: 141,
             product_id: 84,
@@ -33680,7 +33680,7 @@ data = {
         },
         {
             id: 87,
-            date: '2017-04-24T09:49:14.919Z',
+            date: new Date('2017-04-24T09:49:14.919Z'),
             status: 'pending',
             command_id: 141,
             product_id: 125,
@@ -33690,7 +33690,7 @@ data = {
         },
         {
             id: 88,
-            date: '2017-04-02T04:09:05.868Z',
+            date: new Date('2017-04-02T04:09:05.868Z'),
             status: 'accepted',
             command_id: 143,
             product_id: 7,
@@ -33700,7 +33700,7 @@ data = {
         },
         {
             id: 89,
-            date: '2016-12-10T15:05:00.347Z',
+            date: new Date('2016-12-10T15:05:00.347Z'),
             status: 'accepted',
             command_id: 144,
             product_id: 80,
@@ -33710,7 +33710,7 @@ data = {
         },
         {
             id: 90,
-            date: '2017-04-12T21:51:57.101Z',
+            date: new Date('2017-04-12T21:51:57.101Z'),
             status: 'pending',
             command_id: 146,
             product_id: 79,
@@ -33720,7 +33720,7 @@ data = {
         },
         {
             id: 91,
-            date: '2017-04-24T19:48:37.575Z',
+            date: new Date('2017-04-24T19:48:37.575Z'),
             status: 'rejected',
             command_id: 146,
             product_id: 99,
@@ -33730,7 +33730,7 @@ data = {
         },
         {
             id: 92,
-            date: '2016-11-19T00:21:46.800Z',
+            date: new Date('2016-11-19T00:21:46.800Z'),
             status: 'rejected',
             command_id: 147,
             product_id: 98,
@@ -33740,7 +33740,7 @@ data = {
         },
         {
             id: 93,
-            date: '2016-12-04T19:12:26.754Z',
+            date: new Date('2016-12-04T19:12:26.754Z'),
             status: 'accepted',
             command_id: 148,
             product_id: 75,
@@ -33750,7 +33750,7 @@ data = {
         },
         {
             id: 94,
-            date: '2017-02-10T02:16:44.369Z',
+            date: new Date('2017-02-10T02:16:44.369Z'),
             status: 'accepted',
             command_id: 148,
             product_id: 44,
@@ -33760,7 +33760,7 @@ data = {
         },
         {
             id: 95,
-            date: '2017-01-03T16:48:45.202Z',
+            date: new Date('2017-01-03T16:48:45.202Z'),
             status: 'accepted',
             command_id: 148,
             product_id: 50,
@@ -33770,7 +33770,7 @@ data = {
         },
         {
             id: 96,
-            date: '2016-12-29T18:32:56.234Z',
+            date: new Date('2016-12-29T18:32:56.234Z'),
             status: 'accepted',
             command_id: 149,
             product_id: 126,
@@ -33780,7 +33780,7 @@ data = {
         },
         {
             id: 97,
-            date: '2017-02-03T22:49:58.642Z',
+            date: new Date('2017-02-03T22:49:58.642Z'),
             status: 'rejected',
             command_id: 151,
             product_id: 78,
@@ -33790,7 +33790,7 @@ data = {
         },
         {
             id: 98,
-            date: '2016-01-14T02:39:22.931Z',
+            date: new Date('2016-01-14T02:39:22.931Z'),
             status: 'rejected',
             command_id: 158,
             product_id: 116,
@@ -33800,7 +33800,7 @@ data = {
         },
         {
             id: 99,
-            date: '2017-03-04T20:20:42.719Z',
+            date: new Date('2017-03-04T20:20:42.719Z'),
             status: 'rejected',
             command_id: 158,
             product_id: 17,
@@ -33810,7 +33810,7 @@ data = {
         },
         {
             id: 100,
-            date: '2017-04-06T21:41:35.675Z',
+            date: new Date('2017-04-06T21:41:35.675Z'),
             status: 'accepted',
             command_id: 163,
             product_id: 119,
@@ -33820,7 +33820,7 @@ data = {
         },
         {
             id: 101,
-            date: '2017-04-15T09:35:56.331Z',
+            date: new Date('2017-04-15T09:35:56.331Z'),
             status: 'pending',
             command_id: 163,
             product_id: 72,
@@ -33830,7 +33830,7 @@ data = {
         },
         {
             id: 102,
-            date: '2017-04-21T05:21:26.811Z',
+            date: new Date('2017-04-21T05:21:26.811Z'),
             status: 'pending',
             command_id: 163,
             product_id: 127,
@@ -33840,7 +33840,7 @@ data = {
         },
         {
             id: 103,
-            date: '2016-02-15T19:45:16.806Z',
+            date: new Date('2016-02-15T19:45:16.806Z'),
             status: 'accepted',
             command_id: 165,
             product_id: 12,
@@ -33850,7 +33850,7 @@ data = {
         },
         {
             id: 104,
-            date: '2017-04-23T09:55:07.794Z',
+            date: new Date('2017-04-23T09:55:07.794Z'),
             status: 'pending',
             command_id: 170,
             product_id: 113,
@@ -33860,7 +33860,7 @@ data = {
         },
         {
             id: 105,
-            date: '2017-02-19T19:02:11.336Z',
+            date: new Date('2017-02-19T19:02:11.336Z'),
             status: 'rejected',
             command_id: 175,
             product_id: 37,
@@ -33870,7 +33870,7 @@ data = {
         },
         {
             id: 106,
-            date: '2017-03-30T09:58:07.572Z',
+            date: new Date('2017-03-30T09:58:07.572Z'),
             status: 'accepted',
             command_id: 175,
             product_id: 60,
@@ -33880,7 +33880,7 @@ data = {
         },
         {
             id: 107,
-            date: '2016-12-26T10:17:53.520Z',
+            date: new Date('2016-12-26T10:17:53.520Z'),
             status: 'accepted',
             command_id: 177,
             product_id: 126,
@@ -33890,7 +33890,7 @@ data = {
         },
         {
             id: 108,
-            date: '2017-02-27T15:05:47.188Z',
+            date: new Date('2017-02-27T15:05:47.188Z'),
             status: 'accepted',
             command_id: 177,
             product_id: 95,
@@ -33900,7 +33900,7 @@ data = {
         },
         {
             id: 109,
-            date: '2017-01-09T02:31:51.803Z',
+            date: new Date('2017-01-09T02:31:51.803Z'),
             status: 'rejected',
             command_id: 177,
             product_id: 106,
@@ -33910,7 +33910,7 @@ data = {
         },
         {
             id: 110,
-            date: '2017-03-24T21:53:54.847Z',
+            date: new Date('2017-03-24T21:53:54.847Z'),
             status: 'accepted',
             command_id: 182,
             product_id: 57,
@@ -33920,7 +33920,7 @@ data = {
         },
         {
             id: 111,
-            date: '2017-02-25T01:32:20.840Z',
+            date: new Date('2017-02-25T01:32:20.840Z'),
             status: 'rejected',
             command_id: 188,
             product_id: 40,
@@ -33930,7 +33930,7 @@ data = {
         },
         {
             id: 112,
-            date: '2017-04-03T18:36:15.134Z',
+            date: new Date('2017-04-03T18:36:15.134Z'),
             status: 'accepted',
             command_id: 188,
             product_id: 93,
@@ -33940,7 +33940,7 @@ data = {
         },
         {
             id: 113,
-            date: '2017-04-01T19:50:09.420Z',
+            date: new Date('2017-04-01T19:50:09.420Z'),
             status: 'rejected',
             command_id: 190,
             product_id: 12,
@@ -33950,7 +33950,7 @@ data = {
         },
         {
             id: 114,
-            date: '2017-04-16T12:48:38.896Z',
+            date: new Date('2017-04-16T12:48:38.896Z'),
             status: 'accepted',
             command_id: 193,
             product_id: 85,
@@ -33960,7 +33960,7 @@ data = {
         },
         {
             id: 115,
-            date: '2016-07-26T03:24:44.493Z',
+            date: new Date('2016-07-26T03:24:44.493Z'),
             status: 'accepted',
             command_id: 194,
             product_id: 100,
@@ -33970,7 +33970,7 @@ data = {
         },
         {
             id: 116,
-            date: '2017-03-17T03:43:28.751Z',
+            date: new Date('2017-03-17T03:43:28.751Z'),
             status: 'accepted',
             command_id: 196,
             product_id: 25,
@@ -33980,7 +33980,7 @@ data = {
         },
         {
             id: 117,
-            date: '2017-02-10T03:53:08.599Z',
+            date: new Date('2017-02-10T03:53:08.599Z'),
             status: 'accepted',
             command_id: 199,
             product_id: 87,
@@ -33990,7 +33990,7 @@ data = {
         },
         {
             id: 118,
-            date: '2015-09-26T13:29:29.615Z',
+            date: new Date('2015-09-26T13:29:29.615Z'),
             status: 'rejected',
             command_id: 202,
             product_id: 56,
@@ -34000,7 +34000,7 @@ data = {
         },
         {
             id: 119,
-            date: '2016-09-29T20:24:25.949Z',
+            date: new Date('2016-09-29T20:24:25.949Z'),
             status: 'accepted',
             command_id: 213,
             product_id: 60,
@@ -34010,7 +34010,7 @@ data = {
         },
         {
             id: 120,
-            date: '2016-06-26T19:37:02.169Z',
+            date: new Date('2016-06-26T19:37:02.169Z'),
             status: 'accepted',
             command_id: 213,
             product_id: 108,
@@ -34020,7 +34020,7 @@ data = {
         },
         {
             id: 121,
-            date: '2017-02-17T09:04:51.247Z',
+            date: new Date('2017-02-17T09:04:51.247Z'),
             status: 'accepted',
             command_id: 216,
             product_id: 43,
@@ -34030,7 +34030,7 @@ data = {
         },
         {
             id: 122,
-            date: '2017-03-02T12:11:47.772Z',
+            date: new Date('2017-03-02T12:11:47.772Z'),
             status: 'accepted',
             command_id: 217,
             product_id: 66,
@@ -34040,7 +34040,7 @@ data = {
         },
         {
             id: 123,
-            date: '2016-07-26T18:13:21.711Z',
+            date: new Date('2016-07-26T18:13:21.711Z'),
             status: 'accepted',
             command_id: 217,
             product_id: 30,
@@ -34050,7 +34050,7 @@ data = {
         },
         {
             id: 124,
-            date: '2017-04-21T18:46:11.638Z',
+            date: new Date('2017-04-21T18:46:11.638Z'),
             status: 'rejected',
             command_id: 217,
             product_id: 51,
@@ -34060,7 +34060,7 @@ data = {
         },
         {
             id: 125,
-            date: '2016-11-26T23:17:29.941Z',
+            date: new Date('2016-11-26T23:17:29.941Z'),
             status: 'accepted',
             command_id: 217,
             product_id: 60,
@@ -34070,7 +34070,7 @@ data = {
         },
         {
             id: 126,
-            date: '2017-03-25T22:05:41.810Z',
+            date: new Date('2017-03-25T22:05:41.810Z'),
             status: 'accepted',
             command_id: 218,
             product_id: 4,
@@ -34080,7 +34080,7 @@ data = {
         },
         {
             id: 127,
-            date: '2017-04-12T03:01:13.374Z',
+            date: new Date('2017-04-12T03:01:13.374Z'),
             status: 'pending',
             command_id: 221,
             product_id: 103,
@@ -34090,7 +34090,7 @@ data = {
         },
         {
             id: 128,
-            date: '2015-09-20T01:10:53.905Z',
+            date: new Date('2015-09-20T01:10:53.905Z'),
             status: 'accepted',
             command_id: 222,
             product_id: 98,
@@ -34100,7 +34100,7 @@ data = {
         },
         {
             id: 129,
-            date: '2016-03-21T19:00:44.866Z',
+            date: new Date('2016-03-21T19:00:44.866Z'),
             status: 'accepted',
             command_id: 222,
             product_id: 24,
@@ -34110,7 +34110,7 @@ data = {
         },
         {
             id: 130,
-            date: '2017-01-31T02:53:11.751Z',
+            date: new Date('2017-01-31T02:53:11.751Z'),
             status: 'accepted',
             command_id: 227,
             product_id: 98,
@@ -34120,7 +34120,7 @@ data = {
         },
         {
             id: 131,
-            date: '2017-02-22T23:57:56.959Z',
+            date: new Date('2017-02-22T23:57:56.959Z'),
             status: 'rejected',
             command_id: 229,
             product_id: 17,
@@ -34130,7 +34130,7 @@ data = {
         },
         {
             id: 132,
-            date: '2017-01-01T06:24:11.513Z',
+            date: new Date('2017-01-01T06:24:11.513Z'),
             status: 'accepted',
             command_id: 230,
             product_id: 109,
@@ -34140,7 +34140,7 @@ data = {
         },
         {
             id: 133,
-            date: '2017-04-25T13:42:10.017Z',
+            date: new Date('2017-04-25T13:42:10.017Z'),
             status: 'pending',
             command_id: 231,
             product_id: 48,
@@ -34150,7 +34150,7 @@ data = {
         },
         {
             id: 134,
-            date: '2017-04-22T16:21:12.549Z',
+            date: new Date('2017-04-22T16:21:12.549Z'),
             status: 'pending',
             command_id: 234,
             product_id: 28,
@@ -34160,7 +34160,7 @@ data = {
         },
         {
             id: 135,
-            date: '2017-04-14T03:28:39.230Z',
+            date: new Date('2017-04-14T03:28:39.230Z'),
             status: 'accepted',
             command_id: 234,
             product_id: 84,
@@ -34170,7 +34170,7 @@ data = {
         },
         {
             id: 136,
-            date: '2017-04-14T11:28:05.758Z',
+            date: new Date('2017-04-14T11:28:05.758Z'),
             status: 'pending',
             command_id: 234,
             product_id: 10,
@@ -34180,7 +34180,7 @@ data = {
         },
         {
             id: 137,
-            date: '2016-10-05T01:22:54.354Z',
+            date: new Date('2016-10-05T01:22:54.354Z'),
             status: 'rejected',
             command_id: 238,
             product_id: 44,
@@ -34190,7 +34190,7 @@ data = {
         },
         {
             id: 138,
-            date: '2017-03-01T16:36:16.578Z',
+            date: new Date('2017-03-01T16:36:16.578Z'),
             status: 'rejected',
             command_id: 241,
             product_id: 121,
@@ -34200,7 +34200,7 @@ data = {
         },
         {
             id: 139,
-            date: '2017-01-12T03:22:31.811Z',
+            date: new Date('2017-01-12T03:22:31.811Z'),
             status: 'rejected',
             command_id: 245,
             product_id: 68,
@@ -34210,7 +34210,7 @@ data = {
         },
         {
             id: 140,
-            date: '2017-03-19T00:28:39.516Z',
+            date: new Date('2017-03-19T00:28:39.516Z'),
             status: 'accepted',
             command_id: 250,
             product_id: 34,
@@ -34220,7 +34220,7 @@ data = {
         },
         {
             id: 141,
-            date: '2017-01-14T12:40:46.742Z',
+            date: new Date('2017-01-14T12:40:46.742Z'),
             status: 'accepted',
             command_id: 251,
             product_id: 23,
@@ -34230,7 +34230,7 @@ data = {
         },
         {
             id: 142,
-            date: '2017-04-10T02:33:37.322Z',
+            date: new Date('2017-04-10T02:33:37.322Z'),
             status: 'pending',
             command_id: 251,
             product_id: 90,
@@ -34240,7 +34240,7 @@ data = {
         },
         {
             id: 143,
-            date: '2016-11-26T03:15:23.952Z',
+            date: new Date('2016-11-26T03:15:23.952Z'),
             status: 'accepted',
             command_id: 253,
             product_id: 31,
@@ -34250,7 +34250,7 @@ data = {
         },
         {
             id: 144,
-            date: '2014-10-10T20:52:44.812Z',
+            date: new Date('2014-10-10T20:52:44.812Z'),
             status: 'rejected',
             command_id: 259,
             product_id: 46,
@@ -34260,7 +34260,7 @@ data = {
         },
         {
             id: 145,
-            date: '2016-03-18T07:29:18.408Z',
+            date: new Date('2016-03-18T07:29:18.408Z'),
             status: 'accepted',
             command_id: 259,
             product_id: 26,
@@ -34270,7 +34270,7 @@ data = {
         },
         {
             id: 146,
-            date: '2016-06-14T04:44:24.622Z',
+            date: new Date('2016-06-14T04:44:24.622Z'),
             status: 'accepted',
             command_id: 262,
             product_id: 56,
@@ -34280,7 +34280,7 @@ data = {
         },
         {
             id: 147,
-            date: '2017-03-28T00:23:37.086Z',
+            date: new Date('2017-03-28T00:23:37.086Z'),
             status: 'accepted',
             command_id: 272,
             product_id: 102,
@@ -34290,7 +34290,7 @@ data = {
         },
         {
             id: 148,
-            date: '2017-02-15T22:40:45.908Z',
+            date: new Date('2017-02-15T22:40:45.908Z'),
             status: 'rejected',
             command_id: 272,
             product_id: 17,
@@ -34300,7 +34300,7 @@ data = {
         },
         {
             id: 149,
-            date: '2016-11-28T05:33:14.677Z',
+            date: new Date('2016-11-28T05:33:14.677Z'),
             status: 'accepted',
             command_id: 274,
             product_id: 116,
@@ -34310,7 +34310,7 @@ data = {
         },
         {
             id: 150,
-            date: '2016-12-19T12:24:10.420Z',
+            date: new Date('2016-12-19T12:24:10.420Z'),
             status: 'accepted',
             command_id: 274,
             product_id: 110,
@@ -34320,7 +34320,7 @@ data = {
         },
         {
             id: 151,
-            date: '2017-03-30T15:26:58.022Z',
+            date: new Date('2017-03-30T15:26:58.022Z'),
             status: 'pending',
             command_id: 274,
             product_id: 88,
@@ -34330,7 +34330,7 @@ data = {
         },
         {
             id: 152,
-            date: '2017-04-10T09:13:42.166Z',
+            date: new Date('2017-04-10T09:13:42.166Z'),
             status: 'pending',
             command_id: 278,
             product_id: 89,
@@ -34340,7 +34340,7 @@ data = {
         },
         {
             id: 153,
-            date: '2017-03-11T12:31:29.637Z',
+            date: new Date('2017-03-11T12:31:29.637Z'),
             status: 'accepted',
             command_id: 278,
             product_id: 48,
@@ -34350,7 +34350,7 @@ data = {
         },
         {
             id: 154,
-            date: '2017-02-12T09:32:40.545Z',
+            date: new Date('2017-02-12T09:32:40.545Z'),
             status: 'rejected',
             command_id: 278,
             product_id: 129,
@@ -34360,7 +34360,7 @@ data = {
         },
         {
             id: 155,
-            date: '2017-04-10T06:03:54.028Z',
+            date: new Date('2017-04-10T06:03:54.028Z'),
             status: 'accepted',
             command_id: 278,
             product_id: 128,
@@ -34370,7 +34370,7 @@ data = {
         },
         {
             id: 156,
-            date: '2017-04-13T13:12:52.807Z',
+            date: new Date('2017-04-13T13:12:52.807Z'),
             status: 'pending',
             command_id: 278,
             product_id: 33,
@@ -34380,7 +34380,7 @@ data = {
         },
         {
             id: 157,
-            date: '2016-11-25T23:23:16.047Z',
+            date: new Date('2016-11-25T23:23:16.047Z'),
             status: 'accepted',
             command_id: 280,
             product_id: 61,
@@ -34390,7 +34390,7 @@ data = {
         },
         {
             id: 158,
-            date: '2017-02-07T17:59:24.861Z',
+            date: new Date('2017-02-07T17:59:24.861Z'),
             status: 'accepted',
             command_id: 280,
             product_id: 108,
@@ -34400,7 +34400,7 @@ data = {
         },
         {
             id: 159,
-            date: '2017-04-07T01:08:56.500Z',
+            date: new Date('2017-04-07T01:08:56.500Z'),
             status: 'rejected',
             command_id: 282,
             product_id: 45,
@@ -34410,7 +34410,7 @@ data = {
         },
         {
             id: 160,
-            date: '2017-03-09T00:17:32.219Z',
+            date: new Date('2017-03-09T00:17:32.219Z'),
             status: 'accepted',
             command_id: 284,
             product_id: 116,
@@ -34420,7 +34420,7 @@ data = {
         },
         {
             id: 161,
-            date: '2017-03-31T07:28:44.196Z',
+            date: new Date('2017-03-31T07:28:44.196Z'),
             status: 'rejected',
             command_id: 289,
             product_id: 16,
@@ -34430,7 +34430,7 @@ data = {
         },
         {
             id: 162,
-            date: '2016-12-11T11:34:12.215Z',
+            date: new Date('2016-12-11T11:34:12.215Z'),
             status: 'accepted',
             command_id: 291,
             product_id: 121,
@@ -34440,7 +34440,7 @@ data = {
         },
         {
             id: 163,
-            date: '2017-01-31T21:54:17.176Z',
+            date: new Date('2017-01-31T21:54:17.176Z'),
             status: 'accepted',
             command_id: 292,
             product_id: 61,
@@ -34450,7 +34450,7 @@ data = {
         },
         {
             id: 164,
-            date: '2017-04-24T03:06:55.348Z',
+            date: new Date('2017-04-24T03:06:55.348Z'),
             status: 'accepted',
             command_id: 296,
             product_id: 50,
@@ -34460,7 +34460,7 @@ data = {
         },
         {
             id: 165,
-            date: '2015-10-21T06:30:13.077Z',
+            date: new Date('2015-10-21T06:30:13.077Z'),
             status: 'accepted',
             command_id: 304,
             product_id: 62,
@@ -34470,7 +34470,7 @@ data = {
         },
         {
             id: 166,
-            date: '2017-04-02T20:25:07.420Z',
+            date: new Date('2017-04-02T20:25:07.420Z'),
             status: 'pending',
             command_id: 306,
             product_id: 90,
@@ -34480,7 +34480,7 @@ data = {
         },
         {
             id: 167,
-            date: '2015-01-29T11:51:26.599Z',
+            date: new Date('2015-01-29T11:51:26.599Z'),
             status: 'accepted',
             command_id: 308,
             product_id: 128,
@@ -34490,7 +34490,7 @@ data = {
         },
         {
             id: 168,
-            date: '2017-02-23T05:44:51.788Z',
+            date: new Date('2017-02-23T05:44:51.788Z'),
             status: 'accepted',
             command_id: 312,
             product_id: 8,
@@ -34500,7 +34500,7 @@ data = {
         },
         {
             id: 169,
-            date: '2017-04-15T13:51:31.046Z',
+            date: new Date('2017-04-15T13:51:31.046Z'),
             status: 'accepted',
             command_id: 315,
             product_id: 74,
@@ -34510,7 +34510,7 @@ data = {
         },
         {
             id: 170,
-            date: '2017-04-03T18:52:49.384Z',
+            date: new Date('2017-04-03T18:52:49.384Z'),
             status: 'accepted',
             command_id: 316,
             product_id: 65,
@@ -34520,7 +34520,7 @@ data = {
         },
         {
             id: 171,
-            date: '2017-01-15T19:45:29.201Z',
+            date: new Date('2017-01-15T19:45:29.201Z'),
             status: 'accepted',
             command_id: 318,
             product_id: 106,
@@ -34530,7 +34530,7 @@ data = {
         },
         {
             id: 172,
-            date: '2017-03-07T14:21:41.984Z',
+            date: new Date('2017-03-07T14:21:41.984Z'),
             status: 'accepted',
             command_id: 320,
             product_id: 115,
@@ -34540,7 +34540,7 @@ data = {
         },
         {
             id: 173,
-            date: '2017-02-21T10:30:18.646Z',
+            date: new Date('2017-02-21T10:30:18.646Z'),
             status: 'rejected',
             command_id: 330,
             product_id: 88,
@@ -34550,7 +34550,7 @@ data = {
         },
         {
             id: 174,
-            date: '2016-04-16T19:26:18.367Z',
+            date: new Date('2016-04-16T19:26:18.367Z'),
             status: 'accepted',
             command_id: 332,
             product_id: 79,
@@ -34560,7 +34560,7 @@ data = {
         },
         {
             id: 175,
-            date: '2017-03-31T13:20:27.144Z',
+            date: new Date('2017-03-31T13:20:27.144Z'),
             status: 'pending',
             command_id: 332,
             product_id: 127,
@@ -34570,7 +34570,7 @@ data = {
         },
         {
             id: 176,
-            date: '2017-01-29T18:24:01.539Z',
+            date: new Date('2017-01-29T18:24:01.539Z'),
             status: 'accepted',
             command_id: 336,
             product_id: 34,
@@ -34580,7 +34580,7 @@ data = {
         },
         {
             id: 177,
-            date: '2016-10-28T19:22:47.334Z',
+            date: new Date('2016-10-28T19:22:47.334Z'),
             status: 'rejected',
             command_id: 336,
             product_id: 13,
@@ -34590,7 +34590,7 @@ data = {
         },
         {
             id: 178,
-            date: '2016-10-22T08:11:05.293Z',
+            date: new Date('2016-10-22T08:11:05.293Z'),
             status: 'rejected',
             command_id: 336,
             product_id: 68,
@@ -34600,7 +34600,7 @@ data = {
         },
         {
             id: 179,
-            date: '2017-04-04T05:25:20.768Z',
+            date: new Date('2017-04-04T05:25:20.768Z'),
             status: 'rejected',
             command_id: 337,
             product_id: 94,
@@ -34610,7 +34610,7 @@ data = {
         },
         {
             id: 180,
-            date: '2017-04-19T13:09:11.945Z',
+            date: new Date('2017-04-19T13:09:11.945Z'),
             status: 'pending',
             command_id: 338,
             product_id: 1,
@@ -34620,7 +34620,7 @@ data = {
         },
         {
             id: 181,
-            date: '2016-04-07T23:22:07.623Z',
+            date: new Date('2016-04-07T23:22:07.623Z'),
             status: 'accepted',
             command_id: 345,
             product_id: 5,
@@ -34630,7 +34630,7 @@ data = {
         },
         {
             id: 182,
-            date: '2016-10-25T20:26:57.963Z',
+            date: new Date('2016-10-25T20:26:57.963Z'),
             status: 'rejected',
             command_id: 345,
             product_id: 13,
@@ -34640,7 +34640,7 @@ data = {
         },
         {
             id: 183,
-            date: '2015-01-17T21:55:37.767Z',
+            date: new Date('2015-01-17T21:55:37.767Z'),
             status: 'accepted',
             command_id: 345,
             product_id: 15,
@@ -34650,7 +34650,7 @@ data = {
         },
         {
             id: 184,
-            date: '2017-03-19T23:32:35.599Z',
+            date: new Date('2017-03-19T23:32:35.599Z'),
             status: 'accepted',
             command_id: 346,
             product_id: 79,
@@ -34660,7 +34660,7 @@ data = {
         },
         {
             id: 185,
-            date: '2017-03-10T16:10:40.369Z',
+            date: new Date('2017-03-10T16:10:40.369Z'),
             status: 'accepted',
             command_id: 346,
             product_id: 21,
@@ -34670,7 +34670,7 @@ data = {
         },
         {
             id: 186,
-            date: '2017-01-25T23:54:23.445Z',
+            date: new Date('2017-01-25T23:54:23.445Z'),
             status: 'accepted',
             command_id: 346,
             product_id: 102,
@@ -34680,7 +34680,7 @@ data = {
         },
         {
             id: 187,
-            date: '2017-04-26T00:57:24.418Z',
+            date: new Date('2017-04-26T00:57:24.418Z'),
             status: 'accepted',
             command_id: 348,
             product_id: 13,
@@ -34690,7 +34690,7 @@ data = {
         },
         {
             id: 188,
-            date: '2017-02-24T01:13:25.772Z',
+            date: new Date('2017-02-24T01:13:25.772Z'),
             status: 'accepted',
             command_id: 350,
             product_id: 15,
@@ -34700,7 +34700,7 @@ data = {
         },
         {
             id: 189,
-            date: '2017-03-04T11:21:11.356Z',
+            date: new Date('2017-03-04T11:21:11.356Z'),
             status: 'accepted',
             command_id: 351,
             product_id: 9,
@@ -34710,7 +34710,7 @@ data = {
         },
         {
             id: 190,
-            date: '2017-04-05T07:26:02.198Z',
+            date: new Date('2017-04-05T07:26:02.198Z'),
             status: 'pending',
             command_id: 356,
             product_id: 87,
@@ -34720,7 +34720,7 @@ data = {
         },
         {
             id: 191,
-            date: '2016-05-22T19:57:02.817Z',
+            date: new Date('2016-05-22T19:57:02.817Z'),
             status: 'accepted',
             command_id: 358,
             product_id: 78,
@@ -34730,7 +34730,7 @@ data = {
         },
         {
             id: 192,
-            date: '2017-03-09T13:15:34.016Z',
+            date: new Date('2017-03-09T13:15:34.016Z'),
             status: 'accepted',
             command_id: 358,
             product_id: 58,
@@ -34740,7 +34740,7 @@ data = {
         },
         {
             id: 193,
-            date: '2016-08-08T13:27:32.916Z',
+            date: new Date('2016-08-08T13:27:32.916Z'),
             status: 'rejected',
             command_id: 360,
             product_id: 21,
@@ -34750,7 +34750,7 @@ data = {
         },
         {
             id: 194,
-            date: '2017-01-11T04:48:31.080Z',
+            date: new Date('2017-01-11T04:48:31.080Z'),
             status: 'accepted',
             command_id: 361,
             product_id: 56,
@@ -34760,7 +34760,7 @@ data = {
         },
         {
             id: 195,
-            date: '2017-04-25T01:38:59.295Z',
+            date: new Date('2017-04-25T01:38:59.295Z'),
             status: 'pending',
             command_id: 362,
             product_id: 62,
@@ -34770,7 +34770,7 @@ data = {
         },
         {
             id: 196,
-            date: '2016-09-27T06:10:26.206Z',
+            date: new Date('2016-09-27T06:10:26.206Z'),
             status: 'accepted',
             command_id: 364,
             product_id: 90,
@@ -34780,7 +34780,7 @@ data = {
         },
         {
             id: 197,
-            date: '2017-01-24T16:08:51.244Z',
+            date: new Date('2017-01-24T16:08:51.244Z'),
             status: 'accepted',
             command_id: 365,
             product_id: 63,
@@ -34790,7 +34790,7 @@ data = {
         },
         {
             id: 198,
-            date: '2017-03-26T17:33:14.704Z',
+            date: new Date('2017-03-26T17:33:14.704Z'),
             status: 'pending',
             command_id: 365,
             product_id: 48,
@@ -34800,7 +34800,7 @@ data = {
         },
         {
             id: 199,
-            date: '2017-03-09T11:09:33.272Z',
+            date: new Date('2017-03-09T11:09:33.272Z'),
             status: 'rejected',
             command_id: 372,
             product_id: 32,
@@ -34810,7 +34810,7 @@ data = {
         },
         {
             id: 200,
-            date: '2016-11-14T19:37:26.578Z',
+            date: new Date('2016-11-14T19:37:26.578Z'),
             status: 'accepted',
             command_id: 374,
             product_id: 60,
@@ -34820,7 +34820,7 @@ data = {
         },
         {
             id: 201,
-            date: '2017-04-14T13:51:59.111Z',
+            date: new Date('2017-04-14T13:51:59.111Z'),
             status: 'rejected',
             command_id: 379,
             product_id: 2,
@@ -34830,7 +34830,7 @@ data = {
         },
         {
             id: 202,
-            date: '2017-04-06T14:00:15.991Z',
+            date: new Date('2017-04-06T14:00:15.991Z'),
             status: 'pending',
             command_id: 382,
             product_id: 49,
@@ -34840,7 +34840,7 @@ data = {
         },
         {
             id: 203,
-            date: '2017-04-23T06:56:44.001Z',
+            date: new Date('2017-04-23T06:56:44.001Z'),
             status: 'pending',
             command_id: 382,
             product_id: 115,
@@ -34850,7 +34850,7 @@ data = {
         },
         {
             id: 204,
-            date: '2017-03-31T11:28:36.467Z',
+            date: new Date('2017-03-31T11:28:36.467Z'),
             status: 'pending',
             command_id: 388,
             product_id: 79,
@@ -34860,7 +34860,7 @@ data = {
         },
         {
             id: 205,
-            date: '2017-01-17T12:55:35.327Z',
+            date: new Date('2017-01-17T12:55:35.327Z'),
             status: 'accepted',
             command_id: 390,
             product_id: 122,
@@ -34870,7 +34870,7 @@ data = {
         },
         {
             id: 206,
-            date: '2016-08-05T23:00:09.380Z',
+            date: new Date('2016-08-05T23:00:09.380Z'),
             status: 'accepted',
             command_id: 393,
             product_id: 76,
@@ -34880,7 +34880,7 @@ data = {
         },
         {
             id: 207,
-            date: '2017-04-20T21:06:39.681Z',
+            date: new Date('2017-04-20T21:06:39.681Z'),
             status: 'pending',
             command_id: 395,
             product_id: 24,
@@ -34890,7 +34890,7 @@ data = {
         },
         {
             id: 208,
-            date: '2016-12-22T20:11:10.859Z',
+            date: new Date('2016-12-22T20:11:10.859Z'),
             status: 'accepted',
             command_id: 399,
             product_id: 72,
@@ -34900,7 +34900,7 @@ data = {
         },
         {
             id: 209,
-            date: '2016-10-16T16:18:27.085Z',
+            date: new Date('2016-10-16T16:18:27.085Z'),
             status: 'rejected',
             command_id: 400,
             product_id: 96,
@@ -34910,7 +34910,7 @@ data = {
         },
         {
             id: 210,
-            date: '2016-05-16T13:36:28.709Z',
+            date: new Date('2016-05-16T13:36:28.709Z'),
             status: 'accepted',
             command_id: 406,
             product_id: 45,
@@ -34920,7 +34920,7 @@ data = {
         },
         {
             id: 211,
-            date: '2017-03-28T12:36:16.093Z',
+            date: new Date('2017-03-28T12:36:16.093Z'),
             status: 'pending',
             command_id: 417,
             product_id: 126,
@@ -34930,7 +34930,7 @@ data = {
         },
         {
             id: 212,
-            date: '2017-02-22T00:57:37.058Z',
+            date: new Date('2017-02-22T00:57:37.058Z'),
             status: 'rejected',
             command_id: 417,
             product_id: 74,
@@ -34940,7 +34940,7 @@ data = {
         },
         {
             id: 213,
-            date: '2017-04-24T11:14:28.444Z',
+            date: new Date('2017-04-24T11:14:28.444Z'),
             status: 'accepted',
             command_id: 418,
             product_id: 55,
@@ -34950,7 +34950,7 @@ data = {
         },
         {
             id: 214,
-            date: '2017-03-30T22:37:48.974Z',
+            date: new Date('2017-03-30T22:37:48.974Z'),
             status: 'rejected',
             command_id: 419,
             product_id: 73,
@@ -34960,7 +34960,7 @@ data = {
         },
         {
             id: 215,
-            date: '2017-04-13T02:01:26.097Z',
+            date: new Date('2017-04-13T02:01:26.097Z'),
             status: 'pending',
             command_id: 425,
             product_id: 56,
@@ -34970,7 +34970,7 @@ data = {
         },
         {
             id: 216,
-            date: '2017-04-17T16:12:57.258Z',
+            date: new Date('2017-04-17T16:12:57.258Z'),
             status: 'pending',
             command_id: 429,
             product_id: 117,
@@ -34980,7 +34980,7 @@ data = {
         },
         {
             id: 217,
-            date: '2017-03-18T06:08:31.766Z',
+            date: new Date('2017-03-18T06:08:31.766Z'),
             status: 'rejected',
             command_id: 429,
             product_id: 109,
@@ -34990,7 +34990,7 @@ data = {
         },
         {
             id: 218,
-            date: '2017-04-23T18:59:58.081Z',
+            date: new Date('2017-04-23T18:59:58.081Z'),
             status: 'accepted',
             command_id: 432,
             product_id: 84,
@@ -35000,7 +35000,7 @@ data = {
         },
         {
             id: 219,
-            date: '2017-04-21T11:36:39.088Z',
+            date: new Date('2017-04-21T11:36:39.088Z'),
             status: 'pending',
             command_id: 432,
             product_id: 113,
@@ -35010,7 +35010,7 @@ data = {
         },
         {
             id: 220,
-            date: '2017-01-29T15:28:28.317Z',
+            date: new Date('2017-01-29T15:28:28.317Z'),
             status: 'accepted',
             command_id: 434,
             product_id: 76,
@@ -35020,7 +35020,7 @@ data = {
         },
         {
             id: 221,
-            date: '2016-11-25T21:59:04.658Z',
+            date: new Date('2016-11-25T21:59:04.658Z'),
             status: 'accepted',
             command_id: 434,
             product_id: 94,
@@ -35030,7 +35030,7 @@ data = {
         },
         {
             id: 222,
-            date: '2016-12-25T12:48:28.502Z',
+            date: new Date('2016-12-25T12:48:28.502Z'),
             status: 'accepted',
             command_id: 434,
             product_id: 56,
@@ -35040,7 +35040,7 @@ data = {
         },
         {
             id: 223,
-            date: '2016-09-24T19:12:10.517Z',
+            date: new Date('2016-09-24T19:12:10.517Z'),
             status: 'rejected',
             command_id: 434,
             product_id: 40,
@@ -35050,7 +35050,7 @@ data = {
         },
         {
             id: 224,
-            date: '2016-09-22T18:34:36.681Z',
+            date: new Date('2016-09-22T18:34:36.681Z'),
             status: 'accepted',
             command_id: 438,
             product_id: 71,
@@ -35060,7 +35060,7 @@ data = {
         },
         {
             id: 225,
-            date: '2016-10-13T20:19:19.845Z',
+            date: new Date('2016-10-13T20:19:19.845Z'),
             status: 'rejected',
             command_id: 438,
             product_id: 126,
@@ -35070,7 +35070,7 @@ data = {
         },
         {
             id: 226,
-            date: '2016-12-28T23:24:20.446Z',
+            date: new Date('2016-12-28T23:24:20.446Z'),
             status: 'accepted',
             command_id: 438,
             product_id: 62,
@@ -35080,7 +35080,7 @@ data = {
         },
         {
             id: 227,
-            date: '2016-10-31T05:19:32.446Z',
+            date: new Date('2016-10-31T05:19:32.446Z'),
             status: 'accepted',
             command_id: 438,
             product_id: 50,
@@ -35090,7 +35090,7 @@ data = {
         },
         {
             id: 228,
-            date: '2017-01-21T19:10:39.694Z',
+            date: new Date('2017-01-21T19:10:39.694Z'),
             status: 'rejected',
             command_id: 438,
             product_id: 34,
@@ -35100,7 +35100,7 @@ data = {
         },
         {
             id: 229,
-            date: '2016-11-28T03:16:46.047Z',
+            date: new Date('2016-11-28T03:16:46.047Z'),
             status: 'accepted',
             command_id: 440,
             product_id: 69,
@@ -35110,7 +35110,7 @@ data = {
         },
         {
             id: 230,
-            date: '2016-05-05T06:12:10.064Z',
+            date: new Date('2016-05-05T06:12:10.064Z'),
             status: 'accepted',
             command_id: 445,
             product_id: 46,
@@ -35120,7 +35120,7 @@ data = {
         },
         {
             id: 231,
-            date: '2016-07-19T23:23:39.488Z',
+            date: new Date('2016-07-19T23:23:39.488Z'),
             status: 'accepted',
             command_id: 445,
             product_id: 22,
@@ -35130,7 +35130,7 @@ data = {
         },
         {
             id: 232,
-            date: '2017-04-25T14:53:03.280Z',
+            date: new Date('2017-04-25T14:53:03.280Z'),
             status: 'accepted',
             command_id: 451,
             product_id: 93,
@@ -35140,7 +35140,7 @@ data = {
         },
         {
             id: 233,
-            date: '2017-01-09T01:46:46.209Z',
+            date: new Date('2017-01-09T01:46:46.209Z'),
             status: 'accepted',
             command_id: 453,
             product_id: 53,
@@ -35150,7 +35150,7 @@ data = {
         },
         {
             id: 234,
-            date: '2017-04-22T16:27:54.253Z',
+            date: new Date('2017-04-22T16:27:54.253Z'),
             status: 'pending',
             command_id: 458,
             product_id: 87,
@@ -35160,7 +35160,7 @@ data = {
         },
         {
             id: 235,
-            date: '2017-01-19T06:08:09.561Z',
+            date: new Date('2017-01-19T06:08:09.561Z'),
             status: 'accepted',
             command_id: 464,
             product_id: 119,
@@ -35170,7 +35170,7 @@ data = {
         },
         {
             id: 236,
-            date: '2017-04-02T20:50:08.981Z',
+            date: new Date('2017-04-02T20:50:08.981Z'),
             status: 'accepted',
             command_id: 464,
             product_id: 4,
@@ -35180,7 +35180,7 @@ data = {
         },
         {
             id: 237,
-            date: '2017-04-24T23:45:42.000Z',
+            date: new Date('2017-04-24T23:45:42.000Z'),
             status: 'accepted',
             command_id: 465,
             product_id: 8,
@@ -35190,7 +35190,7 @@ data = {
         },
         {
             id: 238,
-            date: '2017-02-24T12:58:01.635Z',
+            date: new Date('2017-02-24T12:58:01.635Z'),
             status: 'accepted',
             command_id: 465,
             product_id: 51,
@@ -35200,7 +35200,7 @@ data = {
         },
         {
             id: 239,
-            date: '2016-12-20T23:34:22.609Z',
+            date: new Date('2016-12-20T23:34:22.609Z'),
             status: 'accepted',
             command_id: 466,
             product_id: 127,
@@ -35210,7 +35210,7 @@ data = {
         },
         {
             id: 240,
-            date: '2017-04-18T07:14:56.877Z',
+            date: new Date('2017-04-18T07:14:56.877Z'),
             status: 'pending',
             command_id: 466,
             product_id: 89,
@@ -35220,7 +35220,7 @@ data = {
         },
         {
             id: 241,
-            date: '2017-01-12T00:46:29.829Z',
+            date: new Date('2017-01-12T00:46:29.829Z'),
             status: 'accepted',
             command_id: 466,
             product_id: 9,
@@ -35230,7 +35230,7 @@ data = {
         },
         {
             id: 242,
-            date: '2017-03-02T22:28:33.593Z',
+            date: new Date('2017-03-02T22:28:33.593Z'),
             status: 'rejected',
             command_id: 467,
             product_id: 94,
@@ -35240,7 +35240,7 @@ data = {
         },
         {
             id: 243,
-            date: '2017-02-04T21:04:35.324Z',
+            date: new Date('2017-02-04T21:04:35.324Z'),
             status: 'accepted',
             command_id: 467,
             product_id: 0,
@@ -35250,7 +35250,7 @@ data = {
         },
         {
             id: 244,
-            date: '2017-03-28T10:06:41.796Z',
+            date: new Date('2017-03-28T10:06:41.796Z'),
             status: 'accepted',
             command_id: 467,
             product_id: 90,
@@ -35260,7 +35260,7 @@ data = {
         },
         {
             id: 245,
-            date: '2016-12-22T19:28:15.666Z',
+            date: new Date('2016-12-22T19:28:15.666Z'),
             status: 'accepted',
             command_id: 467,
             product_id: 18,
@@ -35270,7 +35270,7 @@ data = {
         },
         {
             id: 246,
-            date: '2017-04-22T13:54:16.915Z',
+            date: new Date('2017-04-22T13:54:16.915Z'),
             status: 'accepted',
             command_id: 472,
             product_id: 84,
@@ -35280,7 +35280,7 @@ data = {
         },
         {
             id: 247,
-            date: '2016-10-01T09:22:38.621Z',
+            date: new Date('2016-10-01T09:22:38.621Z'),
             status: 'accepted',
             command_id: 473,
             product_id: 26,
@@ -35290,7 +35290,7 @@ data = {
         },
         {
             id: 248,
-            date: '2016-12-16T02:37:30.757Z',
+            date: new Date('2016-12-16T02:37:30.757Z'),
             status: 'accepted',
             command_id: 477,
             product_id: 61,
@@ -35300,7 +35300,7 @@ data = {
         },
         {
             id: 249,
-            date: '2016-11-19T06:51:23.232Z',
+            date: new Date('2016-11-19T06:51:23.232Z'),
             status: 'accepted',
             command_id: 482,
             product_id: 83,
@@ -35310,7 +35310,7 @@ data = {
         },
         {
             id: 250,
-            date: '2017-04-01T22:54:01.373Z',
+            date: new Date('2017-04-01T22:54:01.373Z'),
             status: 'pending',
             command_id: 485,
             product_id: 94,
@@ -35320,7 +35320,7 @@ data = {
         },
         {
             id: 251,
-            date: '2017-04-23T20:59:20.432Z',
+            date: new Date('2017-04-23T20:59:20.432Z'),
             status: 'pending',
             command_id: 485,
             product_id: 65,
@@ -35330,7 +35330,7 @@ data = {
         },
         {
             id: 252,
-            date: '2017-04-24T09:37:11.031Z',
+            date: new Date('2017-04-24T09:37:11.031Z'),
             status: 'pending',
             command_id: 485,
             product_id: 75,
@@ -35340,7 +35340,7 @@ data = {
         },
         {
             id: 253,
-            date: '2017-04-13T11:59:13.200Z',
+            date: new Date('2017-04-13T11:59:13.200Z'),
             status: 'accepted',
             command_id: 485,
             product_id: 118,
@@ -35350,7 +35350,7 @@ data = {
         },
         {
             id: 254,
-            date: '2017-04-19T16:24:07.268Z',
+            date: new Date('2017-04-19T16:24:07.268Z'),
             status: 'accepted',
             command_id: 485,
             product_id: 109,
@@ -35360,7 +35360,7 @@ data = {
         },
         {
             id: 255,
-            date: '2017-04-03T04:06:37.027Z',
+            date: new Date('2017-04-03T04:06:37.027Z'),
             status: 'pending',
             command_id: 485,
             product_id: 85,
@@ -35370,7 +35370,7 @@ data = {
         },
         {
             id: 256,
-            date: '2016-06-07T23:41:48.392Z',
+            date: new Date('2016-06-07T23:41:48.392Z'),
             status: 'accepted',
             command_id: 488,
             product_id: 8,
@@ -35380,7 +35380,7 @@ data = {
         },
         {
             id: 257,
-            date: '2017-02-07T10:42:05.523Z',
+            date: new Date('2017-02-07T10:42:05.523Z'),
             status: 'accepted',
             command_id: 489,
             product_id: 33,
@@ -35390,7 +35390,7 @@ data = {
         },
         {
             id: 258,
-            date: '2017-01-13T08:28:35.157Z',
+            date: new Date('2017-01-13T08:28:35.157Z'),
             status: 'accepted',
             command_id: 489,
             product_id: 3,
@@ -35400,7 +35400,7 @@ data = {
         },
         {
             id: 259,
-            date: '2016-10-20T08:35:34.019Z',
+            date: new Date('2016-10-20T08:35:34.019Z'),
             status: 'accepted',
             command_id: 490,
             product_id: 7,
@@ -35410,7 +35410,7 @@ data = {
         },
         {
             id: 260,
-            date: '2016-11-05T21:11:51.911Z',
+            date: new Date('2016-11-05T21:11:51.911Z'),
             status: 'accepted',
             command_id: 491,
             product_id: 46,
@@ -35420,7 +35420,7 @@ data = {
         },
         {
             id: 261,
-            date: '2017-03-23T09:40:44.859Z',
+            date: new Date('2017-03-23T09:40:44.859Z'),
             status: 'accepted',
             command_id: 493,
             product_id: 90,
@@ -35430,7 +35430,7 @@ data = {
         },
         {
             id: 262,
-            date: '2017-02-17T20:18:51.524Z',
+            date: new Date('2017-02-17T20:18:51.524Z'),
             status: 'accepted',
             command_id: 494,
             product_id: 63,
@@ -35440,7 +35440,7 @@ data = {
         },
         {
             id: 263,
-            date: '2017-04-21T17:35:54.817Z',
+            date: new Date('2017-04-21T17:35:54.817Z'),
             status: 'pending',
             command_id: 499,
             product_id: 73,
@@ -35450,7 +35450,7 @@ data = {
         },
         {
             id: 264,
-            date: '2017-04-12T04:09:22.134Z',
+            date: new Date('2017-04-12T04:09:22.134Z'),
             status: 'accepted',
             command_id: 499,
             product_id: 63,
@@ -35460,7 +35460,7 @@ data = {
         },
         {
             id: 265,
-            date: '2017-04-03T10:28:00.892Z',
+            date: new Date('2017-04-03T10:28:00.892Z'),
             status: 'accepted',
             command_id: 499,
             product_id: 42,
@@ -35470,7 +35470,7 @@ data = {
         },
         {
             id: 266,
-            date: '2017-03-13T15:00:48.522Z',
+            date: new Date('2017-03-13T15:00:48.522Z'),
             status: 'rejected',
             command_id: 499,
             product_id: 108,
@@ -35480,7 +35480,7 @@ data = {
         },
         {
             id: 267,
-            date: '2017-01-06T08:18:16.768Z',
+            date: new Date('2017-01-06T08:18:16.768Z'),
             status: 'accepted',
             command_id: 500,
             product_id: 39,
@@ -35490,7 +35490,7 @@ data = {
         },
         {
             id: 268,
-            date: '2017-02-16T23:15:48.560Z',
+            date: new Date('2017-02-16T23:15:48.560Z'),
             status: 'accepted',
             command_id: 502,
             product_id: 1,
@@ -35500,7 +35500,7 @@ data = {
         },
         {
             id: 269,
-            date: '2017-04-01T14:59:56.428Z',
+            date: new Date('2017-04-01T14:59:56.428Z'),
             status: 'pending',
             command_id: 503,
             product_id: 43,
@@ -35510,7 +35510,7 @@ data = {
         },
         {
             id: 270,
-            date: '2017-04-20T08:56:35.263Z',
+            date: new Date('2017-04-20T08:56:35.263Z'),
             status: 'accepted',
             command_id: 505,
             product_id: 87,
@@ -35520,7 +35520,7 @@ data = {
         },
         {
             id: 271,
-            date: '2017-02-16T22:39:27.655Z',
+            date: new Date('2017-02-16T22:39:27.655Z'),
             status: 'accepted',
             command_id: 508,
             product_id: 12,
@@ -35530,7 +35530,7 @@ data = {
         },
         {
             id: 272,
-            date: '2017-01-17T04:39:28.211Z',
+            date: new Date('2017-01-17T04:39:28.211Z'),
             status: 'accepted',
             command_id: 513,
             product_id: 12,
@@ -35540,7 +35540,7 @@ data = {
         },
         {
             id: 273,
-            date: '2017-03-26T15:56:26.475Z',
+            date: new Date('2017-03-26T15:56:26.475Z'),
             status: 'pending',
             command_id: 516,
             product_id: 17,
@@ -35550,7 +35550,7 @@ data = {
         },
         {
             id: 274,
-            date: '2017-04-23T02:22:26.944Z',
+            date: new Date('2017-04-23T02:22:26.944Z'),
             status: 'accepted',
             command_id: 519,
             product_id: 0,
@@ -35560,7 +35560,7 @@ data = {
         },
         {
             id: 275,
-            date: '2017-04-15T18:18:16.090Z',
+            date: new Date('2017-04-15T18:18:16.090Z'),
             status: 'accepted',
             command_id: 522,
             product_id: 88,
@@ -35570,7 +35570,7 @@ data = {
         },
         {
             id: 276,
-            date: '2017-01-14T19:04:11.473Z',
+            date: new Date('2017-01-14T19:04:11.473Z'),
             status: 'accepted',
             command_id: 523,
             product_id: 122,
@@ -35580,7 +35580,7 @@ data = {
         },
         {
             id: 277,
-            date: '2017-04-01T19:40:43.251Z',
+            date: new Date('2017-04-01T19:40:43.251Z'),
             status: 'accepted',
             command_id: 525,
             product_id: 42,
@@ -35590,7 +35590,7 @@ data = {
         },
         {
             id: 278,
-            date: '2016-11-13T02:47:33.106Z',
+            date: new Date('2016-11-13T02:47:33.106Z'),
             status: 'accepted',
             command_id: 526,
             product_id: 115,
@@ -35600,7 +35600,7 @@ data = {
         },
         {
             id: 279,
-            date: '2017-04-18T07:03:05.199Z',
+            date: new Date('2017-04-18T07:03:05.199Z'),
             status: 'rejected',
             command_id: 529,
             product_id: 2,
@@ -35610,7 +35610,7 @@ data = {
         },
         {
             id: 280,
-            date: '2016-11-18T02:24:02.529Z',
+            date: new Date('2016-11-18T02:24:02.529Z'),
             status: 'accepted',
             command_id: 535,
             product_id: 124,
@@ -35620,7 +35620,7 @@ data = {
         },
         {
             id: 281,
-            date: '2017-04-19T20:53:42.710Z',
+            date: new Date('2017-04-19T20:53:42.710Z'),
             status: 'pending',
             command_id: 539,
             product_id: 80,
@@ -35630,7 +35630,7 @@ data = {
         },
         {
             id: 282,
-            date: '2017-04-24T15:36:01.620Z',
+            date: new Date('2017-04-24T15:36:01.620Z'),
             status: 'accepted',
             command_id: 546,
             product_id: 46,
@@ -35640,7 +35640,7 @@ data = {
         },
         {
             id: 283,
-            date: '2017-04-04T19:56:37.009Z',
+            date: new Date('2017-04-04T19:56:37.009Z'),
             status: 'pending',
             command_id: 547,
             product_id: 52,
@@ -35650,7 +35650,7 @@ data = {
         },
         {
             id: 284,
-            date: '2016-03-10T21:45:55.777Z',
+            date: new Date('2016-03-10T21:45:55.777Z'),
             status: 'accepted',
             command_id: 549,
             product_id: 128,
@@ -35660,7 +35660,7 @@ data = {
         },
         {
             id: 285,
-            date: '2016-09-28T03:39:43.739Z',
+            date: new Date('2016-09-28T03:39:43.739Z'),
             status: 'accepted',
             command_id: 549,
             product_id: 3,
@@ -35670,7 +35670,7 @@ data = {
         },
         {
             id: 286,
-            date: '2016-09-20T09:02:07.808Z',
+            date: new Date('2016-09-20T09:02:07.808Z'),
             status: 'accepted',
             command_id: 553,
             product_id: 49,
@@ -35680,7 +35680,7 @@ data = {
         },
         {
             id: 287,
-            date: '2016-09-22T11:44:28.633Z',
+            date: new Date('2016-09-22T11:44:28.633Z'),
             status: 'rejected',
             command_id: 557,
             product_id: 32,
@@ -35690,7 +35690,7 @@ data = {
         },
         {
             id: 288,
-            date: '2017-02-04T08:25:25.071Z',
+            date: new Date('2017-02-04T08:25:25.071Z'),
             status: 'accepted',
             command_id: 557,
             product_id: 75,
@@ -35700,7 +35700,7 @@ data = {
         },
         {
             id: 289,
-            date: '2017-03-28T12:46:35.661Z',
+            date: new Date('2017-03-28T12:46:35.661Z'),
             status: 'accepted',
             command_id: 559,
             product_id: 18,
@@ -35710,7 +35710,7 @@ data = {
         },
         {
             id: 290,
-            date: '2017-04-13T18:35:42.148Z',
+            date: new Date('2017-04-13T18:35:42.148Z'),
             status: 'pending',
             command_id: 560,
             product_id: 31,
@@ -35720,7 +35720,7 @@ data = {
         },
         {
             id: 291,
-            date: '2016-02-11T19:57:14.254Z',
+            date: new Date('2016-02-11T19:57:14.254Z'),
             status: 'accepted',
             command_id: 563,
             product_id: 2,
@@ -35730,7 +35730,7 @@ data = {
         },
         {
             id: 292,
-            date: '2016-11-11T21:20:04.914Z',
+            date: new Date('2016-11-11T21:20:04.914Z'),
             status: 'accepted',
             command_id: 563,
             product_id: 52,
@@ -35740,7 +35740,7 @@ data = {
         },
         {
             id: 293,
-            date: '2017-02-06T07:33:56.273Z',
+            date: new Date('2017-02-06T07:33:56.273Z'),
             status: 'accepted',
             command_id: 567,
             product_id: 52,
@@ -35750,7 +35750,7 @@ data = {
         },
         {
             id: 294,
-            date: '2016-12-12T08:34:27.554Z',
+            date: new Date('2016-12-12T08:34:27.554Z'),
             status: 'accepted',
             command_id: 572,
             product_id: 47,
@@ -35760,7 +35760,7 @@ data = {
         },
         {
             id: 295,
-            date: '2016-08-12T19:22:45.530Z',
+            date: new Date('2016-08-12T19:22:45.530Z'),
             status: 'accepted',
             command_id: 572,
             product_id: 97,
@@ -35770,7 +35770,7 @@ data = {
         },
         {
             id: 296,
-            date: '2016-12-24T18:31:46.460Z',
+            date: new Date('2016-12-24T18:31:46.460Z'),
             status: 'rejected',
             command_id: 572,
             product_id: 16,
@@ -35780,7 +35780,7 @@ data = {
         },
         {
             id: 297,
-            date: '2016-10-13T01:35:33.849Z',
+            date: new Date('2016-10-13T01:35:33.849Z'),
             status: 'accepted',
             command_id: 575,
             product_id: 28,
@@ -35790,7 +35790,7 @@ data = {
         },
         {
             id: 298,
-            date: '2016-03-13T13:30:57.688Z',
+            date: new Date('2016-03-13T13:30:57.688Z'),
             status: 'rejected',
             command_id: 577,
             product_id: 67,
@@ -35800,7 +35800,7 @@ data = {
         },
         {
             id: 299,
-            date: '2017-04-10T09:58:01.950Z',
+            date: new Date('2017-04-10T09:58:01.950Z'),
             status: 'pending',
             command_id: 578,
             product_id: 113,
@@ -35810,7 +35810,7 @@ data = {
         },
         {
             id: 300,
-            date: '2017-04-18T02:52:58.262Z',
+            date: new Date('2017-04-18T02:52:58.262Z'),
             status: 'pending',
             command_id: 579,
             product_id: 38,
@@ -35820,7 +35820,7 @@ data = {
         },
         {
             id: 301,
-            date: '2017-03-03T06:22:04.309Z',
+            date: new Date('2017-03-03T06:22:04.309Z'),
             status: 'rejected',
             command_id: 580,
             product_id: 98,
@@ -35830,7 +35830,7 @@ data = {
         },
         {
             id: 302,
-            date: '2017-02-21T08:09:42.754Z',
+            date: new Date('2017-02-21T08:09:42.754Z'),
             status: 'accepted',
             command_id: 582,
             product_id: 95,
@@ -35840,7 +35840,7 @@ data = {
         },
         {
             id: 303,
-            date: '2017-01-11T16:56:28.435Z',
+            date: new Date('2017-01-11T16:56:28.435Z'),
             status: 'accepted',
             command_id: 582,
             product_id: 58,
@@ -35850,7 +35850,7 @@ data = {
         },
         {
             id: 304,
-            date: '2017-03-06T07:49:50.048Z',
+            date: new Date('2017-03-06T07:49:50.048Z'),
             status: 'accepted',
             command_id: 587,
             product_id: 82,
@@ -35860,7 +35860,7 @@ data = {
         },
         {
             id: 305,
-            date: '2016-12-17T21:35:40.598Z',
+            date: new Date('2016-12-17T21:35:40.598Z'),
             status: 'accepted',
             command_id: 589,
             product_id: 96,
@@ -35870,7 +35870,7 @@ data = {
         },
         {
             id: 306,
-            date: '2016-06-16T20:52:53.131Z',
+            date: new Date('2016-06-16T20:52:53.131Z'),
             status: 'accepted',
             command_id: 594,
             product_id: 115,
@@ -35880,7 +35880,7 @@ data = {
         },
         {
             id: 307,
-            date: '2016-11-24T18:56:30.106Z',
+            date: new Date('2016-11-24T18:56:30.106Z'),
             status: 'accepted',
             command_id: 594,
             product_id: 48,
@@ -35890,7 +35890,7 @@ data = {
         },
         {
             id: 308,
-            date: '2017-02-08T07:04:16.236Z',
+            date: new Date('2017-02-08T07:04:16.236Z'),
             status: 'accepted',
             command_id: 597,
             product_id: 84,
