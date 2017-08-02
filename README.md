@@ -13,12 +13,12 @@ Inspired by the excellent [json-server](https://github.com/typicode/json-server)
 
 ## Example
 
-Create a `db.json` file.
+Create a `db.js` file.
 
-Your data file should be an object where the keys are the entity types. The values should be lists of entities, i.e. arrays of value objects with at lead an `id` key. For instance:
+Your data file should export an object where the keys are the entity types. The values should be lists of entities, i.e. arrays of value objects with at least an `id` key. For instance:
 
 ```js
-{
+module.exports = {
     posts: [
         { id: 1, title: "Lorem Ipsum", views: 254, user_id: 123 },
         { id: 2, title: "Sic Dolor amet", views: 65, user_id: 456 },
@@ -37,7 +37,7 @@ Your data file should be an object where the keys are the entity types. The valu
 Start the GraphQL server on localhost, port 3000.
 
 ```sh
-json-graphql-server db.json
+json-graphql-server db.js
 ```
 
 Now you can query your data in graphql. For instance, to issue the following query:
