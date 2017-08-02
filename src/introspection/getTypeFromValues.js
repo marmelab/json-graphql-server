@@ -7,6 +7,7 @@ import {
     GraphQLNonNull,
     GraphQLString,
 } from 'graphql';
+import GraphQLJSON from 'graphql-type-json';
 import DateType from './DateType';
 
 const isNumeric = value => !isNaN(parseFloat(value)) && isFinite(value);
@@ -21,6 +22,9 @@ const isArray = value => Array.isArray(value);
 const valuesAreArray = values => values.every(isArray);
 const isDate = value => value instanceof Date;
 const valuesAreDate = values => values.every(isDate);
+const isObject = value =>
+    Object.prototype.toString.call(value) === '[object Object]';
+const valuesAreObject = values => values.every(isObject);
 
 const requiredTypeOrNormal = (type, isRequired) =>
     isRequired ? new GraphQLNonNull(type) : type;
@@ -59,6 +63,9 @@ export default (name, values = [], isRequired = false) => {
                     isRequired,
                 );
             }
+            if (valuesAreObject(leafValues)) {
+                return requiredTypeOrNormal(GraphQLJSON, isRequired);
+            }
             return requiredTypeOrNormal(
                 new GraphQLList(GraphQLString),
                 isRequired,
@@ -78,6 +85,9 @@ export default (name, values = [], isRequired = false) => {
         }
         if (valuesAreNumeric(values)) {
             return requiredTypeOrNormal(GraphQLFloat, isRequired);
+        }
+        if (valuesAreObject(values)) {
+            return requiredTypeOrNormal(GraphQLJSON, isRequired);
         }
     }
     return requiredTypeOrNormal(GraphQLString, isRequired); // FIXME introspect further
