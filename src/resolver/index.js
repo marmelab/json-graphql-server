@@ -1,4 +1,5 @@
 import { pluralize } from 'inflection';
+import GraphQLJSON from 'graphql-type-json';
 
 import all from './Query/all';
 import meta from './Query/meta';
@@ -8,7 +9,8 @@ import update from './Mutation/update';
 import remove from './Mutation/remove';
 import entityResolver from './Entity';
 import { getTypeFromKey } from '../nameConverter';
-import DateType, { hasDateType } from '../introspection/DateType';
+import DateType from '../introspection/DateType';
+import hasType from '../introspection/hasType';
 
 const getQueryResolvers = (entityName, data) => ({
     [`all${pluralize(entityName)}`]: all(data),
@@ -45,6 +47,7 @@ export default data => {
             }),
             {},
         ),
-        ...(hasDateType(data) ? { Date: DateType } : {}), // required because makeExecutableSchema strips resolvers from typeDefs
+        ...(hasType('Date', data) ? { Date: DateType } : {}), // required because makeExecutableSchema strips resolvers from typeDefs
+        ...(hasType('JSON', data) ? { JSON: GraphQLJSON } : {}), // required because makeExecutableSchema strips resolvers from typeDefs
     };
 };

@@ -9,7 +9,7 @@ import getValuesFromEntities from './getValuesFromEntities';
 import getTypeFromValues from './getTypeFromValues';
 import { getTypeFromKey } from '../nameConverter';
 
-const getNumberFiltersFromEntities = entities => {
+const getRangeFiltersFromEntities = entities => {
     const fieldValues = getValuesFromEntities(entities);
     return Object.keys(fieldValues).reduce((fields, fieldName) => {
         const fieldType = getTypeFromValues(
@@ -96,7 +96,7 @@ export default data =>
                 fields: {
                     q: { type: GraphQLString },
                     ...getFieldsFromEntities(data[key], false),
-                    ...getNumberFiltersFromEntities(data[key]),
+                    ...getRangeFiltersFromEntities(data[key]),
                 },
             }),
         }),
