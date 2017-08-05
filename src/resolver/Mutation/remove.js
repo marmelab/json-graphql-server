@@ -1,8 +1,8 @@
-export default entityData => (_, { id }) => {
+export default (entityData = []) => (_, { id }) => {
     const parsedId = parseInt(id, 10); // FIXME fails for non-integer ids
     const indexOfEntity = entityData.findIndex(e => e.id === parsedId);
     const removedEntity = entityData[indexOfEntity];
 
-    entityData = entityData.filter(e => e.id !== id);
+    entityData.splice(indexOfEntity, 1);
     return removedEntity;
 };
