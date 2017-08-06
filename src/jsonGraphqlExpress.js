@@ -1,8 +1,5 @@
 import graphqlHTTP from 'express-graphql';
-import { printSchema } from 'graphql';
-import { makeExecutableSchema } from 'graphql-tools';
-import getSchemaFromData from './introspection/getSchemaFromData';
-import resolver from './resolver';
+import schemaBuilder from './schemaBuilder';
 
 /**
  * An express middleware for a GraphQL endpoint serving data from the supplied json.
@@ -48,13 +45,8 @@ import resolver from './resolver';
  * 
  * app.listen(PORT);
  */
-export default data => {
-    return graphqlHTTP({
-        schema: makeExecutableSchema({
-            typeDefs: printSchema(getSchemaFromData(data)),
-            resolvers: resolver(data),
-            logger: { log: e => console.log(e) }, // eslint-disable-line no-console
-        }),
+export default data =>
+    graphqlHTTP({
+        schema: schemaBuilder(data),
         graphiql: true,
     });
-};
