@@ -433,8 +433,9 @@ Deploy with Heroku or Next.js.
 
 ## Roadmap
 
-* Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
 * CLI options (port, https, watch, delay, custom schema)
+* Subscriptions
+* Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
 
 ## Contributing
 
