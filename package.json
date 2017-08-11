@@ -9,7 +9,7 @@
     "scripts": {
         "format": "make format",
         "precommit": "lint-staged",
-        "test": "make test",
+        "test": "jest",
         "watch-test": "make watch-test"
     },
     "lint-staged": {
