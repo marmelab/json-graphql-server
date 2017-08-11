@@ -1,4 +1,4 @@
-import entity from './';
+import entity from './index';
 
 test('provides empty resolver for data without relationship', () =>
     expect(entity('posts', { posts: [] })).toEqual({}));
