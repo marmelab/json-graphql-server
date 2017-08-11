@@ -1,6 +1,8 @@
-export default entityData => (_, entity) => {
+export default (entityData = []) => (_, entity) => {
+    const newId =
+        entityData.length > 0 ? entityData[entityData.length - 1].id + 1 : 0;
     const newEntity = {
-        id: entityData[entityData.length - 1].id + 1,
+        id: newId,
         ...entity,
     };
 
