@@ -130,14 +130,13 @@ export default data => {
             const nullableTypeFields = Object.keys(
                 typeFields,
             ).reduce((f, fieldName) => {
-                f[fieldName] = {
-                    ...typeFields[fieldName],
+                f[fieldName] = Object.assign({}, typeFields[fieldName], {
                     type:
                         fieldName !== 'id' &&
                         typeFields[fieldName].type instanceof GraphQLNonNull
                             ? typeFields[fieldName].type.ofType
                             : typeFields[fieldName].type,
-                };
+                });
                 return f;
             }, {});
             fields[`create${type.name}`] = {

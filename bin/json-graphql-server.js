@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-var path = require('path');
-var express = require('express');
-var JsonGraphqlServer = require('../lib/');
+const path = require('path');
+const express = require('express');
+const JsonGraphqlServer = require('../src/');
 
 // fixme the build fails without those
 global.window = false;
