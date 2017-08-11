@@ -89,16 +89,18 @@ const getRangeFiltersFromEntities = entities => {
  */
 export default data =>
     Object.keys(data).reduce(
-        (types, key) => ({
-            ...types,
-            [getTypeFromKey(key)]: new GraphQLInputObjectType({
-                name: `${getTypeFromKey(key)}Filter`,
-                fields: {
-                    q: { type: GraphQLString },
-                    ...getFieldsFromEntities(data[key], false),
-                    ...getRangeFiltersFromEntities(data[key]),
-                },
+        (types, key) =>
+            Object.assign({}, types, {
+                [getTypeFromKey(key)]: new GraphQLInputObjectType({
+                    name: `${getTypeFromKey(key)}Filter`,
+                    fields: Object.assign(
+                        {
+                            q: { type: GraphQLString },
+                        },
+                        getFieldsFromEntities(data[key], false),
+                        getRangeFiltersFromEntities(data[key]),
+                    ),
+                }),
             }),
-        }),
         {},
     );
