@@ -23,7 +23,7 @@
             {
                 "singleQuote": true,
                 "tabWidth": 4,
-                "trailingComma": "all"
+                "trailingComma": "es5"
             }
         ],
         "import/no-extraneous-dependencies": "off",

@@ -7,7 +7,7 @@ test('does infer field types', () => {
             { id: 1, foo: 'foo1' },
             { id: 2, foo: 'foo2', bar: 'bar1' },
             { id: 3, bar: 'bar2' },
-        ]),
+        ])
     ).toEqual({
         id: { type: new GraphQLNonNull(GraphQLID) },
         foo: { type: GraphQLString },

@@ -15,7 +15,7 @@ const getRangeFiltersFromEntities = entities => {
         const fieldType = getTypeFromValues(
             fieldName,
             fieldValues[fieldName],
-            false,
+            false
         );
         if (
             fieldType == GraphQLInt ||
@@ -98,9 +98,9 @@ export default data =>
                             q: { type: GraphQLString },
                         },
                         getFieldsFromEntities(data[key], false),
-                        getRangeFiltersFromEntities(data[key]),
+                        getRangeFiltersFromEntities(data[key])
                     ),
                 }),
             }),
-        {},
+        {}
     );

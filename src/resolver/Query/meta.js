@@ -37,8 +37,8 @@ export default entityData => (_, { page, perPage = 25, filter = '{}' }) => {
         if (filters.q) {
             items = items.filter(d =>
                 Object.keys(d).some(key =>
-                    d[key].toString().includes(filters.q),
-                ),
+                    d[key].toString().includes(filters.q)
+                )
             );
         }
     }

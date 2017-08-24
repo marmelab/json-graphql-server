@@ -42,25 +42,25 @@ export default (name, values = [], isRequired = false) => {
             if (valuesAreBoolean(leafValues)) {
                 return requiredTypeOrNormal(
                     new GraphQLList(GraphQLBoolean),
-                    isRequired,
+                    isRequired
                 );
             }
             if (valuesAreString(leafValues)) {
                 return requiredTypeOrNormal(
                     new GraphQLList(GraphQLString),
-                    isRequired,
+                    isRequired
                 );
             }
             if (valuesAreInteger(leafValues)) {
                 return requiredTypeOrNormal(
                     new GraphQLList(GraphQLInt),
-                    isRequired,
+                    isRequired
                 );
             }
             if (valuesAreNumeric(leafValues)) {
                 return requiredTypeOrNormal(
                     new GraphQLList(GraphQLFloat),
-                    isRequired,
+                    isRequired
                 );
             }
             if (valuesAreObject(leafValues)) {
@@ -68,7 +68,7 @@ export default (name, values = [], isRequired = false) => {
             }
             return requiredTypeOrNormal(
                 new GraphQLList(GraphQLString),
-                isRequired,
+                isRequired
             ); // FIXME introspect further
         }
         if (valuesAreBoolean(values)) {

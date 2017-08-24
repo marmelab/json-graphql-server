@@ -128,7 +128,7 @@ export default data => {
         fields: types.reduce((fields, type) => {
             const typeFields = typesByName[type.name].getFields();
             const nullableTypeFields = Object.keys(
-                typeFields,
+                typeFields
             ).reduce((f, fieldName) => {
                 f[fieldName] = Object.assign({}, typeFields[fieldName], {
                     type:

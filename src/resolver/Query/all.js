@@ -1,6 +1,6 @@
 export default (entityData = []) => (
     _,
-    { sortField, sortOrder = 'asc', page, perPage = 25, filter = {} },
+    { sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }
 ) => {
     let items = [...entityData];
 
@@ -49,7 +49,7 @@ export default (entityData = []) => (
                 d =>
                     filter[key] instanceof Date
                         ? +d[key] == +filter[key]
-                        : d[key] == filter[key],
+                        : d[key] == filter[key]
             );
         });
 
@@ -61,8 +61,8 @@ export default (entityData = []) => (
                         d[key]
                             .toString()
                             .toLowerCase()
-                            .includes(filter.q.toLowerCase()),
-                ),
+                            .includes(filter.q.toLowerCase())
+                )
             );
         }
     }

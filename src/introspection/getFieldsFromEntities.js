@@ -36,7 +36,7 @@ export default (entities, checkRequired = true) => {
                 fieldValues[fieldName],
                 checkRequired
                     ? fieldValues[fieldName].length === nbValues
-                    : false,
+                    : false
             ),
         };
         return fields;

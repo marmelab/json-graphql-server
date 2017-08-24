@@ -58,10 +58,10 @@ export default (entityName, data) => {
             Object.assign({}, resolvers, {
                 [getRelatedType(fieldName)]: entity =>
                     data[getRelatedKey(fieldName)].find(
-                        relatedRecord => relatedRecord.id == entity[fieldName],
+                        relatedRecord => relatedRecord.id == entity[fieldName]
                     ),
             }),
-        {},
+        {}
     );
     const relatedField = getReverseRelatedField(entityName); // 'posts' => 'post_id'
     const hasReverseRelationship = entityName =>
@@ -72,10 +72,10 @@ export default (entityName, data) => {
             Object.assign({}, resolvers, {
                 [getRelationshipFromKey(entityName)]: entity =>
                     data[entityName].filter(
-                        record => record[relatedField] == entity.id,
+                        record => record[relatedField] == entity.id
                     ),
             }),
-        {},
+        {}
     );
 
     return Object.assign({}, manyToOneResolvers, oneToManyResolvers);
