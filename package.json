@@ -1,6 +1,6 @@
 {
     "name": "json-graphql-server",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "src/index",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
     "authors": ["François Zaninotto", "Gildas Garcia"],
