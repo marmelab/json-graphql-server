@@ -107,11 +107,11 @@ test('creates one type per data type', () => {
     const typeMap = getSchemaFromData(data).getTypeMap();
     expect(typeMap['Post'].name).toEqual(PostType.name);
     expect(Object.keys(typeMap['Post'].getFields())).toEqual(
-        Object.keys(PostType.getFields()),
+        Object.keys(PostType.getFields())
     );
     expect(typeMap['User'].name).toEqual(UserType.name);
     expect(Object.keys(typeMap['User'].getFields())).toEqual(
-        Object.keys(UserType.getFields()),
+        Object.keys(UserType.getFields())
     );
 });
 

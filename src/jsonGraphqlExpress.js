@@ -3,14 +3,14 @@ import schemaBuilder from './schemaBuilder';
 
 /**
  * An express middleware for a GraphQL endpoint serving data from the supplied json.
- * 
- * @param {any} data 
+ *
+ * @param {any} data
  * @returns An array of middlewares
- * 
+ *
  * @example
  * import express from 'express';
  * import { jsonGraphqlExpress } from 'json-graphql-server';
- * 
+ *
  * const data = {
  *    "posts": [
  *        {
@@ -37,12 +37,12 @@ import schemaBuilder from './schemaBuilder';
  *        }
  *    ],
  * };
- * 
+ *
  * const PORT = 3000;
  * var app = express();
- * 
+ *
  * app.use('/graphql', jsonGraphqlExpress(data));
- * 
+ *
  * app.listen(PORT);
  */
 export default data =>

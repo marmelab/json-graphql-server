@@ -18,7 +18,7 @@ export default new GraphQLScalarType({
         if (ast.kind !== Kind.STRING) {
             throw new GraphQLError(
                 `Query error: Can only parse dates strings, got a: ${ast.kind}`,
-                [ast],
+                [ast]
             );
         }
         if (isNaN(Date.parse(ast.value))) {

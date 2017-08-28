@@ -5,7 +5,7 @@ export default (entityData = []) => (_, params) => {
         entityData[indexOfEntity] = Object.assign(
             {},
             entityData[indexOfEntity],
-            params,
+            params
         );
         return entityData[indexOfEntity];
     }

@@ -56,7 +56,7 @@ export default function(data, url = 'http://localhost:3000/graphql') {
             query.query,
             undefined,
             undefined,
-            query.variables,
+            query.variables
         ).then(
             result => {
                 const body = JSON.stringify(result);
@@ -66,7 +66,7 @@ export default function(data, url = 'http://localhost:3000/graphql') {
             error => {
                 req.setResponseHeader('Content-Type', 'application/json');
                 req.receive(500, JSON.stringify(error));
-            },
+            }
         );
     });
 

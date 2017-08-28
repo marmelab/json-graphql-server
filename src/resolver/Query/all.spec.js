@@ -70,14 +70,14 @@ describe('sort', () => {
     });
     test('sorts data using sortOrder for the sort direction', () => {
         expect(
-            all(data)(null, { sortField: 'views', sortOrder: 'asc' }),
+            all(data)(null, { sortField: 'views', sortOrder: 'asc' })
         ).toEqual([
             { id: 2, title: 'Ut enim ad minim', user_id: 456, views: 65 },
             { id: 3, title: 'Sic Dolor amet', user_id: 123, views: 76 },
             { id: 1, title: 'Lorem Ipsum', user_id: 123, views: 254 },
         ]);
         expect(
-            all(data)(null, { sortField: 'views', sortOrder: 'desc' }),
+            all(data)(null, { sortField: 'views', sortOrder: 'desc' })
         ).toEqual([
             { id: 1, title: 'Lorem Ipsum', user_id: 123, views: 254 },
             { id: 3, title: 'Sic Dolor amet', user_id: 123, views: 76 },
@@ -100,7 +100,7 @@ describe('filter', () => {
             { id: 2, title: 'Ut enim ad minim', user_id: 456, views: 65 },
         ]);
         expect(
-            all(data)(null, { filter: { title: 'Sic Dolor amet' } }),
+            all(data)(null, { filter: { title: 'Sic Dolor amet' } })
         ).toEqual([
             { id: 3, title: 'Sic Dolor amet', user_id: 123, views: 76 },
         ]);

@@ -18,22 +18,22 @@ test('returns GraphQLID for fields named id or xxx_id', () => {
 
 test('returns GraphQLList for arrays', () => {
     expect(getTypeFromValues('foo', [[true, false], [true]])).toEqual(
-        new GraphQLList(GraphQLBoolean),
+        new GraphQLList(GraphQLBoolean)
     );
     expect(getTypeFromValues('foo', [['a', 'b'], ['c', 'd']])).toEqual(
-        new GraphQLList(GraphQLString),
+        new GraphQLList(GraphQLString)
     );
     expect(getTypeFromValues('foo', [[123, 456], [789, 123]])).toEqual(
-        new GraphQLList(GraphQLInt),
+        new GraphQLList(GraphQLInt)
     );
     expect(getTypeFromValues('foo', [[1.23, 456], [-5, 123]])).toEqual(
-        new GraphQLList(GraphQLFloat),
+        new GraphQLList(GraphQLFloat)
     );
 });
 
 test('returns GraphQLBoolean for booleans', () =>
     expect(getTypeFromValues('foo', [true, true, false])).toEqual(
-        GraphQLBoolean,
+        GraphQLBoolean
     ));
 
 test('returns GraphQLString for strings', () => {
@@ -49,22 +49,22 @@ test('returns GraphQLFloat for floats', () =>
 
 test('returns DateType for Dates', () =>
     expect(
-        getTypeFromValues('foo', [new Date('2017-03-15'), new Date()]),
+        getTypeFromValues('foo', [new Date('2017-03-15'), new Date()])
     ).toEqual(DateType));
 
 test('returns GraphQLJSON for objects', () =>
     expect(
-        getTypeFromValues('foo', [{ foo: 1 }, { bar: 2 }, { id: 'a' }]),
+        getTypeFromValues('foo', [{ foo: 1 }, { bar: 2 }, { id: 'a' }])
     ).toEqual(GraphQLJSON));
 
 test('returns GraphQLJSON for arrays of objects', () =>
     expect(
-        getTypeFromValues('foo', [[{ foo: 1 }, { bar: 2 }], [{ id: 'a' }]]),
+        getTypeFromValues('foo', [[{ foo: 1 }, { bar: 2 }], [{ id: 'a' }]])
     ).toEqual(GraphQLJSON));
 
 test('returns GraphQLString for mixed values', () =>
     expect(getTypeFromValues('foo', [0, '&', new Date()])).toEqual(
-        GraphQLString,
+        GraphQLString
     ));
 
 test('returns GraphQLString for no values', () =>
@@ -72,5 +72,5 @@ test('returns GraphQLString for no values', () =>
 
 test('returns GraphQLNonNull when all values are filled', () =>
     expect(getTypeFromValues('foo', [], true)).toEqual(
-        new GraphQLNonNull(GraphQLString),
+        new GraphQLNonNull(GraphQLString)
     ));
