@@ -1,0 +1,30 @@
+{
+  "env": {
+    "test": {
+      "presets": [
+        "env",
+        {
+          "modules": false
+        }
+      ],
+      "plugins": [
+        "external-helpers",
+        "transform-runtime"
+      ]
+    },
+    "development": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": false
+          }
+        ]
+      ],
+      "plugins": [
+        "external-helpers",
+        "transform-runtime"
+      ]
+    }
+  }
+}
