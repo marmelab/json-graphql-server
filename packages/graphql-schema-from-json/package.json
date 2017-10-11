@@ -10,7 +10,7 @@
   "files": [
     "*.md",
     "src",
-    "bin"
+    "lib"
   ],
   "license": "MIT",
   "scripts": {
