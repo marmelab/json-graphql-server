@@ -13,10 +13,10 @@ watch: ## continuously compile ES6 files to JS
 	NODE_ENV=development ./node_modules/.bin/rollup -c --watch
 
 test: ## Launch unit tests
-	@./node_modules/.bin/jest
+	@./node_modules/.bin/jest --setupTestFrameworkScriptFile=./src/setupTests.js
 
 watch-test: ## Launch unit tests and watch for changes
-	@./node_modules/.bin/jest --watch
+	@./node_modules/.bin/jest --watch --setupTestFrameworkScriptFile=./src/setupTests.js
 
 format: ## Format the source code
 	@./node_modules/.bin/eslint --fix ./src
