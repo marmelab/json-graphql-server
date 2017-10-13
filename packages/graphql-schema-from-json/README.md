@@ -1,19 +1,19 @@
-# json-to-graphql-schema
+# graphql-schema-from-json
 
 Guess a GraphQL schema from json data.
 
 ## Installation
 
-`npm install --save json-to-graphql-schema`
+`npm install --save graphql-schema-from-json`
 
 or
 
-`yarn json-to-graphql-schema`
+`yarn graphql-schema-from-json`
 
 ## Usage
 
 ```js
-import getSchemaFromData from 'json-to-graphql-schema';
+import getSchemaFromData from 'graphql-schema-from-json';
 import { printSchema } from 'graphql';
 
 const data = {
@@ -40,7 +40,7 @@ console.log(printSchema(schema));
 
 ## Generated Types and Queries
 
-Based on your data, `json-to-graphql-schema` will generate a schema with one type per entity, as well as 3 query types and 3 mutation types. For instance for the `Post` entity:
+Based on your data, `graphql-schema-from-json` will generate a schema with one type per entity, as well as 3 query types and 3 mutation types. For instance for the `Post` entity:
 
 ```graphql
 type Query {
@@ -78,11 +78,11 @@ type ListMetadata {
 scalar Date
 ```
 
-By convention, `json-to-graphql-schema` expects all entities to have an `id` field that is unique for their type - it's the entity primary key. The type of every field is inferred from the values, so for instance, `Post.title` is a `String!`, and `Post.views` is an `Int!`. When all entities have a value for a field, `json-to-graphql-schema` makes the field type non nullable (that's why `Post.views` type is `Int!` and not `Int`).
+By convention, `graphql-schema-from-json` expects all entities to have an `id` field that is unique for their type - it's the entity primary key. The type of every field is inferred from the values, so for instance, `Post.title` is a `String!`, and `Post.views` is an `Int!`. When all entities have a value for a field, `graphql-schema-from-json` makes the field type non nullable (that's why `Post.views` type is `Int!` and not `Int`).
 
-For every field named `*_id`, `json-to-graphql-schema` creates a two-way relationship, to let you fetch related entities from both sides. For instance, the presence of the `user_id` field in the `posts` entity leads to the ability to fetch the related `User` for a `Post` - and the related `Posts` for a `User`.
+For every field named `*_id`, `graphql-schema-from-json` creates a two-way relationship, to let you fetch related entities from both sides. For instance, the presence of the `user_id` field in the `posts` entity leads to the ability to fetch the related `User` for a `Post` - and the related `Posts` for a `User`.
 
-The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. `json-to-graphql-schema` also adds a full-text query field named `q`, and created range filter fields for numeric and date fields. The detail of all available filters can be seen in the generated `*Filter` type.
+The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. `graphql-schema-from-json` also adds a full-text query field named `q`, and created range filter fields for numeric and date fields. The detail of all available filters can be seen in the generated `*Filter` type.
 
 ## GraphQL Usage
 
@@ -349,4 +349,4 @@ make format
 
 ## License
 
-json-to-graphql-schema is licensed under the [MIT Licence](https://github.com/marmelab/json-to-graphql-schema/blob/master/LICENSE.md), sponsored and supported by [marmelab](http://marmelab.com).
+graphql-schema-from-json is licensed under the [MIT Licence](https://github.com/marmelab/graphql-schema-from-json/blob/master/LICENSE.md), sponsored and supported by [marmelab](http://marmelab.com).

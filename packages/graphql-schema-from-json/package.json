@@ -1,8 +1,8 @@
 {
-  "name": "json-to-graphql-schema",
+  "name": "graphql-schema-from-json",
   "version": "0.0.1",
   "main": "lib/index",
-  "repository": "git@github.com:marmelab/json-to-graphql-schema.git",
+  "repository": "git@github.com:marmelab/graphql-schema-from-json.git",
   "authors": [
     "François Zaninotto",
     "Gildas Garcia"
@@ -57,8 +57,5 @@
     "graphql": "~0.11.7",
     "graphql-type-json": "~0.1.4",
     "inflection": "~1.12.0"
-  },
-  "bin": {
-    "json-to-graphql-schema": "bin/json-to-graphql-schema.js"
   }
 }
