@@ -20,3 +20,6 @@ watch-test: ## Launch unit tests and watch for changes
 
 format: ## Format the source code
 	@./node_modules/.bin/eslint --fix ./src
+
+run: ## Launch server with example data
+	@node ./bin/json-graphql-server.js example/data.js
