@@ -1,6 +1,6 @@
 {
     "name": "json-graphql-server",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "main": "src/index",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
     "authors": ["François Zaninotto", "Gildas Garcia"],
@@ -10,7 +10,8 @@
         "format": "make format",
         "precommit": "lint-staged",
         "test": "jest",
-        "watch-test": "make watch-test"
+        "watch-test": "make watch-test",
+        "server": "make run"
     },
     "lint-staged": {
         "src/**/*.js": ["eslint --fix", "git add"]
@@ -48,6 +49,7 @@
     "dependencies": {
         "apollo-client": "~1.2.0",
         "apollo-test-utils": "~0.3.2",
+        "cors": "^2.8.4",
         "express": "~4.15.3",
         "express-graphql": "~0.6.7",
         "graphql": "~0.10.5",
