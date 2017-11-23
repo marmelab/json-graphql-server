@@ -54,13 +54,13 @@ export default entityData => (
         count: items.length,
         avg: attr
             ? items.reduce((accumulator, item) => {
-                  const value = item[attr] || 0;
+                  const value = Number(item[attr]) || 0;
                   return accumulator + value;
               }, 0) / items.length
             : undefined,
         sum: attr
             ? items.reduce((accumulator, item) => {
-                  const value = item[attr] || 0;
+                  const value = Number(item[attr]) || 0;
                   return accumulator + value;
               }, 0)
             : undefined,
