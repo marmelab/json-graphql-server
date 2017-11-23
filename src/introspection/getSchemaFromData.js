@@ -120,6 +120,7 @@ export default data => {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
                     filter: { type: GraphQLString },
+                    attr: { type: GraphQLString },
                 },
             };
             return fields;
