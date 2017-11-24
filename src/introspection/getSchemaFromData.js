@@ -2,6 +2,7 @@ import {
     GraphQLBoolean,
     GraphQLID,
     GraphQLInt,
+    GraphQLFloat,
     GraphQLList,
     GraphQLNonNull,
     GraphQLObjectType,
@@ -89,6 +90,8 @@ export default data => {
         name: 'ListMetadata',
         fields: {
             count: { type: GraphQLInt },
+            avg: { type: GraphQLFloat },
+            sum: { type: GraphQLFloat },
         },
     });
 
@@ -117,6 +120,7 @@ export default data => {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
                     filter: { type: GraphQLString },
+                    attr: { type: GraphQLString },
                 },
             };
             return fields;

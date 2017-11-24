@@ -1,4 +1,7 @@
-export default entityData => (_, { page, perPage = 25, filter = '{}' }) => {
+export default entityData => (
+    _,
+    { page, attr, perPage = 25, filter = '{}' }
+) => {
     const filters = JSON.parse(filter);
     let items = [...entityData];
 
@@ -47,5 +50,19 @@ export default entityData => (_, { page, perPage = 25, filter = '{}' }) => {
         items = items.slice(page * perPage, page * perPage + perPage);
     }
 
-    return { count: items.length };
+    return {
+        count: items.length,
+        avg: attr
+            ? items.reduce((accumulator, item) => {
+                  const value = Number(item[attr]) || 0;
+                  return accumulator + value;
+              }, 0) / items.length
+            : undefined,
+        sum: attr
+            ? items.reduce((accumulator, item) => {
+                  const value = Number(item[attr]) || 0;
+                  return accumulator + value;
+              }, 0)
+            : undefined,
+    };
 };

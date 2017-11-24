@@ -3,8 +3,15 @@
     "version": "1.0.2",
     "main": "src/index",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
-    "authors": ["François Zaninotto", "Gildas Garcia"],
-    "files": ["*.md", "src", "bin"],
+    "authors": [
+        "François Zaninotto",
+        "Gildas Garcia"
+    ],
+    "files": [
+        "*.md",
+        "src",
+        "bin"
+    ],
     "license": "MIT",
     "scripts": {
         "format": "make format",
@@ -14,7 +21,10 @@
         "server": "make run"
     },
     "lint-staged": {
-        "src/**/*.js": ["eslint --fix", "git add"]
+        "src/**/*.js": [
+            "eslint --fix",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@types/jest": "~19.2.4",
