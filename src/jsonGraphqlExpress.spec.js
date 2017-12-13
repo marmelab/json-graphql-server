@@ -96,4 +96,18 @@ describe('integration tests', () => {
                 },
             },
         }));
+    it('allows multiple mutations', () =>
+        gqlAgent(
+            'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
+        ).then(() =>
+            gqlAgent(
+                'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
+            ).expect({
+                data: {
+                    updatePost: {
+                        id: 2,
+                    },
+                },
+            })
+        ));
 });
