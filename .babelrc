@@ -24,6 +24,21 @@
         "external-helpers",
         "transform-runtime"
       ]
+    },
+    "production": {
+      "presets": [
+        [
+          "es2015",
+          {
+            "modules": false
+          }
+        ],
+        "stage-0"
+      ],
+      "plugins": [
+        "external-helpers",
+        "transform-runtime"
+      ]
     }
   }
 }

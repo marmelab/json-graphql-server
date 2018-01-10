@@ -1,6 +1,6 @@
 import { MockHttpServer } from './mockHttpRequest';
 import { graphql } from 'graphql';
-import getSchemaFromData from './introspection/getSchemaFromData';
+import schemaBuilder from './schemaBuilder';
 
 /**
  * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql 
@@ -42,7 +42,7 @@ import getSchemaFromData from './introspection/getSchemaFromData';
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
 export default function(data, url = 'http://localhost:3000/graphql') {
-    const schema = getSchemaFromData(data);
+    const schema = schemaBuilder(data);
 
     const server = new MockHttpServer(req => {
         if (!req.url.startsWith(url)) {
