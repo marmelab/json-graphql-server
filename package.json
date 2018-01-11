@@ -62,7 +62,8 @@
         "graphql-type-json": "~0.1.4",
         "inflection": "~1.12.0",
         "lodash.merge": "~4.6.0",
-        "reify": "~0.12.0"
+        "reify": "~0.12.0",
+        "xhr-mock": "2.0.2"
     },
     "bin": {
         "json-graphql-server": "bin/json-graphql-server.js"

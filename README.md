@@ -407,56 +407,11 @@ app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 
-## Usage on client
+## Usage in browser with XMLHttpRequest
 
-Install the module locally:
+Useful when using XMLHttpRequest directly or libaries such as [axios](https://www.npmjs.com/package/axios).
 
-```sh
-npm install --save json-graphql-server
-```
-
-Then use the `graphQLClientServer` function:
-
-```js
-import { graphQLClientServer } from 'json-graphql-server';
-
-const data = [...];
-
-const server = GraphQLClientServer({
-    data,
-    url: 'http://localhost:3000/graphql'
-});
-
-server.start();
-```
-
-This will intercepts all XMLHttpRequests and make them responds like a GraphQL server when the url matches the one specified.
-
-For example:
-
-```js
-window.document
-    .getElementById('btnLoadPosts')
-    .addEventListener('click', function () {
-        var xhr = new XMLHttpRequest();
-        xhr.responseType = 'json';
-        xhr.open("POST", "http://localhost:3000/graphql", true);
-        xhr.setRequestHeader("Content-Type", "application/json");
-        xhr.setRequestHeader("Accept", "application/json");
-        xhr.onerror = function(error) {
-            console.error(error);
-        }
-        xhr.onload = function() {
-            const result = JSON.parse(xhr.responseText);
-            console.log('data returned:', result);
-            alert('Found ' + result.data.allPosts.length + ' posts');
-        }
-        const body = JSON.stringify({ query: 'query allPosts { allPosts { id } }' });
-        xhr.send(body);
-    });
-```
-
-## Usage in browser through script
+### Install with a script tag
 
 Add a `script` tag referencing the library:
 
@@ -477,8 +432,79 @@ It will expose the `GraphQLClientServer` as a global object:
         });
 
         server.start();
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'http://localhost:3000/graphql', true);
+        xhr.setRequestHeader('Content-Type', 'application/json');
+        xhr.setRequestHeader('Accept', 'application/json');
+        xhr.onerror = function(error) {
+            console.error(error);
+        }
+        xhr.onload = function() {
+            const result = JSON.parse(xhr.responseText);
+            console.log('data returned:', result);
+            alert('Found ' + result.data.allPosts.length + ' posts');
+        }
+        const body = JSON.stringify({ query: 'query allPosts { allPosts { id } }' });
+        xhr.send(body);
     });
 </script>
+```
+
+### Use with a bundler (webpack)
+
+```sh
+npm install json-graphql-server
+```
+
+```js
+import GraphQLClientServer from 'json-graphql-server';
+
+const data = [...];
+
+const server = GraphQLClientServer({
+    data,
+    url: 'http://localhost:3000/graphql'
+});
+
+server.start();
+
+const xhr = new XMLHttpRequest();
+xhr.open('POST', 'http://localhost:3000/graphql', true);
+xhr.setRequestHeader('Content-Type', 'application/json');
+xhr.setRequestHeader('Accept', 'application/json');
+xhr.onerror = function(error) {
+    console.error(error);
+}
+xhr.onload = function() {
+    const result = JSON.parse(xhr.responseText);
+    console.log('data returned:', result);
+    alert('Found ' + result.data.allPosts.length + ' posts');
+}
+const body = JSON.stringify({ query: 'query allPosts { allPosts { id } }' });
+xhr.send(body);
+```
+
+## Usage in browser with fetch
+
+```js
+import fetchMock from 'fetch-mock';
+import GraphQLClientServer from 'json-graphql-server';
+
+const data = [...];
+const server = GraphQLClientServer({ data });
+
+fetchMock.post('http://localhost:3000/graphql', server.getHandler());
+
+fetch({
+    url: 'http://localhost:3000/graphql',
+    method: 'POST',
+    body: JSON.stringify({ query: 'query allPosts { allPosts { id } }' })
+})
+.then(response => response.json())
+.then(json => {
+    alert('Found ' + result.data.allPosts.length + ' posts');
+})
 ```
 
 ## Adding Authentication, Custom Routes, etc.
