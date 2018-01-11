@@ -1,10 +1,8 @@
-//export { default as createApolloClient } from './createApolloClient';
-require('reify');
+import GraphQLClientServer from './graphQLClientServer';
+export { default as createApolloClient } from './createApolloClient';
+export { default as jsonGraphqlExpress } from './jsonGraphqlExpress';
+export const graphQLClientServer = GraphQLClientServer;
 
-//const graphQLClientServer = require('./graphQLClientServer').default;
-const jsonGraphqlExpress = require('./jsonGraphqlExpress').default;
-
-module.exports = {
-    //graphQLClientServer,
-    jsonGraphqlExpress,
-};
+if (typeof window !== 'undefined') {
+    window.GraphQLClientServer = GraphQLClientServer;
+}

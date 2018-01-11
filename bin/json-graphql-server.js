@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-
+require('reify');
 const path = require('path');
 const express = require('express');
 const cors = require('cors');
