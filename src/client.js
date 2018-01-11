@@ -1,7 +1,7 @@
 import GraphQLClientServer from './graphQLClientServer';
 
 if (typeof window !== 'undefined') {
-    window.GraphQLClientServer = GraphQLClientServer;
+    window.JsonGraphqlServer = GraphQLClientServer;
 }
 
 export default GraphQLClientServer;

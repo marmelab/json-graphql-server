@@ -419,14 +419,14 @@ Add a `script` tag referencing the library:
 <script src="../lib/json-graphql-server.min.js"></script>
 ```
 
-It will expose the `GraphQLClientServer` as a global object:
+It will expose the `JsonGraphqlServer` as a global object:
 
 ```html
 <script type="text/javascript">
     window.addEventListener('load', function() {
         const data = [...];
 
-        const server = GraphQLClientServer({
+        const server = JsonGraphqlServer({
             data,
             url: 'http://localhost:3000/graphql'
         });
@@ -458,11 +458,11 @@ npm install json-graphql-server
 ```
 
 ```js
-import GraphQLClientServer from 'json-graphql-server';
+import JsonGraphqlServer from 'json-graphql-server';
 
 const data = [...];
 
-const server = GraphQLClientServer({
+const server = JsonGraphqlServer({
     data,
     url: 'http://localhost:3000/graphql'
 });
@@ -489,10 +489,10 @@ xhr.send(body);
 
 ```js
 import fetchMock from 'fetch-mock';
-import GraphQLClientServer from 'json-graphql-server';
+import JsonGraphqlServer from 'json-graphql-server';
 
 const data = [...];
-const server = GraphQLClientServer({ data });
+const server = JsonGraphqlServer({ data });
 
 fetchMock.post('http://localhost:3000/graphql', server.getHandler());
 
