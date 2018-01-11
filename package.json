@@ -1,7 +1,8 @@
 {
     "name": "json-graphql-server",
     "version": "1.0.2",
-    "main": "src/index",
+    "main": "lib/json-graphql-server.node.min.js",
+    "browser": "lib/json-graphql-server.client.min.js",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
     "authors": [
         "François Zaninotto",
@@ -62,8 +63,7 @@
         "graphql-type-json": "~0.1.4",
         "inflection": "~1.12.0",
         "lodash.merge": "~4.6.0",
-        "reify": "~0.12.0",
-        "xhr-mock": "2.0.2"
+        "reify": "~0.12.0"
     },
     "bin": {
         "json-graphql-server": "bin/json-graphql-server.js"

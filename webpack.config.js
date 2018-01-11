@@ -18,13 +18,16 @@ if (process.env.NODE_ENV === 'production') {
             'process.env.NODE_ENV': JSON.stringify('production'),
         })
     );
-    outputFile = libraryName + '.min.js';
+    outputFile = libraryName + '.[name].min.js';
 } else {
-    outputFile = libraryName + '.js';
+    outputFile = libraryName + '.[name].js';
 }
 
 const config = {
-    entry: __dirname + '/src/index.js',
+    entry: {
+        node: __dirname + '/src/node.js',
+        client: __dirname + '/src/client.js',
+    },
     devtool: 'source-map',
     output: {
         path: __dirname + '/lib',
