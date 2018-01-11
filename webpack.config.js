@@ -18,24 +18,13 @@ if (process.env.NODE_ENV === 'production') {
             'process.env.NODE_ENV': JSON.stringify('production'),
         })
     );
-    outputFile = libraryName + '.[name].min.js';
+    outputFile = target => `${libraryName}.${target}.min.js`;
 } else {
-    outputFile = libraryName + '.[name].js';
+    outputFile = target => `${libraryName}.${target}.js`;
 }
 
-const config = {
-    entry: {
-        node: __dirname + '/src/node.js',
-        client: __dirname + '/src/client.js',
-    },
+const defaultConfig = {
     devtool: 'source-map',
-    output: {
-        path: __dirname + '/lib',
-        filename: outputFile,
-        library: libraryName,
-        libraryTarget: 'umd',
-        umdNamedDefine: true,
-    },
     module: {
         rules: [
             {
@@ -52,4 +41,28 @@ const config = {
     plugins,
 };
 
-module.exports = config;
+const serverConfig = Object.assign({}, defaultConfig, {
+    target: 'node',
+    entry: __dirname + '/src/node.js',
+    output: {
+        path: path.resolve(__dirname, 'lib'),
+        filename: outputFile('node'),
+        library: libraryName,
+        libraryTarget: 'umd',
+        umdNamedDefine: true,
+    }
+});
+
+const clientConfig = Object.assign({}, defaultConfig, {
+    target: 'web',
+    entry: __dirname + '/src/client.js',
+    output: {
+        path: path.resolve(__dirname, 'lib'),
+        filename: outputFile('client'),
+        library: libraryName,
+        libraryTarget: 'umd',
+        umdNamedDefine: true,
+    }
+});
+
+module.exports = [serverConfig, clientConfig];
