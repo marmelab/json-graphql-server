@@ -1,6 +1,5 @@
-import { MockHttpServer } from './mockHttpRequest';
-import { graphql } from 'graphql';
-import schemaBuilder from './schemaBuilder';
+import mock, { proxy } from 'xhr-mock';
+import handleRequestFactory from './handleRequest';
 
 /**
  * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql 
@@ -42,40 +41,39 @@ import schemaBuilder from './schemaBuilder';
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
 export default function({ data, url }) {
-    const schema = schemaBuilder(data);
-
-    const server = new MockHttpServer(req => {
-        if (!req.url.startsWith(url)) {
-            // FIXME: if req.url does not match url for endpoint, handle it with window.OriginalHttpRequest
-        }
-
-        const query = JSON.parse(req.requestText);
-
-        graphql(
-            schema,
-            query.query,
-            undefined,
-            undefined,
-            query.variables
-        ).then(
-            result => {
-                const body = JSON.stringify(result);
-                req.setResponseHeader('Content-Type', 'application/json');
-                req.receive(200, body);
-            },
-            error => {
-                req.setResponseHeader('Content-Type', 'application/json');
-                req.receive(500, JSON.stringify(error));
-            }
-        );
-    });
+    const handleRequest = handleRequestFactory(data);
 
     return {
-        start: () => {
-            server.start();
+        start() {
+            // Intercept all XmlHttpRequest
+            mock.setup();
+
+            // Only handle POST request to the specified url
+            mock.post(
+                url,
+                (req, res) =>
+                    new Promise(resolve => {
+                        handleRequest({
+                            requestBody: req.body(),
+                            respond(status, headers, body) {
+                                res.status(status);
+                                res.headers(headers);
+                                res.body(body);
+
+                                resolve(res);
+                            },
+                        });
+                    })
+            );
+
+            // Ensure all other requests are handled by the default XmlHttpRequest
+            mock.use(proxy);
         },
-        stop: () => {
-            server.stop();
+        stop() {
+            mock.teardown();
+        },
+        getHandler() {
+            return handleRequest;
         },
     };
 }
