@@ -386,7 +386,7 @@ Here is how you can use the queries and mutations generated for your data, using
 
 ## Usage with Node
 
-Install the module locally
+Install the module locally:
 
 ```sh
 npm install --save-dev json-graphql-server
@@ -405,6 +405,80 @@ const data = {
 };
 app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
+```
+
+## Usage on client
+
+Install the module locally:
+
+```sh
+npm install --save json-graphql-server
+```
+
+Then use the `graphQLClientServer` function:
+
+```js
+import { graphQLClientServer } from 'json-graphql-server';
+
+const data = [...];
+
+const server = GraphQLClientServer({
+    data,
+    url: 'http://localhost:3000/graphql'
+});
+
+server.start();
+```
+
+This will intercepts all XMLHttpRequests and make them responds like a GraphQL server when the url matches the one specified.
+
+For example:
+
+```js
+window.document
+    .getElementById('btnLoadPosts')
+    .addEventListener('click', function () {
+        var xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open("POST", "http://localhost:3000/graphql", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.setRequestHeader("Accept", "application/json");
+        xhr.onerror = function(error) {
+            console.error(error);
+        }
+        xhr.onload = function() {
+            const result = JSON.parse(xhr.responseText);
+            console.log('data returned:', result);
+            alert('Found ' + result.data.allPosts.length + ' posts');
+        }
+        const body = JSON.stringify({ query: 'query allPosts { allPosts { id } }' });
+        xhr.send(body);
+    });
+```
+
+## Usage in browser through script
+
+Add a `script` tag referencing the library:
+
+```html
+<script src="../lib/json-graphql-server.min.js"></script>
+```
+
+It will expose the `GraphQLClientServer` as a global object:
+
+```html
+<script type="text/javascript">
+    window.addEventListener('load', function() {
+        const data = [...];
+
+        const server = GraphQLClientServer({
+            data,
+            url: 'http://localhost:3000/graphql'
+        });
+
+        server.start();
+    });
+</script>
 ```
 
 ## Adding Authentication, Custom Routes, etc.

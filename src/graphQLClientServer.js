@@ -41,7 +41,7 @@ import schemaBuilder from './schemaBuilder';
  * GraphQLClientServer(data);
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
-export default function(data, url = 'http://localhost:3000/graphql') {
+export default function({ data, url }) {
     const schema = schemaBuilder(data);
 
     const server = new MockHttpServer(req => {
@@ -70,5 +70,12 @@ export default function(data, url = 'http://localhost:3000/graphql') {
         );
     });
 
-    server.start();
+    return {
+        start: () => {
+            server.start();
+        },
+        stop: () => {
+            server.stop();
+        },
+    };
 }
