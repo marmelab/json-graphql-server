@@ -4766,9 +4766,9 @@ write@^0.2.1:
   dependencies:
     mkdirp "^0.5.1"
 
-xhr-mock@2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/xhr-mock/-/xhr-mock-2.0.2.tgz#2eb4809676f2f8a9d7313e00d78db3088bc0681e"
+xhr-mock@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/xhr-mock/-/xhr-mock-2.0.3.tgz#fba204c8f20ec197766c42a3578bc477db6925f3"
   dependencies:
     global "^4.3.0"
     url "^0.11.0"
