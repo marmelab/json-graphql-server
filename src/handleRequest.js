@@ -42,8 +42,14 @@ import schemaBuilder from './schemaBuilder';
  */
 export default function(data) {
     const schema = schemaBuilder(data);
-    return request => {
-        const query = JSON.parse(request.requestBody);
+    return (url, opts = {}) => {
+        let body = opts.body;
+
+        if (url.requestBody) {
+            body = url.requestBody;
+        }
+
+        const query = JSON.parse(body);
 
         return graphql(
             schema,
@@ -52,20 +58,16 @@ export default function(data) {
             undefined,
             query.variables
         ).then(
-            result => {
-                request.respond(
-                    200,
-                    { 'Content-Type': 'application/json' },
-                    JSON.stringify(result)
-                );
-            },
-            error => {
-                request.respond(
-                    500,
-                    { 'Content-Type': 'application/json' },
-                    JSON.stringify(error)
-                );
-            }
+            result => ({
+                status: 200,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(result),
+            }),
+            error => ({
+                status: 500,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(error),
+            })
         );
     };
 }
