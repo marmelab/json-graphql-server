@@ -53,15 +53,14 @@ export default function({ data, url }) {
                 url,
                 (req, res) =>
                     new Promise(resolve => {
-                        handleRequest({
-                            requestBody: req.body(),
-                            respond(status, headers, body) {
-                                res.status(status);
-                                res.headers(headers);
-                                res.body(body);
+                        handleRequest(url, {
+                            body: req.body(),
+                        }).then(response => {
+                            res.status(response.status);
+                            res.headers(response.headers);
+                            res.body(response.body);
 
-                                resolve(res);
-                            },
+                            resolve(res);
                         });
                     })
             );
