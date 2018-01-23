@@ -62,9 +62,9 @@ import { getRelatedType } from '../nameConverter';
  * //
  * // type Query {
  * //     Post(id: ID!): Post
- * //     allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): [Post]
+ * //     allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): [Post]
  * //     User(id: ID!): User
- * //     allUsers(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: String): [User]
+ * //     allUsers(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: UserFilter): [User]
  * // }
  * //
  * // type Mutation {
@@ -116,7 +116,7 @@ export default data => {
                 args: {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
-                    filter: { type: GraphQLString },
+                    filter: { type: filterTypesByName[type.name] },
                 },
             };
             return fields;
