@@ -3,6 +3,8 @@ import {
     GraphQLString,
     GraphQLInt,
     GraphQLFloat,
+    GraphQLList,
+    GraphQLID,
 } from 'graphql';
 import getFieldsFromEntities from './getFieldsFromEntities';
 import getValuesFromEntities from './getValuesFromEntities';
@@ -96,6 +98,9 @@ export default data =>
                     fields: Object.assign(
                         {
                             q: { type: GraphQLString },
+                        },
+                        {
+                            ids: { type: new GraphQLList(GraphQLID) },
                         },
                         getFieldsFromEntities(data[key], false),
                         getRangeFiltersFromEntities(data[key])
