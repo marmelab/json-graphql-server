@@ -1,8 +1,8 @@
-export default (entityData, filter = {}) => {
+export default (entityData = [], filter = {}) => {
     let items = [...entityData];
 
     if (filter.ids) {
-        items = items.filter(d => filter.ids.includes(d.id.toString()));
+        items = items.filter(d => filter.ids.some(id => id == d.id));
     } else {
         Object.keys(filter).filter(key => key !== 'q').forEach(key => {
             if (key.indexOf('_lte') !== -1) {
