@@ -40,6 +40,8 @@ Start the GraphQL server on localhost, port 3000.
 json-graphql-server db.js
 ```
 
+To use a port other than port 3000, you can run `json-graphql-server db.js -p <your port here>`
+
 Now you can query your data in graphql. For instance, to issue the following query:
 
 ```graphql
@@ -533,7 +535,7 @@ Deploy with Heroku or Next.js.
 
 ## Roadmap
 
-* CLI options (port, https, watch, delay, custom schema)
+* CLI options (https, watch, delay, custom schema)
 * Subscriptions
 * Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
 
