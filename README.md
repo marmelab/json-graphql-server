@@ -40,7 +40,7 @@ Start the GraphQL server on localhost, port 3000.
 json-graphql-server db.js
 ```
 
-To use a port other than port 3000, you can run `json-graphql-server db.js -p <your port here>`
+To use a port other than 3000, you can run `json-graphql-server db.js --p <your port here>`
 
 Now you can query your data in graphql. For instance, to issue the following query:
 
