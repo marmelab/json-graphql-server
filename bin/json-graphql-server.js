@@ -10,6 +10,13 @@ var data = require(path.join(process.cwd(), dataFilePath));
 var PORT = process.env.NODE_PORT || 3000;
 var app = express();
 
+process.argv.forEach((arg, index) => {
+  // allow a custom port via CLI
+  if (arg === '--p' && process.argv.length > index + 1) {
+    PORT = process.argv[index + 1];
+  }
+});
+
 app.use(cors());
 app.use('/', JsonGraphqlServer(data));
 app.listen(PORT);
@@ -17,5 +24,5 @@ var msg = `GraphQL server running with your data at http://localhost:${PORT}/`;
 console.log(msg); // eslint-disable-line no-console
 
 process.on('unhandledRejection', (reason, p) => {
-    console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+  console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
 });
