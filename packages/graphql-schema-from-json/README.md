@@ -8,7 +8,7 @@ Guess a GraphQL schema from json data.
 
 or
 
-`yarn graphql-schema-from-json`
+`yarn add graphql-schema-from-json`
 
 ## Usage
 
