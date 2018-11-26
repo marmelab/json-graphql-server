@@ -2,7 +2,7 @@
   "env": {
     "test": {
       "presets": [
-        "es2015",
+        "env",
         "stage-0"
       ],
       "plugins": [
@@ -13,7 +13,7 @@
     "development": {
       "presets": [
         [
-          "es2015",
+          "env",
           {
             "modules": false
           }
@@ -28,7 +28,7 @@
     "production": {
       "presets": [
         [
-          "es2015",
+          "env",
           {
             "modules": false
           }
