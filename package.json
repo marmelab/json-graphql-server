@@ -4,8 +4,16 @@
     "main": "lib/json-graphql-server.node.min.js",
     "browser": "lib/json-graphql-server.client.min.js",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
-    "authors": ["François Zaninotto", "Gildas Garcia"],
-    "files": ["*.md", "lib", "src", "bin"],
+    "authors": [
+        "François Zaninotto",
+        "Gildas Garcia"
+    ],
+    "files": [
+        "*.md",
+        "lib",
+        "src",
+        "bin"
+    ],
     "license": "MIT",
     "scripts": {
         "format": "make format",
@@ -16,12 +24,15 @@
         "prepublish": "make build"
     },
     "lint-staged": {
-        "src/**/*.js": ["eslint --fix", "git add"]
+        "src/**/*.js": [
+            "eslint --fix",
+            "git add"
+        ]
     },
     "devDependencies": {
         "@types/jest": "~19.2.4",
-        "babel-cli": "~6.24.1",
-        "babel-core": "~6.25.0",
+        "babel-cli": "^6.26.0",
+        "babel-core": "^6.26.3",
         "babel-eslint": "~7.2.3",
         "babel-jest": "~20.0.3",
         "babel-loader": "7.1.2",
@@ -36,7 +47,7 @@
         "eslint-plugin-jest": "~20.0.3",
         "eslint-plugin-prettier": "~2.1.2",
         "husky": "~0.13.3",
-        "jest": "~20.0.4",
+        "jest": "~23.6.0",
         "lint-staged": "~3.4.1",
         "prettier": "~1.5.2",
         "supertest": "~3.0.0",
@@ -46,7 +57,7 @@
         "apollo-client": "~1.2.0",
         "apollo-test-utils": "~0.3.2",
         "cors": "^2.8.4",
-        "express": "~4.15.3",
+        "express": "~4.16.0",
         "express-graphql": "~0.6.7",
         "graphql": "~0.10.5",
         "graphql-tag": "~2.0.0",
@@ -54,7 +65,7 @@
         "graphql-type-json": "~0.1.4",
         "inflection": "~1.12.0",
         "lodash.merge": "~4.6.0",
-        "reify": "~0.12.0",
+        "reify": "~0.18.1",
         "xhr-mock": "^2.0.3"
     },
     "bin": {
