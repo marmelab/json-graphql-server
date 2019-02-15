@@ -162,7 +162,7 @@ export default (data, options) => {
 
     const schema = new GraphQLSchema({
         query: queryType,
-        mutation: mutationType,
+        mutation: options.readonly ? undefined : mutationType,
     });
 
     /**

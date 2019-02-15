@@ -104,7 +104,7 @@ const QueryType = new GraphQLObjectType({
 */
 
 test('creates one type per data type', () => {
-    const typeMap = getSchemaFromData(data).getTypeMap();
+    const typeMap = getSchemaFromData(data, {}).getTypeMap();
     expect(typeMap['Post'].name).toEqual(PostType.name);
     expect(Object.keys(typeMap['Post'].getFields())).toEqual(
         Object.keys(PostType.getFields())
@@ -116,17 +116,17 @@ test('creates one type per data type', () => {
 });
 
 test('creates one field per relationship', () => {
-    const typeMap = getSchemaFromData(data).getTypeMap();
+    const typeMap = getSchemaFromData(data, {}).getTypeMap();
     expect(Object.keys(typeMap['Post'].getFields())).toContain('User');
 });
 
 test('creates one field per reverse relationship', () => {
-    const typeMap = getSchemaFromData(data).getTypeMap();
+    const typeMap = getSchemaFromData(data, {}).getTypeMap();
     expect(Object.keys(typeMap['User'].getFields())).toContain('Posts');
 });
 
 test('creates three query fields per data type', () => {
-    const queries = getSchemaFromData(data).getQueryType().getFields();
+    const queries = getSchemaFromData(data, {}).getQueryType().getFields();
     expect(queries['Post'].type.name).toEqual(PostType.name);
     expect(queries['Post'].args).toEqual([
         {
@@ -173,7 +173,7 @@ test('creates three query fields per data type', () => {
 });
 
 test('creates three mutation fields per data type', () => {
-    const mutations = getSchemaFromData(data).getMutationType().getFields();
+    const mutations = getSchemaFromData(data, {}).getMutationType().getFields();
     expect(mutations['createPost'].type.name).toEqual(PostType.name);
     expect(mutations['createPost'].args).toEqual([
         {
@@ -283,12 +283,20 @@ test('pluralizes and capitalizes correctly', () => {
         feet: [{ id: 1, size: 42 }, { id: 2, size: 39 }],
         categories: [{ id: 1, name: 'foo' }],
     };
-    const queries = getSchemaFromData(data).getQueryType().getFields();
+    const queries = getSchemaFromData(data, {}).getQueryType().getFields();
     expect(queries).toHaveProperty('Foot');
     expect(queries).toHaveProperty('Category');
     expect(queries).toHaveProperty('allFeet');
     expect(queries).toHaveProperty('allCategories');
-    const types = getSchemaFromData(data).getTypeMap();
+    const types = getSchemaFromData(data, {}).getTypeMap();
     expect(types).toHaveProperty('Foot');
     expect(types).toHaveProperty('Category');
+});
+
+describe('With options', () => {
+    test('readonly skips  mutation fields per data type', () => {
+        const options = { readonly: true };
+        const mutation = getSchemaFromData(data, options).getMutationType();
+        expect(mutation).toBeNull();
+    });
 });

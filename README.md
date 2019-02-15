@@ -409,6 +409,24 @@ app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 
+## Options
+
+`jsonGraphqlExpress` accepts a second argument with an options object.
+
+```js
+import express from 'express';
+import jsonGraphqlExpress from 'json-graphql-server';
+
+// Skips creating mutations for the data
+const options = {
+  readonly: true
+}
+
+app.use('/graphql', jsonGraphqlExpress(data, options));
+```
+
+Currently only `readonly` is available as an option.
+
 ## Usage in browser with XMLHttpRequest
 
 Useful when using XMLHttpRequest directly or libaries such as [axios](https://www.npmjs.com/package/axios).

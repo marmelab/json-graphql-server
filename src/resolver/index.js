@@ -24,7 +24,7 @@ const getMutationResolvers = (entityName, data) => ({
     [`remove${entityName}`]: remove(data),
 });
 
-export default data => {
+export default (data, options) => {
     return Object.assign(
         {},
         {
@@ -37,16 +37,23 @@ export default data => {
                     ),
                 {}
             ),
-            Mutation: Object.keys(data).reduce(
-                (resolvers, key) =>
-                    Object.assign(
-                        {},
-                        resolvers,
-                        getMutationResolvers(getTypeFromKey(key), data[key])
-                    ),
-                {}
-            ),
         },
+        options.readonly
+            ? {}
+            : {
+                  Mutation: Object.keys(data).reduce(
+                      (resolvers, key) =>
+                          Object.assign(
+                              {},
+                              resolvers,
+                              getMutationResolvers(
+                                  getTypeFromKey(key),
+                                  data[key]
+                              )
+                          ),
+                      {}
+                  ),
+              },
         Object.keys(data).reduce(
             (resolvers, key) =>
                 Object.assign({}, resolvers, {

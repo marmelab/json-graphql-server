@@ -49,6 +49,6 @@ import schemaBuilder from './schemaBuilder';
  */
 export default (data, options) =>
     graphqlHTTP({
-        schema: schemaBuilder(data, options),
+        schema: schemaBuilder(data, options || {}),
         graphiql: true,
     });
