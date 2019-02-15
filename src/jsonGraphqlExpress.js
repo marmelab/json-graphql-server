@@ -5,6 +5,8 @@ import schemaBuilder from './schemaBuilder';
  * An express middleware for a GraphQL endpoint serving data from the supplied json.
  *
  * @param {any} data
+ * @param {Object} options
+ * @param {Boolean} options.readonly Whether mutations should be created, defaults to false
  * @returns An array of middlewares
  *
  * @example
@@ -45,8 +47,8 @@ import schemaBuilder from './schemaBuilder';
  *
  * app.listen(PORT);
  */
-export default data =>
+export default (data, options) =>
     graphqlHTTP({
-        schema: schemaBuilder(data),
+        schema: schemaBuilder(data, options),
         graphiql: true,
     });
