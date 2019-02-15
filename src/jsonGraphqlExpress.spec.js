@@ -84,6 +84,18 @@ describe('integration tests', () => {
                 },
             ],
         }));
+    it('handles getting random items', () =>
+        gqlAgent('{ randomPosts { id } }').expect(response => {
+            expect(response.body).toEqual({
+                data: {
+                    randomPosts: [
+                        { id: expect.anything() },
+                        { id: expect.anything() },
+                        { id: expect.anything() },
+                    ],
+                },
+            });
+        }));
     it('gets relationship fields', () =>
         gqlAgent('{ Post(id: 1) { User { name } Comments { body }} }').expect({
             data: {

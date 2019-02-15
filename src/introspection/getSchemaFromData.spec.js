@@ -125,7 +125,7 @@ test('creates one field per reverse relationship', () => {
     expect(Object.keys(typeMap['User'].getFields())).toContain('Posts');
 });
 
-test('creates three query fields per data type', () => {
+test('creates four query fields per data type', () => {
     const queries = getSchemaFromData(data).getQueryType().getFields();
     expect(queries['Post'].type.name).toEqual(PostType.name);
     expect(queries['Post'].args).toEqual([
@@ -149,6 +149,14 @@ test('creates three query fields per data type', () => {
     expect(queries['allPosts'].args[4].type.toString()).toEqual('PostFilter');
     expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 
+    expect(queries['randomPosts'].type.toString()).toEqual('[Post]');
+    expect(queries['randomPosts'].args[0].name).toEqual('count');
+    expect(queries['randomPosts'].args[0].type).toEqual(GraphQLInt);
+    expect(queries['randomPosts'].args[1].name).toEqual('filter');
+    expect(queries['randomPosts'].args[1].type.toString()).toEqual(
+        'PostFilter'
+    );
+
     expect(queries['User'].type.name).toEqual(UserType.name);
     expect(queries['User'].args).toEqual([
         {
@@ -170,6 +178,14 @@ test('creates three query fields per data type', () => {
     expect(queries['allUsers'].args[4].name).toEqual('filter');
     expect(queries['allUsers'].args[4].type.toString()).toEqual('UserFilter');
     expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
+
+    expect(queries['randomUsers'].type.toString()).toEqual('[User]');
+    expect(queries['randomUsers'].args[0].name).toEqual('count');
+    expect(queries['randomUsers'].args[0].type).toEqual(GraphQLInt);
+    expect(queries['randomUsers'].args[1].name).toEqual('filter');
+    expect(queries['randomUsers'].args[1].type.toString()).toEqual(
+        'UserFilter'
+    );
 });
 
 test('creates three mutation fields per data type', () => {

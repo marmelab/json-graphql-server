@@ -111,6 +111,13 @@ export default data => {
                     filter: { type: filterTypesByName[type.name] },
                 },
             };
+            fields[`random${camelize(pluralize(type.name))}`] = {
+                type: new GraphQLList(typesByName[type.name]),
+                args: {
+                    count: { type: GraphQLInt },
+                    filter: { type: filterTypesByName[type.name] },
+                },
+            };
             fields[`_all${camelize(pluralize(type.name))}Meta`] = {
                 type: listMetadataType,
                 args: {

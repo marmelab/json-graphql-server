@@ -102,6 +102,7 @@ Based on your data, json-graphql-server will generate a schema with one type per
 type Query {
   Post(id: ID!): Post
   allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): [Post]
+  randomPosts(count: Int, filter: PostFilter): [Post]
   _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): ListMetadata
 }
 type Mutation {

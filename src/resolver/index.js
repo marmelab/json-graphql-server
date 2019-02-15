@@ -3,6 +3,7 @@ import GraphQLJSON from 'graphql-type-json';
 
 import all from './Query/all';
 import meta from './Query/meta';
+import random from './Query/random';
 import single from './Query/single';
 import create from './Mutation/create';
 import update from './Mutation/update';
@@ -14,6 +15,7 @@ import hasType from '../introspection/hasType';
 
 const getQueryResolvers = (entityName, data) => ({
     [`all${pluralize(entityName)}`]: all(data),
+    [`random${pluralize(entityName)}`]: random(data),
     [`_all${pluralize(entityName)}Meta`]: meta(data),
     [entityName]: single(data),
 });
