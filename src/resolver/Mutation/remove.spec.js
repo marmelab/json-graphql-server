@@ -27,3 +27,15 @@ test('removes record when found', () => {
     remove(data)(null, { id: 1 });
     expect(data).toEqual([{ id: 2, value: 'bar' }]);
 });
+
+test('removes with string data id', () => {
+    const data = [{ id: '1', value: 'foo' }, { id: '2', value: 'bar' }];
+    remove(data)(null, { id: 1 });
+    expect(data).toEqual([{ id: '2', value: 'bar' }]);
+});
+
+test('removes with string input and data ids', () => {
+    const data = [{ id: 'abc', value: 'foo' }, { id: 'def', value: 'bar' }];
+    remove(data)(null, { id: 'abc' });
+    expect(data).toEqual([{ id: 'def', value: 'bar' }]);
+});
