@@ -531,7 +531,7 @@ app.listen(PORT);
 
 ## Schema Export
 
-You also use the export `jsonSchemaBuilder` to get your own copy of the GraphQLSchema:
+You can also use the export `jsonSchemaBuilder` to get your own copy of the GraphQLSchema:
 
 In  node:
 ```js
