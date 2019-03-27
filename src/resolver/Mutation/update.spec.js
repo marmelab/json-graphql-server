@@ -35,3 +35,11 @@ test('removes property when setting the value to undefined', () => {
     update(data)(null, { id: 1, value: undefined });
     expect(data).toEqual([{ id: 1 }]);
 });
+
+test("doesn't confuse undefined id with the id 'undefined'", () => {
+    const data = [{ value: 'foo' }];
+    expect(
+        update(data)(null, { id: 'undefined', value: 'bar', bar: 'baz' })
+    ).toBeUndefined();
+    expect(data).toEqual([{ value: 'foo' }]);
+});
