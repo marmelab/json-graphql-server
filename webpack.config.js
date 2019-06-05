@@ -1,23 +1,11 @@
 const path = require('path');
-const webpack = require('webpack');
-const DefinePlugin = webpack.DefinePlugin;
-const UglifyJsPlugin = webpack.optimize.UglifyJsPlugin;
 
 let libraryName = 'json-graphql-server';
 
 let plugins = [];
 let outputFile;
 
-if (process.env.NODE_ENV === 'production') {
-    plugins.push(
-        new UglifyJsPlugin({
-            minimize: true,
-            sourceMap: true,
-        }),
-        new DefinePlugin({
-            'process.env.NODE_ENV': JSON.stringify('production'),
-        })
-    );
+if (process.env.node_env === 'production') {
     outputFile = target => `${libraryName}.${target}.min.js`;
 } else {
     outputFile = target => `${libraryName}.${target}.js`;
@@ -25,6 +13,7 @@ if (process.env.NODE_ENV === 'production') {
 
 const defaultConfig = {
     devtool: 'source-map',
+    mode: process.env.node_env === 'production' ? 'production' : 'development',
     module: {
         rules: [
             {
@@ -50,7 +39,7 @@ const serverConfig = Object.assign({}, defaultConfig, {
         library: libraryName,
         libraryTarget: 'umd',
         umdNamedDefine: true,
-    }
+    },
 });
 
 const clientConfig = Object.assign({}, defaultConfig, {
@@ -62,7 +51,7 @@ const clientConfig = Object.assign({}, defaultConfig, {
         library: libraryName,
         libraryTarget: 'umd',
         umdNamedDefine: true,
-    }
+    },
 });
 
 module.exports = [serverConfig, clientConfig];
