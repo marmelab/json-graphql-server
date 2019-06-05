@@ -562,4 +562,4 @@ To learn more about the contributions to this project, consult the [contribution
 
 ## License
 
-Admin-on-rest is licensed under the [MIT Licence](https://github.com/marmelab/json-graphql-server/blob/master/LICENSE.md), sponsored and supported by [marmelab](http://marmelab.com).
+json-graphql-server is licensed under the [MIT Licence](https://github.com/marmelab/json-graphql-server/blob/master/LICENSE.md), sponsored and supported by [marmelab](http://marmelab.com).
