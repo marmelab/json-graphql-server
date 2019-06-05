@@ -1,4 +1,5 @@
 # json-graphql-server
+ ![Travis (.org)](https://img.shields.io/travis/marmelab/json-graphql-server.svg) ![GitHub top language](https://img.shields.io/github/languages/top/marmelab/json-graphql-server.svg) ![GitHub contributors](https://img.shields.io/github/contributors/marmelab/json-graphql-server.svg) ![License](https://img.shields.io/github/license/marmelab/json-graphql-server.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
 
 Get a full fake GraphQL API with zero coding in less than 30 seconds.
 
@@ -550,6 +551,14 @@ make test
 make watch
 make format
 ```
+
+To learn more about the contributions to this project, consult the [contribution guide](/.github/CONTRIBUTING.md).
+
+## Maintainers
+
+[![fzaninotto](https://avatars2.githubusercontent.com/u/99944?s=96&amp;v=4)](https://github.com/fzaninotto) | [![djhi](https://avatars1.githubusercontent.com/u/1122076?s=96&amp;v=4)](https://github.com/djhi) | [![alexisjanvier](https://avatars1.githubusercontent.com/u/547706?s=96&amp;v=4)](https://github.com/alexisjanvier)
+:---:|:---:|:---:
+[Francois Zaninotto](https://github.com/fzaninotto) | [Gildas Garcia](https://github.com/djhi) | [Alexis Janvier](https://github.com/alexisjanvier)
 
 ## License
 
