@@ -36,7 +36,7 @@ let agent;
 beforeAll(() => {
     const app = express();
     app.use('/', jsonGraphqlExpress(data));
-    agent = request.agent(app);
+    agent = request(app);
 });
 
 const gqlAgent = (query, variables) =>
@@ -99,15 +99,13 @@ describe('integration tests', () => {
     it('allows multiple mutations', () =>
         gqlAgent(
             'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
-        ).then(() =>
-            gqlAgent(
-                'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
-            ).expect({
-                data: {
-                    updatePost: {
-                        id: 2,
-                    },
-                },
-            })
-        ));
+        )
+            .then(() =>
+                gqlAgent(
+                    'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
+                )
+            )
+            .then(res =>
+                expect(res.body).toEqual({ data: { updatePost: { id: '2' } } })
+            ));
 });
