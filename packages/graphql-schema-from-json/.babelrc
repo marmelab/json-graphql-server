@@ -1,20 +1,25 @@
 {
   "presets": [
     [
-      "env",
+      "@babel/preset-env",
       {
         "modules": false
       }
     ]
   ],
   "plugins": [
-    "external-helpers",
-    "transform-runtime"
+    "@babel/plugin-external-helpers",
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "corejs": 3
+      }
+    ]
   ],
   "env": {
     "test": {
       "presets": [
-        "env"
+        "@babel/preset-env"
       ]
     }
   }

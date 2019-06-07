@@ -6,14 +6,16 @@ import globals from 'rollup-plugin-node-globals';
 import json from 'rollup-plugin-json';
 
 export default {
-    entry: './src/index.js',
-    dest: 'lib/index.js',
-    format: 'umd',
-    moduleName: 'json-to-grapgql',
+    input: './src/index.js',
+    output: {
+        file: 'lib/index.js',
+        format: 'umd',
+        name: 'json-to-grapgql',
+        exports: 'named',
+    },
     plugins: [
         resolve({
-            jsnext: true,
-            browser: true,
+            mainFields: ['module', 'jsnext:main', 'browser'],
         }),
         commonjs({
             include: 'node_modules/**',
