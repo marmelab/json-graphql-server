@@ -9,7 +9,7 @@ import schemaBuilder from './schemaBuilder';
  *
  * @example
  * import express from 'express';
- * import { jsonGraphqlExpress } from 'json-graphql-server';
+ * import jsonGraphqlExpress from 'json-graphql-server';
  *
  * const data = {
  *    "posts": [

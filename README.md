@@ -530,6 +530,26 @@ app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 
+## Schema Export
+
+You can also use the export `jsonSchemaBuilder` to get your own copy of the GraphQLSchema:
+
+In  node:
+```js
+import {graphql} from 'graphql';
+import {jsonSchemaBuilder} from 'json-graphql-server';
+
+const data = { };
+const schema = jsonSchemaBuilder(data);
+const query = `[...]`
+
+graphql(schema, query).then(result => {
+  console.log(result);
+});
+```
+
+Or available in the global scope when running on a client as `jsonSchemaBuilder`.
+
 ## Deployment
 
 Deploy with Heroku or Next.js.
