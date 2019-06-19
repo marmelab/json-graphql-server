@@ -1,14 +1,18 @@
 export default (entityData = []) => (_, params) => {
-    const parsedId = parseInt(params.id, 10); // FIXME fails for non-integer ids
-    const indexOfEntity = entityData.findIndex(
-        e => parseInt(e.id, 10) === parsedId
-    );
-    if (indexOfEntity !== -1) {
-        entityData[indexOfEntity] = Object.assign(
-            {},
-            entityData[indexOfEntity],
-            params
+    let updatedEntity = undefined;
+    if (params.id != null) {
+        const stringId = params.id.toString();
+        const indexOfEntity = entityData.findIndex(
+            e => e.id != null && e.id.toString() === stringId
         );
-        return entityData[indexOfEntity];
+        if (indexOfEntity !== -1) {
+            entityData[indexOfEntity] = Object.assign(
+                {},
+                entityData[indexOfEntity],
+                params
+            );
+            updatedEntity = entityData[indexOfEntity];
+        }
     }
+    return updatedEntity;
 };
