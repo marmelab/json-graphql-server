@@ -1,5 +1,5 @@
 # json-graphql-server
- ![Travis (.org)](https://img.shields.io/travis/marmelab/json-graphql-server.svg) ![GitHub top language](https://img.shields.io/github/languages/top/marmelab/json-graphql-server.svg) ![GitHub contributors](https://img.shields.io/github/contributors/marmelab/json-graphql-server.svg) ![License](https://img.shields.io/github/license/marmelab/json-graphql-server.svg) ![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)
+ ![travis (.org)](https://img.shields.io/travis/marmelab/json-graphql-server.svg) ![github top language](https://img.shields.io/github/languages/top/marmelab/json-graphql-server.svg) ![David. dependencies](https://david-dm.org/marmelab/json-graphql-server.svg) ![npm](https://img.shields.io/npm/v/json-graphql-server.svg) ![github contributors](https://img.shields.io/github/contributors/marmelab/json-graphql-server.svg) ![license](https://img.shields.io/github/license/marmelab/json-graphql-server.svg) ![prs welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg)
 
 Get a full fake GraphQL API with zero coding in less than 30 seconds.
 
