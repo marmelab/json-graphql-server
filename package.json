@@ -64,7 +64,7 @@
         "graphql-tools": "~4.0.5",
         "graphql-type-json": "~0.3.0",
         "inflection": "~1.12.0",
-        "lodash.merge": "~4.6.0",
+        "lodash.merge": "~4.6.2",
         "reify": "~0.20.4",
         "xhr-mock": "^2.0.3"
     },
