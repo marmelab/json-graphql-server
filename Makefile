@@ -10,6 +10,5 @@ install: package.json ## Install dependencies
 	@${PKG} install
 
 test: ## Launch unit tests
-	@cd packages/json-graphql-server && NODE_ENV=test ./node_modules/.bin/jest
-	@cd packages/graphql-schema-from-json && NODE_ENV=test ./node_modules/.bin/jest
+	@NODE_ENV=test ${PKG} run test
 
