@@ -12,10 +12,6 @@
     "lib"
   ],
   "license": "MIT",
-  "engines": {
-    "node": ">=8.14"
-  },
-  "engineStrict": true,
   "scripts": {
     "build": "make build",
     "format": "make format",
