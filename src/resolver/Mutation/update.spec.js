@@ -14,7 +14,10 @@ test('returns updated record when found', () => {
 });
 
 test('returns undefined when not found', () => {
-    const data = [{ id: 1, value: 'foo' }, { id: 2, value: 'bar' }];
+    const data = [
+        { id: 1, value: 'foo' },
+        { id: 2, value: 'bar' },
+    ];
     expect(update(data)(null, { id: 3 })).toBeUndefined();
 });
 

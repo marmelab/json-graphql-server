@@ -50,7 +50,7 @@ const UsersType = new GraphQLObjectType({
 
 test('creates one filter type per entity', () => {
     const filterTypes = getFilterTypesFromData(data);
-    expect(Object.values(filterTypes).map(type => type.toString())).toEqual([
+    expect(Object.values(filterTypes).map((type) => type.toString())).toEqual([
         'PostFilter',
         'UserFilter',
     ]);

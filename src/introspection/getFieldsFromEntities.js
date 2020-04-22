@@ -3,7 +3,7 @@ import getValuesFromEntities from './getValuesFromEntities';
 
 /**
  * Get a list of GraphQL fields from a list of entities
- * 
+ *
  * @example
  * const entities = [
  *     {

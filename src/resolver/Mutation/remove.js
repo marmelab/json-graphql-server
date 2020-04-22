@@ -3,7 +3,7 @@ export default (entityData = []) => (_, { id }) => {
     if (id != null) {
         const stringId = id.toString();
         const indexOfEntity = entityData.findIndex(
-            e => e.id != null && e.id.toString() === stringId
+            (e) => e.id != null && e.id.toString() === stringId
         );
 
         if (indexOfEntity !== -1) {

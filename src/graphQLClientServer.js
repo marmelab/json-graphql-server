@@ -2,13 +2,13 @@ import mock, { proxy } from 'xhr-mock';
 import handleRequestFactory from './handleRequest';
 
 /**
- * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql 
+ * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql
  * and returns a response from the supplied data.
- * 
+ *
  * @export A sinon.js FakeServer (http://sinonjs.org/releases/v2.3.6/fake-xhr-and-server/#fake-server)
- * @param {any} data 
+ * @param {any} data
  * @param {any} url Specifies the endpoint to intercept (Default is 'http://localhost:3000/graphql').
- * 
+ *
  * @example
  * const data = {
  *    "posts": [
@@ -36,11 +36,11 @@ import handleRequestFactory from './handleRequest';
  *        }
  *    ],
  * };
- * 
+ *
  * GraphQLClientServer(data);
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
-export default function({ data, url }) {
+export default function ({ data, url }) {
     const handleRequest = handleRequestFactory(data);
 
     return {
@@ -52,10 +52,10 @@ export default function({ data, url }) {
             mock.post(
                 url,
                 (req, res) =>
-                    new Promise(resolve => {
+                    new Promise((resolve) => {
                         handleRequest(url, {
                             body: req.body(),
-                        }).then(response => {
+                        }).then((response) => {
                             res.status(response.status);
                             res.headers(response.headers);
                             res.body(response.body);

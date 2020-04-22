@@ -7,7 +7,10 @@ test('does not take empty values into account', () => {
 });
 test('returns an array of values for every field', () => {
     expect(
-        getValuesFromEntities([{ id: 1, foo: 'bar' }, { id: 2, foo: 'baz' }])
+        getValuesFromEntities([
+            { id: 1, foo: 'bar' },
+            { id: 2, foo: 'baz' },
+        ])
     ).toEqual({
         id: [1, 2],
         foo: ['bar', 'baz'],

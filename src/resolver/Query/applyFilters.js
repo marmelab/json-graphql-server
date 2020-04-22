@@ -2,59 +2,62 @@ export default (entityData = [], filter = {}) => {
     let items = [...entityData];
 
     if (filter.ids) {
-        items = items.filter(d => filter.ids.some(id => id == d.id));
+        items = items.filter((d) => filter.ids.some((id) => id == d.id));
     } else {
-        Object.keys(filter).filter(key => key !== 'q').forEach(key => {
-            if (key.indexOf('_lte') !== -1) {
-                // less than or equal
-                const realKey = key.replace(/(_lte)$/, '');
-                items = items.filter(d => d[realKey] <= filter[key]);
-                return;
-            }
-            if (key.indexOf('_gte') !== -1) {
-                // less than or equal
-                const realKey = key.replace(/(_gte)$/, '');
-                items = items.filter(d => d[realKey] >= filter[key]);
-                return;
-            }
-            if (key.indexOf('_lt') !== -1) {
-                // less than or equal
-                const realKey = key.replace(/(_lt)$/, '');
-                items = items.filter(d => d[realKey] < filter[key]);
-                return;
-            }
-            if (key.indexOf('_gt') !== -1) {
-                // less than or equal
-                const realKey = key.replace(/(_gt)$/, '');
-                items = items.filter(d => d[realKey] > filter[key]);
-                return;
-            }
+        Object.keys(filter)
+            .filter((key) => key !== 'q')
+            .forEach((key) => {
+                if (key.indexOf('_lte') !== -1) {
+                    // less than or equal
+                    const realKey = key.replace(/(_lte)$/, '');
+                    items = items.filter((d) => d[realKey] <= filter[key]);
+                    return;
+                }
+                if (key.indexOf('_gte') !== -1) {
+                    // less than or equal
+                    const realKey = key.replace(/(_gte)$/, '');
+                    items = items.filter((d) => d[realKey] >= filter[key]);
+                    return;
+                }
+                if (key.indexOf('_lt') !== -1) {
+                    // less than or equal
+                    const realKey = key.replace(/(_lt)$/, '');
+                    items = items.filter((d) => d[realKey] < filter[key]);
+                    return;
+                }
+                if (key.indexOf('_gt') !== -1) {
+                    // less than or equal
+                    const realKey = key.replace(/(_gt)$/, '');
+                    items = items.filter((d) => d[realKey] > filter[key]);
+                    return;
+                }
 
-            if (Array.isArray(filter[key])) {
-                items = items.filter(item => {
-                    if (Array.isArray(item[key])) {
-                        // array filter and array item value: where all items in values
-                        return filter[key].every(v =>
-                            item[key].some(itemValue => itemValue == v)
+                if (Array.isArray(filter[key])) {
+                    items = items.filter((item) => {
+                        if (Array.isArray(item[key])) {
+                            // array filter and array item value: where all items in values
+                            return filter[key].every((v) =>
+                                item[key].some((itemValue) => itemValue == v)
+                            );
+                        }
+                        // where item in values
+                        return (
+                            filter[key].filter((v) => v == item[key]).length > 0
                         );
-                    }
-                    // where item in values
-                    return filter[key].filter(v => v == item[key]).length > 0;
-                });
-            } else {
-                items = items.filter(
-                    d =>
+                    });
+                } else {
+                    items = items.filter((d) =>
                         filter[key] instanceof Date
                             ? +d[key] == +filter[key]
                             : d[key] == filter[key]
-                );
-            }
-        });
+                    );
+                }
+            });
 
         if (filter.q) {
-            items = items.filter(d =>
+            items = items.filter((d) =>
                 Object.keys(d).some(
-                    key =>
+                    (key) =>
                         d[key] &&
                         d[key]
                             .toString()
