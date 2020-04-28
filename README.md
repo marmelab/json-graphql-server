@@ -412,7 +412,7 @@ app.listen(PORT);
 
 ## Usage in browser with XMLHttpRequest
 
-Useful when using XMLHttpRequest directly or libaries such as [axios](https://www.npmjs.com/package/axios).
+Useful when using XMLHttpRequest directly or libraries such as [axios](https://www.npmjs.com/package/axios).
 
 ### Install with a script tag
 
