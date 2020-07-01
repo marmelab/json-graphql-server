@@ -280,7 +280,10 @@ test('creates three mutation fields per data type', () => {
 
 test('pluralizes and capitalizes correctly', () => {
     const data = {
-        feet: [{ id: 1, size: 42 }, { id: 2, size: 39 }],
+        feet: [
+            { id: 1, size: 42 },
+            { id: 2, size: 39 },
+        ],
         categories: [{ id: 1, name: 'foo' }],
     };
     const queries = getSchemaFromData(data).getQueryType().getFields();

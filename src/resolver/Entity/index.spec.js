@@ -9,7 +9,10 @@ const data = {
         { id: 2, title: 'Ut enim ad minim', user_id: 456 },
         { id: 3, title: 'Sic Dolor amet', user_id: 123 },
     ],
-    users: [{ id: 123, name: 'John Doe' }, { id: 456, name: 'Jane Doe' }],
+    users: [
+        { id: 123, name: 'John Doe' },
+        { id: 456, name: 'Jane Doe' },
+    ],
     comments: [
         { id: 987, post_id: 1, body: 'Consectetur adipiscing elit' },
         { id: 995, post_id: 1, body: 'Nam molestie pellentesque dui' },

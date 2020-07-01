@@ -2,9 +2,9 @@ import { printSchema, GraphQLSchema, GraphQLObjectType } from 'graphql';
 
 /**
  * Return a schema string with a Main type using the fields
- * 
- * @param {*array} fields 
- * 
+ *
+ * @param {*array} fields
+ *
  * @example
  * printSchemaForFields({
  *     id: { type: graphql.GraphQLString },
@@ -23,7 +23,7 @@ import { printSchema, GraphQLSchema, GraphQLObjectType } from 'graphql';
  * //   foo: Main
  * // }
  */
-export const printSchemaForFields = fields => {
+export const printSchemaForFields = (fields) => {
     const mainType = new GraphQLObjectType({
         name: 'Main',
         fields,
@@ -40,7 +40,7 @@ export const printSchemaForFields = fields => {
     return printSchema(schema);
 };
 
-export const printSchemaForTypes = types => {
+export const printSchemaForTypes = (types) => {
     const typesSchema = types.reduce((schema, type) => {
         schema[type.name] = type;
         return schema;

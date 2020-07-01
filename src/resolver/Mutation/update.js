@@ -3,7 +3,7 @@ export default (entityData = []) => (_, params) => {
     if (params.id != null) {
         const stringId = params.id.toString();
         const indexOfEntity = entityData.findIndex(
-            e => e.id != null && e.id.toString() === stringId
+            (e) => e.id != null && e.id.toString() === stringId
         );
         if (indexOfEntity !== -1) {
             entityData[indexOfEntity] = Object.assign(

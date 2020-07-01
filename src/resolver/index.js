@@ -24,7 +24,7 @@ const getMutationResolvers = (entityName, data) => ({
     [`remove${entityName}`]: remove(data),
 });
 
-export default data => {
+export default (data) => {
     return Object.assign(
         {},
         {

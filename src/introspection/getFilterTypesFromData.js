@@ -11,7 +11,7 @@ import getValuesFromEntities from './getValuesFromEntities';
 import getTypeFromValues from './getTypeFromValues';
 import { getTypeFromKey } from '../nameConverter';
 
-const getRangeFiltersFromEntities = entities => {
+const getRangeFiltersFromEntities = (entities) => {
     const fieldValues = getValuesFromEntities(entities);
     return Object.keys(fieldValues).reduce((fields, fieldName) => {
         const fieldType = getTypeFromValues(
@@ -35,7 +35,7 @@ const getRangeFiltersFromEntities = entities => {
 
 /**
  * Get a list of GraphQLObjectType for filtering data
- * 
+ *
  * @example
  * const data = {
  *    "posts": [
@@ -89,7 +89,7 @@ const getRangeFiltersFromEntities = entities => {
  * //     }),
  * // }
  */
-export default data =>
+export default (data) =>
     Object.keys(data).reduce(
         (types, key) =>
             Object.assign({}, types, {

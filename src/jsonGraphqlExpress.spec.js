@@ -23,7 +23,10 @@ const data = {
             user_id: 123,
         },
     ],
-    users: [{ id: 123, name: 'John Doe' }, { id: 456, name: 'Jane Doe' }],
+    users: [
+        { id: 123, name: 'John Doe' },
+        { id: 456, name: 'Jane Doe' },
+    ],
     comments: [
         { id: 987, post_id: 1, body: 'Consectetur adipiscing elit' },
         { id: 995, post_id: 1, body: 'Nam molestie pellentesque dui' },
@@ -105,7 +108,7 @@ describe('integration tests', () => {
                     'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
                 )
             )
-            .then(res =>
+            .then((res) =>
                 expect(res.body).toEqual({ data: { updatePost: { id: '2' } } })
             ));
 });
