@@ -21,7 +21,7 @@ module.exports = {
                     },
                 ],
             ],
-            plugins: ['add-module-exports', '@babel/plugin-external-helpers'],
+            plugins: ['add-module-exports'],
         },
         production: {
             presets: [
@@ -32,7 +32,7 @@ module.exports = {
                     },
                 ],
             ],
-            plugins: ['add-module-exports', '@babel/plugin-external-helpers'],
+            plugins: ['add-module-exports'],
         },
     },
 };

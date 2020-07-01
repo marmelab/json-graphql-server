@@ -10,7 +10,7 @@ install: package.json ## Install dependencies
 	@$(PKG) install
 
 watch: ## continuously compile ES6 files to JS
-	NODE_ENV=development ./node_modules/.bin/rollup -c --watch
+	NODE_ENV=development ./node_modules/.bin/webpack --watch
 
 test: ## Launch unit tests
 	@NODE_ENV=test ./node_modules/.bin/jest
