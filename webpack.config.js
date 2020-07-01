@@ -5,7 +5,7 @@ let libraryName = 'json-graphql-server';
 let plugins = [];
 let outputFile;
 
-if (process.env.node_env === 'production') {
+if (process.env.NODE_ENV === 'production') {
     outputFile = target => `${libraryName}.${target}.min.js`;
 } else {
     outputFile = target => `${libraryName}.${target}.js`;
@@ -13,7 +13,7 @@ if (process.env.node_env === 'production') {
 
 const defaultConfig = {
     devtool: 'source-map',
-    mode: process.env.node_env === 'production' ? 'production' : 'development',
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     module: {
         rules: [
             {
