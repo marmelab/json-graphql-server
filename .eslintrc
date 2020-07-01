@@ -9,31 +9,19 @@
     },
     "extends": [
         "eslint:recommended",
-        "plugin:import/errors",
-        "plugin:import/warnings",
-        "prettier"
-    ],
-    "plugins": [
         "prettier",
-        "jest"
+        "plugin:prettier/recommended",
+        "plugin:import/errors",
+        "plugin:import/warnings"
     ],
+    "plugins": ["prettier", "jest"],
     "rules": {
-        "prettier/prettier": [
-            "error",
-            {
-                "singleQuote": true,
-                "tabWidth": 4,
-                "trailingComma": "es5"
-            }
-        ],
+        "prettier/prettier": ["error"],
         "import/no-extraneous-dependencies": "off",
         "no-console": [
             "error",
             {
-                "allow": [
-                    "warn",
-                    "error"
-                ]
+                "allow": ["warn", "error"]
             }
         ],
         "no-unused-vars": [
