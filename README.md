@@ -1,12 +1,14 @@
 # json-graphql-server
- ![travis (.org)](https://img.shields.io/travis/marmelab/json-graphql-server.svg) ![github top language](https://img.shields.io/github/languages/top/marmelab/json-graphql-server.svg) ![David. dependencies](https://david-dm.org/marmelab/json-graphql-server.svg) ![npm](https://img.shields.io/npm/v/json-graphql-server.svg) ![github contributors](https://img.shields.io/github/contributors/marmelab/json-graphql-server.svg) ![license](https://img.shields.io/github/license/marmelab/json-graphql-server.svg) ![prs welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg)
+
+![travis (.org)](https://img.shields.io/travis/marmelab/json-graphql-server.svg) ![github top language](https://img.shields.io/github/languages/top/marmelab/json-graphql-server.svg) ![David. dependencies](https://david-dm.org/marmelab/json-graphql-server.svg) ![npm](https://img.shields.io/npm/v/json-graphql-server.svg) ![github contributors](https://img.shields.io/github/contributors/marmelab/json-graphql-server.svg) ![license](https://img.shields.io/github/license/marmelab/json-graphql-server.svg) ![prs welcome](https://img.shields.io/badge/prs-welcome-brightgreen.svg)
 
 Get a full fake GraphQL API with zero coding in less than 30 seconds.
 
 ## Motivation
 
 > I'd love to learn GraphQL, but it seems that I first have to read a book about GraphQL Types and Queries, then install a gazillion npm packages.
-> - About every developer
+>
+> -   About every developer
 
 Start playing with GraphQL right away with `json-graphql-server`, a testing and mocking tool for GraphQL. All it takes is a JSON of your data.
 
@@ -21,18 +23,28 @@ Your data file should export an object where the keys are the entity types. The 
 ```js
 module.exports = {
     posts: [
-        { id: 1, title: "Lorem Ipsum", views: 254, user_id: 123 },
-        { id: 2, title: "Sic Dolor amet", views: 65, user_id: 456 },
+        { id: 1, title: 'Lorem Ipsum', views: 254, user_id: 123 },
+        { id: 2, title: 'Sic Dolor amet', views: 65, user_id: 456 },
     ],
     users: [
-        { id: 123, name: "John Doe" },
-        { id: 456, name: "Jane Doe" }
+        { id: 123, name: 'John Doe' },
+        { id: 456, name: 'Jane Doe' },
     ],
     comments: [
-        { id: 987, post_id: 1, body: "Consectetur adipiscing elit", date: new Date('2017-07-03') },
-        { id: 995, post_id: 1, body: "Nam molestie pellentesque dui", date: new Date('2017-08-17') }
-    ]
-}
+        {
+            id: 987,
+            post_id: 1,
+            body: 'Consectetur adipiscing elit',
+            date: new Date('2017-07-03'),
+        },
+        {
+            id: 995,
+            post_id: 1,
+            body: 'Nam molestie pellentesque dui',
+            date: new Date('2017-08-17'),
+        },
+    ],
+};
 ```
 
 Start the GraphQL server on localhost, port 3000.
@@ -41,7 +53,8 @@ Start the GraphQL server on localhost, port 3000.
 json-graphql-server db.js
 ```
 
-To use a port other than 3000, you can run `json-graphql-server db.js --p <your port here>`
+To use a port other than 3000, you can run `json-graphql-server db.js --p <your port here>`.
+To use a host other than localhost, you can run `json-graphql-server db.js --h <your host here>`.
 
 Now you can query your data in graphql. For instance, to issue the following query:
 
@@ -75,8 +88,14 @@ Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%
                 "name": "John Doe"
             },
             "Comments": [
-                { "date": "2017-07-03T00:00:00.000Z", "body": "Consectetur adipiscing elit" },
-                { "date": "2017-08-17T00:00:00.000Z", "body": "Nam molestie pellentesque dui" },
+                {
+                    "date": "2017-07-03T00:00:00.000Z",
+                    "body": "Consectetur adipiscing elit"
+                },
+                {
+                    "date": "2017-08-17T00:00:00.000Z",
+                    "body": "Nam molestie pellentesque dui"
+                }
             ]
         }
     }
@@ -101,14 +120,26 @@ Based on your data, json-graphql-server will generate a schema with one type per
 
 ```graphql
 type Query {
-  Post(id: ID!): Post
-  allPosts(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): [Post]
-  _allPostsMeta(page: Int, perPage: Int, sortField: String, sortOrder: String, filter: PostFilter): ListMetadata
+    Post(id: ID!): Post
+    allPosts(
+        page: Int
+        perPage: Int
+        sortField: String
+        sortOrder: String
+        filter: PostFilter
+    ): [Post]
+    _allPostsMeta(
+        page: Int
+        perPage: Int
+        sortField: String
+        sortOrder: String
+        filter: PostFilter
+    ): ListMetadata
 }
 type Mutation {
-  createPost(data: String): Post
-  updatePost(data: String): Post
-  removePost(id: ID!): Boolean
+    createPost(data: String): Post
+    updatePost(data: String): Post
+    removePost(id: ID!): Boolean
 }
 type Post {
     id: ID!
@@ -127,7 +158,7 @@ type PostFilter {
     views_lte: Int
     views_gt: Int
     views_gte: Int
-    user_id: ID    
+    user_id: ID
 }
 type ListMetadata {
     count: Int!
@@ -534,17 +565,18 @@ app.listen(PORT);
 
 You can also use the export `jsonSchemaBuilder` to get your own copy of the GraphQLSchema:
 
-In  node:
+In node:
+
 ```js
-import {graphql} from 'graphql';
-import {jsonSchemaBuilder} from 'json-graphql-server';
+import { graphql } from 'graphql';
+import { jsonSchemaBuilder } from 'json-graphql-server';
 
-const data = { };
+const data = {};
 const schema = jsonSchemaBuilder(data);
-const query = `[...]`
+const query = `[...]`;
 
-graphql(schema, query).then(result => {
-  console.log(result);
+graphql(schema, query).then((result) => {
+    console.log(result);
 });
 ```
 
@@ -556,9 +588,9 @@ Deploy with Heroku or Next.js.
 
 ## Roadmap
 
-* CLI options (https, watch, delay, custom schema)
-* Subscriptions
-* Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
+-   CLI options (https, watch, delay, custom schema)
+-   Subscriptions
+-   Client-side mocking (à la [FakeRest](https://github.com/marmelab/FakeRest))
 
 ## Contributing
 
@@ -576,9 +608,9 @@ To learn more about the contributions to this project, consult the [contribution
 
 ## Maintainers
 
-[![fzaninotto](https://avatars2.githubusercontent.com/u/99944?s=96&amp;v=4)](https://github.com/fzaninotto) | [![djhi](https://avatars1.githubusercontent.com/u/1122076?s=96&amp;v=4)](https://github.com/djhi) | [![alexisjanvier](https://avatars1.githubusercontent.com/u/547706?s=96&amp;v=4)](https://github.com/alexisjanvier)
-:---:|:---:|:---:
-[Francois Zaninotto](https://github.com/fzaninotto) | [Gildas Garcia](https://github.com/djhi) | [Alexis Janvier](https://github.com/alexisjanvier)
+| [![fzaninotto](https://avatars2.githubusercontent.com/u/99944?s=96&v=4)](https://github.com/fzaninotto) | [![djhi](https://avatars1.githubusercontent.com/u/1122076?s=96&v=4)](https://github.com/djhi) | [![alexisjanvier](https://avatars1.githubusercontent.com/u/547706?s=96&v=4)](https://github.com/alexisjanvier) |
+| :-----------------------------------------------------------------------------------------------------: | :-------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------: |
+|                           [Francois Zaninotto](https://github.com/fzaninotto)                           |                           [Gildas Garcia](https://github.com/djhi)                            |                               [Alexis Janvier](https://github.com/alexisjanvier)                               |
 
 ## License
 
