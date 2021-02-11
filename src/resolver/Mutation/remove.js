@@ -10,5 +10,5 @@ export default (entityData = []) => (_, { id }) => {
             removedEntity = entityData.splice(indexOfEntity, 1)[0];
         }
     }
-    return removedEntity;
+    return removedEntity ? true : false;
 };
