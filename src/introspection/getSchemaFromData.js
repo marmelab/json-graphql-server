@@ -140,16 +140,25 @@ export default (data) => {
                 },
                 {}
             );
+            const createFields = Object.keys(typeFields).reduce(
+              (f, fieldName) => {
+                if (fieldName !== 'id') {
+                  f[fieldName] = Object.assign({}, typeFields[fieldName])
+                }
+                return f
+              },
+              {}
+            );
             fields[`create${type.name}`] = {
                 type: typesByName[type.name],
-                args: typeFields,
+                args: createFields,
             };
             fields[`update${type.name}`] = {
                 type: typesByName[type.name],
                 args: nullableTypeFields,
             };
             fields[`remove${type.name}`] = {
-                type: GraphQLBoolean,
+                type: typesByName[type.name],
                 args: {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },

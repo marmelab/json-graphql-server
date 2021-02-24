@@ -1,7 +1,7 @@
 import create from './create';
 
-test('returns a new object with id 0 on empty datastore', () => {
-    expect(create()(null, {})).toEqual({ id: 0 });
+test('returns a new object with id 1 on empty datastore', () => {
+    expect(create()(null, {})).toEqual({ id: 1 });
 });
 
 test('returns a new object with incremental id', () => {
