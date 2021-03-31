@@ -140,15 +140,7 @@ export default (data) => {
                 },
                 {}
             );
-            const createFields = Object.keys(typeFields).reduce(
-              (f, fieldName) => {
-                if (fieldName !== 'id') {
-                  f[fieldName] = Object.assign({}, typeFields[fieldName])
-                }
-                return f
-              },
-              {}
-            );
+            const { id, ...createFields } = typeFields;
             fields[`create${type.name}`] = {
                 type: typesByName[type.name],
                 args: createFields,
