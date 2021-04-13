@@ -317,7 +317,7 @@ Here is how you can use the queries and mutations generated for your data, using
             <pre>
 // filter the results using the full-text filter
 {
-  allPosts({ filter: { q: "lorem" }}) {
+  allPosts(filter: { q: "lorem" }) {
     title
     views
   }
@@ -341,7 +341,7 @@ Here is how you can use the queries and mutations generated for your data, using
             <pre>
 // filter the result using any of the entity fields
 {
-  allPosts({ filter: { views: 254 }}) {
+  allPosts(filter: { views: 254 }) {
     title
     views
   }
@@ -366,7 +366,7 @@ Here is how you can use the queries and mutations generated for your data, using
 // number fields get range filters
 // -lt, _lte, -gt, and _gte
 {
-  allPosts({ filter: { views_gte: 200 } }) {
+  allPosts(filter: { views_gte: 200 }) {
     title
     views
   }
