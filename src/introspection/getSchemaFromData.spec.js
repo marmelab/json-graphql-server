@@ -1,4 +1,5 @@
 import {
+    GraphQLBoolean,
     GraphQLID,
     GraphQLInt,
     GraphQLList,
@@ -227,7 +228,7 @@ test('creates three mutation fields per data type', () => {
             description: null,
         },
     ]);
-    expect(mutations['removePost'].type.name).toEqual(PostType.name);
+    expect(mutations['removePost'].type.name).toEqual(GraphQLBoolean.name);
     expect(mutations['removePost'].args).toEqual([
         {
             name: 'id',
@@ -266,7 +267,7 @@ test('creates three mutation fields per data type', () => {
             description: null,
         },
     ]);
-    expect(mutations['removeUser'].type.name).toEqual(UserType.name);
+    expect(mutations['removeUser'].type.name).toEqual(GraphQLBoolean.name);
     expect(mutations['removeUser'].args).toEqual([
         {
             defaultValue: undefined,
