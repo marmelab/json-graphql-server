@@ -7,6 +7,12 @@ export default (entityData = [], filter = {}) => {
         Object.keys(filter)
             .filter((key) => key !== 'q')
             .forEach((key) => {
+                if (key.indexOf('_neq') !== -1) {
+                    // not equal to
+                    const realKey = key.replace(/(_neq)$/, '');
+                    items = items.filter((d) => d[realKey] != filter[key]);
+                    return;
+                }
                 if (key.indexOf('_lte') !== -1) {
                     // less than or equal
                     const realKey = key.replace(/(_lte)$/, '');

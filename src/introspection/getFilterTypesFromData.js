@@ -1,4 +1,5 @@
 import {
+    GraphQLBoolean,
     GraphQLInputObjectType,
     GraphQLString,
     GraphQLInt,
@@ -28,6 +29,10 @@ const getRangeFiltersFromEntities = (entities) => {
             fields[`${fieldName}_lte`] = { type: fieldType };
             fields[`${fieldName}_gt`] = { type: fieldType };
             fields[`${fieldName}_gte`] = { type: fieldType };
+        }
+
+        if (fieldType != GraphQLBoolean && fieldType != GraphQLList) {
+            fields[`${fieldName}_neq`] = { type: fieldType };
         }
         return fields;
     }, {});
