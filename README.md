@@ -42,6 +42,7 @@ json-graphql-server db.js
 ```
 
 To use a port other than 3000, you can run `json-graphql-server db.js --p <your port here>`
+To use a host other than localhost, you can run `json-graphql-server db.js --h <your port here>`
 
 Now you can query your data in graphql. For instance, to issue the following query:
 
