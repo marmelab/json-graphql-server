@@ -148,7 +148,7 @@ export default (data) => {
                 args: nullableTypeFields,
             };
             fields[`remove${type.name}`] = {
-                type: typesByName[type.name],
+                type: GraphQLBoolean,
                 args: {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },
