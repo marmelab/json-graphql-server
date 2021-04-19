@@ -122,13 +122,17 @@ type Post {
 type PostFilter {
     q: String
     id: ID
+    id_neq: ID
     title: String
+    title_neq: String
     views: Int
     views_lt: Int
     views_lte: Int
     views_gt: Int
     views_gte: Int
+    views_neq: Int
     user_id: ID    
+    user_id_neq: ID
 }
 type ListMetadata {
     count: Int!
@@ -140,7 +144,7 @@ By convention, json-graphql-server expects all entities to have an `id` field th
 
 For every field named `*_id`, json-graphql-server creates a two-way relationship, to let you fetch related entities from both sides. For instance, the presence of the `user_id` field in the `posts` entity leads to the ability to fetch the related `User` for a `Post` - and the related `Posts` for a `User`.
 
-The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. Json-graphql-server also adds a full-text query field named `q`, and created range filter fields for numeric and date fields. The detail of all available filters can be seen in the generated `*Filter` type.
+The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. Json-graphql-server also adds a full-text query field named `q`, and created range filter fields for numeric and date fields. All types (excluding booleans and arrays) get a not equal filter. The detail of all available filters can be seen in the generated `*Filter` type.
 
 ## GraphQL Usage
 
@@ -361,6 +365,32 @@ Here is how you can use the queries and mutations generated for your data, using
             </pre>
         </td>
     </tr>
+    <tr>
+        <td>
+            <pre>
+// all fields (except boolean and array) get not equal filters
+// -lt, _lte, -gt, and _gte
+{
+  allPosts(filter: { title_neq: "Lorem Ipsum" }) {
+    title
+    views
+  }
+}
+            </pre>
+        </td>
+        <td>
+            <pre>
+{
+  "data": {
+    "allPosts": [
+      { "title": "Some Other Title", views: 254 },
+    ]
+  }
+}
+            </pre>
+        </td>
+    </tr>
+
     <tr>
         <td>
             <pre>

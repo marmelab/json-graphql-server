@@ -95,6 +95,19 @@ test('filters by value on each field using the related filter', () => {
     ]);
 });
 
+test('filters by not equals given fields', () => {
+    expect(applyFilters(data, { id_neq: 2 })).toEqual([
+        {
+            id: 1,
+            title: 'Lorem Ipsum',
+            user_id: 123,
+            views: 254,
+            tags: ['foo', 'bar'],
+        },
+        { id: 3, title: 'Sic Dolor amet', user_id: 123, views: 76, tags: [] },
+    ]);
+});
+
 test('filters by value range on each integer field using the related filters', () => {
     expect(applyFilters(data, { views_lt: 76 })).toEqual([
         {
