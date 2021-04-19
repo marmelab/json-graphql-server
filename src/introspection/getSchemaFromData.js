@@ -143,11 +143,17 @@ export default (data) => {
             const { id, ...createFields } = typeFields;
 
             // Build input type.
-            var inputFields = { ...typeFields };
-            Object.keys(inputFields).forEach((key) => {
-                delete inputFields[key].resolve;
-            });
-            var inputType = new GraphQLInputObjectType({
+            const inputFields = Object.keys(typeFields).reduce(
+                (f, fieldName) => {
+                    f[fieldName] = Object.assign({}, typeFields[fieldName]);
+                    delete f[fieldName].resolve;
+                    return f;
+                },
+                {}
+            );
+
+            console.log(typeFields);
+            const createManyInputType = new GraphQLInputObjectType({
                 name: type.name + 'Input',
                 fields: inputFields,
             });
@@ -160,7 +166,7 @@ export default (data) => {
                 type: new GraphQLList(typesByName[type.name]),
                 args: {
                     data: {
-                        type: new GraphQLList(inputType),
+                        type: new GraphQLList(createManyInputType),
                     },
                 },
             };

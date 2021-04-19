@@ -24,3 +24,17 @@ test('creates a new record', () => {
     createMany(data)(null, { data: [{ value: 'foo' }] });
     expect(data).toEqual([{ id: 1 }, { id: 3 }, { id: 4, value: 'foo' }]);
 });
+
+test('creates multiple new records', () => {
+    const data = [{ id: 1 }, { id: 3 }];
+    createMany(data)(null, {
+        data: [{ value: 'foo' }, { value: 'bar' }, { value: 'baz' }],
+    });
+    expect(data).toEqual([
+        { id: 1 },
+        { id: 3 },
+        { id: 4, value: 'foo' },
+        { id: 5, value: 'bar' },
+        { id: 6, value: 'baz' },
+    ]);
+});
