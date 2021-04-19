@@ -139,9 +139,10 @@ export default (data) => {
                 },
                 {}
             );
+            const { id, ...createFields } = typeFields;
             fields[`create${type.name}`] = {
                 type: typesByName[type.name],
-                args: typeFields,
+                args: createFields,
             };
             fields[`update${type.name}`] = {
                 type: typesByName[type.name],
