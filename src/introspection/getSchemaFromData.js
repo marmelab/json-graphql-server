@@ -152,7 +152,6 @@ export default (data) => {
                 {}
             );
 
-            console.log(typeFields);
             const createManyInputType = new GraphQLInputObjectType({
                 name: type.name + 'Input',
                 fields: inputFields,
