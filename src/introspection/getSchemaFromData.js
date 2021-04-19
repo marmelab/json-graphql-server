@@ -1,5 +1,4 @@
 import {
-    GraphQLBoolean,
     GraphQLID,
     GraphQLInt,
     GraphQLList,
@@ -149,7 +148,7 @@ export default (data) => {
                 args: nullableTypeFields,
             };
             fields[`remove${type.name}`] = {
-                type: GraphQLBoolean,
+                type: typesByName[type.name],
                 args: {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },

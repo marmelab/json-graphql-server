@@ -109,7 +109,7 @@ type Query {
 type Mutation {
   createPost(data: String): Post
   updatePost(data: String): Post
-  removePost(id: ID!): Boolean
+  removePost(id: ID!): Post
 }
 type Post {
     id: ID!
