@@ -121,16 +121,16 @@ type Post {
 type PostFilter {
     q: String
     id: ID
+    id_neq: ID
     title: String
+    title_neq: String
     views: Int
     views_lt: Int
     views_lte: Int
     views_gt: Int
     views_gte: Int
-    user_id: ID    
-    id_neq: ID
-    title_neq: ID
     views_neq: Int
+    user_id: ID    
     user_id_neq: ID
 }
 type ListMetadata {
