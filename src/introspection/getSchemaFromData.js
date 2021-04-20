@@ -4,6 +4,7 @@ import {
     GraphQLList,
     GraphQLNonNull,
     GraphQLObjectType,
+    GraphQLInputObjectType,
     GraphQLSchema,
     GraphQLString,
     parse,
@@ -140,9 +141,33 @@ export default (data) => {
                 {}
             );
             const { id, ...createFields } = typeFields;
+
+            // Build input type.
+            const inputFields = Object.keys(typeFields).reduce(
+                (f, fieldName) => {
+                    f[fieldName] = Object.assign({}, typeFields[fieldName]);
+                    delete f[fieldName].resolve;
+                    return f;
+                },
+                {}
+            );
+
+            const createManyInputType = new GraphQLInputObjectType({
+                name: type.name + 'Input',
+                fields: inputFields,
+            });
+
             fields[`create${type.name}`] = {
                 type: typesByName[type.name],
                 args: createFields,
+            };
+            fields[`createMany${type.name}`] = {
+                type: new GraphQLList(typesByName[type.name]),
+                args: {
+                    data: {
+                        type: new GraphQLList(createManyInputType),
+                    },
+                },
             };
             fields[`update${type.name}`] = {
                 type: typesByName[type.name],

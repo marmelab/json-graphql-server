@@ -5,6 +5,7 @@ import all from './Query/all';
 import meta from './Query/meta';
 import single from './Query/single';
 import create from './Mutation/create';
+import createMany from './Mutation/createMany';
 import update from './Mutation/update';
 import remove from './Mutation/remove';
 import entityResolver from './Entity';
@@ -20,6 +21,7 @@ const getQueryResolvers = (entityName, data) => ({
 
 const getMutationResolvers = (entityName, data) => ({
     [`create${entityName}`]: create(data),
+    [`createMany${entityName}`]: createMany(data),
     [`update${entityName}`]: update(data),
     [`remove${entityName}`]: remove(data),
 });
