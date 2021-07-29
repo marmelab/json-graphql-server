@@ -14,6 +14,11 @@ Inspired by the excellent [json-server](https://github.com/typicode/json-server)
 
 ## Example
 
+Follow the guide below starting from scratch, or see the example live on StackBlitz:
+
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/json-graphql-server)
+
+
 Create a `db.js` file.
 
 Your data file should export an object where the keys are the entity types. The values should be lists of entities, i.e. arrays of value objects with at least an `id` key. For instance:
