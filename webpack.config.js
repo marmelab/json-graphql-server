@@ -6,9 +6,9 @@ let plugins = [];
 let outputFile;
 
 if (process.env.NODE_ENV === 'production') {
-    outputFile = (target) => `${libraryName}.${target}.min.js`;
+    outputFile = target => `${libraryName}.${target}.min.js`;
 } else {
-    outputFile = (target) => `${libraryName}.${target}.js`;
+    outputFile = target => `${libraryName}.${target}.js`;
 }
 
 const defaultConfig = {
@@ -20,11 +20,6 @@ const defaultConfig = {
                 test: /(\.jsx|\.js)$/,
                 loader: 'babel-loader',
                 exclude: /(node_modules|bower_components)/,
-            },
-            {
-                include: /node_modules/,
-                test: /\.mjs$/,
-                type: 'javascript/auto',
             },
         ],
     },

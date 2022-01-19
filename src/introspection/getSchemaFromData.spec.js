@@ -129,11 +129,8 @@ test('creates three query fields per data type', () => {
     expect(queries['Post'].type.name).toEqual(PostType.name);
     expect(queries['Post'].args).toEqual([
         {
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
         },
@@ -154,11 +151,8 @@ test('creates three query fields per data type', () => {
     expect(queries['User'].type.name).toEqual(UserType.name);
     expect(queries['User'].args).toEqual([
         {
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
         },
@@ -184,29 +178,20 @@ test('creates three mutation fields per data type', () => {
         {
             name: 'title',
             type: new GraphQLNonNull(GraphQLString),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
         {
             name: 'views',
             type: new GraphQLNonNull(GraphQLInt),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
         {
             name: 'user_id',
             type: new GraphQLNonNull(GraphQLID),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
     ]);
     expect(mutations['updatePost'].type.name).toEqual(PostType.name);
@@ -214,38 +199,26 @@ test('creates three mutation fields per data type', () => {
         {
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
         {
             name: 'title',
             type: GraphQLString,
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
         {
             name: 'views',
             type: GraphQLInt,
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
         {
             name: 'user_id',
             type: GraphQLID,
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
     ]);
     expect(mutations['removePost'].type.name).toEqual(PostType.name);
@@ -253,11 +226,8 @@ test('creates three mutation fields per data type', () => {
         {
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
     ]);
     expect(mutations['createUser'].type.name).toEqual(UserType.name);
@@ -265,11 +235,8 @@ test('creates three mutation fields per data type', () => {
         {
             name: 'name',
             type: new GraphQLNonNull(GraphQLString),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
     ]);
     expect(mutations['updateUser'].type.name).toEqual(UserType.name);
@@ -277,30 +244,21 @@ test('creates three mutation fields per data type', () => {
         {
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
         {
             name: 'name',
             type: GraphQLString,
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
         },
     ]);
     expect(mutations['removeUser'].type.name).toEqual(UserType.name);
     expect(mutations['removeUser'].args).toEqual([
         {
-            astNode: undefined,
             defaultValue: undefined,
-            description: undefined,
-            deprecationReason: undefined,
-            extensions: undefined,
+            description: null,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
         },
