@@ -1,4 +1,4 @@
-import { makeExecutableSchema } from '@graphql-tools/schema';
+import { makeExecutableSchema } from 'graphql-tools';
 import { printSchema } from 'graphql';
 import getSchemaFromData from './introspection/getSchemaFromData';
 import resolver from './resolver';
