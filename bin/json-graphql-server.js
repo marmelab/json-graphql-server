@@ -12,14 +12,14 @@ var HOST = process.env.NODE_HOST || 'localhost';
 var app = express();
 
 process.argv.forEach((arg, index) => {
-  // allow a custom port via CLI
-  if (arg === '--p' && process.argv.length > index + 1) {
-    PORT = process.argv[index + 1];
-  }
+    // allow a custom port via CLI
+    if (arg === '--p' && process.argv.length > index + 1) {
+        PORT = process.argv[index + 1];
+    }
 
-  if (arg === '--h' && process.argv.length > index + 1) {
-    HOST = process.argv[index + 1];
-  }
+    if (arg === '--h' && process.argv.length > index + 1) {
+        HOST = process.argv[index + 1];
+    }
 });
 
 app.use(cors());
@@ -29,5 +29,6 @@ var msg = `GraphQL server running with your data at http://${HOST}:${PORT}/`;
 console.log(msg); // eslint-disable-line no-console
 
 process.on('unhandledRejection', (reason, p) => {
-  console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
+    // eslint-disable-next-line no-console
+    console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
 });
