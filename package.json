@@ -1,6 +1,6 @@
 {
     "name": "json-graphql-server",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "main": "lib/json-graphql-server.node.min.js",
     "browser": "lib/json-graphql-server.client.min.js",
     "repository": "git@github.com:marmelab/json-graphql-server.git",
