@@ -24,5 +24,5 @@ format: ## Format the source code
 run: ## Launch server with example data
 	@node ./bin/json-graphql-server.js example/data.js
 
-build:
+build: ## Build production release
 	@NODE_ENV=production ./node_modules/.bin/webpack
