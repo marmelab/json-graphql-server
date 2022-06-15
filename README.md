@@ -156,13 +156,13 @@ The `all*` queries accept parameters to let you sort, paginate, and filter the l
 
 | Type    | GraphQL Type        | Rule                                                          | Example value |
 |---------|---------------------|---------------------------------------------------------------|---------------|
-| Id      | `GraphQLID`         | `name === 'id' \|\| name.substr(name.length - 3) === '_id'`     | `1`           |
+| Id      | `GraphQLID`         | `name === 'id' \|\| name.substr(name.length - 3) === '_id'`   | `1`           |
 | Integer | `GraphQLInt`        | `Number.isInteger(value)`                                     | `12`          |
 | Numeric | `GraphQLFloat`      | `!isNaN(parseFloat(value)) && isFinite(value)`                | `12.34`       |
 | Boolean | `GraphQLBoolean`    | `typeof value === 'boolean'`                                  | `false`       |
 | String  | `GraphQLString`     | `typeof value === 'string'`                                   | `'foo'`       |
 | Array   | `GraphQLList`       | `Array.isArray(value)`                                        | `['bar']`, `[12, 34]` |
-| Date    | `DateType` (custom) | `value instanceof Date \|\| isISODateString(value)`             | `new Date('2016-06-10T15:49:14.236Z')`, `'2016-06-10T15:49:14.236Z'` |
+| Date    | `DateType` (custom) | `value instanceof Date \|\| isISODateString(value)`           | `new Date('2016-06-10T15:49:14.236Z')`, `'2016-06-10T15:49:14.236Z'` |
 | Object  | `GraphQLJSON`       | `Object.prototype.toString.call(value) === '[object Object]'` | `transport: { service: 'fakemail', auth: { user: 'fake@mail.com', pass: 'f00b@r' } }` |
 
 ## GraphQL Usage
