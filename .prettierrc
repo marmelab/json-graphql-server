@@ -1,5 +1,4 @@
 {
-    "arrowParens": "avoid",
     "bracketSpacing": true,
     "printWidth": 80,
     "quoteProps": "as-needed",
