@@ -265,6 +265,38 @@ test('creates three mutation fields per data type', () => {
     ]);
 });
 
+test('creates the mutation *Input type for createMany', () => {
+    const mutations = getSchemaFromData(data).getMutationType().getFields();
+    const createManyPostInputType = mutations['createManyPost'].args[0].type;
+    expect(createManyPostInputType.toString()).toEqual('[PostInput]');
+    expect(createManyPostInputType.ofType.getFields()).toEqual({
+        title: {
+            type: new GraphQLNonNull(GraphQLString),
+            name: 'title',
+            astNode: undefined,
+            defaultValue: undefined,
+            description: undefined,
+            extensions: undefined,
+        },
+        views: {
+            type: new GraphQLNonNull(GraphQLInt),
+            name: 'views',
+            astNode: undefined,
+            defaultValue: undefined,
+            description: undefined,
+            extensions: undefined,
+        },
+        user_id: {
+            type: new GraphQLNonNull(GraphQLID),
+            name: 'user_id',
+            astNode: undefined,
+            defaultValue: undefined,
+            description: undefined,
+            extensions: undefined,
+        },
+    });
+});
+
 test('pluralizes and capitalizes correctly', () => {
     const data = {
         feet: [
