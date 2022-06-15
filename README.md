@@ -91,7 +91,7 @@ Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%
 
 The json-graphql-server accepts queries in GET and POST. Under the hood, it uses [the `express-graphql` module](https://github.com/graphql/express-graphql). Please refer to their documentations for details about passing variables, etc.
 
-Note that the server is [GraphiQL](https://github.com/graphql/graphiql) enabled, so you can query your server using a full-featured graphical user interface, providing autosuggest, history, etc.
+Note that the server is [GraphiQL](https://github.com/graphql/graphiql) enabled, so you can query your server using a full-featured graphical user interface, providing autosuggest, history, etc. Just browse http://localhost:3000/ to access it.
 
 ![GraphiQL client using json-graphql-server](http://static.marmelab.com/graphiql-json.png)
 
@@ -396,7 +396,6 @@ Here is how you can use the queries and mutations generated for your data, using
             </pre>
         </td>
     </tr>
-
     <tr>
         <td>
             <pre>
@@ -456,7 +455,7 @@ Useful when using XMLHttpRequest directly or libraries such as [axios](https://w
 Add a `script` tag referencing the library:
 
 ```html
-<script src="../lib/json-graphql-server.min.js"></script>
+<script src="../lib/json-graphql-server.client.min.js"></script>
 ```
 
 It will expose the `JsonGraphqlServer` as a global object:
