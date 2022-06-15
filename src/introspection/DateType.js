@@ -1,6 +1,13 @@
 import { GraphQLScalarType, GraphQLError } from 'graphql';
 import { Kind } from 'graphql/language';
 
+export const isISODateString = (value) => {
+    if (typeof value !== 'string') return false;
+    if (!/\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/.test(value)) return false;
+    const d = new Date(value);
+    return d.toISOString() === value;
+};
+
 export default new GraphQLScalarType({
     name: 'Date',
     description: 'Date type',
@@ -10,6 +17,7 @@ export default new GraphQLScalarType({
     },
     serialize(value) {
         // value comes from resolvers
+        if (isISODateString(value)) return value;
         return value.toISOString(); // sent to the client
     },
     parseLiteral(ast) {
