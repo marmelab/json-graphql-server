@@ -143,9 +143,9 @@ export default (data) => {
             const { id, ...createFields } = typeFields;
 
             // Build input type.
-            const inputFields = Object.keys(typeFields).reduce(
+            const inputFields = Object.keys(createFields).reduce(
                 (f, fieldName) => {
-                    f[fieldName] = Object.assign({}, typeFields[fieldName]);
+                    f[fieldName] = Object.assign({}, createFields[fieldName]);
                     delete f[fieldName].resolve;
                     return f;
                 },
