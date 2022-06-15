@@ -152,6 +152,19 @@ For every field named `*_id`, json-graphql-server creates a two-way relationship
 
 The `all*` queries accept parameters to let you sort, paginate, and filter the list of results. You can filter by any field, not just the primary key. For instance, you can get the posts written by user `123`. Json-graphql-server also adds a full-text query field named `q`, and created range filter fields for numeric and date fields. All types (excluding booleans and arrays) get a not equal filter. The detail of all available filters can be seen in the generated `*Filter` type.
 
+### Supported types
+
+| Type    | GraphQL Type        | Rule                                                          | Example value |
+|---------|---------------------|---------------------------------------------------------------|---------------|
+| Id      | `GraphQLID`         | `name === 'id' \|\| name.substr(name.length - 3) === '_id'`   | `1`           |
+| Integer | `GraphQLInt`        | `Number.isInteger(value)`                                     | `12`          |
+| Numeric | `GraphQLFloat`      | `!isNaN(parseFloat(value)) && isFinite(value)`                | `12.34`       |
+| Boolean | `GraphQLBoolean`    | `typeof value === 'boolean'`                                  | `false`       |
+| String  | `GraphQLString`     | `typeof value === 'string'`                                   | `'foo'`       |
+| Array   | `GraphQLList`       | `Array.isArray(value)`                                        | `['bar']`, `[12, 34]` |
+| Date    | `DateType` (custom) | `value instanceof Date \|\| isISODateString(value)`           | `new Date('2016-06-10T15:49:14.236Z')`, `'2016-06-10T15:49:14.236Z'` |
+| Object  | `GraphQLJSON`       | `Object.prototype.toString.call(value) === '[object Object]'` | `transport: { service: 'fakemail', auth: { user: 'fake@mail.com', pass: 'f00b@r' } }` |
+
 ## GraphQL Usage
 
 Here is how you can use the queries and mutations generated for your data, using `Post` as an example:
