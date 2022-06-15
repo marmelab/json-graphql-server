@@ -396,7 +396,6 @@ Here is how you can use the queries and mutations generated for your data, using
             </pre>
         </td>
     </tr>
-
     <tr>
         <td>
             <pre>
