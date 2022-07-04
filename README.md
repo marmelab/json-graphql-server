@@ -599,6 +599,49 @@ graphql(schema, query).then(result => {
 
 Or available in the global scope when running on a client as `jsonSchemaBuilder`.
 
+## Plain Schema
+
+If you want to use another server type instead of the built in graphql express,
+like apollo-server or etc, you can expose the plain schema to be built into
+an executable schema (there may be version issues otherwise).
+
+This uses the export `getPlainSchema`.
+
+```js
+import { ApolloServer } from 'apollo-server';
+import { makeExecutableSchema } from '@graphql-tools/schema'; // or graphql-tools
+import { applyMiddleware } from 'graphql-middleware';
+import { getPlainSchema } from 'json-graphql-server';
+
+const data = { };
+
+// Example middlewares
+const logInput = async (resolve, root, args, context, info) => {
+    console.log(`1. logInput: ${JSON.stringify(args)}`);
+    const result = await resolve(root, args, context, info);
+    console.log(`5. logInput`);
+    return result;
+};
+const logResult = async (resolve, root, args, context, info) => {
+    console.log(`2. logResult`);
+    const result = await resolve(root, args, context, info);
+    console.log(`4. logResult: ${JSON.stringify(result)}`);
+    return result;
+};
+
+// Leverage getPlainSchema
+const schema = applyMiddleware(
+    makeExecutableSchema(getPlainSchema(data)),
+    logInput,
+    logResult
+);
+const server = new ApolloServer({
+    schema,
+});
+server.listen({ port: 3000 });
+
+```
+
 ## Deployment
 
 Deploy with Heroku or Next.js.
