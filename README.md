@@ -591,21 +591,37 @@ an executable schema (there may be version issues otherwise).
 This uses the export `getPlainSchema`.
 
 ```js
-import {ApolloServer} from 'apollo-server';
-import {makeExecutableSchema} from '@graphql-tools/schema'; // or graphql-tools
-import {applyMiddleware} from 'graphql-middleware';
-import {getPlainSchema} from 'json-graphql-server';
+import { ApolloServer } from 'apollo-server';
+import { makeExecutableSchema } from '@graphql-tools/schema'; // or graphql-tools
+import { applyMiddleware } from 'graphql-middleware';
+import { getPlainSchema } from 'json-graphql-server';
 
 const data = { };
+
+// Example middlewares
+const logInput = async (resolve, root, args, context, info) => {
+    console.log(`1. logInput: ${JSON.stringify(args)}`);
+    const result = await resolve(root, args, context, info);
+    console.log(`5. logInput`);
+    return result;
+};
+const logResult = async (resolve, root, args, context, info) => {
+    console.log(`2. logResult`);
+    const result = await resolve(root, args, context, info);
+    console.log(`4. logResult: ${JSON.stringify(result)}`);
+    return result;
+};
+
+// Leverage getPlainSchema
 const schema = applyMiddleware(
-  makeExecutableSchema(getPlainSchema(data), exampleMiddleware)
+    makeExecutableSchema(getPlainSchema(data)),
+    logInput,
+    logResult
 );
-
 const server = new ApolloServer({
-  schema
+    schema,
 });
-
-server.listen({ port:3000 });
+server.listen({ port: 3000 });
 
 ```
 

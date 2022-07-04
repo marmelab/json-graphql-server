@@ -1,6 +1,6 @@
 import jsonGraphqlExpress from './jsonGraphqlExpress';
-import schemaBuilder, { getPlainSchema as plainSchema } from './schemaBuilder';
+import schemaBuilder, { getPlainSchema } from './schemaBuilder';
 
 export const jsonSchemaBuilder = schemaBuilder;
-export const getPlainSchema = plainSchema;
+export { getPlainSchema };
 export default jsonGraphqlExpress;
