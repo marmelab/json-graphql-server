@@ -21,7 +21,15 @@ process.argv.forEach((arg, index) => {
         HOST = process.argv[index + 1];
     }
 });
-
+app.use(function(req, res, next) {
+    console.log("before", data);
+  
+    res.on("finish", function() {
+        console.log("after", data);
+    });
+    next();
+  });
+  
 app.use(cors());
 app.use('/', JsonGraphqlServer(data));
 app.listen(PORT, HOST);
@@ -32,3 +40,4 @@ process.on('unhandledRejection', (reason, p) => {
     // eslint-disable-next-line no-console
     console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
 });
+
