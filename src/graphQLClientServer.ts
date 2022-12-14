@@ -40,7 +40,10 @@ import handleRequestFactory from './handleRequest';
  * GraphQLClientServer(data);
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
-export default function ({ data, url }) {
+export default function ({
+    data,
+    url
+}: any) {
     const handleRequest = handleRequestFactory(data);
 
     return {

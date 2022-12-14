@@ -13,20 +13,22 @@ import { getTypeFromKey } from '../nameConverter';
 import DateType from '../introspection/DateType';
 import hasType from '../introspection/hasType';
 
+// @ts-expect-error TS(7006): Parameter 'entityName' implicitly has an 'any' typ... Remove this comment to see the full error message
 const getQueryResolvers = (entityName, data) => ({
     [`all${pluralize(entityName)}`]: all(data),
     [`_all${pluralize(entityName)}Meta`]: meta(data),
-    [entityName]: single(data),
+    [entityName]: single(data)
 });
 
+// @ts-expect-error TS(7006): Parameter 'entityName' implicitly has an 'any' typ... Remove this comment to see the full error message
 const getMutationResolvers = (entityName, data) => ({
     [`create${entityName}`]: create(data),
     [`createMany${entityName}`]: createMany(data),
     [`update${entityName}`]: update(data),
-    [`remove${entityName}`]: remove(data),
+    [`remove${entityName}`]: remove(data)
 });
 
-export default (data) => {
+export default (data: any) => {
     return Object.assign(
         {},
         {

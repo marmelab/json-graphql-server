@@ -26,34 +26,32 @@ import { camelize, pluralize, singularize } from 'inflection';
  * @param {String} fieldName 'users'
  * @return {String} 'Users'
  */
-export const getRelationshipFromKey = (key) => camelize(key);
+export const getRelationshipFromKey = (key: any) => camelize(key);
 
 /**
  *
  * @param {String} fieldName 'users'
  * @return {String} 'User'
  */
-export const getTypeFromKey = (key) => camelize(singularize(key));
+export const getTypeFromKey = (key: any) => camelize(singularize(key));
 
 /**
  *
  * @param {String} fieldName 'user_id'
  * @return {String} 'users'
  */
-export const getRelatedKey = (fieldName) =>
-    pluralize(fieldName.substr(0, fieldName.length - 3));
+export const getRelatedKey = (fieldName: any) => pluralize(fieldName.substr(0, fieldName.length - 3));
 
 /**
  *
  * @param {String} key 'users'
  * @return {String} 'user_id'
  */
-export const getReverseRelatedField = (key) => `${singularize(key)}_id`;
+export const getReverseRelatedField = (key: any) => `${singularize(key)}_id`;
 
 /**
  *
  * @param {String} fieldName 'user_id'
  * @return {String} 'User'
  */
-export const getRelatedType = (fieldName) =>
-    getTypeFromKey(fieldName.substr(0, fieldName.length - 3));
+export const getRelatedType = (fieldName: any) => getTypeFromKey(fieldName.substr(0, fieldName.length - 3));

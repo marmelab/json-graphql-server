@@ -10,33 +10,33 @@ import {
 import GraphQLJSON from 'graphql-type-json';
 import DateType, { isISODateString } from './DateType';
 
-const isNumeric = (value) => !isNaN(parseFloat(value)) && isFinite(value);
-const valuesAreNumeric = (values) => values.every(isNumeric);
-const isInteger = (value) => Number.isInteger(value);
-const valuesAreInteger = (values) => values.every(isInteger);
-const isBoolean = (value) => typeof value === 'boolean';
-const valuesAreBoolean = (values) => values.every(isBoolean);
-const isString = (value) => typeof value === 'string';
-const valuesAreString = (values) => values.every(isString);
-const isArray = (value) => Array.isArray(value);
-const valuesAreArray = (values) => values.every(isArray);
-const isDate = (value) => value instanceof Date || isISODateString(value);
-const valuesAreDate = (values) => values.every(isDate);
-const isObject = (value) =>
-    Object.prototype.toString.call(value) === '[object Object]';
-const valuesAreObject = (values) => values.every(isObject);
+const isNumeric = (value: any) => !isNaN(parseFloat(value)) && isFinite(value);
+const valuesAreNumeric = (values: any) => values.every(isNumeric);
+const isInteger = (value: any) => Number.isInteger(value);
+const valuesAreInteger = (values: any) => values.every(isInteger);
+const isBoolean = (value: any) => typeof value === 'boolean';
+const valuesAreBoolean = (values: any) => values.every(isBoolean);
+const isString = (value: any) => typeof value === 'string';
+const valuesAreString = (values: any) => values.every(isString);
+const isArray = (value: any) => Array.isArray(value);
+const valuesAreArray = (values: any) => values.every(isArray);
+const isDate = (value: any) => value instanceof Date || isISODateString(value);
+const valuesAreDate = (values: any) => values.every(isDate);
+const isObject = (value: any) => Object.prototype.toString.call(value) === '[object Object]';
+const valuesAreObject = (values: any) => values.every(isObject);
 
-const requiredTypeOrNormal = (type, isRequired) =>
+const requiredTypeOrNormal = (type: any, isRequired: any) =>
     isRequired ? new GraphQLNonNull(type) : type;
 
-export default (name, values = [], isRequired = false) => {
+export default (name: any, values = [], isRequired = false) => {
     if (name === 'id' || name.substr(name.length - 3) === '_id') {
         return requiredTypeOrNormal(GraphQLID, isRequired);
     }
     if (values.length > 0) {
         if (valuesAreArray(values)) {
             const leafValues = values.reduce((agg, arr) => {
-                arr.forEach((value) => agg.push(value));
+                // @ts-expect-error TS(2339): Property 'forEach' does not exist on type 'never'.
+                arr.forEach((value: any) => agg.push(value));
                 return agg;
             }, []);
             if (valuesAreBoolean(leafValues)) {

@@ -1,8 +1,14 @@
 import applyFilters from './applyFilters';
 
 export default (entityData = []) => (
-    _,
-    { sortField, sortOrder = 'asc', page, perPage = 25, filter = {} }
+    _: any,
+    {
+        sortField,
+        sortOrder = 'asc',
+        page,
+        perPage = 25,
+        filter = {}
+    }: any
 ) => {
     let items = [...entityData];
 

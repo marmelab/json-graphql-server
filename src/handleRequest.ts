@@ -40,9 +40,10 @@ import schemaBuilder from './schemaBuilder';
  * GraphQLClientServer(data);
  * GraphQLClientServer(data, 'http://localhost:8080/api/graphql');
  */
-export default function (data) {
+export default function (data: any) {
     const schema = schemaBuilder(data);
-    return (url, opts = {}) => {
+    return (url: any, opts = {}) => {
+        // @ts-expect-error TS(2339): Property 'body' does not exist on type '{}'.
         let body = opts.body;
 
         if (url.requestBody) {
@@ -53,6 +54,7 @@ export default function (data) {
 
         return graphql(
             schema,
+            // @ts-expect-error TS(2554): Expected 1 arguments, but got 5.
             query.query,
             undefined,
             undefined,

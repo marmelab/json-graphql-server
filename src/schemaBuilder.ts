@@ -47,16 +47,16 @@ import resolver from './resolver';
  * });
  *
  */
-export default (data) =>
-    makeExecutableSchema({
-        typeDefs: printSchema(getSchemaFromData(data)),
-        resolvers: resolver(data),
-        logger: { log: (e) => console.log(e) }, // eslint-disable-line no-console
-    });
+export default (data: any) => makeExecutableSchema({
+    typeDefs: printSchema(getSchemaFromData(data)),
+    resolvers: resolver(data),
+    // @ts-expect-error TS(2345): Argument of type '{ typeDefs: string; resolvers: a... Remove this comment to see the full error message
+    logger: { log: (e: any) => console.log(e) }, // eslint-disable-line no-console
+});
 
 // Same as above, simply returning the object before making it executable.
 // This lets you use it with a custom apollo server or etc.
-export const getPlainSchema = (data) => ({
+export const getPlainSchema = (data: any) => ({
     typeDefs: printSchema(getSchemaFromData(data)),
-    resolvers: resolver(data),
+    resolvers: resolver(data)
 });

@@ -1,5 +1,5 @@
 import create from './create';
 
-export default (entityData = []) => (_, entities) => {
-    return entities.data.map((e) => create(entityData)(null, e));
+export default (entityData = []) => (_: any, entities: any) => {
+    return entities.data.map((e: any) => create(entityData)(null, e));
 };

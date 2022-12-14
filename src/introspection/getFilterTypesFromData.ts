@@ -12,7 +12,7 @@ import getValuesFromEntities from './getValuesFromEntities';
 import getTypeFromValues from './getTypeFromValues';
 import { getTypeFromKey } from '../nameConverter';
 
-const getRangeFiltersFromEntities = (entities) => {
+const getRangeFiltersFromEntities = (entities: any) => {
     const fieldValues = getValuesFromEntities(entities);
     return Object.keys(fieldValues).reduce((fields, fieldName) => {
         const fieldType = getTypeFromValues(
@@ -25,13 +25,18 @@ const getRangeFiltersFromEntities = (entities) => {
             fieldType == GraphQLFloat ||
             fieldType.name == 'Date'
         ) {
+            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_lt`] = { type: fieldType };
+            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_lte`] = { type: fieldType };
+            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_gt`] = { type: fieldType };
+            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_gte`] = { type: fieldType };
         }
 
         if (fieldType != GraphQLBoolean && fieldType != GraphQLList) {
+            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_neq`] = { type: fieldType };
         }
         return fields;
@@ -94,23 +99,22 @@ const getRangeFiltersFromEntities = (entities) => {
  * //     }),
  * // }
  */
-export default (data) =>
-    Object.keys(data).reduce(
-        (types, key) =>
-            Object.assign({}, types, {
-                [getTypeFromKey(key)]: new GraphQLInputObjectType({
-                    name: `${getTypeFromKey(key)}Filter`,
-                    fields: Object.assign(
-                        {
-                            q: { type: GraphQLString },
-                        },
-                        {
-                            ids: { type: new GraphQLList(GraphQLID) },
-                        },
-                        getFieldsFromEntities(data[key], false),
-                        getRangeFiltersFromEntities(data[key])
-                    ),
-                }),
+export default (data: any) => Object.keys(data).reduce(
+    (types, key) =>
+        Object.assign({}, types, {
+            [getTypeFromKey(key)]: new GraphQLInputObjectType({
+                name: `${getTypeFromKey(key)}Filter`,
+                fields: Object.assign(
+                    {
+                        q: { type: GraphQLString },
+                    },
+                    {
+                        ids: { type: new GraphQLList(GraphQLID) },
+                    },
+                    getFieldsFromEntities(data[key], false),
+                    getRangeFiltersFromEntities(data[key])
+                ),
             }),
-        {}
-    );
+        }),
+    {}
+);

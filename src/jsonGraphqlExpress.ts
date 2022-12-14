@@ -45,8 +45,8 @@ import schemaBuilder from './schemaBuilder';
  *
  * app.listen(PORT);
  */
-export default (data) =>
-    graphqlHTTP({
-        schema: schemaBuilder(data),
-        graphiql: true,
-    });
+// @ts-expect-error TS(2349): This expression is not callable.
+export default (data: any) => graphqlHTTP({
+    schema: schemaBuilder(data),
+    graphiql: true,
+});
