@@ -1,3 +1,5 @@
+import { GraphQLFieldConfigMap } from 'graphql';
+import { EntityData } from './../type';
 import getTypeFromValues from './getTypeFromValues';
 import getValuesFromEntities from './getValuesFromEntities';
 
@@ -26,11 +28,13 @@ import getValuesFromEntities from './getValuesFromEntities';
  * //    user_id: { type: new GraphQLNonNull(GraphQLString) },
  * // };
  */
-export default (entities: any, checkRequired = true) => {
+export default <TSource, TContext>(
+    entities: EntityData[],
+    checkRequired = true
+): GraphQLFieldConfigMap<TSource, TContext> => {
     const fieldValues = getValuesFromEntities(entities);
     const nbValues = entities.length;
     return Object.keys(fieldValues).reduce((fields, fieldName) => {
-        // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
         fields[fieldName] = {
             type: getTypeFromValues(
                 fieldName,
@@ -41,5 +45,5 @@ export default (entities: any, checkRequired = true) => {
             ),
         };
         return fields;
-    }, {});
+    }, {} as GraphQLFieldConfigMap<TSource, TContext>);
 };

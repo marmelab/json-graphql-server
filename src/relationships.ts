@@ -1,1 +1,2 @@
-export const isRelationshipField = (fieldName: any) => fieldName.endsWith('_id');
+export const isRelationshipField = (fieldName: string) =>
+    fieldName.endsWith('_id');

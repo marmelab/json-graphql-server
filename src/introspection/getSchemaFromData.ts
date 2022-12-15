@@ -16,6 +16,7 @@ import getTypesFromData from './getTypesFromData';
 import getFilterTypesFromData from './getFilterTypesFromData';
 import { isRelationshipField } from '../relationships';
 import { getRelatedType } from '../nameConverter';
+import { EntityData } from '../type';
 
 /**
  * Get a GraphQL schema from data
@@ -76,13 +77,12 @@ import { getRelatedType } from '../nameConverter';
  * //     removeUser(id: ID!): Boolean
  * // }
  */
-export default (data: any) => {
+export default (data: Record<string, EntityData[]>) => {
     const types = getTypesFromData(data);
     const typesByName = types.reduce((types, type) => {
-        // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
         types[type.name] = type;
         return types;
-    }, {});
+    }, {} as Record<string, GraphQLObjectType>);
 
     const filterTypesByName = getFilterTypesFromData(data);
 
@@ -96,72 +96,64 @@ export default (data: any) => {
     const queryType = new GraphQLObjectType({
         name: 'Query',
         fields: types.reduce((fields, type) => {
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[type.name] = {
-                // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                 type: typesByName[type.name],
                 args: {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },
             };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`all${camelize(pluralize(type.name))}`] = {
-                // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                 type: new GraphQLList(typesByName[type.name]),
                 args: {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
                     sortField: { type: GraphQLString },
                     sortOrder: { type: GraphQLString },
-                    // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     filter: { type: filterTypesByName[type.name] },
                 },
             };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`_all${camelize(pluralize(type.name))}Meta`] = {
                 type: listMetadataType,
                 args: {
                     page: { type: GraphQLInt },
                     perPage: { type: GraphQLInt },
-                    // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     filter: { type: filterTypesByName[type.name] },
                 },
             };
             return fields;
-        }, {}),
+        }, {} as Record<string, any>),
     });
 
     const mutationType = new GraphQLObjectType({
         name: 'Mutation',
         fields: types.reduce((fields, type) => {
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             const typeFields = typesByName[type.name].getFields();
             const nullableTypeFields = Object.keys(typeFields).reduce(
                 (f, fieldName) => {
-                    // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     f[fieldName] = Object.assign({}, typeFields[fieldName], {
                         type:
                             fieldName !== 'id' &&
                             typeFields[fieldName].type instanceof GraphQLNonNull
-                                ? typeFields[fieldName].type.ofType
+                                ? (
+                                      typeFields[fieldName]
+                                          .type as GraphQLNonNull<any>
+                                  ).ofType
                                 : typeFields[fieldName].type,
                     });
                     return f;
                 },
-                {}
+                {} as Record<string, any>
             );
             const { id, ...createFields } = typeFields;
 
             // Build input type.
             const inputFields = Object.keys(createFields).reduce(
                 (f, fieldName) => {
-                    // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     f[fieldName] = Object.assign({}, createFields[fieldName]);
-                    // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                     delete f[fieldName].resolve;
                     return f;
                 },
-                {}
+                {} as Record<string, any>
             );
 
             const createManyInputType = new GraphQLInputObjectType({
@@ -169,15 +161,11 @@ export default (data: any) => {
                 fields: inputFields,
             });
 
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`create${type.name}`] = {
-                // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                 type: typesByName[type.name],
                 args: createFields,
             };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`createMany${type.name}`] = {
-                // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                 type: new GraphQLList(typesByName[type.name]),
                 args: {
                     data: {
@@ -185,22 +173,18 @@ export default (data: any) => {
                     },
                 },
             };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`update${type.name}`] = {
-                // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                 type: typesByName[type.name],
                 args: nullableTypeFields,
             };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`remove${type.name}`] = {
-                // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
                 type: typesByName[type.name],
                 args: {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },
             };
             return fields;
-        }, {}),
+        }, {} as Record<string, any>),
     });
 
     const schema = new GraphQLSchema({
@@ -218,22 +202,19 @@ export default (data: any) => {
      *     extend type User { Posts: [Post] }
      */
     const schemaExtension = Object.values(typesByName).reduce((ext, type) => {
-        // @ts-expect-error TS(2571): Object is of type 'unknown'.
         Object.keys(type.getFields())
             .filter(isRelationshipField)
             .map((fieldName) => {
                 const relType = getRelatedType(fieldName);
-                // @ts-expect-error TS(2571): Object is of type 'unknown'.
                 const rel = pluralize(type.toString());
                 ext += `
 extend type ${type} { ${relType}: ${relType} }
 extend type ${relType} { ${rel}: [${type}] }`;
             });
         return ext;
-    }, '');
+    }, '' as string);
 
     return schemaExtension
-        // @ts-expect-error TS(2345): Argument of type 'unknown' is not assignable to pa... Remove this comment to see the full error message
         ? extendSchema(schema, parse(schemaExtension))
         : schema;
 };

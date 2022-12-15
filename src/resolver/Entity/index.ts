@@ -51,30 +51,34 @@ import { isRelationshipField } from '../../relationships';
  *         },
  *     }
  */
-export default (entityName: any, data: any) => {
+export default (entityName: string, data: any) => {
     const entityFields = Object.keys(getFieldsFromEntities(data[entityName]));
     const manyToOneResolvers = entityFields.filter(isRelationshipField).reduce(
         (resolvers, fieldName) =>
             Object.assign({}, resolvers, {
-                [getRelatedType(fieldName)]: (entity: any) => data[getRelatedKey(fieldName)].find(
-                    (relatedRecord: any) => relatedRecord.id == entity[fieldName]
-                ),
+                [getRelatedType(fieldName)]: (entity: any) =>
+                    data[getRelatedKey(fieldName)].find(
+                        (relatedRecord: any) =>
+                            relatedRecord.id == entity[fieldName]
+                    ),
             }),
         {}
     );
     const relatedField = getReverseRelatedField(entityName); // 'posts' => 'post_id'
 
-    const hasReverseRelationship = (entityName: any) => Object.keys(getFieldsFromEntities(data[entityName])).includes(
-        relatedField
-    );
+    const hasReverseRelationship = (entityName: any) =>
+        Object.keys(getFieldsFromEntities(data[entityName])).includes(
+            relatedField
+        );
 
     const entities = Object.keys(data);
     const oneToManyResolvers = entities.filter(hasReverseRelationship).reduce(
         (resolvers, entityName) =>
             Object.assign({}, resolvers, {
-                [getRelationshipFromKey(entityName)]: (entity: any) => data[entityName].filter(
-                    (record: any) => record[relatedField] == entity.id
-                ),
+                [getRelationshipFromKey(entityName)]: (entity: any) =>
+                    data[entityName].filter(
+                        (record: any) => record[relatedField] == entity.id
+                    ),
             }),
         {}
     );

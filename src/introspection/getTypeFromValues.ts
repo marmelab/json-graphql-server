@@ -22,20 +22,20 @@ const isArray = (value: any) => Array.isArray(value);
 const valuesAreArray = (values: any) => values.every(isArray);
 const isDate = (value: any) => value instanceof Date || isISODateString(value);
 const valuesAreDate = (values: any) => values.every(isDate);
-const isObject = (value: any) => Object.prototype.toString.call(value) === '[object Object]';
+const isObject = (value: any) =>
+    Object.prototype.toString.call(value) === '[object Object]';
 const valuesAreObject = (values: any) => values.every(isObject);
 
 const requiredTypeOrNormal = (type: any, isRequired: any) =>
     isRequired ? new GraphQLNonNull(type) : type;
 
-export default (name: any, values = [], isRequired = false) => {
+export default (name: any, values: any[] = [], isRequired = false) => {
     if (name === 'id' || name.substr(name.length - 3) === '_id') {
         return requiredTypeOrNormal(GraphQLID, isRequired);
     }
     if (values.length > 0) {
         if (valuesAreArray(values)) {
             const leafValues = values.reduce((agg, arr) => {
-                // @ts-expect-error TS(2339): Property 'forEach' does not exist on type 'never'.
                 arr.forEach((value: any) => agg.push(value));
                 return agg;
             }, []);

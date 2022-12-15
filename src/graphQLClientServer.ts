@@ -1,5 +1,6 @@
 import mock, { proxy } from 'xhr-mock';
 import handleRequestFactory from './handleRequest';
+import { EntityData } from './type';
 
 /**
  * Starts a GraphQL Server in your browser: intercepts every call to http://localhost:3000/graphql
@@ -42,8 +43,11 @@ import handleRequestFactory from './handleRequest';
  */
 export default function ({
     data,
-    url
-}: any) {
+    url,
+}: {
+    data: Record<string, EntityData[]>;
+    url: string;
+}) {
     const handleRequest = handleRequestFactory(data);
 
     return {

@@ -7,7 +7,6 @@ import {
 } from 'graphql';
 import getTypesFromData from './getTypesFromData';
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('Integration test', () => {
     const data = {
         posts: [
@@ -52,9 +51,7 @@ test('Integration test', () => {
         },
     });
     const types = getTypesFromData(data);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(types.map((t) => t.toString())).toEqual(['Post', 'User']);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(types.map((t) => t.getFields())).toEqual([
         PostType.getFields(),
         UsersType.getFields(),

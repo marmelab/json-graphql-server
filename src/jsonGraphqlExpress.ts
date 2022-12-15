@@ -1,5 +1,6 @@
-import graphqlHTTP from 'express-graphql';
+import { graphqlHTTP } from 'express-graphql';
 import schemaBuilder from './schemaBuilder';
+import { EntityData } from './type';
 
 /**
  * An express middleware for a GraphQL endpoint serving data from the supplied json.
@@ -45,8 +46,8 @@ import schemaBuilder from './schemaBuilder';
  *
  * app.listen(PORT);
  */
-// @ts-expect-error TS(2349): This expression is not callable.
-export default (data: any) => graphqlHTTP({
-    schema: schemaBuilder(data),
-    graphiql: true,
-});
+export default (data: Record<string, EntityData[]>) =>
+    graphqlHTTP({
+        schema: schemaBuilder(data),
+        graphiql: true,
+    });

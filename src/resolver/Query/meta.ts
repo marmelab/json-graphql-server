@@ -1,7 +1,9 @@
+import { EntityData } from './../../type';
 import applyFilters from './applyFilters';
 
-export default (entityData: any) => (_: any, { filter = {} }) => {
-    let items = applyFilters(entityData, filter);
+export default (entityData: EntityData[]) =>
+    (_: any, { filter = {} }) => {
+        const items = applyFilters(entityData, filter);
 
-    return { count: items.length };
-};
+        return { count: items.length };
+    };

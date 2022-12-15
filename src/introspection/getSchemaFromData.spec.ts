@@ -1,5 +1,6 @@
 import {
     GraphQLID,
+    GraphQLInputObjectType,
     GraphQLInt,
     GraphQLList,
     GraphQLNonNull,
@@ -35,8 +36,7 @@ const data = {
     ],
 };
 
-// @ts-expect-error TS(7022): 'PostType' implicitly has type 'any' because it do... Remove this comment to see the full error message
-const PostType = new GraphQLObjectType({
+const PostType: GraphQLObjectType = new GraphQLObjectType({
     name: 'Post',
     fields: () => ({
         id: { type: new GraphQLNonNull(GraphQLID) },
@@ -47,7 +47,6 @@ const PostType = new GraphQLObjectType({
     }),
 });
 
-// @ts-expect-error TS(7022): 'UserType' implicitly has type 'any' because it do... Remove this comment to see the full error message
 const UserType = new GraphQLObjectType({
     name: 'User',
     fields: () => ({
@@ -104,230 +103,231 @@ const QueryType = new GraphQLObjectType({
 });
 */
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('creates one type per data type', () => {
     const typeMap = getSchemaFromData(data).getTypeMap();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(typeMap['Post'].name).toEqual(PostType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
-    expect(Object.keys(typeMap['Post'].getFields())).toEqual(
-        Object.keys(PostType.getFields())
-    );
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    expect(
+        Object.keys((typeMap['Post'] as GraphQLInputObjectType).getFields())
+    ).toEqual(Object.keys(PostType.getFields()));
     expect(typeMap['User'].name).toEqual(UserType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
-    expect(Object.keys(typeMap['User'].getFields())).toEqual(
-        Object.keys(UserType.getFields())
-    );
+    expect(
+        Object.keys((typeMap['User'] as GraphQLInputObjectType).getFields())
+    ).toEqual(Object.keys(UserType.getFields()));
 });
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('creates one field per relationship', () => {
     const typeMap = getSchemaFromData(data).getTypeMap();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
-    expect(Object.keys(typeMap['Post'].getFields())).toContain('User');
+    expect(
+        Object.keys((typeMap['Post'] as GraphQLInputObjectType).getFields())
+    ).toContain('User');
 });
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('creates one field per reverse relationship', () => {
     const typeMap = getSchemaFromData(data).getTypeMap();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
-    expect(Object.keys(typeMap['User'].getFields())).toContain('Posts');
+    expect(
+        Object.keys((typeMap['User'] as GraphQLInputObjectType).getFields())
+    ).toContain('Posts');
 });
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('creates three query fields per data type', () => {
-    // @ts-expect-error TS(2533): Object is possibly 'null' or 'undefined'.
+    // @ts-expect-error test only
     const queries = getSchemaFromData(data).getQueryType().getFields();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(queries['Post'].type.name).toEqual(PostType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['Post'].args).toEqual([
         {
             defaultValue: undefined,
-            description: null,
+            description: undefined,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].type.toString()).toEqual('[Post]');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[0].name).toEqual('page');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[0].type).toEqual(GraphQLInt);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[1].name).toEqual('perPage');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[1].type).toEqual(GraphQLInt);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[2].name).toEqual('sortField');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[2].type).toEqual(GraphQLString);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[3].name).toEqual('sortOrder');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[3].type).toEqual(GraphQLString);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[4].name).toEqual('filter');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allPosts'].args[4].type.toString()).toEqual('PostFilter');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(queries['User'].type.name).toEqual(UserType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['User'].args).toEqual([
         {
             defaultValue: undefined,
-            description: null,
+            description: undefined,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].type.toString()).toEqual('[User]');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[0].name).toEqual('page');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[0].type).toEqual(GraphQLInt);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[1].name).toEqual('perPage');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[1].type).toEqual(GraphQLInt);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[2].name).toEqual('sortField');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[2].type).toEqual(GraphQLString);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[3].name).toEqual('sortOrder');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[3].type).toEqual(GraphQLString);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[4].name).toEqual('filter');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['allUsers'].args[4].type.toString()).toEqual('UserFilter');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries['_allPostsMeta'].type.toString()).toEqual('ListMetadata');
 });
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('creates three mutation fields per data type', () => {
-    // @ts-expect-error TS(2533): Object is possibly 'null' or 'undefined'.
+    // @ts-expect-error test only
     const mutations = getSchemaFromData(data).getMutationType().getFields();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(mutations['createPost'].type.name).toEqual(PostType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(mutations['createPost'].args).toEqual([
         {
             name: 'title',
             type: new GraphQLNonNull(GraphQLString),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
         {
             name: 'views',
             type: new GraphQLNonNull(GraphQLInt),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
         {
             name: 'user_id',
             type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(mutations['updatePost'].type.name).toEqual(PostType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(mutations['updatePost'].args).toEqual([
         {
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
         {
             name: 'title',
             type: GraphQLString,
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
         {
             name: 'views',
             type: GraphQLInt,
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
         {
             name: 'user_id',
             type: GraphQLID,
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(mutations['removePost'].type.name).toEqual(PostType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(mutations['removePost'].args).toEqual([
         {
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(mutations['createUser'].type.name).toEqual(UserType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(mutations['createUser'].args).toEqual([
         {
             name: 'name',
             type: new GraphQLNonNull(GraphQLString),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(mutations['updateUser'].type.name).toEqual(UserType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(mutations['updateUser'].args).toEqual([
         {
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
         {
             name: 'name',
             type: GraphQLString,
             defaultValue: undefined,
-            description: null,
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    // @ts-expect-error test only
     expect(mutations['removeUser'].type.name).toEqual(UserType.name);
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(mutations['removeUser'].args).toEqual([
         {
             defaultValue: undefined,
-            description: null,
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
+            description: undefined,
+            extensions: undefined,
+            astNode: undefined,
+            deprecationReason: undefined,
         },
     ]);
 });
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('creates the mutation *Input type for createMany', () => {
-    // @ts-expect-error TS(2533): Object is possibly 'null' or 'undefined'.
+    // @ts-expect-error test only
     const mutations = getSchemaFromData(data).getMutationType().getFields();
-    const createManyPostInputType = mutations['createManyPost'].args[0].type;
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
+    const createManyPostInputType = mutations['createManyPost'].args[0]
+        .type as GraphQLList<any>;
     expect(createManyPostInputType.toString()).toEqual('[PostInput]');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(createManyPostInputType.ofType.getFields()).toEqual({
         title: {
             type: new GraphQLNonNull(GraphQLString),
@@ -356,7 +356,6 @@ test('creates the mutation *Input type for createMany', () => {
     });
 });
 
-// @ts-expect-error TS(2582): Cannot find name 'test'. Do you need to install ty... Remove this comment to see the full error message
 test('pluralizes and capitalizes correctly', () => {
     const data = {
         feet: [
@@ -365,19 +364,13 @@ test('pluralizes and capitalizes correctly', () => {
         ],
         categories: [{ id: 1, name: 'foo' }],
     };
-    // @ts-expect-error TS(2533): Object is possibly 'null' or 'undefined'.
+    // @ts-expect-error test only
     const queries = getSchemaFromData(data).getQueryType().getFields();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries).toHaveProperty('Foot');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries).toHaveProperty('Category');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries).toHaveProperty('allFeet');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(queries).toHaveProperty('allCategories');
     const types = getSchemaFromData(data).getTypeMap();
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(types).toHaveProperty('Foot');
-    // @ts-expect-error TS(2304): Cannot find name 'expect'.
     expect(types).toHaveProperty('Category');
 });

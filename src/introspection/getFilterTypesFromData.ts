@@ -1,18 +1,20 @@
 import {
     GraphQLBoolean,
-    GraphQLInputObjectType,
-    GraphQLString,
-    GraphQLInt,
     GraphQLFloat,
-    GraphQLList,
     GraphQLID,
+    GraphQLInputFieldConfigMap,
+    GraphQLInputObjectType,
+    GraphQLInt,
+    GraphQLList,
+    GraphQLString,
 } from 'graphql';
-import getFieldsFromEntities from './getFieldsFromEntities';
-import getValuesFromEntities from './getValuesFromEntities';
-import getTypeFromValues from './getTypeFromValues';
 import { getTypeFromKey } from '../nameConverter';
+import { EntityData } from './../type';
+import getFieldsFromEntities from './getFieldsFromEntities';
+import getTypeFromValues from './getTypeFromValues';
+import getValuesFromEntities from './getValuesFromEntities';
 
-const getRangeFiltersFromEntities = (entities: any) => {
+const getRangeFiltersFromEntities = (entities: EntityData[]) => {
     const fieldValues = getValuesFromEntities(entities);
     return Object.keys(fieldValues).reduce((fields, fieldName) => {
         const fieldType = getTypeFromValues(
@@ -25,22 +27,17 @@ const getRangeFiltersFromEntities = (entities: any) => {
             fieldType == GraphQLFloat ||
             fieldType.name == 'Date'
         ) {
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_lt`] = { type: fieldType };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_lte`] = { type: fieldType };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_gt`] = { type: fieldType };
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_gte`] = { type: fieldType };
         }
 
         if (fieldType != GraphQLBoolean && fieldType != GraphQLList) {
-            // @ts-expect-error TS(7053): Element implicitly has an 'any' type because expre... Remove this comment to see the full error message
             fields[`${fieldName}_neq`] = { type: fieldType };
         }
         return fields;
-    }, {});
+    }, {} as GraphQLInputFieldConfigMap);
 };
 
 /**
@@ -99,22 +96,26 @@ const getRangeFiltersFromEntities = (entities: any) => {
  * //     }),
  * // }
  */
-export default (data: any) => Object.keys(data).reduce(
-    (types, key) =>
-        Object.assign({}, types, {
-            [getTypeFromKey(key)]: new GraphQLInputObjectType({
-                name: `${getTypeFromKey(key)}Filter`,
-                fields: Object.assign(
-                    {
-                        q: { type: GraphQLString },
-                    },
-                    {
-                        ids: { type: new GraphQLList(GraphQLID) },
-                    },
-                    getFieldsFromEntities(data[key], false),
-                    getRangeFiltersFromEntities(data[key])
-                ),
+
+export default (
+    data: Record<string, EntityData[]>
+): Record<string, GraphQLInputObjectType> =>
+    Object.keys(data).reduce(
+        (types, key) =>
+            Object.assign({}, types, {
+                [getTypeFromKey(key)]: new GraphQLInputObjectType({
+                    name: `${getTypeFromKey(key)}Filter`,
+                    fields: Object.assign(
+                        {
+                            q: { type: GraphQLString },
+                        },
+                        {
+                            ids: { type: new GraphQLList(GraphQLID) },
+                        },
+                        getFieldsFromEntities(data[key], false),
+                        getRangeFiltersFromEntities(data[key])
+                    ),
+                }),
             }),
-        }),
-    {}
-);
+        {}
+    );

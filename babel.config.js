@@ -10,6 +10,7 @@ module.exports = {
                         },
                     },
                 ],
+                '@babel/preset-typescript',
             ],
         },
         development: {
@@ -20,6 +21,7 @@ module.exports = {
                         modules: false,
                     },
                 ],
+                '@babel/preset-typescript',
             ],
             plugins: ['add-module-exports'],
         },
@@ -31,6 +33,7 @@ module.exports = {
                         modules: false,
                     },
                 ],
+                '@babel/preset-typescript',
             ],
             plugins: ['add-module-exports'],
         },

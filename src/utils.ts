@@ -1,4 +1,11 @@
-import { printSchema, GraphQLSchema, GraphQLObjectType } from 'graphql';
+import {
+    GraphQLFieldConfigMap,
+    GraphQLNamedType,
+    GraphQLObjectType,
+    GraphQLSchema,
+    printSchema,
+    Thunk,
+} from 'graphql';
 
 /**
  * Return a schema string with a Main type using the fields
@@ -23,7 +30,9 @@ import { printSchema, GraphQLSchema, GraphQLObjectType } from 'graphql';
  * //   foo: Main
  * // }
  */
-export const printSchemaForFields = (fields: any) => {
+export const printSchemaForFields = <TSource = unknown, TContext = unknown>(
+    fields: Thunk<GraphQLFieldConfigMap<TSource, TContext>>
+) => {
     const mainType = new GraphQLObjectType({
         name: 'Main',
         fields,
@@ -40,17 +49,17 @@ export const printSchemaForFields = (fields: any) => {
     return printSchema(schema);
 };
 
-export const printSchemaForTypes = (types: any) => {
-    const typesSchema = types.reduce((schema: any, type: any) => {
+export const printSchemaForTypes = (types: GraphQLNamedType[]) => {
+    const typesSchema = types.reduce((schema, type) => {
         schema[type.name] = type;
         return schema;
-    }, {});
+    }, {} as Record<string, GraphQLNamedType>);
     const queryType = new GraphQLObjectType({
         name: 'Query',
-        fields: types.reduce((fields: any, type: any) => {
+        fields: types.reduce((fields, type) => {
             fields[type.name] = { type };
             return fields;
-        }, {}),
+        }, {} as GraphQLFieldConfigMap<unknown, unknown>),
     });
 
     const schema = new GraphQLSchema({ ...typesSchema, query: queryType });

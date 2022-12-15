@@ -6,3 +6,4 @@ node_modules
 .reify-cache
 coverage
 yarn-error.log
+dist/

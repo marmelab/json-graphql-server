@@ -3,7 +3,7 @@ import { Kind } from 'graphql/language';
 
 const ISO_DATE_STRING_PATTERN = /\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z/;
 
-export const isISODateString = (value: any) => {
+export const isISODateString = (value: unknown): value is string => {
     if (typeof value !== 'string') return false;
     if (!ISO_DATE_STRING_PATTERN.test(value)) return false;
     const d = new Date(value);
@@ -15,13 +15,11 @@ export default new GraphQLScalarType({
     description: 'Date type',
     parseValue(value) {
         // value comes from the client
-        // @ts-expect-error TS(2769): No overload matches this call.
         return new Date(value); // sent to resolvers
     },
     serialize(value) {
         // value comes from resolvers
         if (isISODateString(value)) return value;
-        // @ts-expect-error TS(2571): Object is of type 'unknown'.
         return value.toISOString(); // sent to the client
     },
     parseLiteral(ast) {

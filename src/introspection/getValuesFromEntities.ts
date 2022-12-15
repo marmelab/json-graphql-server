@@ -1,3 +1,4 @@
+import { EntityData } from './../type';
 /**
  * Gets a list of values indexed by field based on a list of entities
  *
@@ -24,14 +25,15 @@
  * //    user_id: [123, 456],
  * // }
  */
-export default (entities: any) => entities.reduce((values: any, entity: any) => {
-    Object.keys(entity).forEach((fieldName) => {
-        if (!values[fieldName]) {
-            values[fieldName] = [];
-        }
-        if (entity[fieldName] != null) {
-            values[fieldName].push(entity[fieldName]);
-        }
-    });
-    return values;
-}, {});
+export default (entities: EntityData[]) =>
+    entities.reduce((values, entity) => {
+        Object.keys(entity).forEach((fieldName) => {
+            if (!values[fieldName]) {
+                values[fieldName] = [];
+            }
+            if (entity[fieldName] != null) {
+                values[fieldName].push(entity[fieldName]);
+            }
+        });
+        return values;
+    }, {} as Record<string, unknown[]>);

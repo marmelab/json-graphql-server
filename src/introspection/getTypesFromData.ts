@@ -3,6 +3,7 @@ import { singularize, camelize } from 'inflection';
 
 import getFieldsFromEntities from './getFieldsFromEntities';
 import { getTypeFromKey } from '../nameConverter';
+import { EntityData } from '../type';
 
 /**
  * Get a list of GraphQLObjectType from data
@@ -54,11 +55,13 @@ import { getTypeFromKey } from '../nameConverter';
  * //     }),
  * // ]
  */
-export default (data: any) => Object.keys(data)
-    .map((typeName) => ({
-        name: camelize(singularize(typeName)),
-        fields: getFieldsFromEntities(data[typeName]),
-    }))
-    .map((typeObject) => new GraphQLObjectType(typeObject));
+export default (data: Record<string, EntityData[]>) =>
+    Object.keys(data)
+        .map((typeName) => ({
+            name: camelize(singularize(typeName)),
+            fields: getFieldsFromEntities(data[typeName]),
+        }))
+        .map((typeObject) => new GraphQLObjectType(typeObject));
 
-export const getTypeNamesFromData = (data: any) => Object.keys(data).map(getTypeFromKey);
+export const getTypeNamesFromData = (data: Record<string, EntityData[]>) =>
+    Object.keys(data).map(getTypeFromKey);
