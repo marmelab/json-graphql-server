@@ -13,11 +13,11 @@ var app = express();
 
 process.argv.forEach((arg, index) => {
     // allow a custom port via CLI
-    if (arg === '--p' && process.argv.length > index + 1) {
+    if ((arg === '-p' || arg === '--port') && process.argv.length > index + 1) {
         PORT = process.argv[index + 1];
     }
 
-    if (arg === '--h' && process.argv.length > index + 1) {
+    if ((arg === '--h'|| arg === '--host') && process.argv.length > index + 1) {
         HOST = process.argv[index + 1];
     }
 });
