@@ -17,7 +17,7 @@ process.argv.forEach((arg, index) => {
         PORT = process.argv[index + 1];
     }
 
-    if ((arg === '--h'|| arg === '--host') && process.argv.length > index + 1) {
+    if ((arg === '-h' || arg === '--host') && process.argv.length > index + 1) {
         HOST = process.argv[index + 1];
     }
 });
