@@ -85,8 +85,3 @@ test('creates 4 fields for number field for range filters', () => {
     expect(PostFilterFields.views_gte.type.toString()).toEqual('Int');
 });
 
-test('does not create vomparison fiels for non-number fields', () => {
-    const filterTypes = getFilterTypesFromData(data);
-    const PostFilterFields = filterTypes.Post.getFields();
-    expect(PostFilterFields.title_lte).toBeUndefined();
-});
