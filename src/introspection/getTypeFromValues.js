@@ -20,7 +20,7 @@ const isString = (value) => typeof value === 'string';
 const valuesAreString = (values) => values.every(isString);
 const isArray = (value) => Array.isArray(value);
 const valuesAreArray = (values) => values.every(isArray);
-const isDate = (value) => value instanceof Date || isISODateString(value);
+const isDate = (value) => value instanceof Date;
 const valuesAreDate = (values) => values.every(isDate);
 const isObject = (value) =>
     Object.prototype.toString.call(value) === '[object Object]';

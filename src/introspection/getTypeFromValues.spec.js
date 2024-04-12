@@ -60,13 +60,13 @@ test('returns DateType for Dates', () =>
     expect(
         getTypeFromValues('foo', [new Date('2017-03-15'), new Date()])
     ).toEqual(DateType));
-test('returns DateType for Dates as ISO Strings', () =>
+test('returns GraphQLString for Dates as ISO Strings', () =>
     expect(
         getTypeFromValues('foo', [
             '2022-01-01T00:00:00.000Z',
             '2022-12-01T12:34:56.000Z',
         ])
-    ).toEqual(DateType));
+    ).toEqual(GraphQLString));
 
 test('returns GraphQLJSON for objects', () =>
     expect(
