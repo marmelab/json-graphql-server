@@ -10,8 +10,10 @@ export const isISODateString = (value) => {
     return d.toISOString() === value;
 };
 
+export const GraphQLDate = 'Date';
+
 export default new GraphQLScalarType({
-    name: 'Date',
+    name: GraphQLDate,
     description: 'Date type',
     parseValue(value) {
         // value comes from the client

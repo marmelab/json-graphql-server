@@ -8,7 +8,7 @@ import {
     GraphQLString,
 } from 'graphql';
 import GraphQLJSON from 'graphql-type-json';
-import DateType from './DateType';
+import DateType, { isISODateString } from './DateType';
 
 const isNumeric = (value) => !isNaN(parseFloat(value)) && isFinite(value);
 const valuesAreNumeric = (values) => values.every(isNumeric);
@@ -20,7 +20,7 @@ const isString = (value) => typeof value === 'string';
 const valuesAreString = (values) => values.every(isString);
 const isArray = (value) => Array.isArray(value);
 const valuesAreArray = (values) => values.every(isArray);
-const isDate = (value) => value instanceof Date;
+const isDate = (value) => value instanceof Date || isISODateString(value);
 const valuesAreDate = (values) => values.every(isDate);
 const isObject = (value) =>
     Object.prototype.toString.call(value) === '[object Object]';
