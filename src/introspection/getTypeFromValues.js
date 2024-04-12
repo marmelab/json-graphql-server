@@ -8,7 +8,7 @@ import {
     GraphQLString,
 } from 'graphql';
 import GraphQLJSON from 'graphql-type-json';
-import DateType, { isISODateString } from './DateType';
+import DateType from './DateType';
 
 const isNumeric = (value) => !isNaN(parseFloat(value)) && isFinite(value);
 const valuesAreNumeric = (values) => values.every(isNumeric);
