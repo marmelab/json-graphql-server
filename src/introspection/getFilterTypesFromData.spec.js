@@ -87,7 +87,7 @@ test('creates 4 fields for number field for range filters', () => {
     expect(PostFilterFields.views_gte.type.toString()).toEqual('Int');
 });
 
-test('does not create comparison fields for fields that does not support it', () => {
+test('does not create comparison fields for fields that do not support it', () => {
     const filterTypes = getFilterTypesFromData(data);
     const PostFilterFields = filterTypes.Post.getFields();
     expect(PostFilterFields.published_lte).toBeUndefined();
