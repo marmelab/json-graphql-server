@@ -23,6 +23,7 @@ const getRangeFiltersFromEntities = (entities) => {
         if (
             fieldType == GraphQLInt ||
             fieldType == GraphQLFloat ||
+            fieldType.name == GraphQLString ||
             fieldType.name == 'Date'
         ) {
             fields[`${fieldName}_lt`] = { type: fieldType };

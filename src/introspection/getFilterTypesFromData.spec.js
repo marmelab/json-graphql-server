@@ -7,12 +7,14 @@ const data = {
             title: 'Lorem Ipsum',
             views: 254,
             user_id: 123,
+            published: true,
         },
         {
             id: 2,
             title: 'Sic Dolor amet',
             views: 65,
             user_id: 456,
+            published: true,
         },
     ],
     users: [
@@ -85,8 +87,8 @@ test('creates 4 fields for number field for range filters', () => {
     expect(PostFilterFields.views_gte.type.toString()).toEqual('Int');
 });
 
-test('does not create vomparison fiels for non-number fields', () => {
+test('does not create comparison fields for fields that do not support it', () => {
     const filterTypes = getFilterTypesFromData(data);
     const PostFilterFields = filterTypes.Post.getFields();
-    expect(PostFilterFields.title_lte).toBeUndefined();
+    expect(PostFilterFields.published_lte).toBeUndefined();
 });
