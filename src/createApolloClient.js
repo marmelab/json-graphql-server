@@ -1,5 +1,4 @@
-import { ApolloClient } from 'apollo-client';
-import { mockNetworkInterfaceWithSchema } from 'apollo-test-utils';
+import { ApolloClient, mockNetworkInterfaceWithSchema } from '@apollo/client';
 import getSchemaFromData from './introspection/getSchemaFromData';
 
 export default (data) => {
