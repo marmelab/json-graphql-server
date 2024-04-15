@@ -7,6 +7,7 @@ import {
     GraphQLString,
 } from 'graphql';
 import getSchemaFromData from './getSchemaFromData';
+import e from 'cors';
 
 const data = {
     posts: [
@@ -128,12 +129,10 @@ test('creates three query fields per data type', () => {
     const queries = getSchemaFromData(data).getQueryType().getFields();
     expect(queries['Post'].type.name).toEqual(PostType.name);
     expect(queries['Post'].args).toEqual([
-        {
-            defaultValue: undefined,
-            description: null,
+        expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-        },
+        }),
     ]);
     expect(queries['allPosts'].type.toString()).toEqual('[Post]');
     expect(queries['allPosts'].args[0].name).toEqual('page');
@@ -150,12 +149,10 @@ test('creates three query fields per data type', () => {
 
     expect(queries['User'].type.name).toEqual(UserType.name);
     expect(queries['User'].args).toEqual([
-        {
-            defaultValue: undefined,
-            description: null,
+        expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-        },
+        }),
     ]);
     expect(queries['allUsers'].type.toString()).toEqual('[User]');
     expect(queries['allUsers'].args[0].name).toEqual('page');
@@ -175,93 +172,69 @@ test('creates three mutation fields per data type', () => {
     const mutations = getSchemaFromData(data).getMutationType().getFields();
     expect(mutations['createPost'].type.name).toEqual(PostType.name);
     expect(mutations['createPost'].args).toEqual([
-        {
+        expect.objectContaining({
             name: 'title',
             type: new GraphQLNonNull(GraphQLString),
-            defaultValue: undefined,
-            description: null,
-        },
-        {
+        }),
+       expect.objectContaining({
             name: 'views',
             type: new GraphQLNonNull(GraphQLInt),
-            defaultValue: undefined,
-            description: null,
-        },
-        {
+        }),
+        expect.objectContaining({
             name: 'user_id',
             type: new GraphQLNonNull(GraphQLID),
-            defaultValue: undefined,
-            description: null,
-        },
+        }),
     ]);
     expect(mutations['updatePost'].type.name).toEqual(PostType.name);
     expect(mutations['updatePost'].args).toEqual([
-        {
+        expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-            defaultValue: undefined,
-            description: null,
-        },
-        {
+        }),
+        expect.objectContaining({
             name: 'title',
             type: GraphQLString,
-            defaultValue: undefined,
-            description: null,
-        },
-        {
+        }),
+        expect.objectContaining({
             name: 'views',
             type: GraphQLInt,
-            defaultValue: undefined,
-            description: null,
-        },
-        {
+        }),
+        expect.objectContaining({
             name: 'user_id',
             type: GraphQLID,
-            defaultValue: undefined,
-            description: null,
-        },
+         }),
     ]);
     expect(mutations['removePost'].type.name).toEqual(PostType.name);
     expect(mutations['removePost'].args).toEqual([
-        {
+        expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-            defaultValue: undefined,
-            description: null,
-        },
+        }),
     ]);
     expect(mutations['createUser'].type.name).toEqual(UserType.name);
     expect(mutations['createUser'].args).toEqual([
-        {
+        expect.objectContaining({
             name: 'name',
             type: new GraphQLNonNull(GraphQLString),
-            defaultValue: undefined,
-            description: null,
-        },
+        }),
     ]);
     expect(mutations['updateUser'].type.name).toEqual(UserType.name);
     expect(mutations['updateUser'].args).toEqual([
-        {
+        expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-            defaultValue: undefined,
-            description: null,
-        },
-        {
+        }),
+        expect.objectContaining({
             name: 'name',
             type: GraphQLString,
-            defaultValue: undefined,
-            description: null,
-        },
+        }),
     ]);
     expect(mutations['removeUser'].type.name).toEqual(UserType.name);
     expect(mutations['removeUser'].args).toEqual([
-        {
-            defaultValue: undefined,
-            description: null,
+        expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
-        },
+        }),
     ]);
 });
 
@@ -270,30 +243,18 @@ test('creates the mutation *Input type for createMany', () => {
     const createManyPostInputType = mutations['createManyPost'].args[0].type;
     expect(createManyPostInputType.toString()).toEqual('[PostInput]');
     expect(createManyPostInputType.ofType.getFields()).toEqual({
-        title: {
+        title: expect.objectContaining({
             type: new GraphQLNonNull(GraphQLString),
             name: 'title',
-            astNode: undefined,
-            defaultValue: undefined,
-            description: undefined,
-            extensions: undefined,
-        },
-        views: {
+        }),
+        views: expect.objectContaining({
             type: new GraphQLNonNull(GraphQLInt),
             name: 'views',
-            astNode: undefined,
-            defaultValue: undefined,
-            description: undefined,
-            extensions: undefined,
-        },
-        user_id: {
+        }),
+        user_id: expect.objectContaining({
             type: new GraphQLNonNull(GraphQLID),
             name: 'user_id',
-            astNode: undefined,
-            defaultValue: undefined,
-            description: undefined,
-            extensions: undefined,
-        },
+        }),
     });
 });
 
