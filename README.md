@@ -46,7 +46,7 @@ Start the GraphQL server on localhost, port 3000.
 json-graphql-server db.js
 ```
 
-To use a port other than 3000, you can run `json-graphql-server db.js -p <your port here>` or `--port <your port here>` 
+To use a port other than 3000, you can run `json-graphql-server db.js --p <your port here>`
 To use a host other than localhost, you can run `json-graphql-server db.js -h <your host here>` or `--host <your host here>`
 
 Now you can query your data in graphql. For instance, to issue the following query:
@@ -455,7 +455,8 @@ const app = express();
 const data = {
     // ... your data
 };
-app.use('/graphql', jsonGraphqlExpress(data));
+
+app.use('/graphql', jsonGraphqlExpress.default(data));
 app.listen(PORT);
 ```
 
