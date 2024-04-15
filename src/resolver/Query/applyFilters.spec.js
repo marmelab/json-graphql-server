@@ -193,3 +193,96 @@ test('should filter by value if filter contains an array for the key', () => {
         },
     ]);
 });
+
+test('should filter by date even if the data contains ISO string dates', () => {
+    const data = [
+        {
+            id: 1,
+            date: '2020-01-01T00:00:00.000Z',
+        },
+        {
+            id: 2,
+            date: '2020-01-02T00:00:00.000Z',
+        },
+    ];
+
+    expect(
+        applyFilters(data, { date: new Date('2020-01-01T00:00:00.000Z') })
+    ).toEqual([
+        {
+            id: 1,
+            date: '2020-01-01T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(data, { date_neq: new Date('2020-01-01T00:00:00.000Z') })
+    ).toEqual([
+        {
+            id: 2,
+            date: '2020-01-02T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(data, { date_lt: new Date('2020-01-02T00:00:00.000Z') })
+    ).toEqual([
+        {
+            id: 1,
+            date: '2020-01-01T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(data, { date_lte: new Date('2020-01-01:23:00.000Z') })
+    ).toEqual([
+        {
+            id: 1,
+            date: '2020-01-01T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(data, { date_gt: new Date('2020-01-01T00:00:00.000Z') })
+    ).toEqual([
+        {
+            id: 2,
+            date: '2020-01-02T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(data, { date_gte: new Date('2020-01-01T23:00:00.000Z') })
+    ).toEqual([
+        {
+            id: 2,
+            date: '2020-01-02T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(data, { date: [new Date('2020-01-01T00:00:00.000Z')] })
+    ).toEqual([
+        {
+            id: 1,
+            date: '2020-01-01T00:00:00.000Z',
+        },
+    ]);
+    expect(
+        applyFilters(
+            [
+                {
+                    id: 1,
+                    dates: [
+                        '2020-01-01T00:00:00.000Z',
+                        '2020-01-02T00:00:00.000Z',
+                    ],
+                },
+                {
+                    id: 2,
+                    dates: ['2020-01-02T00:00:00.000Z'],
+                },
+            ],
+            { dates: [new Date('2020-01-01T00:00:00.000Z')] }
+        )
+    ).toEqual([
+        {
+            id: 1,
+            dates: ['2020-01-01T00:00:00.000Z', '2020-01-02T00:00:00.000Z'],
+        },
+    ]);
+});

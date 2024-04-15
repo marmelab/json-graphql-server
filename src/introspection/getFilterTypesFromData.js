@@ -11,6 +11,7 @@ import getFieldsFromEntities from './getFieldsFromEntities';
 import getValuesFromEntities from './getValuesFromEntities';
 import getTypeFromValues from './getTypeFromValues';
 import { getTypeFromKey } from '../nameConverter';
+import { GraphQLDate } from './DateType';
 
 const getRangeFiltersFromEntities = (entities) => {
     const fieldValues = getValuesFromEntities(entities);
@@ -24,7 +25,7 @@ const getRangeFiltersFromEntities = (entities) => {
             fieldType == GraphQLInt ||
             fieldType == GraphQLFloat ||
             fieldType.name == GraphQLString ||
-            fieldType.name == 'Date'
+            fieldType.name == GraphQLDate
         ) {
             fields[`${fieldName}_lt`] = { type: fieldType };
             fields[`${fieldName}_lte`] = { type: fieldType };

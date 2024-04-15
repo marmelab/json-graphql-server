@@ -10,7 +10,7 @@ import update from './Mutation/update';
 import remove from './Mutation/remove';
 import entityResolver from './Entity';
 import { getTypeFromKey } from '../nameConverter';
-import DateType from '../introspection/DateType';
+import DateType, { GraphQLDate } from '../introspection/DateType';
 import hasType from '../introspection/hasType';
 
 const getQueryResolvers = (entityName, data) => ({
@@ -56,7 +56,7 @@ export default (data) => {
                 }),
             {}
         ),
-        hasType('Date', data) ? { Date: DateType } : {}, // required because makeExecutableSchema strips resolvers from typeDefs
+        hasType(GraphQLDate, data) ? { Date: DateType } : {}, // required because makeExecutableSchema strips resolvers from typeDefs
         hasType('JSON', data) ? { JSON: GraphQLJSON } : {} // required because makeExecutableSchema strips resolvers from typeDefs
     );
 };
