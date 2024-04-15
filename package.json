@@ -54,10 +54,9 @@
         "webpack-cli": "^3.3.9"
     },
     "dependencies": {
-        "apollo-client": "^2.6.4",
-        "apollo-test-utils": "^0.3.2",
+        "@apollo/client": "^3.9.11",
         "cors": "^2.8.4",
-        "express": "^4.19.2",
+        "express": "^4.17.2",
         "express-graphql": "^0.9.0",
         "graphql": "^14.5.8",
         "graphql-tag": "^2.10.1",
