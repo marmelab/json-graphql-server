@@ -9,14 +9,11 @@ export default defineConfig({
             // Could also be a dictionary or array of multiple entry points
             entry: resolve(__dirname, 'src/client.js'),
             name: 'JsonGraphqlServer',
-            formats: ['es', 'cjs'],
+            formats: ['umd'],
+            fileName: 'json-graphql-server',
         },
         sourcemap: true,
         minify: process.env.NODE_ENV === 'production',
-        rollupOptions: {
-            // make sure to externalize deps that shouldn't be bundled
-            // into your library
-            external: Object.keys(pkg.dependencies),
-        },
+        emptyOutDir: false
     },
 });

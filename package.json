@@ -2,12 +2,16 @@
     "name": "json-graphql-server",
     "version": "2.4.1",
     "type": "module",
-    "main": "./dist/json-graphql-server.umd.cjs",
+    "main": "./dist/json-graphql-server.cjs",
     "module": "./dist/json-graphql-server.js",
     "exports": {
         ".": {
             "import": "./dist/json-graphql-server.js",
-            "require": "./dist/json-graphql-server.umd.cjs"
+            "require": "./dist/json-graphql-server.cjs"
+        },
+        "./node": {
+            "import": "./dist/json-graphql-server-node.js",
+            "require": "./dist/json-graphql-server-node.cjs"
         }
     },
     "repository": "git@github.com:marmelab/json-graphql-server.git",

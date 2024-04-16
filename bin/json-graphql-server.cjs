@@ -3,7 +3,7 @@ require('reify');
 var path = require('path');
 var express = require('express');
 var cors = require('cors');
-var JsonGraphqlServer = require('../dist/json-graphql-server').default;
+var JsonGraphqlServer = require('../dist/json-graphql-server-node').default;
 
 var dataFilePath = process.argv.length > 2 ? process.argv[2] : './data.json';
 var data = require(path.join(process.cwd(), dataFilePath));
@@ -23,7 +23,7 @@ process.argv.forEach((arg, index) => {
 });
 
 app.use(cors());
-app.use('/', JsonGraphqlServer({ data }).getHandler());
+app.use('/', JsonGraphqlServer(data));
 app.listen(PORT, HOST);
 var msg = `GraphQL server running with your data at http://${HOST}:${PORT}/`;
 console.log(msg); // eslint-disable-line no-console

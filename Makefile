@@ -26,3 +26,5 @@ run: ## Launch server with example data
 
 build: ## Build production release
 	@yarn vite build
+	@yarn vite build -c ./vite.config.node.js
+	@yarn vite build -c ./vite.config.umd.js
