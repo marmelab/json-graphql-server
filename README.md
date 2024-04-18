@@ -448,7 +448,7 @@ Then use the `jsonGraphqlExpress` express middleware:
 
 ```js
 import express from 'express';
-import jsonGraphqlExpress from 'json-graphql-server';
+import jsonGraphqlExpress from 'json-graphql-server/node';
 
 const PORT = 3000;
 const app = express();
@@ -469,7 +469,7 @@ Useful when using XMLHttpRequest directly or libraries such as [axios](https://w
 Add a `script` tag referencing the library:
 
 ```html
-<script src="../lib/json-graphql-server.client.min.js"></script>
+<script src="../dist/json-graphql-server.umd.js"></script>
 ```
 
 It will expose the `JsonGraphqlServer` as a global object:

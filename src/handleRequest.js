@@ -51,13 +51,11 @@ export default function (data) {
 
         const query = JSON.parse(body);
 
-        return graphql(
+        return graphql({
             schema,
-            query.query,
-            undefined,
-            undefined,
-            query.variables
-        ).then(
+            source: query.query,
+            variableValues: query.variables
+        }).then(
             (result) => ({
                 status: 200,
                 headers: { 'Content-Type': 'application/json' },
