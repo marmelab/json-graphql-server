@@ -21,7 +21,7 @@
     ],
     "files": [
         "*.md",
-        "lib",
+        "dist",
         "src",
         "bin"
     ],
