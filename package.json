@@ -1,6 +1,6 @@
 {
     "name": "json-graphql-server",
-    "version": "2.4.1",
+    "version": "3.0.0",
     "type": "module",
     "main": "./dist/json-graphql-server.cjs",
     "module": "./dist/json-graphql-server.js",
