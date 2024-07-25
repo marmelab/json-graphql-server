@@ -1,4 +1,4 @@
-import graphqlHTTP from 'express-graphql';
+import { createHandler } from 'graphql-http/lib/use/express';
 import schemaBuilder from './schemaBuilder';
 
 /**
@@ -46,7 +46,6 @@ import schemaBuilder from './schemaBuilder';
  * app.listen(PORT);
  */
 export default (data) =>
-    graphqlHTTP({
+    createHandler({
         schema: schemaBuilder(data),
-        graphiql: true,
     });

@@ -1,5 +1,5 @@
 import { pluralize } from 'inflection';
-import GraphQLJSON from 'graphql-type-json';
+import { GraphQLJSON } from 'graphql-type-json';
 
 import all from './Query/all';
 import meta from './Query/meta';

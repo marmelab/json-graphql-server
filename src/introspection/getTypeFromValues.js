@@ -7,7 +7,7 @@ import {
     GraphQLNonNull,
     GraphQLString,
 } from 'graphql';
-import GraphQLJSON from 'graphql-type-json';
+import { GraphQLJSON } from 'graphql-type-json';
 import DateType, { isISODateString } from './DateType';
 
 const isNumeric = (value) => !isNaN(parseFloat(value)) && isFinite(value);

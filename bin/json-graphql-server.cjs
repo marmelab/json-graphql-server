@@ -3,8 +3,8 @@ require('reify');
 var path = require('path');
 var express = require('express');
 var cors = require('cors');
-var JsonGraphqlServer = require('../dist/json-graphql-server-node').default;
-
+var JsonGraphqlServer = require('../dist/json-graphql-server-node.cjs').default;
+var ruru = require('ruru/server');
 var dataFilePath = process.argv.length > 2 ? process.argv[2] : './data.json';
 var data = require(path.join(process.cwd(), dataFilePath));
 var PORT = process.env.NODE_PORT || 3000;
@@ -23,7 +23,24 @@ process.argv.forEach((arg, index) => {
 });
 
 app.use(cors());
-app.use('/', JsonGraphqlServer(data));
+const gqlServer = JsonGraphqlServer(data);
+const graphiql = (req, res) => {
+    res.writeHead(200, undefined, {
+        "Content-Type": "text/html; charset=utf-8",
+    });
+    return res.end(
+        ruru.ruruHTML({
+            endpoint: '/graphql',
+        })
+    );
+}
+app.use('/', (req, res) => {
+    if (req.is('application/json')) {
+        return gqlServer(req, res);
+    }
+
+    return graphiql(req, res);
+});
 app.listen(PORT, HOST);
 var msg = `GraphQL server running with your data at http://${HOST}:${PORT}/`;
 console.log(msg); // eslint-disable-line no-console
