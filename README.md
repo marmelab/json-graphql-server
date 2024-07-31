@@ -89,7 +89,7 @@ Go to http://localhost:3000/?query=%7B%20Post%28id%3A%201%29%20%7B%20id%20title%
 }
 ```
 
-The json-graphql-server accepts queries in GET and POST. Under the hood, it uses [the `express-graphql` module](https://github.com/graphql/express-graphql). Please refer to their documentations for details about passing variables, etc.
+The json-graphql-server accepts queries in GET and POST. Under the hood, it uses [the `graphql-http` module](https://graphql.org/graphql-js/graphql-http/). Please refer to their documentations for details about passing variables, etc.
 
 Note that the server is [GraphiQL](https://github.com/graphql/graphiql) enabled, so you can query your server using a full-featured graphical user interface, providing autosuggest, history, etc. Just browse http://localhost:3000/ to access it.
 

@@ -61,8 +61,8 @@
         "@graphql-tools/schema": "^10.0.3",
         "cors": "^2.8.5",
         "express": "^4.17.3",
-        "express-graphql": "^0.9.0",
         "graphql": "^16.8.1",
+        "graphql-http": "^1.22.1",
         "graphql-tag": "^2.12.6",
         "graphql-type-json": "^0.3.2",
         "inflection": "^3.0.0",
@@ -71,6 +71,6 @@
         "xhr-mock": "^2.5.1"
     },
     "bin": {
-        "json-graphql-server": "bin/json-graphql-server.js"
+        "json-graphql-server": "bin/json-graphql-server.cjs"
     }
 }

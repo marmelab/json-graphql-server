@@ -1,5 +1,6 @@
-import graphqlHTTP from 'express-graphql';
+import { createHandler } from 'graphql-http/lib/use/express';
 import schemaBuilder from './schemaBuilder';
+import { graphiqlHandler } from './graphiqlHandler';
 
 /**
  * An express middleware for a GraphQL endpoint serving data from the supplied json.
@@ -45,8 +46,18 @@ import schemaBuilder from './schemaBuilder';
  *
  * app.listen(PORT);
  */
-export default (data) =>
-    graphqlHTTP({
+export default (data) => {
+    const graphqlHandler = createHandler({
         schema: schemaBuilder(data),
-        graphiql: true,
     });
+
+    const expressMiddleware = (req, res) => {
+        if (req.is('application/json')) {
+            return graphqlHandler(req, res);
+        }
+
+        return graphiqlHandler(req, res);
+    };
+
+    return expressMiddleware;
+};
