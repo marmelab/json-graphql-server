@@ -43,7 +43,7 @@ module.exports = {
 Start the GraphQL server on localhost, port 3000.
 
 ```sh
-json-graphql-server db.js
+npx json-graphql-server db.js
 ```
 
 To use a port other than 3000, you can run `json-graphql-server db.js --p <your port here>`
@@ -98,7 +98,7 @@ Note that the server is [GraphiQL](https://github.com/graphql/graphiql) enabled,
 ## Install
 
 ```sh
-npm install -g json-graphql-server
+npm install -D json-graphql-server
 ```
 
 ## Generated Types and Queries
@@ -448,7 +448,7 @@ Then use the `jsonGraphqlExpress` express middleware:
 
 ```js
 import express from 'express';
-import jsonGraphqlExpress from 'json-graphql-server/node';
+import { jsonGraphqlExpress } from 'json-graphql-server/node';
 
 const PORT = 3000;
 const app = express();
