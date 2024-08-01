@@ -4,7 +4,7 @@ export const graphiqlHandler = (req, res) => {
     });
     return res.end(
         getGraphiqlHtml({
-            endpoint: '/',
+            endpoint: '/graphql',
         })
     );
 };
@@ -71,7 +71,6 @@ const getGraphiqlHtml = ({ endpoint }) => `
       const root = ReactDOM.createRoot(document.getElementById('graphiql'));
       const fetcher = GraphiQL.createFetcher({
         url: '${endpoint}',
-        headers: { 'X-Example-Header': 'foo' },
       });
       const explorerPlugin = GraphiQLPluginExplorer.explorerPlugin();
       root.render(
