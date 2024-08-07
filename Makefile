@@ -22,7 +22,7 @@ format: ## Format the source code
 	@./node_modules/.bin/eslint --fix ./src
 
 run: ## Launch server with example data
-	@node ./bin/json-graphql-server.js example/data.js
+	@node ./bin/json-graphql-server.cjs example/data.js
 
 build: ## Build production release
 	@yarn vite build
