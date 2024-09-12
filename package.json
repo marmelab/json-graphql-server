@@ -60,7 +60,7 @@
         "@apollo/client": "^3.9.11",
         "@graphql-tools/schema": "^10.0.3",
         "cors": "^2.8.5",
-        "express": "^4.17.3",
+        "express": "^4.20.0",
         "graphql": "^16.8.1",
         "graphql-http": "^1.22.1",
         "graphql-tag": "^2.12.6",
