@@ -24,6 +24,7 @@ const getMutationResolvers = (entityName, data) => ({
     [`createMany${entityName}`]: createMany(data),
     [`update${entityName}`]: update(data),
     [`remove${entityName}`]: remove(data),
+    [`delete${entityName}`]: remove(data),
 });
 
 export default (data) => {

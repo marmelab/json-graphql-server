@@ -179,6 +179,12 @@ export default (data) => {
                     id: { type: new GraphQLNonNull(GraphQLID) },
                 },
             };
+            fields[`delete${type.name}`] = {
+                type: typesByName[type.name],
+                args: {
+                    id: { type: new GraphQLNonNull(GraphQLID) },
+                },
+            };
             return fields;
         }, {}),
     });
