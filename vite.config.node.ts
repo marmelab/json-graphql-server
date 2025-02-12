@@ -1,3 +1,4 @@
+/// <reference types="vitest" />
 import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
@@ -20,5 +21,8 @@ export default defineConfig({
             // into your library
             external: Object.keys(pkg.dependencies),
         },
+    },
+    test: {
+        globals: true,
     },
 });

@@ -1,5 +1,6 @@
 import express from 'express';
 import request from 'supertest';
+import { beforeAll, describe, expect, test } from 'vitest';
 import jsonGraphqlExpress from './jsonGraphqlExpress';
 
 const data = {
@@ -49,25 +50,25 @@ const gqlAgent = (query: string, variables?: any) =>
     });
 
 describe('integration tests', () => {
-    it('returns all entities by default', () =>
+    test('returns all entities by default', () =>
         gqlAgent('{ allPosts { id } }').expect({
             data: {
                 allPosts: [{ id: '1' }, { id: '2' }, { id: '3' }],
             },
         }));
-    it('filters by string using the q filter in a case-insensitive way', () =>
+    test('filters by string using the q filter in a case-insensitive way', () =>
         gqlAgent('{ allPosts(filter: { q: "lorem" }) { id } }').expect({
             data: {
                 allPosts: [{ id: '1' }],
             },
         }));
-    it('gets an entity by id', () =>
+    test('gets an entity by id', () =>
         gqlAgent('{ Post(id: 1) { id } }').expect({
             data: {
                 Post: { id: '1' },
             },
         }));
-    it('gets all the entity fields', () =>
+    test('gets all the entity fields', () =>
         gqlAgent('{ Post(id: 1) { id title views user_id } }').expect({
             data: {
                 Post: {
@@ -78,7 +79,7 @@ describe('integration tests', () => {
                 },
             },
         }));
-    it('throws an error when asked for a non existent field', () =>
+    test('throws an error when asked for a non existent field', () =>
         gqlAgent('{ Post(id: 1) { foo } }').expect({
             errors: [
                 {
@@ -87,7 +88,7 @@ describe('integration tests', () => {
                 },
             ],
         }));
-    it('gets relationship fields', () =>
+    test('gets relationship fields', () =>
         gqlAgent('{ Post(id: 1) { User { name } Comments { body }} }').expect({
             data: {
                 Post: {
@@ -99,16 +100,16 @@ describe('integration tests', () => {
                 },
             },
         }));
-    it('allows multiple mutations', () =>
+    test('allows multiple mutations', () =>
         gqlAgent(
-            'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }',
+            'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
         )
             .then(() =>
                 gqlAgent(
-                    'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }',
-                ),
+                    'mutation{ updatePost(id:"2", title:"Foo bar", views: 200, user_id:"123") { id } }'
+                )
             )
             .then((res) =>
-                expect(res.body).toEqual({ data: { updatePost: { id: '2' } } }),
+                expect(res.body).toEqual({ data: { updatePost: { id: '2' } } })
             ));
 });

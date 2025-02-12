@@ -1,4 +1,5 @@
-import { graphql, GraphQLError } from 'graphql';
+import { graphql } from 'graphql';
+import { expect, test } from 'vitest';
 import schemaBuilder from './schemaBuilder';
 
 test('plugs resolvers with schema', () => {
@@ -11,7 +12,7 @@ test('plugs resolvers with schema', () => {
     }).then((result) =>
         expect(result).toEqual({
             data: { Post: { id: '0', title: 'hello' } },
-        }),
+        })
     );
 });
 
@@ -55,7 +56,7 @@ test('all* route returns all entities by default', () =>
             data: {
                 allPosts: [{ id: '1' }, { id: '2' }, { id: '3' }],
             },
-        }),
+        })
     ));
 test('all* route supports pagination', () =>
     graphql({
@@ -66,7 +67,7 @@ test('all* route supports pagination', () =>
             data: {
                 allPosts: [{ id: '1' }, { id: '2' }],
             },
-        }),
+        })
     ));
 test('all* route supports sorting', () =>
     graphql({
@@ -77,7 +78,7 @@ test('all* route supports sorting', () =>
             data: {
                 allPosts: [{ id: '1' }, { id: '3' }, { id: '2' }],
             },
-        }),
+        })
     ));
 test('all* route supports filtering', () =>
     graphql({
@@ -88,7 +89,7 @@ test('all* route supports filtering', () =>
             data: {
                 allPosts: [{ id: '1' }],
             },
-        }),
+        })
     ));
 test('entity route returns a single entity', () =>
     graphql({ schema, source: '{ Post(id: 2) { id } }' }).then((result) =>
@@ -96,7 +97,7 @@ test('entity route returns a single entity', () =>
             data: {
                 Post: { id: '2' },
             },
-        }),
+        })
     ));
 test('entity route gets all the entity fields', () =>
     graphql({
@@ -112,14 +113,14 @@ test('entity route gets all the entity fields', () =>
                     views: 254,
                 },
             },
-        }),
+        })
     ));
 test('entity route get many to one relationships fields', () =>
     graphql({ schema, source: '{ Post(id: 1) { User { name } } }' }).then(
         (result) =>
             expect(result).toEqual({
                 data: { Post: { User: { name: 'John Doe' } } },
-            }),
+            })
     ));
 test('entity route get one to many relationships fields', () =>
     graphql({ schema, source: '{ Post(id: 1) { Comments { body } } }' }).then(
@@ -133,13 +134,13 @@ test('entity route get one to many relationships fields', () =>
                         ],
                     },
                 },
-            }),
+            })
     ));
 test('returns an error when asked for a non existent field', () =>
-    graphql({ schema, source: '{ Post(id: 1) { foo } }' }).then((result) =>
-        expect(result).toEqual({
-            errors: [
-                new GraphQLError('Cannot query field "foo" on type "Post".'),
-            ],
-        }),
-    ));
+    graphql({ schema, source: '{ Post(id: 1) { foo } }' }).then((result) => {
+        expect(result.errors).toHaveLength(1);
+        const errors = result.errors as any[];
+        expect(errors[0].message).toEqual(
+            'Cannot query field "foo" on type "Post".'
+        );
+    }));
