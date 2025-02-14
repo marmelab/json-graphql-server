@@ -452,7 +452,7 @@ Then use the `jsonGraphqlExpress` express middleware:
 
 ```js
 import express from 'express';
-import { jsonGraphqlExpress } from 'json-graphql-server/node';
+import jsonGraphqlExpress from 'json-graphql-server/node';
 
 const PORT = 3000;
 const app = express();
@@ -460,7 +460,7 @@ const data = {
     // ... your data
 };
 
-app.use('/graphql', jsonGraphqlExpress.default(data));
+app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 

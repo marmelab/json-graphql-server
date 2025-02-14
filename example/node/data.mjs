@@ -1,4 +1,4 @@
-module.exports = {
+export default {
     customers: [
         {
             id: 0,
