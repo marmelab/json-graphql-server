@@ -20,7 +20,7 @@ jobs:
       with:
         install-command: yarn --immutable
     - name: Code quality
-      run: make check
+      run: make lint format
     - name: Unit Tests
       run: make test
       env:
