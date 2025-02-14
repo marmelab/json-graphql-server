@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import single from './single';
 
 test('returns undefined by default', () => {

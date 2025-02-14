@@ -5,6 +5,7 @@ import {
     GraphQLInt,
     GraphQLNonNull,
 } from 'graphql';
+import { expect, test } from 'vitest';
 import getTypesFromData from './getTypesFromData';
 
 test('Integration test', () => {

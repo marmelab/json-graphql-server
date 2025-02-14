@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import applyFilters from './applyFilters';
 
 const data = [

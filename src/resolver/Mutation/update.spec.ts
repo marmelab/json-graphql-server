@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import update from './update';
 
 test('returns undefined by default', () => {

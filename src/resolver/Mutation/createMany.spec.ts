@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import createMany from './createMany';
 
 test('returns a new object with id 0 on empty datastore', () => {

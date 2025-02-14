@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import remove from './remove';
 
 test('returns undefined by default', () => {

@@ -1,4 +1,5 @@
 import { GraphQLString, GraphQLID, GraphQLNonNull } from 'graphql';
+import { expect, test } from 'vitest';
 import getFieldsFromEntities from './getFieldsFromEntities';
 
 test('does infer field types', () => {

@@ -1,3 +1,4 @@
+import { expect, test } from 'vitest';
 import entity from './index';
 
 test('provides empty resolver for data without relationship', () =>

@@ -1,13 +1,15 @@
 import {
     GraphQLID,
+    GraphQLInputObjectType,
     GraphQLInt,
     GraphQLList,
     GraphQLNonNull,
     GraphQLObjectType,
     GraphQLString,
 } from 'graphql';
-import getSchemaFromData from './getSchemaFromData';
 import type { ObjMap } from 'graphql/jsutils/ObjMap';
+import { expect, test } from 'vitest';
+import getSchemaFromData from './getSchemaFromData';
 
 const data = {
     posts: [
@@ -105,28 +107,28 @@ const QueryType = new GraphQLObjectType({
 
 test('creates one type per data type', () => {
     const typeMap = getSchemaFromData(
-        data,
+        data
     ).getTypeMap() as ObjMap<GraphQLObjectType>;
     expect(typeMap.Post.name).toEqual(PostType.name);
     expect(Object.keys(typeMap.Post.getFields())).toEqual(
-        Object.keys(PostType.getFields()),
+        Object.keys(PostType.getFields())
     );
     expect(typeMap.User.name).toEqual(UserType.name);
     expect(Object.keys(typeMap.User.getFields())).toEqual(
-        Object.keys(UserType.getFields()),
+        Object.keys(UserType.getFields())
     );
 });
 
 test('creates one field per relationship', () => {
     const typeMap = getSchemaFromData(
-        data,
+        data
     ).getTypeMap() as ObjMap<GraphQLObjectType>;
     expect(Object.keys(typeMap.Post.getFields())).toContain('User');
 });
 
 test('creates one field per reverse relationship', () => {
     const typeMap = getSchemaFromData(
-        data,
+        data
     ).getTypeMap() as ObjMap<GraphQLObjectType>;
     expect(Object.keys(typeMap.User.getFields())).toContain('Posts');
 });
@@ -134,7 +136,9 @@ test('creates one field per reverse relationship', () => {
 test('creates three query fields per data type', () => {
     // biome-ignore lint/style/noNonNullAssertion: It's only a test
     const queries = getSchemaFromData(data).getQueryType()!.getFields();
-    expect(queries.Post.type.name).toEqual(PostType.name);
+    expect((queries.Post.type as GraphQLObjectType).name).toEqual(
+        PostType.name
+    );
     expect(queries.Post.args).toEqual([
         expect.objectContaining({
             name: 'id',
@@ -154,7 +158,9 @@ test('creates three query fields per data type', () => {
     expect(queries.allPosts.args[4].type.toString()).toEqual('PostFilter');
     expect(queries._allPostsMeta.type.toString()).toEqual('ListMetadata');
 
-    expect(queries.User.type.name).toEqual(UserType.name);
+    expect((queries.User.type as GraphQLObjectType).name).toEqual(
+        UserType.name
+    );
     expect(queries.User.args).toEqual([
         expect.objectContaining({
             name: 'id',
@@ -178,7 +184,9 @@ test('creates three query fields per data type', () => {
 test('creates three mutation fields per data type', () => {
     // biome-ignore lint/style/noNonNullAssertion: It's only a test
     const mutations = getSchemaFromData(data).getMutationType()!.getFields();
-    expect(mutations.createPost.type.name).toEqual(PostType.name);
+    expect((mutations.createPost.type as GraphQLObjectType).name).toEqual(
+        PostType.name
+    );
     expect(mutations.createPost.args).toEqual([
         expect.objectContaining({
             name: 'title',
@@ -193,7 +201,9 @@ test('creates three mutation fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         }),
     ]);
-    expect(mutations.updatePost.type.name).toEqual(PostType.name);
+    expect((mutations.updatePost.type as GraphQLObjectType).name).toEqual(
+        PostType.name
+    );
     expect(mutations.updatePost.args).toEqual([
         expect.objectContaining({
             name: 'id',
@@ -212,21 +222,27 @@ test('creates three mutation fields per data type', () => {
             type: GraphQLID,
         }),
     ]);
-    expect(mutations.removePost.type.name).toEqual(PostType.name);
+    expect((mutations.removePost.type as GraphQLObjectType).name).toEqual(
+        PostType.name
+    );
     expect(mutations.removePost.args).toEqual([
         expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
         }),
     ]);
-    expect(mutations.createUser.type.name).toEqual(UserType.name);
+    expect((mutations.createUser.type as GraphQLObjectType).name).toEqual(
+        UserType.name
+    );
     expect(mutations.createUser.args).toEqual([
         expect.objectContaining({
             name: 'name',
             type: new GraphQLNonNull(GraphQLString),
         }),
     ]);
-    expect(mutations.updateUser.type.name).toEqual(UserType.name);
+    expect((mutations.updateUser.type as GraphQLObjectType).name).toEqual(
+        UserType.name
+    );
     expect(mutations.updateUser.args).toEqual([
         expect.objectContaining({
             name: 'id',
@@ -237,7 +253,9 @@ test('creates three mutation fields per data type', () => {
             type: GraphQLString,
         }),
     ]);
-    expect(mutations.removeUser.type.name).toEqual(UserType.name);
+    expect((mutations.removeUser.type as GraphQLObjectType).name).toEqual(
+        UserType.name
+    );
     expect(mutations.removeUser.args).toEqual([
         expect.objectContaining({
             name: 'id',
@@ -251,20 +269,22 @@ test('creates the mutation *Input type for createMany', () => {
     const mutations = getSchemaFromData(data).getMutationType()!.getFields();
     const createManyPostInputType = mutations.createManyPost.args[0].type;
     expect(createManyPostInputType.toString()).toEqual('[PostInput]');
-    expect(createManyPostInputType.ofType.getFields()).toEqual({
-        title: expect.objectContaining({
-            type: new GraphQLNonNull(GraphQLString),
-            name: 'title',
-        }),
-        views: expect.objectContaining({
-            type: new GraphQLNonNull(GraphQLInt),
-            name: 'views',
-        }),
-        user_id: expect.objectContaining({
-            type: new GraphQLNonNull(GraphQLID),
-            name: 'user_id',
-        }),
-    });
+    expect((createManyPostInputType as GraphQLList<any>).ofType.getFields()).toEqual(
+        {
+            title: expect.objectContaining({
+                type: new GraphQLNonNull(GraphQLString),
+                name: 'title',
+            }),
+            views: expect.objectContaining({
+                type: new GraphQLNonNull(GraphQLInt),
+                name: 'views',
+            }),
+            user_id: expect.objectContaining({
+                type: new GraphQLNonNull(GraphQLID),
+                name: 'user_id',
+            }),
+        }
+    );
 });
 
 test('pluralizes and capitalizes correctly', () => {

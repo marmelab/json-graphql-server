@@ -8,6 +8,7 @@ import {
     GraphQLString,
 } from 'graphql';
 import { GraphQLJSON } from 'graphql-type-json';
+import { expect, test } from 'vitest';
 import DateType from './DateType';
 import getTypeFromValues from './getTypeFromValues';
 
