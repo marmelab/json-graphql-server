@@ -7,7 +7,7 @@ export const graphiqlHandler: Handler = (_, res) => {
     return res.end(
         getGraphiqlHtml({
             endpoint: '/graphql',
-        })
+        }),
     );
 };
 
