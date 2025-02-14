@@ -211,6 +211,13 @@ test('creates three mutation fields per data type', () => {
             type: new GraphQLNonNull(GraphQLID),
         }),
     ]);
+    expect(mutations['deletePost'].type.name).toEqual(PostType.name);
+    expect(mutations['deletePost'].args).toEqual([
+        expect.objectContaining({
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
+        }),
+    ]);
     expect(mutations['createUser'].type.name).toEqual(UserType.name);
     expect(mutations['createUser'].args).toEqual([
         expect.objectContaining({
@@ -231,6 +238,13 @@ test('creates three mutation fields per data type', () => {
     ]);
     expect(mutations['removeUser'].type.name).toEqual(UserType.name);
     expect(mutations['removeUser'].args).toEqual([
+        expect.objectContaining({
+            name: 'id',
+            type: new GraphQLNonNull(GraphQLID),
+        }),
+    ]);
+    expect(mutations['deleteUser'].type.name).toEqual(UserType.name);
+    expect(mutations['deleteUser'].args).toEqual([
         expect.objectContaining({
             name: 'id',
             type: new GraphQLNonNull(GraphQLID),
