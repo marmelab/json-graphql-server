@@ -27,8 +27,9 @@
     ],
     "license": "MIT",
     "scripts": {
+        "check": "biome check",
         "format": "biome format --write src",
-        "lint": "biome lint --apply src",
+        "lint": "biome lint --write src",
         "precommit": "lint-staged",
         "test": "cross-env NODE_ENV=test vitest",
         "server": "node ./bin/json-graphql-server.js example/data.js",
@@ -41,8 +42,7 @@
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
-            "biome lint --apply",
-            "biome format --write"
+            "biome check --write"
         ]
     },
     "devDependencies": {

@@ -18,6 +18,12 @@ test: ## Launch unit tests
 watch-test: ## Launch unit tests and watch for changes
 	@yarn run watch-test
 
+check: ## Lint and format the source code
+	@yarn run check
+
+lint: ## Lint the source code
+	@yarn run lint
+
 format: ## Format the source code
 	@yarn run format
 

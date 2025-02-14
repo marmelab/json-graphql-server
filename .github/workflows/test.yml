@@ -19,6 +19,8 @@ jobs:
     - uses: bahmutov/npm-install@v1
       with:
         install-command: yarn --immutable
+    - name: Code quality
+      run: make check
     - name: Unit Tests
       run: make test
       env:
