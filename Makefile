@@ -28,7 +28,7 @@ format: ## Format the source code
 	@yarn run format
 
 run: ## Launch server with example data
-	@node ./bin/json-graphql-server.cjs example/data.js
+	@yarn run server
 
 build: ## Build production release
 	@yarn run build
