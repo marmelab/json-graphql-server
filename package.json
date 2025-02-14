@@ -32,7 +32,7 @@
         "lint": "biome lint --write src",
         "precommit": "lint-staged",
         "test": "cross-env NODE_ENV=test vitest",
-        "server": "node ./bin/json-graphql-server.js example/data.js",
+        "server": "node ./bin/json-graphql-server.cjs example/data.cjs",
         "prepublish": "yarn build",
         "build": "yarn build-ts && yarn build-esm-cjs && yarn build-node && yarn build-umd",
         "build-ts": "tsc",
