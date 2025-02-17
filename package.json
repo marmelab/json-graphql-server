@@ -27,47 +27,45 @@
     ],
     "license": "MIT",
     "scripts": {
-        "format": "make format",
+        "check": "biome check",
+        "format": "biome format --write src",
+        "lint": "biome lint --write src",
         "precommit": "lint-staged",
-        "test": "jest",
-        "watch-test": "make watch-test",
-        "server": "make run",
-        "prepublish": "make build"
+        "test": "cross-env NODE_ENV=test vitest",
+        "server": "node ./bin/json-graphql-server.cjs example/data.cjs",
+        "prepublish": "yarn build",
+        "build": "yarn build-ts && yarn build-esm-cjs && yarn build-node && yarn build-umd",
+        "build-ts": "tsc",
+        "build-esm-cjs": "vite build",
+        "build-node": "vite build -c ./vite.config.node.js",
+        "build-umd": "vite build -c ./vite.config.umd.js"
     },
     "lint-staged": {
-        "src/**/*.js": [
-            "eslint --fix",
-            "git add"
+        "*.{js,jsx,ts,tsx}": [
+            "biome check --write"
         ]
     },
     "devDependencies": {
-        "@types/jest": "^29.5.12",
-        "babel-eslint": "^10.0.3",
-        "babel-jest": "^29.7.0",
-        "eslint": "^9.0.0",
-        "eslint-config-prettier": "^9.1.0",
-        "eslint-plugin-import": "^2.29.1",
-        "eslint-plugin-jest": "^28.2.0",
-        "eslint-plugin-prettier": "^5.1.3",
-        "husky": "^9.0.11",
-        "jest": "^29.7.0",
-        "lint-staged": "^15.2.2",
-        "prettier": "^3.2.5",
-        "supertest": "^6.3.4",
-        "vite": "^5.4.12"
+        "@biomejs/biome": "1.9.4",
+        "@types/express": "^4.17.21",
+        "cross-env": "^7.0.3",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.4.3",
+        "supertest": "^7.0.0",
+        "typescript": "^5.7.3",
+        "vite": "^6.1.0",
+        "vitest": "^3.0.5"
     },
     "dependencies": {
-        "@apollo/client": "^3.9.11",
-        "@graphql-tools/schema": "^10.0.3",
+        "@apollo/client": "^3.12.11",
+        "@graphql-tools/schema": "^10.0.18",
         "cors": "^2.8.5",
-        "express": "^4.20.0",
-        "graphql": "^16.8.1",
-        "graphql-http": "^1.22.1",
-        "graphql-tag": "^2.12.6",
+        "express": "^4.21.2",
+        "graphql": "^16.10.0",
+        "graphql-http": "^1.22.4",
         "graphql-type-json": "^0.3.2",
-        "inflection": "^3.0.0",
+        "inflection": "^3.0.2",
         "lodash.merge": "^4.6.2",
-        "reify": "^0.20.12",
         "xhr-mock": "^2.5.1"
     },
     "bin": {

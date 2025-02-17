@@ -102,7 +102,7 @@ Note that the server is [GraphiQL](https://github.com/graphql/graphiql) enabled,
 ## Install
 
 ```sh
-npm install json-graphql-server
+npm install -D json-graphql-server
 ```
 
 ## Generated Types and Queries
@@ -460,7 +460,7 @@ const data = {
     // ... your data
 };
 
-app.use('/graphql', jsonGraphqlExpress.default(data));
+app.use('/graphql', jsonGraphqlExpress(data));
 app.listen(PORT);
 ```
 

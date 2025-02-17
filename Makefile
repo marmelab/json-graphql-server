@@ -13,18 +13,22 @@ watch: ## continuously compile ES6 files to JS
 	@yarn vite build --watch
 
 test: ## Launch unit tests
-	@NODE_ENV=test NODE_OPTIONS="$$NODE_OPTIONS --experimental-vm-modules" ./node_modules/.bin/jest
+	@yarn run test
 
 watch-test: ## Launch unit tests and watch for changes
-	@NODE_ENV=test NODE_OPTIONS="$$NODE_OPTIONS --experimental-vm-modules" ./node_modules/.bin/jest --watch
+	@yarn run watch-test
+
+check: ## Lint and format the source code
+	@yarn run check
+
+lint: ## Lint the source code
+	@yarn run lint
 
 format: ## Format the source code
-	@./node_modules/.bin/eslint --fix ./src
+	@yarn run format
 
 run: ## Launch server with example data
-	@node ./bin/json-graphql-server.cjs example/data.js
+	@yarn run server
 
 build: ## Build production release
-	@yarn vite build
-	@yarn vite build -c ./vite.config.node.js
-	@yarn vite build -c ./vite.config.umd.js
+	@yarn run build
