@@ -119,7 +119,7 @@ type Mutation {
   createPost(data: String): Post
   createManyPost(data: [{data:String}]): [Post]
   updatePost(data: String): Post
-  removePost(id: ID!): Post
+  deletePost(id: ID!): Post
 }
 type Post {
     id: ID!

@@ -72,9 +72,11 @@ import type { Data } from '../types';
  * //     createPost(data: String): Post
  * //     updatePost(data: String): Post
  * //     removePost(id: ID!): Boolean
+ * //     deletePost(id: ID!): Boolean
  * //     createUser(data: String): User
  * //     updateUser(data: String): User
  * //     removeUser(id: ID!): Boolean
+ * //     deleteUser(id: ID!): Boolean
  * // }
  */
 export default (data: Data) => {
@@ -191,6 +193,12 @@ export default (data: Data) => {
                     args: nullableTypeFields,
                 };
                 fields[`remove${type.name}`] = {
+                    type: typesByName[type.name],
+                    args: {
+                        id: { type: new GraphQLNonNull(GraphQLID) },
+                    },
+                };
+                fields[`delete${type.name}`] = {
                     type: typesByName[type.name],
                     args: {
                         id: { type: new GraphQLNonNull(GraphQLID) },
