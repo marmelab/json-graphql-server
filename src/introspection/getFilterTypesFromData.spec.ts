@@ -9,6 +9,7 @@ const data = {
             views: 254,
             user_id: 123,
             published: true,
+            published_at: '2021-01-01T00:00:00.000Z',
         },
         {
             id: 2,
@@ -16,6 +17,7 @@ const data = {
             views: 65,
             user_id: 456,
             published: true,
+            published_at: '2021-01-01T00:00:00.000Z',
         },
     ],
     users: [
@@ -39,6 +41,8 @@ const PostType = new GraphQLObjectType({
         title: { type: GraphQLString },
         views: { type: GraphQLInt },
         user_id: { type: GraphQLID },
+        published: { type: GraphQLBoolean },
+        published_at: { type: GraphQLScalarType },
     },
 });
 const UsersType = new GraphQLObjectType({
@@ -66,6 +70,8 @@ test('creates one filter field per entity field', () => {
     expect(PostFilterFields.title.type.toString()).toEqual('String');
     expect(PostFilterFields.views.type.toString()).toEqual('Int');
     expect(PostFilterFields.user_id.type.toString()).toEqual('ID');
+    expect(PostFilterFields.published.type.toString()).toEqual('Boolean');
+    expect(PostFilterFields.published_at.type.toString()).toEqual('Date');
     const CommentFilterFields = filterTypes.User.getFields();
     expect(CommentFilterFields.id.type.toString()).toEqual('ID');
     expect(CommentFilterFields.name.type.toString()).toEqual('String');
@@ -86,6 +92,15 @@ test('creates 4 fields for number field for range filters', () => {
     expect(PostFilterFields.views_lte.type.toString()).toEqual('Int');
     expect(PostFilterFields.views_gt.type.toString()).toEqual('Int');
     expect(PostFilterFields.views_gte.type.toString()).toEqual('Int');
+});
+
+test('creates 4 fields for dates fields', () => {
+    const filterTypes = getFilterTypesFromData(data);
+    const PostFilterFields = filterTypes.Post.getFields();
+    expect(PostFilterFields.published_at_lt.type.toString()).toEqual('Date');
+    expect(PostFilterFields.published_at_lte.type.toString()).toEqual('Date');
+    expect(PostFilterFields.published_at_gt.type.toString()).toEqual('Date');
+    expect(PostFilterFields.published_at_gte.type.toString()).toEqual('Date');
 });
 
 test('does not create comparison fields for fields that do not support it', () => {

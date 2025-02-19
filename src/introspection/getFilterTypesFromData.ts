@@ -17,37 +17,33 @@ import type { Data, Entity } from '../types';
 
 const getRangeFiltersFromEntities = (entities: Entity[]) => {
     const fieldValues = getValuesFromEntities(entities);
-    return Object.keys(fieldValues).reduce(
-        (fields, fieldName) => {
-            const fieldType = getTypeFromValues(
-                fieldName,
-                fieldValues[fieldName],
-                false,
-            );
+    return Object.keys(fieldValues).reduce((fields, fieldName) => {
+        const fieldType = getTypeFromValues(
+            fieldName,
+            fieldValues[fieldName],
+            false
+        );
 
-            if (isListType(fieldType)) {
-                return fields;
-            }
-            if (
-                fieldType === GraphQLInt ||
-                fieldType === GraphQLFloat ||
-                fieldType === GraphQLString ||
-                // @ts-ignore
-                fieldType === GraphQLDate
-            ) {
-                fields[`${fieldName}_lt`] = { type: fieldType };
-                fields[`${fieldName}_lte`] = { type: fieldType };
-                fields[`${fieldName}_gt`] = { type: fieldType };
-                fields[`${fieldName}_gte`] = { type: fieldType };
-            }
-
-            if (fieldType !== GraphQLBoolean) {
-                fields[`${fieldName}_neq`] = { type: fieldType };
-            }
+        if (isListType(fieldType)) {
             return fields;
-        },
-        {} as Record<string, any>,
-    );
+        }
+        if (
+            fieldType === GraphQLInt ||
+            fieldType === GraphQLFloat ||
+            fieldType === GraphQLString ||
+            fieldType.name === GraphQLDate
+        ) {
+            fields[`${fieldName}_lt`] = { type: fieldType };
+            fields[`${fieldName}_lte`] = { type: fieldType };
+            fields[`${fieldName}_gt`] = { type: fieldType };
+            fields[`${fieldName}_gte`] = { type: fieldType };
+        }
+
+        if (fieldType !== GraphQLBoolean) {
+            fields[`${fieldName}_neq`] = { type: fieldType };
+        }
+        return fields;
+    }, {} as Record<string, any>);
 };
 
 /**
