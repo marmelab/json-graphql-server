@@ -1,6 +1,6 @@
 import express from 'express';
 import jsonGraphqlExpress from '../../dist/json-graphql-server-node.js';
-import data from '../data.mjs';
+import data from '../data.cjs';
 
 const PORT = 3000;
 const app = express();
