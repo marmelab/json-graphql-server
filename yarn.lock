@@ -1431,10 +1431,10 @@ pidtree@^0.6.0:
   resolved "https://registry.yarnpkg.com/pidtree/-/pidtree-0.6.0.tgz#90ad7b6d42d5841e69e0a2419ef38f8883aa057c"
   integrity sha512-eG2dWTVw5bzqGRztnHExczNxt5VGsE6OwTeCG3fdUf9KBsZzO3R5OIIIzWR+iZA0NtZ+RDVdaoE2dK1cn6jH4g==
 
-postcss@^8.5.1:
-  version "8.5.2"
-  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.2.tgz#e7b99cb9d2ec3e8dd424002e7c16517cb2b846bd"
-  integrity sha512-MjOadfU3Ys9KYoX0AdkBlFEF1Vx37uCCeN4ZHnmwm9FfpbsGWMZeBLMmmpY+6Ocqod7mkdZ0DT31OlbsFrLlkA==
+postcss@^8.5.2:
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.5.3.tgz#1463b6f1c7fb16fe258736cba29a2de35237eafb"
+  integrity sha512-dle9A3yYxlBSrt8Fu+IpjGT8SY8hN0mlaA6GY8t0P5PjIOZemULz/E2Bnm/2dcUOena75OTNkHI76uZBNUUq3A==
   dependencies:
     nanoid "^3.3.8"
     picocolors "^1.1.1"
@@ -1829,13 +1829,13 @@ vite-node@3.0.5:
     pathe "^2.0.2"
     vite "^5.0.0 || ^6.0.0"
 
-"vite@^5.0.0 || ^6.0.0", vite@^6.1.0:
-  version "6.1.0"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-6.1.0.tgz#00a4e99a23751af98a2e4701c65ba89ce23858a6"
-  integrity sha512-RjjMipCKVoR4hVfPY6GQTgveinjNuyLw+qruksLDvA5ktI1150VmcMBKmQaEWJhg/j6Uaf6dNCNA0AfdzUb/hQ==
+"vite@^5.0.0 || ^6.0.0", vite@^6.1.2:
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-6.1.2.tgz#2c046f1de13ca7a63de5ae42237ccdcde97dbf55"
+  integrity sha512-EiXfDyO/uNKhYOSlZ6+9qBz4H46A8Lr07pyjmb88KTbJ+xkXvnqtxvgtg2VxPU6Kfj8Ep0un9JLqdrCWLqIanw==
   dependencies:
     esbuild "^0.24.2"
-    postcss "^8.5.1"
+    postcss "^8.5.2"
     rollup "^4.30.1"
   optionalDependencies:
     fsevents "~2.3.3"
