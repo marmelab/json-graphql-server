@@ -1829,10 +1829,10 @@ vite-node@3.0.5:
     pathe "^2.0.2"
     vite "^5.0.0 || ^6.0.0"
 
-"vite@^5.0.0 || ^6.0.0", vite@^6.1.2:
-  version "6.1.2"
-  resolved "https://registry.yarnpkg.com/vite/-/vite-6.1.2.tgz#2c046f1de13ca7a63de5ae42237ccdcde97dbf55"
-  integrity sha512-EiXfDyO/uNKhYOSlZ6+9qBz4H46A8Lr07pyjmb88KTbJ+xkXvnqtxvgtg2VxPU6Kfj8Ep0un9JLqdrCWLqIanw==
+"vite@^5.0.0 || ^6.0.0", vite@^6.1.3:
+  version "6.1.3"
+  resolved "https://registry.yarnpkg.com/vite/-/vite-6.1.3.tgz#074d4c1a4e510dc47b4a22abf34437c34e71426c"
+  integrity sha512-JMnf752ldN0UhZoPYXuWiRPsC2Z5hPy9JeUwfNSPBY8TyFZbSHRE1f6/WA8umOEJp0EN3zTddgNNSLT6Fc10UQ==
   dependencies:
     esbuild "^0.24.2"
     postcss "^8.5.2"
