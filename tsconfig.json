@@ -12,7 +12,10 @@
         "resolveJsonModule": true,
         "isolatedModules": true,
         "moduleDetection": "force",
-        "noEmit": true,
+        "emitDeclarationOnly": true,
+        "declaration": true,
+        "declarationMap": true,
+        "outDir": "./dist",
 
         /* Linting */
         "strict": true,

@@ -11,6 +11,7 @@ export default defineConfig({
             entry: resolve(__dirname, 'src/client.ts'),
             name: 'JsonGraphqlServer',
             formats: ['es', 'cjs'],
+            fileName: 'json-graphql-server',
         },
         sourcemap: true,
         minify: process.env.NODE_ENV === 'production',
