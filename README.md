@@ -591,7 +591,7 @@ You can also use the export `jsonSchemaBuilder` to get your own copy of the Grap
 In  node:
 ```js
 import {graphql} from 'graphql';
-import {jsonSchemaBuilder} from 'json-graphql-server';
+import {jsonSchemaBuilder} from 'json-graphql-server/node';
 
 const data = { };
 const schema = jsonSchemaBuilder(data);
@@ -616,7 +616,7 @@ This uses the export `getPlainSchema`.
 import { ApolloServer } from 'apollo-server';
 import { makeExecutableSchema } from '@graphql-tools/schema'; // or graphql-tools
 import { applyMiddleware } from 'graphql-middleware';
-import { getPlainSchema } from 'json-graphql-server';
+import { getPlainSchema } from 'json-graphql-server/node';
 
 const data = { };
 
