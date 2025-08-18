@@ -1,0 +1,9 @@
+{
+  "name": "node",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.1.0",
+    "json-graphql-server": "../../"
+  }
+}
