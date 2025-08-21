@@ -6,10 +6,12 @@
     "module": "./dist/json-graphql-server.js",
     "exports": {
         ".": {
+            "types": "./dist/client.d.ts",
             "import": "./dist/json-graphql-server.js",
             "require": "./dist/json-graphql-server.cjs"
         },
         "./node": {
+            "types": "./dist/node.d.ts",
             "import": "./dist/json-graphql-server-node.js",
             "require": "./dist/json-graphql-server-node.cjs"
         }
@@ -34,7 +36,7 @@
         "test": "cross-env NODE_ENV=test vitest",
         "server": "node ./bin/json-graphql-server.cjs example/data.cjs",
         "prepublish": "yarn build",
-        "build": "yarn build-ts && yarn build-esm-cjs && yarn build-node && yarn build-umd",
+        "build": "yarn build-esm-cjs && yarn build-node && yarn build-umd && yarn build-ts",
         "build-ts": "tsc",
         "build-esm-cjs": "vite build",
         "build-node": "vite build -c ./vite.config.node.js",
