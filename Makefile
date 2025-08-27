@@ -8,6 +8,7 @@ help:
 
 install: package.json ## Install dependencies
 	@$(PKG) install
+	@cd example/node && $(PKG) install
 
 watch: ## continuously compile ES6 files to JS
 	@yarn vite build --watch

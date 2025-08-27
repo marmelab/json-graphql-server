@@ -547,7 +547,7 @@ is-promise@^4.0.0:
   integrity sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==
 
 json-graphql-server@../../:
-  version "3.2.1"
+  version "3.3.0"
   dependencies:
     "@apollo/client" "^3.12.11"
     "@graphql-tools/schema" "^10.0.18"
@@ -559,9 +559,6 @@ json-graphql-server@../../:
     inflection "^3.0.2"
     lodash.merge "^4.6.2"
     xhr-mock "^2.5.1"
-
-"json-graphql-server@file:..":
-  version "0.0.0"
 
 lodash.merge@^4.6.2:
   version "4.6.2"
