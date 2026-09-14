@@ -35,12 +35,12 @@
         "precommit": "lint-staged",
         "test": "cross-env NODE_ENV=test vitest",
         "server": "node ./bin/json-graphql-server.cjs example/data.cjs",
-        "prepublish": "yarn build",
-        "build": "yarn build-esm-cjs && yarn build-node && yarn build-umd && yarn build-ts",
+        "build": "npm run build-esm-cjs && npm run build-node && npm run build-umd && npm run build-ts",
         "build-ts": "tsc",
         "build-esm-cjs": "vite build",
         "build-node": "vite build -c ./vite.config.node.js",
-        "build-umd": "vite build -c ./vite.config.umd.js"
+        "build-umd": "vite build -c ./vite.config.umd.js",
+        "prepublishOnly": "npm run build"
     },
     "lint-staged": {
         "*.{js,jsx,ts,tsx}": [
@@ -72,6 +72,5 @@
     },
     "bin": {
         "json-graphql-server": "bin/json-graphql-server.cjs"
-    },
-    "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+    }
 }

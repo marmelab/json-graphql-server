@@ -36,6 +36,16 @@ The core team prefix their PRs width "[WIP]" (Work in Progress) or "[RFR]" (read
 
 When adding new features or modifying existing, please attempt to include tests to confirm the new behaviour.
 
+### Installation
+
+This project uses npm. Install the dependencies with:
+
+```bash
+make install
+```
+
+npm 11 or later is required to install the development dependencies (npm 10 crashes while resolving the optional peer dependencies of vitest 4).
+
 ### Coding style
 
 You must follow the coding style of the existing files. Use Prettier formatting.
