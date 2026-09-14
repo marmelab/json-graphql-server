@@ -14,7 +14,7 @@ Inspired by the excellent [json-server](https://github.com/typicode/json-server)
 
 ## Usage
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/fork/json-graphql-server)
+[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/edit/json-graphql-server-hcgablis?file=package.json)
 
 Create a `db.js` file that exports an object where the keys are the entity types. The values should be lists of entities, i.e. arrays of value objects with at least an `id` key. For instance:
 
