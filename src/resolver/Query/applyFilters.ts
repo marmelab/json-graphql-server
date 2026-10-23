@@ -14,7 +14,7 @@ export default (
         Object.keys(filter)
             .filter((key) => key !== 'q')
             .forEach((key) => {
-                if (key.indexOf('_neq') !== -1) {
+                if (key.endsWith('_neq')) {
                     // not equal to
                     const realKey = key.replace(/(_neq)$/, '');
                     items = items.filter((d) => {
@@ -30,7 +30,7 @@ export default (
                     });
                     return;
                 }
-                if (key.indexOf('_lte') !== -1) {
+                if (key.endsWith('_lte')) {
                     // less than or equal
                     const realKey = key.replace(/(_lte)$/, '');
                     items = items.filter((d) => {
@@ -44,7 +44,7 @@ export default (
                     });
                     return;
                 }
-                if (key.indexOf('_gte') !== -1) {
+                if (key.endsWith('_gte')) {
                     // less than or equal
                     const realKey = key.replace(/(_gte)$/, '');
                     items = items.filter((d) => {
@@ -58,7 +58,7 @@ export default (
                     });
                     return;
                 }
-                if (key.indexOf('_lt') !== -1) {
+                if (key.endsWith('_lt')) {
                     // less than or equal
                     const realKey = key.replace(/(_lt)$/, '');
                     items = items.filter((d) => {
@@ -72,7 +72,7 @@ export default (
                     });
                     return;
                 }
-                if (key.indexOf('_gt') !== -1) {
+                if (key.endsWith('_gt')) {
                     // less than or equal
                     const realKey = key.replace(/(_gt)$/, '');
                     items = items.filter((d) => {

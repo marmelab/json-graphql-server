@@ -287,3 +287,14 @@ test('should filter by date even if the data contains ISO string dates', () => {
         },
     ]);
 });
+
+test('only treats operators as a suffix of the filter key', () => {
+    const items = [
+        { id: 1, item_gtin: '100', total_ltv: 5, has_neq_flag: true },
+        { id: 2, item_gtin: '5', total_ltv: 50, has_neq_flag: false },
+    ];
+    expect(applyFilters(items, { item_gtin: '5' })).toEqual([items[1]]);
+    expect(applyFilters(items, { total_ltv: 50 })).toEqual([items[1]]);
+    expect(applyFilters(items, { has_neq_flag: false })).toEqual([items[1]]);
+    expect(applyFilters(items, { total_ltv_gte: 10 })).toEqual([items[1]]);
+});
