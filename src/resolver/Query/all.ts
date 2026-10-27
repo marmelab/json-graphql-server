@@ -23,15 +23,9 @@ export default (entityData: Entity[] = []) =>
         if (sortField) {
             // biome-ignore lint/suspicious/noDoubleEquals: <explanation>
             const direction = sortOrder.toLowerCase() == 'asc' ? 1 : -1;
-            items = items.sort((a, b) => {
-                if (a[sortField] > b[sortField]) {
-                    return direction;
-                }
-                if (a[sortField] < b[sortField]) {
-                    return -1 * direction;
-                }
-                return 0;
-            });
+            items = items.sort(
+                (a, b) => direction * compareValues(a[sortField], b[sortField]),
+            );
         }
 
         items = applyFilters(items, filter);
@@ -42,3 +36,20 @@ export default (entityData: Entity[] = []) =>
 
         return items;
     };
+
+// null and undefined compare as equal to every value with < and >, which makes
+// the sort order depend on the input order; sort them after all other values
+const compareValues = (a: any, b: any) => {
+    const aIsEmpty = a == null;
+    const bIsEmpty = b == null;
+    if (aIsEmpty || bIsEmpty) {
+        return Number(aIsEmpty) - Number(bIsEmpty);
+    }
+    if (a > b) {
+        return 1;
+    }
+    if (a < b) {
+        return -1;
+    }
+    return 0;
+};
