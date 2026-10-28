@@ -85,4 +85,22 @@ describe('sort', () => {
             { id: 2, title: 'Ut enim ad minim', user_id: 456, views: 65 },
         ]);
     });
+    test('sorts items without a value as the largest values', () => {
+        // like PostgreSQL's default: last in ascending order, first in descending order
+        const items = [
+            { id: 1, title: 'c' },
+            { id: 2, title: null },
+            { id: 3, title: 'a' },
+            { id: 4 },
+            { id: 5, title: 'b' },
+        ];
+        expect(
+            all(items)(null, { sortField: 'title' }).map(({ id }) => id),
+        ).toEqual([3, 5, 1, 2, 4]);
+        expect(
+            all(items)(null, { sortField: 'title', sortOrder: 'desc' }).map(
+                ({ id }) => id,
+            ),
+        ).toEqual([2, 4, 1, 5, 3]);
+    });
 });
