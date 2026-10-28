@@ -38,7 +38,9 @@ export default (entityData: Entity[] = []) =>
     };
 
 // null and undefined compare as equal to every value with < and >, which makes
-// the sort order depend on the input order; sort them after all other values
+// the sort order depend on the input order. They are treated as larger than any
+// other value, like PostgreSQL's default: NULLS LAST in ascending order and
+// NULLS FIRST in descending order.
 const compareValues = (a: any, b: any) => {
     const aIsEmpty = a == null;
     const bIsEmpty = b == null;
